@@ -1,0 +1,21 @@
+{
+  "inverse_settings": "rope_config_level.json",
+  "source_results": "rope_results_tip500g/comparison.json",
+  "scenario_name": "D_tip500g_hold_horizontal_during_loading",
+  "output_directory": "rope_results_level_hold",
+  "materials": ["al1100_o", "cu110_o60", "ss304_annealed"],
+  "target": {
+    "mode": "horizontal_shape",
+    "tip_y_mm": 0.0,
+    "tip_z_mm": 0.0,
+    "minimum_forward_ratio": 0.99,
+    "tolerance_mm": 1.0,
+    "angle_tolerance_deg": 1.0,
+    "angle_weight_mm": 48.0
+  },
+  "gravity_steps": 20,
+  "payload_steps": 20,
+  "payload_kg": 0.5,
+  "max_iterations_per_load": 20,
+  "max_trials_per_load": 120
+}

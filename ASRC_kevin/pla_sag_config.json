@@ -1,0 +1,19 @@
+{
+  "module_diameter_mm": 32.0,
+  "module_length_mm": 48.0,
+  "axes": {"high": "x", "unidirectional": "y", "directional": "y", "low": "x"},
+  "data_mode": "paper_original",
+  "data_source": {
+    "file": "craft_data.py",
+    "reference": "CRAFT, Research Square rs-8482576/v1, Tables 1 and 2",
+    "url": "https://doi.org/10.21203/rs.3.rs-8482576/v1",
+    "material": "PC flexures, springs and fillers; PLA disks and rings",
+    "material_conversion_applied": false,
+    "geometry_note": "48 mm module length is the existing craft_data.py assumption, not a stated paper measurement."
+  },
+  "gravity_m_s2": 9.81,
+  "scan": {"total_min": 4, "total_max": 31, "min_each": 1, "focus_total": 31},
+  "reference_counts": [8, 13, 8, 2],
+  "solver": {"cells_per_module": 8, "gravity_steps": 8, "max_iterations": 80, "moment_tolerance_nm": 1e-10},
+  "output_directory": "pla_sag_results"
+}

@@ -1,0 +1,87 @@
+Inverse target: tip XYZ = (1488.0, 0.0, 0.0) mm; tolerance 1 mm
+Tension and travel bounds are numerical search bounds, not rated hardware limits.
+A failed local search is not a proof of global infeasibility.
+
+al1100_o: source stage tip_payload_500g, payload 500.0 g
+  step  1: X=200.49 mm Y=-1431.71 mm Z=-0.00 mm error=1925.48 mm Ttop=45.50 N
+  step  2: X=208.22 mm Y=-1424.77 mm Z=0.00 mm error=1915.15 mm Ttop=49.63 N
+  step  3: X=214.91 mm Y=-1416.44 mm Z=0.00 mm error=1904.48 mm Ttop=53.16 N
+  step  4: X=221.55 mm Y=-1407.31 mm Z=0.00 mm error=1893.26 mm Ttop=56.73 N
+  step  5: X=227.41 mm Y=-1396.78 mm Z=0.00 mm error=1881.52 mm Ttop=59.84 N
+  step  6: X=232.71 mm Y=-1385.19 mm Z=-0.00 mm error=1869.36 mm Ttop=62.68 N
+  step  7: X=237.54 mm Y=-1372.66 mm Z=-0.00 mm error=1856.83 mm Ttop=65.31 N
+  step  8: X=241.61 mm Y=-1358.93 mm Z=-0.00 mm error=1843.95 mm Ttop=67.54 N
+  step  9: X=244.80 mm Y=-1344.09 mm Z=0.00 mm error=1830.88 mm Ttop=69.32 N
+  step 10: X=246.99 mm Y=-1328.25 mm Z=0.00 mm error=1817.79 mm Ttop=70.64 N
+  step 11: X=247.95 mm Y=-1311.44 mm Z=0.00 mm error=1804.88 mm Ttop=71.33 N
+  step 12: X=247.17 mm Y=-1293.71 mm Z=0.00 mm error=1792.58 mm Ttop=71.22 N
+  step 13: X=243.84 mm Y=-1275.41 mm Z=0.00 mm error=1781.74 mm Ttop=70.11 N
+  step 14: X=237.27 mm Y=-1257.06 mm Z=0.00 mm error=1773.29 mm Ttop=67.76 N
+  step 15: X=228.13 mm Y=-1241.02 mm Z=0.00 mm error=1768.44 mm Ttop=65.59 N
+  step 16: X=217.44 mm Y=-1227.94 mm Z=0.00 mm error=1766.97 mm Ttop=64.06 N
+  step 17: X=215.06 mm Y=-1224.29 mm Z=0.00 mm error=1766.14 mm Ttop=66.88 N
+  step 18: X=212.60 mm Y=-1220.75 mm Z=0.00 mm error=1765.47 mm Ttop=69.69 N
+  RESULT: target_not_reached | trial budget exhausted
+  best-candidate commands (NOT a target solution) [mm, top/right/bottom/left]: +34.000/-2.026/-22.026/-2.026
+  tension [N, top/right/bottom/left]: 69.689/0.000/11.410/0.000
+  Screening: candidate exceeds rope-strain or per-module angle reference range.
+
+cu110_o60: source stage tip_payload_500g, payload 500.0 g
+  step  1: X=322.51 mm Y=-1443.92 mm Z=-0.00 mm error=1855.61 mm Ttop=80.52 N
+  step  2: X=328.73 mm Y=-1439.75 mm Z=0.00 mm error=1848.45 mm Ttop=84.58 N
+  step  3: X=334.62 mm Y=-1434.65 mm Z=0.00 mm error=1840.79 mm Ttop=88.32 N
+  step  4: X=340.42 mm Y=-1428.73 mm Z=0.00 mm error=1832.54 mm Ttop=92.08 N
+  step  5: X=346.27 mm Y=-1422.00 mm Z=-0.00 mm error=1823.64 mm Ttop=95.95 N
+  step  6: X=352.05 mm Y=-1414.43 mm Z=0.00 mm error=1814.11 mm Ttop=99.84 N
+  step  7: X=357.56 mm Y=-1405.80 mm Z=0.00 mm error=1803.93 mm Ttop=103.54 N
+  step  8: X=362.80 mm Y=-1396.34 mm Z=-0.00 mm error=1793.27 mm Ttop=107.32 N
+  step  9: X=367.25 mm Y=-1385.62 mm Z=-0.00 mm error=1782.14 mm Ttop=110.39 N
+  step 10: X=372.27 mm Y=-1374.00 mm Z=0.00 mm error=1769.95 mm Ttop=113.84 N
+  step 11: X=376.52 mm Y=-1361.47 mm Z=-0.00 mm error=1757.55 mm Ttop=117.01 N
+  step 12: X=380.22 mm Y=-1347.68 mm Z=-0.00 mm error=1744.54 mm Ttop=119.80 N
+  step 13: X=383.30 mm Y=-1332.72 mm Z=0.00 mm error=1731.04 mm Ttop=122.24 N
+  step 14: X=385.74 mm Y=-1316.73 mm Z=-0.00 mm error=1717.19 mm Ttop=124.35 N
+  step 15: X=387.45 mm Y=-1299.69 mm Z=0.00 mm error=1703.06 mm Ttop=126.06 N
+  step 16: X=388.30 mm Y=-1281.60 mm Z=-0.00 mm error=1688.74 mm Ttop=127.25 N
+  step 17: X=388.01 mm Y=-1262.25 mm Z=-0.00 mm error=1674.29 mm Ttop=127.68 N
+  step 18: X=385.57 mm Y=-1242.12 mm Z=-0.00 mm error=1660.79 mm Ttop=127.25 N
+  step 19: X=380.65 mm Y=-1221.71 mm Z=-0.00 mm error=1648.87 mm Ttop=125.92 N
+  step 20: X=373.28 mm Y=-1202.07 mm Z=-0.00 mm error=1639.38 mm Ttop=124.09 N
+  step 21: X=364.36 mm Y=-1184.78 mm Z=-0.00 mm error=1632.87 mm Ttop=122.84 N
+  step 22: X=353.47 mm Y=-1168.93 mm Z=-0.00 mm error=1628.97 mm Ttop=121.16 N
+  step 23: X=340.85 mm Y=-1155.01 mm Z=-0.00 mm error=1627.88 mm Ttop=119.09 N
+  RESULT: target_not_reached | trial budget exhausted
+  best-candidate commands (NOT a target solution) [mm, top/right/bottom/left]: +46.000/-1.575/-28.969/-1.575
+  tension [N, top/right/bottom/left]: 119.087/0.000/6.821/0.000
+  Screening: candidate exceeds rope-strain or per-module angle reference range.
+
+ss304_annealed: source stage tip_payload_500g, payload 500.0 g
+  step  1: X=613.95 mm Y=-1349.10 mm Z=0.00 mm error=1607.50 mm Ttop=104.18 N
+  step  2: X=631.03 mm Y=-1341.67 mm Z=0.00 mm error=1592.01 mm Ttop=115.19 N
+  step  3: X=648.07 mm Y=-1333.84 mm Z=0.00 mm error=1576.26 mm Ttop=126.21 N
+  step  4: X=665.07 mm Y=-1325.59 mm Z=-0.00 mm error=1560.26 mm Ttop=137.22 N
+  step  5: X=681.96 mm Y=-1316.95 mm Z=-0.00 mm error=1544.04 mm Ttop=148.21 N
+  step  6: X=698.70 mm Y=-1307.94 mm Z=0.00 mm error=1527.64 mm Ttop=159.11 N
+  step  7: X=715.17 mm Y=-1298.58 mm Z=0.00 mm error=1511.15 mm Ttop=169.86 N
+  step  8: X=731.21 mm Y=-1288.96 mm Z=-0.00 mm error=1494.70 mm Ttop=180.35 N
+  step  9: X=746.55 mm Y=-1279.17 mm Z=-0.00 mm error=1478.52 mm Ttop=190.36 N
+  step 10: X=760.49 mm Y=-1269.57 mm Z=0.00 mm error=1463.24 mm Ttop=199.39 N
+  step 11: X=771.95 mm Y=-1260.71 mm Z=0.00 mm error=1449.87 mm Ttop=206.68 N
+  step 12: X=781.23 mm Y=-1252.37 mm Z=-0.00 mm error=1438.04 mm Ttop=212.49 N
+  step 13: X=789.50 mm Y=-1243.79 mm Z=-0.00 mm error=1426.51 mm Ttop=217.63 N
+  step 14: X=797.74 mm Y=-1234.33 mm Z=0.00 mm error=1414.23 mm Ttop=222.79 N
+  step 15: X=805.59 mm Y=-1224.02 mm Z=0.00 mm error=1401.40 mm Ttop=227.69 N
+  step 16: X=812.82 mm Y=-1212.85 mm Z=-0.00 mm error=1388.12 mm Ttop=232.22 N
+  step 17: X=819.76 mm Y=-1200.67 mm Z=-0.00 mm error=1374.10 mm Ttop=236.63 N
+  step 18: X=826.48 mm Y=-1187.46 mm Z=0.00 mm error=1359.28 mm Ttop=240.98 N
+  step 19: X=832.73 mm Y=-1173.07 mm Z=-0.00 mm error=1343.68 mm Ttop=245.08 N
+  step 20: X=838.34 mm Y=-1157.44 mm Z=0.00 mm error=1327.30 mm Ttop=248.82 N
+  step 21: X=843.26 mm Y=-1140.54 mm Z=-0.00 mm error=1310.16 mm Ttop=252.23 N
+  step 22: X=847.50 mm Y=-1122.50 mm Z=0.00 mm error=1292.38 mm Ttop=255.41 N
+  RESULT: target_not_reached | trial budget exhausted
+  best-candidate commands (NOT a target solution) [mm, top/right/bottom/left]: +44.000/-7.541/-9.402/-7.541
+  tension [N, top/right/bottom/left]: 255.408/0.000/0.000/0.000
+  Screening: candidate exceeds rope-strain or per-module angle reference range.
+
+Saved inverse results: /Users/qianjin/Library/CloudStorage/OneDrive-TheHongKongPolytechnicUniversity/EEC/ASRC/rope_results_target_position
+Previous scenarios and simulation files unchanged.

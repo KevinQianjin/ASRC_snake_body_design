@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "tridiagonal_vs_scipy_max_error": 1.1102230246251565e-16,
+  "small_load_uniform": {
+    "computed_mm": 0.0004937335714282153,
+    "analytical_mm": 0.0004937142857142858,
+    "relative_error": 3.906249927854155e-05
+  },
+  "energy_gradient_max_error_nm": 1.0887427515527542e-11,
+  "zero_gravity_drop_mm": -0.0,
+  "representative_refinements": [
+    {
+      "label": "N31 minimum",
+      "counts": [
+        1,
+        5,
+        1,
+        24
+      ],
+      "cells_per_module": [
+        8,
+        16,
+        32
+      ],
+      "tip_drop_mm": [
+        1355.7481175261908,
+        1355.723415196328,
+        1355.717234384509
+      ],
+      "mesh_difference_mm": 0.02470232986274823,
+      "next_mesh_difference_mm": 0.0061808118189219385,
+      "doubled_steps_difference_mm": 5.227784640737809e-07,
+      "converged": true
+    },
+    {
+      "label": "N31 maximum",
+      "counts": [
+        28,
+        1,
+        1,
+        1
+      ],
+      "cells_per_module": [
+        8,
+        16,
+        32
+      ],
+      "tip_drop_mm": [
+        1403.4910971731497,
+        1403.4628185283045,
+        1403.4557489283857
+      ],
+      "mesh_difference_mm": 0.02827864484515885,
+      "next_mesh_difference_mm": 0.007069599918850145,
+      "doubled_steps_difference_mm": 3.3848209568532184e-08,
+      "converged": true
+    },
+    {
+      "label": "Reference",
+      "counts": [
+        8,
+        13,
+        8,
+        2
+      ],
+      "cells_per_module": [
+        8,
+        16,
+        32
+      ],
+      "tip_drop_mm": [
+        1395.345800233002,
+        1395.3197372962798,
+        1395.3132217220348
+      ],
+      "mesh_difference_mm": 0.026062936722155428,
+      "next_mesh_difference_mm": 0.006515574244986055,
+      "doubled_steps_difference_mm": 5.588710791926133e-07,
+      "converged": true
+    }
+  ],
+  "original_files_unchanged": true,
+  "all_combinations_converged": true,
+  "paper_properties_exact": true,
+  "output_checks": {
+    "passed": true,
+    "rows": 31465,
+    "N31_rows": 4060,
+    "all_masses_match_paper": true,
+    "all_EI_match_paper": true,
+    "material_conversion_applied": false,
+    "all_combinations_converged": true,
+    "original_files_unchanged": true,
+    "output_source_hash_matches": true
+  }
+}

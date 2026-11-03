@@ -1,0 +1,38 @@
+{
+  "scenario_name": "D_tip500g_inverse_target_xyz",
+  "initial_results": "rope_results_tip500g/comparison.json",
+  "initial_stage": "tip_payload_500g",
+  "output_directory": "rope_results_target_position",
+  "materials": ["al1100_o", "cu110_o60", "ss304_annealed"],
+  "target": {
+    "mode": "tip_position",
+    "tip_x_mm": 1488.0,
+    "tip_y_mm": 0.0,
+    "tip_z_mm": 0.0,
+    "minimum_forward_ratio": 0.99,
+    "tolerance_mm": 1.0,
+    "reach_weight": 1.0
+  },
+  "search": {
+    "parameterization": "winch_length",
+    "max_iterations": 60,
+    "max_trials": 400,
+    "max_tension_n": 1000.0,
+    "max_tension_step_n": 20.0,
+    "finite_difference_n": 1.0,
+    "max_command_step_mm": 2.0,
+    "finite_difference_mm": 0.1,
+    "max_take_up_mm": 500.0,
+    "max_pay_out_mm": 500.0,
+    "slack_margin_mm": 1.0,
+    "damping_mm_per_n": 0.02,
+    "damping_mm_per_mm": 0.05,
+    "minimum_improvement_mm": 0.01,
+    "balanced_sides": false
+  },
+  "screening": {
+    "max_rope_strain_fraction": 0.02,
+    "max_joint_angle_rad": 0.5,
+    "hardware_limits_calibrated": false
+  }
+}

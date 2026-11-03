@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-11-03T09:51:32.391831+00:00",
+  "all_checks_passed": true,
+  "source_and_preserved_simulation_hashes_match": true,
+  "preserved_file_count": 22,
+  "database_integrity": "ok",
+  "latest_database_run_id": 2,
+  "global_feasibility_proven": false,
+  "unit_tests_passed": 21,
+  "cases": [
+    {
+      "material": "al1100_o",
+      "status": "target_not_reached",
+      "actual_payload_kg": 0.5,
+      "actual_gravity_scale": 1.0,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 1.758760082015698e-08,
+      "equilibrium_axial_residual_n": 1.6151236808213936e-05,
+      "min_stability_eigenvalue": 0.02525559494491447
+    },
+    {
+      "material": "cu110_o60",
+      "status": "target_not_reached",
+      "actual_payload_kg": 0.5,
+      "actual_gravity_scale": 1.0,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 2.6665270957959564e-07,
+      "equilibrium_axial_residual_n": 0.00025875685707563433,
+      "min_stability_eigenvalue": 0.040601081999832776
+    },
+    {
+      "material": "ss304_annealed",
+      "status": "target_not_reached",
+      "actual_payload_kg": 0.5,
+      "actual_gravity_scale": 1.0,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 1.8356964989255212e-07,
+      "equilibrium_axial_residual_n": 0.00025709184404899523,
+      "min_stability_eigenvalue": 0.07204506613561601
+    }
+  ],
+  "reachable_D31_500g_position_round_trip": {
+    "material": "ss304_annealed",
+    "payload_kg": 0.5,
+    "reference_length_mm": 1488.0,
+    "generated_target_mm": [
+      613.7273152336354,
+      -1349.2052741505158,
+      3.892544272733836
+    ],
+    "known_forward_commands_mm": [
+      2.0,
+      0.5,
+      -0.5,
+      -0.25
+    ],
+    "solved_take_up_mm": [
+      2.010815697540205,
+      0.5074339709761013,
+      3.6644706146719735e-05,
+      -2.8268862492133686
+    ],
+    "verified_error_mm": 0.006296701872909748,
+    "target_reached": true,
+    "within_reference_model_range": false,
+    "purpose": "reachable position round trip; not a horizontal-holding solution"
+  }
+}

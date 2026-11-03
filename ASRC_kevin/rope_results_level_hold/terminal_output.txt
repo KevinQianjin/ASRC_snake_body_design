@@ -1,0 +1,27 @@
+Hold target: whole centerline within 1 mm of X axis; all link tilts <= 1 deg
+Start with virgin backbone; compensate self-weight, then progressively add 500 g.
+Numerical search bounds are not hardware ratings; stop at first missed load target.
+
+al1100_o: 31 modules, 1488.0 mm
+  self_weight  1: gravity=0.05 payload=0.0 g X=1487.92 mm Y=4.634 mm T_max=4.45 N target=False
+  RESULT: hold_target_not_reached_at_requested_load
+  Last held load: gravity=0.00, payload=0.0 g
+  Candidate load: gravity=0.05, payload=0.0 g
+  candidate commands (NOT a 500 g target solution) [mm, top/right/bottom/left]: +0.948/+0.097/-0.113/+0.097
+
+cu110_o60: 31 modules, 1488.0 mm
+  self_weight  1: gravity=0.05 payload=0.0 g X=1487.93 mm Y=4.509 mm T_max=5.37 N target=False
+  RESULT: hold_target_not_reached_at_requested_load
+  Last held load: gravity=0.00, payload=0.0 g
+  Candidate load: gravity=0.05, payload=0.0 g
+  candidate commands (NOT a 500 g target solution) [mm, top/right/bottom/left]: +1.066/+0.051/-0.275/+0.051
+
+ss304_annealed: 31 modules, 1488.0 mm
+  self_weight  1: gravity=0.05 payload=0.0 g X=1487.98 mm Y=2.489 mm T_max=5.02 N target=False
+  RESULT: hold_target_not_reached_at_requested_load
+  Last held load: gravity=0.00, payload=0.0 g
+  Candidate load: gravity=0.05, payload=0.0 g
+  candidate commands (NOT a 500 g target solution) [mm, top/right/bottom/left]: +0.882/+0.005/-0.148/+0.005
+
+Saved hold-horizontal results: /Users/qianjin/Library/CloudStorage/OneDrive-TheHongKongPolytechnicUniversity/EEC/ASRC/rope_results_level_hold
+Existing no-payload and 500 g simulations preserved.

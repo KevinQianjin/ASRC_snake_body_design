@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-11-03T09:51:31.533625+00:00",
+  "all_checks_passed": true,
+  "source_and_preserved_simulation_hashes_match": true,
+  "preserved_file_count": 22,
+  "database_integrity": "ok",
+  "latest_database_run_id": 5,
+  "global_feasibility_proven": false,
+  "unit_tests_passed": 21,
+  "cases": [
+    {
+      "material": "al1100_o",
+      "status": "hold_target_not_reached_at_requested_load",
+      "actual_payload_kg": 0.0,
+      "actual_gravity_scale": 0.05,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 1.2608802890667903e-12,
+      "equilibrium_axial_residual_n": 4.824135770480522e-10,
+      "min_stability_eigenvalue": 0.045887950970959886
+    },
+    {
+      "material": "cu110_o60",
+      "status": "hold_target_not_reached_at_requested_load",
+      "actual_payload_kg": 0.0,
+      "actual_gravity_scale": 0.05,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 8.692907504936898e-13,
+      "equilibrium_axial_residual_n": 5.842309374457557e-10,
+      "min_stability_eigenvalue": 0.07780854295070375
+    },
+    {
+      "material": "ss304_annealed",
+      "status": "hold_target_not_reached_at_requested_load",
+      "actual_payload_kg": 0.0,
+      "actual_gravity_scale": 0.05,
+      "target_reached": false,
+      "equilibrium_moment_residual_nm": 1.75750466090141e-09,
+      "equilibrium_axial_residual_n": 1.1717952277652488e-06,
+      "min_stability_eigenvalue": 0.1330045665823686
+    }
+  ]
+}
