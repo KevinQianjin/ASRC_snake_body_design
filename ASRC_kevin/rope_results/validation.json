@@ -1,0 +1,60 @@
+{
+  "assembly_name": "D",
+  "module_count": 31,
+  "reference_length_mm": 1488,
+  "stack": "8*high, 13*unidirectional:y, 8*directional:y, 2*low",
+  "unit_tests_passed": 11,
+  "default_case_count": 19,
+  "latest_sqlite_run": 6,
+  "sqlite_integrity": "ok",
+  "original_sha256": {
+    "snake_model.py": "29135db3c352efa66d89c61264a6a2c305da6fd05de703f36bfa70b4075371e1",
+    "craft_data.py": "b89ffd440b721a850e61f74f0d02b3cd052bb4f4e31296b33eee561b48f4fa8c"
+  },
+  "original_files_unchanged": true,
+  "max_moment_residual_nm": 5.305141819178516e-07,
+  "max_axial_force_residual_n": 0.00035688043439572546,
+  "minimum_stability_eigenvalue": 0.023714533174973514,
+  "aluminium_double_loading_steps_check": {
+    "max_tip_change_mm": 0.006777060757005294,
+    "max_tension_change_n": 0.0002524831462373811
+  },
+  "geometry_warnings": [
+    {
+      "material": "cu110_o60",
+      "stage": "self_weight",
+      "max_joint_deg": 29.609934990315082,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    },
+    {
+      "material": "cu110_o60",
+      "stage": "pull_top_10mm",
+      "max_joint_deg": 29.437945898331083,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    },
+    {
+      "material": "cu110_o60",
+      "stage": "pull_top_right",
+      "max_joint_deg": 29.78740897038422,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    },
+    {
+      "material": "cu110_o60",
+      "stage": "return_zero",
+      "max_joint_deg": 31.208350681019276,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    },
+    {
+      "material": "cu110_o60",
+      "stage": "free_spool",
+      "max_joint_deg": 31.391821305877965,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    },
+    {
+      "material": "cu110_o60",
+      "stage": "unloaded_residual",
+      "max_joint_deg": 29.62412423770984,
+      "warning": "large bending per module: refine discretization / verify guide geometry"
+    }
+  ]
+}

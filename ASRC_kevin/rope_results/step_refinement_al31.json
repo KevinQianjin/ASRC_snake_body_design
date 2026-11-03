@@ -1,0 +1,37 @@
+{
+  "assembly_name": "D",
+  "module_count": 31,
+  "reference_length_mm": 1488,
+  "checks": [
+    {
+      "stage": "self_weight",
+      "tip_difference_mm": 2.6497921313699303e-05,
+      "max_tension_difference_n": 6.320363681311392e-07
+    },
+    {
+      "stage": "pull_top_10mm",
+      "tip_difference_mm": 8.228075727508019e-05,
+      "max_tension_difference_n": 1.6160676352683367e-08
+    },
+    {
+      "stage": "pull_top_right",
+      "tip_difference_mm": 0.003026708383617144,
+      "max_tension_difference_n": 0.0002524831462373811
+    },
+    {
+      "stage": "return_zero",
+      "tip_difference_mm": 0.006777060757005294,
+      "max_tension_difference_n": 0.0002156286908681082
+    },
+    {
+      "stage": "free_spool",
+      "tip_difference_mm": 0.005262449535406055,
+      "max_tension_difference_n": 0.0
+    },
+    {
+      "stage": "unloaded_residual",
+      "tip_difference_mm": 0.006453458489331158,
+      "max_tension_difference_n": 0.0
+    }
+  ]
+}

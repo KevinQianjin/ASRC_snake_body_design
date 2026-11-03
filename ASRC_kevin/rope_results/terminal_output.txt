@@ -1,0 +1,101 @@
+Backbone reference database (solid circular section):
+material                E [GPa]  yield [MPa]   EI [Nm2]    My [Nm]       g/m
+al1100_o                  69.00        20.00     1.0539     0.1455     37.41
+cu110_o60                117.00        68.95     1.7871     0.5015    123.44
+ss304_annealed           200.00       205.00     3.0549     1.4911    109.45
+
+Assembly D: 8*high, 13*unidirectional:y, 8*directional:y, 2*low
+
+Rope names: top / right / bottom / left. Positive drop = downward.
+take_up [mm]: cumulative from initial; positive = take up, negative = pay out.
+move [mm]: change from the previous locked-length stage; same sign convention.
+residual [mm]: sqrt(Y_tip^2 + Z_tip^2), after zero gravity and zero rope tension only.
+'-- (loaded)' means the current displacement is not an unloaded residual.
+Rope EA uses a PA6 solid-stock surrogate unless explicitly overridden; results are not calibrated.
+
+Modules-only baseline (no center backbone or ropes):
+  self_weight           drop= 1418.461 mm  lateral=    0.000 mm  residual=-- (loaded)
+    take_up: n/a (modules-only baseline has no ropes)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+
+al1100_o: 31 modules, 1488.0 mm, routing radius 13.0 mm
+  self_weight           drop= 1212.529 mm  lateral=   -0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    T [N]: top=20.65, right=0.00, bottom=0.00, left=0.00
+  pull_top_10mm         drop= 1104.328 mm  lateral=   -0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    move [mm, this stage]:     top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    T [N]: top=22.35, right=0.00, bottom=0.00, left=0.00
+  pull_top_right        drop= 1125.360 mm  lateral=  145.166 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+6.00, bottom=-10.00, left=-6.00
+    move [mm, this stage]:     top=+0.00, right=+6.00, bottom=+0.00, left=-6.00
+    T [N]: top=18.50, right=11.03, bottom=0.00, left=0.00
+  return_zero           drop= 1307.095 mm  lateral=   -9.281 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=-10.00, right=-6.00, bottom=+10.00, left=+6.00
+    T [N]: top=0.00, right=0.00, bottom=5.24, left=3.24
+  free_spool            drop= 1288.773 mm  lateral=   19.083 mm  residual=-- (loaded)
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+  unloaded_residual     drop= 1167.693 mm  lateral=   20.550 mm  residual=1167.874 mm
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+
+cu110_o60: 31 modules, 1488.0 mm, routing radius 13.0 mm
+  self_weight           drop= 1003.265 mm  lateral=   -0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    T [N]: top=51.05, right=0.00, bottom=0.00, left=0.00
+    warning: large bending per module: refine discretization / verify guide geometry
+  pull_top_10mm         drop=  876.673 mm  lateral=   -0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    move [mm, this stage]:     top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    T [N]: top=67.05, right=0.00, bottom=0.00, left=0.00
+    warning: large bending per module: refine discretization / verify guide geometry
+  pull_top_right        drop=  887.978 mm  lateral=  134.498 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+6.00, bottom=-10.00, left=-6.00
+    move [mm, this stage]:     top=+0.00, right=+6.00, bottom=+0.00, left=-6.00
+    T [N]: top=62.77, right=18.51, bottom=0.00, left=0.00
+    warning: large bending per module: refine discretization / verify guide geometry
+  return_zero           drop= 1138.153 mm  lateral=   -3.924 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=-10.00, right=-6.00, bottom=+10.00, left=+6.00
+    T [N]: top=27.47, right=0.00, bottom=0.00, left=2.55
+    warning: large bending per module: refine discretization / verify guide geometry
+  free_spool            drop= 1294.802 mm  lateral=   11.827 mm  residual=-- (loaded)
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+    warning: large bending per module: refine discretization / verify guide geometry
+  unloaded_residual     drop= 1113.550 mm  lateral=   13.779 mm  residual=1113.635 mm
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+    warning: large bending per module: refine discretization / verify guide geometry
+
+ss304_annealed: 31 modules, 1488.0 mm, routing radius 13.0 mm
+  self_weight           drop=  314.354 mm  lateral=    0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    T [N]: top=21.21, right=0.00, bottom=0.00, left=0.00
+  pull_top_10mm         drop=  109.431 mm  lateral=    0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    move [mm, this stage]:     top=+10.00, right=+0.00, bottom=-10.00, left=+0.00
+    T [N]: top=66.32, right=0.00, bottom=0.00, left=0.00
+  pull_top_right        drop=  108.640 mm  lateral=  125.654 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+10.00, right=+6.00, bottom=-10.00, left=-6.00
+    move [mm, this stage]:     top=+0.00, right=+6.00, bottom=+0.00, left=-6.00
+    T [N]: top=66.23, right=26.59, bottom=0.00, left=0.00
+  return_zero           drop=  314.354 mm  lateral=    0.000 mm  residual=-- (loaded)
+    take_up [mm, from initial]: top=+0.00, right=+0.00, bottom=+0.00, left=+0.00
+    move [mm, this stage]:     top=-10.00, right=-6.00, bottom=+10.00, left=+6.00
+    T [N]: top=21.21, right=0.00, bottom=0.00, left=0.00
+  free_spool            drop=  419.032 mm  lateral=    0.000 mm  residual=-- (loaded)
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+  unloaded_residual     drop=   19.369 mm  lateral=    0.000 mm  residual=19.369 mm
+    take_up: free_spool (all four winches released; no prescribed length)
+    T [N]: top=0.00, right=0.00, bottom=0.00, left=0.00
+
+Saved run 6: /Users/qianjin/Library/CloudStorage/OneDrive-TheHongKongPolytechnicUniversity/EEC/ASRC/rope_results
+SQLite database: /Users/qianjin/Library/CloudStorage/OneDrive-TheHongKongPolytechnicUniversity/EEC/ASRC/rope_materials.sqlite3
+Original source SHA256 checksums unchanged.
