@@ -1,0 +1,44 @@
+{
+  "assembly_name": "D",
+  "scenario_name": "D_tip_500g",
+  "output_directory": "rope_results_tip500g",
+  "stack": "8*high, 13*unidirectional:y, 8*directional:y, 2*low",
+  "module_diameter_mm": 32.0,
+  "module_length_mm": 48.0,
+  "extras_g_per_module": 0.0,
+  "payload_node": null,
+  "backbone": {
+    "diameter_mm": 4.2,
+    "materials": ["al1100_o", "cu110_o60", "ss304_annealed"],
+    "attachment": "clamped_each_module",
+    "fiber_radial_order": 5,
+    "fiber_angles": 24
+  },
+  "ropes": {
+    "material": "nylon_pa6_reference",
+    "diameter_mm": 2.0,
+    "routing_radius_mm": 13.0,
+    "pretension_n": [0.0, 0.0, 0.0, 0.0],
+    "effective_axial_rigidity_n": null,
+    "effective_linear_density_kg_m": null,
+    "strain_warning_fraction": 0.02
+  },
+  "solver": {
+    "axial_compliance": true,
+    "axial_strain_scale": 0.001,
+    "max_iterations": 400,
+    "moment_tolerance_nm": 0.000001,
+    "axial_force_tolerance_n": 0.01,
+    "max_subdivisions": 7
+  },
+  "protocol": [
+    {"name": "self_weight", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 1.0, "payload_kg": 0.0, "free_spool": false, "steps": 16},
+    {"name": "tip_payload_500g", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 1.0, "payload_kg": 0.5, "free_spool": false, "steps": 64},
+    {"name": "pull_top_10mm", "take_up_mm": [10, 0, -10, 0], "gravity_scale": 1.0, "payload_kg": 0.5, "free_spool": false, "steps": 24},
+    {"name": "pull_top_right", "take_up_mm": [10, 6, -10, -6], "gravity_scale": 1.0, "payload_kg": 0.5, "free_spool": false, "steps": 20},
+    {"name": "return_zero", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 1.0, "payload_kg": 0.5, "free_spool": false, "steps": 24},
+    {"name": "free_spool", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 1.0, "payload_kg": 0.5, "free_spool": true, "steps": 32},
+    {"name": "payload_removed", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 1.0, "payload_kg": 0.0, "free_spool": true, "steps": 48},
+    {"name": "unloaded_residual", "take_up_mm": [0, 0, 0, 0], "gravity_scale": 0.0, "payload_kg": 0.0, "free_spool": true, "steps": 32}
+  ]
+}
