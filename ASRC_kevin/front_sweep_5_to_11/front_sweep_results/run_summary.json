@@ -1,0 +1,2608 @@
+{
+  "config": {
+    "front_module_counts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "rear_modules_min": 2,
+    "rear_modules_max": 20,
+    "focus_total_modules": 31,
+    "reference_rear_counts": [
+      8,
+      12
+    ],
+    "reference_directional_fraction": 0.7272727272727273,
+    "effective_inspection_dimensions_mm": [
+      1600,
+      830,
+      300
+    ],
+    "cells_per_module": 16,
+    "independent_bvp_validation": true
+  },
+  "fronts": [
+    {
+      "front_modules": 5,
+      "front_length_mm": 240,
+      "swept_cases": 760,
+      "fixed_total_cases": 100,
+      "fixed_rear_reference_drop_range_mm": [
+        191.0216809374826,
+        197.4850305695229
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1164.2793224893262,
+        1169.0013669999314
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        3.8594201984325465,
+        4.66943353049626
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        105.60358497454264,
+        112.94106587718532
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        1.1156959127867663,
+        1.2379890306040988
+      ],
+      "fixed_total_reference_yield_pass_count": 0,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 760,
+      "maximum_rear_count_with_combined_pass": 20,
+      "max_reach_combined_candidate": {
+        "combination": "H1-U19-D3-L2",
+        "n_high": 1,
+        "n_uni": 19,
+        "n_directional": 3,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 5,
+        "total_modules": 25,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 239.99999999999997,
+        "total_length_mm": 1200.0,
+        "module_mass_g": 98.39999999999999,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 203.47194860007824,
+        "tip_drop_mm": 189.51162441470268,
+        "tip_x_mm": 1169.258125424491,
+        "converged": true,
+        "residual_nm": 2.4542265409602942e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.1981817656230875,
+        "rear_compliance_gravity_deg_per_nmm": 0.01405573966919184,
+        "front_compliance_zero_g_deg_per_nmm": 4.64914325191868,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01766211363339997,
+        "rear_interface_angle_deg": -7.0019022691324295,
+        "rear_drop_mm": 84.18666754495935,
+        "front_relative_angle_deg": -25.81937555823153,
+        "root_reaction_moment_nm": 1.0599604292172382,
+        "max_core_stress_mpa": 144.4040746980613,
+        "core_reference_yield_ratio": 0.7044101204783477,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 105.32495686974333,
+        "capsule_horizontal_span_mm": 1201.2581254244903,
+        "capsule_vertical_span_mm": 221.5116244147027,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": true,
+        "passes_combined_reference_screen": true,
+        "elastic_shape_within_reference_yield": true
+      },
+      "rear_groups": {
+        "2": {
+          "cases": 4,
+          "combined_pass_count": 4,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            82.25373680940518,
+            91.02590794897262
+          ],
+          "reach_range_mm": [
+            314.72355737129857,
+            319.25665437376114
+          ]
+        },
+        "3": {
+          "cases": 8,
+          "combined_pass_count": 8,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            82.53643716970073,
+            91.29561289567025
+          ],
+          "reach_range_mm": [
+            362.65759445244504,
+            367.1934822589324
+          ]
+        },
+        "4": {
+          "cases": 12,
+          "combined_pass_count": 12,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            82.98585057798275,
+            91.73319908809786
+          ],
+          "reach_range_mm": [
+            410.56450229585994,
+            415.10571103267966
+          ]
+        },
+        "5": {
+          "cases": 16,
+          "combined_pass_count": 16,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            83.66182372823984,
+            92.40306390248487
+          ],
+          "reach_range_mm": [
+            458.4379903192509,
+            462.98805572300984
+          ]
+        },
+        "6": {
+          "cases": 20,
+          "combined_pass_count": 20,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            84.63363706946242,
+            93.38039197752431
+          ],
+          "reach_range_mm": [
+            506.27128814116753,
+            510.8347872345429
+          ]
+        },
+        "7": {
+          "cases": 24,
+          "combined_pass_count": 24,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            85.97995739423841,
+            94.75109886195555
+          ],
+          "reach_range_mm": [
+            554.0568827821539,
+            558.6395050180598
+          ]
+        },
+        "8": {
+          "cases": 28,
+          "combined_pass_count": 28,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            87.78877512210937,
+            96.61175581019522
+          ],
+          "reach_range_mm": [
+            601.7861722839048,
+            606.3948419061636
+          ]
+        },
+        "9": {
+          "cases": 32,
+          "combined_pass_count": 32,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            90.15731984745929,
+            99.06948753362178
+          ],
+          "reach_range_mm": [
+            649.4490248383262,
+            654.0920927895504
+          ]
+        },
+        "10": {
+          "cases": 36,
+          "combined_pass_count": 36,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            93.1919450718009,
+            102.24183113865385
+          ],
+          "reach_range_mm": [
+            697.0332332948037,
+            701.7207593834033
+          ]
+        },
+        "11": {
+          "cases": 40,
+          "combined_pass_count": 40,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            97.00796977865126,
+            106.25654003467245
+          ],
+          "reach_range_mm": [
+            744.5238560902998,
+            749.2680041909083
+          ]
+        },
+        "12": {
+          "cases": 44,
+          "combined_pass_count": 44,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            101.72946061467465,
+            111.25131124343835
+          ],
+          "reach_range_mm": [
+            791.9024374142032,
+            796.7180080392943
+          ]
+        },
+        "13": {
+          "cases": 48,
+          "combined_pass_count": 48,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            107.48893392937828,
+            117.37340831365412
+          ],
+          "reach_range_mm": [
+            839.1461020305666,
+            844.0512274109603
+          ]
+        },
+        "14": {
+          "cases": 52,
+          "combined_pass_count": 52,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            114.4269518697163,
+            124.77914505684812
+          ],
+          "reach_range_mm": [
+            886.2265239527243,
+            891.2435504282425
+          ]
+        },
+        "15": {
+          "cases": 56,
+          "combined_pass_count": 56,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            122.69158128036459,
+            133.6331878250112
+          ],
+          "reach_range_mm": [
+            933.1087734796183,
+            938.2653540258511
+          ]
+        },
+        "16": {
+          "cases": 60,
+          "combined_pass_count": 60,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            132.43767859590727,
+            144.1076264874984
+          ],
+          "reach_range_mm": [
+            979.7500543854758,
+            985.0804698423319
+          ]
+        },
+        "17": {
+          "cases": 64,
+          "combined_pass_count": 64,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            143.82595865394626,
+            156.38075733152294
+          ],
+          "reach_range_mm": [
+            1026.0983527390335,
+            1031.6450729748428
+          ]
+        },
+        "18": {
+          "cases": 68,
+          "combined_pass_count": 68,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            157.02180103261583,
+            170.63551582910918
+          ],
+          "reach_range_mm": [
+            1072.0910312912645,
+            1077.9065162387267
+          ]
+        },
+        "19": {
+          "cases": 72,
+          "combined_pass_count": 72,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            172.19374498364414,
+            187.0574949891996
+          ],
+          "reach_range_mm": [
+            1117.6534188234752,
+            1123.802143140181
+          ]
+        },
+        "20": {
+          "cases": 76,
+          "combined_pass_count": 76,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            189.51162441470268,
+            205.8324876595077
+          ],
+          "reach_range_mm": [
+            1162.6974621871711,
+            1169.258125424491
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D4-L1",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 4,
+        "n_low": 1,
+        "rear_modules": 20,
+        "front_modules": 5,
+        "total_modules": 25,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 239.99999999999997,
+        "total_length_mm": 1200.0,
+        "module_mass_g": 107.2,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 212.27194860007822,
+        "tip_drop_mm": 192.88569684741347,
+        "tip_x_mm": 1168.2254953830059,
+        "converged": true,
+        "residual_nm": 2.8157580271321453e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 3.8594201984325465,
+        "rear_compliance_gravity_deg_per_nmm": 0.014049396655468201,
+        "front_compliance_zero_g_deg_per_nmm": 4.288998352122162,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -7.131161147927223,
+        "rear_drop_mm": 85.86278368485664,
+        "front_relative_angle_deg": -25.894854170005832,
+        "root_reaction_moment_nm": 1.081872269717815,
+        "max_core_stress_mpa": 147.38924184694625,
+        "core_reference_yield_ratio": 0.7189719114485182,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 107.02291316255683,
+        "capsule_horizontal_span_mm": 1200.2254953830059,
+        "capsule_vertical_span_mm": 224.88569684741347,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": true,
+        "passes_combined_reference_screen": true,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 6,
+      "front_length_mm": 288,
+      "swept_cases": 950,
+      "fixed_total_cases": 120,
+      "fixed_rear_reference_drop_range_mm": [
+        259.6400152406841,
+        268.81691751194694
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1170.5510136322728,
+        1181.1584482240908
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.0819113013525214,
+        4.913885745920257
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        170.0181372149837,
+        180.1336477067171
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        1.0709990921569972,
+        1.1882435305511874
+      ],
+      "fixed_total_reference_yield_pass_count": 0,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 929,
+      "maximum_rear_count_with_combined_pass": 20,
+      "max_reach_combined_candidate": {
+        "combination": "H1-U19-D4-L2",
+        "n_high": 1,
+        "n_uni": 19,
+        "n_directional": 4,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 6,
+        "total_modules": 26,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 288.0,
+        "total_length_mm": 1248.0,
+        "module_mass_g": 102.4,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 207.4719486000782,
+        "tip_drop_mm": 258.7524377754733,
+        "tip_x_mm": 1181.4735097896726,
+        "converged": true,
+        "residual_nm": 8.628160582920333e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.417972954496867,
+        "rear_compliance_gravity_deg_per_nmm": 0.010890488850372247,
+        "front_compliance_zero_g_deg_per_nmm": 5.434913942383808,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01766211363339997,
+        "rear_interface_angle_deg": -7.4468502883723335,
+        "rear_drop_mm": 88.80234147596774,
+        "front_relative_angle_deg": -38.902800106405266,
+        "root_reaction_moment_nm": 1.1037546441146069,
+        "max_core_stress_mpa": 150.370394671018,
+        "core_reference_yield_ratio": 0.7335141203464293,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 169.95009629950556,
+        "capsule_horizontal_span_mm": 1213.4735097896723,
+        "capsule_vertical_span_mm": 290.7524377754732,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": true,
+        "passes_combined_reference_screen": true,
+        "elastic_shape_within_reference_yield": true
+      },
+      "rear_groups": {
+        "2": {
+          "cases": 5,
+          "combined_pass_count": 5,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            147.48071649800337,
+            159.95856276514925
+          ],
+          "reach_range_mm": [
+            325.35991377732375,
+            336.6421536654793
+          ]
+        },
+        "3": {
+          "cases": 10,
+          "combined_pass_count": 10,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            147.8017439039442,
+            160.2553519894093
+          ],
+          "reach_range_mm": [
+            373.25161958695566,
+            384.5291168100879
+          ]
+        },
+        "4": {
+          "cases": 15,
+          "combined_pass_count": 15,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            148.30154355739205,
+            160.72853176483554
+          ],
+          "reach_range_mm": [
+            421.1032047315042,
+            432.37679300327136
+          ]
+        },
+        "5": {
+          "cases": 20,
+          "combined_pass_count": 20,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            149.04134994212887,
+            161.44322103740132
+          ],
+          "reach_range_mm": [
+            468.90616281987997,
+            480.1775828430411
+          ]
+        },
+        "6": {
+          "cases": 25,
+          "combined_pass_count": 25,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            150.09178635229088,
+            162.47529397407766
+          ],
+          "reach_range_mm": [
+            516.651493063273,
+            527.9234163241429
+          ]
+        },
+        "7": {
+          "cases": 30,
+          "combined_pass_count": 30,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            151.5328073202851,
+            163.91131718349732
+          ],
+          "reach_range_mm": [
+            564.3294334399764,
+            575.6055179539759
+          ]
+        },
+        "8": {
+          "cases": 35,
+          "combined_pass_count": 35,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            153.45362392352246,
+            165.84846670899935
+          ],
+          "reach_range_mm": [
+            611.9291103950035,
+            623.2141037200442
+          ]
+        },
+        "9": {
+          "cases": 40,
+          "combined_pass_count": 40,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            155.95260501058215,
+            168.3944159551077
+          ],
+          "reach_range_mm": [
+            659.4380943956639,
+            670.7380018698268
+          ]
+        },
+        "10": {
+          "cases": 45,
+          "combined_pass_count": 45,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            159.13714461505876,
+            171.66718196999193
+          ],
+          "reach_range_mm": [
+            706.841851520783,
+            718.1641901288282
+          ]
+        },
+        "11": {
+          "cases": 50,
+          "combined_pass_count": 50,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            163.12348244035968,
+            175.7949128911665
+          ],
+          "reach_range_mm": [
+            754.1230825505471,
+            765.4772429599698
+          ]
+        },
+        "12": {
+          "cases": 55,
+          "combined_pass_count": 55,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            168.03646028931888,
+            180.91559384953072
+          ],
+          "reach_range_mm": [
+            801.2609429477868,
+            812.6586838942851
+          ]
+        },
+        "13": {
+          "cases": 60,
+          "combined_pass_count": 60,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            174.00919270860865,
+            187.17664226291694
+          ],
+          "reach_range_mm": [
+            848.2301399435804,
+            859.6862400156843
+          ]
+        },
+        "14": {
+          "cases": 65,
+          "combined_pass_count": 65,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            181.18262501229506,
+            194.73435637957988
+          ],
+          "reach_range_mm": [
+            894.9999069885166,
+            906.5329985789812
+          ]
+        },
+        "15": {
+          "cases": 70,
+          "combined_pass_count": 70,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            189.7049464250164,
+            203.7531734460094
+          ],
+          "reach_range_mm": [
+            941.5328614921946,
+            953.1664697354945
+          ]
+        },
+        "16": {
+          "cases": 75,
+          "combined_pass_count": 75,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            199.73082065244236,
+            214.4046864685284
+          ],
+          "reach_range_mm": [
+            987.7837594710477,
+            999.5475647147265
+          ]
+        },
+        "17": {
+          "cases": 80,
+          "combined_pass_count": 80,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            211.42039122039304,
+            226.8663619828917
+          ],
+          "reach_range_mm": [
+            1033.6981708755156,
+            1045.629505844533
+          ]
+        },
+        "18": {
+          "cases": 85,
+          "combined_pass_count": 85,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            224.9380151077387,
+            241.31989664861607
+          ],
+          "reach_range_mm": [
+            1079.2111123076213,
+            1091.3566937260978
+          ]
+        },
+        "19": {
+          "cases": 90,
+          "combined_pass_count": 90,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            240.4506764582492,
+            257.94914934376294
+          ],
+          "reach_range_mm": [
+            1124.2456897078328,
+            1136.6635678398657
+          ]
+        },
+        "20": {
+          "cases": 95,
+          "combined_pass_count": 74,
+          "combined_pass_fraction": 0.7789473684210526,
+          "drop_range_mm": [
+            258.12603367645113,
+            276.93758964845864
+          ],
+          "reach_range_mm": [
+            1168.7118221660817,
+            1181.4735097896726
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D4-L2",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 4,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 6,
+        "total_modules": 26,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 288.0,
+        "total_length_mm": 1248.0,
+        "module_mass_g": 110.80000000000001,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 215.8719486000782,
+        "tip_drop_mm": 260.2695504131742,
+        "tip_x_mm": 1181.1584482240908,
+        "converged": true,
+        "residual_nm": 8.648973806027124e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.417143435120676,
+        "rear_compliance_gravity_deg_per_nmm": 0.010922814476125402,
+        "front_compliance_zero_g_deg_per_nmm": 5.434913942383808,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -7.535845715008292,
+        "rear_drop_mm": 90.06087997346937,
+        "front_relative_angle_deg": -38.86928022407319,
+        "root_reaction_moment_nm": 1.1213993724495561,
+        "max_core_stress_mpa": 152.77423032211738,
+        "core_reference_yield_ratio": 0.7452401479127677,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 170.20867043970486,
+        "capsule_horizontal_span_mm": 1213.1584482240905,
+        "capsule_vertical_span_mm": 292.26955041317416,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": true,
+        "passes_combined_reference_screen": true,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 7,
+      "front_length_mm": 336,
+      "swept_cases": 1140,
+      "fixed_total_cases": 138,
+      "fixed_rear_reference_drop_range_mm": [
+        332.91720077858116,
+        341.21709688386596
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1160.533923540398,
+        1176.7295929435554
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.125202671248678,
+        4.936370862098978
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        238.793462657769,
+        248.55055423369916
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        1.0261166144660752,
+        1.1383654348999688
+      ],
+      "fixed_total_reference_yield_pass_count": 0,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 612,
+      "maximum_rear_count_with_combined_pass": 15,
+      "max_reach_combined_candidate": {
+        "combination": "H1-U14-D4-L3",
+        "n_high": 1,
+        "n_uni": 14,
+        "n_directional": 4,
+        "n_low": 3,
+        "rear_modules": 15,
+        "front_modules": 7,
+        "total_modules": 22,
+        "rear_length_mm": 720.0000000000001,
+        "front_length_mm": 336.0,
+        "total_length_mm": 1055.9999999999998,
+        "module_mass_g": 86.5,
+        "backbone_mass_g": 78.8039614500587,
+        "total_mass_g": 165.30396145005867,
+        "tip_drop_mm": 262.1591655296699,
+        "tip_x_mm": 950.2769906324799,
+        "converged": true,
+        "residual_nm": 9.934237872426255e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.720107428945191,
+        "rear_compliance_gravity_deg_per_nmm": 0.005903467683944068,
+        "front_compliance_zero_g_deg_per_nmm": 6.580829532645455,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01324894719711034,
+        "rear_interface_angle_deg": -3.8353236929705736,
+        "rear_drop_mm": 33.45542343109169,
+        "front_relative_angle_deg": -53.628850187518246,
+        "root_reaction_moment_nm": 0.7071303151624396,
+        "max_core_stress_mpa": 96.33614240428656,
+        "core_reference_yield_ratio": 0.4699324019721296,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 228.70374209857823,
+        "capsule_horizontal_span_mm": 982.2769906324803,
+        "capsule_vertical_span_mm": 294.15916552966996,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": true,
+        "passes_combined_reference_screen": true,
+        "elastic_shape_within_reference_yield": true
+      },
+      "rear_groups": {
+        "2": {
+          "cases": 6,
+          "combined_pass_count": 6,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            219.07017752452134,
+            231.49083212675095
+          ],
+          "reach_range_mm": [
+            317.3149134302006,
+            335.2376116809174
+          ]
+        },
+        "3": {
+          "cases": 12,
+          "combined_pass_count": 12,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            219.40589163052425,
+            231.7920166452156
+          ],
+          "reach_range_mm": [
+            365.1818994182736,
+            383.08887135351176
+          ]
+        },
+        "4": {
+          "cases": 18,
+          "combined_pass_count": 18,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            219.92663620592364,
+            232.272421831242
+          ],
+          "reach_range_mm": [
+            413.00281323206195,
+            430.8919419695887
+          ]
+        },
+        "5": {
+          "cases": 24,
+          "combined_pass_count": 24,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            220.69433500942276,
+            232.9972502029307
+          ],
+          "reach_range_mm": [
+            460.7685203382179,
+            478.63816701168395
+          ]
+        },
+        "6": {
+          "cases": 30,
+          "combined_pass_count": 30,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            221.7802890021646,
+            234.0424628595542
+          ],
+          "reach_range_mm": [
+            508.46936534975174,
+            526.3184000578462
+          ]
+        },
+        "7": {
+          "cases": 36,
+          "combined_pass_count": 36,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            223.2651185144103,
+            235.4947204383892
+          ],
+          "reach_range_mm": [
+            556.0948953611777,
+            573.9227626771328
+          ]
+        },
+        "8": {
+          "cases": 42,
+          "combined_pass_count": 42,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            225.2386875312614,
+            237.45130360902277
+          ],
+          "reach_range_mm": [
+            603.6334985966898,
+            621.4403334063235
+          ]
+        },
+        "9": {
+          "cases": 48,
+          "combined_pass_count": 48,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            227.80000239821806,
+            240.02000345121232
+          ],
+          "reach_range_mm": [
+            651.0719478213146,
+            668.8587599004338
+          ]
+        },
+        "10": {
+          "cases": 54,
+          "combined_pass_count": 54,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            231.0570742951804,
+            243.31896811227406
+          ],
+          "reach_range_mm": [
+            698.3948388885179,
+            716.1637870708113
+          ]
+        },
+        "11": {
+          "cases": 60,
+          "combined_pass_count": 60,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            235.12673125454236,
+            247.47648730008297
+          ],
+          "reach_range_mm": [
+            745.5839161937743,
+            763.3386950874254
+          ]
+        },
+        "12": {
+          "cases": 66,
+          "combined_pass_count": 66,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            240.13436130393626,
+            252.6306904301151
+          ],
+          "reach_range_mm": [
+            792.617278888482,
+            810.3636426732239
+          ]
+        },
+        "13": {
+          "cases": 72,
+          "combined_pass_count": 72,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            246.2135635433051,
+            258.9291276744722
+          ],
+          "reach_range_mm": [
+            839.4684647617534,
+            857.2149133452306
+          ]
+        },
+        "14": {
+          "cases": 78,
+          "combined_pass_count": 78,
+          "combined_pass_fraction": 1.0,
+          "drop_range_mm": [
+            253.5056787366386,
+            266.5281959331992
+          ],
+          "reach_range_mm": [
+            886.1054130621187,
+            903.8640653869974
+          ]
+        },
+        "15": {
+          "cases": 84,
+          "combined_pass_count": 66,
+          "combined_pass_fraction": 0.7857142857142857,
+          "drop_range_mm": [
+            262.1591655296699,
+            275.5923641999452
+          ],
+          "reach_range_mm": [
+            932.4893136045384,
+            950.2769906324799
+          ]
+        },
+        "16": {
+          "cases": 90,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            272.3287830534048,
+            286.29314548393813
+          ],
+          "reach_range_mm": [
+            978.573357715857,
+            996.4128928842841
+          ]
+        },
+        "17": {
+          "cases": 96,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            284.17453597697926,
+            298.80775622802
+          ],
+          "reach_range_mm": [
+            1024.3014173168744,
+            1042.2232042516148
+          ]
+        },
+        "18": {
+          "cases": 102,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            297.8603100307009,
+            313.3174002339404
+          ],
+          "reach_range_mm": [
+            1069.6066920169333,
+            1087.6504980047866
+          ]
+        },
+        "19": {
+          "cases": 108,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            313.5522987351397,
+            330.00511407591813
+          ],
+          "reach_range_mm": [
+            1114.4103805681332,
+            1132.6272516385548
+          ]
+        },
+        "20": {
+          "cases": 114,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            331.41680340161093,
+            349.05311684483706
+          ],
+          "reach_range_mm": [
+            1158.6204520445622,
+            1177.0749757989367
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D5-L2",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 5,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 7,
+        "total_modules": 27,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 336.0,
+        "total_length_mm": 1296.0,
+        "module_mass_g": 114.8,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 219.8719486000782,
+        "tip_drop_mm": 334.26866819791576,
+        "tip_x_mm": 1175.9304893554702,
+        "converged": true,
+        "residual_nm": 4.986180739130486e-14,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.456996187960181,
+        "rear_compliance_gravity_deg_per_nmm": 0.007690720797055859,
+        "front_compliance_zero_g_deg_per_nmm": 6.220684632848937,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -7.965601273193385,
+        "rear_drop_mm": 94.55534165676472,
+        "front_relative_angle_deg": -51.019385508107305,
+        "root_reaction_moment_nm": 1.1641819560380355,
+        "max_core_stress_mpa": 158.60273035475458,
+        "core_reference_yield_ratio": 0.7736718553890468,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 239.71332654115105,
+        "capsule_horizontal_span_mm": 1207.9304893554704,
+        "capsule_vertical_span_mm": 366.26866819791576,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": false,
+        "passes_combined_reference_screen": false,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 8,
+      "front_length_mm": 384,
+      "swept_cases": 1330,
+      "fixed_total_cases": 154,
+      "fixed_rear_reference_drop_range_mm": [
+        402.6762038026671,
+        408.44182526244344
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1143.0660539360972,
+        1161.6703403445338
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.10692511351007,
+        4.90543823281942
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        304.64909230468464,
+        311.93850706001786
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        0.9810859036700011,
+        1.0883000088580177
+      ],
+      "fixed_total_reference_yield_pass_count": 41,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 0,
+      "maximum_rear_count_with_combined_pass": null,
+      "max_reach_combined_candidate": null,
+      "rear_groups": {
+        "2": {
+          "cases": 7,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            288.00664584006984,
+            297.43785224425426
+          ],
+          "reach_range_mm": [
+            300.1442077776191,
+            321.347074951383
+          ]
+        },
+        "3": {
+          "cases": 14,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            288.34045723291973,
+            297.7397041854729
+          ],
+          "reach_range_mm": [
+            348.0035724745032,
+            369.1801183424378
+          ]
+        },
+        "4": {
+          "cases": 21,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            288.86202331206897,
+            298.22423058265866
+          ],
+          "reach_range_mm": [
+            395.8162259577873,
+            416.9615873029204
+          ]
+        },
+        "5": {
+          "cases": 28,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            289.6338196882055,
+            298.9572689137798
+          ],
+          "reach_range_mm": [
+            443.5733818468785,
+            464.68279006148117
+          ]
+        },
+        "6": {
+          "cases": 35,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            290.7277059508594,
+            300.01542257123805
+          ],
+          "reach_range_mm": [
+            491.265686963318,
+            512.3345022811253
+          ]
+        },
+        "7": {
+          "cases": 42,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            292.22487105114027,
+            301.486005061236
+          ],
+          "reach_range_mm": [
+            538.8829282437516,
+            559.9067100030372
+          ]
+        },
+        "8": {
+          "cases": 49,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            294.21576025102553,
+            303.46696304426285
+          ],
+          "reach_range_mm": [
+            586.4136526507314,
+            607.38828171829
+          ]
+        },
+        "9": {
+          "cases": 56,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            296.7999751925724,
+            306.0667676621497
+          ],
+          "reach_range_mm": [
+            633.8446896718449,
+            654.7665618122013
+          ]
+        },
+        "10": {
+          "cases": 63,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            300.08613550847485,
+            309.4042594182144
+          ],
+          "reach_range_mm": [
+            681.1605670037698,
+            702.0268784233207
+          ]
+        },
+        "11": {
+          "cases": 70,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            304.19168663399716,
+            313.60842679616184
+          ],
+          "reach_range_mm": [
+            728.3428115443855,
+            749.1519599376273
+          ]
+        },
+        "12": {
+          "cases": 77,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            309.24263409854296,
+            318.8180928270524
+          ],
+          "reach_range_mm": [
+            775.3691300961534,
+            796.1212560582618
+          ]
+        },
+        "13": {
+          "cases": 84,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            315.3731796356998,
+            325.1814770298669
+          ],
+          "reach_range_mm": [
+            822.2124675148368,
+            842.9101618527412
+          ]
+        },
+        "14": {
+          "cases": 91,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            322.72522909553015,
+            332.8555927710442
+          ],
+          "reach_range_mm": [
+            868.8399447792725,
+            889.489146623438
+          ]
+        },
+        "15": {
+          "cases": 98,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            331.44773662611027,
+            342.0054324994052
+          ],
+          "reach_range_mm": [
+            915.2116860196987,
+            935.8227941446185
+          ]
+        },
+        "16": {
+          "cases": 105,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            341.6958443178574,
+            352.8028861435754
+          ],
+          "reach_range_mm": [
+            961.2795523509965,
+            981.8687670437761
+          ]
+        },
+        "17": {
+          "cases": 112,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            353.6297720724604,
+            365.4253321481135
+          ],
+          "reach_range_mm": [
+            1006.9858117981943,
+            1027.5767161362105
+          ]
+        },
+        "18": {
+          "cases": 119,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            367.4134096990206,
+            380.0538374829028
+          ],
+          "reach_range_mm": [
+            1052.2617889223097,
+            1072.8871655301928
+          ]
+        },
+        "19": {
+          "cases": 126,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            383.21256324033897,
+            396.87090420290593
+          ],
+          "reach_range_mm": [
+            1097.0265549254357,
+            1117.7304163252422
+          ]
+        },
+        "20": {
+          "cases": 133,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            401.1928116262924,
+            416.05770784941734
+          ],
+          "reach_range_mm": [
+            1141.1857385433755,
+            1162.0255254790147
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D6-L2",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 6,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 8,
+        "total_modules": 28,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 384.00000000000006,
+        "total_length_mm": 1344.0,
+        "module_mass_g": 118.79999999999998,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 223.8719486000782,
+        "tip_drop_mm": 404.9159075269157,
+        "tip_x_mm": 1160.2772989151329,
+        "converged": true,
+        "residual_nm": 7.221485253316659e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.434992222080527,
+        "rear_compliance_gravity_deg_per_nmm": 0.005104028396458268,
+        "front_compliance_zero_g_deg_per_nmm": 7.006455323314067,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -8.374984755797215,
+        "rear_drop_mm": 98.87575550173494,
+        "front_relative_angle_deg": -60.68846275379323,
+        "root_reaction_moment_nm": 1.2058008645428464,
+        "max_core_stress_mpa": 164.27269671096914,
+        "core_reference_yield_ratio": 0.8013302278583861,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 306.04015202518076,
+        "capsule_horizontal_span_mm": 1192.2772989151326,
+        "capsule_vertical_span_mm": 436.91590752691576,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": false,
+        "passes_combined_reference_screen": false,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 9,
+      "front_length_mm": 432,
+      "swept_cases": 1520,
+      "fixed_total_cases": 168,
+      "fixed_rear_reference_drop_range_mm": [
+        466.8184811904356,
+        471.56910768366424
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1124.5379546610388,
+        1143.2286561350197
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.083613667863079,
+        4.8795411145531515
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        365.3768899258341,
+        370.16124192211737
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        0.9360702108150382,
+        1.0381848957281672
+      ],
+      "fixed_total_reference_yield_pass_count": 132,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 0,
+      "maximum_rear_count_with_combined_pass": null,
+      "max_reach_combined_candidate": null,
+      "rear_groups": {
+        "2": {
+          "cases": 8,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            350.9810808781318,
+            357.308091963062
+          ],
+          "reach_range_mm": [
+            281.2612168284778,
+            302.79327977312585
+          ]
+        },
+        "3": {
+          "cases": 16,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            351.3145286810244,
+            357.6143771559301
+          ],
+          "reach_range_mm": [
+            329.1217136071173,
+            350.6238513833691
+          ]
+        },
+        "4": {
+          "cases": 24,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            351.84006529155886,
+            358.1089727517147
+          ],
+          "reach_range_mm": [
+            376.93710093547674,
+            398.4034389569714
+          ]
+        },
+        "5": {
+          "cases": 32,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            352.6212825465062,
+            358.85901139307697
+          ],
+          "reach_range_mm": [
+            424.69924679271844,
+            446.12383336937825
+          ]
+        },
+        "6": {
+          "cases": 40,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            353.7311600557363,
+            359.9423924861809
+          ],
+          "reach_range_mm": [
+            472.3993960207574,
+            493.7762424320002
+          ]
+        },
+        "7": {
+          "cases": 48,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            355.2520118603963,
+            361.44772672130716
+          ],
+          "reach_range_mm": [
+            520.02785772417,
+            541.3510169589113
+          ]
+        },
+        "8": {
+          "cases": 56,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            357.2754135809901,
+            363.47425805194996
+          ],
+          "reach_range_mm": [
+            567.5736029016107,
+            588.8373037148477
+          ]
+        },
+        "9": {
+          "cases": 64,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            359.90210080820935,
+            366.1317516181618
+          ],
+          "reach_range_mm": [
+            615.0237620538571,
+            636.2226176294544
+          ]
+        },
+        "10": {
+          "cases": 72,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            363.24182617070016,
+            369.5403316850244
+          ],
+          "reach_range_mm": [
+            662.3630136161005,
+            683.4923265381057
+          ]
+        },
+        "11": {
+          "cases": 80,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            367.4131585595255,
+            373.83024834189814
+          ],
+          "reach_range_mm": [
+            709.5728557392918,
+            730.629043007311
+          ]
+        },
+        "12": {
+          "cases": 88,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            372.54320342022163,
+            379.1415454960782
+          ],
+          "reach_range_mm": [
+            756.6307564483358,
+            777.6119196952496
+          ]
+        },
+        "13": {
+          "cases": 96,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            378.76721792185236,
+            385.62359571070664
+          ],
+          "reach_range_mm": [
+            803.5091808498734,
+            824.4158473993535
+          ]
+        },
+        "14": {
+          "cases": 104,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            386.20111529533256,
+            393.43445993263003
+          ],
+          "reach_range_mm": [
+            850.1744992264528,
+            871.0105587053998
+          ]
+        },
+        "15": {
+          "cases": 112,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            395.0044696554963,
+            402.7400225760277
+          ],
+          "reach_range_mm": [
+            896.5857869576399,
+            917.3596452557409
+          ]
+        },
+        "16": {
+          "cases": 120,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            405.34571427946366,
+            413.71284547693006
+          ],
+          "reach_range_mm": [
+            942.6935366774409,
+            963.4195033810414
+          ]
+        },
+        "17": {
+          "cases": 128,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            417.38548940119205,
+            426.5306789465077
+          ],
+          "reach_range_mm": [
+            988.4383152730121,
+            1009.1382314355624
+          ]
+        },
+        "18": {
+          "cases": 136,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            431.2878614103583,
+            441.5754758070769
+          ],
+          "reach_range_mm": [
+            1033.7494134423198,
+            1054.4545127849447
+          ]
+        },
+        "19": {
+          "cases": 144,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            447.2184907706149,
+            459.1132490586346
+          ],
+          "reach_range_mm": [
+            1078.5435534243622,
+            1099.296530970944
+          ]
+        },
+        "20": {
+          "cases": 152,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            465.3424000118814,
+            479.0711506248769
+          ],
+          "reach_range_mm": [
+            1122.723740540337,
+            1143.580977766283
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D7-L2",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 7,
+        "n_low": 2,
+        "rear_modules": 20,
+        "front_modules": 9,
+        "total_modules": 29,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 431.99999999999994,
+        "total_length_mm": 1392.0000000000002,
+        "module_mass_g": 122.80000000000001,
+        "backbone_mass_g": 105.07194860007822,
+        "total_mass_g": 227.8719486000782,
+        "tip_drop_mm": 470.1742979481437,
+        "tip_x_mm": 1141.1031095823198,
+        "converged": true,
+        "residual_nm": 4.702435825714585e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.408993228360773,
+        "rear_compliance_gravity_deg_per_nmm": 0.0032671958254917926,
+        "front_compliance_zero_g_deg_per_nmm": 7.792226013779196,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -8.76796793982981,
+        "rear_drop_mm": 103.05536949834367,
+        "front_relative_angle_deg": -67.64841089878902,
+        "root_reaction_moment_nm": 1.2464794335614549,
+        "max_core_stress_mpa": 169.81455559291945,
+        "core_reference_yield_ratio": 0.8283636858191192,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 367.1189284498,
+        "capsule_horizontal_span_mm": 1173.10310958232,
+        "capsule_vertical_span_mm": 502.17429794814365,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": false,
+        "passes_combined_reference_screen": false,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 10,
+      "front_length_mm": 480,
+      "swept_cases": 1710,
+      "fixed_total_cases": 180,
+      "fixed_rear_reference_drop_range_mm": [
+        526.642278211254,
+        532.106071066278
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1107.846362199708,
+        1124.9410964169374
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.06855808672389,
+        4.865780427373799
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        421.6533361727823,
+        424.8657921403162
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        0.8912174627868124,
+        0.988188919331665
+      ],
+      "fixed_total_reference_yield_pass_count": 180,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 0,
+      "maximum_rear_count_with_combined_pass": null,
+      "max_reach_combined_candidate": null,
+      "rear_groups": {
+        "2": {
+          "cases": 9,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            408.71692088919445,
+            412.99073575582537
+          ],
+          "reach_range_mm": [
+            264.1164197558655,
+            284.09939365637456
+          ]
+        },
+        "3": {
+          "cases": 18,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            409.0512893179276,
+            413.3054564469302
+          ],
+          "reach_range_mm": [
+            311.9810300485801,
+            331.93207830480657
+          ]
+        },
+        "4": {
+          "cases": 27,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            409.5825130372984,
+            413.815835062573
+          ],
+          "reach_range_mm": [
+            359.8026376653848,
+            379.71531583586125
+          ]
+        },
+        "5": {
+          "cases": 36,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            410.3755197233951,
+            414.59074533766494
+          ],
+          "reach_range_mm": [
+            407.57375506001114,
+            427.441470709827
+          ]
+        },
+        "6": {
+          "cases": 45,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            411.50462593933094,
+            415.7098227421889
+          ],
+          "reach_range_mm": [
+            455.2862103540366,
+            475.10226085683826
+          ]
+        },
+        "7": {
+          "cases": 54,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            413.0534836338017,
+            417.26340709919003
+          ],
+          "reach_range_mm": [
+            502.930813956993,
+            522.6884631357625
+          ]
+        },
+        "8": {
+          "cases": 63,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            415.11500582511786,
+            419.3524607616378
+          ],
+          "reach_range_mm": [
+            550.4969325184691,
+            570.1895429928896
+          ]
+        },
+        "9": {
+          "cases": 72,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            417.7912614738232,
+            422.08844981529717
+          ],
+          "reach_range_mm": [
+            597.971960130191,
+            617.5932008853524
+          ]
+        },
+        "10": {
+          "cases": 81,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            421.1933260578114,
+            425.5931711183595
+          ],
+          "reach_range_mm": [
+            645.3406779082338,
+            664.8848290107827
+          ]
+        },
+        "11": {
+          "cases": 90,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            425.44107023524793,
+            429.99850241767047
+          ],
+          "reach_range_mm": [
+            692.5844949317689,
+            712.0468733342057
+          ]
+        },
+        "12": {
+          "cases": 99,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            430.66286424638906,
+            435.6294731160267
+          ],
+          "reach_range_mm": [
+            739.6805662648928,
+            759.0580980128963
+          ]
+        },
+        "13": {
+          "cases": 108,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            436.99517046639363,
+            442.54378091660567
+          ],
+          "reach_range_mm": [
+            786.6007877774333,
+            805.8927523188808
+          ]
+        },
+        "14": {
+          "cases": 117,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            444.5819909753651,
+            450.844504347317
+          ],
+          "reach_range_mm": [
+            833.3106731029538,
+            852.5196443121533
+          ]
+        },
+        "15": {
+          "cases": 126,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            453.57413149111375,
+            460.6996314806362
+          ],
+          "reach_range_mm": [
+            879.7681257572333,
+            898.9011311121262
+          ]
+        },
+        "16": {
+          "cases": 135,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            464.1282380227624,
+            472.283144362445
+          ],
+          "reach_range_mm": [
+            925.922129608081,
+            944.9920429294853
+          ]
+        },
+        "17": {
+          "cases": 144,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            476.40555887613715,
+            485.77334441234035
+          ],
+          "reach_range_mm": [
+            971.7113938686674,
+            990.7434439646572
+          ]
+        },
+        "18": {
+          "cases": 153,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            490.5703831531521,
+            501.3507421618553
+          ],
+          "reach_range_mm": [
+            1017.0630047040805,
+            1036.0998372003241
+          ]
+        },
+        "19": {
+          "cases": 162,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            506.7881088751016,
+            519.1954546796707
+          ],
+          "reach_range_mm": [
+            1061.8911541420869,
+            1080.9764485686019
+          ]
+        },
+        "20": {
+          "cases": 171,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            525.1660177392149,
+            539.484068451892
+          ],
+          "reach_range_mm": [
+            1106.0960374295435,
+            1125.2874173716111
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D7-L3",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 7,
+        "n_low": 3,
+        "rear_modules": 20,
+        "front_modules": 10,
+        "total_modules": 30,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 479.99999999999994,
+        "total_length_mm": 1440.0000000000002,
+        "module_mass_g": 126.4,
+        "backbone_mass_g": 105.07194860007822,
+        "total_mass_g": 231.4719486000782,
+        "tip_drop_mm": 530.0133582850209,
+        "tip_x_mm": 1123.9815853738396,
+        "converged": true,
+        "residual_nm": 3.585781324644266e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.613826860922695,
+        "rear_compliance_gravity_deg_per_nmm": 0.002038257288540963,
+        "front_compliance_zero_g_deg_per_nmm": 8.938141604040842,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -9.111799430715351,
+        "rear_drop_mm": 106.73137812070058,
+        "front_relative_angle_deg": -72.34982882362262,
+        "root_reaction_moment_nm": 1.2825201270374311,
+        "max_core_stress_mpa": 174.72457190052648,
+        "core_reference_yield_ratio": 0.8523149848806171,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 423.2819801643203,
+        "capsule_horizontal_span_mm": 1155.9815853738387,
+        "capsule_vertical_span_mm": 562.0133582850211,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": false,
+        "passes_combined_reference_screen": false,
+        "elastic_shape_within_reference_yield": true
+      }
+    },
+    {
+      "front_modules": 11,
+      "front_length_mm": 528,
+      "swept_cases": 1900,
+      "fixed_total_cases": 190,
+      "fixed_rear_reference_drop_range_mm": [
+        583.5014587510939,
+        589.8497987966451
+      ],
+      "fixed_rear_reference_reach_range_mm": [
+        1093.8057578746905,
+        1108.8435935195037
+      ],
+      "fixed_rear_reference_compliance_range_deg_per_nmm": [
+        4.060858846000003,
+        4.859870730466871
+      ],
+      "fixed_rear_reference_front_drop_range_mm": [
+        475.24275577923436,
+        478.30687659343903
+      ],
+      "fixed_total_reference_yield_ratio_range": [
+        0.8466304481215066,
+        0.9384476058419727
+      ],
+      "fixed_total_reference_yield_pass_count": 190,
+      "fixed_total_combined_pass_count": 0,
+      "swept_combined_pass_count": 0,
+      "maximum_rear_count_with_combined_pass": null,
+      "max_reach_combined_candidate": null,
+      "rear_groups": {
+        "2": {
+          "cases": 10,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            463.1215176071199,
+            466.53929502446096
+          ],
+          "reach_range_mm": [
+            249.74022152348488,
+            267.5706914840943
+          ]
+        },
+        "3": {
+          "cases": 20,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            463.46482034574774,
+            466.8973881996406
+          ],
+          "reach_range_mm": [
+            297.6091959062626,
+            315.40917452882445
+          ]
+        },
+        "4": {
+          "cases": 30,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            464.01280328387855,
+            467.47375186576636
+          ],
+          "reach_range_mm": [
+            345.43706722364743,
+            363.20038546214016
+          ]
+        },
+        "5": {
+          "cases": 40,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            464.83231408037983,
+            468.3417220837048
+          ],
+          "reach_range_mm": [
+            393.21688036207655,
+            410.93723471721444
+          ]
+        },
+        "6": {
+          "cases": 50,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            465.9995817093873,
+            469.5853537029598
+          ],
+          "reach_range_mm": [
+            440.9409318797551,
+            458.6119248908813
+          ]
+        },
+        "7": {
+          "cases": 60,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            467.60016029525036,
+            471.2993507653011
+          ],
+          "reach_range_mm": [
+            488.6004152183476,
+            506.2156366835887
+          ]
+        },
+        "8": {
+          "cases": 70,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            469.7288501982734,
+            473.58896708729645
+          ],
+          "reach_range_mm": [
+            536.1849703342803,
+            553.7381365446855
+          ]
+        },
+        "9": {
+          "cases": 80,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            472.4895854581421,
+            476.56986223397377
+          ],
+          "reach_range_mm": [
+            583.6821278648843,
+            601.1672987599179
+          ]
+        },
+        "10": {
+          "cases": 90,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            475.99527301834263,
+            480.3678929578668
+          ],
+          "reach_range_mm": [
+            631.0766392803072,
+            648.4885357957901
+          ]
+        },
+        "11": {
+          "cases": 100,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            480.36756483225224,
+            485.11881414049117
+          ],
+          "reach_range_mm": [
+            678.3496865059017,
+            695.6841323157197
+          ]
+        },
+        "12": {
+          "cases": 110,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            485.73653904000975,
+            490.9678564310849
+          ],
+          "reach_range_mm": [
+            725.477967520546,
+            742.7324806068871
+          ]
+        },
+        "13": {
+          "cases": 120,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            492.22414531910977,
+            498.0691403516133
+          ],
+          "reach_range_mm": [
+            772.4326587983471,
+            789.6072184469069
+          ]
+        },
+        "14": {
+          "cases": 130,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            499.96408390017785,
+            506.584879031142
+          ],
+          "reach_range_mm": [
+            819.1782615735574,
+            836.2762749721628
+          ]
+        },
+        "15": {
+          "cases": 140,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            509.13166623579906,
+            516.6843145981832
+          ],
+          "reach_range_mm": [
+            865.6713472075187,
+            882.700836176278
+          ]
+        },
+        "16": {
+          "cases": 150,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            519.8844817040512,
+            528.5423275656602
+          ],
+          "reach_range_mm": [
+            911.8592278310894,
+            928.8342495401205
+          ]
+        },
+        "17": {
+          "cases": 160,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            532.3844390424067,
+            542.3376556365424
+          ],
+          "reach_range_mm": [
+            957.6785922189847,
+            974.6208971719775
+          ]
+        },
+        "18": {
+          "cases": 170,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            546.7961235355651,
+            558.250659990413
+          ],
+          "reach_range_mm": [
+            1003.0541635667594,
+            1019.9950787608765
+          ]
+        },
+        "19": {
+          "cases": 180,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            563.2847723760997,
+            576.4605853958138
+          ],
+          "reach_range_mm": [
+            1047.897455100744,
+            1064.8799593966705
+          ]
+        },
+        "20": {
+          "cases": 190,
+          "combined_pass_count": 0,
+          "combined_pass_fraction": 0.0,
+          "drop_range_mm": [
+            582.0138307440642,
+            597.142277748221
+          ],
+          "reach_range_mm": [
+            1092.1057202247653,
+            1109.1866522722867
+          ]
+        }
+      },
+      "reference": {
+        "combination": "H8-U12-D8-L3",
+        "n_high": 8,
+        "n_uni": 12,
+        "n_directional": 8,
+        "n_low": 3,
+        "rear_modules": 20,
+        "front_modules": 11,
+        "total_modules": 31,
+        "rear_length_mm": 959.9999999999999,
+        "front_length_mm": 527.9999999999999,
+        "total_length_mm": 1488.0000000000002,
+        "module_mass_g": 130.4,
+        "backbone_mass_g": 105.07194860007823,
+        "total_mass_g": 235.47194860007826,
+        "tip_drop_mm": 588.1235650418499,
+        "tip_x_mm": 1107.3394061740905,
+        "converged": true,
+        "residual_nm": 3.1292256763224e-11,
+        "module_data_mode": "paper_original",
+        "cells_per_module": 16,
+        "front_compliance_gravity_deg_per_nmm": 4.604570265489984,
+        "rear_compliance_gravity_deg_per_nmm": 0.001241380573484647,
+        "front_compliance_zero_g_deg_per_nmm": 9.723912294505972,
+        "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+        "rear_interface_angle_deg": -9.48604504159583,
+        "rear_drop_mm": 110.74693703431325,
+        "front_relative_angle_deg": -75.29144114459008,
+        "root_reaction_moment_nm": 1.3221090379844875,
+        "max_core_stress_mpa": 180.11798083923128,
+        "core_reference_yield_ratio": 0.8786242967767379,
+        "passes_reference_yield_screen": true,
+        "front_drop_mm": 477.3766280075367,
+        "capsule_horizontal_span_mm": 1139.3394061740914,
+        "capsule_vertical_span_mm": 620.12356504185,
+        "capsule_width_mm": 32.0,
+        "passes_empty_box_envelope_screen": false,
+        "passes_combined_reference_screen": false,
+        "elastic_shape_within_reference_yield": true
+      }
+    }
+  ],
+  "validation": {
+    "per_front": [
+      {
+        "front_modules": 5,
+        "reference_combination": "H8-U12-D4-L1",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          192.92128519604978,
+          192.88569684741347,
+          192.87679887175088
+        ],
+        "fine_drop_change_mm": 0.008897975662591762,
+        "fine_reach_change_mm": 0.0034218048051570804,
+        "fine_compliance_change_deg_per_nmm": 5.0414274530119485e-05,
+        "doubled_gravity_steps_drop_change_mm": 5.449719736816405e-06,
+        "zero_g_compliance_error": 7.993605777301127e-14,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 0.0,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.002971848114043496,
+        "independent_continuum_reach_error_mm": 0.0011437385560384428,
+        "passed": true
+      },
+      {
+        "front_modules": 6,
+        "reference_combination": "H8-U12-D4-L2",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          260.3084244637058,
+          260.2695504131742,
+          260.2598252875245
+        ],
+        "fine_drop_change_mm": 0.009725125649708843,
+        "fine_reach_change_mm": 0.005048714980830482,
+        "fine_compliance_change_deg_per_nmm": 7.342278747213271e-05,
+        "doubled_gravity_steps_drop_change_mm": 2.057466065252811e-05,
+        "zero_g_compliance_error": 8.08242361927114e-14,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 0.0,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.0032635469661386196,
+        "independent_continuum_reach_error_mm": 0.0017016181177496037,
+        "passed": true
+      },
+      {
+        "front_modules": 7,
+        "reference_combination": "H8-U12-D5-L2",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          334.3067305204928,
+          334.26866819791576,
+          334.2591755823247
+        ],
+        "fine_drop_change_mm": 0.009492615591057074,
+        "fine_reach_change_mm": 0.005731964449978477,
+        "fine_compliance_change_deg_per_nmm": 7.298590325266474e-05,
+        "doubled_gravity_steps_drop_change_mm": 1.2184336242171412e-06,
+        "zero_g_compliance_error": 1.1102230246251565e-13,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 0.0,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.0031964627270895107,
+        "independent_continuum_reach_error_mm": 0.0019519184711498383,
+        "passed": true
+      },
+      {
+        "front_modules": 8,
+        "reference_combination": "H8-U12-D6-L2",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          404.9529440402189,
+          404.9159075269157,
+          404.9066441557201
+        ],
+        "fine_drop_change_mm": 0.009263371195629588,
+        "fine_reach_change_mm": 0.005828971316532261,
+        "fine_compliance_change_deg_per_nmm": 6.74527968680394e-05,
+        "doubled_gravity_steps_drop_change_mm": 1.168346358326744e-05,
+        "zero_g_compliance_error": 3.588240815588506e-13,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 0.0,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.0031001795329643755,
+        "independent_continuum_reach_error_mm": 0.0019649296887109813,
+        "passed": true
+      },
+      {
+        "front_modules": 9,
+        "reference_combination": "H8-U12-D7-L2",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          470.2112729918131,
+          470.1742979481437,
+          470.16505287065706
+        ],
+        "fine_drop_change_mm": 0.009245077486639275,
+        "fine_reach_change_mm": 0.005665220590799436,
+        "fine_compliance_change_deg_per_nmm": 6.286842557390315e-05,
+        "doubled_gravity_steps_drop_change_mm": 4.565361905406462e-06,
+        "zero_g_compliance_error": 4.884981308350689e-13,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 1.3877787807814457e-17,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.0030866075238691337,
+        "independent_continuum_reach_error_mm": 0.001899207301903516,
+        "passed": true
+      },
+      {
+        "front_modules": 10,
+        "reference_combination": "H8-U12-D7-L3",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          530.0509338029987,
+          530.0133582850209,
+          530.0039628734098
+        ],
+        "fine_drop_change_mm": 0.009395411611080817,
+        "fine_reach_change_mm": 0.005564058146546813,
+        "fine_compliance_change_deg_per_nmm": 6.323402512631304e-05,
+        "doubled_gravity_steps_drop_change_mm": 2.105490352732886e-06,
+        "zero_g_compliance_error": 3.623767952376511e-13,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 1.3877787807814457e-17,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.0031341536111995083,
+        "independent_continuum_reach_error_mm": 0.001860096469272321,
+        "passed": true
+      },
+      {
+        "front_modules": 11,
+        "reference_combination": "H8-U12-D8-L3",
+        "cells": [
+          8,
+          16,
+          32
+        ],
+        "drops_mm": [
+          588.1622016148166,
+          588.1235650418499,
+          588.1139040810937
+        ],
+        "fine_drop_change_mm": 0.009660960756264103,
+        "fine_reach_change_mm": 0.005506138678356365,
+        "fine_compliance_change_deg_per_nmm": 6.198906743826171e-05,
+        "doubled_gravity_steps_drop_change_mm": 1.204283307743026e-06,
+        "zero_g_compliance_error": 2.5579538487363607e-13,
+        "zero_g_drop_mm": -0.0,
+        "no_core_mass_in_front": true,
+        "original_front_EI": true,
+        "core_mass_error_kg": 0.0,
+        "all_reference_solves_converged": true,
+        "independent_continuum_drop_error_mm": 0.003221749715180522,
+        "independent_continuum_reach_error_mm": 0.001838323777064943,
+        "passed": true
+      }
+    ],
+    "all_cases_converged": true,
+    "maximum_moment_residual_nm": 9.996982999445694e-11,
+    "swept_count": 9310,
+    "expected_swept_count": 9310,
+    "fixed_total_count": 1050,
+    "expected_fixed_total_count": 1050,
+    "unique_configurations": 10170,
+    "inputs_unchanged": true,
+    "source_sha256": {
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/craft_data.py": "b89ffd440b721a850e61f74f0d02b3cd052bb4f4e31296b33eee561b48f4fa8c",
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/snake_model_pla_sag.py": "f7b4a9471554223b26fc2b8e23df38efd2389b85591820dc8c137c72e8e0649e",
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/snake_model_rear_backbone.py": "9ee51357533d52f8f58f3a268dc3157f4451985f91fd6386d9f7d2b05a58137e",
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/test_snake_model_rear_backbone.py": "b444607151f76b42e342d048222d2854d77c0d0eba031a5c3c951b0ab7011783",
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/rear_backbone_config.json": "46def00f9062f2c531af247d6c295d4b876e66885d423e27b6d80626c9402c5d",
+      "/Users/qianjin/.codex/visualizations/2026/11/03/01a1a0a5-0623-7a21-94f8-2e43a041dd22/front_sweep_5_to_11/inputs/rope_materials.json": "4a2eafa6cea33f42fd5dfda293449a820605ede4d54280ca45744507386ce410"
+    },
+    "front_count_coverage": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "all_reference_checks_passed": true,
+    "passed": true
+  },
+  "scope": "Original module EI and masses; rear-only 4.2 mm SS304; horizontal clamp; self weight only. No tendons, tip payload, contact, shear, torsion, plasticity or 3D path. Empty-box capsule screen is not CAD collision validation. 205 MPa is a catalogue reference, not a measured rod strength. Above-yield shapes are elastic extrapolations only."
+}

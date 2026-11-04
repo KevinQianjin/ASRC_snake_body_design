@@ -1,0 +1,77 @@
+{
+  "properties": {
+    "material_id": "ss304_annealed",
+    "diameter_mm": 4.2,
+    "young_modulus_pa": 200000000000.0,
+    "density_kg_m3": 7900.0,
+    "reference_yield_pa": 205000000.0,
+    "area_m2": 1.385442360233099e-05,
+    "inertia_m4": 1.5274502021569924e-11,
+    "EI_nm2": 3.054900404313985,
+    "linear_mass_kg_m": 0.10944994645841483,
+    "first_yield_moment_nm": 1.4910823402008733,
+    "catalogue_calibrated": false
+  },
+  "material": {
+    "id": "ss304_annealed",
+    "role": "backbone",
+    "label": "SS 304 annealed",
+    "label_zh": "304 退火不鏽鋼",
+    "temper": "annealed, not spring temper",
+    "young_modulus_pa": 200000000000.0,
+    "density_kg_m3": 7900.0,
+    "yield_strength_pa": 205000000.0,
+    "property_sources": {
+      "young_modulus_pa": "ati_304",
+      "density_kg_m3": "ati_304",
+      "yield_strength_pa": "ati_304"
+    },
+    "model": "elastic_perfectly_plastic_fibers",
+    "calibrated": false,
+    "notes": "Higher-stiffness and higher forming-force comparison. Yield value is a sheet/plate specification minimum, not a guaranteed onset for the user's wire. Real 304 work hardens; the perfectly plastic law is a screening approximation."
+  },
+  "sources": [
+    {
+      "id": "lichen_1100_o",
+      "title": "Lichen Aluminium: 1100 O Aluminum Circle",
+      "url": "https://www.lichenalu.com/uploads/file/1100-o-aluminum-circle.pdf",
+      "note": "Page 1: density 2.7 g/cm^3, E 68-70 GPa, Rp0.2 20 MPa. Circle/sheet data extrapolated to a solid round backbone; 69 GPa is the interval midpoint."
+    },
+    {
+      "id": "cda_c11000",
+      "title": "Copper Development Association: C11000",
+      "url": "https://alloys.copper.org/alloy/C11000",
+      "note": "Specific gravity 8.91, tensile modulus 17000 ksi, rounded here to 117 GPa."
+    },
+    {
+      "id": "alcobra_c110_o60",
+      "title": "Alcobra Metals: Copper Product Guide",
+      "url": "https://alcobrametals.com/copper-product-guide/",
+      "note": "C110 O60 soft/annealed: yield strength 10000 psi, converted to 68.9475729 MPa; reference supplier value, not a measured wire curve."
+    },
+    {
+      "id": "ati_304",
+      "title": "ATI: ATI 302 / 304 / 304L / 305 technical data sheet",
+      "url": "https://www.atimaterials.com/Products/Documents/datasheets/stainless-specialty-steel/austenitic/ati_302_304_304l_305_tds_en2_v1.pdf",
+      "note": "Page 3: E 200 GPa and density 7.90 g/cm^3. Page 4: annealed 304 minimum 0.2% proof strength 205 MPa for plate/sheet/strip; extrapolated to the round backbone."
+    },
+    {
+      "id": "mcg_pa6",
+      "title": "Mitsubishi Chemical Group: PA6 and PA66 nylons",
+      "url": "https://www.mcam.com/mcam/products/nylons",
+      "note": "Unfilled PA6 engineering stock: density 1.150 g/cm^3, tensile modulus 3300 MPa. Solid PA6 surrogate only, not an effective stiffness measurement of braided nylon rope."
+    },
+    {
+      "id": "comsol_wire",
+      "title": "COMSOL: Theory for the Wire Interface",
+      "url": "https://doc.comsol.com/6.3/doc/com.comsol.help.sme/sme_ug_theory.06.161.html",
+      "note": "Reference for axial force/strain and tension-only cable idealization; this project implements its own discrete model."
+    },
+    {
+      "id": "opensees_plastic",
+      "title": "OpenSees: Elastic-Perfectly Plastic Material",
+      "url": "https://opensees.berkeley.edu/OpenSees/manuals/usermanual/171.htm",
+      "note": "Reference constitutive idealization; this project integrates independent uniaxial fibers over a circular cross-section. No OpenSees dependency."
+    }
+  ]
+}

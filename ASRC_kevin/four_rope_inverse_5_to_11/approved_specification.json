@@ -1,0 +1,159 @@
+{
+  "status": "approved_by_user_2026-11-04",
+  "base_study": "front_sweep_5_to_11",
+  "front_module_counts": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "enumeration": {
+    "rear_modules_min": 2,
+    "rear_modules_max": 20,
+    "additional_fixed_total_modules": 31,
+    "module_order": [
+      "high",
+      "unidirectional",
+      "directional",
+      "low"
+    ],
+    "minimum_each": 1,
+    "rear_types": [
+      "high",
+      "unidirectional"
+    ],
+    "front_types": [
+      "directional",
+      "low"
+    ],
+    "expected_unique_configurations": 10170
+  },
+  "module_properties": {
+    "mode": "paper_original_no_material_or_geometric_scaling",
+    "source": "craft_data.py",
+    "length_mm": 48.0,
+    "diameter_mm": 32.0,
+    "include_original_EA_for_tendon_induced_axial_compression": true,
+    "axes": {
+      "high": "x",
+      "unidirectional": "y",
+      "directional": "y",
+      "low": "x"
+    }
+  },
+  "backbone": {
+    "material": "ss304_annealed",
+    "diameter_mm": 4.2,
+    "extent": "rear_only",
+    "attachment": "clamped_each_module",
+    "constitutive_scope": "linear_elastic_with_combined_axial_bending_reference_yield_screen"
+  },
+  "ropes": {
+    "names": [
+      "top",
+      "right",
+      "bottom",
+      "left"
+    ],
+    "material": "nylon_pa6_reference",
+    "diameter_mm": 2.0,
+    "routing_radius_mm": 13.0,
+    "pretension_n": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "friction_coefficient": 0.0,
+    "anchor": "all_four_at_head",
+    "guides": "actual_module_disks_from_root_to_head",
+    "tension_only": true,
+    "include_rope_self_weight": true,
+    "strength_rating": null,
+    "effective_axial_rigidity_n": null,
+    "effective_linear_density_kg_m": null
+  },
+  "loads": {
+    "gravity_m_s2": 9.81,
+    "payload_kg": 0.0
+  },
+  "root": {
+    "position_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tangent": "positive_X",
+    "fixed": true
+  },
+  "coordinates": {
+    "X": "initial_forward_axis",
+    "Y": "up",
+    "Z": "lateral"
+  },
+  "targets": {
+    "level_tip": {
+      "head_Y_minus_root_Y_mm": 0.0,
+      "head_Z_minus_root_Z_mm": 0.0,
+      "position_tolerance_mm": 1.0,
+      "minimum_forward_ratio": null,
+      "whole_body_horizontal_constraint": false,
+      "objective": "minimise_sum_of_four_nonnegative_tensions",
+      "global_optimality_claim_requires_proof": true
+    },
+    "front_semicircle": {
+      "objective": "minimise_sum_of_four_nonnegative_tensions_subject_to_equilibrium_and_semicircle_target",
+      "plane": "vertical_XY",
+      "scope": "front_directional_and_low_only",
+      "relative_front_tangent_rotation_deg": 180.0,
+      "bend_senses_to_compare": [
+        "upward",
+        "downward"
+      ],
+      "orientation_reference": "actual_equilibrated_rear_front_interface",
+      "rear_remains_free_to_equilibrate": true,
+      "arc_radius": "deformed_front_centerline_length_divided_by_pi",
+      "angle_tolerance_deg": 1.0,
+      "maximum_centerline_arc_deviation_mm": 1.0,
+      "enforce_static_equilibrium_without_artificial_shape_support": true,
+      "if_no_admissible_solution": "report_target_not_achieved_and_do_not_report_a_valid_semicircle_tension",
+      "separate_diagnostic": "optional_180_degree_equilibrium_with_shape_error_clearly_labelled_not_a_semicircle_success"
+    }
+  },
+  "screening": {
+    "effective_inspection_dimensions_mm": [
+      1600.0,
+      830.0,
+      300.0
+    ],
+    "envelope_basis": "actual_equilibrated_shape_plus_32mm_capsule",
+    "rope_axial_strain_reported": true,
+    "module_axial_strain_reported": true,
+    "steel_reference_yield_mpa": 205.0,
+    "reference_yield_not_actual_rod_test": true,
+    "maximum_validated_module_axial_strain": null,
+    "local_stability_in_fixed_winch_length_model": true,
+    "self_intersection_screen": true,
+    "cad_collision_analysis": false
+  },
+  "execution_after_approval": {
+    "first": "seven_H8_U12_reference_cases_for_model_validation",
+    "then": "all_previous_unique_configurations_with_solve_reuse_between_comparisons",
+    "outputs": [
+      "four_separate_tensions_N",
+      "total_tension_N",
+      "target_residuals",
+      "shape_coordinates",
+      "rope_lengths_and_strains",
+      "steel_stress_and_reference_yield_ratio",
+      "feasibility_flags",
+      "per_front_count_plots",
+      "CSV",
+      "JSON",
+      "Python_source"
+    ]
+  }
+}

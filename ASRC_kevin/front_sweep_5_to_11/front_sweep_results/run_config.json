@@ -1,0 +1,77 @@
+{
+  "study": {
+    "front_module_counts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "rear_modules_min": 2,
+    "rear_modules_max": 20,
+    "focus_total_modules": 31,
+    "reference_rear_counts": [
+      8,
+      12
+    ],
+    "reference_directional_fraction": 0.7272727272727273,
+    "effective_inspection_dimensions_mm": [
+      1600,
+      830,
+      300
+    ],
+    "cells_per_module": 16,
+    "independent_bvp_validation": true
+  },
+  "base_model": {
+    "data_mode": "paper_original",
+    "module_diameter_mm": 32.0,
+    "module_length_mm": 48.0,
+    "axes": {
+      "high": "x",
+      "unidirectional": "y",
+      "directional": "y",
+      "low": "x"
+    },
+    "gravity_m_s2": 9.81,
+    "front": {
+      "modules": 11,
+      "types": [
+        "directional",
+        "low"
+      ],
+      "minimum_each": 1
+    },
+    "rear": {
+      "modules_min": 2,
+      "modules_max": 20,
+      "types": [
+        "high",
+        "unidirectional"
+      ],
+      "minimum_each": 1
+    },
+    "backbone": {
+      "material": "ss304_annealed",
+      "diameter_mm": 4.2,
+      "attachment": "clamped_each_module",
+      "constitutive_scope": "linear_elastic_with_reference_yield_screen"
+    },
+    "reference_counts": [
+      8,
+      12,
+      8,
+      3
+    ],
+    "focus_total_modules": 31,
+    "solver": {
+      "cells_per_module": 8,
+      "gravity_steps": 8,
+      "max_iterations": 80,
+      "moment_tolerance_nm": 1e-10
+    },
+    "output_directory": "rear_backbone_results"
+  }
+}

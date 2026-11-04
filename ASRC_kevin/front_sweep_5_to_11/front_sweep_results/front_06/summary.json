@@ -1,0 +1,359 @@
+{
+  "front_modules": 6,
+  "front_length_mm": 288,
+  "swept_cases": 950,
+  "fixed_total_cases": 120,
+  "fixed_rear_reference_drop_range_mm": [
+    259.6400152406841,
+    268.81691751194694
+  ],
+  "fixed_rear_reference_reach_range_mm": [
+    1170.5510136322728,
+    1181.1584482240908
+  ],
+  "fixed_rear_reference_compliance_range_deg_per_nmm": [
+    4.0819113013525214,
+    4.913885745920257
+  ],
+  "fixed_rear_reference_front_drop_range_mm": [
+    170.0181372149837,
+    180.1336477067171
+  ],
+  "fixed_total_reference_yield_ratio_range": [
+    1.0709990921569972,
+    1.1882435305511874
+  ],
+  "fixed_total_reference_yield_pass_count": 0,
+  "fixed_total_combined_pass_count": 0,
+  "swept_combined_pass_count": 929,
+  "maximum_rear_count_with_combined_pass": 20,
+  "max_reach_combined_candidate": {
+    "combination": "H1-U19-D4-L2",
+    "n_high": 1,
+    "n_uni": 19,
+    "n_directional": 4,
+    "n_low": 2,
+    "rear_modules": 20,
+    "front_modules": 6,
+    "total_modules": 26,
+    "rear_length_mm": 959.9999999999999,
+    "front_length_mm": 288.0,
+    "total_length_mm": 1248.0,
+    "module_mass_g": 102.4,
+    "backbone_mass_g": 105.07194860007823,
+    "total_mass_g": 207.4719486000782,
+    "tip_drop_mm": 258.7524377754733,
+    "tip_x_mm": 1181.4735097896726,
+    "converged": true,
+    "residual_nm": 8.628160582920333e-11,
+    "module_data_mode": "paper_original",
+    "cells_per_module": 16,
+    "front_compliance_gravity_deg_per_nmm": 4.417972954496867,
+    "rear_compliance_gravity_deg_per_nmm": 0.010890488850372247,
+    "front_compliance_zero_g_deg_per_nmm": 5.434913942383808,
+    "rear_compliance_zero_g_deg_per_nmm": 0.01766211363339997,
+    "rear_interface_angle_deg": -7.4468502883723335,
+    "rear_drop_mm": 88.80234147596774,
+    "front_relative_angle_deg": -38.902800106405266,
+    "root_reaction_moment_nm": 1.1037546441146069,
+    "max_core_stress_mpa": 150.370394671018,
+    "core_reference_yield_ratio": 0.7335141203464293,
+    "passes_reference_yield_screen": true,
+    "front_drop_mm": 169.95009629950556,
+    "capsule_horizontal_span_mm": 1213.4735097896723,
+    "capsule_vertical_span_mm": 290.7524377754732,
+    "capsule_width_mm": 32.0,
+    "passes_empty_box_envelope_screen": true,
+    "passes_combined_reference_screen": true,
+    "elastic_shape_within_reference_yield": true
+  },
+  "rear_groups": {
+    "2": {
+      "cases": 5,
+      "combined_pass_count": 5,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        147.48071649800337,
+        159.95856276514925
+      ],
+      "reach_range_mm": [
+        325.35991377732375,
+        336.6421536654793
+      ]
+    },
+    "3": {
+      "cases": 10,
+      "combined_pass_count": 10,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        147.8017439039442,
+        160.2553519894093
+      ],
+      "reach_range_mm": [
+        373.25161958695566,
+        384.5291168100879
+      ]
+    },
+    "4": {
+      "cases": 15,
+      "combined_pass_count": 15,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        148.30154355739205,
+        160.72853176483554
+      ],
+      "reach_range_mm": [
+        421.1032047315042,
+        432.37679300327136
+      ]
+    },
+    "5": {
+      "cases": 20,
+      "combined_pass_count": 20,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        149.04134994212887,
+        161.44322103740132
+      ],
+      "reach_range_mm": [
+        468.90616281987997,
+        480.1775828430411
+      ]
+    },
+    "6": {
+      "cases": 25,
+      "combined_pass_count": 25,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        150.09178635229088,
+        162.47529397407766
+      ],
+      "reach_range_mm": [
+        516.651493063273,
+        527.9234163241429
+      ]
+    },
+    "7": {
+      "cases": 30,
+      "combined_pass_count": 30,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        151.5328073202851,
+        163.91131718349732
+      ],
+      "reach_range_mm": [
+        564.3294334399764,
+        575.6055179539759
+      ]
+    },
+    "8": {
+      "cases": 35,
+      "combined_pass_count": 35,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        153.45362392352246,
+        165.84846670899935
+      ],
+      "reach_range_mm": [
+        611.9291103950035,
+        623.2141037200442
+      ]
+    },
+    "9": {
+      "cases": 40,
+      "combined_pass_count": 40,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        155.95260501058215,
+        168.3944159551077
+      ],
+      "reach_range_mm": [
+        659.4380943956639,
+        670.7380018698268
+      ]
+    },
+    "10": {
+      "cases": 45,
+      "combined_pass_count": 45,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        159.13714461505876,
+        171.66718196999193
+      ],
+      "reach_range_mm": [
+        706.841851520783,
+        718.1641901288282
+      ]
+    },
+    "11": {
+      "cases": 50,
+      "combined_pass_count": 50,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        163.12348244035968,
+        175.7949128911665
+      ],
+      "reach_range_mm": [
+        754.1230825505471,
+        765.4772429599698
+      ]
+    },
+    "12": {
+      "cases": 55,
+      "combined_pass_count": 55,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        168.03646028931888,
+        180.91559384953072
+      ],
+      "reach_range_mm": [
+        801.2609429477868,
+        812.6586838942851
+      ]
+    },
+    "13": {
+      "cases": 60,
+      "combined_pass_count": 60,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        174.00919270860865,
+        187.17664226291694
+      ],
+      "reach_range_mm": [
+        848.2301399435804,
+        859.6862400156843
+      ]
+    },
+    "14": {
+      "cases": 65,
+      "combined_pass_count": 65,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        181.18262501229506,
+        194.73435637957988
+      ],
+      "reach_range_mm": [
+        894.9999069885166,
+        906.5329985789812
+      ]
+    },
+    "15": {
+      "cases": 70,
+      "combined_pass_count": 70,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        189.7049464250164,
+        203.7531734460094
+      ],
+      "reach_range_mm": [
+        941.5328614921946,
+        953.1664697354945
+      ]
+    },
+    "16": {
+      "cases": 75,
+      "combined_pass_count": 75,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        199.73082065244236,
+        214.4046864685284
+      ],
+      "reach_range_mm": [
+        987.7837594710477,
+        999.5475647147265
+      ]
+    },
+    "17": {
+      "cases": 80,
+      "combined_pass_count": 80,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        211.42039122039304,
+        226.8663619828917
+      ],
+      "reach_range_mm": [
+        1033.6981708755156,
+        1045.629505844533
+      ]
+    },
+    "18": {
+      "cases": 85,
+      "combined_pass_count": 85,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        224.9380151077387,
+        241.31989664861607
+      ],
+      "reach_range_mm": [
+        1079.2111123076213,
+        1091.3566937260978
+      ]
+    },
+    "19": {
+      "cases": 90,
+      "combined_pass_count": 90,
+      "combined_pass_fraction": 1.0,
+      "drop_range_mm": [
+        240.4506764582492,
+        257.94914934376294
+      ],
+      "reach_range_mm": [
+        1124.2456897078328,
+        1136.6635678398657
+      ]
+    },
+    "20": {
+      "cases": 95,
+      "combined_pass_count": 74,
+      "combined_pass_fraction": 0.7789473684210526,
+      "drop_range_mm": [
+        258.12603367645113,
+        276.93758964845864
+      ],
+      "reach_range_mm": [
+        1168.7118221660817,
+        1181.4735097896726
+      ]
+    }
+  },
+  "reference": {
+    "combination": "H8-U12-D4-L2",
+    "n_high": 8,
+    "n_uni": 12,
+    "n_directional": 4,
+    "n_low": 2,
+    "rear_modules": 20,
+    "front_modules": 6,
+    "total_modules": 26,
+    "rear_length_mm": 959.9999999999999,
+    "front_length_mm": 288.0,
+    "total_length_mm": 1248.0,
+    "module_mass_g": 110.80000000000001,
+    "backbone_mass_g": 105.07194860007823,
+    "total_mass_g": 215.8719486000782,
+    "tip_drop_mm": 260.2695504131742,
+    "tip_x_mm": 1181.1584482240908,
+    "converged": true,
+    "residual_nm": 8.648973806027124e-11,
+    "module_data_mode": "paper_original",
+    "cells_per_module": 16,
+    "front_compliance_gravity_deg_per_nmm": 4.417143435120676,
+    "rear_compliance_gravity_deg_per_nmm": 0.010922814476125402,
+    "front_compliance_zero_g_deg_per_nmm": 5.434913942383808,
+    "rear_compliance_zero_g_deg_per_nmm": 0.01772824885109019,
+    "rear_interface_angle_deg": -7.535845715008292,
+    "rear_drop_mm": 90.06087997346937,
+    "front_relative_angle_deg": -38.86928022407319,
+    "root_reaction_moment_nm": 1.1213993724495561,
+    "max_core_stress_mpa": 152.77423032211738,
+    "core_reference_yield_ratio": 0.7452401479127677,
+    "passes_reference_yield_screen": true,
+    "front_drop_mm": 170.20867043970486,
+    "capsule_horizontal_span_mm": 1213.1584482240905,
+    "capsule_vertical_span_mm": 292.26955041317416,
+    "capsule_width_mm": 32.0,
+    "passes_empty_box_envelope_screen": true,
+    "passes_combined_reference_screen": true,
+    "elastic_shape_within_reference_yield": true
+  }
+}

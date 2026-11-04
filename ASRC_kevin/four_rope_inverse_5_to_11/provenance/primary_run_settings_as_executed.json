@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "front_counts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "rear_range": [
+      2,
+      20
+    ],
+    "fixed_total": 31,
+    "search_cells_per_module": 4,
+    "final_cells_per_module": 8,
+    "common_tension_arc_grid_n": [
+      0.0,
+      0.5,
+      2.0,
+      8.0
+    ],
+    "fallback_common_level_grid_n": [
+      1.0,
+      4.0,
+      8.0
+    ],
+    "level_common_fraction_grid": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "fallback_angle_grid_deg": [
+      210,
+      240,
+      270,
+      300,
+      330,
+      450,
+      540,
+      720
+    ],
+    "angle_tolerance_deg": 1.0,
+    "arc_tolerance_mm": 1.0,
+    "level_tolerance_mm": 1.0,
+    "small_axial_strain_reporting_threshold": 0.05,
+    "numerical_max_abs_axial_strain": 0.85,
+    "numerical_max_tension_difference_n": 300.0,
+    "stability_scope": "planar, fixed winch lengths; no independent torsion or spatial bifurcation",
+    "rope_weight_model": "reference rope mass uniformly transferred to rod; no slack catenary model",
+    "minimum_claim": "lowest found in the documented symmetric planar search; no global proof"
+  },
+  "input_sha256": {
+    "rope_planar.py": "7cfb441a170d27678e69634361f6263905420594d10b891383306e8013e71df9",
+    "run_rope_sweep.py": "c3ea204f47c5a37f00aa8e39cdc824f659c7e3372b1717b9aa98d98375b44138",
+    "craft_data.py": "b89ffd440b721a850e61f74f0d02b3cd052bb4f4e31296b33eee561b48f4fa8c",
+    "rope_materials.json": "4a2eafa6cea33f42fd5dfda293449a820605ede4d54280ca45744507386ce410"
+  },
+  "run_stamp": "f3126e8484411861e126c82a38185c1b4532dc77aabdafd2493b05a6514e1f67"
+}
