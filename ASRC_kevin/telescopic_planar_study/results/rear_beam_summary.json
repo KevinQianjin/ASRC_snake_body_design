@@ -1,0 +1,220 @@
+{
+  "cases": 270,
+  "independent_checks_passed": 12,
+  "material_assumptions": {
+    "material": "Aluminium; alloy and temper not selected",
+    "young_pa": 69000000000.0,
+    "density_kg_m3": 2700.0,
+    "reference_yield_pa": 240000000.0,
+    "yield_value_is_design_assumption_not_measured": true
+  },
+  "front_assumptions": {
+    "head_mass_kg": 0.5,
+    "front_assembly_mass_kg": 0.05,
+    "front_mass_includes_interface_and_wiring_allowance": true,
+    "front_nominal_length_m": 0.5,
+    "shapes": "Horizontal, rear-axis aligned, and assumed folded projected COM cases; not solved front equilibria"
+  },
+  "rear_assumptions": {
+    "exposed_lengths_m": [
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "angles_from_horizontal_deg": [
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "stepped_layout": "First half 40x40x2 mm; second half 30x30x2 mm",
+    "fixed_sleeve": "50x50x2 mm, behind front guide; excluded from exposed beam",
+    "guide_spacing_m": [
+      0.15,
+      0.2
+    ],
+    "guide_couple_definition": "M/s is a couple component; ideal normal support reactions also include transverse force"
+  },
+  "limitations": [
+    "Ideal continuous cantilever; zero joint compliance, clearance and slip",
+    "No verification of guide contact pressure, local tube wall deformation, fasteners, base anchorage or joint strength",
+    "No Euler or local buckling, torsion, stress concentrations, friction, fatigue or dynamic loads",
+    "No drive, tendon or external cable forces beyond the assumed 0.05 kg front mass allowance",
+    "Rear self-weight uses only the exposed beam; overlap and other moving hardware masses are not included",
+    "No tank geometry, insertion swept-volume or allowable extension assessment",
+    "Nominal section yield screening is not overall admissibility or hardware approval",
+    "Front shapes prescribe horizontal COM levers; they do not validate a loaded U/M front assembly"
+  ],
+  "maximum_nominal_normal_stress_mpa": 5.5648309112355605,
+  "maximum_interface_vertical_deflection_down_mm": 1.8737546561150553,
+  "max_integration_deflection_difference_mm": 4.3368086899420177e-16,
+  "representative_cases": [
+    {
+      "exposed_length_m": 1.0,
+      "interface_force_down_n": 5.395500000000001,
+      "interface_moment_clockwise_nm": 2.5751250000000003,
+      "exposed_rear_mass_kg": 0.7127999999999998,
+      "root_gravity_moment_nm": 10.908084033774733,
+      "root_vertical_shear_n": 12.388067999999999,
+      "root_transverse_shear_n": 11.965954819025164,
+      "local_normal_deflection_down_mm": 0.9186862881689557,
+      "local_axial_shortening_mm": 0.00012160233468370946,
+      "interface_vertical_deflection_down_mm": 0.8874142850001807,
+      "interface_horizontal_displacement_mm": 0.23765604901706025,
+      "interface_rotation_ccw_rad": -0.0018279924844624555,
+      "interface_rotation_ccw_deg": -0.10473625434133241,
+      "maximum_nominal_normal_stress_mpa": 3.0165877825732235,
+      "critical_cut_from_front_guide_m": 0.5,
+      "critical_section": "Al square tube 30x30x2 mm",
+      "nominal_yield_screen_ratio": 0.012569115760721766,
+      "nominal_yield_factor": 79.56009150022948,
+      "passes_nominal_section_yield_screen": true,
+      "joint_strength_verified": false,
+      "joint_flexibility_included": false,
+      "scope": "Linear beam screening; no overall design approval",
+      "root_gravity_moment_numerical_nm": 10.908084033774731,
+      "root_moment_integration_abs_difference_nm": 1.7763568394002505e-15,
+      "integration_rotation_abs_difference_rad": 0.0,
+      "integration_normal_deflection_abs_difference_mm": 0.0,
+      "integration_axial_shortening_abs_difference_mm": 0.0,
+      "layout": "stepped_40_30",
+      "rear_axis_angle_from_horizontal_deg": 15,
+      "front_shape": "horizontal",
+      "head_mass_kg": 0.5,
+      "front_assembly_mass_kg": 0.05,
+      "head_horizontal_lever_from_interface_m": 0.5,
+      "front_com_horizontal_lever_from_interface_m": 0.25,
+      "front_nominal_length_m": 0.5,
+      "guide_couple_force_at_150mm_spacing_n": 72.72056022516489,
+      "guide_couple_force_at_200mm_spacing_n": 54.54042016887366,
+      "front_guide_normal_reaction_at_150mm_spacing_n": 84.68651504419006,
+      "rear_guide_normal_reaction_at_150mm_spacing_n": -72.72056022516489,
+      "front_guide_normal_reaction_at_200mm_spacing_n": 66.50637498789882,
+      "rear_guide_normal_reaction_at_200mm_spacing_n": -54.54042016887366
+    },
+    {
+      "exposed_length_m": 1.0,
+      "interface_force_down_n": 5.395500000000001,
+      "interface_moment_clockwise_nm": 2.5751250000000003,
+      "exposed_rear_mass_kg": 0.6048000000000001,
+      "root_gravity_moment_nm": 10.652239260165548,
+      "root_vertical_shear_n": 11.328588000000003,
+      "root_transverse_shear_n": 10.942575724588426,
+      "local_normal_deflection_down_mm": 1.8430304847787708,
+      "local_axial_shortening_mm": 0.0001400269308479078,
+      "interface_vertical_deflection_down_mm": 1.7802669855224071,
+      "interface_horizontal_displacement_mm": 0.4768761345363953,
+      "interface_rotation_ccw_rad": -0.003022878710227179,
+      "interface_rotation_ccw_deg": -0.1731981920759671,
+      "maximum_nominal_normal_stress_mpa": 5.444456990039051,
+      "critical_cut_from_front_guide_m": 0.0,
+      "critical_section": "Al square tube 30x30x2 mm",
+      "nominal_yield_screen_ratio": 0.022685237458496047,
+      "nominal_yield_factor": 44.08153107630272,
+      "passes_nominal_section_yield_screen": true,
+      "joint_strength_verified": false,
+      "joint_flexibility_included": false,
+      "scope": "Linear beam screening; no overall design approval",
+      "root_gravity_moment_numerical_nm": 10.652239260165548,
+      "root_moment_integration_abs_difference_nm": 0.0,
+      "integration_rotation_abs_difference_rad": 4.336808689942018e-19,
+      "integration_normal_deflection_abs_difference_mm": 4.3368086899420177e-16,
+      "integration_axial_shortening_abs_difference_mm": 0.0,
+      "layout": "single_30",
+      "rear_axis_angle_from_horizontal_deg": 15,
+      "front_shape": "horizontal",
+      "head_mass_kg": 0.5,
+      "front_assembly_mass_kg": 0.05,
+      "head_horizontal_lever_from_interface_m": 0.5,
+      "front_com_horizontal_lever_from_interface_m": 0.25,
+      "front_nominal_length_m": 0.5,
+      "guide_couple_force_at_150mm_spacing_n": 71.01492840110366,
+      "guide_couple_force_at_200mm_spacing_n": 53.261196300827734,
+      "front_guide_normal_reaction_at_150mm_spacing_n": 81.95750412569208,
+      "rear_guide_normal_reaction_at_150mm_spacing_n": -71.01492840110366,
+      "front_guide_normal_reaction_at_200mm_spacing_n": 64.20377202541616,
+      "rear_guide_normal_reaction_at_200mm_spacing_n": -53.261196300827734
+    }
+  ],
+  "checks": [
+    {
+      "name": "Uniform beam: tip force plus applied end moment, deflection",
+      "actual": 0.0008418198442475645,
+      "expected": 0.0008418198442475646,
+      "passed": true
+    },
+    {
+      "name": "Uniform beam: tip force plus applied end moment, rotation",
+      "actual": 0.0018050256959989911,
+      "expected": 0.0018050256959989913,
+      "passed": true
+    },
+    {
+      "name": "Uniform beam: root moment includes end moment",
+      "actual": 6.86,
+      "expected": 6.86,
+      "passed": true
+    },
+    {
+      "name": "Uniform self-weight: deflection",
+      "actual": 0.00014965067314058717,
+      "expected": 0.00014965067314058714,
+      "passed": true
+    },
+    {
+      "name": "Uniform self-weight: rotation",
+      "actual": 0.00024941778856764525,
+      "expected": 0.00024941778856764525,
+      "passed": true
+    },
+    {
+      "name": "Uniform self-weight: root moment",
+      "actual": 1.8985881600000007,
+      "expected": 1.8985881600000007,
+      "passed": true
+    },
+    {
+      "name": "Vertical beam: axial shortening",
+      "actual": 2.9503105590062115e-07,
+      "expected": 2.950310559006211e-07,
+      "passed": true
+    },
+    {
+      "name": "Vertical beam: negligible bending",
+      "actual": 2.7921947020559655e-16,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Stepped beam: independently summed weight",
+      "actual": 11.993311199999997,
+      "expected": 11.99331119999988,
+      "passed": true
+    },
+    {
+      "name": "Stepped beam: independently summed root moment",
+      "actual": 9.708918825205656,
+      "expected": 9.708918825205656,
+      "passed": true
+    },
+    {
+      "name": "Stepped beam: Gauss versus Simpson deflection",
+      "actual": 1.0842021724855044e-16,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Section subdivision invariance",
+      "actual": 0.9594375849979889,
+      "expected": 0.9594375849979889,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "placements": 124432,
+    "rear_clear": 102414,
+    "static_clear": 793,
+    "static_clear_stable": 627,
+    "static_clear_stable_low_strain": 0,
+    "static_clear_stable_self_clear": 439,
+    "all_diagnostic_screens": 0
+  },
+  "front_records": 308,
+  "axis_cases": 104,
+  "insertion_grid_mm": [
+    0,
+    1000,
+    10
+  ],
+  "guide_setback_mm": 200.0,
+  "front_and_assumed_head_diameter_mm": 32,
+  "rear_height_mm": 40,
+  "fixed_housing_height_mm": 50,
+  "clearance_margin_mm": 5.0,
+  "maximum_static_fit_strain_at_most_5_percent": 0,
+  "frozen_shape_path_pass_examples": 0,
+  "caveats": [
+    "5% strain is a diagnostic threshold, not a measured material failure criterion.",
+    "Front and head represented by the same 32 mm capsule; actual head geometry not provided.",
+    "Five discrete CAD width planes are not a continuous 3D collision check.",
+    "Cavity envelope is interpolated across access holes to require the working front to remain inside.",
+    "0.5 m front uses 480 mm modules plus a 20 mm massless rigid interface.",
+    "No global infeasibility proof; no alternative changing-shape insertion path solved."
+  ]
+}

@@ -1,0 +1,454 @@
+[
+  {
+    "configuration": "U9-M1",
+    "anchors": [
+      10
+    ],
+    "anchor_set_count": 1,
+    "top_tensions_n": [
+      8.414809918829018
+    ],
+    "effective_top_force_by_module_n": [
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018,
+      8.414809918829018
+    ],
+    "equilibrium_residual": 1.7713017467710368e-15,
+    "maximum_axis_deviation_mm": 424.14903549843405,
+    "axial_projection_mm": 74.22452877194307,
+    "maximum_tangent_error_deg": 103.76441955976752,
+    "max_abs_axial_strain": 0.05,
+    "stable_with_1m_extra_free_rope": true,
+    "minimum_scaled_eigenvalue": 0.007162027238737146,
+    "provisional_straight_geometry": false,
+    "low_strain_diagnostic": true,
+    "added_ropes_included_in_mass": true,
+    "anchor_hardware_and_sheath_mass_not_included": true,
+    "centerline_is_simple": true,
+    "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+    "minimum_nonlocal_centerline_distance_mm": 69.2012644312948,
+    "minimum_nonlocal_capsule_clearance_mm": 37.2012644312948,
+    "closest_nonlocal_segment_pair": [
+      0,
+      7
+    ],
+    "nonlocal_reference_arclength_separation_mm": 64.0,
+    "nonlocal_capsule_overlap": false,
+    "maximum_body_radius_times_curvature": 0.35325984930834525,
+    "local_radius_curvature_exceeded": false,
+    "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact",
+    "architecture": "single",
+    "optimizer": {
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 4,
+      "objective": 1.1252177630617224
+    },
+    "coarse_strain_bound": 0.05,
+    "fine_metrics": {
+      "configuration": "U9-M1",
+      "anchors": [
+        10
+      ],
+      "anchor_set_count": 1,
+      "top_tensions_n": [
+        8.414809918829018
+      ],
+      "effective_top_force_by_module_n": [
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018,
+        8.414809918829018
+      ],
+      "equilibrium_residual": 1.4530737724172127e-12,
+      "maximum_axis_deviation_mm": 424.19781533764035,
+      "axial_projection_mm": 74.17467535649384,
+      "maximum_tangent_error_deg": 103.74014592715916,
+      "max_abs_axial_strain": 0.050347014858183194,
+      "stable_with_1m_extra_free_rope": true,
+      "minimum_scaled_eigenvalue": 0.0017906856716966737,
+      "provisional_straight_geometry": false,
+      "low_strain_diagnostic": false,
+      "added_ropes_included_in_mass": true,
+      "anchor_hardware_and_sheath_mass_not_included": true,
+      "centerline_is_simple": true,
+      "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+      "minimum_nonlocal_centerline_distance_mm": 63.01904855193565,
+      "minimum_nonlocal_capsule_clearance_mm": 31.019048551935644,
+      "closest_nonlocal_segment_pair": [
+        68,
+        80
+      ],
+      "nonlocal_reference_arclength_separation_mm": 64.0,
+      "nonlocal_capsule_overlap": false,
+      "maximum_body_radius_times_curvature": 0.35841617526503056,
+      "local_radius_curvature_exceeded": false,
+      "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact"
+    },
+    "fine_converged": true
+  },
+  {
+    "configuration": "U9-M1",
+    "anchors": [
+      9,
+      10
+    ],
+    "anchor_set_count": 2,
+    "top_tensions_n": [
+      50.994589840385466,
+      6.365657006074439
+    ],
+    "effective_top_force_by_module_n": [
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      57.3602468464599,
+      6.365657006074439
+    ],
+    "equilibrium_residual": 3.5541014575812824e-14,
+    "maximum_axis_deviation_mm": 390.6605637367432,
+    "axial_projection_mm": 194.1357494940958,
+    "maximum_tangent_error_deg": 88.04317370104253,
+    "max_abs_axial_strain": 0.05,
+    "stable_with_1m_extra_free_rope": true,
+    "minimum_scaled_eigenvalue": 0.006602480808698118,
+    "provisional_straight_geometry": false,
+    "low_strain_diagnostic": true,
+    "added_ropes_included_in_mass": true,
+    "anchor_hardware_and_sheath_mass_not_included": true,
+    "centerline_is_simple": true,
+    "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+    "minimum_nonlocal_centerline_distance_mm": 66.08626366947573,
+    "minimum_nonlocal_capsule_clearance_mm": 34.08626366947573,
+    "closest_nonlocal_segment_pair": [
+      0,
+      7
+    ],
+    "nonlocal_reference_arclength_separation_mm": 64.0,
+    "nonlocal_capsule_overlap": false,
+    "maximum_body_radius_times_curvature": 0.33055237325586884,
+    "local_radius_curvature_exceeded": false,
+    "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact",
+    "architecture": "two",
+    "optimizer": {
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 7,
+      "objective": 0.7265839427209474
+    },
+    "coarse_strain_bound": 0.05,
+    "fine_metrics": {
+      "configuration": "U9-M1",
+      "anchors": [
+        9,
+        10
+      ],
+      "anchor_set_count": 2,
+      "top_tensions_n": [
+        50.994589840385466,
+        6.365657006074439
+      ],
+      "effective_top_force_by_module_n": [
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        57.3602468464599,
+        6.365657006074439
+      ],
+      "equilibrium_residual": 3.4285074779205615e-12,
+      "maximum_axis_deviation_mm": 390.80860174856815,
+      "axial_projection_mm": 193.91122534070848,
+      "maximum_tangent_error_deg": 88.04691796361914,
+      "max_abs_axial_strain": 0.05231121934854543,
+      "stable_with_1m_extra_free_rope": true,
+      "minimum_scaled_eigenvalue": 0.0016275334721942074,
+      "provisional_straight_geometry": false,
+      "low_strain_diagnostic": false,
+      "added_ropes_included_in_mass": true,
+      "anchor_hardware_and_sheath_mass_not_included": true,
+      "centerline_is_simple": true,
+      "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+      "minimum_nonlocal_centerline_distance_mm": 60.81583496902128,
+      "minimum_nonlocal_capsule_clearance_mm": 28.815834969021278,
+      "closest_nonlocal_segment_pair": [
+        0,
+        12
+      ],
+      "nonlocal_reference_arclength_separation_mm": 64.0,
+      "nonlocal_capsule_overlap": false,
+      "maximum_body_radius_times_curvature": 0.36904176508576797,
+      "local_radius_curvature_exceeded": false,
+      "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact"
+    },
+    "fine_converged": true
+  },
+  {
+    "configuration": "U9-M1",
+    "anchors": [
+      4,
+      9,
+      10
+    ],
+    "anchor_set_count": 3,
+    "top_tensions_n": [
+      5.776005226785982e-13,
+      50.995357287354096,
+      6.365960100414002
+    ],
+    "effective_top_force_by_module_n": [
+      57.36131738776867,
+      57.36131738776867,
+      57.36131738776867,
+      57.36131738776867,
+      57.361317387768096,
+      57.361317387768096,
+      57.361317387768096,
+      57.361317387768096,
+      57.361317387768096,
+      6.365960100414002
+    ],
+    "equilibrium_residual": 6.19874522082379e-15,
+    "maximum_axis_deviation_mm": 390.73608569356344,
+    "axial_projection_mm": 193.97513409369373,
+    "maximum_tangent_error_deg": 88.06127063196531,
+    "max_abs_axial_strain": 0.05,
+    "stable_with_1m_extra_free_rope": true,
+    "minimum_scaled_eigenvalue": 0.006604864937808991,
+    "provisional_straight_geometry": false,
+    "low_strain_diagnostic": true,
+    "added_ropes_included_in_mass": true,
+    "anchor_hardware_and_sheath_mass_not_included": true,
+    "centerline_is_simple": true,
+    "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+    "minimum_nonlocal_centerline_distance_mm": 66.08122035158989,
+    "minimum_nonlocal_capsule_clearance_mm": 34.08122035158989,
+    "closest_nonlocal_segment_pair": [
+      0,
+      7
+    ],
+    "nonlocal_reference_arclength_separation_mm": 64.0,
+    "nonlocal_capsule_overlap": false,
+    "maximum_body_radius_times_curvature": 0.33051742663075223,
+    "local_radius_curvature_exceeded": false,
+    "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact",
+    "architecture": "three",
+    "optimizer": {
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 13,
+      "objective": 0.7270521285671163
+    },
+    "coarse_strain_bound": 0.05,
+    "fine_metrics": {
+      "configuration": "U9-M1",
+      "anchors": [
+        4,
+        9,
+        10
+      ],
+      "anchor_set_count": 3,
+      "top_tensions_n": [
+        5.776005226785982e-13,
+        50.995357287354096,
+        6.365960100414002
+      ],
+      "effective_top_force_by_module_n": [
+        57.36131738776867,
+        57.36131738776867,
+        57.36131738776867,
+        57.36131738776867,
+        57.361317387768096,
+        57.361317387768096,
+        57.361317387768096,
+        57.361317387768096,
+        57.361317387768096,
+        6.365960100414002
+      ],
+      "equilibrium_residual": 3.429881378913535e-12,
+      "maximum_axis_deviation_mm": 390.8841730404803,
+      "axial_projection_mm": 193.75055360432097,
+      "maximum_tangent_error_deg": 88.06589899210225,
+      "max_abs_axial_strain": 0.0523109673930707,
+      "stable_with_1m_extra_free_rope": true,
+      "minimum_scaled_eigenvalue": 0.0016281340446638788,
+      "provisional_straight_geometry": false,
+      "low_strain_diagnostic": false,
+      "added_ropes_included_in_mass": true,
+      "anchor_hardware_and_sheath_mass_not_included": true,
+      "centerline_is_simple": true,
+      "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+      "minimum_nonlocal_centerline_distance_mm": 60.81146357477257,
+      "minimum_nonlocal_capsule_clearance_mm": 28.811463574772564,
+      "closest_nonlocal_segment_pair": [
+        0,
+        12
+      ],
+      "nonlocal_reference_arclength_separation_mm": 64.0,
+      "nonlocal_capsule_overlap": false,
+      "maximum_body_radius_times_curvature": 0.36900664569622865,
+      "local_radius_curvature_exceeded": false,
+      "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact"
+    },
+    "fine_converged": true
+  },
+  {
+    "configuration": "U9-M1",
+    "anchors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "anchor_set_count": 10,
+    "top_tensions_n": [
+      0.0,
+      3.5126206157369205e-14,
+      7.529233433778052e-15,
+      8.175228653111648e-17,
+      2.140226966799982e-14,
+      5.2731490931404855e-14,
+      7.283349405844265e-14,
+      1.2213373927034397e-13,
+      51.00156005863019,
+      6.372458435964534
+    ],
+    "effective_top_force_by_module_n": [
+      57.374018494595035,
+      57.374018494595035,
+      57.374018494595,
+      57.37401849459499,
+      57.37401849459499,
+      57.37401849459497,
+      57.374018494594914,
+      57.37401849459484,
+      57.37401849459472,
+      6.372458435964534
+    ],
+    "equilibrium_residual": 1.3565537582138631e-15,
+    "maximum_axis_deviation_mm": 391.5549071429331,
+    "axial_projection_mm": 191.94778479707796,
+    "maximum_tangent_error_deg": 88.35132054396841,
+    "max_abs_axial_strain": 0.05,
+    "stable_with_1m_extra_free_rope": true,
+    "minimum_scaled_eigenvalue": 0.00665553695013766,
+    "provisional_straight_geometry": false,
+    "low_strain_diagnostic": true,
+    "added_ropes_included_in_mass": true,
+    "anchor_hardware_and_sheath_mass_not_included": true,
+    "centerline_is_simple": true,
+    "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+    "minimum_nonlocal_centerline_distance_mm": 66.03226601084188,
+    "minimum_nonlocal_capsule_clearance_mm": 34.03226601084187,
+    "closest_nonlocal_segment_pair": [
+      0,
+      7
+    ],
+    "nonlocal_reference_arclength_separation_mm": 64.0,
+    "nonlocal_capsule_overlap": false,
+    "maximum_body_radius_times_curvature": 0.32976779184508087,
+    "local_radius_curvature_exceeded": false,
+    "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact",
+    "architecture": "per_module",
+    "optimizer": {
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 23,
+      "objective": 0.7330629171483464
+    },
+    "coarse_strain_bound": 0.05,
+    "fine_metrics": {
+      "configuration": "U9-M1",
+      "anchors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "anchor_set_count": 10,
+      "top_tensions_n": [
+        0.0,
+        3.5126206157369205e-14,
+        7.529233433778052e-15,
+        8.175228653111648e-17,
+        2.140226966799982e-14,
+        5.2731490931404855e-14,
+        7.283349405844265e-14,
+        1.2213373927034397e-13,
+        51.00156005863019,
+        6.372458435964534
+      ],
+      "effective_top_force_by_module_n": [
+        57.374018494595035,
+        57.374018494595035,
+        57.374018494595,
+        57.37401849459499,
+        57.37401849459499,
+        57.37401849459497,
+        57.374018494594914,
+        57.37401849459484,
+        57.37401849459472,
+        6.372458435964534
+      ],
+      "equilibrium_residual": 3.456832042836311e-12,
+      "maximum_axis_deviation_mm": 391.70282540730614,
+      "axial_projection_mm": 191.7230822061445,
+      "maximum_tangent_error_deg": 88.36562242744148,
+      "max_abs_axial_strain": 0.0523054552226384,
+      "stable_with_1m_extra_free_rope": true,
+      "minimum_scaled_eigenvalue": 0.0016408156756108163,
+      "provisional_straight_geometry": false,
+      "low_strain_diagnostic": false,
+      "added_ropes_included_in_mass": true,
+      "anchor_hardware_and_sheath_mass_not_included": true,
+      "centerline_is_simple": true,
+      "centerline_check": "analytic_nonadjacent_polyline_segment_intersection",
+      "minimum_nonlocal_centerline_distance_mm": 60.76952796051092,
+      "minimum_nonlocal_capsule_clearance_mm": 28.769527960510917,
+      "closest_nonlocal_segment_pair": [
+        0,
+        12
+      ],
+      "nonlocal_reference_arclength_separation_mm": 64.0,
+      "nonlocal_capsule_overlap": false,
+      "maximum_body_radius_times_curvature": 0.36825261472796383,
+      "local_radius_curvature_exceeded": false,
+      "geometry_screen_scope": "polyline_and_32mm_capsules_not_detailed_module_contact"
+    },
+    "fine_converged": true
+  }
+]
