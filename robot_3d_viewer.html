@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snake robot shape viewer</title>
+<style>
+:root{font:15px/1.45 system-ui,Segoe UI,sans-serif;color:#172033;background:#f3f5f8}*{box-sizing:border-box}body{margin:0}header{padding:16px 22px;background:#172033;color:white}h1{font-size:20px;margin:0 0 4px}header p{margin:0;color:#cbd5e1}.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;padding:14px;max-width:1500px;margin:auto}canvas{width:100%;height:calc(100vh - 125px);min-height:480px;background:linear-gradient(#fbfdff,#e8edf4);border:1px solid #d5dce6;border-radius:9px;touch-action:none}.panel{background:white;border:1px solid #d5dce6;border-radius:9px;padding:16px;height:max-content}.panel label{display:block;font-weight:600;margin:12px 0 5px}select,input[type=file]{width:100%;padding:8px;border:1px solid #cbd5e1;border-radius:6px;background:#fff}button{padding:7px 10px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;cursor:pointer}.row{display:flex;gap:8px}.row button{flex:1}.hint{font-size:13px;color:#536176}.stats{font-size:13px;white-space:pre-line;color:#334155;margin-top:12px}.legend{margin-top:12px;font-size:13px}.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}.note{font-size:12px;color:#64748b;border-top:1px solid #e2e8f0;margin-top:14px;padding-top:12px}@media(max-width:850px){.layout{grid-template-columns:1fr}canvas{height:65vh;min-height:380px}}
+</style>
+</head>
+<body>
+<header><h1>Snake robot · predicted shape viewer</h1><p>Interactive 3D view of the saved centerline simulation with schematic module bodies and tendon paths.</p></header>
+<main class="layout"><canvas id="view"></canvas><section class="panel">
+<p class="hint">Load one saved result file to view its simulated cases. Start with <b>rope_results/comparison.json</b> or <b>rope_results_tip500g/comparison.json</b>.</p>
+<input id="file" type="file" accept=".json,application/json">
+<label for="case">Material and loading stage</label><select id="case" disabled></select>
+<label for="radius">Schematic body diameter: <span id="radLabel">32</span> mm</label><input id="radius" type="range" min="8" max="50" value="32">
+<div class="row" style="margin-top:12px"><button id="ropes" aria-pressed="true">Hide tendons</button><button id="reset">Reset view</button></div>
+<div class="stats" id="stats">Choose a comparison.json file to begin.</div>
+<div class="legend"><div><i class="swatch" style="background:#5276b8"></i>High</div><div><i class="swatch" style="background:#38a38b"></i>Unidirectional</div><div><i class="swatch" style="background:#e3a13b"></i>Directional</div><div><i class="swatch" style="background:#d56d68"></i>Low</div><div><i class="swatch" style="background:#303b4e"></i>Backbone</div></div>
+<div class="note">Left-drag to rotate · right-drag or Shift+left-drag to pan · wheel to zoom · axes use simulation coordinates (X forward, Y up, Z sideways). Bodies are uniform cylindrical proxies at the assumed module pitch; the result data contains centerline and tendon guides, not detailed CAD geometry. Rope colors follow top/right/bottom/left in the local section.</div>
+</section></main>
+<script>
+(()=>{
+const canvas=document.querySelector('#view'),ctx=canvas.getContext('2d'),file=document.querySelector('#file'),cases=document.querySelector('#case'),radius=document.querySelector('#radius'),stats=document.querySelector('#stats'),ropeButton=document.querySelector('#ropes');
+let rows=[],config={},showRopes=true,yaw=-.65,pitch=.25,zoom=1,drag=null,center=[0,0,0],sceneScale=1,panX=0,panY=0;
+const colors={high:'#5276b8',unidirectional:'#38a38b',directional:'#e3a13b',low:'#d56d68'};
+const ropeColors=['#e53e3e','#2583d5','#46a35b','#9b59b6'];
+function resize(){const r=canvas.getBoundingClientRect(),d=devicePixelRatio||1;canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);draw()}
+function rot(p){let [x,y,z]=p,cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);let a=x*cy-z*sy,b=x*sy+z*cy;return [a,b*cp-y*sp,b*sp+y*cp]}
+function project(p){let q=rot([p[0]-center[0],p[1]-center[1],p[2]-center[2]]),s=sceneScale*zoom;return [canvas.clientWidth/2+panX+q[0]*s,canvas.clientHeight/2+panY-q[1]*s,q[2]]}
+function path(points,color,width=2){if(!points||points.length<2)return;ctx.beginPath();points.forEach((p,i)=>{let q=project(p);i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])});ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineJoin='round';ctx.lineCap='round';ctx.stroke()}
+function drawCylinder(a,b,r,color){let axis=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],len=Math.hypot(...axis);if(!len)return;axis=axis.map(x=>x/len);let ref=Math.abs(axis[1])<.9?[0,1,0]:[0,0,1],cross=(u,v)=>[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]],norm=u=>{let n=Math.hypot(...u)||1;return u.map(x=>x/n)},u=norm(cross(axis,ref)),v=norm(cross(axis,u)),N=8,ring=[];for(let p of [a,b]){let pts=[];for(let j=0;j<N;j++){let t=j*2*Math.PI/N;pts.push([p[0]+r*(u[0]*Math.cos(t)+v[0]*Math.sin(t)),p[1]+r*(u[1]*Math.cos(t)+v[1]*Math.sin(t)),p[2]+r*(u[2]*Math.cos(t)+v[2]*Math.sin(t))])}ring.push(pts)}let faces=[];for(let j=0;j<N;j++){let k=(j+1)%N,poly=[project(ring[0][j]),project(ring[0][k]),project(ring[1][k]),project(ring[1][j])],depth=poly.reduce((s,x)=>s+x[2],0)/4;faces.push({poly,depth,j})}faces.sort((x,y)=>x.depth-y.depth);for(const f of faces){ctx.beginPath();ctx.moveTo(f.poly[0][0],f.poly[0][1]);f.poly.slice(1).forEach(q=>ctx.lineTo(q[0],q[1]));ctx.closePath();ctx.fillStyle=f.j%2?'#ffffff16':color;ctx.fill();ctx.strokeStyle='#14203325';ctx.lineWidth=.7;ctx.stroke()}}
+function kindAt(i){const n=rows[current].summary.module_count,stack=String(config.stack||'').split(',').map(s=>s.trim()),items=[];for(const x of stack){let m=x.match(/^(\d+)\s*\*\s*(.*)$/),count=m?+m[1]:1,t=m?m[2]:x,kind=t.split(':')[0];for(let j=0;j<count;j++)items.push(kind)}return items[i]||'high'}
+let current=0;
+function draw(){if(!ctx)return;let w=canvas.clientWidth,h=canvas.clientHeight;ctx.clearRect(0,0,w,h);if(!rows.length){ctx.fillStyle='#64748b';ctx.font='16px system-ui';ctx.textAlign='center';ctx.fillText('Load a comparison.json file to render its saved 3D shape',w/2,h/2);return}let row=rows[current],pts=row.pts_m.map(p=>p.map(v=>v*1000)),lo=[0,1,2].map(k=>Math.min(...pts.map(p=>p[k]))),hi=[0,1,2].map(k=>Math.max(...pts.map(p=>p[k])));center=lo.map((v,k)=>(v+hi[k])/2);let span=Math.max(...hi.map((v,k)=>v-lo[k]),1);sceneScale=Math.min(w,h)*.36/span;ctx.strokeStyle='#a4afbd';ctx.lineWidth=1;let origin=project([0,0,0]),axisLen=span*.16;for(const [end,label,col] of [[[axisLen,0,0],'X','#d24b4b'],[[0,axisLen,0],'Y','#39905c'],[[0,0,axisLen],'Z','#3973c4']]){let q=project(end);ctx.beginPath();ctx.moveTo(origin[0],origin[1]);ctx.lineTo(q[0],q[1]);ctx.strokeStyle=col;ctx.stroke();ctx.fillStyle=col;ctx.fillText(label,q[0]+8,q[1]-6)}
+let dia=+radius.value;for(let i=0;i<pts.length-1;i++)drawCylinder(pts[i],pts[i+1],dia/2,colors[kindAt(i)]||colors.high);
+if(row.frames&&row.frames.length>1&&row.summary.material!=='modules_only')path(pts,'#303b4e',Math.max(1.2,dia*.09))
+if(showRopes&&row.rope_guides_m){for(let k=0;k<4;k++)path(row.rope_guides_m.map(g=>g[k].map(v=>v*1000)),ropeColors[k],Math.max(1.2,dia*.055))}
+for(let i=0;i<pts.length;i+=Math.max(1,Math.floor((pts.length-1)/12))){let p=project(pts[i]);ctx.beginPath();ctx.arc(p[0],p[1],2.1,0,Math.PI*2);ctx.fillStyle='#172033';ctx.fill()}
+let s=row.summary;stats.textContent=`${s.material} · ${s.stage}\n${s.module_count} modules · ${s.reference_length_mm.toFixed(0)} mm reference length\nTip: X ${s.tip_x_mm.toFixed(1)} · Y ${s.tip_y_mm.toFixed(1)} · Z ${s.tip_z_mm.toFixed(1)} mm\nSag: ${s.tip_drop_mm.toFixed(1)} mm · max joint bend: ${s.max_joint_deg.toFixed(1)}°\nSolver converged: ${s.ok?'yes':'no'}`}
+file.addEventListener('change',async()=>{try{let data=JSON.parse(await file.files[0].text());config=data.config||{};rows=data.cases||[];if(!rows.length)throw Error('No cases found in this JSON file.');cases.innerHTML='';rows.forEach((r,i)=>{let o=document.createElement('option');o.value=i;o.textContent=`${r.summary.material} · ${r.summary.stage}`;cases.append(o)});cases.disabled=false;current=0;zoom=1;panX=0;panY=0;draw()}catch(e){stats.textContent=`Could not load file: ${e.message}`}});
+cases.addEventListener('change',()=>{current=+cases.value;panX=0;panY=0;zoom=1;draw()});radius.addEventListener('input',()=>{document.querySelector('#radLabel').textContent=radius.value;draw()});ropeButton.addEventListener('click',()=>{showRopes=!showRopes;ropeButton.textContent=showRopes?'Hide tendons':'Show tendons';draw()});document.querySelector('#reset').addEventListener('click',()=>{yaw=-.65;pitch=.25;zoom=1;panX=0;panY=0;draw()});
+canvas.addEventListener('contextmenu',e=>e.preventDefault());canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointermove',e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(drag.pan){panX+=dx;panY+=dy}else{yaw+=dx*.008;pitch=Math.max(-1.45,Math.min(1.45,pitch+dy*.008))}drag.x=e.clientX;drag.y=e.clientY;draw()});canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.15,Math.min(20,zoom*Math.exp(-e.deltaY*.001)));draw()},{passive:false});new ResizeObserver(resize).observe(canvas);
+})();
+</script>
+</body>
+</html>
+
