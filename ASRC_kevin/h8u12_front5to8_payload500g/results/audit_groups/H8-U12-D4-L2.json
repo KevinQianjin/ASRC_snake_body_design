@@ -1,0 +1,69 @@
+{
+  "combination": "H8-U12-D4-L2",
+  "selected_vertical_states": 3,
+  "selected_spatial_states": 4,
+  "max_residual": 2.1405840028264435e-07,
+  "issues": [],
+  "refinements": [
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.026536869259743107,
+      "stress_change_mpa": 0.015743426189374077,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "front_semicircle_up",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.4463806147607444,
+      "stress_change_mpa": 0.020979646124374085,
+      "total_tension_change_n": 0.11006460528026807
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.43186677771387744,
+      "stress_change_mpa": 0.021037767106463434,
+      "total_tension_change_n": 0.09063467182248175
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.3850923476406816,
+      "stress_change_mpa": 0.8660558776066409,
+      "total_tension_change_n": 0.08912659868558226,
+      "max_force_component_change_n": 0.03272773718746613
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.7908015672369347,
+      "stress_change_mpa": 0.10091428915666256,
+      "total_tension_change_n": 0.09698396828757438,
+      "max_force_component_change_n": 0.09698396828757438
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.8957564488723365,
+      "stress_change_mpa": 0.07836916869348443,
+      "total_tension_change_n": 0.2565753180145891,
+      "max_force_component_change_n": 0.14774175055239347
+    }
+  ]
+}

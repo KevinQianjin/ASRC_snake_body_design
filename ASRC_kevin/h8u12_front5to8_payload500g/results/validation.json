@@ -1,0 +1,274 @@
+{
+  "unit_tests_passed": 6,
+  "configurations": 22,
+  "vertical_targets": 66,
+  "free_sag_cases": 22,
+  "maximum_requests": 88,
+  "saved_states_checked": 146,
+  "max_selected_state_residual": 1.1031724547454143e-06,
+  "issues": [],
+  "refinements": [
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.0266145680527082,
+      "stress_change_mpa": 0.01563512933500988,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.36080314263183805,
+      "stress_change_mpa": 0.021126023927877213,
+      "total_tension_change_n": 0.09645366948657852
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 5.230570911725639,
+      "stress_change_mpa": 0.7965544829647797,
+      "total_tension_change_n": 0.2756782267558968,
+      "max_force_component_change_n": 0.8229432740858846
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.380441335756766,
+      "stress_change_mpa": 0.8698578403381134,
+      "total_tension_change_n": 0.11438136833533541,
+      "max_force_component_change_n": 0.03935283834469061
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.8490994929060001,
+      "stress_change_mpa": 0.13433027398832564,
+      "total_tension_change_n": 0.11373252305625137,
+      "max_force_component_change_n": 0.11373252305625137
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.0202000554923785,
+      "stress_change_mpa": 0.111332408287808,
+      "total_tension_change_n": 0.2972025696266436,
+      "max_force_component_change_n": 0.15815523704318224
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.026536869259743107,
+      "stress_change_mpa": 0.015743426189374077,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "front_semicircle_up",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.4463806147607444,
+      "stress_change_mpa": 0.020979646124374085,
+      "total_tension_change_n": 0.11006460528026807
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.43186677771387744,
+      "stress_change_mpa": 0.021037767106463434,
+      "total_tension_change_n": 0.09063467182248175
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.3850923476406816,
+      "stress_change_mpa": 0.8660558776066409,
+      "total_tension_change_n": 0.08912659868558226,
+      "max_force_component_change_n": 0.03272773718746613
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.7908015672369347,
+      "stress_change_mpa": 0.10091428915666256,
+      "total_tension_change_n": 0.09698396828757438,
+      "max_force_component_change_n": 0.09698396828757438
+    },
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.8957564488723365,
+      "stress_change_mpa": 0.07836916869348443,
+      "total_tension_change_n": 0.2565753180145891,
+      "max_force_component_change_n": 0.14774175055239347
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.02645148950136415,
+      "stress_change_mpa": 0.015860666694948122,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "front_semicircle_up",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.38563866408376674,
+      "stress_change_mpa": 0.025019018261787096,
+      "total_tension_change_n": 0.08976356978022793
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.4934940347911816,
+      "stress_change_mpa": 0.020806485617640647,
+      "total_tension_change_n": 0.09091506695167695
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.353214887298755,
+      "stress_change_mpa": 0.8609453047401985,
+      "total_tension_change_n": 0.07716691275389342,
+      "max_force_component_change_n": 0.029352389904241605
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.7234870637480313,
+      "stress_change_mpa": 0.10408804037535901,
+      "total_tension_change_n": 0.11025723507232854,
+      "max_force_component_change_n": 0.11025723507232854
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.8237653324085028,
+      "stress_change_mpa": 0.05785089214339223,
+      "total_tension_change_n": 0.23479574371619227,
+      "max_force_component_change_n": 0.14200781689067554
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.02636592539187256,
+      "stress_change_mpa": 0.01597673660955934,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "front_semicircle_up",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.4708258156929039,
+      "stress_change_mpa": 0.020351078121393584,
+      "total_tension_change_n": 0.09001326772266083
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.5572486386866378,
+      "stress_change_mpa": 0.020577643852902838,
+      "total_tension_change_n": 0.09119409020689773
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.3361147514637635,
+      "stress_change_mpa": 0.8538388227594851,
+      "total_tension_change_n": 0.06774116635432992,
+      "max_force_component_change_n": 0.026657975930937994
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.6651820568008394,
+      "stress_change_mpa": 0.09491167551971103,
+      "total_tension_change_n": 0.11302999364206023,
+      "max_force_component_change_n": 0.11302999364206023
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.7638626600492823,
+      "stress_change_mpa": 0.0406736594134145,
+      "total_tension_change_n": 0.21641850340387236,
+      "max_force_component_change_n": 0.1370966183887976
+    }
+  ],
+  "max_refinement_head_change_mm": 5.230570911725639,
+  "max_refinement_stress_change_mpa": 0.8698578403381134,
+  "max_refinement_tension_change_n": 0.2972025696266436,
+  "equilibrium_and_data_checks_passed": true,
+  "all_reference_refinements_converged": false,
+  "nonconverged_refinements": [
+    {
+      "combination": "H8-U12-D4-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D5-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    },
+    {
+      "combination": "H8-U12-D6-L2",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": false
+    }
+  ],
+  "nonconverged_refinements_are_overload_diagnostics_only": true
+}

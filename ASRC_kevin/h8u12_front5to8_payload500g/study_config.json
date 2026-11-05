@@ -1,0 +1,83 @@
+{
+  "rear_counts": [
+    8,
+    12
+  ],
+  "front_counts": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "all_positive_directional_low_splits": true,
+  "unique_configurations": 22,
+  "payload_kg": 0.5,
+  "payload_location": "head center; gravity only; no eccentric moment",
+  "backbone": {
+    "rear_only": true,
+    "front_backbone": false,
+    "diameter_mm": 4.2,
+    "material": "304 stainless steel"
+  },
+  "ropes": {
+    "diameter_mm": 2,
+    "routing_radius_mm": 13,
+    "pretension_n": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "friction": 0
+  },
+  "module_properties": "original craft_data, no material/geometry scaling",
+  "maximum_definition": "largest front rotation relative to actual rear/front interface, static equilibrium, no self contact, core reference stress <=205MPa; report tank fit separately",
+  "physical_limits_not_measured": [
+    "module strain",
+    "rope strength",
+    "module geometric stops"
+  ],
+  "scope": "finite numerical search; do not interpret a search bound as physical maximum",
+  "spatial_model": {
+    "degrees_of_freedom": "two bending components, twist, axial strain per cell",
+    "cells_per_module": 2,
+    "reference_refinement_cells_per_module": 4,
+    "steel_shear_modulus_pa": 77000000000.0,
+    "steel_shear_modulus_source": "https://www.htpipe.com/product-material/stainless-steel/304.html",
+    "module_torsion": "original GJ as measured module T/theta spring; preserved on subdivision"
+  },
+  "numerical_search_bounds": {
+    "drive_grid_n": [
+      0,
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "side_vertical_bias_grid_n": [
+      -4,
+      0,
+      4,
+      8,
+      12,
+      16
+    ],
+    "common_grid_n": [
+      0,
+      4
+    ],
+    "max_abs_axial_strain": 0.85,
+    "max_spatial_cell_rotation_component_rad": 1.5,
+    "these_are_not_physical_strength_or_angle_limits": true
+  }
+}

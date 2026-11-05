@@ -1,0 +1,65 @@
+{
+  "combination": "H8-U12-D4-L1",
+  "selected_vertical_states": 2,
+  "selected_spatial_states": 4,
+  "max_residual": 2.2889079328608948e-07,
+  "issues": [],
+  "refinements": [
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "free_sag",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.0266145680527082,
+      "stress_change_mpa": 0.01563512933500988,
+      "total_tension_change_n": 0.0
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "front_semicircle_down",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.36080314263183805,
+      "stress_change_mpa": 0.021126023927877213,
+      "total_tension_change_n": 0.09645366948657852
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "up_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 5.230570911725639,
+      "stress_change_mpa": 0.7965544829647797,
+      "total_tension_change_n": 0.2756782267558968,
+      "max_force_component_change_n": 0.8229432740858846
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "down_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.380441335756766,
+      "stress_change_mpa": 0.8698578403381134,
+      "total_tension_change_n": 0.11438136833533541,
+      "max_force_component_change_n": 0.03935283834469061
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "right_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 0.8490994929060001,
+      "stress_change_mpa": 0.13433027398832564,
+      "total_tension_change_n": 0.11373252305625137,
+      "max_force_component_change_n": 0.11373252305625137
+    },
+    {
+      "combination": "H8-U12-D4-L1",
+      "target": "left_closest_stress",
+      "refinement_control": "same_fixed_winch_lengths",
+      "refinement_converged": true,
+      "head_position_change_mm": 1.0202000554923785,
+      "stress_change_mpa": 0.111332408287808,
+      "total_tension_change_n": 0.2972025696266436,
+      "max_force_component_change_n": 0.15815523704318224
+    }
+  ]
+}
