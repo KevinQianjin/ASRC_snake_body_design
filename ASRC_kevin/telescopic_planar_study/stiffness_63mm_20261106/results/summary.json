@@ -1,0 +1,70 @@
+{
+  "database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374",
+  "diameter_mm": 63,
+  "guide_radius_mm": 24,
+  "configuration_pairs": [
+    [
+      4,
+      2
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      8,
+      4
+    ]
+  ],
+  "pitches_deg": [
+    15,
+    20,
+    25
+  ],
+  "natural_baselines": 9,
+  "single_sweep_attempts": 504,
+  "single_sweep_equilibria": 306,
+  "local_optimizer_attempts": 178,
+  "fine_best_records": 90,
+  "optimized_fine_records": 72,
+  "straight_geometry_records": 2,
+  "all_straight_diagnostics_pass_records": 0,
+  "maximum_mesh_tip_change_mm": 11.114605635199508,
+  "low_strain_optimized_records": 36,
+  "path_screen_records": 18,
+  "front_only_path_pass_records": 4,
+  "low_strain_front_only_path_pass_records": 0,
+  "full_installation_validated": false,
+  "clearance_reference_abs_error_mm": 3.552713678800501e-15,
+  "characteristic_M_loads": [
+    {
+      "configuration": "U4-M2",
+      "M_length_mm": 192.0,
+      "straight_M_root_head_and_module_moment_nm": 0.927351202481856,
+      "characteristic_tendon_force_n": 38.639633436744,
+      "M_5percent_axial_force_n": 8.3347,
+      "scope": "Straight-state moment balance scale, not a solved equilibrium or failure limit"
+    },
+    {
+      "configuration": "U6-M3",
+      "M_length_mm": 288.00000000000006,
+      "straight_M_root_head_and_module_moment_nm": 1.4228165136706732,
+      "characteristic_tendon_force_n": 59.28402140294472,
+      "M_5percent_axial_force_n": 8.3347,
+      "scope": "Straight-state moment balance scale, not a solved equilibrium or failure limit"
+    },
+    {
+      "configuration": "U8-M4",
+      "M_length_mm": 384.0,
+      "straight_M_root_head_and_module_moment_nm": 1.9394749648247496,
+      "characteristic_tendon_force_n": 80.8114568676979,
+      "M_5percent_axial_force_n": 8.3347,
+      "scope": "Straight-state moment balance scale, not a solved equilibrium or failure limit"
+    }
+  ],
+  "scope": "Finite local planar searches with active insertion tension; no global impossibility or material safety claim",
+  "mesh_8_to_16_checked": 25,
+  "mesh_8_to_16_converged": 25,
+  "mesh_8_to_16_maximum_tip_change_mm": 3.9443124021549285,
+  "refined_front_only_path_pass_records": 4
+}

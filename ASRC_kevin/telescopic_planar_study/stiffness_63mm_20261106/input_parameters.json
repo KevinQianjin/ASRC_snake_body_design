@@ -1,0 +1,141 @@
+{
+  "database": {
+    "metadata": [
+      {
+        "key": "schema_version",
+        "value": "2"
+      },
+      {
+        "key": "scope",
+        "value": "User-provided structural rigidities; not bulk material elastic moduli."
+      },
+      {
+        "key": "units",
+        "value": "User confirmed: EA=N; EI=N*m^2; GJ=N*m/rad. Module mass=g; length=mm. Original rigidity values unchanged."
+      },
+      {
+        "key": "direction_convention",
+        "value": "horizontal = horizontal bending; vertical_against_gravity = vertical bending opposing gravity. Coordinate axes not supplied."
+      },
+      {
+        "key": "middle_EI",
+        "value": "EI=0.0441178 N*m^2 in all bending directions; direction=all_directions."
+      },
+      {
+        "key": "integration",
+        "value": "Standalone database; existing model code and previous databases are unchanged."
+      },
+      {
+        "key": "mass_and_length_source",
+        "value": "User provided: middle-stiffness=23.948 g; uni-directional=37.990 g; both lengths=96 mm."
+      }
+    ],
+    "modules": [
+      {
+        "id": "middle_stiffness_pa12",
+        "name": "middle-stiffness",
+        "composition": "PA12",
+        "mass_g": 23.948,
+        "length_mm": 96.0
+      },
+      {
+        "id": "uni_directional_pa12_niti",
+        "name": "uni-directional",
+        "composition": "PA12+NiTi",
+        "mass_g": 37.99,
+        "length_mm": 96.0
+      }
+    ],
+    "rigidity": [
+      {
+        "module_id": "middle_stiffness_pa12",
+        "quantity": "EA",
+        "direction": "not_specified",
+        "value": 166.694,
+        "original_value": "166.694",
+        "unit": "N",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "middle_stiffness_pa12",
+        "quantity": "EI",
+        "direction": "all_directions",
+        "value": 0.0441178,
+        "original_value": "0.0441178",
+        "unit": "N*m^2",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "middle_stiffness_pa12",
+        "quantity": "GJ",
+        "direction": "not_specified",
+        "value": 0.437396,
+        "original_value": "0.437396",
+        "unit": "N*m/rad",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "uni_directional_pa12_niti",
+        "quantity": "EA",
+        "direction": "not_specified",
+        "value": 128122.0,
+        "original_value": "128122",
+        "unit": "N",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "uni_directional_pa12_niti",
+        "quantity": "EI",
+        "direction": "horizontal",
+        "value": 1.67184,
+        "original_value": "1.67184",
+        "unit": "N*m^2",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "uni_directional_pa12_niti",
+        "quantity": "EI",
+        "direction": "vertical_against_gravity",
+        "value": 22.2052,
+        "original_value": "22.2052",
+        "unit": "N*m^2",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      },
+      {
+        "module_id": "uni_directional_pa12_niti",
+        "quantity": "GJ",
+        "direction": "not_specified",
+        "value": 4.70037,
+        "original_value": "4.70037",
+        "unit": "N*m/rad",
+        "unit_status": "user_confirmed",
+        "source": "user_provided"
+      }
+    ],
+    "database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374"
+  },
+  "diameter_mm": 63,
+  "guide_radius_mm": 24,
+  "head_mass_kg": 0.5,
+  "interface_length_mm": 20,
+  "configuration_pairs": [
+    [
+      4,
+      2
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      8,
+      4
+    ]
+  ]
+}
