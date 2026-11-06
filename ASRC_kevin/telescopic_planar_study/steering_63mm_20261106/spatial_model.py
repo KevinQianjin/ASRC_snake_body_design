@@ -232,7 +232,7 @@ class SpatialDatabaseRod:
             yaw_deg=float(np.degrees(angles[0])),vertical_projected_deg=float(np.degrees(angles[1])),world_elevation_deg=float(np.degrees(angles[2])),
             true_head_axis_angle_deg=float(np.degrees(np.arccos(np.clip(t[0],-1,1)))),
             head_world_mm=world[-1].tolist(),
-            max_abs_axial_strain=float(np.max(np.abs(q[:,3]))),max_U_strain=float(np.max(np.abs(q[:self.u_count*self.sub,3]))),max_M_strain=float(np.max(np.abs(q[self.u_count*self.sub:,3]))),
+            max_abs_axial_strain=float(np.max(np.abs(q[:,3]))),max_compression=float(max(0,-q[:,3].min())),max_extension=float(max(0,q[:,3].max())),max_U_strain=float(np.max(np.abs(q[:self.u_count*self.sub,3]))),max_M_strain=float(np.max(np.abs(q[self.u_count*self.sub:,3]))),
             maximum_strain_module=int(np.argmax(np.abs(q[:,3])))//self.sub+1,
             total_material_twist_deg=float(np.degrees(q[:,0].sum())),
             equilibrium_residual=self.residual(g),minimum_geometry_constraint=float(geom.min()) if len(geom) else None,

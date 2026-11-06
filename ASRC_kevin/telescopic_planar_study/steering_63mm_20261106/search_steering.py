@@ -68,7 +68,7 @@ def acceptable(row,mode,direction,cross_reference=None):
         value=row['world_elevation_deg'] if axis==0 else row['yaw_deg']
         crossok=abs(value-np.degrees(cross_reference))<=5.001
     return bool(row['equilibrium_residual']<2e-6 and row['geometry_pass'] and row['stable_fixed_winch'] and
-        (mode!='low_strain' or row['strain_5percent_pass']) and projection>=.0999 and
+        (mode!='low_strain' or row['strain_5percent_pass']) and row.get('max_compression',0)<=.300001 and row.get('max_extension',0)<=.150001 and projection>=.0999 and
         sense*angle<=180.01 and np.max(row['tensions_n'])<=250.0001 and crossok)
 
 def run(u,m):

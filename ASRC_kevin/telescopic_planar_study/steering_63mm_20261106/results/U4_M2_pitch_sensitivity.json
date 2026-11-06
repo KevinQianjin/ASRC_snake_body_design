@@ -1,0 +1,996 @@
+[
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        9.685507434098735,
+        47.03538110863453,
+        10.805837013788475,
+        0.16044552767859394
+      ],
+      [
+        11.365199558754457,
+        146.48491113041172,
+        22.084919763003803,
+        0.49423743728007635
+      ],
+      [
+        1.4484696966131061e-05,
+        10.861108009007589,
+        1.7465202915007482e-13,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 146.48491113041172,
+    "sum_tensions_n": 258.9775614673551,
+    "yaw_deg": 176.05634039409287,
+    "vertical_projected_deg": -130.5871193337123,
+    "world_elevation_deg": -64.35993252350825,
+    "true_head_axis_angle_deg": 130.56538090396708,
+    "head_world_mm": [
+      303.3573773728936,
+      -119.15010832496674,
+      298.7372456104578
+    ],
+    "max_abs_axial_strain": 0.04770329010009194,
+    "max_compression": 0.04770329010009194,
+    "max_extension": 0.0,
+    "max_U_strain": 0.002030286976459735,
+    "max_M_strain": 0.04770329010009194,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 38.10731326050226,
+    "equilibrium_residual": 1.5411422138456032e-12,
+    "minimum_geometry_constraint": 0.10535017498133108,
+    "maximum_radius_curvature": 0.39990269886519303,
+    "nonlocal_capsule_clearance_mm": 55.87348865048371,
+    "geometry_pass": true,
+    "strain_5percent_pass": true,
+    "horizontal_projection_norm": 0.4327163030502457,
+    "vertical_projection_norm": 0.9995570646378547,
+    "minimum_fixed_winch_eigenvalue": 0.7018973425993661,
+    "minimum_force_control_eigenvalue": 0.6796173834643259,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_low_strain_selected",
+    "direction": "right",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 176.05634039409287
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        9.685507434098735,
+        47.03538110863453,
+        10.805837013788475,
+        0.16044552767859394
+      ],
+      [
+        11.365199558754457,
+        146.48491113041172,
+        22.084919763003803,
+        0.49423743728007635
+      ],
+      [
+        1.4484696966131061e-05,
+        10.861108009007589,
+        1.7465202915007482e-13,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 146.48491113041172,
+    "sum_tensions_n": 258.9775614673551,
+    "yaw_deg": 182.88703736632462,
+    "vertical_projected_deg": -138.0032687612548,
+    "world_elevation_deg": -66.97054461590477,
+    "true_head_axis_angle_deg": 137.9909151369132,
+    "head_world_mm": [
+      288.36362730622136,
+      -67.13239533066374,
+      305.9193898870053
+    ],
+    "max_abs_axial_strain": 0.048905269100905514,
+    "max_compression": 0.048905269100905514,
+    "max_extension": 0.0,
+    "max_U_strain": 0.0020391545034604856,
+    "max_M_strain": 0.048905269100905514,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 35.37211519772423,
+    "equilibrium_residual": 1.2202322485777017e-12,
+    "minimum_geometry_constraint": 0.10278865500823392,
+    "maximum_radius_curvature": 0.42120059627228934,
+    "nonlocal_capsule_clearance_mm": 54.966429055647,
+    "geometry_pass": true,
+    "strain_5percent_pass": true,
+    "horizontal_projection_norm": 0.39120430233681724,
+    "vertical_projection_norm": 0.9998058616356134,
+    "minimum_fixed_winch_eigenvalue": 0.6903900310636533,
+    "minimum_force_control_eigenvalue": 0.6679135128521559,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_low_strain_selected",
+    "direction": "right",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": 182.88703736632462
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      6
+    ],
+    "anchor_sets": 1,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        0.1286812327201716,
+        20.50358319067466,
+        5.87922191555383,
+        0.24566225491909358
+      ]
+    ],
+    "maximum_single_tendon_n": 20.50358319067466,
+    "sum_tensions_n": 26.757148593867758,
+    "yaw_deg": 176.98734125063078,
+    "vertical_projected_deg": -160.53536099133845,
+    "world_elevation_deg": -34.42767705016107,
+    "true_head_axis_angle_deg": 160.38352657384024,
+    "head_world_mm": [
+      417.4901357989317,
+      -5.912968671439242,
+      97.32079968687694
+    ],
+    "max_abs_axial_strain": 0.1461896050252047,
+    "max_compression": 0.1461896050252047,
+    "max_extension": 0.0,
+    "max_U_strain": 0.00022269656220996623,
+    "max_M_strain": 0.1461896050252047,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 33.81069588896704,
+    "equilibrium_residual": 1.5403650577283656e-12,
+    "minimum_geometry_constraint": 0.051923910986363134,
+    "maximum_radius_curvature": 0.6852748369800783,
+    "nonlocal_capsule_clearance_mm": 35.01230730680395,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.8248404915172702,
+    "vertical_projection_norm": 0.9990599120686465,
+    "minimum_fixed_winch_eigenvalue": 0.520834743208501,
+    "minimum_force_control_eigenvalue": 0.4745899474535992,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_exploratory_selected",
+    "direction": "right",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 176.98734125063078
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      6
+    ],
+    "anchor_sets": 1,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        0.1286812327201716,
+        20.50358319067466,
+        5.87922191555383,
+        0.24566225491909358
+      ]
+    ],
+    "maximum_single_tendon_n": 20.50358319067466,
+    "sum_tensions_n": 26.757148593867758,
+    "yaw_deg": 183.1350742117757,
+    "vertical_projected_deg": -166.4498102862398,
+    "world_elevation_deg": -38.5083724135166,
+    "true_head_axis_angle_deg": 166.23369512610844,
+    "head_world_mm": [
+      397.82952559508533,
+      66.92165688090925,
+      101.96413828247239
+    ],
+    "max_abs_axial_strain": 0.14967993037405627,
+    "max_compression": 0.14967993037405627,
+    "max_extension": 0.0,
+    "max_U_strain": 0.00023154749463660487,
+    "max_M_strain": 0.14967993037405627,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 31.921343373842852,
+    "equilibrium_residual": 2.992786574118611e-12,
+    "minimum_geometry_constraint": 0.044010198875806206,
+    "maximum_radius_curvature": 0.7355147710204928,
+    "nonlocal_capsule_clearance_mm": 32.81699208208772,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.7825171828100581,
+    "vertical_projection_norm": 0.9990838350415293,
+    "minimum_fixed_winch_eigenvalue": 0.5112287560465744,
+    "minimum_force_control_eigenvalue": 0.45527074565331077,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_exploratory_selected",
+    "direction": "right",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": 183.1350742117757
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        250.0,
+        249.99999999999983,
+        0.0,
+        249.99999999999994
+      ],
+      [
+        250.0,
+        250.0,
+        0.0,
+        250.0
+      ],
+      [
+        7.021457542247436,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 250.0,
+    "sum_tensions_n": 1507.0214575422472,
+    "yaw_deg": 6.742720328378507e-13,
+    "vertical_projected_deg": -53.47759686095579,
+    "world_elevation_deg": -38.47759686095579,
+    "true_head_axis_angle_deg": 53.4775968609558,
+    "head_world_mm": [
+      534.2923699591213,
+      49.55615117081391,
+      2.9461832866923488e-12
+    ],
+    "max_abs_axial_strain": 0.04643866764088628,
+    "max_compression": 0.04643866764088628,
+    "max_extension": 0.0,
+    "max_U_strain": 0.011778491356063757,
+    "max_M_strain": 0.04643866764088628,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 2.5751153197246316e-13,
+    "equilibrium_residual": 3.197442310920451e-14,
+    "minimum_geometry_constraint": 0.09455087939271242,
+    "maximum_radius_curvature": 0.4938444066540647,
+    "nonlocal_capsule_clearance_mm": 55.694550055426745,
+    "geometry_pass": true,
+    "strain_5percent_pass": true,
+    "horizontal_projection_norm": 0.7828515055592825,
+    "vertical_projection_norm": 0.9999999999999997,
+    "minimum_fixed_winch_eigenvalue": 0.0527899102010122,
+    "minimum_force_control_eigenvalue": -0.04020313421026273,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "up_low_strain_selected",
+    "direction": "up",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": -53.47759686095579
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        250.0,
+        249.99999999999983,
+        0.0,
+        249.99999999999994
+      ],
+      [
+        250.0,
+        250.0,
+        0.0,
+        250.0
+      ],
+      [
+        7.021457542247436,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 250.0,
+    "sum_tensions_n": 1507.0214575422472,
+    "yaw_deg": 2.8118914284654025e-13,
+    "vertical_projected_deg": -59.58868301127411,
+    "world_elevation_deg": -34.5886830112741,
+    "true_head_axis_angle_deg": 59.588683011274114,
+    "head_world_mm": [
+      510.7789961672208,
+      130.80502394278537,
+      1.2644530153948852e-12
+    ],
+    "max_abs_axial_strain": 0.05075851685082794,
+    "max_compression": 0.05075851685082794,
+    "max_extension": 0.0,
+    "max_U_strain": 0.011786462081401704,
+    "max_M_strain": 0.05075851685082794,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 9.154690523303748e-14,
+    "equilibrium_residual": 2.846334279382745e-14,
+    "minimum_geometry_constraint": 0.0900325433078449,
+    "maximum_radius_curvature": 0.5214391408750974,
+    "nonlocal_capsule_clearance_mm": 53.82756456117352,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.8232485122435992,
+    "vertical_projection_norm": 0.9999999999999997,
+    "minimum_fixed_winch_eigenvalue": 0.04907399538744074,
+    "minimum_force_control_eigenvalue": -0.09663662270960474,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "up_low_strain_selected",
+    "direction": "up",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": -59.58868301127411
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      4,
+      5,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        4.597009155228692,
+        0.4491296438362944,
+        2.2273563643166483,
+        25.91408394534786
+      ],
+      [
+        0.023097517617978347,
+        0.0054480129067720085,
+        16.774104255941083,
+        1.4624421377347888e-14
+      ],
+      [
+        21.33028719447265,
+        1.5483388783965484,
+        6.1049693696657155,
+        0.018431454478801564
+      ]
+    ],
+    "maximum_single_tendon_n": 25.91408394534786,
+    "sum_tensions_n": 78.99225579220905,
+    "yaw_deg": -0.9801095568801803,
+    "vertical_projected_deg": -52.50864647032832,
+    "world_elevation_deg": -37.50459737063613,
+    "true_head_axis_angle_deg": 52.51269304053799,
+    "head_world_mm": [
+      472.73934047148185,
+      -15.05565104193511,
+      -32.984704660284116
+    ],
+    "max_abs_axial_strain": 0.25321102352730773,
+    "max_compression": 0.25321102352730773,
+    "max_extension": 0.0,
+    "max_U_strain": 0.000630611891661087,
+    "max_M_strain": 0.25321102352730773,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": -0.9194217850565095,
+    "equilibrium_residual": 5.554272619612277e-08,
+    "minimum_geometry_constraint": -0.008678895132775297,
+    "maximum_radius_curvature": 1.0332631341645342,
+    "nonlocal_capsule_clearance_mm": 22.483735413819034,
+    "geometry_pass": false,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.7933044911740956,
+    "vertical_projection_norm": 0.9999079271798279,
+    "minimum_fixed_winch_eigenvalue": 0.5878835345925554,
+    "minimum_force_control_eigenvalue": 0.25235964046280857,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "up_exploratory_selected",
+    "direction": "up",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": -52.50864647032832
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      4,
+      5,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        4.597009155228692,
+        0.4491296438362944,
+        2.2273563643166483,
+        25.91408394534786
+      ],
+      [
+        0.023097517617978347,
+        0.0054480129067720085,
+        16.774104255941083,
+        1.4624421377347888e-14
+      ],
+      [
+        21.33028719447265,
+        1.5483388783965484,
+        6.1049693696657155,
+        0.018431454478801564
+      ]
+    ],
+    "maximum_single_tendon_n": 25.91408394534786,
+    "sum_tensions_n": 78.99225579220905,
+    "yaw_deg": -185.11964512632701,
+    "vertical_projected_deg": 167.2978748216968,
+    "world_elevation_deg": -12.250297211830938,
+    "true_head_axis_angle_deg": 166.36328063404184,
+    "head_world_mm": [
+      338.5981145434016,
+      254.58499028092007,
+      -44.587399050319334
+    ],
+    "max_abs_axial_strain": 0.30069787643721985,
+    "max_compression": 0.30069787643721985,
+    "max_extension": 0.0,
+    "max_U_strain": 0.0006396021883464253,
+    "max_M_strain": 0.30069787643721985,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": -10.011192125580928,
+    "equilibrium_residual": 5.273774472680515e-12,
+    "minimum_geometry_constraint": 0.01735036416939722,
+    "maximum_radius_curvature": 0.8461224951128737,
+    "nonlocal_capsule_clearance_mm": 20.26706584873429,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.9772300058149823,
+    "vertical_projection_norm": 0.9961904830424901,
+    "minimum_fixed_winch_eigenvalue": 0.4483531716030027,
+    "minimum_force_control_eigenvalue": -0.45858318282524313,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "up_exploratory_selected",
+    "direction": "up",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": 167.2978748216968
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        1.4614921027713193e-13,
+        6.108389584139451e-13,
+        249.99999999999955,
+        250.0
+      ],
+      [
+        1.2984827682025063e-14,
+        250.0,
+        250.0,
+        89.54862002007135
+      ],
+      [
+        1.872806115868907e-13,
+        0.0,
+        9.987585988142504,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 250.0,
+    "sum_tensions_n": 1099.5362060082143,
+    "yaw_deg": 137.02257444353205,
+    "vertical_projected_deg": -114.35358525968981,
+    "world_elevation_deg": -77.31203476148139,
+    "true_head_axis_angle_deg": 114.06155173920443,
+    "head_world_mm": [
+      370.89398770577304,
+      -175.34246972638923,
+      -247.0604722585154
+    ],
+    "max_abs_axial_strain": 0.043698996522334825,
+    "max_compression": 0.043698996522334825,
+    "max_extension": 0.0,
+    "max_U_strain": 0.008577445211808208,
+    "max_M_strain": 0.043698996522334825,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 2.2955390480566265,
+    "equilibrium_residual": 8.635758774744318e-12,
+    "minimum_geometry_constraint": 0.10312320888869762,
+    "maximum_radius_curvature": 0.428242251743328,
+    "nonlocal_capsule_clearance_mm": 55.87614730758254,
+    "geometry_pass": true,
+    "strain_5percent_pass": true,
+    "horizontal_projection_norm": 0.2196412921684417,
+    "vertical_projection_norm": 0.9887266650688001,
+    "minimum_fixed_winch_eigenvalue": 0.21267356141600302,
+    "minimum_force_control_eigenvalue": 0.21075386632031118,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "down_low_strain_selected",
+    "direction": "down",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 114.35358525968981
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      2,
+      4,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        1.4614921027713193e-13,
+        6.108389584139451e-13,
+        249.99999999999955,
+        250.0
+      ],
+      [
+        1.2984827682025063e-14,
+        250.0,
+        250.0,
+        89.54862002007135
+      ],
+      [
+        1.872806115868907e-13,
+        0.0,
+        9.987585988142504,
+        0.0
+      ]
+    ],
+    "maximum_single_tendon_n": 250.0,
+    "sum_tensions_n": 1099.5362060082143,
+    "yaw_deg": 121.21477756727562,
+    "vertical_projected_deg": -121.10649796048898,
+    "world_elevation_deg": -78.33605262945113,
+    "true_head_axis_angle_deg": 120.58721914034493,
+    "head_world_mm": [
+      361.2238690276377,
+      -129.28348767962544,
+      -267.6137084549634
+    ],
+    "max_abs_axial_strain": 0.04602395296597124,
+    "max_compression": 0.04602395296597124,
+    "max_extension": 0.0,
+    "max_U_strain": 0.00858355648584377,
+    "max_M_strain": 0.04602395296597124,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 3.82698226071967,
+    "equilibrium_residual": 2.7498003873915873e-12,
+    "minimum_geometry_constraint": 0.09971107317640876,
+    "maximum_radius_curvature": 0.45324890572367443,
+    "nonlocal_capsule_clearance_mm": 54.64955103237055,
+    "geometry_pass": true,
+    "strain_5percent_pass": true,
+    "horizontal_projection_norm": 0.20217109194165897,
+    "vertical_projection_norm": 0.9849388732529569,
+    "minimum_fixed_winch_eigenvalue": 0.22300650261272603,
+    "minimum_force_control_eigenvalue": 0.21951048011308805,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "down_low_strain_selected",
+    "direction": "down",
+    "strain_mode": "low_strain",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 121.10649796048898
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      4,
+      5,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        0.08157002289571962,
+        4.93100611547063,
+        0.4357792823298925,
+        2.738960940962256e-05
+      ],
+      [
+        0.3101195456917506,
+        2.6991221968397867,
+        3.5166425433273285,
+        0.7655876964156559
+      ],
+      [
+        0.8858691109207004,
+        1.1660805061401358,
+        26.666067124825314,
+        0.13711094524567985
+      ]
+    ],
+    "maximum_single_tendon_n": 26.666067124825314,
+    "sum_tensions_n": 41.594982479712,
+    "yaw_deg": 187.5629655599112,
+    "vertical_projected_deg": -177.007178472731,
+    "world_elevation_deg": -17.846266911219473,
+    "true_head_axis_angle_deg": 172.20848365764107,
+    "head_world_mm": [
+      405.56138931901046,
+      -9.988367658960605,
+      12.844154437774641
+    ],
+    "max_abs_axial_strain": 0.19686448035041876,
+    "max_compression": 0.19686448035041876,
+    "max_extension": 0.0,
+    "max_U_strain": 0.0003388279562953756,
+    "max_M_strain": 0.19686448035041876,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 2.365613590985145,
+    "equilibrium_residual": 4.3601233734591455e-13,
+    "minimum_geometry_constraint": 0.016702600817061444,
+    "maximum_radius_curvature": 0.8842913325047945,
+    "nonlocal_capsule_clearance_mm": 25.736581471217818,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.951882230344387,
+    "vertical_projection_norm": 0.992121094562795,
+    "minimum_fixed_winch_eigenvalue": 0.6327739339635043,
+    "minimum_force_control_eigenvalue": 0.45104384058908087,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "down_exploratory_selected",
+    "direction": "down",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 177.007178472731
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      4,
+      5,
+      6
+    ],
+    "anchor_sets": 3,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        0.08157002289571962,
+        4.93100611547063,
+        0.4357792823298925,
+        2.738960940962256e-05
+      ],
+      [
+        0.3101195456917506,
+        2.6991221968397867,
+        3.5166425433273285,
+        0.7655876964156559
+      ],
+      [
+        0.8858691109207004,
+        1.1660805061401358,
+        26.666067124825314,
+        0.13711094524567985
+      ]
+    ],
+    "maximum_single_tendon_n": 26.666067124825314,
+    "sum_tensions_n": 41.594982479712,
+    "yaw_deg": 187.980386063897,
+    "vertical_projected_deg": -182.9807043389157,
+    "world_elevation_deg": -21.82617582438333,
+    "true_head_axis_angle_deg": 172.02071998516615,
+    "head_world_mm": [
+      391.96819335530955,
+      61.87563674949356,
+      13.28979506048645
+    ],
+    "max_abs_axial_strain": 0.2001674821416607,
+    "max_compression": 0.2001674821416607,
+    "max_extension": 0.0,
+    "max_U_strain": 0.00034783703265854236,
+    "max_M_strain": 0.2001674821416607,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 1.9769449797972145,
+    "equilibrium_residual": 3.4877656318599293e-13,
+    "minimum_geometry_constraint": 0.008406901054171231,
+    "maximum_radius_curvature": 0.9326566010469026,
+    "nonlocal_capsule_clearance_mm": 23.487471435368718,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.928316068992006,
+    "vertical_projection_norm": 0.9916599467488901,
+    "minimum_fixed_winch_eigenvalue": 0.6181124730382992,
+    "minimum_force_control_eigenvalue": 0.4369469560453562,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "down_exploratory_selected",
+    "direction": "down",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": 182.9807043389157
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      6
+    ],
+    "anchor_sets": 1,
+    "pitch_deg": 15,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        24.0795101058605,
+        0.0162125703865353,
+        20.172358418148008,
+        0.016212591413637713
+      ]
+    ],
+    "maximum_single_tendon_n": 24.0795101058605,
+    "sum_tensions_n": 44.284293685808684,
+    "yaw_deg": 179.999999950971,
+    "vertical_projected_deg": 158.31823206791984,
+    "world_elevation_deg": 6.681767932080157,
+    "true_head_axis_angle_deg": 158.3182320679199,
+    "head_world_mm": [
+      378.9389074734745,
+      193.9416770133383,
+      3.0797410712943213e-07
+    ],
+    "max_abs_axial_strain": 0.2902451360872689,
+    "max_compression": 0.2902451360872689,
+    "max_extension": 0.0,
+    "max_U_strain": 0.00035959487725168614,
+    "max_M_strain": 0.2902451360872689,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 1.4630832593709476e-07,
+    "equilibrium_residual": 4.3520742565306136e-14,
+    "minimum_geometry_constraint": 0.005507078847492727,
+    "maximum_radius_curvature": 0.9407820335735494,
+    "nonlocal_capsule_clearance_mm": 17.259137890491445,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.9932077250052349,
+    "vertical_projection_norm": 1.0000000000000002,
+    "minimum_fixed_winch_eigenvalue": 0.12760631182857715,
+    "minimum_force_control_eigenvalue": -0.43547977748303845,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_level_exploratory_selected",
+    "direction": "right_level",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": false,
+    "directional_angle_deg": 179.999999950971
+  },
+  {
+    "configuration": "U4-M2",
+    "n_uni": 4,
+    "n_medium": 2,
+    "anchors": [
+      6
+    ],
+    "anchor_sets": 1,
+    "pitch_deg": 25,
+    "cells_per_module": 8,
+    "tension_order": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "tensions_n": [
+      [
+        24.0795101058605,
+        0.0162125703865353,
+        20.172358418148008,
+        0.016212591413637713
+      ]
+    ],
+    "maximum_single_tendon_n": 24.0795101058605,
+    "sum_tensions_n": 44.284293685808684,
+    "yaw_deg": 179.9999999377444,
+    "vertical_projected_deg": 131.72207709420798,
+    "world_elevation_deg": 23.27792290579204,
+    "true_head_axis_angle_deg": 131.72207709420798,
+    "head_world_mm": [
+      367.64364875969426,
+      272.828306667238,
+      2.769226260677284e-07
+    ],
+    "max_abs_axial_strain": 0.2912485324509881,
+    "max_compression": 0.2912485324509881,
+    "max_extension": 0.0,
+    "max_U_strain": 0.0003684487660672707,
+    "max_M_strain": 0.2912485324509881,
+    "maximum_strain_module": 5,
+    "total_material_twist_deg": 1.2771795627487106e-07,
+    "equilibrium_residual": 3.3900660056929155e-13,
+    "minimum_geometry_constraint": 0.03017257808162877,
+    "maximum_radius_curvature": 0.7402083253088794,
+    "nonlocal_capsule_clearance_mm": 21.34540696345063,
+    "geometry_pass": true,
+    "strain_5percent_pass": false,
+    "horizontal_projection_norm": 0.9185987239537854,
+    "vertical_projection_norm": 0.9999999999999999,
+    "minimum_fixed_winch_eigenvalue": 0.13726718848565295,
+    "minimum_force_control_eigenvalue": -0.5871238298405181,
+    "stable_fixed_winch": true,
+    "scope": "Same 20deg-selected tensions re-equilibrated at a different base pitch; NOT a reoptimized maximum",
+    "state_id": "right_level_exploratory_selected",
+    "direction": "right_level",
+    "strain_mode": "exploratory",
+    "converged": true,
+    "qualifies": true,
+    "directional_angle_deg": 179.9999999377444
+  }
+]

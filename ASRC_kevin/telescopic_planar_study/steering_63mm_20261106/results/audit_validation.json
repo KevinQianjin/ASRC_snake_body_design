@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "gradient_and_symmetry_checks": [
+    {
+      "configuration": "U4-M2",
+      "large_rotation_gradient_error": 1.4488515165389515e-08,
+      "mirror_energy_error": 0.0,
+      "mirror_gradient_error": 2.220446049250313e-16,
+      "axial_analytic_residual": 1.4456028966473391e-18
+    },
+    {
+      "configuration": "U6-M3",
+      "large_rotation_gradient_error": 2.8043636746133416e-08,
+      "mirror_energy_error": 0.0,
+      "mirror_gradient_error": 9.992007221626409e-16,
+      "axial_analytic_residual": 1.4456028966473391e-18
+    },
+    {
+      "configuration": "U8-M4",
+      "large_rotation_gradient_error": 1.5614406656538904e-08,
+      "mirror_energy_error": 0.0,
+      "mirror_gradient_error": 6.661338147750939e-16,
+      "axial_analytic_residual": 1.4456028966473391e-18
+    }
+  ],
+  "torsion_subdivision_checks": [
+    {
+      "sub": 2,
+      "module": 1,
+      "energy_error": 1.3877787807814457e-17
+    },
+    {
+      "sub": 2,
+      "module": 6,
+      "energy_error": 1.734723475976807e-18
+    },
+    {
+      "sub": 4,
+      "module": 1,
+      "energy_error": 1.3877787807814457e-17
+    },
+    {
+      "sub": 4,
+      "module": 6,
+      "energy_error": 1.734723475976807e-18
+    },
+    {
+      "sub": 8,
+      "module": 1,
+      "energy_error": 1.3877787807814457e-17
+    },
+    {
+      "sub": 8,
+      "module": 6,
+      "energy_error": 3.469446951953614e-18
+    }
+  ],
+  "saved_8cell_records_checked": 30,
+  "maximum_saved_equilibrium_residual": 3.135625092909322e-11,
+  "source_database_unchanged": true,
+  "database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374",
+  "scope": "Saved 8-cell states are audited; separate 16-cell boundary warnings remain in the report"
+}
