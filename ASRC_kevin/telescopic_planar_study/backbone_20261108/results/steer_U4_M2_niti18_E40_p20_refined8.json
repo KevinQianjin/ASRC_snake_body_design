@@ -1,0 +1,271 @@
+[
+ {
+  "configuration": "U4-M2",
+  "n_uni": 4,
+  "n_medium": 2,
+  "anchors": [
+   6
+  ],
+  "anchor_sets": 1,
+  "pitch_deg": 20.0,
+  "cells_per_module": 8,
+  "tension_order": [
+   "up",
+   "right",
+   "down",
+   "left"
+  ],
+  "tensions_n": [
+   [
+    8.583847814575192,
+    22.15694434055296,
+    15.25342880434572,
+    0.8945782401493846
+   ]
+  ],
+  "maximum_single_tendon_n": 22.15694434055296,
+  "sum_tensions_n": 46.888799199623264,
+  "yaw_deg": 180.00000000000222,
+  "vertical_projected_deg": -163.66602236996144,
+  "world_elevation_deg": -36.33397763003856,
+  "true_head_axis_angle_deg": 163.66602236996144,
+  "head_world_mm": [
+   413.0343481003778,
+   14.538843720393675,
+   108.32976277333121
+  ],
+  "max_abs_axial_strain": 0.0004377071743158277,
+  "max_compression": 0.0004377071743158277,
+  "max_extension": 0.0,
+  "max_U_strain": 0.00038430713456599964,
+  "max_M_strain": 0.0004377071743158277,
+  "maximum_strain_module": 5,
+  "total_material_twist_deg": 32.00152233270147,
+  "equilibrium_residual": 6.45039577307216e-14,
+  "minimum_geometry_constraint": 0.07710785788559853,
+  "maximum_radius_curvature": 0.6546856000220105,
+  "nonlocal_capsule_clearance_mm": 46.81899933892093,
+  "geometry_pass": true,
+  "strain_5percent_pass": true,
+  "horizontal_projection_norm": 0.8055770640039768,
+  "vertical_projection_norm": 1.0000000000000002,
+  "minimum_fixed_winch_eigenvalue": 0.39536682031319187,
+  "minimum_force_control_eigenvalue": 0.3554491993325847,
+  "stable_fixed_winch": true,
+  "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating",
+  "variant": "niti18_E40",
+  "architecture": "single",
+  "direction": "right",
+  "refine_4": "fine_reoptimization",
+  "refine_8": "fine_reoptimization",
+  "coarse_angle_deg": 179.99999999999915,
+  "directional_angle_deg": 180.00000000000222
+ },
+ {
+  "configuration": "U4-M2",
+  "n_uni": 4,
+  "n_medium": 2,
+  "anchors": [
+   6
+  ],
+  "anchor_sets": 1,
+  "pitch_deg": 20.0,
+  "cells_per_module": 8,
+  "tension_order": [
+   "up",
+   "right",
+   "down",
+   "left"
+  ],
+  "tensions_n": [
+   [
+    25.656155839607962,
+    0.1337029688009243,
+    1.520419824412064,
+    0.13370296880103816
+   ]
+  ],
+  "maximum_single_tendon_n": 25.656155839607962,
+  "sum_tensions_n": 27.44398160162199,
+  "yaw_deg": 179.9999999999998,
+  "vertical_projected_deg": 180.0000000000023,
+  "world_elevation_deg": -20.0000000000023,
+  "true_head_axis_angle_deg": 179.99999829245272,
+  "head_world_mm": [
+   330.4176071295693,
+   240.57649211457726,
+   2.8813550122896438e-12
+  ],
+  "max_abs_axial_strain": 0.0003157753423107395,
+  "max_compression": 0.0003157753423107395,
+  "max_extension": 0.0,
+  "max_U_strain": 0.0002327459681136646,
+  "max_M_strain": 0.0003157753423107395,
+  "maximum_strain_module": 5,
+  "total_material_twist_deg": 1.251180124348912e-12,
+  "equilibrium_residual": 7.105427357601002e-15,
+  "minimum_geometry_constraint": 0.07393599292226818,
+  "maximum_radius_curvature": 0.6712770614333806,
+  "nonlocal_capsule_clearance_mm": 40.03001094080675,
+  "geometry_pass": true,
+  "strain_5percent_pass": true,
+  "horizontal_projection_norm": 0.9396926207858943,
+  "vertical_projection_norm": 0.9999999999999997,
+  "minimum_fixed_winch_eigenvalue": 0.19253384072465485,
+  "minimum_force_control_eigenvalue": -0.19315430421285185,
+  "stable_fixed_winch": true,
+  "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating",
+  "variant": "niti18_E40",
+  "architecture": "single",
+  "direction": "up",
+  "refine_4": "fine_reoptimization",
+  "refine_8": "fine_reoptimization",
+  "coarse_angle_deg": 179.99999999999915,
+  "directional_angle_deg": 180.0000000000023
+ },
+ {
+  "configuration": "U4-M2",
+  "n_uni": 4,
+  "n_medium": 2,
+  "anchors": [
+   4,
+   5,
+   6
+  ],
+  "anchor_sets": 3,
+  "pitch_deg": 20.0,
+  "cells_per_module": 8,
+  "tension_order": [
+   "up",
+   "right",
+   "down",
+   "left"
+  ],
+  "tensions_n": [
+   [
+    0.0002594457498992521,
+    0.006382707630504178,
+    0.3019233698040569,
+    0.0063827076310065305
+   ],
+   [
+    0.5712049795871126,
+    1.8372483321763882,
+    9.706759273096345,
+    1.8372483321754067
+   ],
+   [
+    2.3997228590964017,
+    2.90876743762567,
+    32.21457951980905,
+    2.9087674376243107
+   ]
+  ],
+  "maximum_single_tendon_n": 32.21457951980905,
+  "sum_tensions_n": 54.69924640200615,
+  "yaw_deg": 180.00000000000227,
+  "vertical_projected_deg": -179.99999999999937,
+  "world_elevation_deg": -20.00000000000061,
+  "true_head_axis_angle_deg": 180.0,
+  "head_world_mm": [
+   396.9423610233133,
+   7.369450977045065,
+   5.508987144149188e-12
+  ],
+  "max_abs_axial_strain": 0.000498381500241392,
+  "max_compression": 0.000498381500241392,
+  "max_extension": 0.0,
+  "max_U_strain": 0.0004457637772304934,
+  "max_M_strain": 0.000498381500241392,
+  "maximum_strain_module": 5,
+  "total_material_twist_deg": 1.3949980161618636e-12,
+  "equilibrium_residual": 4.884981308350688e-15,
+  "minimum_geometry_constraint": 0.041395969158005086,
+  "maximum_radius_curvature": 0.8215055487116394,
+  "nonlocal_capsule_clearance_mm": 36.50832301732659,
+  "geometry_pass": true,
+  "strain_5percent_pass": true,
+  "horizontal_projection_norm": 0.9396926207859052,
+  "vertical_projection_norm": 1.0000000000000004,
+  "minimum_fixed_winch_eigenvalue": 0.563067679905948,
+  "minimum_force_control_eigenvalue": 0.36692593810223884,
+  "stable_fixed_winch": true,
+  "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating",
+  "variant": "niti18_E40",
+  "architecture": "three_M",
+  "direction": "down",
+  "refine_4": "fine_reoptimization",
+  "refine_8": "fine_reoptimization",
+  "coarse_angle_deg": 180.0000000000013,
+  "directional_angle_deg": 179.99999999999937
+ },
+ {
+  "configuration": "U4-M2",
+  "n_uni": 4,
+  "n_medium": 2,
+  "anchors": [
+   4,
+   6
+  ],
+  "anchor_sets": 2,
+  "pitch_deg": 20.0,
+  "cells_per_module": 8,
+  "tension_order": [
+   "up",
+   "right",
+   "down",
+   "left"
+  ],
+  "tensions_n": [
+   [
+    4.30592997005866e-08,
+    80.29530227804017,
+    98.25998430546824,
+    76.55478901769104
+   ],
+   [
+    38.62948435284461,
+    6.517349274971468,
+    31.628671214949378,
+    4.167677048894127
+   ]
+  ],
+  "maximum_single_tendon_n": 98.25998430546824,
+  "sum_tensions_n": 336.0532575359183,
+  "yaw_deg": 180.0,
+  "vertical_projected_deg": -215.00000005868628,
+  "world_elevation_deg": 15.000000058686284,
+  "true_head_axis_angle_deg": 144.9999999413137,
+  "head_world_mm": [
+   363.5953098815785,
+   63.919421410509116,
+   112.31387981403716
+  ],
+  "max_abs_axial_strain": 0.002640914073202735,
+  "max_compression": 0.002640914073202735,
+  "max_extension": 0.0,
+  "max_U_strain": 0.002640914073202735,
+  "max_M_strain": 0.0007680370230241702,
+  "maximum_strain_module": 1,
+  "total_material_twist_deg": 41.04631204125668,
+  "equilibrium_residual": 5.024869409453459e-13,
+  "minimum_geometry_constraint": 5.241459488658506e-10,
+  "maximum_radius_curvature": 0.9799999981544921,
+  "nonlocal_capsule_clearance_mm": 33.786961682118914,
+  "geometry_pass": true,
+  "strain_5percent_pass": true,
+  "horizontal_projection_norm": 0.9659258260239676,
+  "vertical_projection_norm": 0.9999999999999996,
+  "minimum_fixed_winch_eigenvalue": 0.12488905131953285,
+  "minimum_force_control_eigenvalue": -0.18402737960610555,
+  "stable_fixed_winch": true,
+  "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating",
+  "variant": "niti18_E40",
+  "architecture": "two",
+  "direction": "right_level",
+  "refine_4": "fine_reoptimization",
+  "refine_8": "fine_reoptimization",
+  "coarse_angle_deg": 179.99999999999903,
+  "directional_angle_deg": 180.0
+ }
+]

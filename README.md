@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 6 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 8 November 2026
 
 ## Reports
 
@@ -8,6 +8,17 @@
 - [Previous report — 5 November 2026](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/main/Report_2026_11_05.pdf): earlier design and analysis.
 
 ## Latest studies and key results
+
+### NEW 8 Nov: M module backbone (simulation, pending tests)
+
+- [M stiffness requirement sweep](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108): for U4+M2 at 20°, raising M axial stiffness alone leaves a 7° tangent-error floor. The first passing combination is EA ×5 (about 830 N) with EI ×1.25.
+- [1.8 mm NiTi backbone study](ASRC_kevin/telescopic_planar_study/backbone_20261108) and [test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md):
+  - With the rod, U4+M2 passes all straightness checks at 15°, 20° and 25° (about 1–2 mm offset, about 0.1% strain).
+  - At 20°, it reaches the 180° yaw search cap with the head held within 20 ± 5° elevation, confirmed at 8 cells per module.
+  - U6+M3 and U8+M4 still fail with three or fewer anchor sets.
+  - These are calculated rod properties; the module tests come next.
+
+![Backbone results](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/backbone_results.png)
 
 ### Active straightening and tank entry
 
