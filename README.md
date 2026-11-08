@@ -2,64 +2,81 @@
 
 [GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 8 November 2026
 
+Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
+
 ## Reports
 
-- [Latest report — 6 November 2026](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/main/Report_2026_11_06.pdf): design concept, simulation findings, unresolved issues and development worklist.
-- [Previous report — 5 November 2026](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/main/Report_2026_11_05.pdf): earlier design and analysis.
+- [**Latest report — 8 November 2026**](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, test plan and updated next decisions. Built by [`build_report_2026_11_08.py`](ASRC_kevin/telescopic_planar_study/reports/build_report_2026_11_08.py).
+- [Report — 6 November 2026](Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
+- [Report — 5 November 2026](Report_2026_11_05.pdf): earlier design and analysis.
 
-## Latest studies and key results
+## Current status (8 November 2026)
 
-### NEW 8 Nov: M module backbone (simulation, pending tests)
+| Item | 6 November baseline | With 1.8 mm NiTi backbone in M (simulation) |
+|---|---|---|
+| U4+M2 straightening at 20°, at or below 5% strain | 94.7 mm offset, 61.3°: fails | 1.7 mm, 4.0°, 0.10% strain: **passes** |
+| Same at 15° and 25° | Fails | **Passes** |
+| Yaw with head held at 20 ± 5° elevation | No solution found | **180°** (search cap), 46–98 N peak tendon |
+| U6+M3, U8+M4 straightening | Fail | Still fail with ≤ 3 anchor sets |
+| Evidence | Database module properties | Rod properties **calculated only**; module tests next |
 
-- [M stiffness requirement sweep](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108): for U4+M2 at 20°, raising M axial stiffness alone leaves a 7° tangent-error floor. The first passing combination is EA ×5 (about 830 N) with EI ×1.25.
-- [1.8 mm NiTi backbone study](ASRC_kevin/telescopic_planar_study/backbone_20261108) and [test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md):
-  - With the rod, U4+M2 passes all straightness checks at 15°, 20° and 25° (about 1–2 mm offset, about 0.1% strain).
-  - At 20°, it reaches the 180° yaw search cap with the head held within 20 ± 5° elevation, confirmed at 8 cells per module.
-  - U6+M3 and U8+M4 still fail with three or fewer anchor sets.
-  - These are calculated rod properties; the module tests come next.
+**Decision:** develop U4+M2 with a central 1.8 mm NiTi backbone in each M module. Build and test the backbone M module before further simulation refinement.
+
+## Latest studies (8 November 2026)
+
+### M module stiffness requirement
+
+[Study README and files](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108)
+
+This study scales only M axial stiffness (EA, ×1–×1000) and bending stiffness (EI, ×1–×5) for U4+M2 at 20°.
+
+- Raising EA alone straightens the front, but leaves a **7.1° tangent-error floor**. Between anchor disks, the head weight bends each M module, and that bending is set by M EI.
+- The first combination that passes all checks is **EA ×5 (about 830 N) with EI ×1.25 (about 0.055 N·m²)**, anchors [4,5,6]. This is confirmed at 16 cells per module.
+
+![M stiffness requirement](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108/results/m_stiffness_requirement.png)
+
+### NiTi backbone: straightening, steering and test plan
+
+[Study README and files](ASRC_kevin/telescopic_planar_study/backbone_20261108) · [Build and test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)
+
+A central Ø1.8 mm NiTi rod is added to each M module, including its mass. It is modelled at E = 40 and 75 GPa, giving M EA of 102–191 kN and EI of 0.065–0.083 N·m².
+
+- **U4+M2 passes every straightness check at 15°, 20° and 25°**, with about 1–2 mm offset and about 0.1% strain.
+- **U6+M3 and U8+M4 still fail** with ≤ 3 anchor sets. This includes an exhaustive search of every three-set layout.
+- **Spatial steering (8 cells per module):** at 20°, yaw reaches the 180° search cap with world head elevation held within 20 ± 5°. Peak tendon force is 98 N at E = 40 GPa and 46 N at E = 75 GPa. At 15°, 165° is confirmed.
+- The tendon forces are one allocation found by the optimizer, not minimum-force solutions.
+- **Test plan** covers: rod material, axial and bending stiffness, rod buckling at a 24 mm guide spacing, tendon-driven bending, fatigue, and an integrated U4+M2 check.
 
 ![Backbone results](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/backbone_results.png)
 
-### Active straightening and tank entry
+*Left: U4+M2 actively straightened at 20°, with and without the rod. Right: steering endpoints at 20°; filled markers hold head elevation within 20 ± 5°.*
 
-[Study README and files](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106)
+The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical diagnostics or search bounds, not validated hardware ratings.
 
-Compares U4+M2, U6+M3 and U8+M4 using 63 mm modules and a 24 mm tendon guide radius. The representative U4+M2 straightening solution reaches 4.21 mm axis deviation and 4.75 degrees tangent error, but requires 17.26% maximum axial strain. Near straight geometry has not yet been achieved together with the 5% strain diagnostic and stability screens.
+## Next steps
 
-![Active front shapes](https://raw.githubusercontent.com/KevinQianjin/ASRC_snake_body_design/main/ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106/results/active_front_shapes.png)
+1. Build and test the backbone M module ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)), then re-run the backbone studies with measured EA and EI.
+2. Search for minimum-force tendon allocations at held elevation, and check continuous paths between postures.
+3. Re-run the tank entry screen with the new low-strain straight shape. Then design entry, storage and the sensor head envelope.
+4. Rear mechanism selection, followed by an integrated 3D tank validation.
 
-*Loaded front shapes and the tradeoff between straightening and axial compression.*
+## Previous baseline studies (6 November 2026, current M module)
 
-![Front only entry screening](https://raw.githubusercontent.com/KevinQianjin/ASRC_snake_body_design/main/ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106/results/front_only_entry_screen.png)
+- [Active straightening and tank entry](ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106): U4+M2, U6+M3 and U8+M4 with database properties. Near-straight shapes need 17–28% axial strain. The front-only tank entry screen passes only for high-strain shapes.
+- [Spatial steering and tendon forces](ASRC_kevin/telescopic_planar_study/steering_63mm_20261106): U4+M2 reaches about 179° yaw at low strain, but with head elevation at −65.7°. No held-elevation (20 ± 5°) solution was found.
 
-*Entry screening of actively tensioned front shapes. Passing paths remain high strain and do not establish complete 3D deployment.*
-
-### Spatial steering and tendon forces
-
-[Study README and files](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/telescopic_planar_study/steering_63mm_20261106)
-
-Reports horizontal and vertical steering, individual tendon tensions and mesh checks. U4+M2 reaches approximately 179.42 degrees yaw in a low strain candidate, but its world head elevation is −65.67 degrees. No tested configuration produced a low strain candidate holding world elevation at 20 ± 5 degrees.
-
-![Steering angles and tendon forces](https://raw.githubusercontent.com/KevinQianjin/ASRC_snake_body_design/main/ASRC_kevin/telescopic_planar_study/steering_63mm_20261106/results/steering_angle_and_pull.png)
-
-*Selected steering endpoints and corresponding peak individual tendon forces.*
-
-![Heading and elevation](https://raw.githubusercontent.com/KevinQianjin/ASRC_snake_body_design/main/ASRC_kevin/telescopic_planar_study/steering_63mm_20261106/results/heading_and_elevation.png)
-
-*Yaw must be interpreted together with head elevation; a large yaw value does not establish useful horizontal inspection coverage.*
-
-The 5% strain threshold, 250 N tendon cap and 180 degree angle cap are numerical diagnostics or search bounds, not validated hardware ratings.
+These studies are the controls for the 8 November work. Their no-rod results are reproduced exactly by the new scripts.
 
 ## Geometry and input data
 
-- [Telescopic rear and tank geometry study](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/telescopic_planar_study): tank sections, rear beam calculations and deployment screening. Its top-level README includes earlier geometry assumptions.
-- [Module stiffness database](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/main/ASRC_kevin/module_stiffness.sqlite3): module mass, EA, EI and torsional stiffness. Use each study's saved input snapshot when reproducing its results.
+- [Telescopic rear and tank geometry study](ASRC_kevin/telescopic_planar_study): tank sections, rear beam calculations and deployment screening. Its top-level README includes earlier geometry assumptions.
+- [Module stiffness database](ASRC_kevin/module_stiffness.sqlite3): module mass, EA, EI and torsional stiffness. Use each study's saved input snapshot when reproducing its results.
 
 ## Earlier studies
 
-- [H8U12 rear and 500 g head](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/h8u12_front5to8_payload500g): comparison of 5–8 front modules.
-- [Four tendon inverse study](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/four_rope_inverse_5_to_11): methods, frozen inputs and results.
-- [Front module count sweep](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/ASRC_kevin/front_sweep_5_to_11): comparison of 5–11 front modules.
-- [Reach and extension screening](https://github.com/KevinQianjin/ASRC_snake_body_design/tree/main/reach_extension_results): earlier passive reach study with different dimensional assumptions.
+- [H8U12 rear and 500 g head](ASRC_kevin/h8u12_front5to8_payload500g): comparison of 5–8 front modules.
+- [Four tendon inverse study](ASRC_kevin/four_rope_inverse_5_to_11): methods, frozen inputs and results.
+- [Front module count sweep](ASRC_kevin/front_sweep_5_to_11): comparison of 5–11 front modules.
+- [Reach and extension screening](reach_extension_results): earlier passive reach study with different dimensional assumptions.
 
-Start with the two studies dated 20261106. Earlier results use different geometry or material assumptions and should not be combined directly with the latest baseline.
+Start with the 8 November report and the two studies dated 20261108. Earlier results use different geometry or material assumptions and should not be combined directly with the latest baseline.
