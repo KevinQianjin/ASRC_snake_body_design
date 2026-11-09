@@ -154,6 +154,41 @@ Runs with the elevation anywhere in the ±5° band (15° steps) also pass at eve
 - The minimum-peak objective is degenerate: many allocations share the same peak. Without smoothing, the optimiser re-allocates freely between steps. Use the smooth allocation as the control reference.
 - These are local optima, not proven global minima. The 1 N pretension and the 250 N bound are numerical choices, not hardware ratings.
 
+## 6. Full 3D tank clearance (`tank3d_screen.py`, 2026-11-09)
+
+**Method.**
+
+- All 362 solids of the named tank subtree in `../inputs/tank-v2.step` (external frame excluded) are triangulated: 461,524 triangles at 0.5 mm deflection, cached in `_cache/`, not committed.
+- Clearance is the exact distance from the front centreline to that surface, minus the 31.5 mm envelope radius. The minimum is found by a 20 mm pass refined at 2 mm near the closest region; this matches brute-force sampling exactly.
+- The insertion plane is width 648 mm, the centre of the 2026-11-06 section band. The insertion point and axis are those of the 2D entry screen.
+- Control: points on the boundaries of the five saved 2D sections lie within 0.23 mm of the 3D mesh.
+
+**Entry path, full 3D, straight shape with 1 N pretension.** Minimum clearance up to the first fully-inside clamp position:
+
+| Pitch | 2D sections (5 planes) | Full 3D |
+|---:|---:|---:|
+| 15° | 44.6 mm | 46.8 mm |
+| 20° | 64.2 mm | 64.6 mm |
+| 25° | 17.2 mm | 19.3 mm |
+
+The full-width 3D result confirms the 2D screen. The 2D values were slightly conservative because they measured in-plane distance to planes up to 20 mm away sideways. **This closes the "5 planes do not cover the full 63 mm width" limitation of the 2026-11-06 entry screen.**
+
+**Held-elevation yaw sweep in the tank.** The minimum-force states of section 5 were placed with the clamp held at depth s, yawing both right and left; the tank is not symmetric about the insertion plane.
+
+| 20°, anchors [4,5,6], head held at 20° | s = 0 mm | s = 30 mm | s = 60 mm | s = 90 mm |
+|---|---|---|---|---|
+| E = 40 GPa, right (0–175°) | all clear, min 22.4 mm | all clear, min 12.6 mm | 33/36, min 2.8 mm | 26/36: clear to 130° |
+| E = 40 GPa, left (0–175°) | all clear, min 30.9 mm | all clear, min 20.9 mm | all clear, min 11.0 mm | 33/36: clear to 160° |
+| E = 75 GPa, right (0–180°) | all clear, min 23.5 mm | all clear, min 13.6 mm | 35/37, min 3.7 mm | 25/37 |
+| E = 75 GPa, left (0–180°) | all clear, min 30.1 mm | all clear, min 20.1 mm | all clear, min 10.2 mm | 34/37 |
+
+![3D tank clearance](results/tank3d_sweep.png)
+
+- **At 20° with the clamp at s = 0–30 mm, the whole held-elevation sweep (0–175°/180°, both sides) clears the full 3D tank by at least 12.6 mm.** Clearance up to about 85° yaw stays at about 65 mm. It drops only for the up-and-over posture beyond about 100°, and the limit is always the **tank roof**, near height 365–430 mm.
+- Pushing deeper (s ≥ 60 mm) raises the base and brings the curled M section into the roof. Recommended steering depth: **s ≈ 0–30 mm**, with the interface at or just past the opening.
+- **25° fails** at every depth tested (s = 0–300 mm; at most 15 of 37 states clear). The front sits too close to the roof. **20° is the recommended installation angle.**
+- Not included: the actual sensor head shape (a 63 mm envelope is assumed), cables and ropes outside the front, tolerances, dynamics, and contact with any sleeve. The steering states are free-space minimum-force equilibria placed in the tank, not tank-aware optimised postures.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
@@ -195,6 +230,9 @@ python pretension_recheck.py
 python min_force_sweep.py --exact --step 5 --smooth 1 --variant niti18_E40 --pitch 20 --anchors 4 5 6   # ~10 min; see summarize_minforce.py for all runs
 python summarize_minforce.py
 python plot_minforce.py
+python tank3d_screen.py entry          # needs cadquery-ocp + vtk + trimesh + rtree; builds _cache/ mesh
+python tank3d_screen.py sweep --run 0  # runs 0-2; add --depths 0 30 60 for shallower clamp positions
+python plot_tank3d.py
 ```
 
 ## 中文摘要
