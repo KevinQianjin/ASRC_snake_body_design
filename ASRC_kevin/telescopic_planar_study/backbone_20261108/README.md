@@ -70,11 +70,168 @@ Candidates start at 2 cells per module and are refined to 4 and then 8. A candid
 - "Up 180° at elevation = −pitch" means the head has turned over the top and points back. Whether the intermediate postures form a continuous controllable path is not established.
 - Full tension sets for every endpoint are in `results/steering_summary_8cell.json`. Each row is one anchor set, in the order [up, right, down, left], in N.
 
+## 3. Tank entry screen with the straight low-strain shape (`entry_screen.py`, 2026-11-09)
+
+This re-runs the 2026-11-06 front-only entry screen, reusing `path_check()` from `../stiffness_63mm_20261106/postprocess.py` unchanged. The best stable shape at ≤5% strain is held at fixed tension and translated along the installation axis through the bottom opening at x = 449 mm. The run starts with the whole front and head outside the tank and steps 4 mm, then 2 mm. Pass requires:
+
+- the 63 mm envelope stays at least 5 mm clear of the five saved CAD width sections (628–668 mm) along the whole path;
+- the front ends fully inside the sampled cavity.
+
+Passing shapes are re-solved at 16 cells per module with the same tensions and re-checked. As a control, the 2026-11-06 U4+M2 20° shape-only result (62.06 mm) is reproduced exactly.
+
+| U4+M2 | Pitch | Strain | Min gap, 8 cell | Min gap, 16 cell | Final clamp s | Result |
+|---|---:|---:|---:|---:|---:|---|
+| Current M | 15° / 20° / 25° | 4.96% | hits the tank at s ≈ −336 mm | — | — | fail |
+| Rod, E = 40 GPa | 15° | 0.10% | 44.5 mm | 44.3 mm | 114 mm | **pass** |
+| Rod, E = 40 GPa | 20° | 0.10% | 64.3 mm | 64.0 mm | 90 mm | **pass** |
+| Rod, E = 40 GPa | 25° | 0.09% | 16.6 mm | 16.9 mm | 78 mm | **pass** (tight) |
+| Rod, E = 75 GPa | 15° / 20° / 25° | 0.09% | 44.6 / 64.6 / 16.1 mm | 44.5 / 64.4 / 16.2 mm | 114 / 90 / 78 mm | **pass** |
+
+- **This is the first low-strain shape to pass the entry screen.** On 2026-11-06, only shapes at 17% or more strain passed; every low-strain shape sagged into the tank.
+- The margins match the 2026-11-06 high-strain straight shapes (44 / 62 / 20 mm), so the rod gives the same geometry at about 1/170 of the strain.
+- **Where the limit is:**
+  - At 15° and 20°, the tightest point is the distal M section passing internal structure just after the head enters, at clamp s ≈ −355 mm.
+  - At 25°, crossing the opening is comfortable (about 50 mm), but at the final placement the head is only about 19 mm below the roof. 20° remains the preferred installation angle.
+- U6+M3 with the E = 75 GPa rod passes only at 15° (40 mm). It fails at 20° and 25°, and every U8+M4 case fails. U4+M2 remains the development length.
+
+![Entry screen](results/entry_screen.png)
+
+**Limits, unchanged from 2026-11-06:**
+
+- Planar sweep of a fixed shape with a translating clamp.
+- The five width planes do not cover the full 616.5–679.5 mm band of a 63 mm front.
+- Not included: sleeve or guide contact, rear storage, rope take-up, retraction, tension changes during feed, and real head CAD.
+
+This is a geometric screen, not a validated deployment.
+
+## 4. 3D stability needs pretension on every rope (`pretension_recheck.py`, 2026-11-09)
+
+The straightened states in sections 1 and 3 tension only the up ropes. They pass the planar stability check, but **in the 3D model they are laterally unstable** under the fixed-winch check (minimum eigenvalue −0.20 to −0.50), because the 2D model cannot see sideways buckling.
+
+A **1 N pretension on all four ropes of every anchor set** stabilises every case. The straightening was then re-optimised with this pretension:
+
+| U4+M2, anchors [4,5,6], +1 N on all ropes | 15° | 20° | 25° |
+|---|---|---|---|
+| E = 40 GPa: offset / tangent / strain | 1.86 mm / 4.2° / 0.11% | 1.82 mm / 4.0° / 0.11% | 2.00 mm / 3.5° / 0.10% |
+| E = 40 GPa: top-rope tensions, N | 95.1, 21.8, 8.7 | 92.7, 21.2, 8.5 | 89.5, 20.5, 8.2 |
+| E = 75 GPa: offset / tangent / strain | 1.28 mm / 3.3° / 0.10% | 1.25 mm / 3.1° / 0.10% | 1.21 mm / 3.0° / 0.10% |
+| All straightness checks, 3D stable | yes | yes | yes |
+| Tank entry minimum gap, E = 40 / 75 GPa | 44.6 / 44.7 mm | 64.2 / 64.6 mm | 17.2 / 16.1 mm |
+
+The conclusions of sections 1 and 3 stand **with a minimum 1 N pretension on every rope**. This should become a control rule.
+
+## 5. Minimum tendon force for held-elevation yaw (`min_force_sweep.py`, 2026-11-09)
+
+**Method.** The yaw target is stepped from 0° to 180° by continuation, each step seeded from the previous solution. At each step the optimiser minimises the **largest single rope tension** subject to:
+
+- equilibrium;
+- yaw equal to the target;
+- world head elevation within pitch ± 5°, or held exactly at pitch;
+- the 2026-11-06 geometry and projection constraints;
+- strain within ±4.75%;
+- 1–250 N per rope.
+
+Each state is solved at 4 cells per module, then re-solved at 8 cells (re-optimised if needed). It is accepted with the unchanged 2026-11-06 rules, including fixed-winch stability, and must be within 1° of the target yaw. An optional penalty on changing tensions between steps (`--smooth`) selects a smooth allocation among the many allocations with nearly the same peak.
+
+| Run (elevation held exactly at pitch, 5° steps) | Passing states (8 cell) | Peak rope tension | Largest change per step |
+|---|---|---|---|
+| E = 40 GPa, 20°, anchors [4,5,6], smooth | 36/37 (0–175°) | **7.1–14.8 N** | 5.1 N |
+| E = 40 GPa, 20°, anchors [4,5,6] | 37/37 (0–180°) | 7.0–14.8 N | 13.8 N (allocation jumps) |
+| E = 40 GPa, 20°, anchors [4,6] | 36/37 (0–175°) | 13.3–22.0 N | 20.9 N |
+| E = 75 GPa, 20°, anchors [4,5,6], smooth | 37/37 (0–180°) | 9.8–14.6 N | 4.4 N (10 N at the 180° step) |
+| E = 40 GPa, 25°, anchors [4,5,6] | 37/37 (0–180°) | 6.7–13.3 N | 12.3 N |
+
+Runs with the elevation anywhere in the ±5° band (15° steps) also pass at every step: E = 40 GPa at 15°, 20° and 25°, and E = 75 GPa at 20°; 7–21 N peak.
+
+![Minimum tendon force](results/minforce_results.png)
+
+- **Peak tendon force drops from 46–247 N (2026-11-08 allocations, which maximised angle only) to about 7–15 N** with anchors [4,5,6] and 13–22 N with [4,6]. Strain stays at or below 0.09%, and every reported state is stable.
+- **Continuity.** With elevation held exactly at 20°, consecutive 5° states move the head at most 33–56 mm, consistent with yaw swept by the front. The smooth allocation changes no rope by more than 5.1 N per step (E = 40 GPa). This is strong evidence of a continuous quasi-static path from 0° to 175°, but sampled states do not prove one.
+- **How the posture works.**
+  - Mid-range yaw (30–90°) uses sideways M bending together with **30–55° of material twist** along the front.
+  - Yaw near 180° is reached by curling M **up and back over itself** (about 140° of upward bend). The head ends up looking back toward the base at 20° elevation, about 270 mm above the interface.
+  - Hardware must confirm that twist is acceptable, and the up-and-over posture must be checked against the tank roof, which was not part of this free-space study.
+- The minimum-peak objective is degenerate: many allocations share the same peak. Without smoothing, the optimiser re-allocates freely between steps. Use the smooth allocation as the control reference.
+- These are local optima, not proven global minima. The 1 N pretension and the 250 N bound are numerical choices, not hardware ratings.
+
+## 6. Full 3D tank clearance (`tank3d_screen.py`, 2026-11-09)
+
+**Method.**
+
+- All 362 solids of the named tank subtree in `../inputs/tank-v2.step` (external frame excluded) are triangulated: 461,524 triangles at 0.5 mm deflection, cached in `_cache/`, not committed.
+- Clearance is the exact distance from the front centreline to that surface, minus the 31.5 mm envelope radius. The minimum is found by a 20 mm pass refined at 2 mm near the closest region; this matches brute-force sampling exactly.
+- The insertion plane is width 648 mm, the centre of the 2026-11-06 section band. The insertion point and axis are those of the 2D entry screen.
+- Control: points on the boundaries of the five saved 2D sections lie within 0.23 mm of the 3D mesh.
+
+**Entry path, full 3D, straight shape with 1 N pretension.** Minimum clearance up to the first fully-inside clamp position:
+
+| Pitch | 2D sections (5 planes) | Full 3D |
+|---:|---:|---:|
+| 15° | 44.6 mm | 46.8 mm |
+| 20° | 64.2 mm | 64.6 mm |
+| 25° | 17.2 mm | 19.3 mm |
+
+The full-width 3D result confirms the 2D screen. The 2D values were slightly conservative because they measured in-plane distance to planes up to 20 mm away sideways. **This closes the "5 planes do not cover the full 63 mm width" limitation of the 2026-11-06 entry screen.**
+
+**Held-elevation yaw sweep in the tank.** The minimum-force states of section 5 were placed with the clamp held at depth s, yawing both right and left; the tank is not symmetric about the insertion plane.
+
+| 20°, anchors [4,5,6], head held at 20° | s = 0 mm | s = 30 mm | s = 60 mm | s = 90 mm |
+|---|---|---|---|---|
+| E = 40 GPa, right (0–175°) | all clear, min 22.4 mm | all clear, min 12.6 mm | 33/36, min 2.8 mm | 26/36: clear to 130° |
+| E = 40 GPa, left (0–175°) | all clear, min 30.9 mm | all clear, min 20.9 mm | all clear, min 11.0 mm | 33/36: clear to 160° |
+| E = 75 GPa, right (0–180°) | all clear, min 23.5 mm | all clear, min 13.6 mm | 35/37, min 3.7 mm | 25/37 |
+| E = 75 GPa, left (0–180°) | all clear, min 30.1 mm | all clear, min 20.1 mm | all clear, min 10.2 mm | 34/37 |
+
+![3D tank clearance](results/tank3d_sweep.png)
+
+- **At 20° with the clamp at s = 0–30 mm, the whole held-elevation sweep (0–175°/180°, both sides) clears the full 3D tank by at least 12.6 mm.** Clearance up to about 85° yaw stays at about 65 mm. It drops only for the up-and-over posture beyond about 100°, and the limit is always the **tank roof**, near height 365–430 mm.
+- Pushing deeper (s ≥ 60 mm) raises the base and brings the curled M section into the roof. Recommended steering depth: **s ≈ 0–30 mm**, with the interface at or just past the opening.
+- **25° fails** at every depth tested (s = 0–300 mm; at most 15 of 37 states clear). The front sits too close to the roof. **20° is the recommended installation angle.**
+- Not included: the actual sensor head shape (a 63 mm envelope is assumed), cables and ropes outside the front, tolerances, dynamics, and contact with any sleeve. The steering states are free-space minimum-force equilibria placed in the tank, not tank-aware optimised postures.
+
+## 7. Horizontal flexibility: yaw vs side-rope pull (`side_pull.py`, 2026-11-09)
+
+**Start pose:** the straight held front at 20° (anchors [4,5,6], straightening tensions on the up ropes, 1 N on every rope).
+
+**Test:** only the right rope is pulled — at anchor 6 (tip), 5, 4, or all three together. Each step is solved from the previous state at 8 cells per module, in free space; the left side is the mirror image.
+
+**Two control modes:**
+
+- **Tension control:** rope forces are prescribed.
+- **Winch control** (realistic): rope lengths are set by the winches. Each rope is an elastic PA6 line (EA = 10.4 kN) with 1 m of free length, and the right rope is reeled in 0.25 mm per step.
+
+**Finding 1: tension control is unsafe for the straight pose.**
+
+- Under constant tensions the straight held front is laterally unstable (constant-tension eigenvalue −0.51 at E = 40 GPa, −0.28 at 75 GPa). Adding 0.5 N to the tip's right rope makes the head **snap 258 mm** to 124° yaw.
+- Under winch control the same pose is stable (fixed-winch eigenvalue +0.73 / +0.76), because the elastic ropes resist the motion.
+- **Rope length (position) control, or fast feedback, is required.** Tension-only control must not be used to hold the straight front.
+
+**Finding 2: winch-controlled side pull**
+
+| Pulled rope | Initial gain | Yaw while head stays in 20 ± 5° | Maximum yaw reached (head elevation) | Limit | Largest head jump per step |
+|---|---|---|---|---|---|
+| Anchor 6 right, E = 40 GPa | 1.27°/mm | **18.6°** (14 mm, 37 N) | 58.5° (−41°), 27 N | no further equilibrium | 1.0 mm |
+| Anchor 6 right, E = 75 GPa | 1.23°/mm | **20.2°** (16 mm, 43 N) | 76.1° (−49°), 39 N | bend radius / capsule | 1.0 mm |
+| All three right, E = 40 / 75 GPa | 1.36 / 1.35°/mm | 16.9° / 18.7° (65–71 N) | 27–30° (−17 to −25°), 142–163 N | bend radius / capsule | 4.3 mm |
+| Anchor 5 right | 0.12–0.14°/mm | 8° | 34–39° (−34 to −40°) | bend radius / capsule | 1.6 mm |
+| Anchor 4 right | ≈ 0 | 3–4° | 9–12° at 288–364 N | — | 1.3 mm |
+
+![Side pull](results/sidepull.png)
+
+- **The tip rope (anchor 6) is the effective yaw actuator.** It gives about 1.25° of yaw per mm of pull-in, roughly 2 N per degree at small angles. The motion is smooth and stable at every step.
+- Anchors 4 and 5 are ineffective for yaw. The U section barely bends sideways and the force goes into compressing the front: up to 364 N for 12° at anchor 4. Pulling all three right ropes adds force without adding yaw.
+- **Pulling only the side rope makes the head droop.**
+  - The head stays in the 20 ± 5° band only up to about **±19–20° yaw**. Beyond that the head drops below horizontal while the up-rope lengths stay locked; at the maximum yaw of 58–76° it points 41–49° downward.
+  - To yaw further at the working elevation, the up ropes must be reeled in together with the side rope. Section 5 shows that coordinated tensions reach 0–175° at only 7–15 N; up to about 60° that motion stays close to a horizontal sweep (section 5 posture table).
+
+**Not modelled:** the rope stiffness depends on the assumed 1 m free length (shorter ropes give a stiffer, more precise response). Rope friction, winch backlash, NiTi hysteresis and the tank are not included.
+
 ## Conclusions
 
-1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli.
+1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
 2. **U4+M2 remains the only viable length** with three or fewer anchor sets. Longer fronts would need more anchor sets inside M, or a stiffer M again.
-3. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
+3. **Every rope needs at least about 1 N pretension** for 3D lateral stability (section 4). With that, holding the head near 20° while sweeping yaw needs only about 7–15 N peak tendon force (section 5).
+4. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
 
 ## Limitations
 
@@ -104,6 +261,18 @@ python backbone_steering.py run --variant niti18_E40 --pitch 20
 python refine_backbone_steering.py --variant niti18_E40 --pitch 20
 # same set; for 15 deg add: --top 4 --maxiter8 150
 python plot_backbone.py
+python entry_screen.py   # tank entry screen (needs ../results/cad_sections.json)
+python plot_entry.py
+python pretension_recheck.py
+python min_force_sweep.py --exact --step 5 --smooth 1 --variant niti18_E40 --pitch 20 --anchors 4 5 6   # ~10 min; see summarize_minforce.py for all runs
+python summarize_minforce.py
+python plot_minforce.py
+python tank3d_screen.py entry          # needs cadquery-ocp + vtk + trimesh + rtree; builds _cache/ mesh
+python tank3d_screen.py sweep --run 0  # runs 0-2; add --depths 0 30 60 for shallower clamp positions
+python plot_tank3d.py
+python side_pull.py --pull a6               # winch control; --pull a5/a4/all, --variant niti18_E75, --mode tension
+python summarize_sidepull.py
+python plot_sidepull.py
 ```
 
 ## 中文摘要
