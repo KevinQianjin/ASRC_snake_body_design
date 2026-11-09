@@ -18,6 +18,7 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 | Same at 15° and 25° | Fails | **Passes** |
 | Yaw with head held at 20° elevation | No solution found | **0–180°** in 5° steps, **7–15 N** peak tendon (minimum-force, smooth allocation) |
 | 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; all results rechecked with it |
+| Horizontal flexibility: pull the tip's right rope only, winch control | — | Smooth and stable, about 1.25° yaw per mm. Head stays at 20 ± 5° up to **±19–20° yaw**; further yaw needs coordinated up-rope pull. **Tension-only control snaps (258 mm jump), so use rope-length control** |
 | Full 3D tank check (all tank solids from the STEP file) | Five 2D sections only | Entry clears by 47 / 65 / 19 mm (15/20/25°); at 20° with clamp s = 0–30 mm the **whole yaw sweep clears by ≥ 12.6 mm**; 25° fails at the roof |
 | Tank entry screen at ≤ 5% strain (front-only, saved sections) | All low-strain shapes hit the tank | U4+M2 **passes** at 15/20/25° (44 / 64 / 17 mm min gap) |
 | U6+M3, U8+M4 straightening | Fail | Still fail with ≤ 3 anchor sets |
@@ -61,6 +62,10 @@ A central Ø1.8 mm NiTi rod is added to each M module, including its mass. It is
 
 ![3D tank clearance](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/tank3d_sweep.png)
 
+![Side pull](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/sidepull.png)
+
+*Horizontal flexibility: yaw, head elevation and rope tension when only the right rope is reeled in (9 November).*
+
 *Full 3D tank clearance during the held-elevation yaw sweep at 20°, by clamp depth (9 November).*
 
 *Tank entry screen (9 November): the straight rod shape (0.10% strain) feeds through the bottom opening with at least 64 mm clearance at 20°. The current-M low-strain shape hits the tank.*
@@ -73,9 +78,10 @@ The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical di
 
 1. Build and test the backbone M module ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)), then re-run the backbone studies with measured EA and EI.
 2. ~~Minimum-force tendon allocations and path continuity~~ — done on 9 November: about 7–15 N peak, smooth 5° steps from 0° to 175°, and ≥ 1 N pretension needed for 3D stability ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#5-minimum-tendon-force-for-held-elevation-yaw-min_force_sweeppy-2026-11-09)). Open: acceptability of 30–55° twist.
-3. ~~Full 3D tank check~~ — done on 9 November: entry and the full yaw sweep clear the 3D tank at 20° with the clamp at s = 0–30 mm. Deeper clamp positions and 25° hit the roof ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#6-full-3d-tank-clearance-tank3d_screenpy-2026-11-09)).
-4. ~~Re-run the tank entry screen with the new low-strain straight shape~~ — done on 9 November: U4+M2 with the rod passes at 15–25°, and 20° has the best margin ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#3-tank-entry-screen-with-the-straight-low-strain-shape-entry_screenpy-2026-11-09)). Next: design entry, storage, sleeve contact and the sensor head envelope (full-width 3D clearance is now covered by item 3).
-5. Rear mechanism selection, followed by an integrated 3D tank validation.
+3. ~~Horizontal flexibility~~ — done on 9 November: the tip rope gives about 1.25°/mm of yaw under winch control. Pulling the side rope alone holds the working elevation only to about ±20°. Tension-only control is unstable for the straight pose ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#7-horizontal-flexibility-yaw-vs-side-rope-pull-side_pullpy-2026-11-09)). Next: a coordinated winch controller that pulls the up and side ropes together.
+4. ~~Full 3D tank check~~ — done on 9 November: entry and the full yaw sweep clear the 3D tank at 20° with the clamp at s = 0–30 mm. Deeper clamp positions and 25° hit the roof ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#6-full-3d-tank-clearance-tank3d_screenpy-2026-11-09)).
+5. ~~Re-run the tank entry screen with the new low-strain straight shape~~ — done on 9 November: U4+M2 with the rod passes at 15–25°, and 20° has the best margin ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#3-tank-entry-screen-with-the-straight-low-strain-shape-entry_screenpy-2026-11-09)). Next: design entry, storage, sleeve contact and the sensor head envelope (full-width 3D clearance is now covered by item 4).
+6. Rear mechanism selection, followed by an integrated 3D tank validation.
 
 ## Previous baseline studies (6 November 2026, current M module)
 

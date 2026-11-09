@@ -189,6 +189,43 @@ The full-width 3D result confirms the 2D screen. The 2D values were slightly con
 - **25° fails** at every depth tested (s = 0–300 mm; at most 15 of 37 states clear). The front sits too close to the roof. **20° is the recommended installation angle.**
 - Not included: the actual sensor head shape (a 63 mm envelope is assumed), cables and ropes outside the front, tolerances, dynamics, and contact with any sleeve. The steering states are free-space minimum-force equilibria placed in the tank, not tank-aware optimised postures.
 
+## 7. Horizontal flexibility: yaw vs side-rope pull (`side_pull.py`, 2026-11-09)
+
+**Start pose:** the straight held front at 20° (anchors [4,5,6], straightening tensions on the up ropes, 1 N on every rope).
+
+**Test:** only the right rope is pulled — at anchor 6 (tip), 5, 4, or all three together. Each step is solved from the previous state at 8 cells per module, in free space; the left side is the mirror image.
+
+**Two control modes:**
+
+- **Tension control:** rope forces are prescribed.
+- **Winch control** (realistic): rope lengths are set by the winches. Each rope is an elastic PA6 line (EA = 10.4 kN) with 1 m of free length, and the right rope is reeled in 0.25 mm per step.
+
+**Finding 1: tension control is unsafe for the straight pose.**
+
+- Under constant tensions the straight held front is laterally unstable (constant-tension eigenvalue −0.51 at E = 40 GPa, −0.28 at 75 GPa). Adding 0.5 N to the tip's right rope makes the head **snap 258 mm** to 124° yaw.
+- Under winch control the same pose is stable (fixed-winch eigenvalue +0.73 / +0.76), because the elastic ropes resist the motion.
+- **Rope length (position) control, or fast feedback, is required.** Tension-only control must not be used to hold the straight front.
+
+**Finding 2: winch-controlled side pull**
+
+| Pulled rope | Initial gain | Yaw while head stays in 20 ± 5° | Maximum yaw reached (head elevation) | Limit | Largest head jump per step |
+|---|---|---|---|---|---|
+| Anchor 6 right, E = 40 GPa | 1.27°/mm | **18.6°** (14 mm, 37 N) | 58.5° (−41°), 27 N | no further equilibrium | 1.0 mm |
+| Anchor 6 right, E = 75 GPa | 1.23°/mm | **20.2°** (16 mm, 43 N) | 76.1° (−49°), 39 N | bend radius / capsule | 1.0 mm |
+| All three right, E = 40 / 75 GPa | 1.36 / 1.35°/mm | 16.9° / 18.7° (65–71 N) | 27–30° (−17 to −25°), 142–163 N | bend radius / capsule | 4.3 mm |
+| Anchor 5 right | 0.12–0.14°/mm | 8° | 34–39° (−34 to −40°) | bend radius / capsule | 1.6 mm |
+| Anchor 4 right | ≈ 0 | 3–4° | 9–12° at 288–364 N | — | 1.3 mm |
+
+![Side pull](results/sidepull.png)
+
+- **The tip rope (anchor 6) is the effective yaw actuator.** It gives about 1.25° of yaw per mm of pull-in, roughly 2 N per degree at small angles. The motion is smooth and stable at every step.
+- Anchors 4 and 5 are ineffective for yaw. The U section barely bends sideways and the force goes into compressing the front: up to 364 N for 12° at anchor 4. Pulling all three right ropes adds force without adding yaw.
+- **Pulling only the side rope makes the head droop.**
+  - The head stays in the 20 ± 5° band only up to about **±19–20° yaw**. Beyond that the head drops below horizontal while the up-rope lengths stay locked; at the maximum yaw of 58–76° it points 41–49° downward.
+  - To yaw further at the working elevation, the up ropes must be reeled in together with the side rope. Section 5 shows that coordinated tensions reach 0–175° at only 7–15 N; up to about 60° that motion stays close to a horizontal sweep (section 5 posture table).
+
+**Not modelled:** the rope stiffness depends on the assumed 1 m free length (shorter ropes give a stiffer, more precise response). Rope friction, winch backlash, NiTi hysteresis and the tank are not included.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
@@ -233,6 +270,9 @@ python plot_minforce.py
 python tank3d_screen.py entry          # needs cadquery-ocp + vtk + trimesh + rtree; builds _cache/ mesh
 python tank3d_screen.py sweep --run 0  # runs 0-2; add --depths 0 30 60 for shallower clamp positions
 python plot_tank3d.py
+python side_pull.py --pull a6               # winch control; --pull a5/a4/all, --variant niti18_E75, --mode tension
+python summarize_sidepull.py
+python plot_sidepull.py
 ```
 
 ## 中文摘要
