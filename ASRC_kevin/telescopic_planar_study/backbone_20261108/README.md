@@ -70,9 +70,43 @@ Candidates start at 2 cells per module and are refined to 4 and then 8. A candid
 - "Up 180° at elevation = −pitch" means the head has turned over the top and points back. Whether the intermediate postures form a continuous controllable path is not established.
 - Full tension sets for every endpoint are in `results/steering_summary_8cell.json`. Each row is one anchor set, in the order [up, right, down, left], in N.
 
+## 3. Tank entry screen with the straight low-strain shape (`entry_screen.py`, 2026-11-09)
+
+This re-runs the 2026-11-06 front-only entry screen, reusing `path_check()` from `../stiffness_63mm_20261106/postprocess.py` unchanged. The best stable shape at ≤5% strain is held at fixed tension and translated along the installation axis through the bottom opening at x = 449 mm. The run starts with the whole front and head outside the tank and steps 4 mm, then 2 mm. Pass requires:
+
+- the 63 mm envelope stays at least 5 mm clear of the five saved CAD width sections (628–668 mm) along the whole path;
+- the front ends fully inside the sampled cavity.
+
+Passing shapes are re-solved at 16 cells per module with the same tensions and re-checked. As a control, the 2026-11-06 U4+M2 20° shape-only result (62.06 mm) is reproduced exactly.
+
+| U4+M2 | Pitch | Strain | Min gap, 8 cell | Min gap, 16 cell | Final clamp s | Result |
+|---|---:|---:|---:|---:|---:|---|
+| Current M | 15° / 20° / 25° | 4.96% | hits the tank at s ≈ −336 mm | — | — | fail |
+| Rod, E = 40 GPa | 15° | 0.10% | 44.5 mm | 44.3 mm | 114 mm | **pass** |
+| Rod, E = 40 GPa | 20° | 0.10% | 64.3 mm | 64.0 mm | 90 mm | **pass** |
+| Rod, E = 40 GPa | 25° | 0.09% | 16.6 mm | 16.9 mm | 78 mm | **pass** (tight) |
+| Rod, E = 75 GPa | 15° / 20° / 25° | 0.09% | 44.6 / 64.6 / 16.1 mm | 44.5 / 64.4 / 16.2 mm | 114 / 90 / 78 mm | **pass** |
+
+- **This is the first low-strain shape to pass the entry screen.** On 2026-11-06, only shapes at 17% or more strain passed; every low-strain shape sagged into the tank.
+- The margins match the 2026-11-06 high-strain straight shapes (44 / 62 / 20 mm), so the rod gives the same geometry at about 1/170 of the strain.
+- **Where the limit is:**
+  - At 15° and 20°, the tightest point is the distal M section passing internal structure just after the head enters, at clamp s ≈ −355 mm.
+  - At 25°, crossing the opening is comfortable (about 50 mm), but at the final placement the head is only about 19 mm below the roof. 20° remains the preferred installation angle.
+- U6+M3 with the E = 75 GPa rod passes only at 15° (40 mm). It fails at 20° and 25°, and every U8+M4 case fails. U4+M2 remains the development length.
+
+![Entry screen](results/entry_screen.png)
+
+**Limits, unchanged from 2026-11-06:**
+
+- Planar sweep of a fixed shape with a translating clamp.
+- The five width planes do not cover the full 616.5–679.5 mm band of a 63 mm front.
+- Not included: sleeve or guide contact, rear storage, rope take-up, retraction, tension changes during feed, and real head CAD.
+
+This is a geometric screen, not a validated deployment.
+
 ## Conclusions
 
-1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli.
+1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
 2. **U4+M2 remains the only viable length** with three or fewer anchor sets. Longer fronts would need more anchor sets inside M, or a stiffer M again.
 3. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
 
@@ -104,6 +138,8 @@ python backbone_steering.py run --variant niti18_E40 --pitch 20
 python refine_backbone_steering.py --variant niti18_E40 --pitch 20
 # same set; for 15 deg add: --top 4 --maxiter8 150
 python plot_backbone.py
+python entry_screen.py   # tank entry screen (needs ../results/cad_sections.json)
+python plot_entry.py
 ```
 
 ## 中文摘要
