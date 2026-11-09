@@ -197,7 +197,8 @@ def main(what, run_index, depths):
                 worst = min(rr, key=lambda q: q['clearance_mm'])
                 print(f"{run} s={s:.0f} {side:5s}: {len(ok)}/{len(rr)} states clear (>=5 mm); worst {worst['clearance_mm']:.1f} mm "
                       f"at yaw {worst['yaw_deg']:.0f}, point {np.round(worst['critical_point_mm'])}", flush=True)
-        (OUT / f'tank3d_sweep_{run}.json').write_text(json.dumps(dict(step_sha256=tank.sha, rows=rows), indent=1, default=float))
+        tag = '' if depths == [90, 200, 300] else '_s' + '_'.join(f'{d:g}' for d in depths)
+        (OUT / f'tank3d_sweep_{run}{tag}.json').write_text(json.dumps(dict(step_sha256=tank.sha, rows=rows), indent=1, default=float))
 
 
 if __name__ == '__main__':
