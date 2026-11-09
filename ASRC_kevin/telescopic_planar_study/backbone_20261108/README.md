@@ -104,11 +104,62 @@ Passing shapes are re-solved at 16 cells per module with the same tensions and r
 
 This is a geometric screen, not a validated deployment.
 
+## 4. 3D stability needs pretension on every rope (`pretension_recheck.py`, 2026-11-09)
+
+The straightened states in sections 1 and 3 tension only the up ropes. They pass the planar stability check, but **in the 3D model they are laterally unstable** under the fixed-winch check (minimum eigenvalue −0.20 to −0.50), because the 2D model cannot see sideways buckling.
+
+A **1 N pretension on all four ropes of every anchor set** stabilises every case. The straightening was then re-optimised with this pretension:
+
+| U4+M2, anchors [4,5,6], +1 N on all ropes | 15° | 20° | 25° |
+|---|---|---|---|
+| E = 40 GPa: offset / tangent / strain | 1.86 mm / 4.2° / 0.11% | 1.82 mm / 4.0° / 0.11% | 2.00 mm / 3.5° / 0.10% |
+| E = 40 GPa: top-rope tensions, N | 95.1, 21.8, 8.7 | 92.7, 21.2, 8.5 | 89.5, 20.5, 8.2 |
+| E = 75 GPa: offset / tangent / strain | 1.28 mm / 3.3° / 0.10% | 1.25 mm / 3.1° / 0.10% | 1.21 mm / 3.0° / 0.10% |
+| All straightness checks, 3D stable | yes | yes | yes |
+| Tank entry minimum gap, E = 40 / 75 GPa | 44.6 / 44.7 mm | 64.2 / 64.6 mm | 17.2 / 16.1 mm |
+
+The conclusions of sections 1 and 3 stand **with a minimum 1 N pretension on every rope**. This should become a control rule.
+
+## 5. Minimum tendon force for held-elevation yaw (`min_force_sweep.py`, 2026-11-09)
+
+**Method.** The yaw target is stepped from 0° to 180° by continuation, each step seeded from the previous solution. At each step the optimiser minimises the **largest single rope tension** subject to:
+
+- equilibrium;
+- yaw equal to the target;
+- world head elevation within pitch ± 5°, or held exactly at pitch;
+- the 2026-11-06 geometry and projection constraints;
+- strain within ±4.75%;
+- 1–250 N per rope.
+
+Each state is solved at 4 cells per module, then re-solved at 8 cells (re-optimised if needed). It is accepted with the unchanged 2026-11-06 rules, including fixed-winch stability, and must be within 1° of the target yaw. An optional penalty on changing tensions between steps (`--smooth`) selects a smooth allocation among the many allocations with nearly the same peak.
+
+| Run (elevation held exactly at pitch, 5° steps) | Passing states (8 cell) | Peak rope tension | Largest change per step |
+|---|---|---|---|
+| E = 40 GPa, 20°, anchors [4,5,6], smooth | 36/37 (0–175°) | **7.1–14.8 N** | 5.1 N |
+| E = 40 GPa, 20°, anchors [4,5,6] | 37/37 (0–180°) | 7.0–14.8 N | 13.8 N (allocation jumps) |
+| E = 40 GPa, 20°, anchors [4,6] | 36/37 (0–175°) | 13.3–22.0 N | 20.9 N |
+| E = 75 GPa, 20°, anchors [4,5,6], smooth | 37/37 (0–180°) | 9.8–14.6 N | 4.4 N (10 N at the 180° step) |
+| E = 40 GPa, 25°, anchors [4,5,6] | 37/37 (0–180°) | 6.7–13.3 N | 12.3 N |
+
+Runs with the elevation anywhere in the ±5° band (15° steps) also pass at every step: E = 40 GPa at 15°, 20° and 25°, and E = 75 GPa at 20°; 7–21 N peak.
+
+![Minimum tendon force](results/minforce_results.png)
+
+- **Peak tendon force drops from 46–247 N (2026-11-08 allocations, which maximised angle only) to about 7–15 N** with anchors [4,5,6] and 13–22 N with [4,6]. Strain stays at or below 0.09%, and every reported state is stable.
+- **Continuity.** With elevation held exactly at 20°, consecutive 5° states move the head at most 33–56 mm, consistent with yaw swept by the front. The smooth allocation changes no rope by more than 5.1 N per step (E = 40 GPa). This is strong evidence of a continuous quasi-static path from 0° to 175°, but sampled states do not prove one.
+- **How the posture works.**
+  - Mid-range yaw (30–90°) uses sideways M bending together with **30–55° of material twist** along the front.
+  - Yaw near 180° is reached by curling M **up and back over itself** (about 140° of upward bend). The head ends up looking back toward the base at 20° elevation, about 270 mm above the interface.
+  - Hardware must confirm that twist is acceptable, and the up-and-over posture must be checked against the tank roof, which was not part of this free-space study.
+- The minimum-peak objective is degenerate: many allocations share the same peak. Without smoothing, the optimiser re-allocates freely between steps. Use the smooth allocation as the control reference.
+- These are local optima, not proven global minima. The 1 N pretension and the 250 N bound are numerical choices, not hardware ratings.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
 2. **U4+M2 remains the only viable length** with three or fewer anchor sets. Longer fronts would need more anchor sets inside M, or a stiffer M again.
-3. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
+3. **Every rope needs at least about 1 N pretension** for 3D lateral stability (section 4). With that, holding the head near 20° while sweeping yaw needs only about 7–15 N peak tendon force (section 5).
+4. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
 
 ## Limitations
 
@@ -140,6 +191,10 @@ python refine_backbone_steering.py --variant niti18_E40 --pitch 20
 python plot_backbone.py
 python entry_screen.py   # tank entry screen (needs ../results/cad_sections.json)
 python plot_entry.py
+python pretension_recheck.py
+python min_force_sweep.py --exact --step 5 --smooth 1 --variant niti18_E40 --pitch 20 --anchors 4 5 6   # ~10 min; see summarize_minforce.py for all runs
+python summarize_minforce.py
+python plot_minforce.py
 ```
 
 ## 中文摘要

@@ -16,7 +16,8 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 |---|---|---|
 | U4+M2 straightening at 20°, at or below 5% strain | 94.7 mm offset, 61.3°: fails | 1.7 mm, 4.0°, 0.10% strain: **passes** |
 | Same at 15° and 25° | Fails | **Passes** |
-| Yaw with head held at 20 ± 5° elevation | No solution found | **180°** (search cap), 46–98 N peak tendon |
+| Yaw with head held at 20° elevation | No solution found | **0–180°** in 5° steps, **7–15 N** peak tendon (minimum-force, smooth allocation) |
+| 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; all results rechecked with it |
 | Tank entry screen at ≤ 5% strain (front-only, saved sections) | All low-strain shapes hit the tank | U4+M2 **passes** at 15/20/25° (44 / 64 / 17 mm min gap) |
 | U6+M3, U8+M4 straightening | Fail | Still fail with ≤ 3 anchor sets |
 | Evidence | Database module properties | Rod properties **calculated only**; module tests next |
@@ -44,13 +45,18 @@ A central Ø1.8 mm NiTi rod is added to each M module, including its mass. It is
 
 - **U4+M2 passes every straightness check at 15°, 20° and 25°**, with about 1–2 mm offset and about 0.1% strain.
 - **U6+M3 and U8+M4 still fail** with ≤ 3 anchor sets. This includes an exhaustive search of every three-set layout.
-- **Spatial steering (8 cells per module):** at 20°, yaw reaches the 180° search cap with world head elevation held within 20 ± 5°. Peak tendon force is 98 N at E = 40 GPa and 46 N at E = 75 GPa. At 15°, 165° is confirmed.
-- The tendon forces are one allocation found by the optimizer, not minimum-force solutions.
+- **Spatial steering (8 cells per module):** at 20°, yaw reaches the 180° search cap with world head elevation held within 20 ± 5°.
+- **Minimum-force follow-up (9 November):** a continuous sweep from 0° to 175° with the head held at exactly 20° needs only **about 7–15 N** peak tendon force (anchors [4,5,6]). The 8 November allocations needed 46–98 N because they maximised angle only.
+- **Every rope needs ≥ 1 N pretension.** Without it, the straightened front is laterally unstable in 3D, a mode the 2D model cannot detect. Straightening and tank entry were rechecked with the pretension and still pass.
 - **Test plan** covers: rod material, axial and bending stiffness, rod buckling at a 24 mm guide spacing, tendon-driven bending, fatigue, and an integrated U4+M2 check.
 
 ![Backbone results](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/backbone_results.png)
 
 ![Entry screen](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/entry_screen.png)
+
+![Minimum tendon force](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/minforce_results.png)
+
+*Minimum peak tendon force with the head held at the base pitch while sweeping yaw (9 November).*
 
 *Tank entry screen (9 November): the straight rod shape (0.10% strain) feeds through the bottom opening with at least 64 mm clearance at 20°. The current-M low-strain shape hits the tank.*
 
@@ -61,7 +67,7 @@ The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical di
 ## Next steps
 
 1. Build and test the backbone M module ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)), then re-run the backbone studies with measured EA and EI.
-2. Search for minimum-force tendon allocations at held elevation, and check continuous paths between postures.
+2. ~~Minimum-force tendon allocations and path continuity~~ — done on 9 November: about 7–15 N peak, smooth 5° steps from 0° to 175°, and ≥ 1 N pretension needed for 3D stability ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#5-minimum-tendon-force-for-held-elevation-yaw-min_force_sweeppy-2026-11-09)). Open: tank-roof clearance of the up-and-over posture near 180° yaw, and acceptability of 30–55° twist.
 3. ~~Re-run the tank entry screen with the new low-strain straight shape~~ — done on 9 November: U4+M2 with the rod passes at 15–25°, and 20° has the best margin ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#3-tank-entry-screen-with-the-straight-low-strain-shape-entry_screenpy-2026-11-09)). Next: design entry, storage, sleeve contact and the sensor head envelope, and extend the CAD sections to the full front width.
 4. Rear mechanism selection, followed by an integrated 3D tank validation.
 
