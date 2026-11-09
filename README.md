@@ -4,95 +4,87 @@
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
-## Reports
+## Reports and presentation
 
-- [**Latest report — 8 November 2026**](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, test plan and updated next decisions. Built by [`build_report_2026_11_08.py`](ASRC_kevin/telescopic_planar_study/reports/build_report_2026_11_08.py).
+- [**Daily report — 9 November 2026**](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull). Built by [`build_report_2026_11_09.py`](ASRC_kevin/telescopic_planar_study/reports/build_report_2026_11_09.py).
+- [**Presentation — latest results, 9 November 2026**](ASRC_Presentation_2026_11_09.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
+- [Report — 8 November 2026](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, and the module test plan.
 - [Report — 6 November 2026](Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
 - [Report — 5 November 2026](Report_2026_11_05.pdf): earlier design and analysis.
 
-## Current status (8 November 2026)
+## Current status (9 November 2026)
 
-| Item | 6 November baseline | With 1.8 mm NiTi backbone in M (simulation) |
+All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in each M module**, compared with the 6 November design. Rod properties are calculated, not yet measured.
+
+| Check | 6 November design (current M) | With 1.8 mm NiTi rod |
 |---|---|---|
-| U4+M2 straightening at 20°, at or below 5% strain | 94.7 mm offset, 61.3°: fails | 1.7 mm, 4.0°, 0.10% strain: **passes** |
-| Same at 15° and 25° | Fails | **Passes** |
-| Yaw with head held at 20° elevation | No solution found | **0–180°** in 5° steps, **7–15 N** peak tendon (minimum-force, smooth allocation) |
-| 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; all results rechecked with it |
-| Horizontal flexibility: pull the tip's right rope only, winch control | — | Smooth and stable, about 1.25° yaw per mm. Head stays at 20 ± 5° up to **±19–20° yaw**; further yaw needs coordinated up-rope pull. **Tension-only control snaps (258 mm jump), so use rope-length control** |
-| Full 3D tank check (all tank solids from the STEP file) | Five 2D sections only | Entry clears by 47 / 65 / 19 mm (15/20/25°); at 20° with clamp s = 0–30 mm the **whole yaw sweep clears by ≥ 12.6 mm**; 25° fails at the roof |
-| Tank entry screen at ≤ 5% strain (front-only, saved sections) | All low-strain shapes hit the tank | U4+M2 **passes** at 15/20/25° (44 / 64 / 17 mm min gap) |
-| U6+M3, U8+M4 straightening | Fail | Still fail with ≤ 3 anchor sets |
-| Evidence | Database module properties | Rod properties **calculated only**; module tests next |
+| Straightening at ≤ 5% strain, 15–25° | 90–99 mm offset: **fails** | 1.2–2.0 mm offset, about 0.1% strain: **passes** |
+| Tank entry, 2D sections and full 3D | Every low-strain shape hits the tank | **Passes**: 47 / 65 / 19 mm minimum clearance at 15 / 20 / 25° |
+| 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; with it, all cases are stable |
+| Yaw with the head held at 20° | No solution found | **0–175°** in smooth 5° steps at **7–15 N** peak rope force |
+| Yaw sweep inside the full 3D tank | — | At 20° with the clamp 0–30 mm past the opening: **clear by ≥ 12.6 mm**; 25° hits the roof |
+| One side rope pulled (winch control) | — | About **1.25° yaw per mm**, smooth and stable; holds 20 ± 5° elevation only to **about ±20°** |
+| Tension-only rope control | — | Straight front **snaps** (258 mm jump at +0.5 N): **use rope-length control** |
+| Longer fronts U6+M3, U8+M4 | Fail | Still fail with ≤ 3 anchor sets |
 
-**Decision:** develop U4+M2 with a central 1.8 mm NiTi backbone in each M module. Build and test the backbone M module before further simulation refinement.
+**Decisions:** develop U4+M2 with the 1.8 mm NiTi backbone. Install at **20°**, steer with the clamp **0–30 mm** past the opening, keep **≥ 1 N** on every rope, and drive the ropes by **length (winch position)**, coordinating the up and side ropes to hold the working elevation. Build and test the backbone M module next.
 
-## Latest studies (8 November 2026)
+## Latest studies
 
-### M module stiffness requirement
+### 9 November 2026: entry, stability, tendon force, 3D tank and horizontal flexibility
 
-[Study README and files](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108)
+[Study README, sections 3–7](ASRC_kevin/telescopic_planar_study/backbone_20261108)
 
-This study scales only M axial stiffness (EA, ×1–×1000) and bending stiffness (EI, ×1–×5) for U4+M2 at 20°.
+- **Tank entry:** the straight low-strain rod shape feeds through the bottom opening at 15–25°, re-checked at 16 cells per module. The current-M low-strain shape hits the tank.
 
-- Raising EA alone straightens the front, but leaves a **7.1° tangent-error floor**. Between anchor disks, the head weight bends each M module, and that bending is set by M EI.
-- The first combination that passes all checks is **EA ×5 (about 830 N) with EI ×1.25 (about 0.055 N·m²)**, anchors [4,5,6]. This is confirmed at 16 cells per module.
+  ![Entry screen](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/entry_screen.png)
+
+- **3D stability:** with only the up ropes pulled, the straight front is laterally unstable in 3D. A 1 N pretension on every rope stabilises it, and straightening and entry still pass.
+- **Minimum tendon force:** holding the head at 20° while sweeping yaw needs about 7–15 N peak (anchors [4,5,6]), against 46–98 N for the 8 November allocations. With smoothing, no rope changes by more than about 5 N per 5° step. Beyond about 90° the front curls up and back over itself, and it uses 30–55° of twist at mid yaw.
+
+  ![Minimum tendon force](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/minforce_results.png)
+
+- **Full 3D tank:** all 362 tank solids were meshed from the STEP file, which agrees with the saved 2D sections within 0.23 mm. Entry is confirmed across the full front width. At 20° with the clamp 0–30 mm past the opening, the whole yaw sweep clears the tank by at least 12.6 mm on both sides.
+
+  ![3D tank clearance](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/tank3d_sweep.png)
+
+- **Horizontal flexibility:** reeling in only the tip's right rope turns the head about 1.25° per mm. The head droops beyond about 20° of yaw unless the up ropes are reeled in together with it. Anchors 4 and 5 hardly turn the head. Tension-only control makes the straight front snap.
+
+  ![Side pull](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/sidepull.png)
+
+### 8 November 2026: M stiffness requirement and NiTi backbone
+
+- [M stiffness requirement sweep](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108):
+  - Raising M axial stiffness alone leaves a 7.1° tangent-error floor.
+  - The first passing combination is **EA ×5 (about 830 N) with EI ×1.25 (about 0.055 N·m²)**, anchors [4,5,6].
+- [NiTi backbone study](ASRC_kevin/telescopic_planar_study/backbone_20261108) and [build and test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md):
+  - The Ø1.8 mm rod gives M an EA of 102–191 kN and an EI of 0.065–0.083 N·m² (E = 40–75 GPa).
+  - With it, U4+M2 passes straightening at 15–25° and reaches 180° yaw at held elevation.
 
 ![M stiffness requirement](ASRC_kevin/telescopic_planar_study/m_axial_sweep_20261108/results/m_stiffness_requirement.png)
 
-### NiTi backbone: straightening, steering and test plan
-
-[Study README and files](ASRC_kevin/telescopic_planar_study/backbone_20261108) · [Build and test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)
-
-A central Ø1.8 mm NiTi rod is added to each M module, including its mass. It is modelled at E = 40 and 75 GPa, giving M EA of 102–191 kN and EI of 0.065–0.083 N·m².
-
-- **U4+M2 passes every straightness check at 15°, 20° and 25°**, with about 1–2 mm offset and about 0.1% strain.
-- **U6+M3 and U8+M4 still fail** with ≤ 3 anchor sets. This includes an exhaustive search of every three-set layout.
-- **Spatial steering (8 cells per module):** at 20°, yaw reaches the 180° search cap with world head elevation held within 20 ± 5°.
-- **Minimum-force follow-up (9 November):** a continuous sweep from 0° to 175° with the head held at exactly 20° needs only **about 7–15 N** peak tendon force (anchors [4,5,6]). The 8 November allocations needed 46–98 N because they maximised angle only.
-- **Every rope needs ≥ 1 N pretension.** Without it, the straightened front is laterally unstable in 3D, a mode the 2D model cannot detect. Straightening and tank entry were rechecked with the pretension and still pass.
-- **Test plan** covers: rod material, axial and bending stiffness, rod buckling at a 24 mm guide spacing, tendon-driven bending, fatigue, and an integrated U4+M2 check.
-
 ![Backbone results](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/backbone_results.png)
-
-![Entry screen](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/entry_screen.png)
-
-![Minimum tendon force](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/minforce_results.png)
-
-*Minimum peak tendon force with the head held at the base pitch while sweeping yaw (9 November).*
-
-![3D tank clearance](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/tank3d_sweep.png)
-
-![Side pull](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/sidepull.png)
-
-*Horizontal flexibility: yaw, head elevation and rope tension when only the right rope is reeled in (9 November).*
-
-*Full 3D tank clearance during the held-elevation yaw sweep at 20°, by clamp depth (9 November).*
-
-*Tank entry screen (9 November): the straight rod shape (0.10% strain) feeds through the bottom opening with at least 64 mm clearance at 20°. The current-M low-strain shape hits the tank.*
-
-*Left: U4+M2 actively straightened at 20°, with and without the rod. Right: steering endpoints at 20°; filled markers hold head elevation within 20 ± 5°.*
 
 The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical diagnostics or search bounds, not validated hardware ratings.
 
 ## Next steps
 
-1. Build and test the backbone M module ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)), then re-run the backbone studies with measured EA and EI.
-2. ~~Minimum-force tendon allocations and path continuity~~ — done on 9 November: about 7–15 N peak, smooth 5° steps from 0° to 175°, and ≥ 1 N pretension needed for 3D stability ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#5-minimum-tendon-force-for-held-elevation-yaw-min_force_sweeppy-2026-11-09)). Open: acceptability of 30–55° twist.
-3. ~~Horizontal flexibility~~ — done on 9 November: the tip rope gives about 1.25°/mm of yaw under winch control. Pulling the side rope alone holds the working elevation only to about ±20°. Tension-only control is unstable for the straight pose ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#7-horizontal-flexibility-yaw-vs-side-rope-pull-side_pullpy-2026-11-09)). Next: a coordinated winch controller that pulls the up and side ropes together.
-4. ~~Full 3D tank check~~ — done on 9 November: entry and the full yaw sweep clear the 3D tank at 20° with the clamp at s = 0–30 mm. Deeper clamp positions and 25° hit the roof ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#6-full-3d-tank-clearance-tank3d_screenpy-2026-11-09)).
-5. ~~Re-run the tank entry screen with the new low-strain straight shape~~ — done on 9 November: U4+M2 with the rod passes at 15–25°, and 20° has the best margin ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#3-tank-entry-screen-with-the-straight-low-strain-shape-entry_screenpy-2026-11-09)). Next: design entry, storage, sleeve contact and the sensor head envelope (full-width 3D clearance is now covered by item 4).
-6. Rear mechanism selection, followed by an integrated 3D tank validation.
+1. **Build and test the backbone M module** ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)): EA, EI, rod buckling at the guide spacing and rod joint slip. Then re-run the studies with the measured values.
+2. **Coordinated winch-control test** (planned for 10 November): drive the rope lengths through the 5° minimum-force poses in fine steps, and check that the head moves smoothly from 0° to 175° at 20° elevation, including between samples.
+3. **Tank-aware steering:** optimise postures with the 3D tank as a constraint, and check the 30–55° twist against hardware limits.
+4. **Entry, storage and sensor head:** real head CAD and cable envelopes, sleeve contact, rear storage and retraction.
+5. **Rear mechanism and integrated validation.**
 
 ## Previous baseline studies (6 November 2026, current M module)
 
-- [Active straightening and tank entry](ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106): U4+M2, U6+M3 and U8+M4 with database properties. Near-straight shapes need 17–28% axial strain. The front-only tank entry screen passes only for high-strain shapes.
-- [Spatial steering and tendon forces](ASRC_kevin/telescopic_planar_study/steering_63mm_20261106): U4+M2 reaches about 179° yaw at low strain, but with head elevation at −65.7°. No held-elevation (20 ± 5°) solution was found.
+- [Active straightening and tank entry](ASRC_kevin/telescopic_planar_study/stiffness_63mm_20261106): near-straight shapes need 17–28% axial strain, and only high-strain shapes pass the entry screen.
+- [Spatial steering and tendon forces](ASRC_kevin/telescopic_planar_study/steering_63mm_20261106): U4+M2 reaches about 179° yaw at low strain, but with head elevation at −65.7°. No held-elevation solution was found.
 
-These studies are the controls for the 8 November work. Their no-rod results are reproduced exactly by the new scripts.
+These studies are the controls for the 8–9 November work, and their results are reproduced exactly by the new scripts.
 
 ## Geometry and input data
 
-- [Telescopic rear and tank geometry study](ASRC_kevin/telescopic_planar_study): tank sections, rear beam calculations and deployment screening. Its top-level README includes earlier geometry assumptions.
+- [Telescopic rear and tank geometry study](ASRC_kevin/telescopic_planar_study): tank sections, rear beam calculations and deployment screening. The 3D tank model is `ASRC_kevin/telescopic_planar_study/inputs/tank-v2.step`.
 - [Module stiffness database](ASRC_kevin/module_stiffness.sqlite3): module mass, EA, EI and torsional stiffness. Use each study's saved input snapshot when reproducing its results.
 
 ## Earlier studies
@@ -102,4 +94,4 @@ These studies are the controls for the 8 November work. Their no-rod results are
 - [Front module count sweep](ASRC_kevin/front_sweep_5_to_11): comparison of 5–11 front modules.
 - [Reach and extension screening](reach_extension_results): earlier passive reach study with different dimensional assumptions.
 
-Start with the 8 November report and the two studies dated 20261108. Earlier results use different geometry or material assumptions and should not be combined directly with the latest baseline.
+Start with the 9 November report and the presentation. Earlier results use different geometry or material assumptions and should not be combined directly with the latest baseline.
