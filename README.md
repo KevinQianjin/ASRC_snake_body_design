@@ -6,8 +6,7 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 ## Reports and presentation
 
-- [**Daily report — 9 November 2026**](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull). Built by [`build_report_2026_11_09.py`](ASRC_kevin/telescopic_planar_study/reports/build_report_2026_11_09.py).
-- [**Presentation — latest results, 9 November 2026**](ASRC_Presentation_2026_11_09.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
+- [**Daily report — 9 November 2026**](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull).
 - [Report — 8 November 2026](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, and the module test plan.
 - [Report — 6 November 2026](Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
 - [Report — 5 November 2026](Report_2026_11_05.pdf): earlier design and analysis.
