@@ -1,8 +1,7 @@
 // Available UniDirectional solids from the uploaded STEP assembly.
-// The source STEP axis is local Y; this places the 96 mm module along +Z with
-// its lower end at Z=0. The source contains one inner ring and four leaf
-// springs, but is missing solid geometry for the named wings and disk; this
-// is not a complete printable U module.
+// The source STEP axis is local Y; this places the 96 mm body along +Z with
+// its lower end at Z=0. It contains one full-envelope body and four leaf
+// springs. Material assignments are not encoded in the STEP file.
 // Set component_to_show to 1..5 to inspect/export one solid at a time; 0 shows
 // all solids available in the STEP.
 

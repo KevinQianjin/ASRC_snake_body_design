@@ -6,10 +6,11 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 ## Prototype CAD status
 
-**The older SCAD files in `ASRC_kevin/moving_prototype/full_length/` remain generic visual/fit-check placeholders, not the final robot design.** The U/M source STEP files have now been uploaded under `CAD/`, and a STEP-derived OpenSCAD viewing package is available in [`ASRC_kevin/moving_prototype/final_u4m2/`](ASRC_kevin/moving_prototype/final_u4m2/).
+**The older SCAD files in `ASRC_kevin/moving_prototype/full_length/` remain generic visual/fit-check placeholders, not the final robot design.** The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`ASRC_kevin/moving_prototype/final_u4m2/`](ASRC_kevin/moving_prototype/final_u4m2/).
 
-**The uploaded U STEP is incomplete for printing:** its solid geometry contains an inner ring and four leaf-spring solids, but the named NPJ wing and disk components have no solid geometry. The current SCAD package therefore shows only the geometry present in the STEP files; it is not a complete or fabrication-ready U4+M2 body. The STEP files also contain no material labels. The current study calls for U modules with PA12 and NiTi components, and a separate 1.8 mm NiTi backbone in each PA12 M module. Obtain complete, material-separated CAD and confirm the rod guides and end attachments before ordering a full print.
+The U STEP contains one full-envelope body solid (96 mm long, about 63.24 mm across) and four separate leaf-spring solids (about 94 mm long). The M STEP contains one full-envelope body solid. The STEP product tree lists wing and disk items, but not as separate solid meshes; the full-envelope body geometry means that alone does not show the module body is missing. The STEP files do not encode material labels. The intended split is U body in PA12 with four NiTi spring elements, and M body in PA12. The current M study adds a separate Ø1.8 mm NiTi backbone to each M module.
 
+The SCAD preview arranges the six modules in a straight line. It does not model the M backbone or establish the inter-module connection. Confirm material assignments and connection details before ordering a full print.
 ## Reports and presentation
 - [**Daily report — 10 November 2026**](Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended).
 - [**Weekly report — 10 November 2026**](Weekly_report_2026_11_10.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
