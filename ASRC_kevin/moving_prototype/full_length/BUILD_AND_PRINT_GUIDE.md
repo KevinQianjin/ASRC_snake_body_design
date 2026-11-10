@@ -1,6 +1,6 @@
-# U4+M2 backbone prototype: print and buy guide
+# LEGACY PROTOTYPE GUIDE — NOT THE FINAL DESIGN
 
-This is the current fit-and-motion prototype, not a load-rated robot. The 1.8 mm rods and tendon loads are simulation assumptions; the rod end attachments still need a physical design and test. Do not attach the 500 g camera or apply high tendon forces until those attachments and the printed parts have been checked.
+**This guide applies only to the earlier generic rigid-shell/pin-joint mock-up. It is not instructions for the final soft U/M body. Do not use it to order or print the final robot.** The actual U/M flexure geometry and rod attachments are not represented here; replace this guide after the U/M STEP files are uploaded.
 
 ## Open and export parts
 
