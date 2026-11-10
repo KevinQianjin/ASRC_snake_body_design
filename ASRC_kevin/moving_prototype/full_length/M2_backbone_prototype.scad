@@ -1,3 +1,5 @@
+// NON-FINAL PLACEHOLDER: generic rigid M shell with rod-guide webs; not the soft U/M module CAD.
+// Do not use this as the final M-section print design.
 // M-section proof-of-concept with a central, non-printed 1.8 mm NiTi rod.
 // The shell follows module_common.scad's dimensions and M6 interface.
 // The diagonal spiders are printed with the shell; the rod is preview-only
