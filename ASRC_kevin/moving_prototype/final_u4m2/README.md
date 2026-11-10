@@ -1,5 +1,17 @@
 # U4+M2 full-scale geometry preview
 
+## Download and open the complete set
+
+Download [`final_u4m2_openSCAD_bundle.zip`](final_u4m2_openSCAD_bundle.zip) and
+extract it. Keep the files together in the extracted folder, then open
+`final_u4m2_assembly.scad` in OpenSCAD. Press **F5** to preview the model.
+
+The SCAD file needs these six STL files beside it: `UniDirectional_96_part_01.stl`
+through `UniDirectional_96_part_05.stl`, plus `Medium_Stiffness_96.stl`. If you
+open only the `.scad` file, OpenSCAD will show “Can't open import file” warnings
+because it cannot find those meshes. Do not rename or move the mesh files away
+from the SCAD files.
+
 This folder uses the actual uploaded flexible module assemblies:
 
 - `UniDirectional_96.step` (U module), uploaded at `CAD/UniDirectional_96.step`
