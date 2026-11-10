@@ -226,6 +226,42 @@ The full-width 3D result confirms the 2D screen. The 2D values were slightly con
 
 **Not modelled:** the rope stiffness depends on the assumed 1 m free length (shorter ropes give a stiffer, more precise response). Rope friction, winch backlash, NiTi hysteresis and the tank are not included.
 
+## 8. Coordinated winch control between poses (`coordinated_winch.py`, 2026-11-10)
+
+This test combines sections 5 and 7. It settles the open question of what happens **between** the 5° poses when the ropes are driven by length.
+
+**Method.**
+
+- For every stored 8-cell minimum-force pose (head held at 20°, anchors [4,5,6], 1 N pretension), the winch length of each of the 12 ropes is computed with the fixed-winch rope model of section 7 (elastic PA6 line, 1 m free length).
+- All 12 winch lengths are then moved **together**, linearly from one pose's values to the next, in 20 sub-steps per 5° segment. Each equilibrium is solved from the previous state. The result is the quasi-static motion a length-controlled drive would produce.
+- The sweep is run forward and backward.
+
+| Check | Rod E = 40 GPa (0–175°) | Rod E = 75 GPa (0–180°) |
+|---|---|---|
+| States solved, forward | 701, no failure | 721, no failure |
+| Stable (fixed winch) and within geometry limits | all (minimum eigenvalue 0.148) | all (minimum eigenvalue 0.260) |
+| World head elevation between poses | 19.15–20.08° | 19.82–20.10° |
+| Yaw vs commanded (linear between poses) | monotonic, within 0.78° | monotonic, within 0.90° |
+| Head movement per sub-step (0.25° of yaw) | median 0.62 mm, max 1.68 mm | median 0.62 mm, max 2.53 mm |
+| Rope tension | 0.71–14.9 N, no slack rope | 0.90–14.7 N, no slack rope |
+| Each segment ends on the stored pose | head within 0.00002 mm | head within 0.00002 mm |
+| Backward sweep vs forward sweep | identical (head ≤ 0.00004 mm, tension ≤ 0.00001 N) | identical |
+| 3D tank clearance of in-between states, clamp s = 0 / 30 mm | all clear, minimum 22.4 / 12.6 mm | all clear, minimum 23.2 / 13.4 mm |
+| Strain / twist | ≤ 0.06% / ≤ 55° | ≤ 0.07% / ≤ 50° |
+
+![Coordinated winch](results/coordwinch.png)
+
+- **Under coordinated rope-length control the head moves smoothly and reversibly through the whole sweep at the 20° working elevation.** There is no snap, no unstable state and no slack rope at any of the 701 / 721 states, and the in-between states clear the 3D tank with the same margins as the poses. This closes the "motion between poses" question for the quasi-static model.
+- **Winch requirements (E = 40 GPa).**
+  - The largest travel is 68.6 mm, on the tip's up rope.
+  - The fastest winch moves 1.67 mm per degree of yaw.
+  - The anchor-4 ropes move less than 3.5 mm over the whole sweep. For steering they could be held at fixed length; they are only needed for straightening.
+- The command table is saved in `results/coordwinch_E40_winch_table.csv` and `results/coordwinch_E75_winch_table.csv`: pull-in in mm for each rope at each 5° pose, relative to the straight pose, with the expected tension.
+- **Not covered:**
+  - winch position errors and rope stretch calibration, which are a sensitivity study still to do;
+  - friction, dynamics and NiTi hysteresis;
+  - the assumed 1 m free rope length; a different length rescales the pull-in values.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
@@ -273,6 +309,10 @@ python plot_tank3d.py
 python side_pull.py --pull a6               # winch control; --pull a5/a4/all, --variant niti18_E75, --mode tension
 python summarize_sidepull.py
 python plot_sidepull.py
+python coordinated_winch.py --case E40            # also --case E75, --reverse
+python coordinated_winch_tank.py --case E40       # 3D tank clearance of in-between states
+python coordinated_winch_table.py                 # winch command tables (CSV)
+python plot_coordwinch.py
 ```
 
 ## 中文摘要

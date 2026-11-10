@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 9 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 10 November 2026
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
@@ -12,7 +12,7 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 - [Report — 6 November 2026](Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
 - [Report — 5 November 2026](Report_2026_11_05.pdf): earlier design and analysis.
 
-## Current status (9 November 2026)
+## Current status (10 November 2026)
 
 All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in each M module**, compared with the 6 November design. Rod properties are calculated, not yet measured.
 
@@ -22,6 +22,7 @@ All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in 
 | Tank entry, 2D sections and full 3D | Every low-strain shape hits the tank | **Passes**: 47 / 65 / 19 mm minimum clearance at 15 / 20 / 25° |
 | 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; with it, all cases are stable |
 | Yaw with the head held at 20° | No solution found | **0–175°** in smooth 5° steps at **7–15 N** peak rope force |
+| Coordinated winch (rope-length) control between poses | — | **Smooth, stable and reversible** over 0–175° at 19.2–20.1° elevation; no slack rope; winch travel ≤ 69 mm |
 | Yaw sweep inside the full 3D tank | — | At 20° with the clamp 0–30 mm past the opening: **clear by ≥ 12.6 mm**; 25° hits the roof |
 | One side rope pulled (winch control) | — | About **1.25° yaw per mm**, smooth and stable; holds 20 ± 5° elevation only to **about ±20°** |
 | Tension-only rope control | — | Straight front **snaps** (258 mm jump at +0.5 N): **use rope-length control** |
@@ -30,6 +31,20 @@ All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in 
 **Decisions:** develop U4+M2 with the 1.8 mm NiTi backbone. Install at **20°**, steer with the clamp **0–30 mm** past the opening, keep **≥ 1 N** on every rope, and drive the ropes by **length (winch position)**, coordinating the up and side ropes to hold the working elevation. Build and test the backbone M module next.
 
 ## Latest studies
+
+### 10 November 2026: coordinated winch control
+
+[Study README, section 8](ASRC_kevin/telescopic_planar_study/backbone_20261108)
+
+All 12 winches follow the rope lengths of the 5° minimum-force poses together, in 20 sub-steps per segment.
+
+- The head moves smoothly from 0° to 175° (40 GPa rod) or 180° (75 GPa rod) while staying at 19.2–20.1° elevation.
+- Every one of the 701 / 721 states is stable, no rope goes slack, and the motion is identical forward and backward.
+- The in-between states clear the 3D tank by at least 12.6 mm.
+- The largest winch travel is 69 mm, and the anchor-4 ropes barely move.
+- Winch command tables are saved as CSV.
+
+![Coordinated winch](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/coordwinch.png)
 
 ### 9 November 2026: entry, stability, tendon force, 3D tank and horizontal flexibility
 
@@ -70,7 +85,7 @@ The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical di
 ## Next steps
 
 1. **Build and test the backbone M module** ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)): EA, EI, rod buckling at the guide spacing and rod joint slip. Then re-run the studies with the measured values.
-2. **Coordinated winch-control test** (planned for 10 November): drive the rope lengths through the 5° minimum-force poses in fine steps, and check that the head moves smoothly from 0° to 175° at 20° elevation, including between samples.
+2. ~~Coordinated winch-control test~~ — done on 10 November: smooth, stable and reversible ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#8-coordinated-winch-control-between-poses-coordinated_winchpy-2026-11-10)). Next: sensitivity to winch position error and rope stretch.
 3. **Tank-aware steering:** optimise postures with the 3D tank as a constraint, and check the 30–55° twist against hardware limits.
 4. **Entry, storage and sensor head:** real head CAD and cable envelopes, sleeve contact, rear storage and retraction.
 5. **Rear mechanism and integrated validation.**
