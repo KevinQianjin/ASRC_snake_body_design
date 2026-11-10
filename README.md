@@ -9,7 +9,7 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 **The SCAD files in `ASRC_kevin/moving_prototype/` are early visual/fit-check placeholders, not the final robot design.** They use generic rigid shells and pin joints and do not reproduce the soft U/M flexure geometry in the simulations. Do not treat them as the final body or as validated print files. The final CAD should be built from the actual U/M STEP files once those are uploaded.
 
 ## Reports and presentation
-- [**Daily report — 10 November 2026**](Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended). Built by [`build_report_2026_11_10.py`](ASRC_kevin/telescopic_planar_study/reports/build_report_2026_11_10.py).
+- [**Daily report — 10 November 2026**](Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended).
 - [**Weekly report — 10 November 2026**](Weekly_report_2026_11_10.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
 - [Report — 9 November 2026](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull).
 - [Report — 8 November 2026](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, and the module test plan.
