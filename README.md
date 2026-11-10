@@ -6,7 +6,9 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 ## Prototype CAD status
 
-**The SCAD files in `ASRC_kevin/moving_prototype/` are early visual/fit-check placeholders, not the final robot design.** They use generic rigid shells and pin joints and do not reproduce the soft U/M flexure geometry in the simulations. Do not treat them as the final body or as validated print files. The final CAD should be built from the actual U/M STEP files once those are uploaded.
+**The older SCAD files in `ASRC_kevin/moving_prototype/full_length/` remain generic visual/fit-check placeholders, not the final robot design.** The U/M source STEP files have now been uploaded under `CAD/`, and a STEP-derived OpenSCAD viewing package is available in [`ASRC_kevin/moving_prototype/final_u4m2/`](ASRC_kevin/moving_prototype/final_u4m2/).
+
+**The uploaded U STEP is incomplete for printing:** its solid geometry contains an inner ring and four leaf-spring solids, but the named NPJ wing and disk components have no solid geometry. The current SCAD package therefore shows only the geometry present in the STEP files; it is not a complete or fabrication-ready U4+M2 body. The STEP files also contain no material labels. The current study calls for U modules with PA12 and NiTi components, and a separate 1.8 mm NiTi backbone in each PA12 M module. Obtain complete, material-separated CAD and confirm the rod guides and end attachments before ordering a full print.
 
 ## Reports and presentation
 - [**Daily report — 10 November 2026**](Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended).

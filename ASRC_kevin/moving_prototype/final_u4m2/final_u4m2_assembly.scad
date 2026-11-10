@@ -1,5 +1,6 @@
 /*
- * Full-scale U4+M2 assembly from the uploaded Shapr3D STEP models.
+ * Full-scale U4+M2 geometry preview from the uploaded Shapr3D STEP models.
+ * The U STEP upload is incomplete; see README.md before ordering any prints.
  *
  * OpenSCAD cannot import STEP, so the two source assemblies are triangulated
  * into companion STL files in this folder. The STEP files remain the editable
