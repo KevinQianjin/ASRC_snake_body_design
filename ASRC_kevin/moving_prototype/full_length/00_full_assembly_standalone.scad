@@ -1,3 +1,5 @@
+// NON-FINAL PLACEHOLDER: generic rigid shells and pin joints, not the soft U/M body.
+// Do not treat this model or its STL exports as the final robot design.
 // Self-contained copy of the six-module assembly preview.
 // Shared geometry is included below so this file can be downloaded and opened by itself.
 
