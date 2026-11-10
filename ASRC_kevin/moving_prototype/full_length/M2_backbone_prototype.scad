@@ -41,7 +41,7 @@ module rod_guide_spider() {
 
 module M2_shell_with_guides() {
     union() {
-        module_link("M",6,false,true,show_tendons);
+        module_link("M",6,false,true,show_tendons && !export_shell_only);
         if (show_supports)
             for (z=support_positions)
                 translate([0,0,z]) color([0.12,0.48,0.39]) rod_guide_spider();
