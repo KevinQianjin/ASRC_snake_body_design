@@ -9,7 +9,7 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 **The SCAD files in `ASRC_kevin/moving_prototype/` are early visual/fit-check placeholders, not the final robot design.** They use generic rigid shells and pin joints and do not reproduce the soft U/M flexure geometry in the simulations. Do not treat them as the final body or as validated print files. The final CAD should be built from the actual U/M STEP files once those are uploaded.
 
 ## Reports and presentation
-- [**Weekly report — 10 November 2026**](ASRC_Presentation_2026_11_09.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
+- [**Weekly report — 10 November 2026**](Weekly_report_2026_11_10.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
 - [**Daily report — 9 November 2026**](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull).
 - [Report — 8 November 2026](Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, and the module test plan.
 - [Report — 6 November 2026](Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
