@@ -1,10 +1,10 @@
 # OpenSCAD prototype files
 
-These are early fit and motion prototypes. They are not validated production parts or rated for the simulated 500 g inspection head.
+**Status: NOT FINAL.** These SCAD files are early generic visual/fit-check placeholders. They use rigid shells and pin joints; they do not reproduce the soft U/M flexure geometry in the simulations. Do not use them as the final robot body or as validated print files. Build the final model from the actual U/M STEP geometry when it is uploaded.
 
-## Recommended current model and guide
+## Existing prototype files (not final design)
 
-- [U4M2_backbone_assembly.scad](U4M2_backbone_assembly.scad) — self-contained full U4+M2 assembly with guided M1 and M2 sections, visible rods in the preview, and a part selector for individual STL exports.
+- [U4M2_backbone_assembly.scad](U4M2_backbone_assembly.scad) — self-contained preview of the earlier generic rigid-shell model; it is not the final U4+M2 compliant design.
 - [BUILD_AND_PRINT_GUIDE.md](BUILD_AND_PRINT_GUIDE.md) — what to print and buy, how to export parts, and the current limits of the prototype.
 
 ## Full-length layout
