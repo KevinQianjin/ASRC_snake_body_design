@@ -14,7 +14,7 @@ export_shell_only = false;
 rod_diameter = 1.8;
 rod_clearance = 0.35;       // diametral clearance around rod
 support_thickness = 3.0;    // axial thickness of each guide spider
-support_radius = 25.0;      // stay just inside the 27.5 mm shell inner radius
+support_radius = 29.5;      // extend into the shell wall so guide webs fuse to it
 support_web_width = 2.4;
 support_hub_diameter = 6.0;
 support_positions = [26, 50, 74]; // global Z; 24 mm spacing inside shell z=6..90
