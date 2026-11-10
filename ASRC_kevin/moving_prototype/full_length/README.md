@@ -4,7 +4,8 @@ These are early fit and motion prototypes. They are not validated production par
 
 ## Full-length layout
 
-- [00_full_assembly.scad](00_full_assembly.scad) — preview of the complete six-module U4+M2 front. Adjust joint_1 through joint_5 to change the preview pose.
+- [00_full_assembly.scad](00_full_assembly.scad) — preview of the complete six-module U4+M2 front; needs module_common.scad in the same folder.
+- [00_full_assembly_standalone.scad](00_full_assembly_standalone.scad) — same preview with shared geometry included; download this one file if you want to open the assembly by itself. Adjust joint_1 through joint_5 to change the preview pose.
 - [01_U1_base.scad](01_U1_base.scad) — first U module with base flange.
 - [02_U2.scad](02_U2.scad) — second U module.
 - [03_U3.scad](03_U3.scad) — third U module.
