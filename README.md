@@ -23,6 +23,7 @@ All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in 
 | 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; with it, all cases are stable |
 | Yaw with the head held at 20° | No solution found | **0–175°** in smooth 5° steps at **7–15 N** peak rope force |
 | Coordinated winch (rope-length) control between poses | — | **Smooth, stable and reversible** over 0–175° at 19.2–20.1° elevation; no slack rope; winch travel ≤ 69 mm |
+| Winch position error | — | ±1° head angle needs about **±0.2–0.5 mm on every winch** (±0.16 mm near 175°); the 4 tip winches dominate; rope EA ±10% gives ≤ 0.4°. Stable in all cases, but 1 N pretension ropes go slack beyond about 0.15 mm error: **use head-angle feedback** |
 | Yaw sweep inside the full 3D tank | — | At 20° with the clamp 0–30 mm past the opening: **clear by ≥ 12.6 mm**; 25° hits the roof |
 | One side rope pulled (winch control) | — | About **1.25° yaw per mm**, smooth and stable; holds 20 ± 5° elevation only to **about ±20°** |
 | Tension-only rope control | — | Straight front **snaps** (258 mm jump at +0.5 N): **use rope-length control** |
@@ -32,7 +33,17 @@ All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in 
 
 ## Latest studies
 
-### 10 November 2026: coordinated winch control
+### 10 November 2026: coordinated winch control and winch accuracy
+
+**Winch accuracy** ([section 9](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#9-winch-position-error-and-rope-stretch-sensitivity-winch_sensitivitypy-2026-11-10)):
+
+- One winch off by 1 mm moves the head 1.3–3.2°. All 12 winches off by up to ±1 mm at random give up to 1.9–6.3° (99%).
+- Holding ±1° open-loop needs about ±0.2–0.5 mm per winch. The four tip (anchor 6) winches matter most, and rope stiffness calibration hardly matters.
+- Every perturbed state stays stable, but 1 N pretension ropes can go slack. Head-angle feedback and a higher pretension are recommended.
+
+![Winch sensitivity](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/winch_sensitivity.png)
+
+**Coordinated winch control:**
 
 [Study README, section 8](ASRC_kevin/telescopic_planar_study/backbone_20261108)
 
@@ -85,7 +96,7 @@ The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical di
 ## Next steps
 
 1. **Build and test the backbone M module** ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)): EA, EI, rod buckling at the guide spacing and rod joint slip. Then re-run the studies with the measured values.
-2. ~~Coordinated winch-control test~~ — done on 10 November: smooth, stable and reversible ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#8-coordinated-winch-control-between-poses-coordinated_winchpy-2026-11-10)). Next: sensitivity to winch position error and rope stretch.
+2. ~~Coordinated winch-control test~~ — done on 10 November: smooth, stable and reversible ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#8-coordinated-winch-control-between-poses-coordinated_winchpy-2026-11-10)). Winch accuracy studied on 10 November: about ±0.2–0.5 mm per winch for ±1° open-loop, so add head-angle feedback ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#9-winch-position-error-and-rope-stretch-sensitivity-winch_sensitivitypy-2026-11-10)). Next: test 3–5 N pretension against rope slack, and add friction to the rope model.
 3. **Tank-aware steering:** optimise postures with the 3D tank as a constraint, and check the 30–55° twist against hardware limits.
 4. **Entry, storage and sensor head:** real head CAD and cable envelopes, sleeve contact, rear storage and retraction.
 5. **Rear mechanism and integrated validation.**
