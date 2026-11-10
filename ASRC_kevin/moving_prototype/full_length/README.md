@@ -2,6 +2,11 @@
 
 These are early fit and motion prototypes. They are not validated production parts or rated for the simulated 500 g inspection head.
 
+## Recommended current model and guide
+
+- [U4M2_backbone_assembly.scad](U4M2_backbone_assembly.scad) — self-contained full U4+M2 assembly with guided M1 and M2 sections, visible rods in the preview, and a part selector for individual STL exports.
+- [BUILD_AND_PRINT_GUIDE.md](BUILD_AND_PRINT_GUIDE.md) — what to print and buy, how to export parts, and the current limits of the prototype.
+
 ## Full-length layout
 
 - [00_full_assembly.scad](00_full_assembly.scad) — preview of the complete six-module U4+M2 front; needs module_common.scad in the same folder.
