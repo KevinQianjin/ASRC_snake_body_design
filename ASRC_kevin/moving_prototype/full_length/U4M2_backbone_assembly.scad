@@ -1,3 +1,6 @@
+// NON-FINAL PLACEHOLDER: generic rigid shells and pin joints, not the soft U/M body.
+// Do not treat this model or its STL exports as the final robot design.
+// Replace with geometry based on the actual U/M STEP files when available.
 // U4+M2 backbone prototype assembly, self-contained.
 // Set part to "assembly" for the pose preview or U1/U2/U3/U4/M1/M2/base/head
 // to export one part. The M rods are preview geometry only and are never in
