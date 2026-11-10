@@ -23,8 +23,9 @@ function module_center_z(i, gap) = i * (module_length_mm + gap) + module_length_
 module draw_module(kind) {
     if (kind == "U") {
         color([0.12, 0.48, 0.86])
-            rotate([90, 0, 0])
-                import("UniDirectional_96.stl", convexity = 12);
+            for (part_number = [1 : 5])
+                rotate([90, 0, 0])
+                    import(str("UniDirectional_96_part_0", part_number, ".stl"), convexity = 12);
     } else {
         color([0.95, 0.48, 0.12])
             import("Medium_Stiffness_96.stl", convexity = 12);
