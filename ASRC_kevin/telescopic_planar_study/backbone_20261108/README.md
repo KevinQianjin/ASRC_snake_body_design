@@ -226,6 +226,74 @@ The full-width 3D result confirms the 2D screen. The 2D values were slightly con
 
 **Not modelled:** the rope stiffness depends on the assumed 1 m free length (shorter ropes give a stiffer, more precise response). Rope friction, winch backlash, NiTi hysteresis and the tank are not included.
 
+## 8. Coordinated winch control between poses (`coordinated_winch.py`, 2026-11-10)
+
+This test combines sections 5 and 7. It settles the open question of what happens **between** the 5° poses when the ropes are driven by length.
+
+**Method.**
+
+- For every stored 8-cell minimum-force pose (head held at 20°, anchors [4,5,6], 1 N pretension), the winch length of each of the 12 ropes is computed with the fixed-winch rope model of section 7 (elastic PA6 line, 1 m free length).
+- All 12 winch lengths are then moved **together**, linearly from one pose's values to the next, in 20 sub-steps per 5° segment. Each equilibrium is solved from the previous state. The result is the quasi-static motion a length-controlled drive would produce.
+- The sweep is run forward and backward.
+
+| Check | Rod E = 40 GPa (0–175°) | Rod E = 75 GPa (0–180°) |
+|---|---|---|
+| States solved, forward | 701, no failure | 721, no failure |
+| Stable (fixed winch) and within geometry limits | all (minimum eigenvalue 0.148) | all (minimum eigenvalue 0.260) |
+| World head elevation between poses | 19.15–20.08° | 19.82–20.10° |
+| Yaw vs commanded (linear between poses) | monotonic, within 0.78° | monotonic, within 0.90° |
+| Head movement per sub-step (0.25° of yaw) | median 0.62 mm, max 1.68 mm | median 0.62 mm, max 2.53 mm |
+| Rope tension | 0.71–14.9 N, no slack rope | 0.90–14.7 N, no slack rope |
+| Each segment ends on the stored pose | head within 0.00002 mm | head within 0.00002 mm |
+| Backward sweep vs forward sweep | identical (head ≤ 0.00004 mm, tension ≤ 0.00001 N) | identical |
+| 3D tank clearance of in-between states, clamp s = 0 / 30 mm | all clear, minimum 22.4 / 12.6 mm | all clear, minimum 23.2 / 13.4 mm |
+| Strain / twist | ≤ 0.06% / ≤ 55° | ≤ 0.07% / ≤ 50° |
+
+![Coordinated winch](results/coordwinch.png)
+
+- **Under coordinated rope-length control the head moves smoothly and reversibly through the whole sweep at the 20° working elevation.** There is no snap, no unstable state and no slack rope at any of the 701 / 721 states, and the in-between states clear the 3D tank with the same margins as the poses. This closes the "motion between poses" question for the quasi-static model.
+- **Winch requirements (E = 40 GPa).**
+  - The largest travel is 68.6 mm, on the tip's up rope.
+  - The fastest winch moves 1.67 mm per degree of yaw.
+  - The anchor-4 ropes move less than 3.5 mm over the whole sweep. For steering they could be held at fixed length; they are only needed for straightening.
+- The command table is saved in `results/coordwinch_E40_winch_table.csv` and `results/coordwinch_E75_winch_table.csv`: pull-in in mm for each rope at each 5° pose, relative to the straight pose, with the expected tension.
+- **Not covered:**
+  - winch position errors and rope stretch calibration, which are a sensitivity study still to do;
+  - friction, dynamics and NiTi hysteresis;
+  - the assumed 1 m free rope length; a different length rescales the pull-in values.
+
+## 9. Winch position error and rope stretch sensitivity (`winch_sensitivity.py`, 2026-11-10)
+
+**Method.** At seven poses of the coordinated sweep (yaw 0–175°, or 0–180° for E = 75 GPa; head held at 20°), using the full nonlinear model at 8 cells per module:
+
+- Each of the 12 winch lengths was offset by ±0.5 and ±1 mm, one at a time, and the equilibrium re-solved: 336 solves per rod.
+- From these, a sensitivity matrix (degrees and mm per mm of winch error) was built. It was used to predict 2,000 random cases with all 12 winches wrong at once (independent, uniform within ±e) and the worst case.
+- The 10 worst predicted 1 mm cases per pose were re-solved with the full model; the linear prediction is within 1.2°.
+- Rope stretch calibration: rope EA ±10% on all ropes, with the winch commands unchanged.
+
+| Rod E = 40 GPa (E = 75 GPa similar or smaller) | yaw 0° | 60° | 120° | 150° | 175° |
+|---|---|---|---|---|---|
+| One winch off by 1 mm: largest head angle error | 1.7° | 1.8° | 1.4° | 2.3° | 3.2° |
+| All 12 random ±1 mm (99%): yaw / elevation | 1.9° / 1.9° | 2.3° / 2.5° | 2.6° / 3.2° | 4.3° / 3.3° | 6.3° / 2.1° |
+| All 12 random ±1 mm (99%): head position | 6 mm | 7 mm | 9 mm | 15 mm | 20 mm |
+| **Winch accuracy for ±1° (99%)** | ±0.51 mm | ±0.41 mm | ±0.32 mm | ±0.23 mm | **±0.16 mm** |
+| Winch accuracy for ±2° (99%) | ±1.03 mm | ±0.81 mm | ±0.63 mm | ±0.47 mm | ±0.32 mm |
+| Winch accuracy for ±1° (worst case) | ±0.41 mm | ±0.22 mm | ±0.17 mm | ±0.13 mm | ±0.10 mm |
+
+![Winch sensitivity](results/winch_sensitivity.png)
+
+- **Required accuracy.** Open-loop length control needs about **±0.2–0.5 mm on every winch for ±1° of head angle**, tightening to ±0.16 mm near 175°, where the front curls up. ±2° roughly doubles these values. The 75 GPa rod is slightly less sensitive at large yaw (±0.26 mm at 180°).
+- **The four tip ropes (anchor 6) dominate:** 0.4–1.3° per mm. Anchor 4 and 5 ropes are 0.05–0.35° per mm. Precision is needed mainly on the four tip winches.
+- **Rope stretch calibration is not critical:** a ±10% error in rope EA moves the head by at most 0.42°.
+- **Robustness.**
+  - All 672 single-winch cases and all 140 combined-error checks (both rods) stay stable and within geometry limits; none fails to converge.
+  - However, a rope at the 1 N pretension stretches only about 0.15 mm, so a payout error above that leaves it **slack**. This happened in 58 of 168 single 0.5 mm cases (E = 40 GPa) and in most combined cases. Stability held in every case tested, but the margin is small.
+- **Recommendations.**
+  1. Close the loop on head angle, for example with an IMU or encoder in the head, at least for the four tip winches; ±0.2 mm on rope length through guides is unlikely in open loop once friction and creep are included.
+  2. Test a higher pretension (3–5 N) to keep ropes taut under winch error. This trades a few newtons of peak force for robustness and has not been simulated yet.
+  3. Use winches with encoder resolution well below 0.1 mm. For a 10 mm drum radius, 0.1 mm is 0.6° of drum rotation.
+- **Not covered:** friction and stick-slip in the guides, winch dynamics, rope creep and temperature, NiTi hysteresis, and the 1 m free-rope assumption (a shorter rope is stiffer, which reduces the slack problem).
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
@@ -273,6 +341,13 @@ python plot_tank3d.py
 python side_pull.py --pull a6               # winch control; --pull a5/a4/all, --variant niti18_E75, --mode tension
 python summarize_sidepull.py
 python plot_sidepull.py
+python coordinated_winch.py --case E40            # also --case E75, --reverse
+python coordinated_winch_tank.py --case E40       # 3D tank clearance of in-between states
+python coordinated_winch_table.py                 # winch command tables (CSV)
+python plot_coordwinch.py
+python winch_sensitivity.py --case E40          # also --case E75 --yaws 0 30 60 90 120 150 180
+python summarize_winch_sensitivity.py
+python plot_winch_sensitivity.py
 ```
 
 ## 中文摘要

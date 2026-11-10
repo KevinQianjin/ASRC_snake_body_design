@@ -1,0 +1,60 @@
+[
+ {
+  "case": "E40",
+  "run": "minforce_niti18_E40_p20_a456_pre1_exact_smooth1",
+  "states": 701,
+  "yaw_range": [
+   -1.2217934224963245e-14,
+   175.0000008839343
+  ],
+  "yaw_monotonic": true,
+  "max_yaw_tracking_error_deg": 0.7792327093266174,
+  "elevation_range": [
+   19.145850308566775,
+   20.082990140256157
+  ],
+  "max_head_move_mm": 1.6790556999944553,
+  "median_head_move_mm": 0.6170794794888175,
+  "min_rope_tension_n": 0.7094005735440481,
+  "peak_rope_tension_n": 14.893614899589823,
+  "all_stable": true,
+  "all_geometry": true,
+  "min_fixed_winch_eig": 0.14763857972381267,
+  "max_strain_pct": 0.05958686660860615,
+  "max_twist_deg": 55.25196280348181,
+  "max_pose_end_head_error_mm": 1.1203891884503125e-05,
+  "max_pose_end_yaw_error_deg": 1.3144165791345586e-06,
+  "reverse_max_head_difference_mm": 3.317783467021735e-05,
+  "reverse_max_tension_difference_n": 8.408899281997506e-06,
+  "compared_states": 701
+ },
+ {
+  "case": "E75",
+  "run": "minforce_niti18_E75_p20_a456_pre1_exact_smooth1",
+  "states": 721,
+  "yaw_range": [
+   4.718700822742389e-13,
+   179.99999977916804
+  ],
+  "yaw_monotonic": true,
+  "max_yaw_tracking_error_deg": 0.9001330717986242,
+  "elevation_range": [
+   19.818189645912597,
+   20.096692452493205
+  ],
+  "max_head_move_mm": 2.5318575054424555,
+  "median_head_move_mm": 0.6169283006988482,
+  "min_rope_tension_n": 0.895803809658577,
+  "peak_rope_tension_n": 14.66405451061157,
+  "all_stable": true,
+  "all_geometry": true,
+  "min_fixed_winch_eig": 0.26049905267450935,
+  "max_strain_pct": 0.0719137940720342,
+  "max_twist_deg": 50.25624968645824,
+  "max_pose_end_head_error_mm": 1.2920481720208463e-05,
+  "max_pose_end_yaw_error_deg": 9.390947610654621e-07,
+  "reverse_max_head_difference_mm": 4.3145402246095225e-05,
+  "reverse_max_tension_difference_n": 8.874638400158119e-06,
+  "compared_states": 721
+ }
+]
