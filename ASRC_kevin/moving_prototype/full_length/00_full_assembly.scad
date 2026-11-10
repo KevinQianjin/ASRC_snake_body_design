@@ -1,3 +1,5 @@
+// NON-FINAL PLACEHOLDER: generic rigid shells and pin joints, not the soft U/M body.
+// Do not treat this model or its STL exports as the final robot design.
 include <module_common.scad>;
 base_pitch = 20;
 show_tendons = true;
