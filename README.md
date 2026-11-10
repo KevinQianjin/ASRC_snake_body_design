@@ -4,6 +4,10 @@
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
+## Prototype CAD status
+
+**The SCAD files in `ASRC_kevin/moving_prototype/` are early visual/fit-check placeholders, not the final robot design.** They use generic rigid shells and pin joints and do not reproduce the soft U/M flexure geometry in the simulations. Do not treat them as the final body or as validated print files. The final CAD should be built from the actual U/M STEP files once those are uploaded.
+
 ## Reports and presentation
 
 - [**Daily report — 9 November 2026**](Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull).
