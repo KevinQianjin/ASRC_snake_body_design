@@ -1,3 +1,5 @@
+> **IGNORE — does not match the simulated design (marked 11 November 2026).** The files in `moving_prototype/full_length/` use 84 mm shells with 12 mm pin joints and, for the backbone, two separate rods with a free joint. The design and all simulations use **continuous 96 mm modules with no pin joint, and one Ø1.8 mm NiTi rod along the full 96 mm of each M module**. Use [`ASRC_kevin/telescopic_planar_study/backbone_20261108/model_data/MODEL_DATA.md`](../../telescopic_planar_study/backbone_20261108/model_data/MODEL_DATA.md) for the model parameters. See [`NOT_THE_SIMULATED_DESIGN.md`](NOT_THE_SIMULATED_DESIGN.md).
+
 # LEGACY PROTOTYPE GUIDE — NOT THE FINAL DESIGN
 
 **This guide applies only to the earlier generic rigid-shell/pin-joint mock-up. It is not instructions for the final soft U/M body. Do not use it to order or print the final robot.** The actual U/M flexure geometry and rod attachments are not represented here; replace this guide after the U/M STEP files are uploaded.

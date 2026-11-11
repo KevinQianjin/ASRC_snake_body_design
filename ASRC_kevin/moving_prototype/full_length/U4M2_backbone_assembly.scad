@@ -1,3 +1,5 @@
+// IGNORE (marked 2026-11-11): does not match the simulated design. This placeholder uses 84 mm shells + 12 mm pin joints;
+// the design uses continuous 96 mm modules with a full-length 1.8 mm NiTi rod in each M module. See NOT_THE_SIMULATED_DESIGN.md.
 // NON-FINAL PLACEHOLDER: generic rigid shells and pin joints, not the soft U/M body.
 // Do not treat this model or its STL exports as the final robot design.
 // Replace with geometry based on the actual U/M STEP files when available.
