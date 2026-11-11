@@ -1,3 +1,16 @@
+## Position-controlled round-trip study (11 November 2026)
+
+See [the generated report](length_cycle_results/REPORT.md) for the forward-solved
+12-rope length-control cycle, full-tank sampled clearance, consistent elastic-rope
+stability and one-factor sensitivity cases. This extends the earlier force-based
+sweeps; it does not establish hardware performance or continuous collision safety.
+
+- `length_cycle.py`: straighten from a defined slackened equilibrium, enter,
+  right/return, left/return and withdraw; 8 cells/module.
+- `summarize_length_cycle.py`: acceptance failures, provenance and comparison plot.
+- `test_length_cycle.py`: numerical energy/gradient/Hessian and mesh-query checks.
+- `length_cycle_results/`: per-step CSV/JSON, states and aggregate report.
+
 # M module with 1.8 mm NiTi backbone: straightening and steering
 
 2026-11-08 · 63 mm · 24 mm tendon radius · 500 g head · follow-up to `../m_axial_sweep_20261108`
