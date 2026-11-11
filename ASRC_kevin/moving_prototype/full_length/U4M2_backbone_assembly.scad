@@ -166,6 +166,8 @@ support_radius = 29.5; // reaches into the shell wall so each guide is fused
 support_web_width = 2.4;
 support_hub_diameter = 6.0;
 support_positions = [26,50,74]; // 24 mm spacing; shell spans z=6..90
+anchor_marker_d = 6.0; // visual placeholder only; not a printable anchor design
+anchor_marker_h = 2.0;
 
 module rod_guide_spider() {
     difference() {
@@ -192,6 +194,11 @@ module M_backbone_link(number=5,tip=false,show_tendons=false,show_rod=false) {
         if (show_rod)
             translate([0,0,6]) color([0.88,0.72,0.20])
                 cylinder(d=rod_diameter,h=84);
+        // Separate rod per M link; red end markers are visual placeholders only.
+        if (show_rod)
+            for (z=[6,88])
+                translate([0,0,z]) color([0.82,0.18,0.12])
+                    cylinder(d=anchor_marker_d,h=anchor_marker_h);
     }
 }
 
