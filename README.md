@@ -4,6 +4,39 @@
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
+## Current design limitations (11 November 2026)
+
+**The U4+M2 design has not yet passed an integrated, hardware-validated deployment cycle.** Passing selected static poses or a steering-only sweep does not establish a stable startup, adequate pretension, robustness to parameter changes, or safe operation of the complete robot.
+
+The [length-controlled round-trip report](ASRC_kevin/telescopic_planar_study/backbone_20261108/length_cycle_results/REPORT.md) extends the earlier steering studies with a specified straightening startup, insertion, right/left sweeps and returns, withdrawal, and identical-command sensitivity cases. Its results apply to that command sequence and acceptance criteria; they do not replace the separately dated studies below.
+
+| Limitation | Evidence or current assumption | Engineering consequence |
+|---|---|---|
+| Startup and straightening are unresolved | With the three upper ropes initially paid out 10 mm, the nominal straightening phase contains 13 unstable stationary samples. | Redesign the startup and pretension-establishment sequence. Solver convergence to a stationary point is not proof of stable motion; this failure does not show that every straightening procedure fails. |
+| Pretension margin is insufficient | Nominal steering reaches a minimum rope force of **0.713 N**; each of the four steering legs has 9 samples below the **0.95 N** acceptance tolerance around the 1 N target. | Add pretension margin and tension constraints when generating rope-length trajectories. No slack in an earlier nominal sweep does not establish sufficient pretension throughout this cycle. |
+| Open-loop commands depend on calibrated parameters | Replaying the same commands with E75 backbone stiffness gives maximum yaw/elevation errors of **6.60° / 7.41°**; a **550 g** payload gives **9.85° / 8.17°**. Rope EA reduced by 20% or free length increased to 1.5 m also causes inadequate pretension. | Measure the assembled stiffness, payload and rope properties; evaluate head-angle and tension feedback. These are assumed sensitivity cases, not measured failure probabilities. |
+| Single-side-rope steering loses elevation | Pulling only the tip side rope maintains the head within 20 ± 5° elevation only to about **±20° yaw**. | Larger working-elevation sweeps need coordinated upper and side ropes. |
+| Tank workspace is restricted | Earlier full-tank screening recommends **20° installation** and steering with the clamp **0–30 mm** past the opening. Deeper insertion and 25° installation cause roof interference in portions of the large-yaw sweep. | Define and enforce a deployment envelope; yaw capability alone does not establish reachability at arbitrary insertion depths. |
+| Longer fronts remain unproven | U6+M3 and U8+M4 fail the existing checks with at most three anchor sets. | Do not extend the front by adding modules without revising stiffness, anchor layout and control. |
+| Backbone attachment and module interfaces are not validated | The model assumes axial load transfer at the NiTi ends and adequate lateral guidance. The STEP-derived assembly does not establish the M backbone integration, inter-module connections or tendon continuity. | Test joint slip, guide spacing, buckling, interface compliance and the assembled tendon route before a full build. The backbone-layout screening in `moving_prototype/full_length/` assumed a 12 mm pin gap and is marked to be ignored. |
+| Head and cable geometry remain provisional | Collision screening uses a **63 mm envelope** and a nominal **500 g** tip payload; actual head shape, centre-of-mass offset and external cables are not fully represented. | Update gravity loads and clearance using the real head, mounting and cable geometry. |
+| Constitutive and actuator behaviour is idealised | No rope friction, winch backlash, NiTi hysteresis, fatigue or wear is included in the round-trip model. Motor torque, speed, travel and encoder resolution are not validated as an integrated drive system. | Identify these properties experimentally and include them in forward simulation and controller verification. |
+| Motion and clearance checks are sampled and quasi-static | The nominal cycle has **17.48 mm** minimum sampled tank clearance, but dynamics and continuous collision safety are not established. | Check transient response, self-collision and the swept envelope; sampled clearance is not a guarantee between samples. |
+| Rear deployment and inspection performance are incomplete | Withdrawal is represented as rigid translation of the clamped front. Rear telescopic deployment, storage, sleeve contact and task coverage are not integrated. | Validate the full mechanism and map camera field of view, focus distance, coil standoff and incidence angle to usable inspection coverage. |
+
+**Update (11 November, later): with a 3 N pretension floor and a stable startup, the nominal round trip passes every check** (0 of 1,069 samples fail; rope tension ≥ 2.74 N; no unstable state), and so does the rope EA −20% case. The 75 GPa rod, 550 g head and 1.5 m free-rope cases still fail, but only on open-loop calibration (posture tracking, or rope tension with a longer rope). Same model parameters; see [backbone study section 10](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11). The paragraph below describes the original 1 N cycle.
+
+Across the five round-trip scenarios, **none passes every check**. The nominal case has **56 failed samples out of 1,033**: 20 during the specified straightening phase and 36 across the four steering legs. Its insertion and withdrawal samples pass, and its steering samples pass the stability and geometry checks, but pretension is insufficient at some intermediate commands. The passing outbound sample prefix reaches **21.25° on either side** before the first failed sample; this is a limit of the tested command sequence and criteria, not a mechanical yaw limit or continuous safety guarantee.
+
+The **5% strain threshold**, **250 N tendon bound** and **180° search cap** are numerical diagnostics or search bounds, not validated hardware ratings. The 1.5 mm sampling/mesh allowance in the round-trip report is an error budget, not a certified global clearance bound. Small simulated return error reflects the ideal reversible model and does not establish physical repeatability.
+
+### Priorities to close these limitations
+
+1. Generate a stable startup and complete rope-length trajectory with pretension margin and consistent fixed-winch stability checks; repeat the same round-trip and sensitivity cases.
+2. Build and test the backbone M module and interfaces: both bending planes, axial stiffness, torsion, guide buckling and end-attachment slip. Replace assumed properties with measured values.
+3. Calibrate winches and ropes, add friction/backlash/hysteresis where supported by measurements, and evaluate posture/tension feedback against actuator limits.
+4. Integrate the actual head, cables and rear mechanism; verify tank-aware motion, dynamic behaviour and inspection coverage before claiming full-system performance.
+
 ## Prototype CAD status
 
 **Ignore `ASRC_kevin/moving_prototype/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](ASRC_kevin/telescopic_planar_study/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](ASRC_kevin/moving_prototype/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`ASRC_kevin/moving_prototype/final_u4m2/`](ASRC_kevin/moving_prototype/final_u4m2/).
@@ -103,39 +136,6 @@ All 12 winches follow the rope lengths of the 5° minimum-force poses together, 
 ![Backbone results](ASRC_kevin/telescopic_planar_study/backbone_20261108/results/backbone_results.png)
 
 The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical diagnostics or search bounds, not validated hardware ratings.
-
-## Current design limitations (11 November 2026)
-
-**The U4+M2 design has not yet passed an integrated, hardware-validated deployment cycle.** Passing selected static poses or a steering-only sweep does not establish a stable startup, adequate pretension, robustness to parameter changes, or safe operation of the complete robot.
-
-The [length-controlled round-trip report](ASRC_kevin/telescopic_planar_study/backbone_20261108/length_cycle_results/REPORT.md) extends the earlier steering studies with a specified straightening startup, insertion, right/left sweeps and returns, withdrawal, and identical-command sensitivity cases. Its results apply to that command sequence and acceptance criteria; they do not replace the separately dated studies below.
-
-| Limitation | Evidence or current assumption | Engineering consequence |
-|---|---|---|
-| Startup and straightening are unresolved | With the three upper ropes initially paid out 10 mm, the nominal straightening phase contains 13 unstable stationary samples. | Redesign the startup and pretension-establishment sequence. Solver convergence to a stationary point is not proof of stable motion; this failure does not show that every straightening procedure fails. |
-| Pretension margin is insufficient | Nominal steering reaches a minimum rope force of **0.713 N**; each of the four steering legs has 9 samples below the **0.95 N** acceptance tolerance around the 1 N target. | Add pretension margin and tension constraints when generating rope-length trajectories. No slack in an earlier nominal sweep does not establish sufficient pretension throughout this cycle. |
-| Open-loop commands depend on calibrated parameters | Replaying the same commands with E75 backbone stiffness gives maximum yaw/elevation errors of **6.60° / 7.41°**; a **550 g** payload gives **9.85° / 8.17°**. Rope EA reduced by 20% or free length increased to 1.5 m also causes inadequate pretension. | Measure the assembled stiffness, payload and rope properties; evaluate head-angle and tension feedback. These are assumed sensitivity cases, not measured failure probabilities. |
-| Single-side-rope steering loses elevation | Pulling only the tip side rope maintains the head within 20 ± 5° elevation only to about **±20° yaw**. | Larger working-elevation sweeps need coordinated upper and side ropes. |
-| Tank workspace is restricted | Earlier full-tank screening recommends **20° installation** and steering with the clamp **0–30 mm** past the opening. Deeper insertion and 25° installation cause roof interference in portions of the large-yaw sweep. | Define and enforce a deployment envelope; yaw capability alone does not establish reachability at arbitrary insertion depths. |
-| Longer fronts remain unproven | U6+M3 and U8+M4 fail the existing checks with at most three anchor sets. | Do not extend the front by adding modules without revising stiffness, anchor layout and control. |
-| Backbone attachment and module interfaces are not validated | The model assumes axial load transfer at the NiTi ends and adequate lateral guidance. The STEP-derived assembly does not establish the M backbone integration, inter-module connections or tendon continuity. | Test joint slip, guide spacing, buckling, interface compliance and the assembled tendon route before a full build. The backbone-layout screening in `moving_prototype/full_length/` assumed a 12 mm pin gap and is marked to be ignored. |
-| Head and cable geometry remain provisional | Collision screening uses a **63 mm envelope** and a nominal **500 g** tip payload; actual head shape, centre-of-mass offset and external cables are not fully represented. | Update gravity loads and clearance using the real head, mounting and cable geometry. |
-| Constitutive and actuator behaviour is idealised | No rope friction, winch backlash, NiTi hysteresis, fatigue or wear is included in the round-trip model. Motor torque, speed, travel and encoder resolution are not validated as an integrated drive system. | Identify these properties experimentally and include them in forward simulation and controller verification. |
-| Motion and clearance checks are sampled and quasi-static | The nominal cycle has **17.48 mm** minimum sampled tank clearance, but dynamics and continuous collision safety are not established. | Check transient response, self-collision and the swept envelope; sampled clearance is not a guarantee between samples. |
-| Rear deployment and inspection performance are incomplete | Withdrawal is represented as rigid translation of the clamped front. Rear telescopic deployment, storage, sleeve contact and task coverage are not integrated. | Validate the full mechanism and map camera field of view, focus distance, coil standoff and incidence angle to usable inspection coverage. |
-
-**Update (11 November, later): with a 3 N pretension floor and a stable startup, the nominal round trip passes every check** (0 of 1,069 samples fail; rope tension ≥ 2.74 N; no unstable state), and so does the rope EA −20% case. The 75 GPa rod, 550 g head and 1.5 m free-rope cases still fail, but only on open-loop calibration (posture tracking, or rope tension with a longer rope). Same model parameters; see [backbone study section 10](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11). The paragraph below describes the original 1 N cycle.
-
-Across the five round-trip scenarios, **none passes every check**. The nominal case has **56 failed samples out of 1,033**: 20 during the specified straightening phase and 36 across the four steering legs. Its insertion and withdrawal samples pass, and its steering samples pass the stability and geometry checks, but pretension is insufficient at some intermediate commands. The passing outbound sample prefix reaches **21.25° on either side** before the first failed sample; this is a limit of the tested command sequence and criteria, not a mechanical yaw limit or continuous safety guarantee.
-
-The **5% strain threshold**, **250 N tendon bound** and **180° search cap** are numerical diagnostics or search bounds, not validated hardware ratings. The 1.5 mm sampling/mesh allowance in the round-trip report is an error budget, not a certified global clearance bound. Small simulated return error reflects the ideal reversible model and does not establish physical repeatability.
-
-### Priorities to close these limitations
-
-1. Generate a stable startup and complete rope-length trajectory with pretension margin and consistent fixed-winch stability checks; repeat the same round-trip and sensitivity cases.
-2. Build and test the backbone M module and interfaces: both bending planes, axial stiffness, torsion, guide buckling and end-attachment slip. Replace assumed properties with measured values.
-3. Calibrate winches and ropes, add friction/backlash/hysteresis where supported by measurements, and evaluate posture/tension feedback against actuator limits.
-4. Integrate the actual head, cables and rear mechanism; verify tank-aware motion, dynamic behaviour and inspection coverage before claiming full-system performance.
 
 ## Next steps
 
