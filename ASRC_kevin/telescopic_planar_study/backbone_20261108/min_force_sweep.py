@@ -46,7 +46,8 @@ def straight_seed(variant, pitch, anchors, sub, pretension=0.):
     return r, z, C
 
 
-def min_force(r, z0, C0, yaw_target, pitch, maxiter=200, pretension=0., exact=False, smooth=0., Cprev=None):
+def min_force(r, z0, C0, yaw_target, pitch, maxiter=200, pretension=0., exact=False, smooth=0., Cprev=None, elev=None):
+    elev = pitch if elev is None else elev  # held world head elevation target, deg
     n = r.ndof; k = r.k * 4; cache = {}
     def state(u):
         key = u.tobytes()
@@ -64,7 +65,7 @@ def min_force(r, z0, C0, yaw_target, pitch, maxiter=200, pretension=0., exact=Fa
     def eq(u):
         s = state(u)
         e = np.r_[s['g'], s['a'][0] - np.radians(yaw_target)]
-        return np.r_[e, s['a'][2] - np.radians(pitch)] if exact else e
+        return np.r_[e, s['a'][2] - np.radians(elev)] if exact else e
     def eqjac(u):
         z = u[:n]; C = u[n:n + k].reshape(r.k, 4) * 100
         J = np.zeros((n + 1 + exact, n + k + 1))
@@ -76,7 +77,7 @@ def min_force(r, z0, C0, yaw_target, pitch, maxiter=200, pretension=0., exact=Fa
     def ineq_z(z):
         a, d = r.kinematic_metrics(z); t = r.R0 @ d['frames'][-1, :, 0]
         return np.r_[r.geometry_constraints(z, d), t[0] ** 2 + t[2] ** 2 - .01,
-                     np.radians(5) - (a[2] - np.radians(pitch)), np.radians(5) + (a[2] - np.radians(pitch))]
+                     np.radians(5) - (a[2] - np.radians(elev)), np.radians(5) + (a[2] - np.radians(elev))]
     def ineq(u):
         return np.r_[ineq_z(u[:n]), u[-1] - u[n:n + k]]
     def ineqjac(u):
@@ -102,9 +103,15 @@ def accept(r, z, C, yaw_target, pitch):
     return ok, m
 
 
-def run(variant, pitch, anchors, step, pretension, exact=False, smooth=0.):
+def run(variant, pitch, anchors, step, pretension, exact=False, smooth=0., seed_startup=None):
     tag = f'minforce_{variant}_p{pitch:g}_a{"".join(map(str, anchors))}_pre{pretension:g}' + ('_exact' if exact else '') + (f'_smooth{smooth:g}' if smooth else '')
-    r4, z, C = straight_seed(variant, pitch, anchors, 4, pretension)
+    if seed_startup:
+        # Start from the last state of a startup_sweep.py run (4 cells, yaw 0, head at the pitch).
+        st = np.load(seed_startup); last = max(int(k[1:-3]) for k in st.files if k.endswith('_z4'))
+        r4 = spatial_rod(4, 2, anchors, pitch, 4, variant); z, C = st[f'k{last}_z4'], st[f'k{last}_T4']
+        tag += '_fromstartup'
+    else:
+        r4, z, C = straight_seed(variant, pitch, anchors, 4, pretension)
     r8 = spatial_rod(4, 2, anchors, pitch, 8, variant)
     rows = []; states = {}
     for yaw in np.arange(0, 180.001, step):
@@ -147,4 +154,5 @@ if __name__ == '__main__':
     ap.add_argument('--pretension', type=float, default=1., help='minimum tension on every rope, N')
     ap.add_argument('--exact', action='store_true', help='hold world head elevation exactly at the base pitch')
     ap.add_argument('--smooth', type=float, default=0., help='weight on squared tension change from the previous step (tension in units of 100 N)')
-    a = ap.parse_args(); run(a.variant, a.pitch, a.anchors, a.step, a.pretension, a.exact, a.smooth)
+    ap.add_argument('--seed-startup', default=None, help='startup_sweep.py states (.npz) to start the yaw sweep from')
+    a = ap.parse_args(); run(a.variant, a.pitch, a.anchors, a.step, a.pretension, a.exact, a.smooth, a.seed_startup)

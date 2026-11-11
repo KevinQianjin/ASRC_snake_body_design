@@ -1,3 +1,5 @@
+// IGNORE (marked 2026-11-11): does not match the simulated design. This placeholder uses 84 mm shells + 12 mm pin joints;
+// the design uses continuous 96 mm modules with a full-length 1.8 mm NiTi rod in each M module. See NOT_THE_SIMULATED_DESIGN.md.
 // NON-FINAL PLACEHOLDER: generic rigid M shell with rod-guide webs; not the soft U/M module CAD.
 // Do not use this as the final M-section print design.
 // M-section proof-of-concept with a central, non-printed 1.8 mm NiTi rod.

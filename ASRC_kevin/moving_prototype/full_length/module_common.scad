@@ -1,3 +1,5 @@
+// IGNORE (marked 2026-11-11): does not match the simulated design. This placeholder uses 84 mm shells + 12 mm pin joints;
+// the design uses continuous 96 mm modules with a full-length 1.8 mm NiTi rod in each M module. See NOT_THE_SIMULATED_DESIGN.md.
 // Shared geometry library for the numbered full-length proof-of-motion parts.
 // Module pitch matches the study's 96 mm; printed shell is 84 mm with a 12 mm
 // joint allowance between successive pin centers. These are generic shells,

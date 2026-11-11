@@ -1,3 +1,5 @@
+// IGNORE (marked 2026-11-11): does not match the simulated design. This placeholder uses 84 mm shells + 12 mm pin joints;
+// the design uses continuous 96 mm modules with a full-length 1.8 mm NiTi rod in each M module. See NOT_THE_SIMULATED_DESIGN.md.
 // Backbone end-retention fit coupon for the U4+M2 moving prototype.
 // Print in the intended end-plate material (preferably PA12). This is a
 // low-load test coupon, not a finished robot anchor or a rated fixture.

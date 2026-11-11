@@ -1,0 +1,530 @@
+{
+ "title": "U4+M2 flexible front with 1.8 mm NiTi backbone: model input data",
+ "sources": {
+  "stiffness_database": "ASRC_kevin/module_stiffness.sqlite3",
+  "stiffness_database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374",
+  "rope_catalogue": "ASRC_kevin/h8u12_front5to8_payload500g/inputs/rope_materials.json",
+  "tank_step": "ASRC_kevin/telescopic_planar_study/inputs/tank-v2.step"
+ },
+ "units": "SI unless the key says mm, g or deg",
+ "database_modules": [
+  {
+   "id": "middle_stiffness_pa12",
+   "name": "middle-stiffness",
+   "composition": "PA12",
+   "mass_g": 23.948,
+   "length_mm": 96.0
+  },
+  {
+   "id": "uni_directional_pa12_niti",
+   "name": "uni-directional",
+   "composition": "PA12+NiTi",
+   "mass_g": 37.99,
+   "length_mm": 96.0
+  }
+ ],
+ "database_rigidities": [
+  {
+   "module_id": "middle_stiffness_pa12",
+   "quantity": "EA",
+   "direction": "not_specified",
+   "value": 166.694,
+   "original_value": "166.694",
+   "unit": "N",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "middle_stiffness_pa12",
+   "quantity": "EI",
+   "direction": "all_directions",
+   "value": 0.0441178,
+   "original_value": "0.0441178",
+   "unit": "N*m^2",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "middle_stiffness_pa12",
+   "quantity": "GJ",
+   "direction": "not_specified",
+   "value": 0.437396,
+   "original_value": "0.437396",
+   "unit": "N*m/rad",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "uni_directional_pa12_niti",
+   "quantity": "EA",
+   "direction": "not_specified",
+   "value": 128122.0,
+   "original_value": "128122",
+   "unit": "N",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "uni_directional_pa12_niti",
+   "quantity": "EI",
+   "direction": "horizontal",
+   "value": 1.67184,
+   "original_value": "1.67184",
+   "unit": "N*m^2",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "uni_directional_pa12_niti",
+   "quantity": "EI",
+   "direction": "vertical_against_gravity",
+   "value": 22.2052,
+   "original_value": "22.2052",
+   "unit": "N*m^2",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  },
+  {
+   "module_id": "uni_directional_pa12_niti",
+   "quantity": "GJ",
+   "direction": "not_specified",
+   "value": 4.70037,
+   "original_value": "4.70037",
+   "unit": "N*m/rad",
+   "unit_status": "user_confirmed",
+   "source": "user_provided"
+  }
+ ],
+ "geometry": {
+  "configuration": "U4+M2: modules 1-4 = U (PA12+NiTi), modules 5-6 = M (PA12), numbered from the base",
+  "module_length_mm": 96.0,
+  "module_count": 6,
+  "flexible_length_mm": 576.0,
+  "interface_length_mm": 20.0,
+  "interface_mass": "massless rigid link between clamp and module 1",
+  "nominal_front_length_mm": 596.0,
+  "outer_diameter_mm": 63.0,
+  "tendon_guide_radius_mm": 24.0,
+  "joints": "continuous 96 mm modules; no separate pin joint or gap is modelled",
+  "tendon_positions_local": "up (+Y), right (+Z), down (-Y), left (-Z), each at 24 mm from the axis; world Y is up, X forward, Z right",
+  "rope_guides": "rope passes through every module end disk up to its anchor; straight chord between consecutive disks"
+ },
+ "niti_backbone_rod": {
+  "layout": "one central rod per M module, running the full 96 mm module length, bonded to both M module end disks, laterally guided, bending with the module (stiffnesses add in parallel)",
+  "density_kg_m3": 6450.0,
+  "poisson": 0.33,
+  "variants": {
+   "none": null,
+   "niti18_E40": {
+    "diameter_mm": 1.8,
+    "E_pa": 40000000000.0,
+    "EA_n": 101788.0,
+    "EI_nm2": 0.020612,
+    "torsion_module_nm_per_rad": 0.161435,
+    "mass_per_module_kg": 0.00157567
+   },
+   "niti18_E75": {
+    "diameter_mm": 1.8,
+    "E_pa": 75000000000.0,
+    "EA_n": 190852.0,
+    "EI_nm2": 0.0386475,
+    "torsion_module_nm_per_rad": 0.30269,
+    "mass_per_module_kg": 0.00157567
+   }
+  },
+  "torsion_formula": "G J / L with G = E / (2 (1 + nu)), J = pi d^4 / 32, L = 96 mm",
+  "not_included": "end fittings, guides, adhesive mass; NiTi phase transformation and hysteresis"
+ },
+ "module_properties": [
+  {
+   "variant": "none",
+   "module": 1,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "none",
+   "module": 2,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "none",
+   "module": 3,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "none",
+   "module": 4,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "none",
+   "module": 5,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 23.948,
+   "rope_mass_g": 2.77465,
+   "mass_total_g": 26.7227,
+   "EA_N": 166.694,
+   "EI_vertical_Nm2": 0.0441178,
+   "EI_horizontal_Nm2": 0.0441178,
+   "torsion_module_Nm_per_rad": 0.437396,
+   "GJ_rod_coefficient_Nm2": 0.04199,
+   "ropes_passing": 8
+  },
+  {
+   "variant": "none",
+   "module": 6,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 23.948,
+   "rope_mass_g": 1.38733,
+   "mass_total_g": 25.3353,
+   "EA_N": 166.694,
+   "EI_vertical_Nm2": 0.0441178,
+   "EI_horizontal_Nm2": 0.0441178,
+   "torsion_module_Nm_per_rad": 0.437396,
+   "GJ_rod_coefficient_Nm2": 0.04199,
+   "ropes_passing": 4
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 1,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 2,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 3,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 4,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 5,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 25.5237,
+   "rope_mass_g": 2.77465,
+   "mass_total_g": 28.2983,
+   "EA_N": 101954.0,
+   "EI_vertical_Nm2": 0.0647298,
+   "EI_horizontal_Nm2": 0.0647298,
+   "torsion_module_Nm_per_rad": 0.598831,
+   "GJ_rod_coefficient_Nm2": 0.0574878,
+   "ropes_passing": 8
+  },
+  {
+   "variant": "niti18_E40",
+   "module": 6,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 25.5237,
+   "rope_mass_g": 1.38733,
+   "mass_total_g": 26.911,
+   "EA_N": 101954.0,
+   "EI_vertical_Nm2": 0.0647298,
+   "EI_horizontal_Nm2": 0.0647298,
+   "torsion_module_Nm_per_rad": 0.598831,
+   "GJ_rod_coefficient_Nm2": 0.0574878,
+   "ropes_passing": 4
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 1,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 2,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 3,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 4,
+   "type": "U",
+   "length_mm": 96,
+   "mass_bare_g": 37.99,
+   "rope_mass_g": 4.16198,
+   "mass_total_g": 42.152,
+   "EA_N": 128122.0,
+   "EI_vertical_Nm2": 22.2052,
+   "EI_horizontal_Nm2": 1.67184,
+   "torsion_module_Nm_per_rad": 4.70037,
+   "GJ_rod_coefficient_Nm2": 0.451236,
+   "ropes_passing": 12
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 5,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 25.5237,
+   "rope_mass_g": 2.77465,
+   "mass_total_g": 28.2983,
+   "EA_N": 191018.0,
+   "EI_vertical_Nm2": 0.0827653,
+   "EI_horizontal_Nm2": 0.0827653,
+   "torsion_module_Nm_per_rad": 0.740086,
+   "GJ_rod_coefficient_Nm2": 0.0710483,
+   "ropes_passing": 8
+  },
+  {
+   "variant": "niti18_E75",
+   "module": 6,
+   "type": "M",
+   "length_mm": 96,
+   "mass_bare_g": 25.5237,
+   "rope_mass_g": 1.38733,
+   "mass_total_g": 26.911,
+   "EA_N": 191018.0,
+   "EI_vertical_Nm2": 0.0827653,
+   "EI_horizontal_Nm2": 0.0827653,
+   "torsion_module_Nm_per_rad": 0.740086,
+   "GJ_rod_coefficient_Nm2": 0.0710483,
+   "ropes_passing": 4
+  }
+ ],
+ "module_properties_note": "Database values are structural rigidities of a whole module, not material moduli. Torsion: the database GJ column is the whole-module spring T/theta; the rod coefficient is T/theta x 0.096 m. M EI is the same in all directions; U vertical (against gravity) and horizontal EI differ. Rope mass counts 4 ropes per anchor set routed through that module.",
+ "mass_totals": {
+  "none": {
+   "modules_g": 199.856,
+   "ropes_in_front_g": 20.8099,
+   "front_total_g": 220.666
+  },
+  "niti18_E40": {
+   "modules_g": 203.007,
+   "ropes_in_front_g": 20.8099,
+   "front_total_g": 223.817
+  },
+  "niti18_E75": {
+   "modules_g": 203.007,
+   "ropes_in_front_g": 20.8099,
+   "front_total_g": 223.817
+  }
+ },
+ "payload": {
+  "head_mass_kg": 0.5,
+  "model": "point mass at the tip of module 6, no eccentric moment, no rotary inertia",
+  "collision_envelope": "63 mm diameter sphere/capsule (provisional; real head CAD not available)",
+  "gravity_m_s2": 9.81
+ },
+ "tendons": {
+  "material": "PA6 solid-stock surrogate",
+  "young_modulus_pa": 3300000000.0,
+  "density_kg_m3": 1150.0,
+  "diameter_mm": 2.0,
+  "EA_N": 10367.3,
+  "linear_density_g_per_m": 3.61283,
+  "calibrated": false,
+  "anchor_sets": {
+   "lead_layout": [
+    4,
+    5,
+    6
+   ],
+   "meaning": "each set = 4 ropes (up, right, down, left) anchored at the end disk of that module; module numbers counted from the base",
+   "other_layouts_compared": {
+    "single": [
+     6
+    ],
+    "two": [
+     4,
+     6
+    ],
+    "three_U": [
+     2,
+     4,
+     6
+    ],
+    "three_M": [
+     4,
+     5,
+     6
+    ]
+   }
+  },
+  "friction": "none (frictionless guides)",
+  "bending_stiffness": "none",
+  "pretension_N": 1.0,
+  "pretension_rule": "minimum 1 N on every rope (needed for 3D lateral stability)",
+  "numerical_bounds_N": [
+   1.0,
+   250.0
+  ],
+  "winch_model": {
+   "model": "fixed winch: linear elastic, tension-only rope; T = EA max(0, L + L_free - R) / R",
+   "L_free_m": 1.0,
+   "meaning": "L = routed length inside the front, R = unstretched length set by the winch",
+   "effective_stiffness_N_per_mm_at_1p6m": 6.47953
+  }
+ },
+ "installation_and_tank": {
+  "installation_pitch_deg_studied": [
+   15,
+   20,
+   25
+  ],
+  "recommended_pitch_deg": 20,
+  "insertion_point_length_mm": 449.0,
+  "insertion_point_height_mm": 98.5983,
+  "insertion_plane_width_mm": 648.0,
+  "clamp_position": "s = distance of the base clamp along the axis past the insertion point",
+  "recommended_steering_clamp_s_mm": [
+   0,
+   30
+  ],
+  "envelope_radius_mm": 31.5,
+  "tank_model": "all 362 solids of the named tank subtree in tank-v2.step, 461,524 triangles at 0.5 mm deflection",
+  "tank_coordinates": "length = -oldX, height = oldY, width = -oldZ (mm)"
+ },
+ "numerics": {
+  "rod_model": "extensible rod; planar (2 dof per cell: angle, axial strain) and spatial finite-rotation Kirchhoff rod (4 dof per cell: twist, 2 bending, axial strain)",
+  "cells_per_module": {
+   "search": [
+    2,
+    4
+   ],
+   "reported": 8,
+   "mesh_checks": 16
+  },
+  "quadrature": "4-point Gauss-Legendre per cell for gravity and shape",
+  "gravity_and_tendons": "all ropes and gravity act together; distal ropes compress proximal modules",
+  "stability": "minimum eigenvalue of the energy Hessian including fixed-winch rope stiffness (1 m free rope); must be >= 0",
+  "strain_diagnostic": 0.05,
+  "coarse_strain_bounds": {
+   "low_strain": 0.0475,
+   "planar_low_strain": 0.0485,
+   "exploratory": [
+    -0.3,
+    0.15
+   ]
+  },
+  "geometry_checks": "local bend radius >= 31.5 mm (with 0.98 margin); nonlocal 63 mm capsule self-clearance for segments >= 126 mm apart",
+  "straightness_criteria": "offset <= 10 mm, tangent error <= 5 deg, axial projection >= 95 %, strain <= 5 %, stable",
+  "held_elevation": "world head elevation = installation pitch (+/- 5 deg band, or exact)",
+  "angle_search_cap_deg": 180
+ }
+}
