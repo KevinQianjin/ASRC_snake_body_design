@@ -1,0 +1,25 @@
+/home/user/ASRC_snake_body_design/ASRC_kevin/telescopic_planar_study/backbone_20261108/length_cycle.py:31: DeprecationWarning: Call to deprecated method SetCells. (Use ImportLegacyFormat or SetData instead.) -- Deprecated since version 9.6.0.
+  cells.SetCells(len(self.F),numpy_to_vtkIdTypeArray(np.c_[np.full(len(self.F),3),self.F].astype(np.int64).ravel(),deep=True))
+E75 50 straighten 0.0 103.4
+E75 100 entry 0.0 77.7
+E75 150 entry 0.0 55.4
+E75 200 entry 0.0 28.4
+E75 250 entry 0.0 53.1
+E75 300 entry 0.0 62.9
+E75 350 right_out 33.6 65.7
+E75 400 right_out 63.3 66.0
+E75 450 right_out 145.0 25.6
+E75 500 right_return 133.3 32.3
+E75 550 right_return 54.4 66.0
+E75 600 right_return 22.5 65.1
+E75 650 left_out -51.1 63.0
+E75 700 left_out -103.3 63.5
+E75 750 left_return -168.3 30.2
+E75 800 left_return -93.3 63.3
+E75 850 left_return -50.0 63.4
+E75 900 exit 0.0 64.0
+E75 950 exit 0.0 60.8
+E75 1000 exit 0.0 32.9
+E75 1050 exit 0.0 43.8
+E75 1100 exit 0.0 73.1
+{"case": "E75", "variant": "niti18_E75", "payload_kg": 0.5, "rope_ea_scale": 1.0, "free_length_m": 1.0, "completed": true, "states": 1145, "all_checks_pass": false, "failed_checks": 408, "minimum_clearance_mm": 20.82207647452016, "minimum_eigenvalue": 0.290978618310874, "minimum_tension_n": 3.707631980508254, "peak_tension_n": 24.414822809044782, "maximum_yaw_error_deg": 5.7189086331356975, "maximum_elevation_error_deg": 6.471190759416363, "maximum_point_step_mm": 4.999999999999987, "source_sha256": "c75350e53139759f09c8e09db9c81225c25c9fbd6c332bdc6d274a05f98000b6", "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d", "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables", "return_head_error_mm": 4.516775726344007e-07}

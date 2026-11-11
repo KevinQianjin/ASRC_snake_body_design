@@ -307,6 +307,47 @@ This test combines sections 5 and 7. It settles the open question of what happen
   3. Use winches with encoder resolution well below 0.1 mm. For a 10 mm drum radius, 0.1 mm is 0.6° of drum rotation.
 - **Not covered:** friction and stick-slip in the guides, winch dynamics, rope creep and temperature, NiTi hysteresis, and the 1 m free-rope assumption (a shorter rope is stiffer, which reduces the slack problem).
 
+## 10. Round-trip cycle with 3 N pretension and a stable startup (2026-11-11)
+
+This repeats the 11 November length-controlled round trip (`length_cycle.py`; straighten, insert, sweep right and back, sweep left and back, withdraw) with **the same model parameters** (`model_data/MODEL_DATA.md`; continuous 96 mm modules, full-length 1.8 mm rod, E = 40 GPa, 500 g head, 1 m free rope). Only the rope-length commands change:
+
+- **Pretension floor of 3 N on every rope** in the reference poses (`min_force_sweep.py --pretension 3 --seed-startup ...`), instead of 1 N.
+- **Stable startup** (`startup_sweep.py`), instead of paying out the upper ropes 10 mm and reeling in. The front starts in natural sag with every rope at 3 N (head at −57°). The head is then raised in 2.5° steps to 20° through held states with all ropes ≥ 3 N. All 32 states are stable at 8 cells (minimum eigenvalue 0.685; peak rope 17.4 N).
+- The yaw sweep starts from the startup's end state, so the two connect.
+
+The acceptance checks are unchanged (rope 0.95–250 N, stable, clearance ≥ 5 mm after a 1.5 mm allowance, yaw error ≤ 1°, elevation 20 ± 5°), and so are the five sensitivity cases. Results are in `length_cycle_results_pre3/` (report: [`REPORT.md`](length_cycle_results_pre3/REPORT.md)).
+
+| Case (identical open-loop commands) | 11 Nov: 1 N, 10 mm payout start | **3 N, stable startup** | Remaining failure type |
+|---|---|---|---|
+| Nominal | 56 of 1,033 fail (13 unstable, tension) | **0 of 1,069 fail**; 0–175° both sides | — |
+| Rope EA −20% | all fail (tension, unstable) | **0 of 1,071 fail** | — |
+| Free rope 1.5 m | all fail | 543 of 1,070 fail | rope tension 0.77–0.95 N, mainly insertion and withdrawal |
+| Rod E = 75 GPa | all fail | 318 of 1,063 fail; clean to ±32.5° | yaw > 1°, elevation > 5° only |
+| Head 550 g | all fail | 262 of 1,067 fail; clean to ±78° | yaw > 1°, elevation > 5° only |
+
+![Cycle comparison, 3 N](length_cycle_results_pre3/cycle_comparison.png)
+
+- **Nominal cycle passes every check.**
+  - Rope tension stays ≥ 2.74 N with a 17.6 N peak.
+  - Minimum stability eigenvalue is 0.166, and tank clearance is ≥ 20.5 mm (19.0 mm after the allowance).
+  - Yaw error is ≤ 0.24°, and the head returns to its start within 0.0001 mm.
+- **No unstable state and no rope below 0.95 N** occurs in four of the five cases. The startup and stability problems of 11 November are removed.
+- **What remains is open-loop calibration.**
+  - A stiffer rod or heavier head moves the head off target (6.3° / 9.0° yaw at worst).
+  - A longer free rope gives less tension for the same commands.
+  - These need head-angle and rope-tension feedback, or commands recalibrated to the measured parameters, not more pretension.
+- **More pretension is not automatically better.** With a 5 N floor (`length_cycle_results_pre5/`), the nominal cycle has 48 failures. All of them are between 51.9° and 53.9° yaw, where the 5 N pose sequence re-allocates 13.4 N between the 50° and 55° poses; linear length interpolation cannot follow that. The 3 N sequence changes at most 5.8 N between poses. The 5 N case could be fixed with finer pose spacing, but 3 N already passes, so **3 N is the recommended floor**.
+- **Known imperfection.** During insertion and withdrawal the head sits at about 17°, not 20°. The 0° pose of the 3 N sweep was accepted on the 8-cell mesh within the ±5° band. This produces the 3.9° maximum elevation error in the nominal case, which is within the acceptance limit. Requiring exact elevation at 8 cells, as `startup_sweep.py` now does, would remove it.
+
+Reproduction:
+
+```bash
+python startup_sweep.py --pretension 3
+python min_force_sweep.py --exact --step 5 --smooth 1 --pretension 3 --variant niti18_E40 --pitch 20 --anchors 4 5 6 --seed-startup results/startup_niti18_E40_p20_pre3_states.npz
+python length_cycle.py --source results/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_states.npz --startup results/startup_niti18_E40_p20_pre3_states.npz --out length_cycle_results_pre3
+python summarize_cycle_run.py length_cycle_results_pre3 --source results/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_states.npz --startup results/startup_niti18_E40_p20_pre3_states.npz --pretension 3
+```
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).

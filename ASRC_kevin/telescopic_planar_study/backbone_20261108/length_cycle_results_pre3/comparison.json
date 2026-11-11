@@ -1,0 +1,500 @@
+{
+  "provenance": {
+    "source": "results/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_states.npz",
+    "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+    "database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374",
+    "spatial_kernel_sha256": "99722b6a6e6c11bc09da7e4baef603dd183bc974ea8eecd80f56a9764a9cbcf3",
+    "git_head": "b2cd5d692ea8d7c31d7aed8ecec7744e09d1b6e2",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "numba": "0.68.1",
+      "trimesh": "5.2.0",
+      "rtree": "1.4.1",
+      "vtk": "9.6.2"
+    },
+    "code_sha256": {
+      "length_cycle.py": "b5420acb21c7a638cb3901942c2c576eef04f9231677fec267833d63aa831ccc",
+      "backbone.py": "1bca7e343f2e08fb547ac305b36fabe8441a85b2fb467f8cdb47004b9684cc3e",
+      "tank3d_screen.py": "eefda02388b46bffa4ccfaac785887c828a456f4333752e0206d8647799bc349"
+    }
+  },
+  "cases": [
+    {
+      "case": "E75",
+      "variant": "niti18_E75",
+      "payload_kg": 0.5,
+      "rope_ea_scale": 1.0,
+      "free_length_m": 1.0,
+      "completed": true,
+      "states": 1063,
+      "all_checks_pass": false,
+      "failed_checks": 318,
+      "minimum_clearance_mm": 14.371623514391473,
+      "minimum_eigenvalue": 0.26291639891806506,
+      "minimum_tension_n": 1.6170155855479416,
+      "peak_tension_n": 20.13716484420366,
+      "maximum_yaw_error_deg": 6.279667050768694,
+      "maximum_elevation_error_deg": 7.179759347155954,
+      "maximum_point_step_mm": 4.999999999999987,
+      "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+      "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+      "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables",
+      "return_head_error_mm": 2.5636467741667227e-06,
+      "failure_counts": {
+        "yaw_error_above_1deg": 278,
+        "elevation_error_above_5deg": 180
+      },
+      "first_failures": {
+        "yaw_error_above_1deg": {
+          "index": 355,
+          "phase": "right_out",
+          "target_yaw_deg": 35.0,
+          "yaw_deg": 33.97721856769397,
+          "clamp_s_mm": 15.0
+        },
+        "elevation_error_above_5deg": {
+          "index": 384,
+          "phase": "right_out",
+          "target_yaw_deg": 86.66666666666667,
+          "yaw_deg": 86.4193705697224,
+          "clamp_s_mm": 15.0
+        }
+      },
+      "phases": {
+        "straighten": {
+          "states": 64,
+          "failed_checks": 0,
+          "min_clearance_mm": 94.70842417244495,
+          "min_eigenvalue": 0.7329980459257828,
+          "max_yaw_error_deg": 8.270382090301058e-07,
+          "min_tension_n": 1.955991584526805
+        },
+        "entry": {
+          "states": 261,
+          "failed_checks": 0,
+          "min_clearance_mm": 23.869453841862608,
+          "min_eigenvalue": 0.7393210932345377,
+          "max_yaw_error_deg": 1.9607497917808433e-09,
+          "min_tension_n": 2.789109980950173
+        },
+        "right_out": {
+          "states": 120,
+          "failed_checks": 80,
+          "min_clearance_mm": 14.371623514391473,
+          "min_eigenvalue": 0.26291641777181196,
+          "max_yaw_error_deg": 6.279667016398406,
+          "min_tension_n": 1.6170166306990168
+        },
+        "right_return": {
+          "states": 120,
+          "failed_checks": 79,
+          "min_clearance_mm": 14.371624257214982,
+          "min_eigenvalue": 0.262916432398961,
+          "max_yaw_error_deg": 6.279667050768694,
+          "min_tension_n": 1.6170162926908704
+        },
+        "left_out": {
+          "states": 120,
+          "failed_checks": 80,
+          "min_clearance_mm": 23.037650588398428,
+          "min_eigenvalue": 0.26291641749643113,
+          "max_yaw_error_deg": 6.27966703272341,
+          "min_tension_n": 1.6170155855479416
+        },
+        "left_return": {
+          "states": 120,
+          "failed_checks": 79,
+          "min_clearance_mm": 23.037650699371717,
+          "min_eigenvalue": 0.26291639891806506,
+          "max_yaw_error_deg": 6.279667039970803,
+          "min_tension_n": 1.6170161229329687
+        },
+        "exit": {
+          "states": 258,
+          "failed_checks": 0,
+          "min_clearance_mm": 23.869454353089942,
+          "min_eigenvalue": 0.7393210930274703,
+          "max_yaw_error_deg": 1.196897229010631e-07,
+          "min_tension_n": 2.7891100032256437
+        }
+      },
+      "all_checks_passing_outbound_prefix_deg": {
+        "right_out": 32.5,
+        "left_out": 32.5
+      }
+    },
+    {
+      "case": "free1500mm",
+      "variant": "niti18_E40",
+      "payload_kg": 0.5,
+      "rope_ea_scale": 1.0,
+      "free_length_m": 1.5,
+      "completed": true,
+      "states": 1070,
+      "all_checks_pass": false,
+      "failed_checks": 543,
+      "minimum_clearance_mm": 18.733037854648416,
+      "minimum_eigenvalue": 0.15586628892029133,
+      "minimum_tension_n": 0.7695655427862357,
+      "peak_tension_n": 16.452441812937984,
+      "maximum_yaw_error_deg": 0.8793886262024557,
+      "maximum_elevation_error_deg": 4.829957651513313,
+      "maximum_point_step_mm": 4.999999999999987,
+      "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+      "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+      "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables",
+      "return_head_error_mm": 3.3692627342193884e-07,
+      "failure_counts": {
+        "pretension_below_0.95N": 543
+      },
+      "first_failures": {
+        "pretension_below_0.95N": {
+          "index": 53,
+          "phase": "straighten",
+          "target_yaw_deg": 0.0,
+          "yaw_deg": 2.501612814570616e-09,
+          "clamp_s_mm": -750.0
+        }
+      },
+      "phases": {
+        "straighten": {
+          "states": 64,
+          "failed_checks": 11,
+          "min_clearance_mm": 96.88703616770155,
+          "min_eigenvalue": 0.696343948368104,
+          "max_yaw_error_deg": 9.909767448479488e-07,
+          "min_tension_n": 0.7695655427862357
+        },
+        "entry": {
+          "states": 259,
+          "failed_checks": 259,
+          "min_clearance_mm": 18.733037925061076,
+          "min_eigenvalue": 0.700363972871904,
+          "max_yaw_error_deg": 1.6779964611507006e-09,
+          "min_tension_n": 0.8618462352038441
+        },
+        "right_out": {
+          "states": 122,
+          "failed_checks": 3,
+          "min_clearance_mm": 20.27030326211065,
+          "min_eigenvalue": 0.15586628892029133,
+          "max_yaw_error_deg": 0.8793886262024557,
+          "min_tension_n": 0.8978876733907232
+        },
+        "right_return": {
+          "states": 122,
+          "failed_checks": 4,
+          "min_clearance_mm": 20.27030342084941,
+          "min_eigenvalue": 0.15682322833148157,
+          "max_yaw_error_deg": 0.8793863570226677,
+          "min_tension_n": 0.8618463610534024
+        },
+        "left_out": {
+          "states": 122,
+          "failed_checks": 3,
+          "min_clearance_mm": 27.39764952850401,
+          "min_eigenvalue": 0.1558662891273391,
+          "max_yaw_error_deg": 0.8793863341304871,
+          "min_tension_n": 0.8978876741591147
+        },
+        "left_return": {
+          "states": 122,
+          "failed_checks": 4,
+          "min_clearance_mm": 27.397649604773726,
+          "min_eigenvalue": 0.15682322833052106,
+          "max_yaw_error_deg": 0.8793863570564611,
+          "min_tension_n": 0.8618462672125174
+        },
+        "exit": {
+          "states": 259,
+          "failed_checks": 259,
+          "min_clearance_mm": 18.733037854648416,
+          "min_eigenvalue": 0.7003639728022343,
+          "max_yaw_error_deg": 6.00517251016352e-08,
+          "min_tension_n": 0.8618462672125174
+        }
+      },
+      "all_checks_passing_outbound_prefix_deg": {
+        "right_out": 0.0,
+        "left_out": 0.0
+      }
+    },
+    {
+      "case": "nominal",
+      "variant": "niti18_E40",
+      "payload_kg": 0.5,
+      "rope_ea_scale": 1.0,
+      "free_length_m": 1.0,
+      "completed": true,
+      "states": 1069,
+      "all_checks_pass": true,
+      "failed_checks": 0,
+      "minimum_clearance_mm": 20.460938588563955,
+      "minimum_eigenvalue": 0.16588138434737842,
+      "minimum_tension_n": 2.735989242797684,
+      "peak_tension_n": 17.645823806706222,
+      "maximum_yaw_error_deg": 0.23938675852678326,
+      "maximum_elevation_error_deg": 3.9301877495341735,
+      "maximum_point_step_mm": 4.999999999999987,
+      "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+      "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+      "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables",
+      "return_head_error_mm": 2.101760939921554e-06,
+      "failure_counts": {},
+      "first_failures": {},
+      "phases": {
+        "straighten": {
+          "states": 64,
+          "failed_checks": 0,
+          "min_clearance_mm": 96.5646874658359,
+          "min_eigenvalue": 0.6852852793011655,
+          "max_yaw_error_deg": 1.12336064411587e-06,
+          "min_tension_n": 2.995249007720496
+        },
+        "entry": {
+          "states": 258,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.460938588563955,
+          "min_eigenvalue": 0.6892611189933595,
+          "max_yaw_error_deg": 1.458384197356741e-07,
+          "min_tension_n": 2.9999985035706294
+        },
+        "right_out": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.629746561653853,
+          "min_eigenvalue": 0.16588138434737842,
+          "max_yaw_error_deg": 0.2393857236550332,
+          "min_tension_n": 2.735989243556247
+        },
+        "right_return": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.629746446177812,
+          "min_eigenvalue": 0.16671433262782281,
+          "max_yaw_error_deg": 0.23938675806212828,
+          "min_tension_n": 2.735990108744451
+        },
+        "left_out": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 28.187438891645087,
+          "min_eigenvalue": 0.16588138703051797,
+          "max_yaw_error_deg": 0.23938571353339277,
+          "min_tension_n": 2.735989242797684
+        },
+        "left_return": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 28.187439200740023,
+          "min_eigenvalue": 0.16671431551736393,
+          "max_yaw_error_deg": 0.23938675852678326,
+          "min_tension_n": 2.735992066461993
+        },
+        "exit": {
+          "states": 259,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.460940590576044,
+          "min_eigenvalue": 0.6892611095597772,
+          "max_yaw_error_deg": 5.958743881182764e-07,
+          "min_tension_n": 2.9999985471650876
+        }
+      },
+      "all_checks_passing_outbound_prefix_deg": {
+        "right_out": 175.0,
+        "left_out": 175.0
+      }
+    },
+    {
+      "case": "payload550g",
+      "variant": "niti18_E40",
+      "payload_kg": 0.55,
+      "rope_ea_scale": 1.0,
+      "free_length_m": 1.0,
+      "completed": true,
+      "states": 1067,
+      "all_checks_pass": false,
+      "failed_checks": 262,
+      "minimum_clearance_mm": 18.10897723061965,
+      "minimum_eigenvalue": 0.06797477609839558,
+      "minimum_tension_n": 1.692187123689744,
+      "peak_tension_n": 18.406150769858808,
+      "maximum_yaw_error_deg": 8.964947918520664,
+      "maximum_elevation_error_deg": 7.678761230018694,
+      "maximum_point_step_mm": 4.9999999999999645,
+      "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+      "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+      "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables",
+      "return_head_error_mm": 1.2718184251546048e-06,
+      "failure_counts": {
+        "elevation_error_above_5deg": 208,
+        "yaw_error_above_1deg": 230
+      },
+      "first_failures": {
+        "elevation_error_above_5deg": {
+          "index": 378,
+          "phase": "right_out",
+          "target_yaw_deg": 80.0,
+          "yaw_deg": 79.5894166741727,
+          "clamp_s_mm": 15.0
+        },
+        "yaw_error_above_1deg": {
+          "index": 386,
+          "phase": "right_out",
+          "target_yaw_deg": 93.33333333333333,
+          "yaw_deg": 92.24948088376914,
+          "clamp_s_mm": 15.0
+        }
+      },
+      "phases": {
+        "straighten": {
+          "states": 64,
+          "failed_checks": 0,
+          "min_clearance_mm": 97.90361361410973,
+          "min_eigenvalue": 0.6650593329734431,
+          "max_yaw_error_deg": 5.613722613403414e-07,
+          "min_tension_n": 2.0123530752163816
+        },
+        "entry": {
+          "states": 259,
+          "failed_checks": 0,
+          "min_clearance_mm": 18.10897723061965,
+          "min_eigenvalue": 0.6688718324353062,
+          "max_yaw_error_deg": 2.0164135917820726e-08,
+          "min_tension_n": 2.014987286416937
+        },
+        "right_out": {
+          "states": 121,
+          "failed_checks": 66,
+          "min_clearance_mm": 26.556775510212347,
+          "min_eigenvalue": 0.06797479320949337,
+          "max_yaw_error_deg": 8.964947918520664,
+          "min_tension_n": 1.692187123689744
+        },
+        "right_return": {
+          "states": 121,
+          "failed_checks": 65,
+          "min_clearance_mm": 26.55677555896169,
+          "min_eigenvalue": 0.07302187640742208,
+          "max_yaw_error_deg": 8.964947039851523,
+          "min_tension_n": 1.692190169010307
+        },
+        "left_out": {
+          "states": 121,
+          "failed_checks": 66,
+          "min_clearance_mm": 31.484308704690378,
+          "min_eigenvalue": 0.06797477609839558,
+          "max_yaw_error_deg": 8.964947048462903,
+          "min_tension_n": 1.692187123689744
+        },
+        "left_return": {
+          "states": 121,
+          "failed_checks": 65,
+          "min_clearance_mm": 32.055883000373626,
+          "min_eigenvalue": 0.07302188509676014,
+          "max_yaw_error_deg": 8.964947078406396,
+          "min_tension_n": 1.6921901689867194
+        },
+        "exit": {
+          "states": 260,
+          "failed_checks": 0,
+          "min_clearance_mm": 18.108977528737256,
+          "min_eigenvalue": 0.6688718309082095,
+          "max_yaw_error_deg": 6.723194278824027e-07,
+          "min_tension_n": 2.0149876808752945
+        }
+      },
+      "all_checks_passing_outbound_prefix_deg": {
+        "right_out": 78.33333333333333,
+        "left_out": 78.33333333333333
+      }
+    },
+    {
+      "case": "ropeEA80pct",
+      "variant": "niti18_E40",
+      "payload_kg": 0.5,
+      "rope_ea_scale": 0.8,
+      "free_length_m": 1.0,
+      "completed": true,
+      "states": 1071,
+      "all_checks_pass": true,
+      "failed_checks": 0,
+      "minimum_clearance_mm": 19.155820565984236,
+      "minimum_eigenvalue": 0.15858639394988486,
+      "minimum_tension_n": 1.1664455961514568,
+      "peak_tension_n": 16.60350533582739,
+      "maximum_yaw_error_deg": 0.6771320734248718,
+      "maximum_elevation_error_deg": 4.637460502477886,
+      "maximum_point_step_mm": 4.999999999999987,
+      "source_sha256": "f811664bcf11eed60629a09bc3bf58aca3a34818482ad0d94f131a8359acbc95",
+      "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+      "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables",
+      "return_head_error_mm": 5.957494433003748e-07,
+      "failure_counts": {},
+      "first_failures": {},
+      "phases": {
+        "straighten": {
+          "states": 64,
+          "failed_checks": 0,
+          "min_clearance_mm": 96.79438959845501,
+          "min_eigenvalue": 0.6946612205186544,
+          "max_yaw_error_deg": 8.832294447422925e-07,
+          "min_tension_n": 1.1664455961514568
+        },
+        "entry": {
+          "states": 259,
+          "failed_checks": 0,
+          "min_clearance_mm": 19.160091587750124,
+          "min_eigenvalue": 0.6989417464993382,
+          "max_yaw_error_deg": 5.464068582740199e-09,
+          "min_tension_n": 1.2394460849309141
+        },
+        "right_out": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.355638809771975,
+          "min_eigenvalue": 0.15858639404606942,
+          "max_yaw_error_deg": 0.6771312104282572,
+          "min_tension_n": 1.269864553057271
+        },
+        "right_return": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 20.355638777817596,
+          "min_eigenvalue": 0.15949790050924423,
+          "max_yaw_error_deg": 0.6771320515001662,
+          "min_tension_n": 1.2394460727850813
+        },
+        "left_out": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 27.61109129303059,
+          "min_eigenvalue": 0.15858639394988486,
+          "max_yaw_error_deg": 0.6771312102487173,
+          "min_tension_n": 1.2698645530561
+        },
+        "left_return": {
+          "states": 122,
+          "failed_checks": 0,
+          "min_clearance_mm": 27.61109268163011,
+          "min_eigenvalue": 0.15949790199281177,
+          "max_yaw_error_deg": 0.6771320734248718,
+          "min_tension_n": 1.239446061449283
+        },
+        "exit": {
+          "states": 260,
+          "failed_checks": 0,
+          "min_clearance_mm": 19.155820565984236,
+          "min_eigenvalue": 0.6989417466372215,
+          "max_yaw_error_deg": 1.3113534619818911e-07,
+          "min_tension_n": 1.239446061449283
+        }
+      },
+      "all_checks_passing_outbound_prefix_deg": {
+        "right_out": 175.0,
+        "left_out": 175.0
+      }
+    }
+  ]
+}

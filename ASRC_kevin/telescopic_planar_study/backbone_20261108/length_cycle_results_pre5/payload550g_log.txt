@@ -1,0 +1,26 @@
+/home/user/ASRC_snake_body_design/ASRC_kevin/telescopic_planar_study/backbone_20261108/length_cycle.py:31: DeprecationWarning: Call to deprecated method SetCells. (Use ImportLegacyFormat or SetData instead.) -- Deprecated since version 9.6.0.
+  cells.SetCells(len(self.F),numpy_to_vtkIdTypeArray(np.c_[np.full(len(self.F),3),self.F].astype(np.int64).ravel(),deep=True))
+payload550g 50 straighten 0.0 104.3
+payload550g 100 entry 0.0 78.2
+payload550g 150 entry 0.0 55.4
+payload550g 200 entry 0.0 22.6
+payload550g 250 entry 0.0 49.7
+payload550g 300 entry 0.0 62.7
+payload550g 350 right_out 32.9 65.7
+payload550g 400 right_out 61.7 66.0
+payload550g 450 right_out 147.5 45.8
+payload550g 500 right_return 147.5 45.8
+payload550g 550 right_return 61.7 66.0
+payload550g 600 right_return 32.9 65.7
+payload550g 650 left_out -48.3 63.2
+payload550g 700 left_out -91.7 63.0
+payload550g 750 left_out -169.2 42.8
+payload550g 800 left_return -115.0 63.6
+payload550g 850 left_return -52.4 62.6
+payload550g 900 exit 0.0 64.4
+payload550g 950 exit 0.0 61.3
+payload550g 1000 exit 0.0 36.6
+payload550g 1050 exit 0.0 32.5
+payload550g 1100 exit 0.0 67.5
+payload550g 1150 exit 0.0 93.0
+{"case": "payload550g", "variant": "niti18_E40", "payload_kg": 0.55, "rope_ea_scale": 1.0, "free_length_m": 1.0, "completed": true, "states": 1157, "all_checks_pass": false, "failed_checks": 310, "minimum_clearance_mm": 22.450302672780992, "minimum_eigenvalue": 0.10193992290711451, "minimum_tension_n": 0.006904513850824561, "peak_tension_n": 23.74357775516555, "maximum_yaw_error_deg": 8.198625846740242, "maximum_elevation_error_deg": 6.899036131118365, "maximum_point_step_mm": 4.999999999999987, "source_sha256": "c75350e53139759f09c8e09db9c81225c25c9fbd6c332bdc6d274a05f98000b6", "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d", "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables", "return_head_error_mm": 2.4879876400254895e-07}

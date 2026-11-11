@@ -79,6 +79,9 @@ class LengthDrive:
         return float(eigvalsh(H,subset_by_index=[0,0])[0])
 
 
+STARTUP=None  # optional startup_sweep.py states (.npz); None keeps the original 10 mm payout start
+
+
 def references(max_yaw=175.):
     data=np.load(SOURCE); r=spatial_rod(4,2,[4,5,6],20,8)
     drive=LengthDrive(r); poses=[]
@@ -91,20 +94,30 @@ def references(max_yaw=175.):
     right=[(y,z,R) for y,z,R in poses]
     left=[(-y,None,R[:,[0,3,2,1]]) for y,z,R in poses]
     knots=[]
-    # Defined slackened start: pay out upper ropes 10 mm, then reel to held baseline.
-    for payout in np.arange(10.,-.001,-1.):
-        R=right[0][2].copy(); R[:,0]+=payout/1000
-        knots.append(('straighten',0.,-750.,R))
+    z_start=poses[0][1]
+    if STARTUP is None:
+        # Defined slackened start: pay out upper ropes 10 mm, then reel to held baseline.
+        for payout in np.arange(10.,-.001,-1.):
+            R=right[0][2].copy(); R[:,0]+=payout/1000
+            knots.append(('straighten',0.,-750.,R))
+    else:
+        # Stable startup: natural sag with every rope at the pretension, then held-elevation
+        # states raised step by step to the working elevation (startup_sweep.py).
+        st=np.load(STARTUP); ks=sorted(int(k[1:-3]) for k in st.files if k.endswith('_z8'))
+        for k in ks:
+            knots.append(('straighten',0.,-750.,drive.inverse(st[f'k{k}_z8'],st[f'k{k}_T8'])))
+        knots.append(('straighten',0.,-750.,right[0][2]))
+        z_start=st[f'k{ks[0]}_z8']
     # Entry/exit is rigid translation of a held straight front. No release-to-sag.
     for s in np.arange(-750.,15.001,5.): knots.append(('entry',0.,float(s),right[0][2]))
     for leg,seq in [('right_out',right[1:]),('right_return',right[-2::-1]),('left_out',left[1:]),('left_return',left[-2::-1])]:
         for yaw,_,R in seq: knots.append((leg,yaw,15.,R))
     for s in np.arange(10.,-750.001,-5.): knots.append(('exit',0.,float(s),right[0][2]))
-    return r, poses[0][1], knots
+    return r, z_start, knots, right[0][2]
 
 
 def run(case,tank,max_yaw=175.):
-    _,z0,knots=references(max_yaw)
+    _,z0,knots,R_base=references(max_yaw)
     settings={'nominal':('niti18_E40',.5,1.,1.), 'E75':('niti18_E75',.5,1.,1.),
               'payload550g':('niti18_E40',.55,1.,1.),'ropeEA80pct':('niti18_E40',.5,.8,1.),
               'free1500mm':('niti18_E40',.5,1.,1.5)}
@@ -151,7 +164,7 @@ def run(case,tank,max_yaw=175.):
             for j,name in enumerate(['up','right','down','left']):
                 key=f'a{a}_{name}'
                 rec[key+'_rest_mm']=float(R[i,j]*1000)
-                rec[key+'_pull_mm']=float((knots[10][3][i,j]-R[i,j])*1000)
+                rec[key+'_pull_mm']=float((R_base[i,j]+(free-1.)-R[i,j])*1000)
                 rec[key+'_tension_n']=float(T[i,j])
         rows.append(rec);states.append(x.copy());z=x;last_R=R.copy();last_y=y;last_s=s;last_world=tank_world
         if len(rows)%50==0: print(case,len(rows),leg,round(y,1),round(gap,1),flush=True)
@@ -219,5 +232,12 @@ def plot():
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--cases',nargs='+',default=['nominal','E75','payload550g','ropeEA80pct','free1500mm']);p.add_argument('--max-yaw',type=float,default=175)
-    a=p.parse_args(); tank=FastTank()
+    p.add_argument('--source',default=None,help='min_force_sweep.py states (.npz) to follow; default: the 1 N reference sweep')
+    p.add_argument('--startup',default=None,help='startup_sweep.py states (.npz); default: 10 mm upper-rope payout start')
+    p.add_argument('--out',default=None,help='results folder; default length_cycle_results')
+    a=p.parse_args()
+    if a.source: SOURCE=Path(a.source).resolve()
+    if a.startup: STARTUP=Path(a.startup).resolve()
+    if a.out: OUT=Path(a.out).resolve()
+    tank=FastTank()
     for case in a.cases: run(case,tank,a.max_yaw);plot()
