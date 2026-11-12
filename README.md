@@ -23,7 +23,7 @@ The **550 g head** still shows temporary angle error at 155–175° yaw (about 1
 
 Next: update the controller gains online from measured responses.
 
-[Detailed results](simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v3_results/)
+[Daily report](reports/daily/Report_2026_11_12.pdf) · [Detailed results](simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v3_results/)
 
 ![Closed loop v2 vs v3](simulations/u4m2/backbone_20261108/closed_loop_v3_results/v2_v3_comparison.png)
 
@@ -50,7 +50,7 @@ The closed-loop round trip was re-run with a revised control sequence (`closed_l
   - Up to 3.3° at the straighten-to-insertion hand-off, where the 3 N reference holds about 17° instead of 20°.
   - Up to 2.85° at 155–175° yaw with the 550 g head.
 
-[Detailed results](simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller source](simulations/u4m2/backbone_20261108/closed_loop_v2.py) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v2_results/)
+[Daily report](reports/daily/Report_2026_11_12.pdf) · [Detailed results](simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller source](simulations/u4m2/backbone_20261108/closed_loop_v2.py) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v2_results/)
 
 ![Closed-loop v1 vs v2](simulations/u4m2/backbone_20261108/closed_loop_v2_results/v1_v2_comparison.png)
 
