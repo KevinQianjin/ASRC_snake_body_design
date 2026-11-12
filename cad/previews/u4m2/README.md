@@ -12,6 +12,10 @@ open only the `.scad` file, OpenSCAD will show “Can't open import file” warn
 because it cannot find those meshes. Do not rename or move the mesh files away
 from the SCAD files.
 
+## M end-disk fit coupon
+
+`M_end_disk_coupon.scad` slices a 3 mm end-disk coupon (Z = −48 to −45 mm) from `Medium_Stiffness_96.stl`, keeping the real 8.4 mm central passage and surrounding end-face geometry. It adds no anchor. Use it to check proposed rod-end hardware for the Ø1.8 mm NiTi backbone against the actual M end face; `show_rod_preview = true` shows the rod. Open it in this folder so it finds the STL. It is a fit check only, not a load-rated anchor.
+
 ## What is in the STEP files
 
 The U STEP contains five solids: one full-module body and four long leaf-spring

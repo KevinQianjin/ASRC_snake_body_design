@@ -1,10 +1,10 @@
 {
  "title": "U4+M2 flexible front with 1.8 mm NiTi backbone: model input data",
  "sources": {
-  "stiffness_database": "ASRC_kevin/module_stiffness.sqlite3",
+  "stiffness_database": "data/materials/module_stiffness.sqlite3",
   "stiffness_database_sha256": "584a1486f96af7603d794cc9a243706ee5344161054479b4e12d769d63588374",
-  "rope_catalogue": "ASRC_kevin/h8u12_front5to8_payload500g/inputs/rope_materials.json",
-  "tank_step": "ASRC_kevin/telescopic_planar_study/inputs/tank-v2.step"
+  "rope_catalogue": "simulations/shared/h8u12_front5to8_payload500g/inputs/rope_materials.json",
+  "tank_step": "cad/tank/tank-v2.step"
  },
  "units": "SI unless the key says mm, g or deg",
  "database_modules": [
