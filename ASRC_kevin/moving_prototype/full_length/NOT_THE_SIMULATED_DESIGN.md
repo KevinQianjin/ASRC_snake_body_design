@@ -16,3 +16,5 @@ Everything in `ASRC_kevin/moving_prototype/full_length/` was built on a placehol
 The model parameters are listed in [`../../telescopic_planar_study/backbone_20261108/model_data/MODEL_DATA.md`](../../telescopic_planar_study/backbone_20261108/model_data/MODEL_DATA.md).
 
 The files are kept for reference only. Do not print, order or test from them, and do not use the layout screening stresses. The anchor fit coupon (`09_backbone_anchor_coupon.scad`) only checks how a ferrule seats in PA12; any reuse must first be checked against the 96 mm continuous-module design.
+
+For the confirmed cleanup proposal list (with no deletions applied yet), see [`CLEANUP_REVIEW_CONFIRMATION.md`](CLEANUP_REVIEW_CONFIRMATION.md).
