@@ -417,6 +417,61 @@ python summarize_closed_loop_v2.py
 python -m unittest test_closed_loop_v2.py -v
 ```
 
+## 13. Exact 20° reference and correction during moves (closed loop v3, 2026-11-12)
+
+This follows up the two remaining items of section 12.
+
+**1. Exact 20° reference.**
+
+- The 0° and 5° poses of the 3 N yaw sweep had been accepted on the 8-cell mesh at 16.9° and 16.1°: the acceptance allowed ±5°, and the same-tension re-solve had sagged.
+- `min_force_sweep.py --elev-tol 1` now requires the 8-cell elevation to be within 1° of 20°, forcing an 8-cell re-optimisation. All 36 poses (0–175°) are now at 20.0°.
+- The open-loop reference cycle was rebuilt from them (`length_cycle_results_pre3_tol1/`). The nominal case passes all 1,072 samples, and the largest elevation error falls from 3.93° to 0.18°.
+- The nominal gains were recomputed for this reference (`closed_loop_v2.py --prepare-gains`).
+
+**2. Correction during moves** (`closed_loop_v2.py --mid-tol 0.5`).
+
+- After each feedforward sub-step, if the head is more than 0.5° from the target interpolated along the move, up to 4 corrections are applied before the next sub-step.
+- A correction is kept only if the measured error decreases; otherwise the rope lengths are returned and correction stops for that move.
+- The first version without this guard oscillated at 159–175° yaw with the 550 g head (872 states above 1°, up to 6.8°). It is kept in `closed_loop_v3_results/first_attempt_no_revert/`.
+
+**Results** (every recorded state; states above 1° during motion / largest angle error during motion):
+
+| Case | v2 | **v3** | Lowest tension v2 → v3 | Peak tension v2 → v3 | Accumulated correction v2 → v3 | v3 largest node move |
+|---|---|---|---|---|---|---:|
+| Nominal | 5 / 3.08° | **0 / 0.18°** | 2.73 → 2.98 N | 27.1 → 17.7 N | 2.89 → 0.05 mm | 2.50 mm |
+| Rod E 75 GPa | 6 / 3.18° | **0 / 0.61°** | 2.62 → 2.92 N | 27.3 → 22.5 N | 3.39 → 3.00 mm | 2.50 mm |
+| Head 550 g | 87 / 3.01° | **202 / 3.79°** | 2.76 → 2.76 N | 27.1 → 23.7 N | 3.74 → 3.26 mm | 4.49 mm |
+| Free rope 1.5 m | 6 / 3.26° | **0 / 0.25°** | 2.72 → 2.81 N | 25.1 → 18.0 N | 3.62 → 0.90 mm | 2.50 mm |
+| Rope EA −20% | 6 / 3.10° | **0 / 0.28°** | 2.73 → 2.89 N | 26.3 → 17.9 N | 3.66 → 0.72 mm | 2.50 mm |
+
+| Head 550 g, three versions | States above 1° during motion | Largest |
+|---|---:|---:|
+| v2 (old reference) | 87 | 3.01° |
+| v3: fixed reference only (`closed_loop_v3_results/fixed_reference_only/`) | 115 | 3.13° |
+| v3: fixed reference + guarded correction during moves | 202 | 3.79° |
+
+![v2 vs v3](closed_loop_v3_results/v2_v3_comparison.png)
+
+- **The exact 20° reference fixes four of the five cases completely.** Nominal, 75 GPa rod, 1.5 m free rope and rope EA −20% pass **every check in every recorded state**:
+  - angle error during motion ≤ 0.18–0.61°;
+  - rope tension ≥ 2.81 N;
+  - node move ≤ 2.5 mm per step;
+  - no unstable, geometry, strain or clearance failure.
+
+  Because the controller no longer fights a wrong reference, peak rope tension falls from 25–27 N to 17.7–22.5 N, and the accumulated correction from 2.9–3.7 mm to 0.05–3.0 mm.
+- **The 550 g head still has temporary angle error at 155–175° yaw** (87–202 states above 1°, up to 3.1–3.8°), whichever version is used. Every one of these states passes the tension, stability, geometry and clearance checks, and every sample settles within 0.2°.
+  - The cause is that the nominal gains have the wrong sign in this region for the heavier head: a correction sized for a 0.2° error moves the head about 1° the other way.
+  - Correcting more often does not help, so **correction during moves is not recommended**. The fixed reference without it is the preferred configuration.
+- **Suggested next step:** update the controller gains online from measured responses (compare the measured head-angle change after each command with the predicted change, for example with a Broyden rank-one update). This uses only measured data and targets the large-yaw, off-nominal-payload region.
+
+```bash
+python min_force_sweep.py --exact --step 5 --smooth 1 --pretension 3 --variant niti18_E40 --pitch 20 --anchors 4 5 6 --seed-startup results/startup_niti18_E40_p20_pre3_states.npz --elev-tol 1
+python length_cycle.py --cases nominal --source results/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz --startup results/startup_niti18_E40_p20_pre3_states.npz --out length_cycle_results_pre3_tol1
+python closed_loop_v2.py --case nominal --prepare-gains --ref length_cycle_results_pre3_tol1 --out closed_loop_v3_results
+python closed_loop_v2.py --case nominal --ref length_cycle_results_pre3_tol1 --gains closed_loop_v3_results/nominal_gains.npz --out <folder>   # add --mid-tol 0.5 for correction during moves
+python summarize_closed_loop_v2.py v3
+```
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).

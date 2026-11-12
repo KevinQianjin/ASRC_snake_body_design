@@ -8,6 +8,25 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+### 12 November 2026 (latest): exact 20° reference — four of five cases pass every check
+
+The 3 N reference poses at 0° and 5° yaw had been accepted at 16–17° instead of 20°. They were regenerated at exactly 20.0° on the fine mesh, and the reference cycle and controller gains were rebuilt from them.
+
+With this reference, the **nominal, 75 GPa rod, 1.5 m free rope and rope EA −20% cases pass every check in every recorded state**:
+
+- angle error during motion ≤ 0.18–0.61° (v2: 3.1–3.3°);
+- rope tension ≥ 2.81 N;
+- step movement ≤ 2.5 mm;
+- peak rope force falls to 17.7–22.5 N (v2: 25–27 N).
+
+The **550 g head** still shows temporary angle error at 155–175° yaw (about 115 states above 1°, up to 3.1°). These states pass every tension, stability and clearance check, and all samples settle within 0.2°. Correcting during moves made it worse: the nominal gains have the wrong sign there for the heavier head.
+
+Next: update the controller gains online from measured responses.
+
+[Detailed results](simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v3_results/)
+
+![Closed loop v2 vs v3](simulations/u4m2/backbone_20261108/closed_loop_v3_results/v2_v3_comparison.png)
+
 ### 12 November 2026 (later): operating pretension enforced and refined closed-loop path
 
 The closed-loop round trip was re-run with a revised control sequence (`closed_loop_v2.py`). The model, reference cycle, nominal gains and five cases are the same; the controller still uses only measured head angles and rope tensions.
@@ -142,7 +161,7 @@ The SCAD preview arranges the six modules in a straight line. It does not model 
 
 ## Next steps
 
-1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). Next: fix the 17° insertion reference pose and reduce transient angle error at large yaw.
+1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). The 17° insertion reference was then fixed (v3); four of five cases pass every check. Next: online gain update for the 550 g large-yaw transient.
 2. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
 3. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
 
