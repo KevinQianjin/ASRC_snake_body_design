@@ -2,7 +2,7 @@
 
 [Project home](../README.md) · [Simulation index](../simulations/README.md) · [Reports](../reports/README.md)
 
-The root README retains its complete pre-organisation content and section order. Its file links and path references now point to the relocated files. This page describes the new physical layout.
+The root README retains its complete study content, with daily updates grouped in one section from newest to oldest. Its file links and path references point to the relocated files. This page describes the new physical layout.
 
 ## Folder layout
 
