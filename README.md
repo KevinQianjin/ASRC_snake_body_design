@@ -8,6 +8,33 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+### 12 November 2026 (later): operating pretension enforced and refined closed-loop path
+
+The closed-loop round trip was re-run with a revised control sequence (`closed_loop_v2.py`). The model, reference cycle, nominal gains and five cases are the same; the controller still uses only measured head angles and rope tensions.
+
+- The correction target is **3 N** instead of 1.5 N.
+- Tensions are predicted before each new command, and a small pre-correction is added if any would drop below 3 N.
+- Every move is subdivided until no point on the front moves more than 4.5 mm.
+- Every intermediate state is solved and checked.
+
+| Case | Lowest rope tension, any recorded state (v1 → v2) | Largest node move (v1 → v2) | Settled angle error (v2) |
+|---|---|---|---|
+| Nominal | 0.93 → **2.73 N** | 5.25 → **2.74 mm** | 0.20° |
+| Rod E 75 GPa | 0.57 → **2.62 N** | 5.45 → **2.50 mm** | 0.20° |
+| Head 550 g | 0.84 → **2.76 N** | 6.82 → **4.49 mm** | 0.20° |
+| Free rope 1.5 m | 0.91 → **2.72 N** | 5.09 → **2.50 mm** | 0.20° |
+| Rope EA −20% | 0.96 → **2.73 N** | 5.20 → **2.62 mm** | 0.20° |
+
+- **Tension and movement are fixed.** No state is below 2.5 N or 0.95 N, no step exceeds the 5 mm bound, and there is no unstable, geometry or tank-clearance failure. All samples settle within 0.2° at ≥ 2.5 N.
+- **Cost.** Peak rope tension rises to 25–27 N.
+- **What remains: temporary angle error during motion.**
+  - Up to 3.3° at the straighten-to-insertion hand-off, where the 3 N reference holds about 17° instead of 20°.
+  - Up to 2.85° at 155–175° yaw with the 550 g head.
+
+[Detailed results](simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller source](simulations/u4m2/backbone_20261108/closed_loop_v2.py) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v2_results/)
+
+![Closed-loop v1 vs v2](simulations/u4m2/backbone_20261108/closed_loop_v2_results/v1_v2_comparison.png)
+
 <a id="closed-loop-simulation-update-12-november-2026"></a>
 
 ### 12 November 2026: closed-loop control, 3D visualisation and repository organisation
@@ -115,7 +142,7 @@ The SCAD preview arranges the six modules in a straight line. It does not model 
 
 ## Next steps
 
-1. Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound.
+1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). Next: fix the 17° insertion reference pose and reduce transient angle error at large yaw.
 2. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
 3. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
 

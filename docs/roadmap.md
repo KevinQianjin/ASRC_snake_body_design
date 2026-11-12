@@ -2,7 +2,7 @@
 
 [Project home](../README.md) · [Current design](current_design.md) · [Limitations](limitations.md)
 
-1. **Enforce transition tension and refine the trajectory.** Guard feedforward and feedback commands against the selected operating pretension requirement; subdivide the corrected path below the 5 mm sampling bound.
+1. ~~**Enforce transition tension and refine the trajectory.**~~ Done in simulation on 12 November (`closed_loop_v2.py`): every recorded state ≥ 2.62 N, largest node move ≤ 4.5 mm. Remaining: the 17° insertion reference and transient angle error at large yaw with a heavier head ([section 12](../simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12)).
 2. **Add dynamic control verification.** Include actuator travel, speed and saturation, sampling time, sensing noise and delay. Repeat the round trip and uncertainty cases.
 3. **Measure the backbone M module and interfaces.** Follow the [test plan](../simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md) for EA, EI, guide buckling and attachment slip; update the model from measurements.
 4. **Calibrate ropes and winches.** Identify friction, backlash and hysteresis, and verify pretension margins against slack.

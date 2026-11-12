@@ -376,6 +376,47 @@ feedback correction. Animations show paired settled states, not physical
 transients. This remains a quasi-static ideal-sensing study; it does not validate
 sensor noise, latency, motor dynamics or continuous swept-volume safety.
 
+## 12. Closed-loop round trip v2: operating pretension and refined path (`closed_loop_v2.py`, 2026-11-12)
+
+This addresses the two open items of section 11: tension during command transitions, and node movement above the 5 mm sampling bound. It uses the **same model, reference cycle (3 N stable startup), nominal gains and five plant cases**. The controller still observes only head yaw/elevation and the 12 rope tensions, and plant parameters are not used. Only the control sequence changes:
+
+1. **Operating tension.** The correction keeps every predicted rope tension at or above **3 N** (was 1.5 N). A sample is settled at an angle error ≤ 0.2° **and** a measured minimum tension ≥ **2.5 N**.
+2. **Tension-aware arrival.** Before each new feedforward command, tensions are predicted from the **measured** tensions and the nominal tension gains. If any would fall below 3 N, a pre-correction (≤ 0.5 mm per rope, within the 5 mm offset budget) is added that disturbs the head angles as little as possible.
+3. **Refined path.** Every transition, including feedforward command changes with clamp travel and every correction, is applied in sub-steps of ≤ 0.25 mm of rope. Each sub-step is halved until no centreline node moves more than **4.5 mm**. Every intermediate state is solved from the previous one and checked (stability, tension, geometry, strain, 3D tank clearance) and recorded, 3,600–4,100 states per case.
+
+Intermediate states are checked against the angle target interpolated along the move, so commanded progress is not counted as error. The pre-control sag at the very start (before the first correction) is reported separately.
+
+| Case | v1: min tension / states < 0.95 N / states < 2.5 N | **v2** | Largest node move v1 → v2 | Settled angle error v1 → v2 | v2 unstable | v2 min tank clearance | v2 peak tension | v2 max offset |
+|---|---|---|---|---|---:|---:|---:|---:|
+| Nominal | 0.93 N / 1 / 1577 of 1709 | **2.73 N / 0 / 0 of 3604** | 5.25 → **2.74** mm | 0.200° → **0.199°** | 0 | 21.7 mm | 27.1 N | 2.89 mm |
+| Rod E 75 GPa | 0.57 N / 3 / 1321 of 1941 | **2.62 N / 0 / 0 of 3840** | 5.45 → **2.50** mm | 0.200° → **0.199°** | 0 | 19.7 mm | 27.3 N | 3.39 mm |
+| Head 550 g | 0.84 N / 1 / 1896 of 2465 | **2.76 N / 0 / 0 of 4093** | 6.82 → **4.49** mm | 0.699° → **0.200°** | 0 | 20.7 mm | 27.1 N | 3.74 mm |
+| Free rope 1.5 m | 0.91 N / 2 / 1493 of 1775 | **2.72 N / 0 / 0 of 3628** | 5.09 → **2.50** mm | 0.199° → **0.200°** | 0 | 22.3 mm | 25.1 N | 3.62 mm |
+| Rope EA −20% | 0.96 N / 0 / 1493 of 1772 | **2.73 N / 0 / 0 of 3627** | 5.20 → **2.62** mm | 0.200° → **0.200°** | 0 | 21.9 mm | 26.3 N | 3.66 mm |
+
+![v1 vs v2](closed_loop_v2_results/v1_v2_comparison.png)
+
+- **Operating pretension is now held throughout the control sequence.**
+  - Every recorded state of every case, including arrivals, intermediate sub-steps and corrections, stays at **≥ 2.62 N**.
+  - In v1, 1,321–1,896 recorded states per case were below 2.5 N, and 0–3 arrivals were below 0.95 N (minimum 0.57 N).
+- **The path is refined below the sampling bound.** The largest node movement between recorded states is 2.5–4.5 mm (v1: 5.1–6.8 mm).
+- **No unstable state, and no geometry, strain or tank-clearance failure,** in any recorded state of any case. Every sample settles within 0.2° and at ≥ 2.5 N, including the 550 g head (v1: one sample at 0.70°).
+- **Cost.** Peak rope tension is 25–27 N (v1: up to about 20 N), and the accumulated correction reaches 2.9–3.7 mm of the 5 mm budget.
+- **What still fails a check: temporary angle error during motion only.**
+  - **All cases:** 5–6 states at the straighten-to-insertion hand-off (sample 64, up to 3.3°). The 3 N reference holds about 17° during insertion while the target is 20° (known imperfection, section 10), so the controller corrects about 3° there.
+  - **550 g head:** 83 states during steering at 155–175° yaw (up to 2.85°), where each new command arrives off target before the correction catches up.
+  - Nominal steering stays within 1.03° during motion.
+  - These states pass every tension, stability and clearance check; the settled samples all pass.
+- **Not covered:** quasi-static (no motor dynamics, sensing noise or delay, friction, backlash, hysteresis). Results for the five cases are not an independent validation set. Positive static stiffness does not establish dynamic closed-loop stability.
+
+Results: `closed_loop_v2_results/` (per-sample JSON/CSV, full trace of every recorded state, summaries, states, `comparison_v1_v2.json`). Tests: `test_closed_loop_v2.py` (QP tension and bounds, infeasibility reporting, arrival pre-correction, path subdivision).
+
+```bash
+python closed_loop_v2.py --case nominal     # also E75, payload550g, free1500mm, ropeEA80pct (about 20-25 min each)
+python summarize_closed_loop_v2.py
+python -m unittest test_closed_loop_v2.py -v
+```
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
