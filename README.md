@@ -6,50 +6,102 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 ## Daily updates
 
-Updates are grouped by date, newest first. Each entry retains its study context, results and report links. Historical acceptance criteria differ from the latest closed-loop study.
+The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
 <a id="closed-loop-simulation-update-12-november-2026"></a>
 
-### 12 November 2026: closed-loop round-trip simulation
+### 12 November 2026: closed-loop control, 3D visualisation and repository organisation
 
-The [English closed-loop report](simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) adds head-angle and 12-rope tension feedback to the latest stable-startup U4+M2 cycle. All five cases complete 1,069 reference samples and pass the chosen **settled-state** checks: yaw/elevation within 1 degree, tension bounds, positive fixed-winch tangent stiffness, geometry/strain and sampled tank clearance. The worst settled angular error is **0.699 degrees** in the 550 g case; the other four cases remain below 0.2 degrees. Controller gains use the nominal model, with output-based damping after measured error growth.
+#### What was completed
 
-**The complete control sequence has not passed every requirement.** Some feedforward arrival states fall below 0.95 N before correction; the lowest is **0.568 N**. The feedback tension target is 1.5 N, so this exploratory controller does not enforce the project's 3 N operating pretension recommendation. The corrected path also exceeds the previous 5 mm sample-displacement bound at some transitions and needs refinement. No noise, latency, motor dynamics, friction or physical transient response is modelled.
+Implemented head-angle and tendon-tension feedback for the continuous 96 mm U4+M2 front, using the stable-startup round trip as its reference. The complete sequence is **straightening → insertion → right sweep and return → left sweep and return → withdrawal**. Each of five parameter cases follows the same **1,069 reference samples**, giving **5,345 corrected settled states**.
 
-- [3D full-cycle MP4](simulations/u4m2/backbone_20261108/closed_loop_results/E75_full_cycle.mp4): open-loop versus closed-loop settled shapes.
-- [3D steering GIF](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif).
-- [Feedback correction GIF](simulations/u4m2/backbone_20261108/closed_loop_results/payload550g_feedback_convergence.gif): measured-error damping at a fixed large-yaw reference.
+The controller observes ideal simulated head yaw/elevation and all 12 tendon tensions, then adjusts the commanded rope lengths. Gains are prepared from the nominal **40 GPa backbone, 500 g payload and 1 m free-rope model**; changed stiffness and payload are not supplied to the gain calculation. The known free-rope installation-length difference is handled as a command-zero offset.
 
-### 11 November 2026: stable startup, pretension and prototype review
+- Each feedback correction is limited to **0.25 mm per rope**, with at most **5 mm accumulated correction** relative to feedforward and **16 corrections per reference sample**.
+- The internal stopping target is **0.2° angle error** with measured minimum tension at least **1.25 N**. The proposed correction targets a **1.5 N** tension floor; damping can approach that floor over several updates.
+- The initial undamped controller overcorrected near large yaw with the **550 g payload**. Halving subsequent correction steps when measured angular error grows resolved the failed settled-angle checks. This rule uses past measured errors, not knowledge of the true plant parameters. The [initial diagnostic](simulations/u4m2/backbone_20261108/closed_loop_results/undamped_diagnostic/README.md) is retained.
 
-- [**Daily report — 11 November 2026**](reports/daily/Report_2026_11_11.pdf): model data sheet, prototype files marked, and the round-trip cycle re-run with a 3 N pretension floor and a stable startup (nominal cycle passes every check; remaining failures are open-loop calibration). Built by [`build_report_2026_11_11.py`](reports/builders/build_report_2026_11_11.py).
-- [**Model data sheet**](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md): every input of the simulation model (continuous 96 mm modules, full-length rod, module stiffness and mass, ropes, winch, tank, numerics).
+#### Results across five conditions
 
-#### Stable startup and 3 N pretension
+All five cases pass the selected **settled-state** checks: yaw/elevation errors within **±1°**, tendon force bounds, positive fixed-winch tangent stiffness, geometry/strain diagnostics and sampled tank clearance.
 
-**Update (11 November, later): with a 3 N pretension floor and a stable startup, the nominal round trip passes every check** (0 of 1,069 samples fail; rope tension ≥ 2.74 N; no unstable state), and so does the rope EA −20% case. The 75 GPa rod, 550 g head and 1.5 m free-rope cases still fail, but only on open-loop calibration (posture tracking, or rope tension with a longer rope). Same model parameters; see [backbone study section 10](simulations/u4m2/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11). The earlier 1 N cycle findings are preserved below in the limitations recorded on this date.
+| Condition | Maximum open-loop angle error (°) | Maximum closed-loop angle error (°) | Failed closed-loop settled samples |
+|---|---:|---:|---:|
+| Nominal: E40, 500 g, 1 m free rope | 3.930 | 0.200 | 0 / 1,069 |
+| Backbone modulus 75 GPa | 7.180 | 0.200 | 0 / 1,069 |
+| Payload 550 g | 8.965 | 0.699 | 0 / 1,069 |
+| Free rope length 1.5 m | 4.830 | 0.199 | 0 / 1,069 |
+| Rope axial stiffness -20% | 4.637 | 0.200 | 0 / 1,069 |
 
-#### Current status (11 November 2026)
+The angle metric is the larger of the maximum absolute yaw and elevation errors. The worst corrected error is **0.699°** in the 550 g case; the other four cases remain below 0.2° before rounding. One 550 g sample reaches the 16-correction budget and misses the internal 0.2° target, while still meeting the ±1° acceptance criterion. Minimum tension across corrected settled states is approximately **1.25 N**, and minimum sampled tank clearance is **19.76 mm** before subtracting the 1.5 mm allowance.
 
-All results below are simulations for **U4+M2 with a central 1.8 mm NiTi rod in each M module**, compared with the 6 November design. Rod properties are calculated, not yet measured.
+These comparisons use a stricter elevation criterion than the previous **20 ± 5°** study, so failure counts should not be compared directly between reports. The damping rule was developed on these cases; they are not an independent validation set.
 
-| Check | 6 November design (current M) | With 1.8 mm NiTi rod |
-|---|---|---|
-| Straightening at ≤ 5% strain, 15–25° | 90–99 mm offset: **fails** | 1.2–2.0 mm offset, about 0.1% strain: **passes** |
-| Tank entry, 2D sections and full 3D | Every low-strain shape hits the tank | **Passes**: 47 / 65 / 19 mm minimum clearance at 15 / 20 / 25° |
-| 3D lateral stability | — | Needs **≥ 1 N pretension on every rope**; with it, all cases are stable |
-| Yaw with the head held at 20° | No solution found | **0–175°** in smooth 5° steps at **7–15 N** peak rope force |
-| Coordinated winch (rope-length) control between poses | — | **Smooth, stable and reversible** over 0–175° at 19.2–20.1° elevation; no slack rope; winch travel ≤ 69 mm |
-| Winch position error | — | ±1° head angle needs about **±0.2–0.5 mm on every winch** (±0.16 mm near 175°); the 4 tip winches dominate; rope EA ±10% gives ≤ 0.4°. Stable in all cases, but 1 N pretension ropes go slack beyond about 0.15 mm error: **use head-angle feedback** |
-| Yaw sweep inside the full 3D tank | — | At 20° with the clamp 0–30 mm past the opening: **clear by ≥ 12.6 mm**; 25° hits the roof |
-| One side rope pulled (winch control) | — | About **1.25° yaw per mm**, smooth and stable; holds 20 ± 5° elevation only to **about ±20°** |
-| Full round trip, length control (straighten, insert, sweep both sides, withdraw) | — | With **3 N pretension and a stable startup: nominal passes every check** (0 of 1,069 samples fail; rope ≥ 2.74 N; no unstable state). Rod 75 GPa, 550 g head and 1.5 m free rope fail on open-loop calibration only |
-| Tension-only rope control | — | Straight front **snaps** (258 mm jump at +0.5 N): **use rope-length control** |
-| Longer fronts U6+M3, U8+M4 | Fail | Still fail with ≤ 3 anchor sets |
+#### What remains unresolved
 
-**Decisions:** develop U4+M2 with the 1.8 mm NiTi backbone. Install at **20°**, steer with the clamp **0–30 mm** past the opening, keep **≥ 3 N** on every rope (1 N is the stability minimum; 3 N gives margin through the round trip), start up through held states from natural sag, and drive the ropes by **length (winch position)**, coordinating the up and side ropes to hold the working elevation. Build and test the backbone M module next.
+**A passing settled state does not establish a passing complete control sequence.** Seven feedforward arrival states fall below **0.95 N** before correction; the minimum is **0.568 N**. No post-correction trace state falls below that threshold, and no recorded trace state fails the equilibrium-stability, geometry or sampled tank-clearance checks, but the arrival tension deficit still needs to be corrected.
 
-#### Prototype CAD status
+The exploratory **1.5 N** feedback target does not enforce the project's **3 N** operating pretension recommendation. Maximum node movement between corrected samples is **6.822 mm**, exceeding the previous **5 mm** sampling bound. The model remains quasi-static: it does not include motor dynamics, sensor noise or delay, friction, backlash, NiTi hysteresis, or the real head/cable geometry. Positive static stiffness does not establish dynamic closed-loop stability.
+
+The next simulation priority is to enforce tension throughout feedforward transitions and feedback corrections, refine the corrected path, and then add actuator and sensing dynamics. See [current limitations](docs/limitations.md) and the [engineering roadmap](docs/roadmap.md).
+
+#### Reports, data and 3D animations
+
+The animations compare **blue closed-loop** and **red open-loop** shapes, with angle errors, tension and clearance displayed alongside. They show solved equilibria; playback speed does not represent a validated physical execution speed.
+
+- [Full English report](simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) — assumptions, per-case results, correction traces and reproduction commands.
+- [Full round-trip MP4](simulations/u4m2/backbone_20261108/closed_loop_results/E75_full_cycle.mp4) · [Steering GIF](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif) · [Large-yaw feedback correction GIF](simulations/u4m2/backbone_20261108/closed_loop_results/payload550g_feedback_convergence.gif).
+- [Controller source](simulations/u4m2/backbone_20261108/closed_loop_cycle.py) · [CSV/JSON/NPZ results](simulations/u4m2/backbone_20261108/closed_loop_results/) · [Numerical validation record](simulations/u4m2/backbone_20261108/closed_loop_results/validation.json).
+
+![Closed-loop and open-loop 3D steering comparison](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif)
+
+#### Repository and verification work
+
+Reorganised the project into `simulations/`, `cad/`, `data/`, `reports/`, `archive/` and `docs/`, with updated source/data paths and document links. Verification after relocation passed **43 model tests**, the five-case closed-loop data checks, four daily PDF builds and the presentation build. The **1,903 checked data, CAD and publication/media files** retained their original bytes. See the [repository map](docs/repository_map.md), [file-by-file migration table](docs/path_migration.csv) and [simulation entry points](simulations/README.md).
+
+### 11 November 2026: stable startup and 3 N pretension
+
+A stable startup and 3 N pretension reference made the nominal open-loop round trip pass all 1,069 samples, with minimum tendon tension of 2.74 N. The rope-stiffness -20% case also passed; the 75 GPa, 550 g and 1.5 m free-rope cases still exposed open-loop calibration limits. The model input sheet and prototype review were documented.
+
+[Daily report](reports/daily/Report_2026_11_11.pdf) · [Detailed study](simulations/u4m2/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11) · [Model data sheet](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) · [Earlier 1 N findings](docs/history.md#original-1-n-cycle-limitations-11-november-2026).
+
+### 10 November 2026: coordinated winch control and accuracy
+
+Coordinated rope-length commands produced smooth, stable and reversible steering while maintaining working elevation. Winch-position sensitivity showed that roughly ±0.2–0.5 mm accuracy was needed for ±1° open-loop head-angle accuracy, motivating angle feedback and additional pretension margin.
+
+[Daily report](reports/daily/Report_2026_11_10.pdf) · [Weekly presentation](reports/weekly/Weekly_report_2026_11_10.pptx) · [Detailed results and figures](docs/history.md#10-november-2026-coordinated-winch-control-and-winch-accuracy).
+
+### 9 November 2026: tank entry, stability and steering
+
+Screened loaded entry, fixed-winch stability, tendon forces and clearance against the full 3D tank. A 20° installation with limited insertion depth supported the tested steering envelope; pulling only one side rope lost working elevation beyond about ±20° yaw.
+
+[Daily report](reports/daily/Report_2026_11_09.pdf) · [Detailed results and figures](docs/history.md#9-november-2026-entry-stability-tendon-force-3d-tank-and-horizontal-flexibility).
+
+### 8 November 2026: M stiffness requirement and NiTi backbone
+
+Identified insufficient M-module stiffness and evaluated a central Ø1.8 mm NiTi backbone. The revised U4+M2 model passed the studied straightening and held-elevation steering checks; the module test plan defines the measurements still required.
+
+[Daily report](reports/daily/Report_2026_11_08.pdf) · [Backbone results](docs/history.md#8-november-2026-m-stiffness-requirement-and-niti-backbone) · [Build and test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
+
+<a id="previous-baseline-studies-6-november-2026-current-m-module"></a>
+
+### 6 November 2026: original M-module baseline
+
+The original M-module model required excessive strain for straightening and did not achieve loaded steering at the required head elevation. These results became the control cases for the later backbone studies.
+
+[Daily report](reports/daily/Report_2026_11_06.pdf) · [Baseline studies](docs/history.md#previous-baseline-studies-6-november-2026-current-m-module).
+
+### 5 November 2026: initial design and analysis
+
+Established the earlier design and analysis baseline for the subsequent stiffness, deployment and tendon-control investigations.
+
+[Daily report](reports/daily/Report_2026_11_05.pdf).
+
+
+<a id="prototype-cad-status"></a>
+
+## Prototype
 
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2).
 
@@ -57,129 +109,17 @@ The U STEP contains one full-envelope body solid (96 mm long, about 63.24 mm acr
 
 The SCAD preview arranges the six modules in a straight line. It does not model the M backbone or establish the inter-module connection. Confirm material assignments and connection details before ordering a full print.
 
-#### Current design limitations (11 November 2026)
-
-The following findings describe the earlier 1 N cycle and the limitations recorded at that stage; the later 3 N startup and 12 November closed-loop results appear above.
-
-**The U4+M2 design has not yet passed an integrated, hardware-validated deployment cycle.** Passing selected static poses or a steering-only sweep does not establish a stable startup, adequate pretension, robustness to parameter changes, or safe operation of the complete robot.
-
-The [length-controlled round-trip report](simulations/u4m2/backbone_20261108/length_cycle_results/REPORT.md) extends the earlier steering studies with a specified straightening startup, insertion, right/left sweeps and returns, withdrawal, and identical-command sensitivity cases. Its results apply to that command sequence and acceptance criteria; they do not replace the separately dated studies below.
-
-| Limitation | Evidence or current assumption | Engineering consequence |
-|---|---|---|
-| Startup and straightening are unresolved | With the three upper ropes initially paid out 10 mm, the nominal straightening phase contains 13 unstable stationary samples. | Redesign the startup and pretension-establishment sequence. Solver convergence to a stationary point is not proof of stable motion; this failure does not show that every straightening procedure fails. |
-| Pretension margin is insufficient | Nominal steering reaches a minimum rope force of **0.713 N**; each of the four steering legs has 9 samples below the **0.95 N** acceptance tolerance around the 1 N target. | Add pretension margin and tension constraints when generating rope-length trajectories. No slack in an earlier nominal sweep does not establish sufficient pretension throughout this cycle. |
-| Open-loop commands depend on calibrated parameters | Replaying the same commands with E75 backbone stiffness gives maximum yaw/elevation errors of **6.60° / 7.41°**; a **550 g** payload gives **9.85° / 8.17°**. Rope EA reduced by 20% or free length increased to 1.5 m also causes inadequate pretension. | Measure the assembled stiffness, payload and rope properties; evaluate head-angle and tension feedback. These are assumed sensitivity cases, not measured failure probabilities. |
-| Single-side-rope steering loses elevation | Pulling only the tip side rope maintains the head within 20 ± 5° elevation only to about **±20° yaw**. | Larger working-elevation sweeps need coordinated upper and side ropes. |
-| Tank workspace is restricted | Earlier full-tank screening recommends **20° installation** and steering with the clamp **0–30 mm** past the opening. Deeper insertion and 25° installation cause roof interference in portions of the large-yaw sweep. | Define and enforce a deployment envelope; yaw capability alone does not establish reachability at arbitrary insertion depths. |
-| Longer fronts remain unproven | U6+M3 and U8+M4 fail the existing checks with at most three anchor sets. | Do not extend the front by adding modules without revising stiffness, anchor layout and control. |
-| Backbone attachment and module interfaces are not validated | The model assumes axial load transfer at the NiTi ends and adequate lateral guidance. The STEP-derived assembly does not establish the M backbone integration, inter-module connections or tendon continuity. | Test joint slip, guide spacing, buckling, interface compliance and the assembled tendon route before a full build. The backbone-layout screening in `archive/superseded_cad/full_length/` assumed a 12 mm pin gap and is marked to be ignored. |
-| Head and cable geometry remain provisional | Collision screening uses a **63 mm envelope** and a nominal **500 g** tip payload; actual head shape, centre-of-mass offset and external cables are not fully represented. | Update gravity loads and clearance using the real head, mounting and cable geometry. |
-| Constitutive and actuator behaviour is idealised | No rope friction, winch backlash, NiTi hysteresis, fatigue or wear is included in the round-trip model. Motor torque, speed, travel and encoder resolution are not validated as an integrated drive system. | Identify these properties experimentally and include them in forward simulation and controller verification. |
-| Motion and clearance checks are sampled and quasi-static | The nominal cycle has **17.48 mm** minimum sampled tank clearance, but dynamics and continuous collision safety are not established. | Check transient response, self-collision and the swept envelope; sampled clearance is not a guarantee between samples. |
-| Rear deployment and inspection performance are incomplete | Withdrawal is represented as rigid translation of the clamped front. Rear telescopic deployment, storage, sleeve contact and task coverage are not integrated. | Validate the full mechanism and map camera field of view, focus distance, coil standoff and incidence angle to usable inspection coverage. |
-
-Across the five round-trip scenarios, **none passes every check**. The nominal case has **56 failed samples out of 1,033**: 20 during the specified straightening phase and 36 across the four steering legs. Its insertion and withdrawal samples pass, and its steering samples pass the stability and geometry checks, but pretension is insufficient at some intermediate commands. The passing outbound sample prefix reaches **21.25° on either side** before the first failed sample; this is a limit of the tested command sequence and criteria, not a mechanical yaw limit or continuous safety guarantee.
-
-The **5% strain threshold**, **250 N tendon bound** and **180° search cap** are numerical diagnostics or search bounds, not validated hardware ratings. The 1.5 mm sampling/mesh allowance in the round-trip report is an error budget, not a certified global clearance bound. Small simulated return error reflects the ideal reversible model and does not establish physical repeatability.
-
-##### Priorities to close these limitations
-
-1. Generate a stable startup and complete rope-length trajectory with pretension margin and consistent fixed-winch stability checks; repeat the same round-trip and sensitivity cases.
-2. Build and test the backbone M module and interfaces: both bending planes, axial stiffness, torsion, guide buckling and end-attachment slip. Replace assumed properties with measured values.
-3. Calibrate winches and ropes, add friction/backlash/hysteresis where supported by measurements, and evaluate posture/tension feedback against actuator limits.
-4. Integrate the actual head, cables and rear mechanism; verify tank-aware motion, dynamic behaviour and inspection coverage before claiming full-system performance.
-
-### 10 November 2026: coordinated winch control and winch accuracy
-
-- [Report — 10 November 2026](reports/daily/Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended).
-- [**Weekly report — 10 November 2026**](reports/weekly/Weekly_report_2026_11_10.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
-
-**Winch accuracy** ([section 9](simulations/u4m2/backbone_20261108/README.md#9-winch-position-error-and-rope-stretch-sensitivity-winch_sensitivitypy-2026-11-10)):
-
-- One winch off by 1 mm moves the head 1.3–3.2°. All 12 winches off by up to ±1 mm at random give up to 1.9–6.3° (99%).
-- Holding ±1° open-loop needs about ±0.2–0.5 mm per winch. The four tip (anchor 6) winches matter most, and rope stiffness calibration hardly matters.
-- Every perturbed state stays stable, but 1 N pretension ropes can go slack. Head-angle feedback and a higher pretension are recommended.
-
-![Winch sensitivity](simulations/u4m2/backbone_20261108/results/winch_sensitivity.png)
-
-**Coordinated winch control:**
-
-[Study README, section 8](simulations/u4m2/backbone_20261108)
-
-All 12 winches follow the rope lengths of the 5° minimum-force poses together, in 20 sub-steps per segment.
-
-- The head moves smoothly from 0° to 175° (40 GPa rod) or 180° (75 GPa rod) while staying at 19.2–20.1° elevation.
-- Every one of the 701 / 721 states is stable, no rope goes slack, and the motion is identical forward and backward.
-- The in-between states clear the 3D tank by at least 12.6 mm.
-- The largest winch travel is 69 mm, and the anchor-4 ropes barely move.
-- Winch command tables are saved as CSV.
-
-![Coordinated winch](simulations/u4m2/backbone_20261108/results/coordwinch.png)
-
-### 9 November 2026: entry, stability, tendon force, 3D tank and horizontal flexibility
-
-- [Report — 9 November 2026](reports/daily/Report_2026_11_09.pdf): tank entry with the low-strain shape, 3D stability and pretension, minimum tendon force for held-elevation yaw, full 3D tank clearance, and horizontal flexibility (side-rope pull).
-
-[Study README, sections 3–7](simulations/u4m2/backbone_20261108)
-
-- **Tank entry:** the straight low-strain rod shape feeds through the bottom opening at 15–25°, re-checked at 16 cells per module. The current-M low-strain shape hits the tank.
-
-  ![Entry screen](simulations/u4m2/backbone_20261108/results/entry_screen.png)
-
-- **3D stability:** with only the up ropes pulled, the straight front is laterally unstable in 3D. A 1 N pretension on every rope stabilises it, and straightening and entry still pass.
-- **Minimum tendon force:** holding the head at 20° while sweeping yaw needs about 7–15 N peak (anchors [4,5,6]), against 46–98 N for the 8 November allocations. With smoothing, no rope changes by more than about 5 N per 5° step. Beyond about 90° the front curls up and back over itself, and it uses 30–55° of twist at mid yaw.
-
-  ![Minimum tendon force](simulations/u4m2/backbone_20261108/results/minforce_results.png)
-
-- **Full 3D tank:** all 362 tank solids were meshed from the STEP file, which agrees with the saved 2D sections within 0.23 mm. Entry is confirmed across the full front width. At 20° with the clamp 0–30 mm past the opening, the whole yaw sweep clears the tank by at least 12.6 mm on both sides.
-
-  ![3D tank clearance](simulations/u4m2/backbone_20261108/results/tank3d_sweep.png)
-
-- **Horizontal flexibility:** reeling in only the tip's right rope turns the head about 1.25° per mm. The head droops beyond about 20° of yaw unless the up ropes are reeled in together with it. Anchors 4 and 5 hardly turn the head. Tension-only control makes the straight front snap.
-
-  ![Side pull](simulations/u4m2/backbone_20261108/results/sidepull.png)
-
-### 8 November 2026: M stiffness requirement and NiTi backbone
-
-- [Report — 8 November 2026](reports/daily/Report_2026_11_08.pdf): M module stiffness requirement, NiTi backbone concept, straightening and steering with the backbone, and the module test plan.
-
-- [M stiffness requirement sweep](simulations/u4m2/m_axial_sweep_20261108):
-  - Raising M axial stiffness alone leaves a 7.1° tangent-error floor.
-  - The first passing combination is **EA ×5 (about 830 N) with EI ×1.25 (about 0.055 N·m²)**, anchors [4,5,6].
-- [NiTi backbone study](simulations/u4m2/backbone_20261108) and [build and test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md):
-  - The Ø1.8 mm rod gives M an EA of 102–191 kN and an EI of 0.065–0.083 N·m² (E = 40–75 GPa).
-  - With it, U4+M2 passes straightening at 15–25° and reaches 180° yaw at held elevation.
-
-![M stiffness requirement](simulations/u4m2/m_axial_sweep_20261108/results/m_stiffness_requirement.png)
-
-![Backbone results](simulations/u4m2/backbone_20261108/results/backbone_results.png)
-
-The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical diagnostics or search bounds, not validated hardware ratings.
-
-<a id="previous-baseline-studies-6-november-2026-current-m-module"></a>
-
-### 6 November 2026: original M-module baseline
-
-- [Report — 6 November 2026](reports/daily/Report_2026_11_06.pdf): design concept, active straightening, tank entry and steering with the current M module; unresolved issues.
-
-- [Active straightening and tank entry](simulations/u4m2/stiffness_63mm_20261106): near-straight shapes need 17–28% axial strain, and only high-strain shapes pass the entry screen.
-- [Spatial steering and tendon forces](simulations/u4m2/steering_63mm_20261106): U4+M2 reaches about 179° yaw at low strain, but with head elevation at −65.7°. No held-elevation solution was found.
-
-These studies are the controls for the 8–9 November work, and their results are reproduced exactly by the new scripts.
-
-### 5 November 2026: initial design and analysis
-
-- [Report — 5 November 2026](reports/daily/Report_2026_11_05.pdf): earlier design and analysis.
+- [Original U STEP](cad/modules/UniDirectional_96.step) · [Original M STEP](cad/modules/Medium_Stiffness_96.step).
+- [Preview instructions](cad/previews/u4m2/README.md) · [Complete OpenSCAD/STL bundle](cad/previews/u4m2/final_u4m2_openSCAD_bundle.zip).
+- [Backbone module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md) · [Superseded CAD cleanup review](archive/superseded_cad/full_length/CLEANUP_REVIEW_CONFIRMATION.md).
 
 ## Next steps
 
-1. **Build and test the backbone M module** ([test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md)): EA, EI, rod buckling at the guide spacing and rod joint slip. Then re-run the studies with the measured values.
-2. ~~Coordinated winch-control test~~ — done on 10 November: smooth, stable and reversible ([results](simulations/u4m2/backbone_20261108/README.md#8-coordinated-winch-control-between-poses-coordinated_winchpy-2026-11-10)). Winch accuracy studied on 10 November: about ±0.2–0.5 mm per winch for ±1° open-loop, so add head-angle feedback ([results](simulations/u4m2/backbone_20261108/README.md#9-winch-position-error-and-rope-stretch-sensitivity-winch_sensitivitypy-2026-11-10)). Next: test 3–5 N pretension against rope slack, and add friction to the rope model.
-3. **Closed-loop transition safety and dynamics:** the quasi-static output-feedback study now meets the 1-degree settled-state criterion in all five cases. Next enforce the chosen operating pretension throughout feedforward transitions and feedback corrections, refine the corrected path below the 5 mm sampling bound, and add actuator dynamics, sensing noise and delay. See the [closed-loop report](simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md); this is not yet a hardware-validated controller.
-4. **Tank-aware steering:** optimise postures with the 3D tank as a constraint, and check the 30–55° twist against hardware limits.
-5. **Entry, storage and sensor head:** real head CAD and cable envelopes, sleeve contact, rear storage and retraction.
-6. **Rear mechanism and integrated validation.**
+1. Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound.
+2. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
+3. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
+
+[Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 
 ## Geometry and input data
 

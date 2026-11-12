@@ -2,7 +2,7 @@
 
 [Project home](../README.md) · [Simulation index](../simulations/README.md) · [Reports](../reports/README.md)
 
-The root README retains its complete study content, with daily updates grouped in one section from newest to oldest. Its file links and path references point to the relocated files. This page describes the new physical layout.
+The root README details the latest daily results, summarises earlier dates with links to full reports and research history, and gives Prototype its own top-level section. Daily updates are ordered newest first; file links and path references point to the relocated files. This page describes the new physical layout.
 
 ## Folder layout
 
