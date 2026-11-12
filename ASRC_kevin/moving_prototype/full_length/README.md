@@ -8,6 +8,7 @@
 
 - [U4M2_backbone_assembly.scad](U4M2_backbone_assembly.scad) — self-contained preview of the earlier generic rigid-shell model; it is not the final U4+M2 compliant design.
 - [BUILD_AND_PRINT_GUIDE.md](BUILD_AND_PRINT_GUIDE.md) — what to print and buy, how to export parts, and the current limits of the prototype.
+- [CLEANUP_REVIEW_CONFIRMATION.md](CLEANUP_REVIEW_CONFIRMATION.md) — confirmed review list for eventual archiving/removal (no files removed yet).
 
 ## Full-length layout
 
