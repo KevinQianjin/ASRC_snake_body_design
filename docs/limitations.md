@@ -6,8 +6,8 @@ The design has not passed an integrated, hardware-validated deployment cycle. Th
 
 | Limitation | Current evidence | Work required |
 |---|---|---|
-| Tension during command transitions | Seven feedforward arrival states fall below 0.95 N; the minimum is 0.568 N. The feedback target is 1.5 N, below the 3 N operating recommendation. | Increase pretension margin and guard or subdivide command transitions. |
-| Motion sampling | The corrected path has a maximum 6.822 mm node step, above the previous 5 mm sampling bound. | Refine the path and check the swept envelope. |
+| Tension during command transitions | **Addressed in simulation (12 Nov, v2):** with a 3 N correction target, tension-aware arrival and refined transitions, every recorded state of all five cases stays at ≥ 2.62 N ([section 12](../simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12)). Peak tension rises to 25–27 N. | Verify on hardware with measured rope and winch behaviour. |
+| Motion sampling and transient angle error | **Path refined (12 Nov, v2):** largest node move 2.5–4.5 mm (was up to 6.8 mm). Temporary angle error during motion remains: up to 3.3° at the straighten-to-insertion hand-off (the 3 N reference holds about 17° there) and up to 2.85° at 155–175° yaw with the 550 g head. | Correct the 0° reference pose to 20° at 8 cells; add rate limits or predictive feedforward for large-yaw arrival; check the swept envelope between states. |
 | Controller convergence | All five cases meet the 1-degree settled-angle criterion; one 550 g sample reaches 16 corrections at 0.699-degree yaw error. | Improve convergence and test independent uncertainty cases. |
 | Idealised dynamics and sensing | Simulations are quasi-static, with ideal measurements and no motor dynamics, delay or sensor noise. | Verify sampled dynamic control and actuator limits. |
 | Unmeasured mechanical properties | Friction, backlash, NiTi hysteresis, fatigue, guide buckling and interface slip are not validated. | Test assembled modules, ropes and winches; calibrate the models. |
