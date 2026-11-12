@@ -2,48 +2,51 @@
 
 [Project home](../README.md) · [Simulation index](../simulations/README.md) · [Reports](../reports/README.md)
 
-## Current organisation
+The root README retains its complete pre-organisation content and section order. Its file links and path references now point to the relocated files. This page describes the new physical layout.
 
-| Location | Role | Status |
-|---|---|---|
-| [docs](.) | Current design, limitations, roadmap and dated research history | Active documentation |
-| [reports/daily](../reports/daily/) | Dated PDF reports | Reference publications |
-| [reports/weekly](../reports/weekly/) | Weekly presentations | Reference publications |
-| [Simulation index](../simulations/README.md) | Active and historical study navigation, execution commands | Active entry point |
-| [Backbone study](../ASRC_kevin/telescopic_planar_study/backbone_20261108/) | U4+M2 model, controller, saved results and animations | Active research |
-| [Telescopic study](../ASRC_kevin/telescopic_planar_study/) | Tank, rear support and model dependencies | Active/reference research |
-| [Original STEP modules](../CAD/) | Editable U/M source geometry | Source CAD |
-| [Tank STEP](../ASRC_kevin/telescopic_planar_study/inputs/tank-v2.step) | Tank geometry used by clearance checks | Source CAD |
-| [U4+M2 preview](../ASRC_kevin/moving_prototype/final_u4m2/) | STEP-derived SCAD/STL viewing package; keep files together | Geometry preview, not validated assembly |
-| [Old full-length prototype](../ASRC_kevin/moving_prototype/full_length/) | Incorrect 84 mm shell / 12 mm pin-gap representation | Superseded; not the simulated design |
-| [Earlier studies](../simulations/README.md#historical-studies) | Older model configurations and frozen inputs/results | Historical reference |
+## Folder layout
 
-The closed-loop report, CSV/JSON/NPZ data and animations have one canonical location beside their simulation source. The reports index links there without duplicating them.
+| Location | Contents |
+|---|---|
+| [simulations/u4m2](../simulations/u4m2/) | Active U4+M2 studies, baseline models, saved numerical results and closed-loop animations |
+| [simulations/shared](../simulations/shared/README.md) | Shared H8U12 kernel and legacy rod models, with their configurations, input snapshots and reference runs |
+| [cad/modules](../cad/modules/) | Original U/M STEP source files |
+| [cad/tank](../cad/tank/) | Tank STEP and reference images |
+| [cad/previews/u4m2](../cad/previews/u4m2/) | STEP-derived SCAD/STL preview; keep each assembly with its mesh files |
+| [data/materials](../data/materials/README.md) | Shared material catalogue, SQLite databases and prior stiffness snapshot |
+| [reports/daily](../reports/daily/) | Daily PDF and Word reports |
+| [reports/weekly](../reports/weekly/) | Presentations |
+| [reports/builders](../reports/builders/README.md) | PDF/PPTX generators and their figure/chart inputs |
+| [archive/legacy_studies](../archive/README.md) | Earlier four-rope, front-count and reach-extension studies |
+| [archive/superseded_cad](../archive/superseded_cad/) | Superseded prototype geometry, its warnings and cleanup review |
+| [archive/utilities](../archive/utilities/) | Historical upload helper scripts; retained as references |
+| [docs](.) | Design notes, limitations, roadmap, history and migration documentation |
+
+Study-local results remain beside their source. In particular, the [closed-loop report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md), CSV/JSON/NPZ data and animations have one canonical location. Frozen input snapshots and recorded provenance retain their historical contents; paths recorded inside old JSON/logs describe the original execution environment.
 
 ## Path changes
 
-The first organisation stage moved publications and split the root documentation. Simulation code, databases, CAD and numerical results keep their existing paths.
-
-| Previous location | New location |
+| Previous location | Current location |
 |---|---|
-| `Report_2026_11_05.pdf` | [reports/daily/Report_2026_11_05.pdf](../reports/daily/Report_2026_11_05.pdf) |
-| `Report_2026_11_06.pdf` | [reports/daily/Report_2026_11_06.pdf](../reports/daily/Report_2026_11_06.pdf) |
-| `Report_2026_11_08.pdf` | [reports/daily/Report_2026_11_08.pdf](../reports/daily/Report_2026_11_08.pdf) |
-| `Report_2026_11_09.pdf` | [reports/daily/Report_2026_11_09.pdf](../reports/daily/Report_2026_11_09.pdf) |
-| `Report_2026_11_10.pdf` | [reports/daily/Report_2026_11_10.pdf](../reports/daily/Report_2026_11_10.pdf) |
-| `Report_2026_11_11.pdf` | [reports/daily/Report_2026_11_11.pdf](../reports/daily/Report_2026_11_11.pdf) |
-| `Weekly_report_2026_11_10.pptx` | [reports/weekly/Weekly_report_2026_11_10.pptx](../reports/weekly/Weekly_report_2026_11_10.pptx) |
-| Root README: design, closed-loop update, CAD and input data | [Current design](current_design.md) |
-| Root README: current blockers | [Current limitations](limitations.md) |
-| Root README: next steps | [Roadmap](roadmap.md) |
-| Root README: dated findings, earlier limitations and studies | [Research history](history.md) |
-| Root README: reports and presentation | [Report index](../reports/README.md) |
-| Tracked `ASRC_kevin/__pycache__/craft_data.cpython-312.pyc` and `craft_data.cpython-314.pyc` | Removed from version control; generated caches are ignored |
+| `ASRC_kevin/telescopic_planar_study/` | `simulations/u4m2/` |
+| `ASRC_kevin/telescopic_planar_study/reports/` | `reports/builders/`; published Word reports are in `reports/daily/` |
+| `ASRC_kevin/h8u12_front5to8_payload500g/` | `simulations/shared/h8u12_front5to8_payload500g/` |
+| Root-level models, configurations and result folders in `ASRC_kevin/` | `simulations/shared/legacy_models/` |
+| `ASRC_kevin/four_rope_inverse_5_to_11/` | `archive/legacy_studies/four_rope_inverse_5_to_11/` |
+| `ASRC_kevin/front_sweep_5_to_11/` | `archive/legacy_studies/front_sweep_5_to_11/` |
+| `reach_extension_study.py`, `reach_extension_results/` | `archive/legacy_studies/reach_extension/`, with outputs in `results/` |
+| `robot_3d_viewer.html` | `simulations/shared/legacy_models/robot_3d_viewer.html` |
+| `CAD/` | `cad/modules/` |
+| `ASRC_kevin/telescopic_planar_study/inputs/tank-v2.step` | `cad/tank/tank-v2.step` |
+| `ASRC_kevin/moving_prototype/final_u4m2/` | `cad/previews/u4m2/` |
+| `ASRC_kevin/moving_prototype/full_length/` | `archive/superseded_cad/full_length/` |
+| Shared material files and `stiffness_update/` | `data/materials/`, with the previous database under `history/` |
+| Root `Report_*.pdf` and `Weekly_report_*.pptx` | `reports/daily/` and `reports/weekly/` |
 
-Original report filenames are retained. The PDF/PPTX contents are unchanged, and the four existing daily-report builders now target `reports/daily/`.
+The [complete file-by-file path map](path_migration.csv) covers the moved files, including the earlier report relocation. This organisation changes paths and navigation, not scientific conclusions. Source paths are updated where needed for execution; historical simulation data, CAD and published report bytes are preserved.
 
-## Subsequent organisation stage
+## Execution and provenance
 
-A later migration can group model code under `simulations/u4m2/` and `simulations/shared/`, source geometry under `cad/`, shared materials under `data/materials/`, and superseded work under `archive/`. That migration requires dependency and path updates: the active backbone model still imports the 6 November planar/spatial models and the M stiffness sweep.
+The active model resolves shared inputs through [project_paths.py](../simulations/u4m2/project_paths.py). It still uses the same H8U12 rod kernel and stiffness database. Shared legacy rod scripts resolve the central material catalogue from their new location. See the [simulation commands](../simulations/README.md#run-and-verify-the-closed-loop-study) and [report builder instructions](../reports/builders/README.md).
 
-Preserve frozen study inputs, scientific results and source histories. Follow the [existing CAD cleanup review](../ASRC_kevin/moving_prototype/full_length/CLEANUP_REVIEW_CONFIRMATION.md) when replacing the superseded prototype; its warning and review record remain in place.
+The archived full-length CAD is still **not the simulated design**. Its [warning](../archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md) and [cleanup review](../archive/superseded_cad/full_length/CLEANUP_REVIEW_CONFIRMATION.md) remain with it. Archiving preserves those records; it does not validate or replace the geometry.

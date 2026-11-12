@@ -2,7 +2,7 @@
 
 [Project home](../README.md) · [Current design](current_design.md) · [Roadmap](roadmap.md)
 
-The design has not passed an integrated, hardware-validated deployment cycle. The latest [closed-loop report](../ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/REPORT.md) distinguishes settled-state success from failures before feedback correction. Earlier findings are preserved in [research history](history.md).
+The design has not passed an integrated, hardware-validated deployment cycle. The latest [closed-loop report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) distinguishes settled-state success from failures before feedback correction. Earlier findings are preserved in [research history](history.md).
 
 | Limitation | Current evidence | Work required |
 |---|---|---|
