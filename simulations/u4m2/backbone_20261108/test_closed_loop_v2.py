@@ -36,19 +36,20 @@ class V2Tests(unittest.TestCase):
     def test_transition_subdivides_until_node_motion_is_small(self):
         # Fake plant: the state is the command; node positions move 10 mm per mm of command.
         r = Runner.__new__(Runner)
-        r.a = types.SimpleNamespace(node_step=4.5, max_depth=8, rope_step=.25)
-        r.trace = []; r.last_points = np.zeros((3, 3)); r.max_move = 0.; r.case = 'fake'
+        r.a = types.SimpleNamespace(node_step=4.5, max_depth=8, rope_step=.25, mid_tol=None, mid_max=4)
+        r.trace = []; r.last_points = np.zeros((3, 3)); r.max_move = 0.; r.case = 'fake'; r.n_mid = 0
         r.d = types.SimpleNamespace(solve=lambda z, R: np.array(R, float))
         def check(z, R, s, target, kind, index, phase):
             P = np.full((3, 3), float(np.max(R)) * 1000 * 10.)
             move = float(np.linalg.norm(P - r.last_points, axis=1).max())
             return dict(node_move_mm=move, kind=kind), P
         r.check = check
-        z = r.transition(np.zeros(12), np.zeros(12), 0., [0, 20], np.full(12, .002), 0., [10, 20], 'feedforward', 0, 'test')
+        z = r.transition(np.zeros((3, 4)), np.zeros((3, 4)), 0., [0, 20], np.full((3, 4), .002), 0., [10, 20], 'feedforward', 0, 'test')
         self.assertAlmostEqual(float(np.max(z)), .002)
         moves = [t['node_move_mm'] for t in r.trace]
         self.assertTrue(len(moves) >= 8)
         self.assertLessEqual(max(moves), 4.5 + 1e-9)
+        self.assertTrue(np.allclose(r.offset_extra, 0))
 
 
 if __name__ == '__main__':

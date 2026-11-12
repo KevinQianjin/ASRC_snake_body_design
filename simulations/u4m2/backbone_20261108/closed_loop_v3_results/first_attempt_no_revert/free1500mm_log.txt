@@ -1,0 +1,23 @@
+free1500mm 0 straighten err 0.006 Tmin 2.81 trace 2 maxmove 0.27 t 2s
+free1500mm 50 straighten err 0.158 Tmin 2.99 trace 158 maxmove 0.90 t 74s
+free1500mm 100 entry err 0.186 Tmin 3.00 trace 252 maxmove 2.50 t 113s
+free1500mm 150 entry err 0.186 Tmin 3.00 trace 315 maxmove 2.50 t 118s
+free1500mm 200 entry err 0.186 Tmin 3.00 trace 369 maxmove 2.50 t 121s
+free1500mm 250 entry err 0.186 Tmin 3.00 trace 422 maxmove 2.50 t 125s
+free1500mm 300 entry err 0.186 Tmin 3.00 trace 480 maxmove 2.50 t 131s
+free1500mm 350 right_out err 0.131 Tmin 2.99 trace 614 maxmove 2.50 t 189s
+free1500mm 400 right_out err 0.193 Tmin 3.02 trace 804 maxmove 2.50 t 284s
+free1500mm 450 right_return err 0.059 Tmin 3.02 trace 940 maxmove 2.50 t 345s
+free1500mm 500 right_return err 0.149 Tmin 3.00 trace 1090 maxmove 2.50 t 413s
+free1500mm 550 right_return err 0.095 Tmin 2.98 trace 1282 maxmove 2.50 t 502s
+free1500mm 600 left_out err 0.115 Tmin 2.93 trace 1489 maxmove 2.50 t 593s
+free1500mm 650 left_out err 0.184 Tmin 3.07 trace 1680 maxmove 2.50 t 679s
+free1500mm 700 left_return err 0.062 Tmin 3.09 trace 1802 maxmove 2.50 t 729s
+free1500mm 750 left_return err 0.092 Tmin 3.02 trace 1963 maxmove 2.50 t 796s
+free1500mm 800 left_return err 0.001 Tmin 3.00 trace 2157 maxmove 2.50 t 883s
+free1500mm 850 exit err 0.124 Tmin 3.01 trace 2248 maxmove 2.50 t 909s
+free1500mm 900 exit err 0.124 Tmin 3.01 trace 2303 maxmove 2.50 t 914s
+free1500mm 950 exit err 0.124 Tmin 3.01 trace 2358 maxmove 2.50 t 917s
+free1500mm 1000 exit err 0.124 Tmin 3.01 trace 2414 maxmove 2.50 t 920s
+free1500mm 1050 exit err 0.124 Tmin 3.01 trace 2482 maxmove 2.50 t 924s
+{"case": "free1500mm", "samples": 1072, "completed": true, "controller_uses_plant_parameters": false, "settings": {"tension_target_n": 3.0, "settle_tension_n": 2.5, "precomp_limit_mm": 0.5, "rope_step_mm": 0.25, "node_step_mm": 4.5, "max_iterations": 16, "mid_tol_deg": 0.5, "mid_max": 4, "reference": "length_cycle_results_pre3_tol1", "gains": "closed_loop_v3_results/nominal_gains.npz"}, "settled": {"states": 1072, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.8096309465548783, "peak_tension_n": 18.027159259986025, "minimum_eigenvalue": 0.16111321164499248, "minimum_clearance_mm": 20.914266787946957, "maximum_node_move_mm": 0.0, "maximum_yaw_error_deg": 0.19944662249778844, "maximum_elevation_error_deg": 0.1999441647147009, "maximum_offset_mm": 0.9034287846909035, "samples_not_settled": 0}, "trace": {"states": 2511, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.8096309465548783, "peak_tension_n": 18.031724875529896, "minimum_eigenvalue": 0.16111321164499248, "minimum_clearance_mm": 20.825522525629054, "maximum_node_move_mm": 2.5000000000002425}, "trace_states_by_kind": {"start": 1, "feedforward": 2469, "mid_correction": 0, "correction": 42}, "pre_control_start": {"minimum_tension_n": 2.243873415395763, "minimum_eigenvalue": 0.7622593200730508}}

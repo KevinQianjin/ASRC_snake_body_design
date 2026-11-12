@@ -19,6 +19,13 @@ and inspection checks). Changes to the control sequence only:
    solved from the previous one and inspected (stability, tension, geometry,
    strain, tank clearance), and recorded in the trace.
 
+4. Optional correction during moves (--mid-tol): after each feedforward
+   sub-step, if the head is more than mid_tol deg from the target interpolated
+   along the move, corrections are applied before the next sub-step. A correction
+   is kept only if the measured error decreases; otherwise the rope lengths are
+   returned and correction during that move stops (the settle loop finishes).
+5. Optional reference and gains (--ref, --gains, --prepare-gains).
+
 The controller still uses only measured yaw/elevation and the 12 tensions;
 plant parameters are not used. Quasi-static: no dynamics, noise, delay,
 friction, backlash or hysteresis.
@@ -54,7 +61,7 @@ class Runner:
         self.r = spatial_rod(4, 2, [4, 5, 6], 20, 8, variant); self.r.payload = payload
         self.d = FeedbackDrive(self.r, free, ea); self.free = free
         self.tank = FastTank()
-        self.trace = []; self.last_points = None; self.max_move = 0.
+        self.trace = []; self.last_points = None; self.max_move = 0.; self.n_mid = 0; self.n_mid_reverts = 0; self.offset_extra = np.zeros(12)
 
     def check(self, z, R, s, target, kind, index, phase):
         m, P = inspect(self.r, self.d, z, R, dict(clamp_s_mm=s), self.tank, target)
@@ -82,18 +89,47 @@ class Runner:
         return self.move(zm, Rm, sm, tm, Rb, sb, tb, kind, index, phase, depth + 1)
 
     def transition(self, z, Ra, sa, ta, Rb, sb, tb, kind, index, phase):
+        """Apply a transition in sub-steps. With --mid-tol, feedforward moves are corrected during the move:
+        after each sub-step, if the head is more than mid_tol deg from the interpolated target, up to mid_max
+        corrections (QP, <= 0.25 mm per rope, tensions >= target) are applied before the next sub-step. The
+        accumulated correction is kept for the rest of the move and returned in self.offset_extra (mm)."""
         n = max(1, int(np.ceil(np.max(np.abs(Rb - Ra)) * 1000 / self.a.rope_step - 1e-9)))
         ta = np.asarray(ta, float); tb = np.asarray(tb, float)
+        extra = np.zeros(12); R_cur, s_cur, t_cur = Ra.copy(), sa, ta
+        mid = self.a.mid_tol is not None and kind == 'feedforward'
         for k in range(1, n + 1):
-            f0, f1 = (k - 1) / n, k / n
-            z = self.move(z, Ra + (Rb - Ra) * f0, sa + (sb - sa) * f0, ta + (tb - ta) * f0,
-                          Ra + (Rb - Ra) * f1, sa + (sb - sa) * f1, ta + (tb - ta) * f1, kind, index, phase)
+            f1 = k / n
+            Rk = Ra + (Rb - Ra) * f1 + extra.reshape(3, 4) / 1000; sk = sa + (sb - sa) * f1; tk = ta + (tb - ta) * f1
+            z = self.move(z, R_cur, s_cur, t_cur, Rk, sk, tk, kind, index, phase)
+            R_cur, s_cur, t_cur = Rk, sk, tk
+            if not mid:
+                continue
+            for _ in range(self.a.mid_max):
+                err = error(tk, angles(self.r, z)); norm = float(np.max(np.abs(err)))
+                if norm <= self.a.mid_tol:
+                    break
+                T = self.d.force(z, R_cur).ravel()
+                delta, _ = qp(self.A, self.C, T, err, self.offset + extra, self.a.tension_target, .25)
+                if np.max(np.abs(delta)) < 1e-8:
+                    break
+                Rn = R_cur + delta.reshape(3, 4) / 1000
+                zn = self.move(z, R_cur, s_cur, t_cur, Rn, s_cur, t_cur, 'mid_correction', index, phase)
+                if float(np.max(np.abs(error(tk, angles(self.r, zn))))) > norm:
+                    # Measured error grew: the nominal gains do not fit this plant here. Return to the
+                    # previous rope lengths and stop correcting during this move; the settle loop
+                    # (with its damping rule) finishes the sample.
+                    z = self.move(zn, Rn, s_cur, t_cur, R_cur, s_cur, t_cur, 'mid_revert', index, phase)
+                    mid = False; self.n_mid_reverts += 1
+                    break
+                z = zn; R_cur = Rn; extra = extra + delta; self.n_mid += 1
+        self.offset_extra = extra
         return z
 
     def run(self):
         a = self.a
-        rows = json.loads((REF / 'nominal.json').read_text()); refzs = np.load(REF / 'nominal_states.npz')['z']
-        data = np.load(OUT1 / 'nominal_gains.npz')
+        ref = Path(a.ref) if a.ref else REF
+        rows = json.loads((ref / 'nominal.json').read_text()); refzs = np.load(ref / 'nominal_states.npz')['z']
+        data = np.load(a.gains if a.gains else OUT1 / 'nominal_gains.npz')
         if a.limit: rows = rows[:a.limit]
         nominal = spatial_rod(4, 2, [4, 5, 6], 20, 8)
         z = refzs[0] / nominal.scale * self.r.scale
@@ -113,13 +149,16 @@ class Runner:
                 if not first and T_pred.min() < a.tension_target:
                     x, _ = qp(A, C, T_pred, np.zeros(2), offset, a.tension_target, a.precomp_limit)
                     offset = offset + x; precomp = float(np.max(np.abs(x)))
+                self.A, self.C = A, C
                 R_new = R0 + offset.reshape(3, 4) / 1000
                 if first:
                     zs = self.d.solve(z, R_new)
                     z = z if zs is None else zs
                     rec, P = self.check(z, R_new, s, target, 'start', i, q['phase']); self.trace.append(rec); self.last_points = P
                 else:
+                    self.offset = offset.copy()
                     z = self.transition(z, R_applied, s_prev, t_prev, R_new, s, target, 'feedforward', i, q['phase'])
+                    offset = offset + self.offset_extra; R_new = R0 + offset.reshape(3, 4) / 1000
                 R_applied = R_new; s_prev = s; first = False
                 previous_error = None
                 for it in range(a.max_iter):
@@ -143,7 +182,7 @@ class Runner:
         return records, Z
 
 
-def summarize(case, records, trace, args):
+def summarize(case, records, trace, args, expected=1069):
     def block(v):
         return dict(states=len(v), failed_checks=sum(not x['checks_pass'] for x in v),
                     below_operating_tension=sum(not x['operating_tension_pass'] for x in v),
@@ -158,10 +197,11 @@ def summarize(case, records, trace, args):
                    maximum_elevation_error_deg=max(abs(x['elevation_error_deg']) for x in records),
                    maximum_offset_mm=max(np.max(np.abs(x['offset_mm'])) for x in records),
                    samples_not_settled=sum((max(abs(x['yaw_error_deg']), abs(x['elevation_error_deg'])) > .2) or x['minimum_tension_n'] < args.settle_tension for x in records))
-    kinds = {k: sum(t['kind'] == k for t in trace) for k in ('start', 'feedforward', 'correction')}
-    return dict(case=case, samples=len(records), completed=len(records) == 1069, controller_uses_plant_parameters=False,
+    kinds = {k: sum(t['kind'] == k for t in trace) for k in ('start', 'feedforward', 'mid_correction', 'mid_revert', 'correction')}
+    return dict(case=case, samples=len(records), completed=len(records) == expected, controller_uses_plant_parameters=False,
                 settings=dict(tension_target_n=args.tension_target, settle_tension_n=args.settle_tension, precomp_limit_mm=args.precomp_limit,
-                              rope_step_mm=args.rope_step, node_step_mm=args.node_step, max_iterations=args.max_iter),
+                              rope_step_mm=args.rope_step, node_step_mm=args.node_step, max_iterations=args.max_iter,
+                              mid_tol_deg=args.mid_tol, mid_max=args.mid_max, reference=str(args.ref or REF), gains=str(args.gains or OUT1 / 'nominal_gains.npz')),
                 settled=settled, trace=tr, trace_states_by_kind=kinds,
                 pre_control_start=None if start is None else dict(minimum_tension_n=start['minimum_tension_n'], minimum_eigenvalue=start['minimum_eigenvalue']))
 
@@ -173,11 +213,22 @@ def main():
     p.add_argument('--precomp-limit', type=float, default=.5); p.add_argument('--rope-step', type=float, default=.25)
     p.add_argument('--node-step', type=float, default=4.5); p.add_argument('--max-depth', type=int, default=8)
     p.add_argument('--max-iter', type=int, default=16); p.add_argument('--out', default=None)
+    p.add_argument('--ref', default=None, help='reference cycle folder (nominal.json, nominal_states.npz); default length_cycle_results_pre3')
+    p.add_argument('--gains', default=None, help='nominal gains (.npz); default closed_loop_results/nominal_gains.npz')
+    p.add_argument('--prepare-gains', action='store_true', help='compute nominal gains for --ref into --out, then exit')
+    p.add_argument('--mid-tol', type=float, default=None, help='correct during feedforward moves when the angle error exceeds this (deg)')
+    p.add_argument('--mid-max', type=int, default=4, help='maximum corrections per feedforward sub-step')
     a = p.parse_args()
     out = Path(a.out).resolve() if a.out else OUT; out.mkdir(exist_ok=True)
+    if a.prepare_gains:
+        import closed_loop_cycle as v1
+        v1.REF = Path(a.ref).resolve() if a.ref else REF; v1.OUT = out
+        v1.prepare(); return
     run = Runner(a.case, a)
     records, Z = run.run()
-    summary = summarize(a.case, records, run.trace, a)
+    ref = Path(a.ref) if a.ref else REF
+    expected = len(json.loads((ref / 'nominal.json').read_text())) if not a.limit else a.limit
+    summary = summarize(a.case, records, run.trace, a, expected)
     tag = a.case + (f'_limit{a.limit}' if a.limit else '')
     (out / f'{tag}.json').write_text(json.dumps(records, indent=1))
     (out / f'{tag}_trace.json').write_text(json.dumps(run.trace, indent=1))
