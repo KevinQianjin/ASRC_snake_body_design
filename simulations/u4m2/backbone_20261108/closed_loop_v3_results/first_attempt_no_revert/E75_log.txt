@@ -1,0 +1,23 @@
+E75 0 straighten err 0.009 Tmin 2.96 trace 2 maxmove 0.41 t 2s
+E75 50 straighten err 0.038 Tmin 2.98 trace 158 maxmove 0.90 t 76s
+E75 100 entry err 0.124 Tmin 3.01 trace 252 maxmove 2.50 t 99s
+E75 150 entry err 0.124 Tmin 3.01 trace 315 maxmove 2.50 t 103s
+E75 200 entry err 0.124 Tmin 3.01 trace 369 maxmove 2.50 t 106s
+E75 250 entry err 0.124 Tmin 3.01 trace 422 maxmove 2.50 t 110s
+E75 300 entry err 0.124 Tmin 3.01 trace 480 maxmove 2.50 t 115s
+E75 350 right_out err 0.120 Tmin 3.00 trace 613 maxmove 2.50 t 172s
+E75 400 right_out err 0.122 Tmin 2.98 trace 828 maxmove 2.50 t 277s
+E75 450 right_return err 0.152 Tmin 4.12 trace 995 maxmove 2.50 t 360s
+E75 500 right_return err 0.194 Tmin 3.15 trace 1173 maxmove 2.50 t 442s
+E75 550 right_return err 0.011 Tmin 3.81 trace 1388 maxmove 2.50 t 538s
+E75 600 left_out err 0.008 Tmin 3.17 trace 1599 maxmove 2.50 t 633s
+E75 650 left_out err 0.077 Tmin 3.00 trace 1815 maxmove 2.50 t 730s
+E75 700 left_return err 0.158 Tmin 3.52 trace 1978 maxmove 2.50 t 804s
+E75 750 left_return err 0.014 Tmin 3.31 trace 2168 maxmove 2.50 t 891s
+E75 800 left_return err 0.152 Tmin 3.28 trace 2379 maxmove 2.50 t 986s
+E75 850 exit err 0.008 Tmin 3.05 trace 2471 maxmove 2.50 t 1012s
+E75 900 exit err 0.008 Tmin 3.05 trace 2526 maxmove 2.50 t 1017s
+E75 950 exit err 0.008 Tmin 3.05 trace 2581 maxmove 2.50 t 1020s
+E75 1000 exit err 0.008 Tmin 3.05 trace 2637 maxmove 2.50 t 1024s
+E75 1050 exit err 0.008 Tmin 3.05 trace 2705 maxmove 2.50 t 1028s
+{"case": "E75", "samples": 1072, "completed": true, "controller_uses_plant_parameters": false, "settings": {"tension_target_n": 3.0, "settle_tension_n": 2.5, "precomp_limit_mm": 0.5, "rope_step_mm": 0.25, "node_step_mm": 4.5, "max_iterations": 16, "mid_tol_deg": 0.5, "mid_max": 4, "reference": "length_cycle_results_pre3_tol1", "gains": "closed_loop_v3_results/nominal_gains.npz"}, "settled": {"states": 1072, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.916272116454743, "peak_tension_n": 22.46896024577048, "minimum_eigenvalue": 0.2847599177977702, "minimum_clearance_mm": 18.695607058894538, "maximum_node_move_mm": 0.0, "maximum_yaw_error_deg": 0.1997497356858844, "maximum_elevation_error_deg": 0.19981179217078449, "maximum_offset_mm": 3.001655230190487, "samples_not_settled": 0}, "trace": {"states": 2734, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.916272116454743, "peak_tension_n": 22.46896024577048, "minimum_eigenvalue": 0.28474396234487004, "minimum_clearance_mm": 18.49019155479879, "maximum_node_move_mm": 2.500000000000174}, "trace_states_by_kind": {"start": 1, "feedforward": 2470, "mid_correction": 40, "correction": 224}, "pre_control_start": {"minimum_tension_n": 1.9559908568870361, "minimum_eigenvalue": 0.7591304096631105}}

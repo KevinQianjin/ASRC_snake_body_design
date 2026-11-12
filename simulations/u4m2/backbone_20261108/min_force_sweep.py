@@ -97,26 +97,31 @@ def min_force(r, z0, C0, yaw_target, pitch, maxiter=200, pretension=0., exact=Fa
     return z, C, dict(success=bool(res.success), message=str(res.message), iterations=int(res.nit), seconds=time.time() - t0)
 
 
-def accept(r, z, C, yaw_target, pitch):
+def accept(r, z, C, yaw_target, pitch, elev_tol=None):
+    """elev_tol (deg): if set, also require |world head elevation - pitch| <= elev_tol (exact-elevation sweeps)."""
     m, _, _ = r.metrics(z, C, stability=True)
     ok = acceptable(m, 'low_strain', 'right', np.radians(pitch)) and abs(m['yaw_deg'] - yaw_target) <= 1.0
+    if elev_tol is not None:
+        ok = ok and abs(m['world_elevation_deg'] - pitch) <= elev_tol
     return ok, m
 
 
-def run(variant, pitch, anchors, step, pretension, exact=False, smooth=0., seed_startup=None):
+def run(variant, pitch, anchors, step, pretension, exact=False, smooth=0., seed_startup=None, elev_tol=None):
     tag = f'minforce_{variant}_p{pitch:g}_a{"".join(map(str, anchors))}_pre{pretension:g}' + ('_exact' if exact else '') + (f'_smooth{smooth:g}' if smooth else '')
     if seed_startup:
         # Start from the last state of a startup_sweep.py run (4 cells, yaw 0, head at the pitch).
         st = np.load(seed_startup); last = max(int(k[1:-3]) for k in st.files if k.endswith('_z4'))
         r4 = spatial_rod(4, 2, anchors, pitch, 4, variant); z, C = st[f'k{last}_z4'], st[f'k{last}_T4']
         tag += '_fromstartup'
+    if elev_tol is not None:
+        tag += f'_tol{elev_tol:g}'
     else:
         r4, z, C = straight_seed(variant, pitch, anchors, 4, pretension)
     r8 = spatial_rod(4, 2, anchors, pitch, 8, variant)
     rows = []; states = {}
     for yaw in np.arange(0, 180.001, step):
         z4, C4, info = min_force(r4, z, C, yaw, pitch, pretension=pretension, exact=exact, smooth=smooth if yaw > 0 else 0., Cprev=C)
-        ok4, m4 = accept(r4, z4, C4, yaw, pitch)
+        ok4, m4 = accept(r4, z4, C4, yaw, pitch, elev_tol)
         rec = dict(variant=variant, pitch_deg=pitch, anchors=anchors, pretension_n=pretension, yaw_target_deg=float(yaw), opt4=info, ok4=ok4,
                    peak4_n=float(np.max(C4)))
         if ok4:
@@ -125,10 +130,10 @@ def run(variant, pitch, anchors, step, pretension, exact=False, smooth=0., seed_
             g8 = refine_seed(z4, r4, r8)
             x8 = stationary(r8, C4, g8); how = 'same_tension'; ok8 = False
             if x8 is not None:
-                ok8, m8 = accept(r8, x8, C4, yaw, pitch); C8 = C4
+                ok8, m8 = accept(r8, x8, C4, yaw, pitch, elev_tol); C8 = C4
             if not ok8:
                 x8, C8, info8 = min_force(r8, g8 if x8 is None else x8, C4, yaw, pitch, maxiter=120, pretension=pretension, exact=exact, smooth=smooth if yaw > 0 else 0., Cprev=C4); how = 'reoptimised'
-                ok8, m8 = accept(r8, x8, C8, yaw, pitch)
+                ok8, m8 = accept(r8, x8, C8, yaw, pitch, elev_tol)
             rec.update(ok8=ok8, refine8=how)
             if ok8:
                 rec.update(yaw_deg=m8['yaw_deg'], world_elevation_deg=m8['world_elevation_deg'], peak_n=m8['maximum_single_tendon_n'],
@@ -155,4 +160,5 @@ if __name__ == '__main__':
     ap.add_argument('--exact', action='store_true', help='hold world head elevation exactly at the base pitch')
     ap.add_argument('--smooth', type=float, default=0., help='weight on squared tension change from the previous step (tension in units of 100 N)')
     ap.add_argument('--seed-startup', default=None, help='startup_sweep.py states (.npz) to start the yaw sweep from')
-    a = ap.parse_args(); run(a.variant, a.pitch, a.anchors, a.step, a.pretension, a.exact, a.smooth, a.seed_startup)
+    ap.add_argument('--elev-tol', type=float, default=None, help='require 8-cell world elevation within this many deg of the pitch')
+    a = ap.parse_args(); run(a.variant, a.pitch, a.anchors, a.step, a.pretension, a.exact, a.smooth, a.seed_startup, a.elev_tol)

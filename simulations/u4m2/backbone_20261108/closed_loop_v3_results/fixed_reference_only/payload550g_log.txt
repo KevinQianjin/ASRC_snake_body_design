@@ -1,0 +1,23 @@
+payload550g 0 straighten err 0.016 Tmin 2.76 trace 2 maxmove 0.29 t 2s
+payload550g 50 straighten err 0.044 Tmin 2.99 trace 155 maxmove 0.91 t 66s
+payload550g 100 entry err 0.081 Tmin 3.00 trace 249 maxmove 2.50 t 88s
+payload550g 150 entry err 0.081 Tmin 3.00 trace 312 maxmove 2.50 t 93s
+payload550g 200 entry err 0.081 Tmin 3.00 trace 366 maxmove 2.50 t 95s
+payload550g 250 entry err 0.081 Tmin 3.00 trace 419 maxmove 2.50 t 99s
+payload550g 300 entry err 0.081 Tmin 3.00 trace 477 maxmove 2.50 t 104s
+payload550g 350 right_out err 0.192 Tmin 2.95 trace 612 maxmove 2.50 t 154s
+payload550g 400 right_out err 0.120 Tmin 2.98 trace 826 maxmove 2.50 t 249s
+payload550g 450 right_return err 0.164 Tmin 3.50 trace 1100 maxmove 4.44 t 401s
+payload550g 500 right_return err 0.157 Tmin 3.00 trace 1346 maxmove 4.44 t 517s
+payload550g 550 right_return err 0.183 Tmin 3.02 trace 1619 maxmove 4.44 t 644s
+payload550g 600 left_out err 0.168 Tmin 2.96 trace 1849 maxmove 4.44 t 747s
+payload550g 650 left_out err 0.197 Tmin 3.14 trace 2133 maxmove 4.44 t 873s
+payload550g 700 left_return err 0.130 Tmin 3.59 trace 2373 maxmove 4.48 t 981s
+payload550g 750 left_return err 0.155 Tmin 2.99 trace 2623 maxmove 4.48 t 1093s
+payload550g 800 left_return err 0.198 Tmin 3.15 trace 2885 maxmove 4.48 t 1218s
+payload550g 850 exit err 0.150 Tmin 3.43 trace 2981 maxmove 4.48 t 1247s
+payload550g 900 exit err 0.150 Tmin 3.43 trace 3036 maxmove 4.48 t 1251s
+payload550g 950 exit err 0.150 Tmin 3.43 trace 3091 maxmove 4.48 t 1254s
+payload550g 1000 exit err 0.150 Tmin 3.43 trace 3147 maxmove 4.48 t 1257s
+payload550g 1050 exit err 0.150 Tmin 3.43 trace 3215 maxmove 4.48 t 1261s
+{"case": "payload550g", "samples": 1072, "completed": true, "controller_uses_plant_parameters": false, "settings": {"tension_target_n": 3.0, "settle_tension_n": 2.5, "precomp_limit_mm": 0.5, "rope_step_mm": 0.25, "node_step_mm": 4.5, "max_iterations": 16, "mid_tol_deg": null, "mid_max": 4, "reference": "length_cycle_results_pre3_tol1", "gains": "closed_loop_v3_results/nominal_gains.npz"}, "settled": {"states": 1072, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.7644873521178863, "peak_tension_n": 23.67406006530902, "minimum_eigenvalue": 0.03763852577425342, "minimum_clearance_mm": 22.149482894039245, "maximum_node_move_mm": 0.0, "maximum_yaw_error_deg": 0.1998995301529476, "maximum_elevation_error_deg": 0.19985137476982473, "maximum_offset_mm": 3.2621634391377348, "samples_not_settled": 0}, "trace": {"states": 3244, "failed_checks": 115, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.7644873521178863, "peak_tension_n": 23.67406006530902, "minimum_eigenvalue": 0.034396064168448426, "minimum_clearance_mm": 21.5964831151081, "maximum_node_move_mm": 4.475841171367939}, "trace_states_by_kind": {"start": 1, "feedforward": 2492, "mid_correction": 0, "mid_revert": 0, "correction": 752}, "pre_control_start": {"minimum_tension_n": 2.262705732055654, "minimum_eigenvalue": 0.7543668016229257}}

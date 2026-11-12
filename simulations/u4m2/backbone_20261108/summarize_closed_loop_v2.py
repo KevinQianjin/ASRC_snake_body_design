@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-V1 = HERE / 'closed_loop_results'; V2 = HERE / 'closed_loop_v2_results'
+V1 = HERE / 'closed_loop_results'; V2 = HERE / 'closed_loop_v2_results'; V3 = HERE / 'closed_loop_v3_results'
 CASES = ['nominal', 'E75', 'payload550g', 'free1500mm', 'ropeEA80pct']
 LABEL = {'nominal': 'Nominal', 'E75': 'Rod E 75 GPa', 'payload550g': 'Head 550 g', 'free1500mm': 'Free rope 1.5 m', 'ropeEA80pct': 'Rope EA -20%'}
 
@@ -26,9 +26,9 @@ def v1_stats(case):
                 max_offset_mm=max(np.max(np.abs(q['offset_mm'])) for q in rec)), tr, rec
 
 
-def v2_stats(case):
-    s = json.loads((V2 / f'{case}_summary.json').read_text())
-    rec = json.loads((V2 / f'{case}.json').read_text()); tr = json.loads((V2 / f'{case}_trace.json').read_text())
+def v2_stats(case, folder=V2):
+    s = json.loads((folder / f'{case}_summary.json').read_text())
+    rec = json.loads((folder / f'{case}.json').read_text()); tr = json.loads((folder / f'{case}_trace.json').read_text())
     ctrl = [t for t in tr if t['kind'] != 'start']
     tmin = [t['minimum_tension_n'] for t in ctrl] + [q['minimum_tension_n'] for q in rec]
     return dict(settled_max_angle_deg=max(s['settled']['maximum_yaw_error_deg'], s['settled']['maximum_elevation_error_deg']),
@@ -39,7 +39,10 @@ def v2_stats(case):
                 steps_over_5mm=sum(t['node_move_mm'] > 5 for t in tr), min_clearance_mm=min(s['trace']['minimum_clearance_mm'], s['settled']['minimum_clearance_mm']),
                 peak_tension_n=max(s['trace']['peak_tension_n'], s['settled']['peak_tension_n']), max_offset_mm=s['settled']['maximum_offset_mm'],
                 samples_not_settled=s['settled']['samples_not_settled'], pre_control_start_tension_n=s['pre_control_start']['minimum_tension_n'],
-                trace_states_by_kind=s['trace_states_by_kind']), tr, rec
+                trace_states_by_kind=s['trace_states_by_kind'],
+                angle_failures_in_motion=sum(not t['checks_pass'] and max(abs(t['yaw_error_deg']), abs(t['elevation_error_deg'])) > 1 for t in ctrl),
+                other_failures=sum(not t['checks_pass'] and max(abs(t['yaw_error_deg']), abs(t['elevation_error_deg'])) <= 1 for t in ctrl + rec),
+                max_angle_error_in_motion_deg=max(max(abs(t['yaw_error_deg']), abs(t['elevation_error_deg'])) for t in ctrl)), tr, rec
 
 
 def main():
@@ -77,5 +80,38 @@ def main():
     fig.tight_layout(); fig.savefig(V2 / 'v1_v2_comparison.png', dpi=160); print('saved figure')
 
 
+def main_v3():
+    """v1 vs v2 vs v3 (fixed 20 deg reference + correction during moves)."""
+    out = {}; data = {}
+    for c in CASES:
+        a, tr1, rec1 = v1_stats(c); b, tr2, rec2 = v2_stats(c, V2); d3, tr3, rec3 = v2_stats(c, V3)
+        out[c] = dict(v1=a, v2=b, v3=d3); data[c] = (tr2, tr3)
+        for name, x in (('v2', b), ('v3', d3)):
+            print(f"{c:12s} {name}: settled {x['settled_max_angle_deg']:.3f} | in motion max {x['max_angle_error_in_motion_deg']:.2f} deg, >1 deg {x['angle_failures_in_motion']} | other failures {x['other_failures']} | "
+                  f"minT {x['min_tension_n']:.2f} <2.5 {x['below_2p5']}/{x['recorded_states']} | move {x['max_node_move_mm']:.2f} | unstable {x['unstable']} | clear {x['min_clearance_mm']:.1f} | peak {x['peak_tension_n']:.1f} | offset {x['max_offset_mm']:.2f} | kinds {x['trace_states_by_kind']}")
+    (V3 / 'comparison_v1_v2_v3.json').write_text(json.dumps(out, indent=2))
+    INK, MUTED, GRID = '#1f1f1d', '#6b6a66', '#e4e3df'; C2, C3 = '#eb6834', '#2a78d6'
+    plt.rcParams.update({'font.size': 9, 'axes.edgecolor': MUTED, 'axes.spines.top': False, 'axes.spines.right': False})
+    fig, axs = plt.subplots(2, 5, figsize=(17, 6.6), sharex=True)
+    for j, c in enumerate(CASES):
+        tr2, tr3 = data[c]
+        for ax, key, ylab in ((axs[0, j], 'angle', 'angle error vs interpolated target, deg'), (axs[1, j], 'minimum_tension_n', 'lowest rope tension, N')):
+            for tr, col, lab in ((tr2, C2, 'v2'), (tr3, C3, 'v3: 20 deg reference + correction during moves')):
+                t = [x for x in tr if x['kind'] != 'start']
+                y = [max(abs(x['yaw_error_deg']), abs(x['elevation_error_deg'])) for x in t] if key == 'angle' else [x[key] for x in t]
+                ax.plot([x['index'] for x in t], y, '.', ms=1.8, color=col, label=lab)
+            if key == 'angle':
+                ax.axhline(1, color=INK, lw=.8, ls=(0, (4, 3))); ax.set_ylim(0, 3.6); ax.set_title(LABEL[c], loc='left', fontsize=9.5)
+            else:
+                ax.axhline(2.5, color=MUTED, lw=.8, ls=(0, (2, 2))); ax.set_ylim(0, 4.5); ax.set_xlabel('reference sample')
+            if j == 0: ax.set_ylabel(ylab)
+            ax.grid(color=GRID, lw=.6); ax.set_axisbelow(True)
+    axs[0, 0].legend(frameon=False, fontsize=7.5, loc='upper left', markerscale=5)
+    fig.suptitle('Closed loop v2 vs v3: every recorded state (feedforward sub-steps, corrections); dashed: 1 deg acceptance and 2.5 N operating floor',
+                 x=.01, ha='left', fontsize=10)
+    fig.tight_layout(); fig.savefig(V3 / 'v2_v3_comparison.png', dpi=150); print('saved figure')
+
+
 if __name__ == '__main__':
-    main()
+    import sys
+    main_v3() if 'v3' in sys.argv[1:] else main()
