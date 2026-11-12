@@ -2,7 +2,7 @@
 
 2026-11-08 · U4+M2 · 20° · 500 g head · 63 mm · 24 mm tendon radius
 
-Follow-up to priority 1 in `Report_2026_11_06.pdf` ("M axial load transfer"). The question: how much stiffer must the M module be before an actively straightened U4+M2 front exists within the 5% axial strain diagnostic?
+Follow-up to priority 1 in [Report — 6 November 2026](../../../reports/daily/Report_2026_11_06.pdf) ("M axial load transfer"). The question: how much stiffer must the M module be before an actively straightened U4+M2 front exists within the 5% axial strain diagnostic?
 
 ## Method
 

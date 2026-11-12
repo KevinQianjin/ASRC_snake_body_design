@@ -25,7 +25,7 @@ This folder remains marked as **not the simulated design**. The files below are 
 - `../../../CAD/UniDirectional_96.step`
 - `../../../CAD/Medium_Stiffness_96.step`
 - `../final_u4m2/`
-- `../../../Report_2026_11_05.pdf` through `../../../Report_2026_11_11.pdf`
+- [Daily reports](../../../reports/README.md) (PDFs relocated to `../../../reports/daily/`)
 - Existing simulation data and source files (research provenance)
 - `NOT_THE_SIMULATED_DESIGN.md` (keep until replacement CAD/guide are ready)
 
