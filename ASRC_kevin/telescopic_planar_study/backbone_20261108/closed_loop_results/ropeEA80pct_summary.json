@@ -1,0 +1,34 @@
+{
+  "case": "ropeEA80pct",
+  "completed": true,
+  "samples": 1069,
+  "controller_uses_plant_parameters": false,
+  "open": {
+    "failed_samples": 547,
+    "maximum_yaw_error_deg": 0.6771316682360293,
+    "maximum_elevation_error_deg": 4.637460501293141,
+    "minimum_tension_n": 1.1664451373726652,
+    "peak_tension_n": 16.60350508334649,
+    "minimum_clearance_mm": 19.16009162152814,
+    "minimum_eigenvalue": 0.15858639287315235
+  },
+  "closed": {
+    "failed_samples": 0,
+    "maximum_yaw_error_deg": 0.19993617481372894,
+    "maximum_elevation_error_deg": 0.19619412289142346,
+    "minimum_tension_n": 1.2500000310466228,
+    "peak_tension_n": 22.916354788336537,
+    "minimum_clearance_mm": 21.67361069669382,
+    "minimum_eigenvalue": 0.16016768309646343
+  },
+  "feedback_trace": {
+    "samples": 703,
+    "failed_samples": 5,
+    "unstable_samples": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 0.9644151567718173
+  },
+  "minimum_correction_scale": 1.0,
+  "maximum_offset_mm": 3.38930166822197
+}

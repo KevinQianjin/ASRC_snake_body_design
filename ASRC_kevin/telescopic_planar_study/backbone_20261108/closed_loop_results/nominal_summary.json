@@ -1,0 +1,34 @@
+{
+  "case": "nominal",
+  "completed": true,
+  "samples": 1069,
+  "controller_uses_plant_parameters": false,
+  "open": {
+    "failed_samples": 543,
+    "maximum_yaw_error_deg": 0.23938608866669142,
+    "maximum_elevation_error_deg": 3.930187774209962,
+    "minimum_tension_n": 2.735990343870843,
+    "peak_tension_n": 17.64582351414854,
+    "minimum_clearance_mm": 20.460939834332763,
+    "minimum_eigenvalue": 0.16588137605453623
+  },
+  "closed": {
+    "failed_samples": 0,
+    "maximum_yaw_error_deg": 0.19987622853702192,
+    "maximum_elevation_error_deg": 0.19882790044528775,
+    "minimum_tension_n": 1.2503952408392893,
+    "peak_tension_n": 20.432401150993584,
+    "minimum_clearance_mm": 22.041574915008475,
+    "minimum_eigenvalue": 0.16621747555337366
+  },
+  "feedback_trace": {
+    "samples": 640,
+    "failed_samples": 6,
+    "unstable_samples": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 0.9310675872696162
+  },
+  "minimum_correction_scale": 1.0,
+  "maximum_offset_mm": 1.7775264065914074
+}

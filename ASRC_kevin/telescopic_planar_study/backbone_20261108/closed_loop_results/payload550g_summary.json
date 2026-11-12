@@ -1,0 +1,34 @@
+{
+  "case": "payload550g",
+  "completed": true,
+  "samples": 1069,
+  "controller_uses_plant_parameters": false,
+  "open": {
+    "failed_samples": 925,
+    "maximum_yaw_error_deg": 8.964947076685604,
+    "maximum_elevation_error_deg": 7.678761292929956,
+    "minimum_tension_n": 1.6921877422699183,
+    "peak_tension_n": 18.40615062545633,
+    "minimum_clearance_mm": 18.108977593101578,
+    "minimum_eigenvalue": 0.06797479254700173
+  },
+  "closed": {
+    "failed_samples": 0,
+    "maximum_yaw_error_deg": 0.6990498755926353,
+    "maximum_elevation_error_deg": 0.3088600963154846,
+    "minimum_tension_n": 1.2665298557858125,
+    "peak_tension_n": 19.85002018791041,
+    "minimum_clearance_mm": 21.92732833868304,
+    "minimum_eigenvalue": 0.026432630378129027
+  },
+  "feedback_trace": {
+    "samples": 1396,
+    "failed_samples": 69,
+    "unstable_samples": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 0.8392091801506925
+  },
+  "minimum_correction_scale": 0.25,
+  "maximum_offset_mm": 3.1628762874576375
+}

@@ -348,6 +348,34 @@ python length_cycle.py --source results/minforce_niti18_E40_p20_a456_pre3_exact_
 python summarize_cycle_run.py length_cycle_results_pre3 --source results/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_states.npz --startup results/startup_niti18_E40_p20_pre3_states.npz --pretension 3
 ```
 
+## 11. Output-feedback round-trip study
+
+The [closed-loop report](closed_loop_results/REPORT.md) compares open-loop replay
+with nominal-model output feedback on the same 1,069 reference samples.
+The controller uses ideal simulated head-angle and 12-rope tension measurements; plant
+stiffness, payload and rope-response perturbations are not used in its gains.
+
+All five cases complete 1,069 reference samples with zero failed settled-state
+checks at the 1-degree angle tolerance. The worst settled angle error is 0.699
+degrees (550 g payload); all other cases stay below 0.2 degrees. Output-based
+step damping resolves the large-yaw failure of the initial undamped controller.
+Some arrival states still fall below 0.95 N (minimum 0.568 N), and the corrected
+path needs refinement to satisfy the earlier 5 mm displacement sampling bound.
+These results do not establish a passing complete control sequence.
+
+- `closed_loop_cycle.py`: nominal gain preparation and forward-solved feedback cycles.
+- `render_closed_loop.py`: English comparison report, plots, MP4 and GIF animations.
+- `test_closed_loop.py`: sensitivity, command-bound and solver-consistency checks.
+- `validate_closed_loop_results.py`: exported-data and numerical-contract checks.
+
+The exploratory feedback target is 1.5 N, below the preceding 3 N feedforward
+pretension floor; maintaining a 3 N operating floor is not established here.
+
+Reference and settled-state checks are reported separately from every applied
+feedback correction. Animations show paired settled states, not physical
+transients. This remains a quasi-static ideal-sensing study; it does not validate
+sensor noise, latency, motor dynamics or continuous swept-volume safety.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).

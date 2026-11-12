@@ -1,0 +1,172 @@
+[
+  {
+    "case": "E75",
+    "completed": true,
+    "samples": 1069,
+    "controller_uses_plant_parameters": false,
+    "open": {
+      "failed_samples": 909,
+      "maximum_yaw_error_deg": 6.2796670397571575,
+      "maximum_elevation_error_deg": 7.179759292670237,
+      "minimum_tension_n": 1.6170163849824708,
+      "peak_tension_n": 20.13716458793214,
+      "minimum_clearance_mm": 14.371624523778898,
+      "minimum_eigenvalue": 0.2629164166837358
+    },
+    "closed": {
+      "failed_samples": 0,
+      "maximum_yaw_error_deg": 0.19972688883726164,
+      "maximum_elevation_error_deg": 0.1997171997492586,
+      "minimum_tension_n": 1.2547928535452846,
+      "peak_tension_n": 24.64565788905515,
+      "minimum_clearance_mm": 19.757533207998478,
+      "minimum_eigenvalue": 0.2845290262572169
+    },
+    "feedback_trace": {
+      "samples": 872,
+      "failed_samples": 9,
+      "unstable_samples": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 0.5683637322494891
+    },
+    "minimum_correction_scale": 1.0,
+    "maximum_offset_mm": 3.086709816393662
+  },
+  {
+    "case": "free1500mm",
+    "completed": true,
+    "samples": 1069,
+    "controller_uses_plant_parameters": false,
+    "open": {
+      "failed_samples": 634,
+      "maximum_yaw_error_deg": 0.8793861661728499,
+      "maximum_elevation_error_deg": 4.829957616500222,
+      "minimum_tension_n": 0.7695657562868254,
+      "peak_tension_n": 16.452441422535724,
+      "minimum_clearance_mm": 18.733037946442977,
+      "minimum_eigenvalue": 0.15586628917389214
+    },
+    "closed": {
+      "failed_samples": 0,
+      "maximum_yaw_error_deg": 0.19922347636384075,
+      "maximum_elevation_error_deg": 0.19648062956036227,
+      "minimum_tension_n": 1.2500875425310074,
+      "peak_tension_n": 21.794770520472145,
+      "minimum_clearance_mm": 21.64175762855743,
+      "minimum_eigenvalue": 0.15868120691828563
+    },
+    "feedback_trace": {
+      "samples": 706,
+      "failed_samples": 7,
+      "unstable_samples": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 0.913906455602899
+    },
+    "minimum_correction_scale": 1.0,
+    "maximum_offset_mm": 3.3248979805260928
+  },
+  {
+    "case": "nominal",
+    "completed": true,
+    "samples": 1069,
+    "controller_uses_plant_parameters": false,
+    "open": {
+      "failed_samples": 543,
+      "maximum_yaw_error_deg": 0.23938608866669142,
+      "maximum_elevation_error_deg": 3.930187774209962,
+      "minimum_tension_n": 2.735990343870843,
+      "peak_tension_n": 17.64582351414854,
+      "minimum_clearance_mm": 20.460939834332763,
+      "minimum_eigenvalue": 0.16588137605453623
+    },
+    "closed": {
+      "failed_samples": 0,
+      "maximum_yaw_error_deg": 0.19987622853702192,
+      "maximum_elevation_error_deg": 0.19882790044528775,
+      "minimum_tension_n": 1.2503952408392893,
+      "peak_tension_n": 20.432401150993584,
+      "minimum_clearance_mm": 22.041574915008475,
+      "minimum_eigenvalue": 0.16621747555337366
+    },
+    "feedback_trace": {
+      "samples": 640,
+      "failed_samples": 6,
+      "unstable_samples": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 0.9310675872696162
+    },
+    "minimum_correction_scale": 1.0,
+    "maximum_offset_mm": 1.7775264065914074
+  },
+  {
+    "case": "payload550g",
+    "completed": true,
+    "samples": 1069,
+    "controller_uses_plant_parameters": false,
+    "open": {
+      "failed_samples": 925,
+      "maximum_yaw_error_deg": 8.964947076685604,
+      "maximum_elevation_error_deg": 7.678761292929956,
+      "minimum_tension_n": 1.6921877422699183,
+      "peak_tension_n": 18.40615062545633,
+      "minimum_clearance_mm": 18.108977593101578,
+      "minimum_eigenvalue": 0.06797479254700173
+    },
+    "closed": {
+      "failed_samples": 0,
+      "maximum_yaw_error_deg": 0.6990498755926353,
+      "maximum_elevation_error_deg": 0.3088600963154846,
+      "minimum_tension_n": 1.2665298557858125,
+      "peak_tension_n": 19.85002018791041,
+      "minimum_clearance_mm": 21.92732833868304,
+      "minimum_eigenvalue": 0.026432630378129027
+    },
+    "feedback_trace": {
+      "samples": 1396,
+      "failed_samples": 69,
+      "unstable_samples": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 0.8392091801506925
+    },
+    "minimum_correction_scale": 0.25,
+    "maximum_offset_mm": 3.1628762874576375
+  },
+  {
+    "case": "ropeEA80pct",
+    "completed": true,
+    "samples": 1069,
+    "controller_uses_plant_parameters": false,
+    "open": {
+      "failed_samples": 547,
+      "maximum_yaw_error_deg": 0.6771316682360293,
+      "maximum_elevation_error_deg": 4.637460501293141,
+      "minimum_tension_n": 1.1664451373726652,
+      "peak_tension_n": 16.60350508334649,
+      "minimum_clearance_mm": 19.16009162152814,
+      "minimum_eigenvalue": 0.15858639287315235
+    },
+    "closed": {
+      "failed_samples": 0,
+      "maximum_yaw_error_deg": 0.19993617481372894,
+      "maximum_elevation_error_deg": 0.19619412289142346,
+      "minimum_tension_n": 1.2500000310466228,
+      "peak_tension_n": 22.916354788336537,
+      "minimum_clearance_mm": 21.67361069669382,
+      "minimum_eigenvalue": 0.16016768309646343
+    },
+    "feedback_trace": {
+      "samples": 703,
+      "failed_samples": 5,
+      "unstable_samples": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 0.9644151567718173
+    },
+    "minimum_correction_scale": 1.0,
+    "maximum_offset_mm": 3.38930166822197
+  }
+]

@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 11 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 12 November 2026
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
@@ -36,6 +36,16 @@ The **5% strain threshold**, **250 N tendon bound** and **180° search cap** are
 2. Build and test the backbone M module and interfaces: both bending planes, axial stiffness, torsion, guide buckling and end-attachment slip. Replace assumed properties with measured values.
 3. Calibrate winches and ropes, add friction/backlash/hysteresis where supported by measurements, and evaluate posture/tension feedback against actuator limits.
 4. Integrate the actual head, cables and rear mechanism; verify tank-aware motion, dynamic behaviour and inspection coverage before claiming full-system performance.
+
+## Closed-loop simulation update (12 November 2026)
+
+The [English closed-loop report](ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/REPORT.md) adds head-angle and 12-rope tension feedback to the latest stable-startup U4+M2 cycle. All five cases complete 1,069 reference samples and pass the chosen **settled-state** checks: yaw/elevation within 1 degree, tension bounds, positive fixed-winch tangent stiffness, geometry/strain and sampled tank clearance. The worst settled angular error is **0.699 degrees** in the 550 g case; the other four cases remain below 0.2 degrees. Controller gains use the nominal model, with output-based damping after measured error growth.
+
+**The complete control sequence has not passed every requirement.** Some feedforward arrival states fall below 0.95 N before correction; the lowest is **0.568 N**. The feedback tension target is 1.5 N, so this exploratory controller does not enforce the project's 3 N operating pretension recommendation. The corrected path also exceeds the previous 5 mm sample-displacement bound at some transitions and needs refinement. No noise, latency, motor dynamics, friction or physical transient response is modelled.
+
+- [3D full-cycle MP4](ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/E75_full_cycle.mp4): open-loop versus closed-loop settled shapes.
+- [3D steering GIF](ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/E75_steering.gif).
+- [Feedback correction GIF](ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/payload550g_feedback_convergence.gif): measured-error damping at a fixed large-yaw reference.
 
 ## Prototype CAD status
 
@@ -141,7 +151,7 @@ The 5% strain threshold, 250 N tendon bound and 180° angle cap are numerical di
 
 1. **Build and test the backbone M module** ([test plan](ASRC_kevin/telescopic_planar_study/backbone_20261108/M_BACKBONE_TEST_PLAN.md)): EA, EI, rod buckling at the guide spacing and rod joint slip. Then re-run the studies with the measured values.
 2. ~~Coordinated winch-control test~~ — done on 10 November: smooth, stable and reversible ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#8-coordinated-winch-control-between-poses-coordinated_winchpy-2026-11-10)). Winch accuracy studied on 10 November: about ±0.2–0.5 mm per winch for ±1° open-loop, so add head-angle feedback ([results](ASRC_kevin/telescopic_planar_study/backbone_20261108/README.md#9-winch-position-error-and-rope-stretch-sensitivity-winch_sensitivitypy-2026-11-10)). Next: test 3–5 N pretension against rope slack, and add friction to the rope model.
-3. **Closed-loop round trip** (next): correct rope lengths from head angle and rope tension using the 10 November sensitivity matrix; re-run the 75 GPa, 550 g and 1.5 m free-rope cases to within 1° and 0.95 N. Also require exact 20° elevation at every pose on the fine mesh (insertion currently holds about 17°).
+3. **Closed-loop transition safety and dynamics:** the quasi-static output-feedback study now meets the 1-degree settled-state criterion in all five cases. Next enforce the chosen operating pretension throughout feedforward transitions and feedback corrections, refine the corrected path below the 5 mm sampling bound, and add actuator dynamics, sensing noise and delay. See the [closed-loop report](ASRC_kevin/telescopic_planar_study/backbone_20261108/closed_loop_results/REPORT.md); this is not yet a hardware-validated controller.
 4. **Tank-aware steering:** optimise postures with the 3D tank as a constraint, and check the 30–55° twist against hardware limits.
 5. **Entry, storage and sensor head:** real head CAD and cable envelopes, sleeve contact, rear storage and retraction.
 6. **Rear mechanism and integrated validation.**

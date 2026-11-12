@@ -1,0 +1,34 @@
+{
+  "case": "free1500mm",
+  "completed": true,
+  "samples": 1069,
+  "controller_uses_plant_parameters": false,
+  "open": {
+    "failed_samples": 634,
+    "maximum_yaw_error_deg": 0.8793861661728499,
+    "maximum_elevation_error_deg": 4.829957616500222,
+    "minimum_tension_n": 0.7695657562868254,
+    "peak_tension_n": 16.452441422535724,
+    "minimum_clearance_mm": 18.733037946442977,
+    "minimum_eigenvalue": 0.15586628917389214
+  },
+  "closed": {
+    "failed_samples": 0,
+    "maximum_yaw_error_deg": 0.19922347636384075,
+    "maximum_elevation_error_deg": 0.19648062956036227,
+    "minimum_tension_n": 1.2500875425310074,
+    "peak_tension_n": 21.794770520472145,
+    "minimum_clearance_mm": 21.64175762855743,
+    "minimum_eigenvalue": 0.15868120691828563
+  },
+  "feedback_trace": {
+    "samples": 706,
+    "failed_samples": 7,
+    "unstable_samples": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 0.913906455602899
+  },
+  "minimum_correction_scale": 1.0,
+  "maximum_offset_mm": 3.3248979805260928
+}

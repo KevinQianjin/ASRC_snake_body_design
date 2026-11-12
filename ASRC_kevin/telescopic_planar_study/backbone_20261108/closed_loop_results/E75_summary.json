@@ -1,0 +1,34 @@
+{
+  "case": "E75",
+  "completed": true,
+  "samples": 1069,
+  "controller_uses_plant_parameters": false,
+  "open": {
+    "failed_samples": 909,
+    "maximum_yaw_error_deg": 6.2796670397571575,
+    "maximum_elevation_error_deg": 7.179759292670237,
+    "minimum_tension_n": 1.6170163849824708,
+    "peak_tension_n": 20.13716458793214,
+    "minimum_clearance_mm": 14.371624523778898,
+    "minimum_eigenvalue": 0.2629164166837358
+  },
+  "closed": {
+    "failed_samples": 0,
+    "maximum_yaw_error_deg": 0.19972688883726164,
+    "maximum_elevation_error_deg": 0.1997171997492586,
+    "minimum_tension_n": 1.2547928535452846,
+    "peak_tension_n": 24.64565788905515,
+    "minimum_clearance_mm": 19.757533207998478,
+    "minimum_eigenvalue": 0.2845290262572169
+  },
+  "feedback_trace": {
+    "samples": 872,
+    "failed_samples": 9,
+    "unstable_samples": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 0.5683637322494891
+  },
+  "minimum_correction_scale": 1.0,
+  "maximum_offset_mm": 3.086709816393662
+}
