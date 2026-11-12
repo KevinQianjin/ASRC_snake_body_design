@@ -1,0 +1,63 @@
+{
+  "result": "pass",
+  "checks": [
+    {
+      "case": "nominal",
+      "samples": 1069,
+      "trace_samples": 640,
+      "passed": true,
+      "total_qp_failures": 0,
+      "maximum_feedback_iterations": 5,
+      "samples_above_controller_angle_target": 0,
+      "max_settled_node_step_mm": 5.249295577696345
+    },
+    {
+      "case": "E75",
+      "samples": 1069,
+      "trace_samples": 872,
+      "passed": true,
+      "total_qp_failures": 0,
+      "maximum_feedback_iterations": 5,
+      "samples_above_controller_angle_target": 0,
+      "max_settled_node_step_mm": 5.4509146789797365
+    },
+    {
+      "case": "payload550g",
+      "samples": 1069,
+      "trace_samples": 1396,
+      "passed": true,
+      "total_qp_failures": 0,
+      "maximum_feedback_iterations": 16,
+      "samples_above_controller_angle_target": 1,
+      "max_settled_node_step_mm": 6.822096605405239
+    },
+    {
+      "case": "free1500mm",
+      "samples": 1069,
+      "trace_samples": 706,
+      "passed": true,
+      "total_qp_failures": 0,
+      "maximum_feedback_iterations": 5,
+      "samples_above_controller_angle_target": 0,
+      "max_settled_node_step_mm": 5.08941388248722
+    },
+    {
+      "case": "ropeEA80pct",
+      "samples": 1069,
+      "trace_samples": 703,
+      "passed": true,
+      "total_qp_failures": 0,
+      "maximum_feedback_iterations": 5,
+      "samples_above_controller_angle_target": 0,
+      "max_settled_node_step_mm": 5.198353398803964
+    }
+  ],
+  "git_head": "c2f6858c2617223ebec28f717ce5ec6e1bbe7bfb",
+  "code_sha256": {
+    "closed_loop_cycle.py": "3a25dfec60413441021e626fcaa923234a544e01eb204ba10646196cfb8668d7",
+    "render_closed_loop.py": "dd4a78b680d5dae08dce78bb5dbc650dfea97d6b1b4889531914361370cffefc",
+    "test_closed_loop.py": "2dde5ba33911e2d3cddd22a1bc9312d2ad27d7a80f8f98c890c990f0336a5a7b",
+    "validate_closed_loop_results.py": "55ca01ddb217e377b169d35813baa2cb16f49edb8a2aee210b808a7100f1dd1f"
+  },
+  "note": "Data consistency and numerical contracts only; not a physical or continuous-motion validation."
+}
