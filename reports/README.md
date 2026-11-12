@@ -9,7 +9,8 @@
 
 ## Daily reports and weekly presentation
 
-- [**Daily report — 11 November 2026**](daily/Report_2026_11_11.pdf): model data sheet, prototype files marked, and the round-trip cycle re-run with a 3 N pretension floor and a stable startup (nominal cycle passes every check; remaining failures are open-loop calibration). Built by [`build_report_2026_11_11.py`](builders/build_report_2026_11_11.py).
+- [**Daily report — 12 November 2026**](daily/Report_2026_11_12.pdf): closed-loop control with the 3 N operating pretension enforced, tension-aware arrival and a refined motion path (v2), then an exact 20° reference (v3): four of five cases pass every check in every recorded state; the 550 g head keeps transient angle error at 155–175° yaw. Built by [`build_report_2026_11_12.py`](builders/build_report_2026_11_12.py).
+- [Daily report — 11 November 2026](daily/Report_2026_11_11.pdf): model data sheet, prototype files marked, and the round-trip cycle re-run with a 3 N pretension floor and a stable startup (nominal cycle passes every check; remaining failures are open-loop calibration). Built by [`build_report_2026_11_11.py`](builders/build_report_2026_11_11.py).
 - [**Model data sheet**](../simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md): every input of the simulation model (continuous 96 mm modules, full-length rod, module stiffness and mass, ropes, winch, tank, numerics).
 - [Report — 10 November 2026](daily/Report_2026_11_10.pdf): coordinated winch control between the 5° poses (smooth, stable, reversible; winch command tables) and winch position error sensitivity (about ±0.2–0.5 mm per winch for ±1°; head-angle feedback recommended).
 - [**Weekly report — 10 November 2026**](weekly/Weekly_report_2026_11_10.pptx): slide deck summarising the problem, the NiTi backbone fix and all results to date.
@@ -22,7 +23,7 @@
 
 Rebuilding requires Python, ReportLab, the source figures/data, and the Carlito Regular, Bold, Italic and BoldItalic TTF fonts. The default font directory is `/usr/share/fonts/truetype/crosextra`; set `ASRC_REPORT_FONT_DIR` to the directory containing those four files when using a different installation.
 
-The report generators are in [the builder source folder](builders). Builders for 8–11 November now write to `reports/daily/` at the repository root. For example:
+The report generators are in [the builder source folder](builders). Builders for 8–12 November write to `reports/daily/` at the repository root. For example:
 
 ```bash
 python reports/builders/build_report_2026_11_11.py
