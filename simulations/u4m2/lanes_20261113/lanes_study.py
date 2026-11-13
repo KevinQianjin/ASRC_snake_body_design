@@ -8,7 +8,7 @@ Usage (from this folder), in order:
     python lanes_study.py cycle --case nominal      # also E75, payload550g, free1500mm, ropeEA80pct
 
 Lanes: anchor set A (U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm (lanes.py). Every step
-uses the existing, unchanged scripts with the lane rope geometry installed, and
+uses the existing, unchanged scripts in ../backbone_20261108 with the lane rope geometry installed, and
 writes to separate folders so the shared-hole results stay untouched:
 results_lanes/, length_cycle_results_lanes/, closed_loop_lanes_results/.
 """
@@ -55,7 +55,7 @@ def main():
         v1.prepare()
     else:
         sys.argv = ['closed_loop_v2.py', '--case', a.case, '--ref', str(REF), '--gains', str(CL / 'nominal_gains.npz'), '--out', str(CL)]
-        runpy.run_path(str(HERE / 'closed_loop_v2.py'), run_name='__main__')
+        runpy.run_path(str(lanes.BACKBONE_DIR / 'closed_loop_v2.py'), run_name='__main__')
 
 
 if __name__ == '__main__':

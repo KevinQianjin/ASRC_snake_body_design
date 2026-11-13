@@ -1,5 +1,8 @@
 """Separate tendon lanes per anchor set (radial spread) for the spatial rod model.
 
+Lives in simulations/u4m2/lanes_20261113 and imports the unchanged solver from
+../backbone_20261108 (path set below).
+
 The pinned spatial kernel (steering_63mm_20261106/spatial_model.py) routes all
 anchor sets through the same four holes at 24 mm. Physically, three 2 mm ropes
 cannot share one hole (see cad/simulation_reference/u4m2_500g/validation.json).
@@ -14,11 +17,18 @@ backbone.spatial_rod so that every rod it returns uses the lanes; call it
 BEFORE importing modules that do `from backbone import spatial_rod` (or
 `from length_cycle import spatial_rod`). Pinned files are not modified.
 """
+import sys
 import types
+from pathlib import Path
 import numpy as np
 from numba import njit
-import backbone
-from spatial_model import rotation
+
+# The solver scripts live, unchanged, in ../backbone_20261108; make them importable from here.
+BACKBONE_DIR = Path(__file__).resolve().parent.parent / 'backbone_20261108'
+if str(BACKBONE_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKBONE_DIR))
+import backbone  # noqa: E402
+from spatial_model import rotation  # noqa: E402
 
 DEFAULT_RADII_MM = (21., 24., 27.)
 _original_spatial_rod = backbone.spatial_rod
