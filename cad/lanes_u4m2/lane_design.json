@@ -22,7 +22,7 @@
  },
  "rope_d": 2.0,
  "lane_hole_d": 2.5,
- "chamfer": 0.5,
+ "chamfer": 0.25,
  "lane_pitch_mm": 3.0,
  "wall_between_lane_holes_mm": 0.5,
  "rod_d": 1.8,
@@ -39,19 +39,23 @@
  },
  "anchor": {
   "block_depth": 7.0,
-  "return_offset": 5.0,
+  "return_offset_B_C_tangential": 5.0,
+  "return_offset_A_radial_inward": 3.5,
   "groove_w": 2.2,
   "groove_d": 2.2
  },
  "joint": {
-  "bolt_r": 12.5,
-  "hole_d": 2.2,
-  "angles": [
+  "radius": 12.5,
+  "dowel_angles": [
    0.0,
+   180.0
+  ],
+  "dowel_pilot_d": 1.9,
+  "screw_angles": [
    90.0,
-   180.0,
    270.0
-  ]
+  ],
+  "screw_hole_d": 2.2
  },
  "modules": {
   "U_lane_pass": {
@@ -63,7 +67,7 @@
    ],
    "anchored_set": null,
    "watertight": true,
-   "volume_mm3": 24021.6,
+   "volume_mm3": 23906.3,
    "max_radius_mm": 31.66,
    "bounds": [
     [
@@ -87,7 +91,7 @@
    ],
    "anchored_set": "A",
    "watertight": true,
-   "volume_mm3": 25707.0,
+   "volume_mm3": 25075.8,
    "max_radius_mm": 31.66,
    "bounds": [
     [
@@ -110,7 +114,7 @@
    ],
    "anchored_set": "B",
    "watertight": true,
-   "volume_mm3": 31332.2,
+   "volume_mm3": 31368.4,
    "max_radius_mm": 31.66,
    "bounds": [
     [
@@ -132,7 +136,7 @@
    ],
    "anchored_set": "C",
    "watertight": true,
-   "volume_mm3": 31544.3,
+   "volume_mm3": 31568.1,
    "max_radius_mm": 31.66,
    "bounds": [
     [

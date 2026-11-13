@@ -1,10 +1,12 @@
 // Lane-routed U4+M2 assembly (newest design, 13 Nov 2026). Built by build_lane_modules.py.
+// Parts: base_interface + U1..U3 (U_lane_pass) + U4 + M5 + M6 + head_adapter, 16 leaf springs, rod, 12 ropes.
 // Frame: Z axial (proximal -> distal), +Y up, +X left, -X right. Straight pose, no pitch.
 // Keep the STL files beside this file. Bodies are the STEP meshes re-clocked (U -45 deg, M -22.5 deg)
 // with rope pads, lane holes, anchor blocks, the 1.85 mm backbone bore and joint holes added.
 show_ropes = true;
 show_rod = true;
 show_springs = true;
+show_ends = true;     // base interface (z -20..0) and head adapter (z 576..582)
 explode = 0;          // mm between modules, e.g. 20 to see the end disks
 $fn = 32;
 L = 96;
@@ -21,3 +23,7 @@ if (show_rod) color([0.3, 0.3, 0.3]) translate([0, 0, 4*(L+explode)]) cylinder(d
 if (show_ropes) for (s = [0:2]) for (a = rays)
     color([[0.95, 0.6, 0.02], [0.02, 0.65, 0.2], [0.8, 0.05, 0.4]][s])
         translate([lanes[s]*cos(a), lanes[s]*sin(a), -20]) cylinder(d = 2, h = anchor_end[s] + 20 + (s+3)*explode);
+if (show_ends) {
+    color([0.35, 0.35, 0.4]) translate([0, 0, -explode]) import("base_interface.stl", convexity = 8);
+    color([0.8, 0.1, 0.1]) translate([0, 0, 6*(L+explode)]) import("head_adapter.stl", convexity = 8);
+}

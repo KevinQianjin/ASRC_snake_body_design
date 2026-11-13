@@ -1,23 +1,26 @@
-# Lane-routed U4+M2 modules (newest design, 13 Nov 2026)
+# Lane-routed U4+M2 front (newest design, 13 Nov 2026)
 
-These are the 3D modules for the current design: continuous 96 mm modules
-U1–U4, M5, M6 (no pin joint, no gap), three rope sets on their own radial lanes,
-and a 1.8 mm NiTi backbone through M5 and M6. They are built from the uploaded
-STEP meshes in `../previews/u4m2/`, which are left untouched, by
-`build_lane_modules.py`. Open `lane_assembly.scad` in OpenSCAD with the STL files beside it
-(`explode = 20` separates the modules so the end disks are visible).
-`lane_disks.png` shows the end-disk faces.
+**To build it, follow [`BUILD_GUIDE.md`](BUILD_GUIDE.md).** It covers printing, purchased parts, springs, backbone, joints, rope threading and anchoring, tensioning and the checks before first use.
 
-| File | Used as | Lane holes | Anchor | Centre hole |
-|---|---|---|---|---|
-| `U_lane_pass.stl` | U1, U2, U3 | A, B, C | – | none (filled; no rod in U) |
-| `U4_lane_anchorA.stl` | U4 | A, B, C | A at the distal disk | none (filled) |
-| `M5_lane_anchorB.stl` | M5 | B, C | B at the distal disk | **1.85 mm bore for the 1.8 mm rod** |
-| `M6_lane_anchorC.stl` | M6 | C | C at the distal disk (head side) | **1.85 mm bore** |
-| `U_leaf_springs.stl` | the 4 NiTi leaf springs of every U | – | – | – |
+This folder has every part needed for the U4+M2 front:
+- continuous 96 mm modules U1–U4, M5, M6, with no pin joint and no gap;
+- three rope sets on their own radial lanes;
+- a 1.8 mm NiTi backbone through M5 and M6;
+- the base interface and the head adapter.
 
-Frame: Z is the module axis (proximal → distal), +Y is up, +X is left and −X is right.
-Every lane is on the up, left, down and right rays. Lane radii: A 21 mm, B 24 mm, C 27 mm.
+The modules are built by `build_lane_modules.py` from the uploaded STEP meshes in `../previews/u4m2/`, which are left untouched. `build_ends_and_check.py` builds the two end parts and checks the whole assembly; the result is in `assembly_check.json` (all pass). `lane_assembly.scad` shows the full stack in OpenSCAD (`explode = 20` separates the parts). `lane_disks.png` and `end_parts.png` show the faces.
+
+| File | Qty | Used as | Lane holes | Anchor | Centre |
+|---|---:|---|---|---|---|
+| `base_interface.stl` | 1 | 20 mm block between the rear beam and U1 | A, B, C | – | solid |
+| `U_lane_pass.stl` | 3 | U1, U2, U3 | A, B, C | – | solid (no rod in U) |
+| `U4_lane_anchorA.stl` | 1 | U4 | A, B, C | A, distal disk (radial loop) | solid (rod end stop) |
+| `M5_lane_anchorB.stl` | 1 | M5 | B, C | B, distal disk | **Ø1.85 bore for the Ø1.8 rod** |
+| `M6_lane_anchorC.stl` | 1 | M6 | C | C, distal disk | **Ø1.85 bore** |
+| `head_adapter.stl` | 1 | 6 mm plate between M6 and the head | – | closes the C anchors | 1 mm rod-end relief |
+| `U_leaf_springs.stl` | reference | the 4 NiTi springs of one U (16 in total) | | | |
+
+Frame: Z is the module axis (proximal → distal), +Y is up, +X is left and −X is right. Every lane lies on one of the four rays (up, right, down, left). Lane radii: A 21 mm, B 24 mm, C 27 mm.
 
 ## What changed from the STEP bodies
 
@@ -37,21 +40,30 @@ Every lane is on the up, left, down and right rays. Lane radii: A 21 mm, B 24 mm
    direction, on ±Y. That gives the high vertical bending stiffness the simulation
    assumes. Check this against the U designer's intent.
 2. **Solid end disks (13 Nov, later).** Every 3 mm end disk is now a full round plate (r 31.45 mm). All the STEP notches, the 2 mm-deep blind slots (curved strip-root reliefs, U diagonal slots) and the unused 8.4 mm U centre hole are filled. The only holes left are: lane holes, anchor grooves + return holes, the M backbone bore, the 4 joint holes, and the U leaf-spring pockets (re-cut to the exact spring shape). U1–U3 disk: 12 lane + 4 joint holes + 4 spring pockets. U4 distal: the same plus 4 return holes and grooves. M5 distal: 8 lane + 4 return + 4 joint + bore. M6 distal: 4 lane + 4 return + 4 joint + bore. Filling the strip-root reliefs bonds each strip root to the disk over 3 mm instead of 1 mm, which may stiffen the module slightly near its ends. This is untested: compare one printed module with the stiffness database before relying on the simulation numbers.
-3. **Rope pads.** The end disks are notched exactly where the corridors are, so each ray gets a
-   3 mm pad in the notch (radial 18.5–29.5 mm, 7 mm wide). Lane holes are Ø2.5 mm (2 mm rope +
-   0.5 mm) with 0.5 mm entry chamfers. Holes exist only for the sets that still pass through
-   that module.
+3. **Rope pads.** The end disks were notched exactly where the corridors are, so each ray has a
+   3 mm pad (radial 18.5–29.5 mm, 7 mm wide); since the disks are now solid, the pads only matter
+   for the anchor blocks. Lane holes are Ø2.5 mm (2 mm rope + 0.5 mm) with 0.25 mm entry chamfers,
+   which keeps a wall between lanes at the 3 mm pitch. Holes exist only for the sets that still
+   pass through that module.
 4. **Backbone hole sized to the rod.** In M5 and M6 the 8.4 mm passage is plugged (Ø8.6) and bored
    Ø1.85 mm for the Ø1.8 mm NiTi rod. A Ø6 × 12 mm sleeve inside each end disk gives the rod
    15 mm of support per end. A 3 mm disk alone cannot clamp the rod in rotation, so without the
    sleeve the rod would add little bending stiffness. The interior is free up to r ≈ 8 mm
    there, so the sleeve touches no strip. The U centre hole is filled because no rod runs
    there; head wiring has to run outside the modules or through a hole added later.
-5. **Anchor blocks.** On the distal disk of U4 (A), M5 (B) and M6 (C), the pad is 7 mm deep:
-   the 3 mm disk plus 4 mm of free space inside the module. It has a groove and a return hole,
-   described below.
-6. **Joint holes.** 4 × Ø2.2 mm at r = 12.5 mm on the four rays, through both disks. These
-   are free inside both bodies for the nut and screw head.
+5. **Anchor blocks.** On the distal disk of U4 (A), M5 (B) and M6 (C), the pad is 7 mm deep: the
+   3 mm disk plus 4 mm of free space inside the module. Each has a 2.2 × 2.2 mm groove on the
+   distal face and a Ø2.5 return hole. For B and C the groove runs tangentially, with the return
+   hole 5 mm beside the lane. For A it runs **radially inward**, with the return hole 3.5 mm inside
+   the lane at r 17.5 mm. This keeps the U4 block narrow: a tangential block came within 0.3 mm of
+   the leaf springs, the radial one leaves more than 1.5 mm.
+6. **Joint holes.** 4 holes at r = 12.5 mm on the four rays, through both disks. The left/right
+   holes are Ø1.9 pilots, reamed for Ø2 dowel pins: press fit on distal faces, slip fit on
+   proximal faces. The up/down holes are Ø2.2 for M2 screws. An M2 nut fits on the inner face of
+   every hole in every module (checked).
+7. **Leaf-spring pockets.** Each pocket is the spring end shape + 0.1 mm per side (7.05 × 6.33 mm).
+   It goes through the proximal disk, so the strip slides in from that face, and is a 2 mm blind
+   pocket in the distal disk. The strip is bonded with epoxy at both ends.
 
 Minimum wall between neighbouring lane holes is 0.5 mm (3 mm pitch − 2.5 mm hole).
 No existing slot comes closer. 0.5 mm is thin for SLS PA12. If the printer cannot hold
@@ -59,47 +71,20 @@ it, use 2.3 mm holes (0.7 mm wall) or move the lanes to a 3.5 mm pitch (21/24.5/
 and re-run `lanes_study.py --radii 21 24.5 28`). All parts stay within the source
 envelope (max radius 31.66 mm, the same as the STEP bodies).
 
-## How to connect a rope to its module (anchor)
+## Rope anchors and module joints (summary; details in BUILD_GUIDE.md)
 
-A crimp stop cannot sit on a lane. With only 3 mm between lanes, any ferrule or knot
-wider than about 2.9 mm would break into the next lane's hole. So each rope ends with a
-**loop through two holes**:
-
-1. Thread the rope from the winch up its lane through every disk up to the anchor module's
-   distal disk (U4 for A, M5 for B, M6 for C).
-2. On the distal face, lay it in the tangential **groove** (2.2 mm wide × 2.2 mm deep, 5 mm long).
-   It then sits flush, so the next module's disk can close over it.
-3. Pass it back down the **return hole** (Ø2.5, 5 mm beside the lane) into the space inside
-   the module.
-4. On the inner face, crimp a stop (e.g. a Ø3.5 mm aluminium or copper ferrule for 2 mm rope).
-   A stopper knot plus a drop of cyanoacrylate also works. Pre-stretch the PA6 rope first,
-   then crimp at the 3 N pretension length.
-
-The rope tension (up to 16.5 N in the cycles, 3 N minimum) is carried by the groove bridge
-in bending and partly by friction. The crimp only sees what is left, and nothing sits in a
-neighbouring lane. Fit-test one anchor block at 3× the peak load (~50 N) before trusting
-the printed bridge.
-
-## How to connect modules to each other
-
-The joint is **rigid, end disk to end disk, no gap**, matching the continuous model:
-
-- **Clocking/alignment:** the four joint holes and the lane holes line up by construction.
-  Ream two opposite joint holes and fit Ø2 mm dowel pins (press in one module, slip in the
-  other). They set the clocking, so the lane holes stay coaxial across the joint, and they
-  take shear.
-- **Clamping:** M2 socket screws through the other two holes, nuts on the inner face of the
-  next module. Use thread-locker. For the joints that carry the largest bending moment (U4–M5
-  and M5–M6), prefer four M2 screws plus two Ø2 dowels added on the 45° diagonals at r 12.5 mm
-  (check these against the strips first; the build script only verifies the four ray positions). The joint must not open under the bending moment: a gap would change the rope
-  lengths.
-- **Backbone across M5–M6:** run one continuous 192 mm Ø1.8 NiTi rod through the M5 and M6
-  bores, or one rod per module. Bond it in each 15 mm bore+sleeve with retaining compound or
-  epoxy after roughening the NiTi; a cross-pinned collar also works. Keep it straight at
-  assembly. Its proximal end stops in the U4/M5 joint (the U4 distal disk has the 8.4 mm hole).
-- **Order:** assemble the six modules dry (pins + screws), then thread the ropes from the base,
-  one set at a time (C first, being outermost and longest), and terminate at the anchors.
-- Do not glue or bolt anything through the rope pads; keep the chamfered lane entries clean.
+- **Rope anchor:** a crimp cannot sit on a lane, because 3 mm lane pitch leaves no room for a
+  stop wider than about 2.9 mm. Each rope therefore comes up its lane, lies in the groove on the
+  anchor disk's distal face (flush), goes back down the return hole, and is crimped (sleeve OD
+  ≤ 3.5 mm) against the inner face. The groove bridge carries the load; fit-test one at 50 N.
+- **Module joint:** rigid, end disk to end disk, no gap. 2 × Ø2 × 8 mm dowels (left/right) set the
+  clocking so all rope holes line up; 2 × M2 × 10 screws (up/down) clamp, with nuts inside the
+  module. The base interface and the head adapter use the same pattern, with counterbores for the
+  screw heads.
+- **Backbone:** one 192 mm Ø1.8 NiTi rod through M5 and M6, bonded over 15 mm at each module end
+  (bore + sleeve). It stops against U4's solid distal centre and the head adapter's relief.
+- **Mounting:** 4 × M3 heat-set inserts on the diagonals: base rear face at r 17 mm, head adapter
+  front face at r 20 mm. These are placeholder patterns; match them to the real rear beam and head.
 
 ## Does it work? (checks done)
 
@@ -122,5 +107,6 @@ The joint is **rigid, end disk to end disk, no gap**, matching the continuous mo
   `rope_chord_check.py` measures this.
 - NiTi rod strain at the largest M5 bend (103° over 96 mm, uniform curvature) is about 1.7%,
   within the superelastic range (~6%).
-- Not checked: printed-part strength (pads, 0.5 mm walls, anchor bridges), friction at the
-  chamfers, and real stiffness after re-clocking.
+- Not checked: printed-part strength (0.5 mm walls, anchor bridges), rope friction, the
+  stiffness after re-clocking and filling, and the extra part mass (M about +5 g each) in the
+  simulation. See BUILD_GUIDE.md, sections 10–11.

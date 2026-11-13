@@ -19,13 +19,15 @@ untouched):
   * Rope pads: the end disks are notched exactly at those corridors, so a
     3 mm pad (radial 18.5-29.5 mm, 7 mm wide) is added in each disk notch on
     every ray, and drilled with 2.5 mm lane holes (2 mm rope + 0.5 mm) with
-    0.5 mm entry chamfers.
+    0.25 mm entry chamfers.
   * Anchors: the distal disk of the anchor module gets a 7 mm deep anchor
     block per ray (disk + 4 mm into the free space inside the module) with a
-    tangential groove on the distal face and a return hole 5 mm beside the
-    lane: the rope comes up its lane, turns along the groove, goes back down
-    the return hole and is crimped/knotted on the inside face. A stop never
-    sits on a lane, which the 3 mm lane pitch could not accommodate.
+    groove on the distal face and a return hole: the rope comes up its lane,
+    turns along the groove, goes back down the return hole and is crimped on the
+    inside face. B and C loop tangentially (return hole 5 mm beside the lane);
+    A loops radially inward (return hole 3.5 mm inside the lane) so the U4 block
+    stays clear of the leaf springs. A stop never sits on a lane, which the 3 mm
+    lane pitch could not accommodate.
   * Backbone: the 8.4 mm M passage is plugged and bored 1.85 mm for the
     1.8 mm NiTi rod, and a 6 mm OD x 12 mm sleeve inside each M end disk
     gives the rod 15 mm of support per end so it is clamped in rotation.
@@ -34,8 +36,11 @@ untouched):
     centre hole are filled. The only holes left are lane
     holes, anchor grooves/return holes, the M backbone bore, the joint holes and the U
     leaf-spring pockets.
-  * Joints: 4 x 2.2 mm holes at r 12.5 mm on the 0/90/180/270 deg rays (M2
-    screws + nuts, or 2 dowels + 2 screws), free inside both bodies.
+  * Joints: 4 holes at r 12.5 mm: left/right 1.9 mm pilots for 2 mm dowel pins (ream),
+    up/down 2.2 mm for M2 screws + nuts; free inside both bodies.
+
+See BUILD_GUIDE.md for making and assembling the parts; build_ends_and_check.py
+adds the base interface and head adapter and checks the whole assembly.
 
 Outputs (this folder): U_lane_pass.stl (U1-U3), U4_lane_anchorA.stl,
 M5_lane_anchorB.stl, M6_lane_anchorC.stl, U_leaf_springs.stl (unchanged
@@ -54,11 +59,22 @@ SRC = HERE.parent / 'previews' / 'u4m2'
 LANES = dict(A=21., B=24., C=27.)                   # mm, set -> lane radius
 ANCHOR_MODULE = dict(A=3, B=4, C=5)                 # 0..5 = U1..U4, M5, M6
 RAYS = dict(right=180., up=90., left=0., down=270.)  # deg in the assembly XY plane (+X = left)
-ROPE_D, HOLE_D, CHAMFER = 2.0, 2.5, .5
+ROPE_D, HOLE_D, CHAMFER = 2.0, 2.5, .25   # chamfer to 3.0 mm: keeps a wall at the 3 mm lane pitch
 ROD_D, BORE_D, SLEEVE_OD, SLEEVE_L, PLUG_D = 1.8, 1.85, 6., 12., 8.6
 PAD_R, PAD_W, DISK_T, HALF = (18.5, 29.5), 7., 3., 48.
 ANCHOR_DEPTH, RETURN_OFFSET, GROOVE_W, GROOVE_D = 4., 5., 2.2, 2.2
+RETURN_INWARD, RETURN_WALL = 3.5, 2.   # set A: return hole 3.5 mm radially inside its lane (r 17.5)
+
+
+def return_step(s):
+    """(radial, tangential) offset of a set's return hole from its lane hole, mm."""
+    return (-RETURN_INWARD, 0.) if s == 'A' else (0., RETURN_OFFSET)
 BOLT_R, BOLT_D, BOLT_ANGLES = 12.5, 2.2, (0., 90., 180., 270.)
+DOWEL_ANGLES, SCREW_ANGLES, DOWEL_PILOT_D = (0., 180.), (90., 270.), 1.9   # pilot: ream to 2.00 (press) / 2.02 (slip)
+
+
+def joint_hole_d(a):
+    return DOWEL_PILOT_D if a in DOWEL_ANGLES else BOLT_D
 CLOCK = dict(U=-45., M=-22.5)
 KINDS = ['U', 'U', 'U', 'U', 'M', 'M']
 
@@ -113,6 +129,25 @@ def disk_fill(body, r=31.45):
     return [cyl(2 * r, z0, z0 + DISK_T, sections=180) for z0 in (-HALF, HALF - DISK_T)]
 
 
+SPRING_CLEARANCE = .1
+
+
+def spring_pockets(springs):
+    """Leaf-spring pockets: the spring section + 0.1 mm per side. Proximal pocket goes through the
+    disk (the spring slides in from the proximal face); distal pocket is blind, 2 mm deep. The
+    spring (94 mm) then sits from the distal pocket bottom (z = +47) to 1 mm inside the proximal face
+    and is bonded at both ends; the next module or the base interface closes the opening."""
+    from shapely.geometry import Polygon
+    out = []
+    for sp in springs.split(only_watertight=False):
+        top = sp.bounds[1, 2]
+        sec = sp.section(plane_origin=[0, 0, top - 1.], plane_normal=[0, 0, 1])
+        poly = Polygon(max(sec.discrete, key=len)[:, :2]).buffer(SPRING_CLEARANCE, join_style=2)
+        for z0, z1 in ((-HALF - 1, -HALF + DISK_T + .01), (HALF - DISK_T - .01, top)):
+            pr = trimesh.creation.extrude_polygon(poly, z1 - z0); pr.apply_translation([0, 0, z0]); out.append(pr)
+    return out
+
+
 def module_sets(i):
     """Lane sets passing through module i, and the set anchored at its distal disk (or None)."""
     sets = [s for s, m in ANCHOR_MODULE.items() if m >= i]
@@ -126,17 +161,21 @@ def build(i):
     sets, anchor = module_sets(i)
     add, sub = disk_fill(body), []
     if springs is not None:
-        sub.append(springs)          # re-open only the leaf-spring pockets (exact spring shape)
+        sub += spring_pockets(springs)
     for ray in RAYS.values():
         for z0, z1 in ((-HALF, -HALF + DISK_T), (HALF - DISK_T, HALF)):
             add.append(on_ray(ray, sum(PAD_R) / 2, 0., z0, z1, PAD_R[1] - PAD_R[0], PAD_W))
         if anchor:
             ra = LANES[anchor]
-            add.append(on_ray(ray, sum(PAD_R) / 2, RETURN_OFFSET / 2, HALF - DISK_T - ANCHOR_DEPTH, HALF,
-                              PAD_R[1] - PAD_R[0], PAD_W + RETURN_OFFSET))
-            # groove on the distal face from the lane to the return hole, and the return hole
-            sub.append(on_ray(ray, ra, RETURN_OFFSET / 2, HALF - GROOVE_D, HALF + 1, GROOVE_W, RETURN_OFFSET))
-            x, y = xy(ray, ra, RETURN_OFFSET)
+            dr, dt = return_step(anchor)
+            if dt:   # tangential loop (B, C): block widened sideways to hold the return hole
+                add.append(on_ray(ray, sum(PAD_R) / 2, dt / 2, HALF - DISK_T - ANCHOR_DEPTH, HALF, PAD_R[1] - PAD_R[0], PAD_W + dt))
+                sub.append(on_ray(ray, ra, dt / 2, HALF - GROOVE_D, HALF + 1, GROOVE_W, dt))
+            else:    # radial loop (A, innermost): block extended inward, stays 7 mm wide (clear of the U leaf springs)
+                r0 = ra + dr - RETURN_WALL
+                add.append(on_ray(ray, (r0 + PAD_R[1]) / 2, 0., HALF - DISK_T - ANCHOR_DEPTH, HALF, PAD_R[1] - r0, PAD_W))
+                sub.append(on_ray(ray, ra + dr / 2, 0., HALF - GROOVE_D, HALF + 1, -dr, GROOVE_W))
+            x, y = xy(ray, ra + dr, dt)
             sub.append(cyl(HOLE_D, HALF - DISK_T - ANCHOR_DEPTH - 1, HALF + 1, x, y))
         for s in sets:
             x, y = xy(ray, LANES[s])
@@ -147,7 +186,7 @@ def build(i):
                 sub.append(cone(HOLE_D + 2 * CHAMFER, HOLE_D, zf - sgn * .01, zf + sgn * CHAMFER, x, y))
     for a in BOLT_ANGLES:
         x, y = xy(a, BOLT_R)
-        sub.append(cyl(BOLT_D, -HALF - 1, HALF + 1, x, y, 24))
+        sub.append(cyl(joint_hole_d(a), -HALF - 1, HALF + 1, x, y, 24))
     if kind == 'M':
         for sgn in (-1, 1):
             z_out, z_in = sgn * HALF, sgn * (HALF - DISK_T - SLEEVE_L)
@@ -178,8 +217,8 @@ def main():
                   rays_deg=RAYS, body_clocking_deg=CLOCK, rope_d=ROPE_D, lane_hole_d=HOLE_D, chamfer=CHAMFER,
                   lane_pitch_mm=3., wall_between_lane_holes_mm=3. - HOLE_D, rod_d=ROD_D, rod_bore_d=BORE_D,
                   rod_support_length_per_end_mm=DISK_T + SLEEVE_L, sleeve_od=SLEEVE_OD, pad=dict(radial=PAD_R, width=PAD_W, thickness=DISK_T),
-                  anchor=dict(block_depth=DISK_T + ANCHOR_DEPTH, return_offset=RETURN_OFFSET, groove_w=GROOVE_W, groove_d=GROOVE_D),
-                  joint=dict(bolt_r=BOLT_R, hole_d=BOLT_D, angles=BOLT_ANGLES), modules={})
+                  anchor=dict(block_depth=DISK_T + ANCHOR_DEPTH, return_offset_B_C_tangential=RETURN_OFFSET, return_offset_A_radial_inward=RETURN_INWARD, groove_w=GROOVE_W, groove_d=GROOVE_D),
+                  joint=dict(radius=BOLT_R, dowel_angles=DOWEL_ANGLES, dowel_pilot_d=DOWEL_PILOT_D, screw_angles=SCREW_ANGLES, screw_hole_d=BOLT_D), modules={})
     names = {0: 'U_lane_pass', 3: 'U4_lane_anchorA', 4: 'M5_lane_anchorB', 5: 'M6_lane_anchorC'}
     # straight-corridor clearance of every lane in the *unmodified* re-clocked bodies (ropes between the disks)
     for kind in 'UM':
