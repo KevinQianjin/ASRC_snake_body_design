@@ -472,12 +472,36 @@ python closed_loop_v2.py --case nominal --ref length_cycle_results_pre3_tol1 --g
 python summarize_closed_loop_v2.py v3
 ```
 
+## 14. Separate rope lanes (radial spread) and rope-chord check (`lanes.py`, `lanes_study.py`, 2026-11-13)
+
+The pinned model routes all three anchor sets through the same four holes at 24 mm, which three 2 mm ropes cannot share. `lanes.py` gives each set its own radius on the same up/right/down/left rays: **A (ends at U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm**. It does this by wrapping `backbone.spatial_rod` with a copy of the pinned kernel that has per-set rope offsets. No pinned file is changed. With equal radii it reproduces the pinned kernel to 1e-14 (energy) and 1e-16 (gradient). With lanes, the finite-difference gradient error is 2e-8. `lanes_study.py` re-runs the whole 3 N pipeline into separate folders (`results_lanes/`, `length_cycle_results_lanes/`, `closed_loop_lanes_results/`).
+
+| Check | Shared holes (24 mm) | Lanes 21/24/27 mm |
+|---|---|---|
+| Startup, 32 states | all pass, peak 17.4 N, min eig 0.685 | all pass, peak 16.4 N, min eig 0.695 |
+| Yaw holds 0–175° at 20° | peak 17.4 N, min eig 0.166 | all 36 pass, peak 16.4 N, min eig 0.185 |
+| Yaw 0° / 90° / 150°: peak (sum) | 17.3 (79.0) / 11.2 (83.3) / 8.1 (69.8) N | 16.3 (76.0) / 10.9 (79.0) / 8.0 (69.2) N |
+| Reference round trip | all checks pass, peak 17.6 N, clearance 20.6 mm | all pass (1101 states), peak 16.5 N, min 2.73 N, clearance 20.1 mm, min eig 0.185 |
+
+CLOSED_LOOP_TABLE
+
+**Rope chords inside the modules** (`rope_chord_check.py`). The model guides each rope only at the module end disks, so inside a bent module the rope is a straight chord. U modules bend at most 7.3°, and their chords stay within 0.2 mm of the lane. **M5 bends 14° at the 0° hold, 25° at 15° yaw, 40–65° between 20° and 90° yaw, and up to 103° at 175° yaw.** M6 bends up to 40°. M5's chords leave their lanes by 4.0 mm at the hold, 6.8 mm at 15°, 11–18 mm at 20–90° and 33 mm at 175°. In the re-clocked M body (cad/lanes_u4m2) the straight corridor clearance is 5.5–7.8 mm. So the steering ropes in M5 would touch the spring strips beyond about 15° yaw, with lanes or shared holes alike. **Large-yaw steering therefore needs intermediate rope guides in the M modules, and the model must route ropes through those guides (per-cell chords) before the large-yaw results can be trusted.** The rod strain at 103° over 96 mm is about 1.7%, within the NiTi superelastic range.
+
+The matching 3D modules (lane holes, anchors, rod bore, joints) are in `cad/lanes_u4m2/`.
+
+```bash
+python lanes.py                      # validation
+python lanes_study.py startup        # then: sweep, reference, gains, cycle --case <case>
+python rope_chord_check.py results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz
+```
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
 2. **U4+M2 remains the only viable length** with three or fewer anchor sets. Longer fronts would need more anchor sets inside M, or a stiffer M again.
 3. **Every rope needs at least about 1 N pretension** for 3D lateral stability (section 4). With that, holding the head near 20° while sweeping yaw needs only about 7–15 N peak tendon force (section 5).
-4. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
+4. With separate rope lanes (section 14) everything still passes, at about 1 N lower peak tension. However, the M5 rope chords exceed the strip clearance beyond about 15° yaw unless the M modules get intermediate rope guides.
+5. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
 
 ## Limitations
 
