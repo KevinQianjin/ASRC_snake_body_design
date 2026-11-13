@@ -1,0 +1,85 @@
+{
+  "parameter_checks": {
+    "configuration_U4_M2": true,
+    "lengths_96_576_20_596": true,
+    "twelve_tendons_four_each": true,
+    "all_tendon_radii_24mm": true,
+    "all_offsets_exact_solver_offsets": true,
+    "two_1p8mm_96mm_backbones": true,
+    "payload_500g_at_x596": true,
+    "latest_runtime_tension_3N_floor_2p5N": true,
+    "saved_cycle_1072_completed": true,
+    "no_new_hardware_inferred": true
+  },
+  "parameter_checks_pass": true,
+  "physical_manufacturing_conformance": false,
+  "blocking_issues": [
+    "Three same-direction physical tendons occupy the same ideal route through U1-U4; B/C remain coincident through M5.",
+    "Original U/M body meshes exceed the 63 mm collision envelope; source geometry remains unchanged reference geometry.",
+    "Fixed/co-deforming backbone and rigid interfaces are ideal constraints, not implemented or verified hardware.",
+    "Real head/adapter, module stiffness, rope stiffness and masses have not been validated against manufactured hardware."
+  ],
+  "route_conflicts": [
+    {
+      "direction": "UP",
+      "tendons": [
+        "A-UP",
+        "B-UP",
+        "C-UP"
+      ],
+      "coincident_interval_local_x_mm": [
+        20.0,
+        404.0
+      ],
+      "minimum_center_distance_mm": 0.0,
+      "minimum_surface_gap_for_2mm_ropes_mm": -2.0
+    },
+    {
+      "direction": "RIGHT",
+      "tendons": [
+        "A-RIGHT",
+        "B-RIGHT",
+        "C-RIGHT"
+      ],
+      "coincident_interval_local_x_mm": [
+        20.0,
+        404.0
+      ],
+      "minimum_center_distance_mm": 0.0,
+      "minimum_surface_gap_for_2mm_ropes_mm": -2.0
+    },
+    {
+      "direction": "DOWN",
+      "tendons": [
+        "A-DOWN",
+        "B-DOWN",
+        "C-DOWN"
+      ],
+      "coincident_interval_local_x_mm": [
+        20.0,
+        404.0
+      ],
+      "minimum_center_distance_mm": 0.0,
+      "minimum_surface_gap_for_2mm_ropes_mm": -2.0
+    },
+    {
+      "direction": "LEFT",
+      "tendons": [
+        "A-LEFT",
+        "B-LEFT",
+        "C-LEFT"
+      ],
+      "coincident_interval_local_x_mm": [
+        20.0,
+        404.0
+      ],
+      "minimum_center_distance_mm": 0.0,
+      "minimum_surface_gap_for_2mm_ropes_mm": -2.0
+    }
+  ],
+  "historical_metadata_conflict": {
+    "gain_settings_target_n": 1.5,
+    "runtime_target_n": 3.0
+  },
+  "new_simulation_performed": false
+}
