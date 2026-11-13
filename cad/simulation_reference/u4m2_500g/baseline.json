@@ -1,0 +1,821 @@
+{
+  "status": "SIMULATION REFERENCE ONLY \u2014 NOT A MANUFACTURING RELEASE",
+  "source_revision": "bee65b711260767bbc54402f45eb1c90a5f53c5f",
+  "units": "Geometry mm; mechanical quantities SI unless explicitly suffixed",
+  "frame": "Local X: straight assembly axis; Y: UP; Z: RIGHT; origin at clamp. World frame = rotate local frame +20 degrees about Z.",
+  "module_count": 6,
+  "flexible_length_mm": 576.0,
+  "interface_length_mm": 20.0,
+  "nominal_front_length_mm": 596.0,
+  "collision_diameter_mm": 63.0,
+  "interface_model": "Massless rigid link. Its displayed cylinder is an envelope, not designed adapter hardware.",
+  "modules": [
+    {
+      "name": "U1",
+      "index": 1,
+      "start_mm": 20.0,
+      "end_mm": 116.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 37.99,
+      "routed_rope_mass_g": 4.161981947475758,
+      "EA_N": 128121.99999999999,
+      "EI_vertical_Nm2": 22.2052,
+      "EI_horizontal_Nm2": 1.67184,
+      "GJ_Nm2": 0.45123552000000006,
+      "torsional_spring_Nm_per_rad": 4.70037
+    },
+    {
+      "name": "U2",
+      "index": 2,
+      "start_mm": 116.0,
+      "end_mm": 212.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 37.99,
+      "routed_rope_mass_g": 4.161981947475758,
+      "EA_N": 128121.99999999999,
+      "EI_vertical_Nm2": 22.2052,
+      "EI_horizontal_Nm2": 1.67184,
+      "GJ_Nm2": 0.45123552000000006,
+      "torsional_spring_Nm_per_rad": 4.70037
+    },
+    {
+      "name": "U3",
+      "index": 3,
+      "start_mm": 212.0,
+      "end_mm": 308.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 37.99,
+      "routed_rope_mass_g": 4.161981947475758,
+      "EA_N": 128121.99999999999,
+      "EI_vertical_Nm2": 22.2052,
+      "EI_horizontal_Nm2": 1.67184,
+      "GJ_Nm2": 0.45123552000000006,
+      "torsional_spring_Nm_per_rad": 4.70037
+    },
+    {
+      "name": "U4",
+      "index": 4,
+      "start_mm": 308.0,
+      "end_mm": 404.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 37.99,
+      "routed_rope_mass_g": 4.161981947475758,
+      "EA_N": 128121.99999999999,
+      "EI_vertical_Nm2": 22.2052,
+      "EI_horizontal_Nm2": 1.67184,
+      "GJ_Nm2": 0.45123552000000006,
+      "torsional_spring_Nm_per_rad": 4.70037
+    },
+    {
+      "name": "M5",
+      "index": 5,
+      "start_mm": 404.0,
+      "end_mm": 500.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 25.52367207859327,
+      "routed_rope_mass_g": 2.774654631650505,
+      "EA_N": 101954.2959763093,
+      "EI_vertical_Nm2": 0.06472978940020263,
+      "EI_horizontal_Nm2": 0.06472978940020263,
+      "GJ_Nm2": 0.057487752391129805,
+      "torsional_spring_Nm_per_rad": 0.5988307540742688
+    },
+    {
+      "name": "M6",
+      "index": 6,
+      "start_mm": 500.0,
+      "end_mm": 596.0,
+      "length_mm": 96.0,
+      "bare_mass_g": 25.52367207859327,
+      "routed_rope_mass_g": 1.3873273158252526,
+      "EA_N": 101954.2959763093,
+      "EI_vertical_Nm2": 0.06472978940020263,
+      "EI_horizontal_Nm2": 0.06472978940020263,
+      "GJ_Nm2": 0.057487752391129805,
+      "torsional_spring_Nm_per_rad": 0.5988307540742688
+    }
+  ],
+  "backbones": [
+    {
+      "module": 5,
+      "start_local_mm": [
+        404.0,
+        0.0,
+        0.0
+      ],
+      "end_local_mm": [
+        500.0,
+        0.0,
+        0.0
+      ],
+      "length_mm": 96.0,
+      "diameter_mm": 1.8,
+      "E_pa": 40000000000.0,
+      "EA_n": 101787.60197630929,
+      "EI_nm2": 0.02061198940020263,
+      "torsion_module_nm_per_rad": 0.16143475407426872,
+      "mass_per_module_kg": 0.0015756720785932677
+    },
+    {
+      "module": 6,
+      "start_local_mm": [
+        500.0,
+        0.0,
+        0.0
+      ],
+      "end_local_mm": [
+        596.0,
+        0.0,
+        0.0
+      ],
+      "length_mm": 96.0,
+      "diameter_mm": 1.8,
+      "E_pa": 40000000000.0,
+      "EA_n": 101787.60197630929,
+      "EI_nm2": 0.02061198940020263,
+      "torsion_module_nm_per_rad": 0.16143475407426872,
+      "mass_per_module_kg": 0.0015756720785932677
+    }
+  ],
+  "tendons": [
+    {
+      "name": "A-UP",
+      "group": "A",
+      "anchor_module": 4,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          24.0,
+          0.0
+        ],
+        [
+          116.0,
+          24.0,
+          0.0
+        ],
+        [
+          212.0,
+          24.0,
+          0.0
+        ],
+        [
+          308.0,
+          24.0,
+          0.0
+        ],
+        [
+          404.0,
+          24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        404.0,
+        24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "A-RIGHT",
+      "group": "A",
+      "anchor_module": 4,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          24.0
+        ],
+        [
+          116.0,
+          0.0,
+          24.0
+        ],
+        [
+          212.0,
+          0.0,
+          24.0
+        ],
+        [
+          308.0,
+          0.0,
+          24.0
+        ],
+        [
+          404.0,
+          0.0,
+          24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        404.0,
+        0.0,
+        24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "A-DOWN",
+      "group": "A",
+      "anchor_module": 4,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          -24.0,
+          0.0
+        ],
+        [
+          116.0,
+          -24.0,
+          0.0
+        ],
+        [
+          212.0,
+          -24.0,
+          0.0
+        ],
+        [
+          308.0,
+          -24.0,
+          0.0
+        ],
+        [
+          404.0,
+          -24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        404.0,
+        -24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "A-LEFT",
+      "group": "A",
+      "anchor_module": 4,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          -24.0
+        ],
+        [
+          116.0,
+          0.0,
+          -24.0
+        ],
+        [
+          212.0,
+          0.0,
+          -24.0
+        ],
+        [
+          308.0,
+          0.0,
+          -24.0
+        ],
+        [
+          404.0,
+          0.0,
+          -24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        404.0,
+        0.0,
+        -24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "B-UP",
+      "group": "B",
+      "anchor_module": 5,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          24.0,
+          0.0
+        ],
+        [
+          116.0,
+          24.0,
+          0.0
+        ],
+        [
+          212.0,
+          24.0,
+          0.0
+        ],
+        [
+          308.0,
+          24.0,
+          0.0
+        ],
+        [
+          404.0,
+          24.0,
+          0.0
+        ],
+        [
+          500.0,
+          24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        500.0,
+        24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "B-RIGHT",
+      "group": "B",
+      "anchor_module": 5,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          24.0
+        ],
+        [
+          116.0,
+          0.0,
+          24.0
+        ],
+        [
+          212.0,
+          0.0,
+          24.0
+        ],
+        [
+          308.0,
+          0.0,
+          24.0
+        ],
+        [
+          404.0,
+          0.0,
+          24.0
+        ],
+        [
+          500.0,
+          0.0,
+          24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        500.0,
+        0.0,
+        24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "B-DOWN",
+      "group": "B",
+      "anchor_module": 5,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          -24.0,
+          0.0
+        ],
+        [
+          116.0,
+          -24.0,
+          0.0
+        ],
+        [
+          212.0,
+          -24.0,
+          0.0
+        ],
+        [
+          308.0,
+          -24.0,
+          0.0
+        ],
+        [
+          404.0,
+          -24.0,
+          0.0
+        ],
+        [
+          500.0,
+          -24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        500.0,
+        -24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "B-LEFT",
+      "group": "B",
+      "anchor_module": 5,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          -24.0
+        ],
+        [
+          116.0,
+          0.0,
+          -24.0
+        ],
+        [
+          212.0,
+          0.0,
+          -24.0
+        ],
+        [
+          308.0,
+          0.0,
+          -24.0
+        ],
+        [
+          404.0,
+          0.0,
+          -24.0
+        ],
+        [
+          500.0,
+          0.0,
+          -24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        500.0,
+        0.0,
+        -24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "C-UP",
+      "group": "C",
+      "anchor_module": 6,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          24.0,
+          0.0
+        ],
+        [
+          116.0,
+          24.0,
+          0.0
+        ],
+        [
+          212.0,
+          24.0,
+          0.0
+        ],
+        [
+          308.0,
+          24.0,
+          0.0
+        ],
+        [
+          404.0,
+          24.0,
+          0.0
+        ],
+        [
+          500.0,
+          24.0,
+          0.0
+        ],
+        [
+          596.0,
+          24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        596.0,
+        24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "C-RIGHT",
+      "group": "C",
+      "anchor_module": 6,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          24.0
+        ],
+        [
+          116.0,
+          0.0,
+          24.0
+        ],
+        [
+          212.0,
+          0.0,
+          24.0
+        ],
+        [
+          308.0,
+          0.0,
+          24.0
+        ],
+        [
+          404.0,
+          0.0,
+          24.0
+        ],
+        [
+          500.0,
+          0.0,
+          24.0
+        ],
+        [
+          596.0,
+          0.0,
+          24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        596.0,
+        0.0,
+        24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "C-DOWN",
+      "group": "C",
+      "anchor_module": 6,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          -24.0,
+          0.0
+        ],
+        [
+          116.0,
+          -24.0,
+          0.0
+        ],
+        [
+          212.0,
+          -24.0,
+          0.0
+        ],
+        [
+          308.0,
+          -24.0,
+          0.0
+        ],
+        [
+          404.0,
+          -24.0,
+          0.0
+        ],
+        [
+          500.0,
+          -24.0,
+          0.0
+        ],
+        [
+          596.0,
+          -24.0,
+          0.0
+        ]
+      ],
+      "anchor_local_mm": [
+        596.0,
+        -24.0,
+        0.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    },
+    {
+      "name": "C-LEFT",
+      "group": "C",
+      "anchor_module": 6,
+      "diameter_mm": 2.0,
+      "radius_mm": 24.0,
+      "guide_points_local_mm": [
+        [
+          20.0,
+          0.0,
+          -24.0
+        ],
+        [
+          116.0,
+          0.0,
+          -24.0
+        ],
+        [
+          212.0,
+          0.0,
+          -24.0
+        ],
+        [
+          308.0,
+          0.0,
+          -24.0
+        ],
+        [
+          404.0,
+          0.0,
+          -24.0
+        ],
+        [
+          500.0,
+          0.0,
+          -24.0
+        ],
+        [
+          596.0,
+          0.0,
+          -24.0
+        ]
+      ],
+      "anchor_local_mm": [
+        596.0,
+        0.0,
+        -24.0
+      ],
+      "free_length_m": 1.0,
+      "EA_N": 10367.255756846316
+    }
+  ],
+  "payload": {
+    "mass_kg": 0.5,
+    "point_local_mm": [
+      596.0,
+      0.0,
+      0.0
+    ],
+    "eccentricity_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotary_inertia": "not modeled",
+    "collision_diameter_mm": 63.0,
+    "physical_head_geometry": "unspecified"
+  },
+  "installation": {
+    "pitch_deg": 20,
+    "steering_clamp_s_mm": 15.0,
+    "frame_note": "Clamp-local assembly coordinates are not absolute tank coordinates."
+  },
+  "tendon_material": {
+    "material": "PA6 solid-stock surrogate",
+    "young_modulus_pa": 3300000000.0,
+    "density_kg_m3": 1150.0,
+    "diameter_mm": 2.0,
+    "EA_N": 10367.3,
+    "linear_density_g_per_m": 3.61283,
+    "calibrated": false,
+    "friction": "none (frictionless guides)",
+    "bending_stiffness": "none",
+    "winch_model": {
+      "model": "fixed winch: linear elastic, tension-only rope; T = EA max(0, L + L_free - R) / R",
+      "L_free_m": 1.0,
+      "meaning": "L = routed length inside the front, R = unstretched length set by the winch",
+      "effective_stiffness_N_per_mm_at_1p6m": 6.47953
+    },
+    "historical_pretension_note": "The exported model sheet includes older 1 N exploration; latest runtime target/floor are in controller."
+  },
+  "mass_totals": {
+    "modules_g": 203.007,
+    "ropes_in_front_g": 20.8099,
+    "front_total_g": 223.817
+  },
+  "controller": {
+    "tension_target_n": 3.0,
+    "settle_tension_n": 2.5,
+    "precomp_limit_mm": 0.5,
+    "rope_step_mm": 0.25,
+    "node_step_mm": 4.5,
+    "max_iterations": 16,
+    "mid_tol_deg": 0.5,
+    "mid_max": 4,
+    "reference": "length_cycle_results_pre3_tol1",
+    "gains": "closed_loop_v3_results/nominal_gains.npz"
+  },
+  "settled_angle_target_deg": 0.2,
+  "angle_acceptance_deg": 1.0,
+  "total_rope_offset_limit_mm": 5.0,
+  "correction_limit_mm": 0.25,
+  "assumptions": [
+    "Backbone is fixed/bonded at both M end disks and constrained to co-deform with the module.",
+    "No independent backbone slip, end compliance, or inter-guide buckling DOFs exist.",
+    "Module interfaces have no added gap, hinge, slip, mass or extra compliance.",
+    "Tendons are frictionless and tension-only, with straight chords between module-end guides.",
+    "No motor dynamics, sensing noise/delay, backlash, NiTi hysteresis or fatigue."
+  ],
+  "authority_note": "Use v3 nominal_summary.json runtime settings: target 3 N, settle floor 2.5 N. The gains metadata settings.json retains a stale 1.5 N value; it is not the v3 controller target.",
+  "saved_nominal_result": {
+    "case": "nominal",
+    "samples": 1072,
+    "completed": true,
+    "controller_uses_plant_parameters": false,
+    "settings": {
+      "tension_target_n": 3.0,
+      "settle_tension_n": 2.5,
+      "precomp_limit_mm": 0.5,
+      "rope_step_mm": 0.25,
+      "node_step_mm": 4.5,
+      "max_iterations": 16,
+      "mid_tol_deg": 0.5,
+      "mid_max": 4,
+      "reference": "length_cycle_results_pre3_tol1",
+      "gains": "closed_loop_v3_results/nominal_gains.npz"
+    },
+    "settled": {
+      "states": 1072,
+      "failed_checks": 0,
+      "below_operating_tension": 0,
+      "unstable": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 2.9822665828862087,
+      "peak_tension_n": 17.689255907651088,
+      "minimum_eigenvalue": 0.16636217570431178,
+      "minimum_clearance_mm": 20.627791831293052,
+      "maximum_node_move_mm": 0.0,
+      "maximum_yaw_error_deg": 0.14314454625514372,
+      "maximum_elevation_error_deg": 0.1824463828053915,
+      "maximum_offset_mm": 0.04569859811149609,
+      "samples_not_settled": 0
+    },
+    "trace": {
+      "states": 2467,
+      "failed_checks": 0,
+      "below_operating_tension": 0,
+      "unstable": 0,
+      "geometry_failures": 0,
+      "clearance_failures": 0,
+      "minimum_tension_n": 2.977975470436914,
+      "peak_tension_n": 17.691036007005835,
+      "minimum_eigenvalue": 0.16636217570431178,
+      "minimum_clearance_mm": 20.627791831293052,
+      "maximum_node_move_mm": 2.5000000000001448
+    },
+    "trace_states_by_kind": {
+      "start": 1,
+      "feedforward": 2467,
+      "mid_correction": 0,
+      "mid_revert": 0,
+      "correction": 0
+    },
+    "pre_control_start": {
+      "minimum_tension_n": 2.999999940447738,
+      "minimum_eigenvalue": 0.7596660852284329
+    }
+  }
+}
