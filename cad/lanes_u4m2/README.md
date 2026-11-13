@@ -32,7 +32,7 @@ Frame: Z is the module axis (proximal → distal), +Y is up, +X is left and −X
 
    | Lane | U, left/right rays | U, up/down rays | M, all rays |
    |---|---|---|---|
-   | A 21 mm | 11.5 mm | 4.6 mm | 5.5 mm |
+   | A 21 mm | 11.5 mm | 4.6 mm | 5.5 mm (A does not run in M) |
    | B 24 mm | 14.5 mm | 4.1 mm | 6.7 mm |
    | C 27 mm | 16.6 mm | 4.1 mm | 7.8 mm |
 
@@ -100,7 +100,7 @@ envelope (max radius 31.66 mm, the same as the STEP bodies).
   stay within 0.2 mm of the lane. M5 bends 14° at the 0° hold, 25° at 15° yaw, 40–65° at 20–90° yaw
   and up to 103° at 175° yaw. M6 bends up to 40°. The chord leaves its lane by 4 mm at the hold,
   7 mm at 15° yaw, 11–18 mm at 20–90° yaw and 33 mm at 175° yaw. The M corridor clearance is
-  5.5–7.8 mm, so the M5 ropes would rub the spring strips beyond roughly 15° yaw. The
+  6.7–7.8 mm, so the M5 ropes would rub the spring strips beyond roughly 15° yaw. The
   shared-hole layout has the same problem. To steer further, the M modules need intermediate
   rope guides (e.g. guide rings on the strips at the module's ¼, ½ and ¾ length). The model must
   then route the ropes through those guides instead of straight disk-to-disk chords.

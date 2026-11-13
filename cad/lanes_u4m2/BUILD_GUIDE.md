@@ -210,7 +210,7 @@ Repeat for all 4 rays of the set, then the next set.
 
 ## 11. Known limits and open points
 
-- **Steering beyond about 15° of yaw.** Ropes are guided only at the end disks. M5 bends 25–103° beyond 15° of yaw, and its ropes would then rub the M spring strips (rope offset 7–33 mm vs 5.5–7.8 mm clearance). Limit first tests to **±15° of yaw** until intermediate rope guides are added to M5/M6.
+- **Steering beyond about 15° of yaw.** Ropes are guided only at the end disks. M5 bends 25–103° beyond 15° of yaw, and its ropes would then rub the M spring strips (rope offset 7–33 mm vs 6.7–7.8 mm clearance). Limit first tests to **±15° of yaw** until intermediate rope guides are added to M5/M6.
 - **Mass differs from the model.** The filled disks, anchor blocks, plugs and sleeves make the parts heavier than in `MODEL_DATA.md`:
 
   | Part | Model mass (bare) | Printed mass (est.) |

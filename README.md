@@ -8,11 +8,33 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 13 November 2026 (latest): separate rope lanes and lane-routed 3D modules
+### 13 November 2026 (latest): separate rope lanes, renewed 3D model and a complete build package
 
-- **Rope lanes (radial spread):** each anchor set now has its own holes: A (ends at U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm, on the same up/right/down/left rays. The whole 3 N pipeline was re-run. All 32 startup states and all 36 yaw holds pass, and the reference round trip passes every check. Peak rope force falls by about 1 N (17.4 → 16.4 N) and the stability margin rises slightly. In closed loop, all five cases complete and every settled sample passes. The 550 g head's moving error at 174–178° yaw shrinks (48 states above 1°, max 2.3°; previously up to 3.8°) but is not gone. [Lane study](simulations/u4m2/lanes_20261113/README.md).
-- **New 3D modules ([`cad/lanes_u4m2/`](cad/lanes_u4m2)):** built from the STEP bodies with lane holes, rope anchors, a Ø1.85 mm bore + 15 mm sleeves for the Ø1.8 mm NiTi rod in M5/M6, and joint holes. The STEP strips lie exactly on the rope rays, so the bodies had to be re-clocked: U by −45°, which also puts its stiff leaf-spring direction vertical, and M by −22.5°. That gives the ropes 4–17 mm of straight clearance. The folder now holds every printed part (incl. base interface and head adapter) and a step-by-step [build guide](cad/lanes_u4m2/BUILD_GUIDE.md); the README there explains how to anchor a rope (groove + return-hole loop, crimp inside) and how to join modules (rigid disk-to-disk, 2 dowels + M2 screws, rod bonded in both M bores).
-- **Limit found:** ropes are guided only at the end disks. M5 bends 14° at the hold but 25–103° when steering beyond 15° yaw, so its rope chords leave their lanes by 7–33 mm and would rub the M spring strips. Large-yaw steering needs intermediate rope guides in M and a model that routes the ropes through them.
+Until today the model routed all three rope sets through the same four holes at 24 mm, which three 2 mm ropes cannot share. Each set now has its own lane, the simulation was re-run with it, and the 3D model was renewed to match.
+
+- **Rope lanes:** A (ends at U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm, on the same up/right/down/left rays. Everything still passes:
+  - all 32 startup states and all 36 yaw holds (0–175°);
+  - the reference round trip (1,101 states);
+  - every settled sample of the five closed-loop cases.
+
+  Peak rope force falls by about 1 N (17.4 → 16.4 N) and the stability margin rises slightly. The 550 g head's moving error at 174–178° yaw shrinks (48 states above 1°, max 2.3°; before: 115, max 3.1°) but is not gone. [Lane study](simulations/u4m2/lanes_20261113/README.md), now in its own folder; it reuses the solver in `backbone_20261108` unchanged.
+- **Limit found:** ropes are guided only at the end disks, so inside a bent module each rope is a straight chord. M5 bends 14° at the hold but 25–103° when steering beyond 15° yaw. Its ropes then leave the strip-free corridor (6.7–7.8 mm) by up to 33 mm and would rub the M spring strips. **Keep first tests within ±15° yaw** until rope guides are added inside M5/M6 and modelled.
+- **Renewed 3D model ([`cad/lanes_u4m2/`](cad/lanes_u4m2)):**
+  - **Re-clocked bodies:** the STEP spring strips lie exactly on the rope rays, so the bodies were rotated (U −45°, M −22.5°). This gives every rope 4–17 mm of clearance and puts U's stiff direction vertical.
+  - **Solid end disks** with only working holes: rope lanes, anchors, joint holes, spring pockets.
+  - **Backbone hole:** Ø1.85 mm for the Ø1.8 mm NiTi rod in M5/M6, with 15 mm of grip at each end.
+  - **Rope anchors:** a groove plus return-hole loop, crimped inside the module.
+  - **Joints:** rigid disk to disk, 2 dowels and 2 M2 screws.
+  - **End parts:** base interface and head adapter.
+  - **Assembly check:** an automatic check of the whole stack passes (joints, all 12 rope paths, rod bore, spring and nut clearance).
+- **[Build guide](cad/lanes_u4m2/BUILD_GUIDE.md):** parts list, printing, finishing, leaf springs, backbone, rope lengths, assembly order, anchoring, tensioning and checks before first use.
+- **Not yet checked:**
+  - the printed parts' strength and stiffness;
+  - their extra mass in the model (M about +5 g each).
+
+[Daily report](reports/daily/Report_2026_11_13.pdf) · [Lane study](simulations/u4m2/lanes_20261113/README.md) · [3D model](cad/lanes_u4m2/README.md) · [Build guide](cad/lanes_u4m2/BUILD_GUIDE.md)
+
+![Lanes: tensions and rope offsets in M5/M6](simulations/u4m2/lanes_20261113/results_lanes/lanes_overview.png)
 
 ### 12 November 2026: exact 20° reference — four of five cases pass every check
 
@@ -169,8 +191,9 @@ The original SCAD preview arranges the six modules in a straight line without th
 
 1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). The 17° insertion reference was then fixed (v3); four of five cases pass every check. Next: online gain update for the 550 g large-yaw transient.
 2. Add intermediate rope guides to the M modules and route the ropes through them in the model (per-cell chords); without them the M5 ropes rub the spring strips beyond about 15° yaw (13 November).
-3. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
-4. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
+3. Re-run the lane pipeline with the printed part masses, then print one U and one M module and test them ([build guide](cad/lanes_u4m2/BUILD_GUIDE.md), section 10).
+4. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
+5. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
 
 [Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 
