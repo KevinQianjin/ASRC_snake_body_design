@@ -9,7 +9,8 @@ Active U4+M2 studies are in `u4m2/`; shared dependencies and their reference run
 | Study | Source and results | Purpose |
 |---|---|---|
 | U4+M2 NiTi backbone | [Backbone study](u4m2/backbone_20261108/README.md) | Active front model, steering, tank screening and winch control |
-| Closed-loop round trip v3 | [Study section 13](u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](u4m2/backbone_20261108/closed_loop_v3_results/) | Exact 20° reference; four of five cases pass every check; latest numerical study |
+| Separate rope lanes (13 Nov) | [Lane study](u4m2/lanes_20261113/README.md) · [3D modules](../cad/lanes_u4m2/README.md) | A/B/C on 21/24/27 mm lanes: full pipeline re-run, closed loop, rope-chord limit in M5; latest numerical study |
+| Closed-loop round trip v3 | [Study section 13](u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](u4m2/backbone_20261108/closed_loop_v3_results/) | Exact 20° reference; four of five cases pass every check |
 | Closed-loop round trip v2 | [Study section 12](u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller](u4m2/backbone_20261108/closed_loop_v2.py) | 3 N operating tension enforced, tension-aware arrival, refined path |
 | Closed-loop round trip | [English report](u4m2/backbone_20261108/closed_loop_results/REPORT.md) · [Controller](u4m2/backbone_20261108/closed_loop_cycle.py) | Head-angle and tendon-tension feedback (v1) |
 | Stable startup and 3 N pretension | [Study section 10](u4m2/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11) | Open-loop reference for the feedback study |

@@ -8,7 +8,35 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 12 November 2026 (latest): exact 20° reference — four of five cases pass every check
+### 13 November 2026 (latest): separate rope lanes, renewed 3D model and a complete build package
+
+Until today the model routed all three rope sets through the same four holes at 24 mm, which three 2 mm ropes cannot share. Each set now has its own lane, the simulation was re-run with it, and the 3D model was renewed to match.
+
+- **Rope lanes:** A (ends at U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm, on the same up/right/down/left rays. Everything still passes:
+  - all 32 startup states and all 36 yaw holds (0–175°);
+  - the reference round trip (1,101 states);
+  - every settled sample of the five closed-loop cases.
+
+  Peak rope force falls by about 1 N (17.4 → 16.4 N) and the stability margin rises slightly. The 550 g head's moving error at 174–178° yaw shrinks (48 states above 1°, max 2.3°; before: 115, max 3.1°) but is not gone. [Lane study](simulations/u4m2/lanes_20261113/README.md), now in its own folder; it reuses the solver in `backbone_20261108` unchanged.
+- **Limit found:** ropes are guided only at the end disks, so inside a bent module each rope is a straight chord. M5 bends 14° at the hold but 25–103° when steering beyond 15° yaw. Its ropes then leave the strip-free corridor (6.7–7.8 mm) by up to 33 mm and would rub the M spring strips. **Keep first tests within ±15° yaw** until rope guides are added inside M5/M6 and modelled.
+- **Renewed 3D model ([`cad/lanes_u4m2/`](cad/lanes_u4m2)):**
+  - **Re-clocked bodies:** the STEP spring strips lie exactly on the rope rays, so the bodies were rotated (U −45°, M −22.5°). This gives every rope 4–17 mm of clearance and puts U's stiff direction vertical.
+  - **Solid end disks** with only working holes: rope lanes, anchors, joint holes, spring pockets.
+  - **Backbone hole:** Ø1.85 mm for the Ø1.8 mm NiTi rod in M5/M6, with 15 mm of grip at each end.
+  - **Rope anchors:** a groove plus return-hole loop, crimped inside the module.
+  - **Joints:** rigid disk to disk, 2 dowels and 2 M2 screws.
+  - **End parts:** base interface and head adapter.
+  - **Assembly check:** an automatic check of the whole stack passes (joints, all 12 rope paths, rod bore, spring and nut clearance).
+- **[Build guide](cad/lanes_u4m2/BUILD_GUIDE.md):** parts list, printing, finishing, leaf springs, backbone, rope lengths, assembly order, anchoring, tensioning and checks before first use.
+- **Not yet checked:**
+  - the printed parts' strength and stiffness;
+  - their extra mass in the model (M about +5 g each).
+
+[Daily report](reports/daily/Report_2026_11_13.pdf) · [Lane study](simulations/u4m2/lanes_20261113/README.md) · [3D model](cad/lanes_u4m2/README.md) · [Build guide](cad/lanes_u4m2/BUILD_GUIDE.md)
+
+![Lanes: tensions and rope offsets in M5/M6](simulations/u4m2/lanes_20261113/results_lanes/lanes_overview.png)
+
+### 12 November 2026: exact 20° reference — four of five cases pass every check
 
 The 3 N reference poses at 0° and 5° yaw had been accepted at 16–17° instead of 20°. They were regenerated at exactly 20.0° on the fine mesh, and the reference cycle and controller gains were rebuilt from them.
 
@@ -149,11 +177,11 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
-**Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2).
+**Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 
 The U STEP contains one full-envelope body solid (96 mm long, about 63.24 mm across) and four separate leaf-spring solids (about 94 mm long). The M STEP contains one full-envelope body solid. The STEP product tree lists wing and disk items, but not as separate solid meshes; the full-envelope body geometry means that alone does not show the module body is missing. The STEP files do not encode material labels. The intended split is U body in PA12 with four NiTi spring elements, and M body in PA12. The current M study adds a separate Ø1.8 mm NiTi backbone to each M module.
 
-The SCAD preview arranges the six modules in a straight line. It does not model the M backbone or establish the inter-module connection. Confirm material assignments and connection details before ordering a full print.
+The original SCAD preview arranges the six modules in a straight line without the backbone or inter-module connection; `cad/lanes_u4m2/` adds both. Confirm material assignments and connection details before ordering a full print.
 
 - [Original U STEP](cad/modules/UniDirectional_96.step) · [Original M STEP](cad/modules/Medium_Stiffness_96.step).
 - [Preview instructions](cad/previews/u4m2/README.md) · [Complete OpenSCAD/STL bundle](cad/previews/u4m2/final_u4m2_openSCAD_bundle.zip).
@@ -162,8 +190,10 @@ The SCAD preview arranges the six modules in a straight line. It does not model 
 ## Next steps
 
 1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). The 17° insertion reference was then fixed (v3); four of five cases pass every check. Next: online gain update for the 550 g large-yaw transient.
-2. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
-3. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
+2. Add intermediate rope guides to the M modules and route the ropes through them in the model (per-cell chords); without them the M5 ropes rub the spring strips beyond about 15° yaw (13 November).
+3. Re-run the lane pipeline with the printed part masses, then print one U and one M module and test them ([build guide](cad/lanes_u4m2/BUILD_GUIDE.md), section 10).
+4. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
+5. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
 
 [Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 

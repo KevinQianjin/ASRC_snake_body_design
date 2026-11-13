@@ -1,0 +1,193 @@
+{
+ "frame": "Z axial (proximal -> distal), +Y up, +X left, -X right; module local Z -48..48",
+ "lanes_mm": {
+  "A": 21.0,
+  "B": 24.0,
+  "C": 27.0
+ },
+ "anchor_module": {
+  "A": "U4",
+  "B": "M5",
+  "C": "M6"
+ },
+ "rays_deg": {
+  "right": 180.0,
+  "up": 90.0,
+  "left": 0.0,
+  "down": 270.0
+ },
+ "body_clocking_deg": {
+  "U": -45.0,
+  "M": -22.5
+ },
+ "rope_d": 2.0,
+ "lane_hole_d": 2.5,
+ "chamfer": 0.25,
+ "lane_pitch_mm": 3.0,
+ "wall_between_lane_holes_mm": 0.5,
+ "rod_d": 1.8,
+ "rod_bore_d": 1.85,
+ "rod_support_length_per_end_mm": 15.0,
+ "sleeve_od": 6.0,
+ "pad": {
+  "radial": [
+   18.5,
+   29.5
+  ],
+  "width": 7.0,
+  "thickness": 3.0
+ },
+ "anchor": {
+  "block_depth": 7.0,
+  "return_offset_B_C_tangential": 5.0,
+  "return_offset_A_radial_inward": 3.5,
+  "groove_w": 2.2,
+  "groove_d": 2.2
+ },
+ "joint": {
+  "radius": 12.5,
+  "dowel_angles": [
+   0.0,
+   180.0
+  ],
+  "dowel_pilot_d": 1.9,
+  "screw_angles": [
+   90.0,
+   270.0
+  ],
+  "screw_hole_d": 2.2
+ },
+ "modules": {
+  "U_lane_pass": {
+   "used_for": "U1, U2, U3",
+   "lanes": [
+    "A",
+    "B",
+    "C"
+   ],
+   "anchored_set": null,
+   "watertight": true,
+   "volume_mm3": 23906.3,
+   "max_radius_mm": 31.66,
+   "bounds": [
+    [
+     -31.48,
+     -31.47,
+     -48.0
+    ],
+    [
+     31.48,
+     31.49,
+     48.0
+    ]
+   ]
+  },
+  "U4_lane_anchorA": {
+   "used_for": "U4",
+   "lanes": [
+    "A",
+    "B",
+    "C"
+   ],
+   "anchored_set": "A",
+   "watertight": true,
+   "volume_mm3": 25075.8,
+   "max_radius_mm": 31.66,
+   "bounds": [
+    [
+     -31.48,
+     -31.47,
+     -48.0
+    ],
+    [
+     31.48,
+     31.49,
+     48.0
+    ]
+   ]
+  },
+  "M5_lane_anchorB": {
+   "used_for": "M5",
+   "lanes": [
+    "B",
+    "C"
+   ],
+   "anchored_set": "B",
+   "watertight": true,
+   "volume_mm3": 31368.4,
+   "max_radius_mm": 31.66,
+   "bounds": [
+    [
+     -31.47,
+     -31.47,
+     -48.0
+    ],
+    [
+     31.45,
+     31.47,
+     48.0
+    ]
+   ]
+  },
+  "M6_lane_anchorC": {
+   "used_for": "M6",
+   "lanes": [
+    "C"
+   ],
+   "anchored_set": "C",
+   "watertight": true,
+   "volume_mm3": 31568.1,
+   "max_radius_mm": 31.66,
+   "bounds": [
+    [
+     -31.47,
+     -31.47,
+     -48.0
+    ],
+    [
+     31.45,
+     31.47,
+     48.0
+    ]
+   ]
+  }
+ },
+ "U_lane_clearance_mm": {
+  "A@right": 11.5,
+  "A@up": 4.64,
+  "A@left": 11.5,
+  "A@down": 4.64,
+  "B@right": 14.47,
+  "B@up": 4.1,
+  "B@left": 14.47,
+  "B@down": 4.1,
+  "C@right": 16.59,
+  "C@up": 4.1,
+  "C@left": 16.59,
+  "C@down": 4.1
+ },
+ "U_lane_clearance_without_reclocking_mm": {
+  "A": -0.02,
+  "B": -0.02,
+  "C": -0.04
+ },
+ "M_lane_clearance_mm": {
+  "A@right": 5.54,
+  "A@up": 5.54,
+  "A@left": 5.54,
+  "A@down": 5.54,
+  "B@right": 6.68,
+  "B@up": 6.68,
+  "B@left": 6.68,
+  "B@down": 6.68,
+  "C@right": 7.83,
+  "C@up": 7.83,
+  "C@left": 7.83,
+  "C@down": 7.83
+ },
+ "M_lane_clearance_without_reclocking_mm": {
+  "A": -0.02,
+  "B": -0.02,
+  "C": -0.04
+ }
+}

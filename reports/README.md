@@ -9,6 +9,7 @@
 
 ## Daily reports and weekly presentation
 
+- [**Daily report — 13 November 2026**](daily/Report_2026_11_13.pdf): separate rope lanes (A 21 / B 24 / C 27 mm) re-run through the whole pipeline (everything passes, about 1 N lower peak tension); rope-chord limit in M5 beyond about 15° yaw; renewed lane-routed 3D modules, base interface, head adapter, assembly check and build guide. Built by [`build_report_2026_11_13.py`](builders/build_report_2026_11_13.py).
 - [**Daily report — 12 November 2026**](daily/Report_2026_11_12.pdf): closed-loop control with the 3 N operating pretension enforced, tension-aware arrival and a refined motion path (v2), then an exact 20° reference (v3): four of five cases pass every check in every recorded state; the 550 g head keeps transient angle error at 155–175° yaw. Built by [`build_report_2026_11_12.py`](builders/build_report_2026_11_12.py).
 - [Daily report — 11 November 2026](daily/Report_2026_11_11.pdf): model data sheet, prototype files marked, and the round-trip cycle re-run with a 3 N pretension floor and a stable startup (nominal cycle passes every check; remaining failures are open-loop calibration). Built by [`build_report_2026_11_11.py`](builders/build_report_2026_11_11.py).
 - [**Model data sheet**](../simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md): every input of the simulation model (continuous 96 mm modules, full-length rod, module stiffness and mass, ropes, winch, tank, numerics).

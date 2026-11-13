@@ -472,12 +472,17 @@ python closed_loop_v2.py --case nominal --ref length_cycle_results_pre3_tol1 --g
 python summarize_closed_loop_v2.py v3
 ```
 
+## 14. Separate rope lanes — moved
+
+The rope-lane study (13 November 2026) now has its own folder: [`../lanes_20261113/`](../lanes_20261113/README.md). It reuses the scripts in this folder unchanged.
+
 ## Conclusions
 
 1. A Ø1.8 mm NiTi backbone in M resolves both blocking problems for **U4+M2** in the simulation: straightening within the strain limit, and loaded head recovery at the working elevation. This holds at 15–25° and for both moduli. The straight low-strain shape also passes the front-only tank entry screen at 15–25° (2026-11-09).
 2. **U4+M2 remains the only viable length** with three or fewer anchor sets. Longer fronts would need more anchor sets inside M, or a stiffer M again.
 3. **Every rope needs at least about 1 N pretension** for 3D lateral stability (section 4). With that, holding the head near 20° while sweeping yaw needs only about 7–15 N peak tendon force (section 5).
-4. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
+4. With separate rope lanes ([`../lanes_20261113`](../lanes_20261113/README.md)) everything still passes, at about 1 N lower peak tension. However, the M5 rope chords exceed the strip clearance beyond about 15° yaw unless the M modules get intermediate rope guides.
+5. The conclusions now depend on the rod's real EI, its end attachment and its buckling between guides. Run the physical tests in `M_BACKBONE_TEST_PLAN.md` before any further simulation refinement.
 
 ## Limitations
 
