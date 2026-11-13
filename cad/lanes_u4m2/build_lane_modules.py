@@ -29,6 +29,11 @@ untouched):
   * Backbone: the 8.4 mm M passage is plugged and bored 1.85 mm for the
     1.8 mm NiTi rod, and a 6 mm OD x 12 mm sleeve inside each M end disk
     gives the rod 15 mm of support per end so it is clamped in rotation.
+  * Solid disks: each 3 mm end disk is a full round plate (r 31.45 mm); the STEP
+    notches, blind slots (strip-root reliefs, U diagonal slots) and the unused 8.4 mm
+    centre hole are filled. The only holes left are lane
+    holes, anchor grooves/return holes, the M backbone bore, the joint holes and the U
+    leaf-spring pockets.
   * Joints: 4 x 2.2 mm holes at r 12.5 mm on the 0/90/180/270 deg rays (M2
     screws + nuts, or 2 dowels + 2 screws), free inside both bodies.
 
@@ -100,6 +105,14 @@ def xy(ray_deg, r, t=0.):
     return r * np.cos(a) - t * np.sin(a), r * np.sin(a) + t * np.cos(a)
 
 
+def disk_fill(body, r=31.45):
+    """Solid round end disks: every STEP notch, blind slot (strip-root reliefs, U diagonal slots)
+    and the 8.4 mm centre hole in the 3 mm disk layer is filled with a full Ø62.9 mm plate; only
+    the functional holes are cut again afterwards. The strips stay at r ~ 10 mm next to the disk,
+    so the plate does not reach into their path."""
+    return [cyl(2 * r, z0, z0 + DISK_T, sections=180) for z0 in (-HALF, HALF - DISK_T)]
+
+
 def module_sets(i):
     """Lane sets passing through module i, and the set anchored at its distal disk (or None)."""
     sets = [s for s, m in ANCHOR_MODULE.items() if m >= i]
@@ -111,7 +124,9 @@ def build(i):
     kind = KINDS[i]
     body, springs = source(kind)
     sets, anchor = module_sets(i)
-    add, sub = [], []
+    add, sub = disk_fill(body), []
+    if springs is not None:
+        sub.append(springs)          # re-open only the leaf-spring pockets (exact spring shape)
     for ray in RAYS.values():
         for z0, z1 in ((-HALF, -HALF + DISK_T), (HALF - DISK_T, HALF)):
             add.append(on_ray(ray, sum(PAD_R) / 2, 0., z0, z1, PAD_R[1] - PAD_R[0], PAD_W))

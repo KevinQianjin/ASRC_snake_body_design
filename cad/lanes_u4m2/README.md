@@ -10,8 +10,8 @@ STEP meshes in `../previews/u4m2/`, which are left untouched, by
 
 | File | Used as | Lane holes | Anchor | Centre hole |
 |---|---|---|---|---|
-| `U_lane_pass.stl` | U1, U2, U3 | A, B, C | – | 8.4 mm (unchanged, no rod in U) |
-| `U4_lane_anchorA.stl` | U4 | A, B, C | A at the distal disk | 8.4 mm |
+| `U_lane_pass.stl` | U1, U2, U3 | A, B, C | – | none (filled; no rod in U) |
+| `U4_lane_anchorA.stl` | U4 | A, B, C | A at the distal disk | none (filled) |
 | `M5_lane_anchorB.stl` | M5 | B, C | B at the distal disk | **1.85 mm bore for the 1.8 mm rod** |
 | `M6_lane_anchorC.stl` | M6 | C | C at the distal disk (head side) | **1.85 mm bore** |
 | `U_leaf_springs.stl` | the 4 NiTi leaf springs of every U | – | – | – |
@@ -36,20 +36,21 @@ Every lane is on the up, left, down and right rays. Lane radii: A 21 mm, B 24 mm
    Rotating U by −45° also puts its leaf-spring diagonal, which is its stiff
    direction, on ±Y. That gives the high vertical bending stiffness the simulation
    assumes. Check this against the U designer's intent.
-2. **Rope pads.** The end disks are notched exactly where the corridors are, so each ray gets a
+2. **Solid end disks (13 Nov, later).** Every 3 mm end disk is now a full round plate (r 31.45 mm). All the STEP notches, the 2 mm-deep blind slots (curved strip-root reliefs, U diagonal slots) and the unused 8.4 mm U centre hole are filled. The only holes left are: lane holes, anchor grooves + return holes, the M backbone bore, the 4 joint holes, and the U leaf-spring pockets (re-cut to the exact spring shape). U1–U3 disk: 12 lane + 4 joint holes + 4 spring pockets. U4: plus 4 return holes, minus the A lanes on its distal face only where grooves join them. M5 distal: 8 lane + 4 return + 4 joint + bore. M6 distal: 4 lane + 4 return + 4 joint + bore. Filling the strip-root reliefs bonds each strip root to the disk over 3 mm instead of 1 mm, which may stiffen the module slightly near its ends. This is untested: compare one printed module with the stiffness database before relying on the simulation numbers.
+3. **Rope pads.** The end disks are notched exactly where the corridors are, so each ray gets a
    3 mm pad in the notch (radial 18.5–29.5 mm, 7 mm wide). Lane holes are Ø2.5 mm (2 mm rope +
    0.5 mm) with 0.5 mm entry chamfers. Holes exist only for the sets that still pass through
    that module.
-3. **Backbone hole sized to the rod.** In M5 and M6 the 8.4 mm passage is plugged (Ø8.6) and bored
+4. **Backbone hole sized to the rod.** In M5 and M6 the 8.4 mm passage is plugged (Ø8.6) and bored
    Ø1.85 mm for the Ø1.8 mm NiTi rod. A Ø6 × 12 mm sleeve inside each end disk gives the rod
    15 mm of support per end. A 3 mm disk alone cannot clamp the rod in rotation, so without the
    sleeve the rod would add little bending stiffness. The interior is free up to r ≈ 8 mm
    there, so the sleeve touches no strip. U modules keep 8.4 mm because no rod runs through
    them; the hole can carry wiring.
-4. **Anchor blocks.** On the distal disk of U4 (A), M5 (B) and M6 (C), the pad is 7 mm deep:
+5. **Anchor blocks.** On the distal disk of U4 (A), M5 (B) and M6 (C), the pad is 7 mm deep:
    the 3 mm disk plus 4 mm of free space inside the module. It has a groove and a return hole,
    described below.
-5. **Joint holes.** 4 × Ø2.2 mm at r = 12.5 mm on the four rays, through both disks. These
+6. **Joint holes.** 4 × Ø2.2 mm at r = 12.5 mm on the four rays, through both disks. These
    are free inside both bodies for the nut and screw head.
 
 Minimum wall between neighbouring lane holes is 0.5 mm (3 mm pitch − 2.5 mm hole).
