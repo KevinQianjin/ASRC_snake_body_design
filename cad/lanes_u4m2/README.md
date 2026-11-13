@@ -105,8 +105,10 @@ The joint is **rigid, end disk to end disk, no gap**, matching the continuous mo
 - Simulation with the lanes (`simulations/u4m2/backbone_20261108/lanes_study.py`): all 32
   startup states and all 36 yaw holds (0–175°) pass. The peak tension drops slightly
   (17.4 → 16.4 N) and stability margins rise slightly. The reference round trip passes every
-  check: 1101 states, peak 16.5 N, minimum 2.73 N, clearance 20.1 mm. Closed-loop results
-  are in the study README, section 14.
+  check: 1101 states, peak 16.5 N, minimum 2.73 N, clearance 20.1 mm. Closed loop: all five cases (nominal,
+  E75, 550 g head, 1.5 m free rope, 80 % rope EA) complete and every settled sample passes. The 550 g
+  head still has 48 transient states above 1° (max 2.32°, previously up to 3.8°) at 174–178° yaw
+  (study README, section 14).
 - **Limit found: rope chords in M5/M6 at large yaw.** The ropes are guided only at the end disks,
   so inside a bent module each rope is a straight chord. U modules bend ≤ 7.3°, so their chords
   stay within 0.2 mm of the lane. M5 bends 14° at the 0° hold, 25° at 15° yaw, 40–65° at 20–90° yaw

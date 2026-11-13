@@ -1,0 +1,59 @@
+{
+  "case": "nominal",
+  "samples": 1101,
+  "completed": true,
+  "controller_uses_plant_parameters": false,
+  "settings": {
+    "tension_target_n": 3.0,
+    "settle_tension_n": 2.5,
+    "precomp_limit_mm": 0.5,
+    "rope_step_mm": 0.25,
+    "node_step_mm": 4.5,
+    "max_iterations": 16,
+    "mid_tol_deg": null,
+    "mid_max": 4,
+    "reference": "/home/user/ASRC_snake_body_design/simulations/u4m2/backbone_20261108/length_cycle_results_lanes",
+    "gains": "/home/user/ASRC_snake_body_design/simulations/u4m2/backbone_20261108/closed_loop_lanes_results/nominal_gains.npz"
+  },
+  "settled": {
+    "states": 1101,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.9850796435478397,
+    "peak_tension_n": 16.586917290471842,
+    "minimum_eigenvalue": 0.18578583263282722,
+    "minimum_clearance_mm": 20.107092835410583,
+    "maximum_node_move_mm": 0.0,
+    "maximum_yaw_error_deg": 0.08366186957010768,
+    "maximum_elevation_error_deg": 0.1412179405396543,
+    "maximum_offset_mm": 0.04843657906483365,
+    "samples_not_settled": 0
+  },
+  "trace": {
+    "states": 2601,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.981429218324482,
+    "peak_tension_n": 16.589684979852343,
+    "minimum_eigenvalue": 0.18578583263282722,
+    "minimum_clearance_mm": 20.107092835410583,
+    "maximum_node_move_mm": 2.500000000000291
+  },
+  "trace_states_by_kind": {
+    "start": 1,
+    "feedforward": 2601,
+    "mid_correction": 0,
+    "mid_revert": 0,
+    "correction": 0
+  },
+  "pre_control_start": {
+    "minimum_tension_n": 2.9999999456010356,
+    "minimum_eigenvalue": 0.7593294155295747
+  }
+}
