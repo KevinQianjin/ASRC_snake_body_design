@@ -90,9 +90,9 @@ def main():
     metadata['tendon_material']['historical_pretension_note']='The exported model sheet includes older 1 N exploration; latest runtime target/floor are in controller.'
     write_json('baseline.json',metadata)
     with (HERE/'tendon_coordinates.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=coordinate_rows[0]);w.writeheader();w.writerows(coordinate_rows)
+        w=csv.DictWriter(f,fieldnames=coordinate_rows[0],lineterminator='\n');w.writeheader();w.writerows(coordinate_rows)
     with (HERE/'module_properties.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=modules[0]);w.writeheader();w.writerows(modules)
+        w=csv.DictWriter(f,fieldnames=modules[0],lineterminator='\n');w.writeheader();w.writerows(modules)
     # Select one actual saved 500 g entry pose for a curved analysis view.
     idx=next(i for i,x in enumerate(records) if x['phase']=='right_out' and x['target_yaw_deg']>=90)
     _,_,ev=r.evaluate(states[idx],detail=True)
