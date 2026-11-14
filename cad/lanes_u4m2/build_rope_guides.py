@@ -112,6 +112,15 @@ def check_kind(kind):
         rows.append({"center_z_mm": z, "intersection_volume_mm3": round(volume, 6),
                      "straight_pose_clear": volume <= 0.05,
                      "overlap_bounds_mm": None if overlap.is_empty else np.round(overlap.bounds, 3).tolist()})
+    scan_rows = []
+    for z in np.arange(-42.0, 42.01, 2.0):
+        placed = part.copy()
+        placed.apply_translation([0.0, 0.0, float(z)])
+        overlap = trimesh.boolean.intersection([body, placed], engine="manifold")
+        volume = 0.0 if overlap.is_empty else float(overlap.volume)
+        scan_rows.append({"center_z_mm": float(z), "intersection_volume_mm3": round(volume, 6),
+                          "clear": volume <= 0.05})
+    clear_centers = [row["center_z_mm"] for row in scan_rows if row["clear"]]
     return {
         "kind": kind,
         "guide_count_per_module": len(GUIDE_Z_MM),
@@ -123,7 +132,7 @@ def check_kind(kind):
         },
         "body_file": body_path.name,
         "body_cross_sections": body_cross_sections(body),
-        "straight_pose_intersections": rows,
+        "straight_pose_intersections": rows,\n        "axial_scan_clear_centers_mm": clear_centers,\n        "axial_scan_samples": scan_rows,
         "all_straight_pose_positions_clear": all(row["straight_pose_clear"] for row in rows),
         "limitations": [
             "checks straight-pose body clearance at the modeled guide stations only",
