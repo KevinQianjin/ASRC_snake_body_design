@@ -1,0 +1,33 @@
+name: Experimental guided startup
+
+on:
+  push:
+    branches:
+      - codex/internal-rope-guides
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guided-startup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install simulation dependencies
+        run: python -m pip install --upgrade numpy scipy numba
+      - name: Run guided 3 N startup
+        working-directory: simulations/u4m2/lanes_20261113
+        run: python lanes_study.py startup --guide-spacing-mm 24
+      - name: Upload guided startup states
+        uses: actions/upload-artifact@v4
+        with:
+          name: u4m2-guided-24mm-startup
+          path: simulations/u4m2/lanes_20261113/results_lanes_guides_24mm/
+          if-no-files-found: error
