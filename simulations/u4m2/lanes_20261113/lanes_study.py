@@ -1,16 +1,15 @@
 """Re-run the 3 N startup, yaw sweep, reference cycle, gains and closed loop with separate tendon lanes.
 
 Usage (from this folder), in order:
-    python lanes_study.py startup
-    python lanes_study.py sweep
-    python lanes_study.py reference
-    python lanes_study.py gains
-    python lanes_study.py cycle --case nominal      # also E75, payload550g, free1500mm, ropeEA80pct
+    python lanes_study.py startup --guide-spacing-mm 24
+    python lanes_study.py sweep --guide-spacing-mm 24
+    python lanes_study.py reference --guide-spacing-mm 24
+    python lanes_study.py gains --guide-spacing-mm 24
+    python lanes_study.py cycle --case nominal --guide-spacing-mm 24      # also E75, payload550g, free1500mm, ropeEA80pct
 
 Lanes: anchor set A (U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm (lanes.py). Every step
 uses the existing, unchanged scripts in ../backbone_20261108 with the lane rope geometry installed, and
-writes to separate folders so the shared-hole results stay untouched:
-results_lanes/, length_cycle_results_lanes/, closed_loop_lanes_results/.
+writes to separate guide-specific folders, leaving the original lane results untouched.
 """
 import os
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
@@ -31,8 +30,21 @@ def main():
     ap.add_argument('step', choices=['startup', 'sweep', 'reference', 'gains', 'cycle'])
     ap.add_argument('--case', default='nominal')
     ap.add_argument('--radii', type=float, nargs=3, default=list(lanes.DEFAULT_RADII_MM), help='lane radii (mm) for sets A, B, C')
+    ap.add_argument('--guide-spacing-mm', type=float, default=None,
+                    help='ideal internal guide pitch in M5/M6; omit for legacy endpoint-only chords')
+    ap.add_argument('--output-tag', default=None,
+                    help='optional isolated output suffix for comparison runs')
     a = ap.parse_args()
-    lanes.install(a.radii)  # before importing anything that binds spatial_rod
+    global RES, REF, CL, STARTUP, SWEEP
+    suffix = '' if a.guide_spacing_mm is None else f'_guides_{a.guide_spacing_mm:g}mm'
+    if a.output_tag:
+        suffix += f'_{a.output_tag}'
+    RES = HERE / f'results_lanes{suffix}'
+    REF = HERE / f'length_cycle_results_lanes{suffix}'
+    CL = HERE / f'closed_loop_lanes_results{suffix}'
+    STARTUP = RES / 'startup_niti18_E40_p20_pre3_states.npz'
+    SWEEP = RES / 'minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz'
+    lanes.install(a.radii, a.guide_spacing_mm)  # before importing anything that binds spatial_rod
     for d in (RES, REF, CL):
         d.mkdir(exist_ok=True)
     (RES / 'lanes.json').write_text(json.dumps(dict(lane_radii_mm=dict(A_U4=a.radii[0], B_M5=a.radii[1], C_M6=a.radii[2]),
