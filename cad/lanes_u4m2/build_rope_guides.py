@@ -132,7 +132,9 @@ def check_kind(kind):
         },
         "body_file": body_path.name,
         "body_cross_sections": body_cross_sections(body),
-        "straight_pose_intersections": rows,\n        "axial_scan_clear_centers_mm": clear_centers,\n        "axial_scan_samples": scan_rows,
+        "straight_pose_intersections": rows,
+        "axial_scan_clear_centers_mm": clear_centers,
+        "axial_scan_samples": scan_rows,
         "all_straight_pose_positions_clear": all(row["straight_pose_clear"] for row in rows),
         "limitations": [
             "checks straight-pose body clearance at the modeled guide stations only",
