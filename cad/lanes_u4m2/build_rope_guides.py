@@ -19,7 +19,7 @@ import numpy as np
 import trimesh
 
 HERE = Path(__file__).resolve().parent
-GUIDE_Z_MM = (-36.0, -12.0, 12.0, 36.0)
+GUIDE_Z_MM = (-24.0, 0.0, 24.0)
 THICKNESS_MM = 1.2
 HUB_LENGTH_MM = 8.0
 HUB_D_MM = 6.0
