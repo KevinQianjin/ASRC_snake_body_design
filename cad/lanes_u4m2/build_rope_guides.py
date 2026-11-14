@@ -21,9 +21,8 @@ import trimesh
 HERE = Path(__file__).resolve().parent
 GUIDE_Z_MM = (-24.0, 0.0, 24.0)
 THICKNESS_MM = 1.2
-HUB_LENGTH_MM = 8.0
-HUB_D_MM = 6.0
-BACKBONE_HOLE_D_MM = 2.1
+ROOT_INNER_R_MM = 8.5
+ROOT_OUTER_R_MM = 10.0
 ROPE_HOLE_D_MM = 2.6
 ARM_WIDTH_MM = 4.0
 ARM_TIP_R_MM = 28.7
@@ -40,16 +39,19 @@ def cylinder(diameter, height, center=(0.0, 0.0, 0.0), sections=64):
 def guide_mesh(kind):
     if kind not in LANE_RADII_MM:
         raise ValueError(f"unknown guide kind: {kind}")
-    bar_length = ARM_TIP_R_MM - HUB_D_MM / 2.0
-    bar_center = (ARM_TIP_R_MM + HUB_D_MM / 2.0) / 2.0
-    solids = [cylinder(HUB_D_MM, HUB_LENGTH_MM)]
+    bar_length = ARM_TIP_R_MM - ROOT_INNER_R_MM
+    bar_center = (ARM_TIP_R_MM + ROOT_INNER_R_MM) / 2.0
+    ring = cylinder(2.0 * ROOT_OUTER_R_MM, THICKNESS_MM)
+    ring_hole = cylinder(2.0 * ROOT_INNER_R_MM, THICKNESS_MM + 1.0)
+    root_ring = trimesh.boolean.difference([ring, ring_hole], engine='manifold')
+    solids = [root_ring]
     for angle in (0.0, 90.0, 180.0, 270.0):
         bar = trimesh.creation.box([bar_length, ARM_WIDTH_MM, THICKNESS_MM])
         bar.apply_translation([bar_center, 0.0, 0.0])
         bar.apply_transform(trimesh.transformations.rotation_matrix(np.radians(angle), [0, 0, 1]))
         solids.append(bar)
     solid = trimesh.boolean.union(solids, engine="manifold")
-    cutters = [cylinder(BACKBONE_HOLE_D_MM, HUB_LENGTH_MM + 1.0)]
+    cutters = []
     for angle in (0.0, 90.0, 180.0, 270.0):
         a = np.radians(angle)
         for radius in LANE_RADII_MM[kind]:
@@ -119,12 +121,11 @@ def check_kind(kind):
 def main():
     report = {
         "status": "experimental, not print-approved",
-        "concept": "rod-mounted cross-spider; guide stations with a maximum 24 mm pitch in M5 and M6",
+        "concept": "open-centre cross-guide ring; spokes route around the central flexure webs",
         "dimensions_mm": {
             "plate_thickness": THICKNESS_MM,
-            "hub_length": HUB_LENGTH_MM,
-            "hub_diameter": HUB_D_MM,
-            "backbone_hole_diameter": BACKBONE_HOLE_D_MM,
+            "root_inner_radius": ROOT_INNER_R_MM,
+            "root_outer_radius": ROOT_OUTER_R_MM,
             "rope_hole_diameter": ROPE_HOLE_D_MM,
             "arm_width": ARM_WIDTH_MM,
             "arm_tip_radius": ARM_TIP_R_MM,
