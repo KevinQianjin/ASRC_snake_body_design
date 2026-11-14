@@ -28,3 +28,6 @@ jobs:
       - name: Run current U4+M2 numerical tests
         working-directory: simulations/u4m2/backbone_20261108
         run: python -m unittest discover -v -p "test_*.py"
+      - name: Check lane and guided-rope model derivatives
+        working-directory: simulations/u4m2/lanes_20261113
+        run: python -c "import lanes; lanes.install(guide_spacing_mm=24.); print(lanes.validate())"
