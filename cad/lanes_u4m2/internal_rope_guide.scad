@@ -15,8 +15,8 @@ arm_width = 4.0;
 hub_diameter = 6.0;
 arm_tip_radius = 28.7;
 show_rope_preview = false;
-guide_pitch = 24;
-show_three_guides = false;
+guide_pitch = 24; // maximum pitch between interior guide stations
+show_guide_array = false;
 
 module one_guide(kind="M5") {
     radii = kind == "M5" ? [24, 27] : [27];
@@ -37,8 +37,8 @@ module one_guide(kind="M5") {
     }
 }
 
-if (show_three_guides) {
-    for (z = [-guide_pitch, 0, guide_pitch])
+if (show_guide_array) {
+    for (z = [-36,-12,12,36])
         translate([0,0,z]) one_guide(guide_kind);
 } else if (show_rope_preview) {
     color([0.45,0.48,0.52]) one_guide(guide_kind);
