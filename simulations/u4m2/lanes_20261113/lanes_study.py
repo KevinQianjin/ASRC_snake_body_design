@@ -32,9 +32,13 @@ def main():
     ap.add_argument('--radii', type=float, nargs=3, default=list(lanes.DEFAULT_RADII_MM), help='lane radii (mm) for sets A, B, C')
     ap.add_argument('--guide-spacing-mm', type=float, default=None,
                     help='ideal internal guide pitch in M5/M6; omit for legacy endpoint-only chords')
+    ap.add_argument('--output-tag', default=None,
+                    help='optional isolated output suffix for comparison runs')
     a = ap.parse_args()
     global RES, REF, CL, STARTUP, SWEEP
     suffix = '' if a.guide_spacing_mm is None else f'_guides_{a.guide_spacing_mm:g}mm'
+    if a.output_tag:
+        suffix += f'_{a.output_tag}'
     RES = HERE / f'results_lanes{suffix}'
     REF = HERE / f'length_cycle_results_lanes{suffix}'
     CL = HERE / f'closed_loop_lanes_results{suffix}'
