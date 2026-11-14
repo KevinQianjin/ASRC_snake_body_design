@@ -9,7 +9,7 @@ show_ropes = true;
 show_rod = true;
 show_springs = true;
 show_ends = true;     // base interface (z -20..0) and head adapter (z 576..582)
-show_guides = false;  // experimental M5/M6 internal guide spiders (3 per M module)
+show_guides = false;  // experimental M5/M6 internal guide spiders (4 per M module)
 explode = 0;          // mm between modules, e.g. 20 to see the end disks
 $fn = 32;
 L = 96;
@@ -21,7 +21,7 @@ function zc(i) = i*(L+explode) + L/2;
 for (i = [0:5]) translate([0, 0, zc(i)]) {
     color(i < 4 ? [0.12, 0.48, 0.86] : [0.95, 0.48, 0.12]) import(parts[i], convexity = 12);
     if (show_springs && i < 4) color([0.6, 0.6, 0.6]) import("U_leaf_springs.stl", convexity = 6);
-    if (show_guides && i == 4) for (g = [-24, 0, 24]) translate([0,0,g]) color([0.15,0.8,0.85]) one_guide("M5");
+    if (show_guides && i == 4) for (g = [-36, -12, 12, 36]) translate([0,0,g]) color([0.15,0.8,0.85]) one_guide("M5");
     if (show_guides && i == 5) for (g = [-24, 0, 24]) translate([0,0,g]) color([0.15,0.8,0.85]) one_guide("M6");
 }
 if (show_rod) color([0.3, 0.3, 0.3]) translate([0, 0, 4*(L+explode)]) cylinder(d = 1.8, h = 2*L + explode);
