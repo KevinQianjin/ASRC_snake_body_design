@@ -20,7 +20,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - name: Install model dependencies
-        run: python -m pip install --upgrade numpy scipy numba trimesh rtree shapely "cadquery-ocp==7.8.1.1"
+        run: python -m pip install --upgrade numpy scipy numba trimesh rtree shapely manifold3d "cadquery-ocp==7.8.1.1"
       - name: Check Python syntax
         run: python -m compileall -q simulations/u4m2/backbone_20261108
       - name: Validate design and configuration JSON
@@ -31,3 +31,9 @@ jobs:
       - name: Check lane and guided-rope model derivatives
         working-directory: simulations/u4m2/lanes_20261113
         run: python -c "import lanes; lanes.install(guide_spacing_mm=24.); print(lanes.validate())"
+      - name: Check internal guide spacing against saved bends
+        working-directory: simulations/u4m2/lanes_20261113
+        run: python rope_guide_study.py results_lanes/startup_niti18_E40_p20_pre3_states.npz results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz length_cycle_results_lanes/nominal_states.npz closed_loop_lanes_results/payload550g_states.npz --output /tmp/rope_guide_study.json
+      - name: Build and check guide parts against straight M bodies
+        working-directory: cad/lanes_u4m2
+        run: python build_rope_guides.py
