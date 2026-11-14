@@ -35,25 +35,38 @@ def _corridor_clearances():
     }
 
 
-def _segment_deviation(p, F, i0, i1, off):
-    """Return the maximum transverse guide-span deviation in local lane coordinates."""
+def _segment_deviation(p, F, q_state, rod, i0, i1, off):
+    """Max transverse error of a rope span, sampled at cell nodes and mid-cell frames."""
     a = p[i0] + F[i0] @ off
     b = p[i1] + F[i1] @ off
     chord = b - a
     max_rad_out = max_rad_in = max_tang = max_norm = 0.0
     rad = off / np.linalg.norm(off)
-    # This tangent convention matches rope_chord_check.py and the model's ray ordering.
     tan = np.cross(np.array([1.0, 0.0, 0.0]), rad)
-    for i in range(i0 + 1, i1):
-        n = F[i][:, 0]
-        denom = float(np.dot(chord, n))
+    samples = [(p[i], F[i]) for i in range(i0 + 1, i1)]
+
+    # Include each cell midpoint so 12 mm end spans are checked too.
+    for cell in range(i0, i1):
+        state = q_state[cell]
+        phi = np.array([state[0], -state[2], state[1]])
+        half_centerline = np.zeros(3)
+        for u, weight in zip(rod.planar.u, rod.planar.w):
+            rot, _ = lanes.rotation(phi * (0.5 * u))
+            half_centerline += 0.5 * weight * rot[:, 0]
+        center_mid = p[cell] + F[cell] @ (rod.l * (1.0 + state[3]) * half_centerline)
+        frame_mid, _ = lanes.rotation(phi * 0.5)
+        samples.append((center_mid, F[cell] @ frame_mid))
+
+    for center, frame in samples:
+        normal = frame[:, 0]
+        denom = float(np.dot(chord, normal))
         if abs(denom) < 1e-12:
             continue
-        t = float(np.dot(p[i] - a, n) / denom)
+        t = float(np.dot(center - a, normal) / denom)
         if not 0.0 < t < 1.0:
             continue
-        q = a + t * chord
-        loc = F[i].T @ (q - p[i]) - off
+        point = a + t * chord
+        loc = frame.T @ (point - center) - off
         radial = float(np.dot(loc, rad))
         tangential = float(np.dot(loc, tan))
         transverse = float(np.linalg.norm(loc[1:]))
@@ -63,6 +76,14 @@ def _segment_deviation(p, F, i0, i1, off):
         max_norm = max(max_norm, transverse)
     return max_rad_out, max_rad_in, max_tang, max_norm
 
+
+def _guide_spans(first, last, step):
+    """Cell-node spans matching the collision-free staggered 24 mm guide layout."""
+    if step == 2 and last - first >= 8:
+        return [(first, first + 1)] + [
+            (first + 2 * n - 1, first + 2 * n + 1) for n in range(1, (last - first) // 2)
+        ] + [(last - 1, last)]
+    return [(i0, min(i0 + step, last)) for i0 in range(first, last, step)]
 
 def scan_state_archive(path, rod, guide_cells):
     data = np.load(path)
@@ -77,7 +98,7 @@ def scan_state_archive(path, rod, guide_cells):
         z = data[key]
         tension_key = key.replace("_z8", "_T8")
         _, _, details = rod.evaluate(z, data[tension_key], detail=True)
-        p, F = details["points"], details["frames"]
+        p, F, q_state = details["points"], details["frames"], details["q"]
         for j in (4, 5):
             module_name = MODULE_NAMES[j]
             first, last = j * rod.sub, (j + 1) * rod.sub
@@ -90,9 +111,8 @@ def scan_state_archive(path, rod, guide_cells):
                     if rod.routes[set_index, j] == 0.0:
                         continue
                     off = rod.offsets3[set_index, ray]
-                    for i0 in range(first, last, step):
-                        i1 = i0 + step
-                        r_out, r_in, tang, norm = _segment_deviation(p, F, i0, i1, off)
+                    for i0, i1 in _guide_spans(first, last, step):
+                        r_out, r_in, tang, norm = _segment_deviation(p, F, q_state, rod, i0, i1, off)
                         record["rad_out"] = max(record["rad_out"], r_out * 1000.0)
                         record["rad_in"] = max(record["rad_in"], r_in * 1000.0)
                         record["tang"] = max(record["tang"], tang * 1000.0)
@@ -147,7 +167,7 @@ def main():
         report["modules"][f"guide_{spacing:g}mm"] = {
             "guide_spacing_mm": spacing,
             "guide_cells_per_span": cells,
-            "intermediate_guides_per_module": int(96 // spacing) - 1,
+            "internal_guides_per_module": (4 if spacing == 24.0 else max(0, int(96 // spacing) - 1)),
             "results": aggregate,
         }
 
