@@ -84,16 +84,38 @@ def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets
                     continue
                 off = offsets3[k, rope]
                 tension = routes[k, j] * C[k, rope]
-                for i0 in range(module_start, module_end, step):
-                    i1 = i0 + step
-                    a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
-                    chord = b - a; ll = np.sqrt(np.dot(chord, chord))
-                    if ll < 1e-10: ll = 1e-10
-                    rope_lengths[k, rope] += routes[k, j] * ll
-                    energy += tension * ll
-                    force = tension * chord / ll
-                    ap[i0] -= force; ap[i1] += force
-                    af[i0] -= np.outer(force, off); af[i1] += np.outer(force, off)
+                if j >= 4 and step == 2 and sub >= 8:
+                    # Stagger the first/last supports inward by half a cell:
+                    # cell spans are 1,2,2,...,2,1. For the 8-cell model this
+                    # places internal guides at -36,-12,+12,+36 mm, away from
+                    # the M-body collisions found at -24,0,+24 mm.
+                    span_count = sub // 2 + 1
+                    for span in range(span_count):
+                        if span == 0:
+                            i0 = module_start; i1 = module_start + 1
+                        elif span == span_count - 1:
+                            i0 = module_end - 1; i1 = module_end
+                        else:
+                            i0 = module_start + 2 * span - 1; i1 = i0 + 2
+                        a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
+                        chord = b - a; ll = np.sqrt(np.dot(chord, chord))
+                        if ll < 1e-10: ll = 1e-10
+                        rope_lengths[k, rope] += routes[k, j] * ll
+                        energy += tension * ll
+                        force = tension * chord / ll
+                        ap[i0] -= force; ap[i1] += force
+                        af[i0] -= np.outer(force, off); af[i1] += np.outer(force, off)
+                else:
+                    for i0 in range(module_start, module_end, step):
+                        i1 = i0 + step
+                        a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
+                        chord = b - a; ll = np.sqrt(np.dot(chord, chord))
+                        if ll < 1e-10: ll = 1e-10
+                        rope_lengths[k, rope] += routes[k, j] * ll
+                        energy += tension * ll
+                        force = tension * chord / ll
+                        ap[i0] -= force; ap[i1] += force
+                        af[i0] -= np.outer(force, off); af[i1] += np.outer(force, off)
     grad = K * q
     for i in range(cells - 1, -1, -1):
         pv = F[i].T @ ap[i + 1]; fr = F[i].T @ af[i + 1]
