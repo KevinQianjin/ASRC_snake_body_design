@@ -12,12 +12,27 @@ backbone_hole_d = 2.1;     // 1.8 mm NiTi backbone
 plate_thickness = 1.2;
 hub_length = 8.0;          // bonded sleeve length on the backbone at each guide station
 arm_width = 4.0;
-root_inner_radius = 8.5; // clears the four inner M flexure webs at the guide plane
-root_outer_radius = 10.0;
+root_inner_radius = 8.8;
+root_outer_radius = 10.2;
+web_center_radius = 6.9; // measured from the M-body STEP cross-section
+web_clip_outer_d = 4.8;
+web_clip_inner_d = 3.0;
+web_clip_gap = 1.2;
+web_angles = [-22.5, 67.5, 157.5, 247.5];
 arm_tip_radius = 28.7;
 show_rope_preview = false;
 guide_pitch = 24; // maximum pitch between interior guide stations
 show_guide_array = false;
+
+module web_clip() {
+    difference() {
+        cylinder(d=web_clip_outer_d, h=plate_thickness, center=true, $fn=64);
+        cylinder(d=web_clip_inner_d, h=plate_thickness+1, center=true, $fn=48);
+        // Mouth faces inward, toward the module axis.
+        translate([-web_clip_outer_d/2,0,0])
+            cube([web_clip_outer_d,web_clip_gap,plate_thickness+1],center=true);
+    }
+}
 
 module one_guide(kind="M5") {
     radii = kind == "M5" ? [24, 27] : [27];
@@ -31,6 +46,9 @@ module one_guide(kind="M5") {
                 rotate([0,0,a])
                     translate([(root_inner_radius + arm_tip_radius)/2,0,0])
                         cube([arm_tip_radius-root_inner_radius,arm_width,plate_thickness], center=true);
+            for (a = web_angles)
+                translate([web_center_radius*cos(a),web_center_radius*sin(a),0])
+                    rotate([0,0,a]) web_clip();
         }
         for (a = [0:90:270])
             for (r = radii)
