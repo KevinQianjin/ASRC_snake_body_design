@@ -26,7 +26,7 @@ HUB_D_MM = 6.0
 BACKBONE_HOLE_D_MM = 2.1
 ROPE_HOLE_D_MM = 2.6
 ARM_WIDTH_MM = 4.0
-ARM_TIP_R_MM = 29.5
+ARM_TIP_R_MM = 28.7
 LANE_RADII_MM = {"M5": (24.0, 27.0), "M6": (27.0,)}
 BODY_FILES = {"M5": "M5_lane_anchorB.stl", "M6": "M6_lane_anchorC.stl"}
 
