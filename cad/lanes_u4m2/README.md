@@ -95,16 +95,19 @@ envelope (max radius 31.66 mm, the same as the STEP bodies).
   E75, 550 g head, 1.5 m free rope, 80 % rope EA) complete and every settled sample passes. The 550 g
   head still has 48 transient states above 1° (max 2.32°, previously up to 3.8°) at 174–178° yaw
   (`simulations/u4m2/lanes_20261113/README.md`).
-- **Limit found: rope chords in M5/M6 at large yaw.** The ropes are guided only at the end disks,
-  so inside a bent module each rope is a straight chord. U modules bend ≤ 7.3°, so their chords
-  stay within 0.2 mm of the lane. M5 bends 14° at the 0° hold, 25° at 15° yaw, 40–65° at 20–90° yaw
-  and up to 103° at 175° yaw. M6 bends up to 40°. The chord leaves its lane by 4 mm at the hold,
-  7 mm at 15° yaw, 11–18 mm at 20–90° yaw and 33 mm at 175° yaw. The M corridor clearance is
-  6.7–7.8 mm, so the M5 ropes would rub the spring strips beyond roughly 15° yaw. The
-  shared-hole layout has the same problem. To steer further, the M modules need intermediate
-  rope guides (e.g. guide rings on the strips at the module's ¼, ½ and ¾ length). The model must
-  then route the ropes through those guides instead of straight disk-to-disk chords.
-  `rope_chord_check.py` measures this.
+- **Intermediate M rope guides are now an experimental candidate.** A 24 mm maximum-span
+  guide layout routes each M5/M6 rope through four internal guide stations at local z =
+  −24, −12, +12 and +24 mm. The stations were selected by checking the guide mesh against both
+  STEP-derived M body meshes; the generated guide meshes are watertight and have zero measured
+  intersection at all four selected straight-pose locations. The stations at ±36 mm collide
+  and are intentionally not used.
+- On saved nominal, yaw, round-trip and 550 g payload bends, the idealized guided rope chord screen
+  estimates a remaining lateral corridor margin of 3.8 mm (M5 B), 4.8 mm (M5 C) and 7.1 mm
+  (M6 C). With no internal guides, the corresponding M5 estimates are about −25.5 mm, which means
+  the chord model crosses the static corridor. These are geometric screening estimates; the guide
+  mounts are not yet included in deformed-solid contact, friction, wear or stiffness simulations.
+  The printable concept is in `internal_rope_guide.scad`; the mesh/station check is
+  `build_rope_guides.py`. Treat it as an instrumented prototype, not an approved production part.
 - NiTi rod strain at the largest M5 bend (103° over 96 mm, uniform curvature) is about 1.7%,
   within the superelastic range (~6%).
 - Not checked: printed-part strength (0.5 mm walls, anchor bridges), rope friction, the
