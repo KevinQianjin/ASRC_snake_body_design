@@ -38,6 +38,7 @@ class V2Tests(unittest.TestCase):
         r = Runner.__new__(Runner)
         r.a = types.SimpleNamespace(node_step=4.5, max_depth=8, rope_step=.25, mid_tol=None, mid_max=4)
         r.trace = []; r.last_points = np.zeros((3, 3)); r.max_move = 0.; r.case = 'fake'; r.n_mid = 0
+        r.trace_states = []; r.trace_rest = []
         r.d = types.SimpleNamespace(solve=lambda z, R: np.array(R, float))
         def check(z, R, s, target, kind, index, phase):
             P = np.full((3, 3), float(np.max(R)) * 1000 * 10.)
@@ -50,6 +51,13 @@ class V2Tests(unittest.TestCase):
         self.assertTrue(len(moves) >= 8)
         self.assertLessEqual(max(moves), 4.5 + 1e-9)
         self.assertTrue(np.allclose(r.offset_extra, 0))
+        self.assertEqual(len(r.trace), len(r.trace_states))
+        self.assertEqual(len(r.trace), len(r.trace_rest))
+        np.testing.assert_allclose(r.trace_states, r.trace_rest)
+        self.assertTrue(all(np.max(b) > np.max(a) for a, b in zip(r.trace_rest, r.trace_rest[1:])))
+        saved = r.trace_states[-1].copy()
+        z[:] = -1
+        np.testing.assert_array_equal(r.trace_states[-1], saved)
 
 
 if __name__ == '__main__':

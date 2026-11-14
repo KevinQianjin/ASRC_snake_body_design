@@ -1,0 +1,91 @@
+{
+  "method": "ideal material-frame eyelets; straight rope spans between guide stations",
+  "scope": "path deviation and conservative corridor screen, not deformed-solid contact or friction",
+  "source_archives": [
+    "results_lanes/startup_niti18_E40_p20_pre3_states.npz",
+    "results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+    "length_cycle_results_lanes/nominal_states.npz",
+    "closed_loop_lanes_results/payload550g_states.npz"
+  ],
+  "safety_clearance_mm": 1.0,
+  "modules": {
+    "guide_24mm": {
+      "guide_spacing_mm": 24.0,
+      "guide_cells_per_span": 2,
+      "internal_guides_per_module": 4,
+      "results": {
+        "M5": {
+          "B": {
+            "rad_out": 0.731,
+            "rad_in": 2.949,
+            "tang": 1.843,
+            "deviation": 2.949,
+            "samples": 45400,
+            "static_corridor_clearance_mm": 6.68,
+            "estimated_residual_clearance_mm": 3.731,
+            "passes_1mm_screen": true
+          },
+          "C": {
+            "rad_out": 0.637,
+            "rad_in": 3.089,
+            "tang": 1.846,
+            "deviation": 3.09,
+            "samples": 45400,
+            "static_corridor_clearance_mm": 7.83,
+            "estimated_residual_clearance_mm": 4.74,
+            "passes_1mm_screen": true
+          }
+        },
+        "M6": {
+          "B": {
+            "rad_out": 0.0,
+            "rad_in": 0.0,
+            "tang": 0.0,
+            "deviation": 0.0,
+            "samples": 0
+          },
+          "C": {
+            "rad_out": 0.476,
+            "rad_in": 0.766,
+            "tang": 0.644,
+            "deviation": 0.775,
+            "samples": 45400,
+            "static_corridor_clearance_mm": 7.83,
+            "estimated_residual_clearance_mm": 7.055,
+            "passes_1mm_screen": true
+          }
+        }
+      }
+    }
+  },
+  "coverage": [
+    {
+      "path": "results_lanes/startup_niti18_E40_p20_pre3_states.npz",
+      "format": "inverse",
+      "states": 32,
+      "unsolved_records_without_states": 0,
+      "sha256": "2f4c2246c844414d7793d3a53106f9d742d5a0fc220d2c1db462fee463f34256"
+    },
+    {
+      "path": "results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+      "format": "inverse",
+      "states": 36,
+      "unsolved_records_without_states": 0,
+      "sha256": "8c8629e32cceba7bd1e1f048632beeece0ca783172184930a1d7a1c00c193bf3"
+    },
+    {
+      "path": "length_cycle_results_lanes/nominal_states.npz",
+      "format": "reference",
+      "states": 1101,
+      "unsolved_records_without_states": 0,
+      "sha256": "fcf6d03501cea5f3570658230a1cac92cbf72f25f16b63a297bd4b0939e7c36e"
+    },
+    {
+      "path": "closed_loop_lanes_results/payload550g_states.npz",
+      "format": "closed",
+      "states": 1101,
+      "unsolved_records_without_states": 0,
+      "sha256": "08f3dbcb79e4d8f92d81b480b5c91d12e195b623e5f231184655313d107f58d3"
+    }
+  ]
+}

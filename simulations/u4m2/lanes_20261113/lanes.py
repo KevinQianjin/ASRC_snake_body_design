@@ -84,11 +84,12 @@ def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets
                     continue
                 off = offsets3[k, rope]
                 tension = routes[k, j] * C[k, rope]
-                if j >= 4 and step == 2 and sub >= 8:
+                if j >= 4 and step * 4 == sub and sub % 8 == 0:
                     # Four internal supports at local z=-24,-12,+12,+24 mm
-                    # for 8 cells/module, where the M-body CAD scan is clear.
+                    # preserved at every supported fine-mesh refinement.
                     # End-to-end rope spans are 2,1,2,1,2 cells (max 24 mm).
-                    spans = ((0, 2), (2, 3), (3, 5), (5, 6), (6, sub))
+                    a1, a2, a3, a4 = sub // 4, 3 * sub // 8, 5 * sub // 8, 3 * sub // 4
+                    spans = ((0, a1), (a1, a2), (a2, a3), (a3, a4), (a4, sub))
                     for a_cell, b_cell in spans:
                         i0 = module_start + a_cell
                         i1 = module_start + b_cell
@@ -161,14 +162,23 @@ def apply_lanes(r, radii_mm=DEFAULT_RADII_MM, guide_spacing_mm=None):
     return r
 
 
-def install(radii_mm=DEFAULT_RADII_MM, guide_spacing_mm=None):
+def install(radii_mm=DEFAULT_RADII_MM, guide_spacing_mm=None, mass_config=None):
     """Install lane and optional M-module guide geometry before importing dependents."""
     global RADII_MM, GUIDE_SPACING_MM
     RADII_MM = tuple(radii_mm)
     GUIDE_SPACING_MM = guide_spacing_mm
 
     def spatial_rod(u, m, anchors, pitch=20, sub=2, variant='niti18_E40'):
-        return apply_lanes(_original_spatial_rod(u, m, anchors, pitch, sub, variant), RADII_MM, GUIDE_SPACING_MM)
+        r = apply_lanes(_original_spatial_rod(u, m, anchors, pitch, sub, variant), RADII_MM, GUIDE_SPACING_MM)
+        if mass_config is not None:
+            masses = np.asarray(mass_config['module_mass_kg'], float)
+            if masses.shape != (u+m,) or not np.isfinite(masses).all() or (masses <= 0).any():
+                raise ValueError('Mass configuration must contain positive mass for every module')
+            r.planar.bare_mass = masses.copy()
+            r.planar.mass = np.repeat((masses + r.planar.rope_module_mass) / sub, sub)
+            r.planar.weight_after = np.cumsum(r.planar.mass[::-1])[::-1] - r.planar.mass + r.planar.payload_kg
+            r.mass = r.planar.mass.copy()
+        return r
     backbone.spatial_rod = spatial_rod
     return spatial_rod
 

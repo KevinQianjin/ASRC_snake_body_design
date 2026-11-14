@@ -1,0 +1,36 @@
+repair 130 seed 125 accepted True peak 17.164886467068342
+repair 170 seed 165 accepted False peak 55.26648720045243
+Traceback (most recent call last):
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/repair_guided_sweep.py", line 37, in <module>
+    ap=argparse.ArgumentParser();ap.add_argument('folder',type=Path);ap.add_argument('--radii',type=float,nargs=3,default=(21,24,27));a=ap.parse_args();run(a.folder,a.radii)
+                                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/repair_guided_sweep.py", line 25, in run
+    z,T,info=min_force(r,z0,T0,yaw,20,maxiter=300,pretension=3,exact=True,smooth=1,Cprev=T0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/backbone_20261108/min_force_sweep.py", line 93, in min_force
+    res = minimize(obj, u0, jac=jac, bounds=bounds, method='SLSQP',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_minimize.py", line 796, in minimize
+    res = _minimize_slsqp(fun, x0, args, jac, bounds,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_slsqp_py.py", line 529, in _minimize_slsqp
+    _eval_con_normals(C, x, cons, m, meq)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_slsqp_py.py", line 608, in _eval_con_normals
+    temp = np.atleast_2d(con['jac'](x, *con['args']))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/backbone_20261108/min_force_sweep.py", line 84, in ineqjac
+    Jz = derivative(ineq_z, u[:n]); m1 = Jz.shape[0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/steering_63mm_20261106/search_steering.py", line 17, in derivative
+    result[:,j]=(np.atleast_1d(fun(x+dx))-np.atleast_1d(fun(x-dx)))/(2*step)
+                               ^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/backbone_20261108/min_force_sweep.py", line 79, in ineq_z
+    return np.r_[r.geometry_constraints(z, d), t[0] ** 2 + t[2] ** 2 - .01,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/steering_63mm_20261106/spatial_model.py", line 196, in geometry_constraints
+    nonlocal_=capsule_values(p,self.ii,self.jj,self.diameter)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/guide_dependencies/numba/core/serialize.py", line 30, in _numba_unpickle
+    def _numba_unpickle(address, bytedata, hashed):
+
+KeyboardInterrupt

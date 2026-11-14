@@ -1,6 +1,8 @@
 # Separate rope lanes (radial spread) for U4+M2 — 13 November 2026
 
-This folder holds the rope-lane study. It does not copy the solver: `lanes.py` adds `../backbone_20261108` to the Python path and uses its scripts (`backbone.py`, `startup_sweep.py`, `min_force_sweep.py`, `length_cycle.py`, `closed_loop_cycle.py`, `closed_loop_v2.py`) unchanged. It also leaves the hash-pinned files in `steering_63mm_20261106` untouched.
+**14 November:** [four-station guide validation, full 500 g paths and V2 CAD](GUIDED_VALIDATION.md). This update fixes archive coverage and refined-mesh guide placement, saves motion states and exports hole loads. The V2 physical mounting remains rejected because of bent-pose interference. Earlier endpoint-only results below remain historical comparisons.
+
+This folder holds the rope-lane study. `lanes.py` adds `../backbone_20261108` to the Python path and reuses its solvers. On 14 November, `closed_loop_v2.py` gained aligned motion-state output without changing its control law. The hash-pinned files in `steering_63mm_20261106` remain untouched.
 
 | Path | Content |
 |---|---|

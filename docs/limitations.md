@@ -4,6 +4,8 @@
 
 The design has not passed an integrated, hardware-validated deployment cycle. The latest [closed-loop report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) distinguishes settled-state success from failures before feedback correction. Earlier findings are preserved in [research history](history.md).
 
+**14 November guide update:** [new guided-path validation](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) now includes the four actual M guide stations, full motion-state output, per-hole loads and CAD-estimated module mass for the V2 candidate. Its rigid guide mounting intersects the beam-mapped M body in bent poses despite passing straight assembly checks. Some ideal rope spans also penetrate finite end-region material at large yaw. Support compliance/contact, finite bore routing and the resulting stiffness changes are unresolved; V2 is not released for manufacture. Earlier controller results below do not validate this newer physical mounting.
+
 | Limitation | Current evidence | Work required |
 |---|---|---|
 | Tension during command transitions | **Addressed in simulation (12 Nov, v2):** with a 3 N correction target, tension-aware arrival and refined transitions, every recorded state of all five cases stays at ≥ 2.62 N ([section 12](../simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12)). Peak tension rises to 25–27 N. | Verify on hardware with measured rope and winch behaviour. |

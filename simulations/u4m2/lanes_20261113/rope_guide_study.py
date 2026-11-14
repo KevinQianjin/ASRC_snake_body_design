@@ -16,6 +16,7 @@ from pathlib import Path
 import numpy as np
 
 import lanes
+from state_archives import load_states
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
@@ -26,8 +27,8 @@ DEFAULT_SPACINGS_MM = (96.0, 48.0, 24.0)
 SAFETY_CLEARANCE_MM = 1.0
 
 
-def _corridor_clearances():
-    design = json.loads((CAD / "lane_design.json").read_text(encoding="utf-8"))
+def _corridor_clearances(cad=CAD):
+    design = json.loads((cad / "lane_design.json").read_text(encoding="utf-8"))
     raw = design["M_lane_clearance_mm"]
     return {
         "B": min(raw[f"B@{ray}"] for ray in RAY_NAMES),
@@ -78,25 +79,22 @@ def _segment_deviation(p, F, q_state, rod, i0, i1, off):
 
 
 def _guide_spans(first, last, step):
-    """Cell-node spans matching the collision-free staggered 24 mm guide layout."""
-    if step == 2 and last - first >= 8:
-        offsets = (0, 2, 3, 5, 6, last - first)
+    """Cell-node spans matching the four CAD stations at 24 mm maximum span."""
+    sub = last - first
+    if step * 4 == sub and sub % 8 == 0:
+        offsets = (0, sub // 4, 3 * sub // 8, 5 * sub // 8, 3 * sub // 4, sub)
         return [(first + a, first + b) for a, b in zip(offsets[:-1], offsets[1:])]
     return [(i0, min(i0 + step, last)) for i0 in range(first, last, step)]
 
 def scan_state_archive(path, rod, guide_cells):
-    data = np.load(path)
+    states, coverage = load_states(path, rod.ndof)
     measurements = {
         name: {set_name: dict(rad_out=0.0, rad_in=0.0, tang=0.0, deviation=0.0, samples=0)
                for set_name in ("B", "C")}
         for name in ("M5", "M6")
     }
-    for key in data.files:
-        if not key.endswith("_z8"):
-            continue
-        z = data[key]
-        tension_key = key.replace("_z8", "_T8")
-        _, _, details = rod.evaluate(z, data[tension_key], detail=True)
+    for key, z, tension, meta in states:
+        _, _, details = rod.evaluate(z, tension, detail=True)
         p, F, q_state = details["points"], details["frames"], details["q"]
         for j in (4, 5):
             module_name = MODULE_NAMES[j]
@@ -117,7 +115,7 @@ def scan_state_archive(path, rod, guide_cells):
                         record["tang"] = max(record["tang"], tang * 1000.0)
                         record["deviation"] = max(record["deviation"], norm * 1000.0)
                         record["samples"] += 1
-    return measurements
+    return measurements, coverage
 
 
 def main():
@@ -126,19 +124,22 @@ def main():
     parser.add_argument("--spacings", nargs="+", type=float, default=list(DEFAULT_SPACINGS_MM),
                         help="candidate guide pitches in mm (must align with 8 cells/module)")
     parser.add_argument("--output", type=Path, default=HERE / "rope_guide_study.json")
+    parser.add_argument('--radii', nargs=3, type=float, default=[21,24,27])
+    parser.add_argument('--cad', type=Path, default=CAD)
     args = parser.parse_args()
 
-    lanes.install()
+    lanes.install(args.radii)
     import backbone
 
     rod = backbone.spatial_rod(4, 2, [4, 5, 6], 20, 8, "niti18_E40")
-    clearances = _corridor_clearances()
+    clearances = _corridor_clearances(args.cad)
     report = {
         "method": "ideal material-frame eyelets; straight rope spans between guide stations",
         "scope": "path deviation and conservative corridor screen, not deformed-solid contact or friction",
         "source_archives": [str(p) for p in args.states],
         "safety_clearance_mm": SAFETY_CLEARANCE_MM,
         "modules": {},
+        "coverage": [],
     }
     for spacing in args.spacings:
         cells = int(round((spacing / 1000.0) / rod.l))
@@ -147,7 +148,9 @@ def main():
         aggregate = {name: {set_name: dict(rad_out=0.0, rad_in=0.0, tang=0.0, deviation=0.0, samples=0)
                             for set_name in ("B", "C")} for name in ("M5", "M6")}
         for archive in args.states:
-            scanned = scan_state_archive(archive, rod, cells)
+            scanned, coverage = scan_state_archive(archive, rod, cells)
+            if spacing == args.spacings[0]:
+                report['coverage'].append(coverage)
             for module_name in aggregate:
                 for set_name, values in scanned[module_name].items():
                     out = aggregate[module_name][set_name]

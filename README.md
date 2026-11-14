@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 13 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 14 November 2026
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
@@ -8,131 +8,47 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 13 November 2026 (latest): separate rope lanes, renewed 3D model and a complete build package
+### 14 November 2026 (latest): guided 500 g paths and a rejected rigid-mount candidate
 
-Until today the model routed all three rope sets through the same four holes at 24 mm, which three 2 mm ropes cannot share. Each set now has its own lane, the simulation was re-run with it, and the 3D model was renewed to match.
+The guide study now reads every saved state format, records closed-loop motion states, and uses the four actual guide stations at **−24, −12, +12 and +24 mm** on both the eight- and sixteen-cell meshes. The old archive reader silently missed matrix-form results; coverage of the four supplied historical archives is corrected from **68 to 2,270 states**.
 
-- **Rope lanes:** A (ends at U4) 21 mm, B (M5) 24 mm, C (M6) 27 mm, on the same up/right/down/left rays. Everything still passes:
-  - all 32 startup states and all 36 yaw holds (0–175°);
-  - the reference round trip (1,101 states);
-  - every settled sample of the five closed-loop cases.
+- **500 g validation:** rerun startup, 0–175° held-elevation steering and the complete insertion/right/left/return/withdrawal cycle with ideal guides. Export every guide-hole load and screen the moving ropes against beam-mapped M-body flexures. The V2 comparison includes CAD-estimated module, guide, cap and retaining-wire masses.
+- **A real mounting error found:** the previous ±12 mm clips had no inner web to grip. V2 uses actual inner webs at ±24 mm and actual outer webs at ±12 mm, with eight distinct CAD-derived socket frames.
+- **V2 CAD:** A/B/C radii become **21/24/28 mm**, with regenerated matching disks and anchors. Ø2.6 mm bores, Ø3.0 mm rounded entries and a 3.2 mm guide thickness leave 1.4 mm at the B–C bore bridge and 1.0 mm at the mouth. Removable caps, retaining-wire envelopes and an adhesive gap define the proposed attachment.
+- **Release decision:** all eight frames pass straight assembly and mesh checks, but rigid guide mounting intersects the M body in bent poses, and some rope spans penetrate end-region material. The mounting is **not ready for manufacture**. The ideal guided-rope simulation does not include that contact or the extra stiffness imposed by the mounts.
+- **Verification:** nine new archive/geometry/mass/load tests and fourteen existing numerical/control tests pass. The report distinguishes simulation checks, preliminary sizing requirements and unresolved physical behaviour.
 
-  Peak rope force falls by about 1 N (17.4 → 16.4 N) and the stability margin rises slightly. The 550 g head's moving error at 174–178° yaw shrinks (48 states above 1°, max 2.3°; before: 115, max 3.1°) but is not gone. [Lane study](simulations/u4m2/lanes_20261113/README.md), now in its own folder; it reuses the solver in `backbone_20261108` unchanged.
-- **Limit found:** ropes are guided only at the end disks, so inside a bent module each rope is a straight chord. M5 bends 14° at the hold but 25–103° when steering beyond 15° yaw. Its ropes then leave the strip-free corridor (6.7–7.8 mm) by up to 33 mm and would rub the M spring strips. **Keep first tests within ±15° yaw** until rope guides are added inside M5/M6 and modelled.
-- **Renewed 3D model ([`cad/lanes_u4m2/`](cad/lanes_u4m2)):**
-  - **Re-clocked bodies:** the STEP spring strips lie exactly on the rope rays, so the bodies were rotated (U −45°, M −22.5°). This gives every rope 4–17 mm of clearance and puts U's stiff direction vertical.
-  - **Solid end disks** with only working holes: rope lanes, anchors, joint holes, spring pockets.
-  - **Backbone hole:** Ø1.85 mm for the Ø1.8 mm NiTi rod in M5/M6, with 15 mm of grip at each end.
-  - **Rope anchors:** a groove plus return-hole loop, crimped inside the module.
-  - **Joints:** rigid disk to disk, 2 dowels and 2 M2 screws.
-  - **End parts:** base interface and head adapter.
-  - **Assembly check:** an automatic check of the whole stack passes (joints, all 12 rope paths, rod bore, spring and nut clearance).
-- **[Build guide](cad/lanes_u4m2/BUILD_GUIDE.md):** parts list, printing, finishing, leaf springs, backbone, rope lengths, assembly order, anchoring, tensioning and checks before first use.
-- **Not yet checked:**
-  - the printed parts' strength and stiffness;
-  - their extra mass in the model (M about +5 g each).
+<!-- GUIDED_METRICS -->
+V2 recorded **1,200 settled samples** and **2,526 motion trace states**. Control and envelope failures (settled / motion): **0 / 0**. Motion tension range: **3.00–18.06 N**. The sampled rope/flexure clearance bound is **4.92 mm**; the largest single-hole load is **5.52 N**. **985 audited records** also contain rope-centre penetration of end-region material. The ideal-guide results do not resolve the rigid mounting or finite end-hole contact problems.
+<!-- END_GUIDED_METRICS -->
 
-[Daily report](reports/daily/Report_2026_11_13.pdf) · [Lane study](simulations/u4m2/lanes_20261113/README.md) · [3D model](cad/lanes_u4m2/README.md) · [Build guide](cad/lanes_u4m2/BUILD_GUIDE.md)
+[Full English validation report](simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) · [V2 CAD and installation concept](cad/lanes_u4m2/guides_v2/README.md) · [Results and load exports](simulations/u4m2/lanes_20261113/guided_validation_20261114/) · [Current limitations](docs/limitations.md)
 
-![Lanes: tensions and rope offsets in M5/M6](simulations/u4m2/lanes_20261113/results_lanes/lanes_overview.png)
+### 13 November 2026: separate rope lanes and build package
+
+Separated the three rope sets onto 21/24/27 mm lanes, regenerated the module bodies, end disks, anchors, backbone supports and interfaces, and documented assembly. Endpoint-only simulations passed their settled checks, but large M-module bends exposed rope/strip interference and motivated intermediate guides. These are historical results; see the 14 November update for guided simulations and mounting limitations.
+
+[Daily report](reports/daily/Report_2026_11_13.pdf) · [Lane study](simulations/u4m2/lanes_20261113/README.md) · [Original lane CAD](cad/lanes_u4m2/README.md) · [Original build guide](cad/lanes_u4m2/BUILD_GUIDE.md)
 
 ### 12 November 2026: exact 20° reference — four of five cases pass every check
 
-The 3 N reference poses at 0° and 5° yaw had been accepted at 16–17° instead of 20°. They were regenerated at exactly 20.0° on the fine mesh, and the reference cycle and controller gains were rebuilt from them.
+Corrected the low-yaw elevation references to 20°. Nominal, 75 GPa rod, 1.5 m free-rope and rope-stiffness −20% cases then passed every recorded check. The 550 g case retained transient large-yaw errors despite settling successfully. These tests used the earlier routing, before the four-station guide validation.
 
-With this reference, the **nominal, 75 GPa rod, 1.5 m free rope and rope EA −20% cases pass every check in every recorded state**:
-
-- angle error during motion ≤ 0.18–0.61° (v2: 3.1–3.3°);
-- rope tension ≥ 2.81 N;
-- step movement ≤ 2.5 mm;
-- peak rope force falls to 17.7–22.5 N (v2: 25–27 N).
-
-The **550 g head** still shows temporary angle error at 155–175° yaw (about 115 states above 1°, up to 3.1°). These states pass every tension, stability and clearance check, and all samples settle within 0.2°. Correcting during moves made it worse: the nominal gains have the wrong sign there for the heavier head.
-
-Next: update the controller gains online from measured responses.
-
-[Daily report](reports/daily/Report_2026_11_12.pdf) · [Detailed results](simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v3_results/)
-
-![Closed loop v2 vs v3](simulations/u4m2/backbone_20261108/closed_loop_v3_results/v2_v3_comparison.png)
+[Daily report](reports/daily/Report_2026_11_12.pdf) · [Detailed results](simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Data and figures](simulations/u4m2/backbone_20261108/closed_loop_v3_results/)
 
 ### 12 November 2026 (later): operating pretension enforced and refined closed-loop path
 
-The closed-loop round trip was re-run with a revised control sequence (`closed_loop_v2.py`). The model, reference cycle, nominal gains and five cases are the same; the controller still uses only measured head angles and rope tensions.
+Added a 3 N tension target, tension-aware command preparation and subdivided moves. All five earlier-routing cases stayed above 2.5 N and below the 5 mm step limit; transient angle errors remained and motivated the exact-reference update above.
 
-- The correction target is **3 N** instead of 1.5 N.
-- Tensions are predicted before each new command, and a small pre-correction is added if any would drop below 3 N.
-- Every move is subdivided until no point on the front moves more than 4.5 mm.
-- Every intermediate state is solved and checked.
-
-| Case | Lowest rope tension, any recorded state (v1 → v2) | Largest node move (v1 → v2) | Settled angle error (v2) |
-|---|---|---|---|
-| Nominal | 0.93 → **2.73 N** | 5.25 → **2.74 mm** | 0.20° |
-| Rod E 75 GPa | 0.57 → **2.62 N** | 5.45 → **2.50 mm** | 0.20° |
-| Head 550 g | 0.84 → **2.76 N** | 6.82 → **4.49 mm** | 0.20° |
-| Free rope 1.5 m | 0.91 → **2.72 N** | 5.09 → **2.50 mm** | 0.20° |
-| Rope EA −20% | 0.96 → **2.73 N** | 5.20 → **2.62 mm** | 0.20° |
-
-- **Tension and movement are fixed.** No state is below 2.5 N or 0.95 N, no step exceeds the 5 mm bound, and there is no unstable, geometry or tank-clearance failure. All samples settle within 0.2° at ≥ 2.5 N.
-- **Cost.** Peak rope tension rises to 25–27 N.
-- **What remains: temporary angle error during motion.**
-  - Up to 3.3° at the straighten-to-insertion hand-off, where the 3 N reference holds about 17° instead of 20°.
-  - Up to 2.85° at 155–175° yaw with the 550 g head.
-
-[Daily report](reports/daily/Report_2026_11_12.pdf) · [Detailed results](simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller source](simulations/u4m2/backbone_20261108/closed_loop_v2.py) · [Results](simulations/u4m2/backbone_20261108/closed_loop_v2_results/)
-
-![Closed-loop v1 vs v2](simulations/u4m2/backbone_20261108/closed_loop_v2_results/v1_v2_comparison.png)
+[Controller and detailed results](simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Saved results](simulations/u4m2/backbone_20261108/closed_loop_v2_results/)
 
 <a id="closed-loop-simulation-update-12-november-2026"></a>
 
 ### 12 November 2026: closed-loop control, 3D visualisation and repository organisation
 
-#### What was completed
+Implemented head-angle and tendon-tension feedback for the insertion/right/left/return/withdrawal cycle. All five original cases passed settled-state checks, while motion traces exposed tension and sampling failures subsequently addressed by v2. Added 3D animations and reorganised CAD, simulations, reports and historical files with updated links.
 
-Implemented head-angle and tendon-tension feedback for the continuous 96 mm U4+M2 front, using the stable-startup round trip as its reference. The complete sequence is **straightening → insertion → right sweep and return → left sweep and return → withdrawal**. Each of five parameter cases follows the same **1,069 reference samples**, giving **5,345 corrected settled states**.
-
-The controller observes ideal simulated head yaw/elevation and all 12 tendon tensions, then adjusts the commanded rope lengths. Gains are prepared from the nominal **40 GPa backbone, 500 g payload and 1 m free-rope model**; changed stiffness and payload are not supplied to the gain calculation. The known free-rope installation-length difference is handled as a command-zero offset.
-
-- Each feedback correction is limited to **0.25 mm per rope**, with at most **5 mm accumulated correction** relative to feedforward and **16 corrections per reference sample**.
-- The internal stopping target is **0.2° angle error** with measured minimum tension at least **1.25 N**. The proposed correction targets a **1.5 N** tension floor; damping can approach that floor over several updates.
-- The initial undamped controller overcorrected near large yaw with the **550 g payload**. Halving subsequent correction steps when measured angular error grows resolved the failed settled-angle checks. This rule uses past measured errors, not knowledge of the true plant parameters. The [initial diagnostic](simulations/u4m2/backbone_20261108/closed_loop_results/undamped_diagnostic/README.md) is retained.
-
-#### Results across five conditions
-
-All five cases pass the selected **settled-state** checks: yaw/elevation errors within **±1°**, tendon force bounds, positive fixed-winch tangent stiffness, geometry/strain diagnostics and sampled tank clearance.
-
-| Condition | Maximum open-loop angle error (°) | Maximum closed-loop angle error (°) | Failed closed-loop settled samples |
-|---|---:|---:|---:|
-| Nominal: E40, 500 g, 1 m free rope | 3.930 | 0.200 | 0 / 1,069 |
-| Backbone modulus 75 GPa | 7.180 | 0.200 | 0 / 1,069 |
-| Payload 550 g | 8.965 | 0.699 | 0 / 1,069 |
-| Free rope length 1.5 m | 4.830 | 0.199 | 0 / 1,069 |
-| Rope axial stiffness -20% | 4.637 | 0.200 | 0 / 1,069 |
-
-The angle metric is the larger of the maximum absolute yaw and elevation errors. The worst corrected error is **0.699°** in the 550 g case; the other four cases remain below 0.2° before rounding. One 550 g sample reaches the 16-correction budget and misses the internal 0.2° target, while still meeting the ±1° acceptance criterion. Minimum tension across corrected settled states is approximately **1.25 N**, and minimum sampled tank clearance is **19.76 mm** before subtracting the 1.5 mm allowance.
-
-These comparisons use a stricter elevation criterion than the previous **20 ± 5°** study, so failure counts should not be compared directly between reports. The damping rule was developed on these cases; they are not an independent validation set.
-
-#### What remains unresolved
-
-**A passing settled state does not establish a passing complete control sequence.** Seven feedforward arrival states fall below **0.95 N** before correction; the minimum is **0.568 N**. No post-correction trace state falls below that threshold, and no recorded trace state fails the equilibrium-stability, geometry or sampled tank-clearance checks, but the arrival tension deficit still needs to be corrected.
-
-The exploratory **1.5 N** feedback target does not enforce the project's **3 N** operating pretension recommendation. Maximum node movement between corrected samples is **6.822 mm**, exceeding the previous **5 mm** sampling bound. The model remains quasi-static: it does not include motor dynamics, sensor noise or delay, friction, backlash, NiTi hysteresis, or the real head/cable geometry. Positive static stiffness does not establish dynamic closed-loop stability.
-
-The next simulation priority is to enforce tension throughout feedforward transitions and feedback corrections, refine the corrected path, and then add actuator and sensing dynamics. See [current limitations](docs/limitations.md) and the [engineering roadmap](docs/roadmap.md).
-
-#### Reports, data and 3D animations
-
-The animations compare **blue closed-loop** and **red open-loop** shapes, with angle errors, tension and clearance displayed alongside. They show solved equilibria; playback speed does not represent a validated physical execution speed.
-
-- [Full English report](simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) — assumptions, per-case results, correction traces and reproduction commands.
-- [Full round-trip MP4](simulations/u4m2/backbone_20261108/closed_loop_results/E75_full_cycle.mp4) · [Steering GIF](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif) · [Large-yaw feedback correction GIF](simulations/u4m2/backbone_20261108/closed_loop_results/payload550g_feedback_convergence.gif).
-- [Controller source](simulations/u4m2/backbone_20261108/closed_loop_cycle.py) · [CSV/JSON/NPZ results](simulations/u4m2/backbone_20261108/closed_loop_results/) · [Numerical validation record](simulations/u4m2/backbone_20261108/closed_loop_results/validation.json).
-
-![Closed-loop and open-loop 3D steering comparison](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif)
-
-#### Repository and verification work
-
-Reorganised the project into `simulations/`, `cad/`, `data/`, `reports/`, `archive/` and `docs/`, with updated source/data paths and document links. Verification after relocation passed **43 model tests**, the five-case closed-loop data checks, four daily PDF builds and the presentation build. The **1,903 checked data, CAD and publication/media files** retained their original bytes. See the [repository map](docs/repository_map.md), [file-by-file migration table](docs/path_migration.csv) and [simulation entry points](simulations/README.md).
+[Full original closed-loop report](simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) · [3D steering animation](simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif) · [Repository map](docs/repository_map.md) · [File migration record](docs/path_migration.csv)
 
 ### 11 November 2026: stable startup and 3 N pretension
 

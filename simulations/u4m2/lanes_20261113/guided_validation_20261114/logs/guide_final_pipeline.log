@@ -1,0 +1,103 @@
+STAGE fine_sweep
+fine sweep 0 accepted True peak 15.398010792091538
+fine sweep 5 accepted True peak 15.401634767198463
+fine sweep 10 accepted True peak 15.411236366250902
+fine sweep 15 accepted True peak 15.423382123188967
+fine sweep 20 accepted True peak 15.436576060899448
+fine sweep 25 accepted True peak 15.452047491974502
+fine sweep 30 accepted True peak 15.473560174522309
+fine sweep 35 accepted True peak 15.506309177739311
+fine sweep 40 accepted True peak 15.555454422715757
+fine sweep 45 accepted True peak 15.624914394979998
+fine sweep 50 accepted True peak 15.716734659034405
+fine sweep 55 accepted True peak 15.830994980495753
+fine sweep 60 accepted True peak 15.966044184891562
+fine sweep 65 accepted True peak 16.118847023567458
+fine sweep 70 accepted True peak 16.28530183025827
+fine sweep 75 accepted True peak 16.46045937358071
+fine sweep 80 accepted True peak 16.638437491100515
+fine sweep 85 accepted True peak 16.81086602268168
+fine sweep 90 accepted True peak 16.967697372773507
+fine sweep 95 accepted True peak 17.097602457037844
+fine sweep 100 accepted True peak 17.18930971930185
+fine sweep 105 accepted True peak 17.233614030082094
+fine sweep 110 accepted True peak 17.22711904471868
+fine sweep 115 accepted True peak 17.182477501882804
+fine sweep 120 accepted True peak 17.132028846650247
+fine sweep 125 accepted True peak 17.057762287586492
+fine sweep 130 accepted True peak 16.976647773530456
+fine sweep 135 accepted True peak 16.905039363579473
+fine sweep 140 accepted True peak 16.853990490146064
+fine sweep 145 accepted True peak 16.825116999784033
+fine sweep 150 accepted True peak 16.810141354419205
+fine sweep 155 accepted True peak 16.80180062272005
+fine sweep 160 accepted True peak 16.79491952492322
+fine sweep 165 accepted True peak 16.786376743968447
+fine sweep 170 accepted True peak 17.279961719153448
+fine sweep 175 accepted True peak 16.910088882086814
+STAGE reference
+nominal 50 straighten 0.0 97.5
+nominal 100 entry 0.0 73.4
+nominal 150 entry 0.0 46.8
+nominal 200 entry 0.0 38.7
+nominal 250 entry 0.0 61.4
+nominal 300 entry 0.0 64.2
+nominal 350 right_out 46.7 63.1
+nominal 400 right_out 121.2 36.6
+nominal 450 right_out 166.6 13.4
+nominal 500 right_return 165.7 14.6
+nominal 550 right_return 116.2 45.1
+nominal 600 right_return 41.2 63.3
+nominal 650 left_out -31.2 65.5
+nominal 700 left_out -106.2 65.7
+nominal 750 left_out -158.8 19.6
+nominal 800 left_return -168.4 33.3
+nominal 850 left_return -129.2 49.7
+nominal 900 left_return -60.0 65.8
+nominal 950 exit 0.0 64.4
+nominal 1000 exit 0.0 61.8
+nominal 1050 exit 0.0 42.3
+nominal 1100 exit 0.0 42.3
+nominal 1150 exit 0.0 69.7
+nominal 1200 exit 0.0 93.1
+{"case": "nominal", "variant": "niti18_E40", "payload_kg": 0.5, "rope_ea_scale": 1.0, "free_length_m": 1.0, "completed": true, "states": 1200, "all_checks_pass": false, "failed_checks": 44, "minimum_clearance_mm": 9.836456554939105, "minimum_eigenvalue": 0.20744735112417365, "minimum_tension_n": 2.964698391352254, "peak_tension_n": 17.279961922709234, "maximum_yaw_error_deg": 1.34634752920212, "maximum_elevation_error_deg": 1.2533522958100534, "maximum_point_step_mm": 4.999999999999987, "source_sha256": "a9a0f9d74d251f6191cccdb6e5276f65f6cb1c951c202fe5c1f050d84a8ddb17", "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d", "scope": "Quasi-static frictionless sampled path; 63mm head envelope; no dynamics, real head CAD or external cables", "return_head_error_mm": 3.4721591117291166e-07}
+STAGE gains
+gains 0
+gains 100
+gains 200
+gains 300
+gains 400
+gains 500
+gains 600
+gains 700
+gains 800
+gains 900
+gains 1000
+gains 1100
+{'reference_sha256': 'ccb218cbd0e85f46691595158c54bf6319587dda087bc1394af81c46a74d4127', 'states_sha256': '40428e680511a451d25969af6380eba86b3c1755e1d6213a2a48d83e6af71daa', 'controller': 'nominal E40 / 500g / 1m; angle+tension measurements only', 'correction_limit_mm': 0.25, 'total_offset_limit_mm': 5.0, 'feedback_tension_target_n': 1.5, 'settled_angle_tolerance_deg': 0.2, 'maximum_iterations': 16, 'adaptive_scale_floor': 0.0625, 'error_growth_threshold': 1.05, 'unique_gains': 369}
+STAGE cycle
+nominal 0 straighten err 0.000 Tmin 3.00 trace 1 maxmove 0.00 t 1s
+nominal 50 straighten err 0.000 Tmin 3.00 trace 150 maxmove 0.82 t 59s
+nominal 100 entry err 0.000 Tmin 3.00 trace 229 maxmove 2.50 t 68s
+nominal 150 entry err 0.000 Tmin 3.00 trace 290 maxmove 2.50 t 72s
+nominal 200 entry err 0.000 Tmin 3.00 trace 346 maxmove 2.50 t 74s
+nominal 250 entry err 0.000 Tmin 3.00 trace 401 maxmove 2.50 t 77s
+nominal 300 entry err 0.000 Tmin 3.00 trace 457 maxmove 2.50 t 81s
+nominal 350 right_out err 0.043 Tmin 3.00 trace 555 maxmove 2.50 t 114s
+nominal 400 right_out err 0.039 Tmin 3.00 trace 751 maxmove 2.50 t 186s
+nominal 450 right_out err 0.087 Tmin 3.00 trace 860 maxmove 2.50 t 226s
+nominal 500 right_return err 0.196 Tmin 3.04 trace 972 maxmove 2.53 t 267s
+nominal 550 right_return err 0.063 Tmin 3.02 trace 1091 maxmove 2.53 t 311s
+nominal 600 right_return err 0.088 Tmin 3.01 trace 1277 maxmove 2.53 t 384s
+nominal 650 left_out err 0.171 Tmin 3.00 trace 1401 maxmove 2.53 t 432s
+nominal 700 left_out err 0.123 Tmin 3.01 trace 1576 maxmove 2.53 t 500s
+nominal 750 left_out err 0.063 Tmin 3.01 trace 1704 maxmove 2.53 t 547s
+nominal 800 left_return err 0.081 Tmin 3.10 trace 1821 maxmove 2.53 t 591s
+nominal 850 left_return err 0.139 Tmin 3.00 trace 1926 maxmove 2.53 t 641s
+nominal 900 left_return err 0.098 Tmin 3.01 trace 2118 maxmove 2.53 t 718s
+nominal 950 exit err 0.157 Tmin 3.00 trace 2231 maxmove 2.53 t 761s
+nominal 1000 exit err 0.157 Tmin 3.00 trace 2287 maxmove 2.53 t 765s
+nominal 1050 exit err 0.157 Tmin 3.00 trace 2341 maxmove 2.53 t 768s
+nominal 1100 exit err 0.157 Tmin 3.00 trace 2396 maxmove 2.53 t 770s
+nominal 1150 exit err 0.157 Tmin 3.00 trace 2456 maxmove 2.53 t 774s
+{"case": "nominal", "samples": 1200, "completed": true, "controller_uses_plant_parameters": false, "settings": {"tension_target_n": 3.0, "settle_tension_n": 2.5, "precomp_limit_mm": 0.5, "rope_step_mm": 0.25, "node_step_mm": 4.5, "max_iterations": 16, "mid_tol_deg": null, "mid_max": 4, "reference": "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/length_cycle_results_lanes_guides_24mm_v2_mass", "gains": "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/closed_loop_lanes_results_guides_24mm_v2_mass/nominal_gains.npz"}, "settled": {"states": 1200, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.996025880763728, "peak_tension_n": 18.064278274773223, "minimum_eigenvalue": 0.20755317750351213, "minimum_clearance_mm": 9.834416760877808, "maximum_node_move_mm": 0.0, "maximum_yaw_error_deg": 0.19882955992216012, "maximum_elevation_error_deg": 0.19972387764158483, "maximum_offset_mm": 0.5031794439145705, "samples_not_settled": 0}, "trace": {"states": 2525, "failed_checks": 0, "below_operating_tension": 0, "unstable": 0, "geometry_failures": 0, "clearance_failures": 0, "minimum_tension_n": 2.995196805466188, "peak_tension_n": 18.064278274773223, "minimum_eigenvalue": 0.20755317750351213, "minimum_clearance_mm": 9.827117260316165, "maximum_node_move_mm": 2.530202689850601}, "trace_states_by_kind": {"start": 1, "feedforward": 2482, "mid_correction": 0, "mid_revert": 0, "correction": 43}, "pre_control_start": {"minimum_tension_n": 2.999999999542505, "minimum_eigenvalue": 0.8212630383797508}}

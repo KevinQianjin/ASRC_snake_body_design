@@ -1,0 +1,19 @@
+test_damping_uses_observed_error_growth (test_closed_loop.FeedbackTests.test_damping_uses_observed_error_growth) ... ok
+test_newton_matches_original_forward_solver (test_closed_loop.FeedbackTests.test_newton_matches_original_forward_solver) ... ok
+test_nominal_sensitivity_matches_forward_perturbations (test_closed_loop.FeedbackTests.test_nominal_sensitivity_matches_forward_perturbations) ... ok
+test_qp_respects_increment_and_total_offset_bounds (test_closed_loop.FeedbackTests.test_qp_respects_increment_and_total_offset_bounds) ... ok
+test_yaw_wrap (test_closed_loop.FeedbackTests.test_yaw_wrap) ... ok
+test_qp_enforces_operating_tension_and_bounds (test_closed_loop_v2.V2Tests.test_qp_enforces_operating_tension_and_bounds) ... ok
+test_qp_precompensation_leaves_angles_alone_when_possible (test_closed_loop_v2.V2Tests.test_qp_precompensation_leaves_angles_alone_when_possible) ... ok
+test_qp_reports_infeasible_tension_target (test_closed_loop_v2.V2Tests.test_qp_reports_infeasible_tension_target) ... ok
+test_transition_subdivides_until_node_motion_is_small (test_closed_loop_v2.V2Tests.test_transition_subdivides_until_node_motion_is_small) ... ok
+test_elastic_hessian_matches_gradient_difference (test_length_cycle.LengthDriveTests.test_elastic_hessian_matches_gradient_difference) ... ok
+test_energy_gradient (test_length_cycle.LengthDriveTests.test_energy_gradient) ... ok
+test_forward_equilibrium_and_no_compression_in_slack_rope (test_length_cycle.LengthDriveTests.test_forward_equilibrium_and_no_compression_in_slack_rope) ... ok
+test_inverse_recovers_reference_tension (test_length_cycle.LengthDriveTests.test_inverse_recovers_reference_tension) ... ok
+test_fast_query_matches_existing_triangle_distance (test_length_cycle.TankQueryTests.test_fast_query_matches_existing_triangle_distance) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 70.136s
+
+OK
