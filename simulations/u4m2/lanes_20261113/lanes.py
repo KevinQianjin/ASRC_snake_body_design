@@ -33,11 +33,16 @@ from spatial_model import rotation  # noqa: E402
 DEFAULT_RADII_MM = (21., 24., 27.)
 _original_spatial_rod = backbone.spatial_rod
 RADII_MM = None
+GUIDE_SPACING_MM = None
 
 
 @njit(cache=True)
-def kernel_lanes(z, C, scale, K, mass, length, sub, routes, offsets3, gauss_u, gauss_w, gravity, gw, payload):
-    """Pinned spatial kernel; tendon chords use offsets3[set, rope] (per-set lanes)."""
+def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets3, gauss_u, gauss_w, gravity, gw, payload):
+    """Pinned spatial kernel with per-set lanes and optional M-module guide stations.
+
+    M5/M6 ropes are represented as consecutive straight spans between material-frame
+    stations separated by guide_cells. U modules retain one span per module.
+    """
     cells = len(mass); ndof = 4 * cells; modules = cells // sub; sets = len(C)
     q = (z / scale).reshape((cells, 4))
     F = np.zeros((cells + 1, 3, 3)); F[0] = np.eye(3)
@@ -71,20 +76,24 @@ def kernel_lanes(z, C, scale, K, mass, length, sub, routes, offsets3, gauss_u, g
         ap[i] += force; af[i] += np.outer(force, vc[i])
     rope_lengths = np.zeros((sets, 4))
     for j in range(modules):
-        i0 = j * sub; i1 = (j + 1) * sub
+        module_start = j * sub; module_end = (j + 1) * sub
+        step = guide_cells if j >= 4 else sub
         for rope in range(4):
             for k in range(sets):
                 if routes[k, j] == 0.:
                     continue
-                off = offsets3[k, rope]; a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
-                chord = b - a; ll = np.sqrt(np.dot(chord, chord))
-                if ll < 1e-10: ll = 1e-10
-                rope_lengths[k, rope] += routes[k, j] * ll
+                off = offsets3[k, rope]
                 tension = routes[k, j] * C[k, rope]
-                energy += tension * ll
-                force = tension * chord / ll
-                ap[i0] -= force; ap[i1] += force
-                af[i0] -= np.outer(force, off); af[i1] += np.outer(force, off)
+                for i0 in range(module_start, module_end, step):
+                    i1 = i0 + step
+                    a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
+                    chord = b - a; ll = np.sqrt(np.dot(chord, chord))
+                    if ll < 1e-10: ll = 1e-10
+                    rope_lengths[k, rope] += routes[k, j] * ll
+                    energy += tension * ll
+                    force = tension * chord / ll
+                    ap[i0] -= force; ap[i1] += force
+                    af[i0] -= np.outer(force, off); af[i1] += np.outer(force, off)
     grad = K * q
     for i in range(cells - 1, -1, -1):
         pv = F[i].T @ ap[i + 1]; fr = F[i].T @ af[i + 1]
@@ -104,7 +113,7 @@ def lane_offsets(radii_mm, n_sets):
 
 def _evaluate(self, z, T=None, gravity=9.81, detail=False):
     C = np.zeros((self.k, 4)) if T is None else np.asarray(T, dtype=float).reshape(self.k, 4)
-    result = kernel_lanes(np.asarray(z), C, self.scale, self.K, self.mass, self.l, self.sub, self.routes, self.offsets3,
+    result = kernel_lanes(np.asarray(z), C, self.scale, self.K, self.mass, self.l, self.sub, self.guide_cells, self.routes, self.offsets3,
                           self.planar.u, self.planar.w, gravity, self.gw, self.payload)
     if not detail:
         return result[:2]
@@ -112,23 +121,37 @@ def _evaluate(self, z, T=None, gravity=9.81, detail=False):
     return E, g, dict(points=p, frames=F, q=q, rope_lengths=lengths)
 
 
-def apply_lanes(r, radii_mm=DEFAULT_RADII_MM):
-    """Give an existing spatial rod one lane radius per anchor set (sets ordered proximal to distal)."""
+def apply_lanes(r, radii_mm=DEFAULT_RADII_MM, guide_spacing_mm=None):
+    """Add per-set lanes and optional ideal M5/M6 cable guides to a spatial rod.
+
+    A guide station is placed every ``guide_spacing_mm`` along M5/M6. U modules
+    keep their endpoint-only rope spans. The requested spacing must align with
+    the rod's cell resolution.
+    """
     if r.k != len(radii_mm):
         raise ValueError(f'{r.k} anchor sets but {len(radii_mm)} lane radii')
     r.offsets3 = lane_offsets(radii_mm, r.k)
+    if guide_spacing_mm is None:
+        r.guide_cells = r.sub
+    else:
+        cells = int(round((float(guide_spacing_mm) / 1000.) / r.l))
+        if cells < 1 or cells > r.sub or r.sub % cells != 0 or abs(cells * r.l - float(guide_spacing_mm) / 1000.) > 1e-8:
+            raise ValueError(f'guide spacing {guide_spacing_mm:g} mm is not aligned with {r.sub} cells/module at {r.l * 1000:g} mm/cell')
+        r.guide_cells = cells
+    r.guide_spacing_mm = guide_spacing_mm
     r.lane_radii_mm = tuple(float(x) for x in radii_mm)
     r.evaluate = types.MethodType(_evaluate, r)
     return r
 
 
-def install(radii_mm=DEFAULT_RADII_MM):
-    """Make backbone.spatial_rod return lane rods. Call before importing dependent modules."""
-    global RADII_MM
+def install(radii_mm=DEFAULT_RADII_MM, guide_spacing_mm=None):
+    """Install lane and optional M-module guide geometry before importing dependents."""
+    global RADII_MM, GUIDE_SPACING_MM
     RADII_MM = tuple(radii_mm)
+    GUIDE_SPACING_MM = guide_spacing_mm
 
     def spatial_rod(u, m, anchors, pitch=20, sub=2, variant='niti18_E40'):
-        return apply_lanes(_original_spatial_rod(u, m, anchors, pitch, sub, variant), RADII_MM)
+        return apply_lanes(_original_spatial_rod(u, m, anchors, pitch, sub, variant), RADII_MM, GUIDE_SPACING_MM)
     backbone.spatial_rod = spatial_rod
     return spatial_rod
 
@@ -139,7 +162,8 @@ def validate():
     r0 = _original_spatial_rod(4, 2, [4, 5, 6], 20, 4, 'niti18_E40')
     r1 = apply_lanes(_original_spatial_rod(4, 2, [4, 5, 6], 20, 4, 'niti18_E40'), (24., 24., 24.))
     r2 = apply_lanes(_original_spatial_rod(4, 2, [4, 5, 6], 20, 4, 'niti18_E40'), DEFAULT_RADII_MM)
-    worst_e = worst_g = worst_fd = 0.
+    rg = apply_lanes(_original_spatial_rod(4, 2, [4, 5, 6], 20, 4, 'niti18_E40'), DEFAULT_RADII_MM, 24.)
+    worst_e = worst_g = worst_fd = worst_guided_fd = 0.
     for _ in range(5):
         z = rng.normal(size=r0.ndof) * .02; T = rng.uniform(0, 20, size=(3, 4))
         E0, g0, d0 = r0.evaluate(z, T, detail=True); E1, g1, d1 = r1.evaluate(z, T, detail=True)
@@ -149,9 +173,13 @@ def validate():
         E2, g2 = r2.evaluate(z, T)
         fd = (r2.evaluate(z + h * v, T)[0] - r2.evaluate(z - h * v, T)[0]) / (2 * h)
         worst_fd = max(worst_fd, abs(fd - g2 @ v))
+        Eg, gg = rg.evaluate(z, T)
+        fdg = (rg.evaluate(z + h * v, T)[0] - rg.evaluate(z - h * v, T)[0]) / (2 * h)
+        worst_guided_fd = max(worst_guided_fd, abs(fdg - gg @ v))
     # Straight rod: routed length of set k equals its anchor length; lanes change length only via bending.
-    out = dict(equal_radii_energy_diff=worst_e, equal_radii_gradient_diff=worst_g, lanes_fd_gradient_error=worst_fd)
-    assert worst_e < 1e-10 and worst_g < 1e-8 and worst_fd < 1e-6, out
+    out = dict(equal_radii_energy_diff=worst_e, equal_radii_gradient_diff=worst_g, lanes_fd_gradient_error=worst_fd,
+               guided_24mm_fd_gradient_error=worst_guided_fd, guided_cells_per_module=rg.guide_cells)
+    assert worst_e < 1e-10 and worst_g < 1e-8 and worst_fd < 1e-6 and worst_guided_fd < 1e-6, out
     return out
 
 
