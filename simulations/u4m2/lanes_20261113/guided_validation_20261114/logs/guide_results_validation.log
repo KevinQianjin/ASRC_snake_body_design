@@ -1,0 +1,47 @@
+{
+  "base_commit": "64a14a6402790f0d353bf07b110cf32853784cbe",
+  "cases": {
+    "baseline": {
+      "data_consistency_pass": true,
+      "archive_states": [
+        28,
+        44,
+        1115,
+        1115,
+        2326
+      ],
+      "motion_states": 2326,
+      "sampled_state_command_force_rechecks": 19,
+      "settled_failed_checks": 0,
+      "motion_failed_checks": 0,
+      "flexure_failed_records": 0,
+      "end_region_penetrating_records": 530
+    },
+    "candidate": {
+      "data_consistency_pass": true,
+      "archive_states": [
+        29,
+        36,
+        1200,
+        1200,
+        2526
+      ],
+      "motion_states": 2526,
+      "sampled_state_command_force_rechecks": 19,
+      "settled_failed_checks": 0,
+      "motion_failed_checks": 0,
+      "flexure_failed_records": 0,
+      "end_region_penetrating_records": 985
+    }
+  },
+  "unique_numerical_tests_passed": 23,
+  "test_evidence": "logs/: original 14-test suite, initial 7 guide tests, targeted load aggregation and solid/end classification tests, plus archive-reader recheck",
+  "existing_configurations_validated": 11,
+  "straight_CAD_mesh_and_intersection_checks_pass": true,
+  "physical_design_released": false,
+  "release_blockers": [
+    "Rigid guide/body interference under beam-mapped bending",
+    "Rope-centre penetration of finite end-region material",
+    "Unvalidated support stiffness, strength, friction, retention and fatigue"
+  ]
+}

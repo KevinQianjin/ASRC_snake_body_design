@@ -1,0 +1,17 @@
+{
+ "lane_radii_mm": {
+  "A_U4": 21.0,
+  "B_M5": 24.0,
+  "C_M6": 27.0
+ },
+ "directions": "up, right, down, left on the same rays",
+ "guide_max_span_mm": 24.0,
+ "fine_mesh_guide_z_mm": [
+  -24,
+  -12,
+  12,
+  24
+ ],
+ "mass_config": null,
+ "scope": "Frictionless quasi-static rod. Four-cell optimisation is a coarse seed with three uniform guides; accepted eight-cell states use four CAD stations. fine_sweep uses eight cells throughout. CAD-estimated mass is included only when mass_config is supplied. Nominal homogenised stiffness retained; guide stiffness, clamp compliance and contact excluded."
+}

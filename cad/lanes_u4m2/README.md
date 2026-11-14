@@ -1,5 +1,7 @@
 # Lane-routed U4+M2 front (newest design, 13 Nov 2026)
 
+**14 November validation update:** the [V2 guide candidate](guides_v2/README.md) fixes unsupported inner clips at the ±12 mm stations, widens the B–C lane spacing and includes CAD-estimated masses in a new 500 g simulation. Its straight assembly passes, but rigid guide/web interference in bent poses prevents manufacturing release. See the [full validation report](../../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md). The build guide below describes the earlier geometry and is not a release approval for V2.
+
 **To build it, follow [`BUILD_GUIDE.md`](BUILD_GUIDE.md).** It covers printing, purchased parts, springs, backbone, joints, rope threading and anchoring, tensioning and the checks before first use.
 
 This folder has every part needed for the U4+M2 front:

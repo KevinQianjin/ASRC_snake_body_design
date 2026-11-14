@@ -1,0 +1,86 @@
+{
+  "scope": "Sampled rope-centre points inside the closed beam-mapped end region. Positive depth is to the nearest full body surface. No finite-rope contact force or swept contact solution is calculated.",
+  "source": {
+    "archive": "guided_validation_20261114/baseline/closed_loop/nominal_states.npz",
+    "state": "721",
+    "phase": "left_out"
+  },
+  "archive_coverage": {
+    "path": "guided_validation_20261114/baseline/closed_loop/nominal_states.npz",
+    "format": "closed",
+    "states": 1115,
+    "unsolved_records_without_states": 0,
+    "sha256": "c5c210dfe391883ec41224dd328f7f39191003f7e9e871fe8d77151a010fad63"
+  },
+  "points": [
+    {
+      "module": "M5",
+      "set": "B",
+      "ray": "down",
+      "tension_n": 3.054801030305398,
+      "center_base_mm": [
+        468.3372386410428,
+        49.23619548192789,
+        -6.710014017214837
+      ],
+      "approximate_axial_station_mm": 41.647058823529406,
+      "sample_index": 130,
+      "center_penetration_mm": 0.10211979832993352,
+      "nearest_face_centroid_cad_mm": [
+        0.05438591539859483,
+        -22.753564834594727,
+        45.58519744873047
+      ],
+      "nearest_face_cad_z_range_mm": [
+        41.25,
+        47.755592346191406
+      ]
+    },
+    {
+      "module": "M5",
+      "set": "C",
+      "ray": "down",
+      "tension_n": 3.0507713925791644,
+      "center_base_mm": [
+        471.17309398883674,
+        48.46830008417483,
+        -6.6543964053239755
+      ],
+      "approximate_axial_station_mm": 41.33333333333333,
+      "sample_index": 134,
+      "center_penetration_mm": 0.22028748561165565,
+      "nearest_face_centroid_cad_mm": [
+        0.05438591539859446,
+        -25.753564834594727,
+        43.41480255126953
+      ],
+      "nearest_face_cad_z_range_mm": [
+        41.244407653808594,
+        47.75
+      ]
+    },
+    {
+      "module": "M5",
+      "set": "C",
+      "ray": "down",
+      "tension_n": 3.0507713925791644,
+      "center_base_mm": [
+        471.37533062238214,
+        49.41993792127218,
+        -6.708012402559951
+      ],
+      "approximate_axial_station_mm": 42.0,
+      "sample_index": 135,
+      "center_penetration_mm": 0.07566752895632498,
+      "nearest_face_centroid_cad_mm": [
+        0.05438591539859446,
+        -25.753564834594727,
+        43.41480255126953
+      ],
+      "nearest_face_cad_z_range_mm": [
+        41.244407653808594,
+        47.75
+      ]
+    }
+  ]
+}

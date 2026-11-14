@@ -1,0 +1,136 @@
+startup_niti18_E40_p20_pre3_states.npz 0 hole N 0.622 gap mm 5.393381732024442
+minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz 0 hole N 1.04 gap mm 5.910166965015101
+nominal_states.npz 0 hole N 0.622 gap mm 5.3933817320244275
+nominal_states.npz 100 hole N 1.04 gap mm 5.910166916613499
+nominal_states.npz 200 hole N 1.04 gap mm 5.910166916613499
+nominal_states.npz 300 hole N 1.04 gap mm 5.910166916613499
+nominal_states.npz 400 hole N 4.015 gap mm 5.1932999052006465
+nominal_states.npz 500 hole N 4.124 gap mm 5.18151058145467
+nominal_states.npz 600 hole N 1.139 gap mm 5.839542847544138
+nominal_states.npz 700 hole N 5.039 gap mm 5.080203926373359
+nominal_states.npz 800 hole N 2.58 gap mm 5.478812305157928
+nominal_states.npz 900 hole N 1.04 gap mm 5.910166981160444
+nominal_states.npz 1000 hole N 1.04 gap mm 5.910166981160444
+nominal_states.npz 1100 hole N 1.04 gap mm 5.910166981160444
+nominal_states.npz 0 hole N 0.622 gap mm 5.393381731008992
+nominal_states.npz 100 hole N 1.04 gap mm 5.91016678828161
+nominal_states.npz 200 hole N 1.04 gap mm 5.91016678828161
+nominal_states.npz 300 hole N 1.04 gap mm 5.91016678828161
+nominal_states.npz 400 hole N 4.02 gap mm 5.193204346169179
+nominal_states.npz 500 hole N 4.129 gap mm 5.181412203870549
+nominal_states.npz 600 hole N 1.148 gap mm 5.840627815797911
+nominal_states.npz 700 hole N 5.054 gap mm 5.080140726908292
+nominal_states.npz 800 hole N 2.589 gap mm 5.478839502884349
+nominal_states.npz 900 hole N 1.049 gap mm 5.91001609910721
+nominal_states.npz 1000 hole N 1.049 gap mm 5.91001609910721
+nominal_states.npz 1100 hole N 1.049 gap mm 5.91001609910721
+nominal_trace_states.npz 0 hole N 0.622 gap mm 5.393381731008992
+nominal_trace_states.npz 100 hole N 1.447 gap mm 5.7095637626047315
+nominal_trace_states.npz 200 hole N 1.04 gap mm 5.91016678828161
+nominal_trace_states.npz 300 hole N 1.04 gap mm 5.91016678828161
+nominal_trace_states.npz 400 hole N 1.04 gap mm 5.91016678828161
+nominal_trace_states.npz 500 hole N 1.067 gap mm 5.868596853790339
+nominal_trace_states.npz 600 hole N 2.118 gap mm 5.559277690675602
+nominal_trace_states.npz 700 hole N 3.385 gap mm 5.279565361466744
+nominal_trace_states.npz 800 hole N 4.804 gap mm 5.129674109401914
+nominal_trace_states.npz 900 hole N 5.099 gap mm 5.060854126756287
+nominal_trace_states.npz 1000 hole N 3.673 gap mm 5.235830307903758
+nominal_trace_states.npz 1100 hole N 2.412 gap mm 5.498607426133943
+nominal_trace_states.npz 1200 hole N 1.18 gap mm 5.816138806239541
+nominal_trace_states.npz 1300 hole N 1.22 gap mm 5.793900381914489
+nominal_trace_states.npz 1400 hole N 2.495 gap mm 5.488827749453643
+nominal_trace_states.npz 1500 hole N 3.763 gap mm 5.225045523138414
+nominal_trace_states.npz 1600 hole N 5.165 gap mm 5.042776948621661
+nominal_trace_states.npz 1700 hole N 4.731 gap mm 5.134351255583134
+nominal_trace_states.npz 1800 hole N 3.318 gap mm 5.293053744350342
+nominal_trace_states.npz 1900 hole N 2.041 gap mm 5.579195302187042
+nominal_trace_states.npz 2000 hole N 1.062 gap mm 5.876956144898979
+nominal_trace_states.npz 2100 hole N 1.049 gap mm 5.91001609910721
+nominal_trace_states.npz 2200 hole N 1.049 gap mm 5.91001609910721
+nominal_trace_states.npz 2300 hole N 1.049 gap mm 5.91001609910721
+{
+  "scope": "Per-hole loads and sampled deformed-CAD flexure clearance along saved paths.\n\nThis maps the supplied M CAD to the rod's material frames, not a solid FEA.\nRopes are 2 mm diameter; sample spacing <=1 mm yields a 0.5 mm distance bound.\nEnd disks/anchors are excluded from the flexure screen (|local Z| <=40 mm).\nGuide mounts and intended rope/eyelet contact need separate physical validation.\n",
+  "radii_mm": [
+    21.0,
+    24.0,
+    27.0
+  ],
+  "coverage": [
+    {
+      "path": "guided_validation_20261114/baseline/inverse/startup_niti18_E40_p20_pre3_states.npz",
+      "format": "inverse",
+      "states": 28,
+      "unsolved_records_without_states": 0,
+      "sha256": "4f8ddb89a29cfe9d72d51cd53ff2a8c07564d1cae8b919de581b9cc72677929b"
+    },
+    {
+      "path": "guided_validation_20261114/baseline/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+      "format": "inverse",
+      "states": 44,
+      "unsolved_records_without_states": 0,
+      "sha256": "e6213ca962e68b95aaded9b60ad72ac25764dae800ece40ec69350d76527fe33"
+    },
+    {
+      "path": "guided_validation_20261114/baseline/reference/nominal_states.npz",
+      "format": "reference",
+      "states": 1115,
+      "unsolved_records_without_states": 0,
+      "sha256": "5764316836faef352713dba02d0188ead4430de7a9de56233a4460780258841b"
+    },
+    {
+      "path": "guided_validation_20261114/baseline/closed_loop/nominal_states.npz",
+      "format": "closed",
+      "states": 1115,
+      "unsolved_records_without_states": 0,
+      "sha256": "c5c210dfe391883ec41224dd328f7f39191003f7e9e871fe8d77151a010fad63"
+    },
+    {
+      "path": "guided_validation_20261114/baseline/closed_loop/nominal_trace_states.npz",
+      "format": "trace",
+      "states": 2326,
+      "unsolved_records_without_states": 0,
+      "sha256": "bd8eaf088c8ef1d6468af5b7f778fc7d072a84512e1a5cb993867a5e26d845bf"
+    }
+  ],
+  "maximum_hole_force_n": 5.3022007481055855,
+  "maximum_station_force_n": 32.5900898636517,
+  "maximum_station_moment_nmm": 59.21172331233547,
+  "minimum_flexure_clearance_bound_mm": 5.011627273795042,
+  "end_region_penetrating_states": 530,
+  "maximum_end_region_center_penetration_mm": 0.22028748561165565,
+  "flexure_screen_failed_states": 0,
+  "geometry_checked": true,
+  "unique_geometry_states": 2384,
+  "cad_sha256": {
+    "M5_lane_anchorB.stl": "8d30627a0aa6381ecb3482954dd44424fb5e022ece57a5313cc8277289b3a614",
+    "M6_lane_anchorC.stl": "d423fa6bc8e10993770d3fc8cbf3d215fb67c8324d3caca8066cb4ea4c18c6b0"
+  },
+  "peak_station_moment": {
+    "archive": "guided_validation_20261114/baseline/reference/nominal_states.npz",
+    "state": "375",
+    "phase": "right_out",
+    "module": "M5",
+    "station_z_mm": -12,
+    "force_local_n": [
+      -0.5603756349535192,
+      7.052392054165785,
+      7.877994928300894
+    ],
+    "moment_local_nmm": [
+      56.79990282380503,
+      7.651044145209858,
+      14.874835807864484
+    ],
+    "moment_nmm": 59.21172331233547
+  },
+  "worst_clearance_state": {
+    "archive": "guided_validation_20261114/baseline/closed_loop/nominal_states.npz",
+    "state": "461",
+    "phase": "right_return"
+  },
+  "worst_end_region_penetration_state": {
+    "archive": "guided_validation_20261114/baseline/closed_loop/nominal_states.npz",
+    "state": "721",
+    "phase": "left_out"
+  }
+}

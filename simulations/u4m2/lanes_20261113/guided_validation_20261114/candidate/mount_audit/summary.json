@@ -1,0 +1,164 @@
+{
+  "scope": "Boolean interference screen of rigid guides against beam-mapped M-body CAD.\n\nSelected equilibrium poses only, not solid FEA or a complete contact path proof.\nAny positive overlap rejects this rigid mounting candidate. Contact forces and\nchanges in module stiffness are not calculated by this kinematic screen.\n",
+  "archive": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+  "archive_sha256": "a9a0f9d74d251f6191cccdb6e5276f65f6cb1c951c202fe5c1f050d84a8ddb17",
+  "coverage": {
+    "path": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+    "format": "inverse",
+    "states": 36
+  },
+  "selected_states": [
+    "y0_z8",
+    "y90_z8",
+    "y175_z8"
+  ],
+  "rows": [
+    {
+      "state": "y0_z8",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.25113957742951243,
+      "pass_interference": false
+    },
+    {
+      "state": "y0_z8",
+      "part": "M5_z-12",
+      "overlap_mm3": 4.744420153327762,
+      "pass_interference": false
+    },
+    {
+      "state": "y0_z8",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true
+    },
+    {
+      "state": "y0_z8",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true
+    },
+    {
+      "state": "y0_z8",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true
+    },
+    {
+      "state": "y0_z8",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true
+    },
+    {
+      "state": "y0_z8",
+      "part": "M6_z+12",
+      "overlap_mm3": 4.9604156645837065,
+      "pass_interference": false
+    },
+    {
+      "state": "y0_z8",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.23443343576551948,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M5_z-24",
+      "overlap_mm3": 4.02892820531027,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M5_z-12",
+      "overlap_mm3": 23.797700385054366,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M5_z+12",
+      "overlap_mm3": 25.57509410126052,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M5_z+24",
+      "overlap_mm3": 4.9630158404446165,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.22941585009114837,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M6_z-12",
+      "overlap_mm3": 9.636823564462247,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M6_z+12",
+      "overlap_mm3": 10.5073206380063,
+      "pass_interference": false
+    },
+    {
+      "state": "y90_z8",
+      "part": "M6_z+24",
+      "overlap_mm3": 1.715667530534726,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M5_z-24",
+      "overlap_mm3": 10.32831797510274,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M5_z-12",
+      "overlap_mm3": 31.101866986459452,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M5_z+12",
+      "overlap_mm3": 29.433579456417192,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M5_z+24",
+      "overlap_mm3": 13.53840037516784,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M6_z-24",
+      "overlap_mm3": 5.384793792859758,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M6_z-12",
+      "overlap_mm3": 21.576205600087025,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M6_z+12",
+      "overlap_mm3": 14.73421203655865,
+      "pass_interference": false
+    },
+    {
+      "state": "y175_z8",
+      "part": "M6_z+24",
+      "overlap_mm3": 2.632470882109677,
+      "pass_interference": false
+    }
+  ],
+  "all_selected_poses_clear": false,
+  "maximum_overlap_mm3": 31.101866986459452,
+  "decision": "Do not release rigid saddle mounting for manufacture. Resolve motion interference and mount-induced stiffness before hardware tests."
+}

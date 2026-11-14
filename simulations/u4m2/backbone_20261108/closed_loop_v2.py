@@ -62,6 +62,7 @@ class Runner:
         self.d = FeedbackDrive(self.r, free, ea); self.free = free
         self.tank = FastTank()
         self.trace = []; self.last_points = None; self.max_move = 0.; self.n_mid = 0; self.n_mid_reverts = 0; self.offset_extra = np.zeros(12)
+        self.trace_states = []; self.trace_rest = []
 
     def check(self, z, R, s, target, kind, index, phase):
         m, P = inspect(self.r, self.d, z, R, dict(clamp_s_mm=s), self.tank, target)
@@ -80,6 +81,7 @@ class Runner:
             rec, P = self.check(zb, Rb, sb, tb, kind, index, phase)
             if rec['node_move_mm'] <= self.a.node_step or depth >= self.a.max_depth:
                 self.trace.append(rec); self.last_points = P
+                self.trace_states.append(zb.copy()); self.trace_rest.append(Rb.copy())
                 self.max_move = max(self.max_move, rec['node_move_mm'])
                 return zb
         if depth >= self.a.max_depth:
@@ -155,6 +157,7 @@ class Runner:
                     zs = self.d.solve(z, R_new)
                     z = z if zs is None else zs
                     rec, P = self.check(z, R_new, s, target, 'start', i, q['phase']); self.trace.append(rec); self.last_points = P
+                    self.trace_states.append(z.copy()); self.trace_rest.append(R_new.copy())
                 else:
                     self.offset = offset.copy()
                     z = self.transition(z, R_applied, s_prev, t_prev, R_new, s, target, 'feedforward', i, q['phase'])
@@ -234,6 +237,9 @@ def main():
     (out / f'{tag}_trace.json').write_text(json.dumps(run.trace, indent=1))
     (out / f'{tag}_summary.json').write_text(json.dumps(summary, indent=2))
     np.savez_compressed(out / f'{tag}_states.npz', closed=np.asarray(Z))
+    np.savez_compressed(out / f'{tag}_trace_states.npz', z=np.asarray(run.trace_states),
+                        rest_m=np.asarray(run.trace_rest),
+                        tensions_n=np.asarray([q['tensions_n'] for q in run.trace]))
     flat = []
     for q in records:
         row = {k: v for k, v in q.items() if not isinstance(v, list)}

@@ -1,0 +1,16 @@
+{
+ "lane_radii_mm": {
+  "A_U4": 21.0,
+  "B_M5": 24.0,
+  "C_M6": 28.0
+ },
+ "directions": "up, right, down, left on the same rays",
+ "guide_max_span_mm": 24.0,
+ "fine_mesh_guide_z_mm": [
+  -24,
+  -12,
+  12,
+  24
+ ],
+ "scope": "Frictionless quasi-static rod. Four-cell optimisation is a coarse seed with three uniform guides; accepted eight-cell states use four CAD stations. Guide mass/stiffness and clamp compliance excluded."
+}

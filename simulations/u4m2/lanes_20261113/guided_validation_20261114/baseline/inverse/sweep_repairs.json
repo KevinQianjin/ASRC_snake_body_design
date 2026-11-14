@@ -1,0 +1,82 @@
+[
+  {
+    "target_yaw_deg": 130,
+    "seed_yaw_deg": 125,
+    "accepted": true,
+    "optimisation": {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 10,
+      "seconds": 18.613803386688232
+    },
+    "metrics": {
+      "configuration": "U4-M2",
+      "n_uni": 4,
+      "n_medium": 2,
+      "anchors": [
+        4,
+        5,
+        6
+      ],
+      "anchor_sets": 3,
+      "pitch_deg": 20,
+      "cells_per_module": 8,
+      "tension_order": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ],
+      "tensions_n": [
+        [
+          17.164886467068342,
+          5.284240428205622,
+          3.000000000000012,
+          3.068338793498834
+        ],
+        [
+          17.164886467068314,
+          3.0,
+          3.0000000000000115,
+          15.500676428480137
+        ],
+        [
+          17.164886467068342,
+          9.870947517969942,
+          3.0,
+          7.500106976245805
+        ]
+      ],
+      "maximum_single_tendon_n": 17.164886467068342,
+      "sum_tensions_n": 104.71896954560536,
+      "yaw_deg": 129.9999999998274,
+      "vertical_projected_deg": 130.4798483652853,
+      "world_elevation_deg": 19.999999999828727,
+      "true_head_axis_angle_deg": 116.78333883545854,
+      "head_world_mm": [
+        401.1111345657072,
+        259.97634269065645,
+        95.89415300186229
+      ],
+      "max_abs_axial_strain": 0.0008360008382718205,
+      "max_compression": 0.0008360008382718205,
+      "max_extension": 0.0,
+      "max_U_strain": 0.0008360008382718205,
+      "max_M_strain": 0.0007883499577741365,
+      "maximum_strain_module": 1,
+      "total_material_twist_deg": 33.66589741893184,
+      "equilibrium_residual": 8.40194580575826e-12,
+      "minimum_geometry_constraint": 0.10661140345918206,
+      "maximum_radius_curvature": 0.4739440021048244,
+      "nonlocal_capsule_clearance_mm": 53.1240293599612,
+      "geometry_pass": true,
+      "strain_5percent_pass": true,
+      "horizontal_projection_norm": 0.9396926207869307,
+      "vertical_projection_norm": 0.6941334809745914,
+      "minimum_fixed_winch_eigenvalue": 0.5136363669428454,
+      "minimum_force_control_eigenvalue": -0.16742167495176535,
+      "stable_fixed_winch": true,
+      "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+    }
+  }
+]

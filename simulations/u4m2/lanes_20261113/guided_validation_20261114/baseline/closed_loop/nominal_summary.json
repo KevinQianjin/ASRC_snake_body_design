@@ -1,0 +1,59 @@
+{
+  "case": "nominal",
+  "samples": 1115,
+  "completed": true,
+  "controller_uses_plant_parameters": false,
+  "settings": {
+    "tension_target_n": 3.0,
+    "settle_tension_n": 2.5,
+    "precomp_limit_mm": 0.5,
+    "rope_step_mm": 0.25,
+    "node_step_mm": 4.5,
+    "max_iterations": 16,
+    "mid_tol_deg": null,
+    "mid_max": 4,
+    "reference": "guided_validation_20261114/baseline/reference",
+    "gains": "guided_validation_20261114/baseline/closed_loop/nominal_gains.npz"
+  },
+  "settled": {
+    "states": 1115,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.9961215679784865,
+    "peak_tension_n": 17.43767209355382,
+    "minimum_eigenvalue": 0.252610283541409,
+    "minimum_clearance_mm": 8.983951692874527,
+    "maximum_node_move_mm": 0.0,
+    "maximum_yaw_error_deg": 0.18605757672798973,
+    "maximum_elevation_error_deg": 0.15106799110574087,
+    "maximum_offset_mm": 0.3063413064818573,
+    "samples_not_settled": 0
+  },
+  "trace": {
+    "states": 2325,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.9952913095067424,
+    "peak_tension_n": 17.437794646506525,
+    "minimum_eigenvalue": 0.252610283541409,
+    "minimum_clearance_mm": 8.983951692874527,
+    "maximum_node_move_mm": 2.500000000000184
+  },
+  "trace_states_by_kind": {
+    "start": 1,
+    "feedforward": 2301,
+    "mid_correction": 0,
+    "mid_revert": 0,
+    "correction": 24
+  },
+  "pre_control_start": {
+    "minimum_tension_n": 2.9999999811965057,
+    "minimum_eigenvalue": 0.8269434625527672
+  }
+}

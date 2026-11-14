@@ -1,0 +1,158 @@
+{
+ "joints": [
+  {
+   "joint": "base-U1",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "U1-U2",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "U2-U3",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "U3-U4",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "U4-M5",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "M5-M6",
+   "joint_holes_open_and_aligned": true
+  },
+  {
+   "joint": "M6-head",
+   "joint_holes_open_and_aligned": true
+  }
+ ],
+ "ropes": {
+  "A_right": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "A_up": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "A_left": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "A_down": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "B_right": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "B_up": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "B_left": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "B_down": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "C_right": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "C_up": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "C_left": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  },
+  "C_down": {
+   "clear_path_base_to_anchor": true,
+   "groove": true,
+   "return_hole": true,
+   "no_hole_beyond_anchor": true
+  }
+ },
+ "rod": {
+  "M5_bore_open": true,
+  "M6_bore_open": true,
+  "M_bore_wall_at_0p9mm": true,
+  "U4_distal_centre_solid": true,
+  "rod_length_mm": 192.0
+ },
+ "envelope_mm": {
+  "base": 31.45,
+  "U1": 31.66,
+  "U2": 31.66,
+  "U3": 31.66,
+  "U4": 31.66,
+  "M5": 31.66,
+  "M6": 31.66,
+  "head": 31.45
+ },
+ "all_pass": true,
+ "clearance_mm3": {
+  "U_lane_pass.stl: spring_overlap_with_1p5mm_shift": 0.0,
+  "U4_lane_anchorA.stl: spring_overlap_with_1p5mm_shift": 0.0,
+  "M5_lane_anchorB.stl: M2_nut_overlap": 0.0,
+  "M6_lane_anchorC.stl: M2_nut_overlap": 0.0,
+  "U4_lane_anchorA.stl: M2_nut_overlap": 0.0,
+  "U_lane_pass.stl: M2_nut_overlap": 0.0
+ },
+ "parts": {
+  "base_interface": {
+   "watertight": true,
+   "volume_mm3": 60064.8
+  },
+  "head_adapter": {
+   "watertight": true,
+   "volume_mm3": 18279.5
+  },
+  "M5_lane_anchorB.stl": {
+   "watertight": true,
+   "volume_mm3": 31561.0
+  },
+  "M6_lane_anchorC.stl": {
+   "watertight": true,
+   "volume_mm3": 31760.7
+  },
+  "U4_lane_anchorA.stl": {
+   "watertight": true,
+   "volume_mm3": 25187.8
+  },
+  "U_lane_pass.stl": {
+   "watertight": true,
+   "volume_mm3": 23906.3
+  }
+ }
+}
