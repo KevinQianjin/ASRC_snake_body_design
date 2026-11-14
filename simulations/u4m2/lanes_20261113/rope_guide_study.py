@@ -22,7 +22,7 @@ REPO = HERE.parents[2]
 CAD = REPO / "cad" / "lanes_u4m2"
 MODULE_NAMES = ("U1", "U2", "U3", "U4", "M5", "M6")
 RAY_NAMES = ("up", "right", "down", "left")
-DEFAULT_SPACINGS_MM = (96.0, 48.0, 24.0, 12.0)
+DEFAULT_SPACINGS_MM = (96.0, 48.0, 24.0)
 SAFETY_CLEARANCE_MM = 1.0
 
 
@@ -56,7 +56,7 @@ def _segment_deviation(p, F, i0, i1, off):
         loc = F[i].T @ (q - p[i]) - off
         radial = float(np.dot(loc, rad))
         tangential = float(np.dot(loc, tan))
-        transverse = float(np.linalg.norm(loc - np.dot(loc, n) * n))
+        transverse = float(np.linalg.norm(loc[1:]))
         max_rad_out = max(max_rad_out, radial)
         max_rad_in = max(max_rad_in, -radial)
         max_tang = max(max_tang, abs(tangential))
