@@ -21,8 +21,13 @@ import trimesh
 HERE = Path(__file__).resolve().parent
 GUIDE_Z_MM = (-24.0, 0.0, 24.0)
 THICKNESS_MM = 1.2
-ROOT_INNER_R_MM = 8.5
-ROOT_OUTER_R_MM = 10.0
+ROOT_INNER_R_MM = 8.8
+ROOT_OUTER_R_MM = 10.2
+WEB_CENTER_R_MM = 6.9
+WEB_ANGLES_DEG = (-22.5, 67.5, 157.5, 247.5)
+WEB_CLIP_OUTER_D_MM = 4.8
+WEB_CLIP_INNER_D_MM = 3.0
+WEB_CLIP_GAP_MM = 1.2
 ROPE_HOLE_D_MM = 2.6
 ARM_WIDTH_MM = 4.0
 ARM_TIP_R_MM = 28.7
@@ -45,6 +50,18 @@ def guide_mesh(kind):
     ring_hole = cylinder(2.0 * ROOT_INNER_R_MM, THICKNESS_MM + 1.0)
     root_ring = trimesh.boolean.difference([ring, ring_hole], engine='manifold')
     solids = [root_ring]
+    for angle in WEB_ANGLES_DEG:
+        center = np.array([WEB_CENTER_R_MM * np.cos(np.radians(angle)),
+                           WEB_CENTER_R_MM * np.sin(np.radians(angle)), 0.0])
+        outer = cylinder(WEB_CLIP_OUTER_D_MM, THICKNESS_MM)
+        inner = cylinder(WEB_CLIP_INNER_D_MM, THICKNESS_MM + 1.0)
+        clip = trimesh.boolean.difference([outer, inner], engine="manifold")
+        slot = trimesh.creation.box([WEB_CLIP_OUTER_D_MM, WEB_CLIP_GAP_MM, THICKNESS_MM + 1.0])
+        slot.apply_translation([-WEB_CLIP_OUTER_D_MM / 2.0, 0.0, 0.0])
+        clip = trimesh.boolean.difference([clip, slot], engine="manifold")
+        clip.apply_transform(trimesh.transformations.rotation_matrix(np.radians(angle), [0, 0, 1]))
+        clip.apply_translation(center)
+        solids.append(clip)
     for angle in (0.0, 90.0, 180.0, 270.0):
         bar = trimesh.creation.box([bar_length, ARM_WIDTH_MM, THICKNESS_MM])
         bar.apply_translation([bar_center, 0.0, 0.0])
@@ -121,11 +138,15 @@ def check_kind(kind):
 def main():
     report = {
         "status": "experimental, not print-approved",
-        "concept": "open-centre cross-guide ring; spokes route around the central flexure webs",
+        "concept": "open-centre cross-guide ring with four snap clips around M flexure webs",
         "dimensions_mm": {
             "plate_thickness": THICKNESS_MM,
             "root_inner_radius": ROOT_INNER_R_MM,
             "root_outer_radius": ROOT_OUTER_R_MM,
+            "web_center_radius": WEB_CENTER_R_MM,
+            "web_clip_outer_diameter": WEB_CLIP_OUTER_D_MM,
+            "web_clip_inner_diameter": WEB_CLIP_INNER_D_MM,
+            "web_clip_gap": WEB_CLIP_GAP_MM,
             "rope_hole_diameter": ROPE_HOLE_D_MM,
             "arm_width": ARM_WIDTH_MM,
             "arm_tip_radius": ARM_TIP_R_MM,
