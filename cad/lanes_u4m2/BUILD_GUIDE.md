@@ -210,7 +210,17 @@ Repeat for all 4 rays of the set, then the next set.
 
 ## 11. Known limits and open points
 
-- **Steering beyond about 15° of yaw.** Ropes are guided only at the end disks. M5 bends 25–103° beyond 15° of yaw, and its ropes would then rub the M spring strips (rope offset 7–33 mm vs 6.7–7.8 mm clearance). Limit first tests to **±15° of yaw** until intermediate rope guides are added to M5/M6.
+- **Internal rope guides (experimental prototype).** The concept in `internal_rope_guide.scad`
+  uses four thin guide plates in each M module (8 total), at local z = −24, −12, +12 and +24 mm.
+  These positions pass the straight-pose geometry intersection check; guides at ±36 mm do not fit.
+  The saved-state path screen estimates at least 3.8 mm lateral clearance in the toughest M5 lane
+  for the guided layout, compared with an estimated −25.5 mm with no internal guides. This does
+  not yet prove clearance while the flexures are bent or verify clip retention and rope friction.
+  If proceeding, print **one M5 guide** in PA12 and hand-fit it to the M5 body first; inspect that
+  it snaps over the inner support webs without forcing or damaging them, then thread a rope through
+  it and bend the module slowly by hand. Only after this single-station fit test should you print
+  the full set of **8 guides** (4 per module) and test M5/M6 through the team's intended yaw range.
+  Do not treat the guide or the full robot as print-ready from simulation alone.
 - **Mass differs from the model.** The filled disks, anchor blocks, plugs and sleeves make the parts heavier than in `MODEL_DATA.md`:
 
   | Part | Model mass (bare) | Printed mass (est.) |
