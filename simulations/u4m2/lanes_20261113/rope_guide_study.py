@@ -80,9 +80,8 @@ def _segment_deviation(p, F, q_state, rod, i0, i1, off):
 def _guide_spans(first, last, step):
     """Cell-node spans matching the collision-free staggered 24 mm guide layout."""
     if step == 2 and last - first >= 8:
-        return [(first, first + 1)] + [
-            (first + 2 * n - 1, first + 2 * n + 1) for n in range(1, (last - first) // 2)
-        ] + [(last - 1, last)]
+        offsets = (0, 2, 3, 5, 6, last - first)
+        return [(first + a, first + b) for a, b in zip(offsets[:-1], offsets[1:])]
     return [(i0, min(i0 + step, last)) for i0 in range(first, last, step)]
 
 def scan_state_archive(path, rod, guide_cells):
