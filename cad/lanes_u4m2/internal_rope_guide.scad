@@ -12,7 +12,8 @@ backbone_hole_d = 2.1;     // 1.8 mm NiTi backbone
 plate_thickness = 1.2;
 hub_length = 8.0;          // bonded sleeve length on the backbone at each guide station
 arm_width = 4.0;
-hub_diameter = 6.0;
+root_inner_radius = 8.5; // clears the four inner M flexure webs at the guide plane
+root_outer_radius = 10.0;
 arm_tip_radius = 28.7;
 show_rope_preview = false;
 guide_pitch = 24; // maximum pitch between interior guide stations
@@ -22,13 +23,15 @@ module one_guide(kind="M5") {
     radii = kind == "M5" ? [24, 27] : [27];
     difference() {
         union() {
-            cylinder(d=hub_diameter, h=hub_length, center=true, $fn=64);
+            difference() {
+                cylinder(r=root_outer_radius, h=plate_thickness, center=true, $fn=96);
+                cylinder(r=root_inner_radius, h=plate_thickness+1, center=true, $fn=96);
+            }
             for (a = [0:90:270])
                 rotate([0,0,a])
-                    translate([(hub_diameter/2 + arm_tip_radius)/2,0,0])
-                        cube([arm_tip_radius-hub_diameter/2,arm_width,plate_thickness], center=true);
+                    translate([(root_inner_radius + arm_tip_radius)/2,0,0])
+                        cube([arm_tip_radius-root_inner_radius,arm_width,plate_thickness], center=true);
         }
-        cylinder(d=backbone_hole_d, h=hub_length+1, center=true, $fn=48);
         for (a = [0:90:270])
             for (r = radii)
                 rotate([0,0,a])
