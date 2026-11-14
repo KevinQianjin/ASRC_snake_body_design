@@ -19,7 +19,7 @@ web_clip_gap = 1.2;
 web_angles = [-22.5, 67.5, 157.5, 247.5];
 arm_tip_radius = 28.7;
 show_rope_preview = false;
-guide_pitch = 24; // maximum pitch between interior guide stations
+guide_pitch = 24; // maximum unsupported rope span in the modeled layout
 show_guide_array = false;
 
 module web_clip() {
@@ -57,7 +57,7 @@ module one_guide(kind="M5") {
 }
 
 if (show_guide_array) {
-    for (z = [-36,-12,12,36])
+    for (z = [-24,-12,12,24])
         translate([0,0,z]) one_guide(guide_kind);
 } else if (show_rope_preview) {
     color([0.45,0.48,0.52]) one_guide(guide_kind);
