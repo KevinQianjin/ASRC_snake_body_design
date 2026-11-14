@@ -1,8 +1,7 @@
 """Build and statically clearance-check M5/M6 internal rope-guide spiders.
 
-This is an experimental concept: one thin cross-spider per station, with an 8 mm
-sleeve bonded to the central 1.8 mm backbone. Guides are positioned at z=-24,0,
-+24 mm in each 96 mm M module. The check measures intersections with the
+This is an experimental concept: one thin cross-guide per station, clipped to four existing inner flexure webs.
+The guided model places four guides at z=-36,-12,+12,+36 mm in each 96 mm M module. The check measures intersections with the
 straight-pose printable M5/M6 bodies; it does not prove bent-state contact,
 fatigue, rope friction, adhesive retention, or stiffness.
 
@@ -19,7 +18,7 @@ import numpy as np
 import trimesh
 
 HERE = Path(__file__).resolve().parent
-GUIDE_Z_MM = (-24.0, 0.0, 24.0)
+GUIDE_Z_MM = (-36.0, -12.0, 12.0, 36.0)
 THICKNESS_MM = 1.2
 ROOT_INNER_R_MM = 8.8
 ROOT_OUTER_R_MM = 10.2
@@ -127,9 +126,9 @@ def check_kind(kind):
         "straight_pose_intersections": rows,
         "all_straight_pose_positions_clear": all(row["straight_pose_clear"] for row in rows),
         "limitations": [
-            "does not check deformed-body collision",
+            "checks straight-pose body clearance at the modeled guide stations only",\n            "does not check deformed-body collision",
             "does not measure rope friction or wear",
-            "backbone bond and axial retention are not tested",
+            "flexure-web clip retention and assembly force are not tested",
             "guide stiffness and added mass are not included in the steering model",
         ],
     }
