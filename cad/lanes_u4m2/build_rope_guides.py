@@ -71,7 +71,8 @@ def check_kind(kind):
         overlap = trimesh.boolean.intersection([body, placed], engine="manifold")
         volume = 0.0 if overlap.is_empty else float(overlap.volume)
         rows.append({"center_z_mm": z, "intersection_volume_mm3": round(volume, 6),
-                     "straight_pose_clear": volume <= 0.05})
+                     "straight_pose_clear": volume <= 0.05,
+                     "overlap_bounds_mm": None if overlap.is_empty else np.round(overlap.bounds, 3).tolist()})
     return {
         "kind": kind,
         "guide_count_per_module": len(GUIDE_Z_MM),
