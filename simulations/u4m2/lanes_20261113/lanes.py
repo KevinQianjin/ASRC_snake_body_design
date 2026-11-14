@@ -85,18 +85,13 @@ def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets
                 off = offsets3[k, rope]
                 tension = routes[k, j] * C[k, rope]
                 if j >= 4 and step == 2 and sub >= 8:
-                    # Stagger the first/last supports inward by half a cell:
-                    # cell spans are 1,2,2,...,2,1. For the 8-cell model this
-                    # places internal guides at -36,-12,+12,+36 mm, away from
-                    # the M-body collisions found at -24,0,+24 mm.
-                    span_count = sub // 2 + 1
-                    for span in range(span_count):
-                        if span == 0:
-                            i0 = module_start; i1 = module_start + 1
-                        elif span == span_count - 1:
-                            i0 = module_end - 1; i1 = module_end
-                        else:
-                            i0 = module_start + 2 * span - 1; i1 = i0 + 2
+                    # Four internal supports at local z=-24,-12,+12,+24 mm
+                    # for 8 cells/module, where the M-body CAD scan is clear.
+                    # End-to-end rope spans are 2,1,2,1,2 cells (max 24 mm).
+                    spans = ((0, 2), (2, 3), (3, 5), (5, 6), (6, sub))
+                    for a_cell, b_cell in spans:
+                        i0 = module_start + a_cell
+                        i1 = module_start + b_cell
                         a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
                         chord = b - a; ll = np.sqrt(np.dot(chord, chord))
                         if ll < 1e-10: ll = 1e-10
