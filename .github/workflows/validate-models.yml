@@ -33,7 +33,15 @@ jobs:
         run: python -c "import lanes; lanes.install(guide_spacing_mm=24.); print(lanes.validate())"
       - name: Check internal guide spacing against saved bends
         working-directory: simulations/u4m2/lanes_20261113
-        run: python rope_guide_study.py results_lanes/startup_niti18_E40_p20_pre3_states.npz results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz length_cycle_results_lanes/nominal_states.npz closed_loop_lanes_results/payload550g_states.npz --output /tmp/rope_guide_study.json
+        run: python rope_guide_study.py results_lanes/startup_niti18_E40_p20_pre3_states.npz results_lanes/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz length_cycle_results_lanes/nominal_states.npz closed_loop_lanes_results/payload550g_states.npz --output ../../../cad/lanes_u4m2/rope_guide_study.json
       - name: Build and check guide parts against straight M bodies
         working-directory: cad/lanes_u4m2
         run: python build_rope_guides.py
+      - name: Upload internal rope-guide screening reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: experimental-rope-guide-clearance
+          path: |
+            cad/lanes_u4m2/rope_guide_study.json
+            cad/lanes_u4m2/rope_guide_geometry_check.json
+          if-no-files-found: error
