@@ -10,6 +10,7 @@ guide_kind = "M5"; // [M5,M6]
 rope_hole_d = 2.6;         // 2.0 mm rope with 0.3 mm radial running clearance
 backbone_hole_d = 2.1;     // 1.8 mm NiTi backbone
 plate_thickness = 1.2;
+hub_length = 8.0;          // bonded sleeve length on the backbone at each guide station
 arm_width = 4.0;
 hub_diameter = 6.0;
 arm_tip_radius = 29.5;
@@ -21,13 +22,13 @@ module one_guide(kind="M5") {
     radii = kind == "M5" ? [24, 27] : [27];
     difference() {
         union() {
-            cylinder(d=hub_diameter, h=plate_thickness, center=true, $fn=64);
+            cylinder(d=hub_diameter, h=hub_length, center=true, $fn=64);
             for (a = [0:90:270])
                 rotate([0,0,a])
-                    translate([arm_tip_radius/2,0,0])
+                    translate([(hub_diameter/2 + arm_tip_radius)/2,0,0])
                         cube([arm_tip_radius-hub_diameter/2,arm_width,plate_thickness], center=true);
         }
-        cylinder(d=backbone_hole_d, h=plate_thickness+1, center=true, $fn=48);
+        cylinder(d=backbone_hole_d, h=hub_length+1, center=true, $fn=48);
         for (a = [0:90:270])
             for (r = radii)
                 rotate([0,0,a])
