@@ -4,19 +4,17 @@
 //
 // Export one guide: set guide_kind to "M5" or "M6", press F6, then export STL.
 // M5 routes B/C (r=24/27 mm); M6 routes C (r=27 mm).
-// The guide is a thin cross spider supported on the central Ø1.8 mm backbone.
+// The guide is a thin cross-guide clipped around four existing inner M-body webs.
 
 guide_kind = "M5"; // [M5,M6]
 rope_hole_d = 2.6;         // 2.0 mm rope with 0.3 mm radial running clearance
-backbone_hole_d = 2.1;     // 1.8 mm NiTi backbone
 plate_thickness = 1.2;
-hub_length = 8.0;          // bonded sleeve length on the backbone at each guide station
 arm_width = 4.0;
 root_inner_radius = 8.8;
 root_outer_radius = 10.2;
 web_center_radius = 6.9; // measured from the M-body STEP cross-section
-web_clip_outer_d = 4.8;
-web_clip_inner_d = 3.0;
+web_clip_outer_d = 6.4;
+web_clip_inner_d = 5.2;
 web_clip_gap = 1.2;
 web_angles = [-22.5, 67.5, 157.5, 247.5];
 arm_tip_radius = 28.7;
