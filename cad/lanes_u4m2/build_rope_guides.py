@@ -126,7 +126,8 @@ def check_kind(kind):
         "straight_pose_intersections": rows,
         "all_straight_pose_positions_clear": all(row["straight_pose_clear"] for row in rows),
         "limitations": [
-            "checks straight-pose body clearance at the modeled guide stations only",\n            "does not check deformed-body collision",
+            "checks straight-pose body clearance at the modeled guide stations only",
+            "does not check deformed-body collision",
             "does not measure rope friction or wear",
             "flexure-web clip retention and assembly force are not tested",
             "guide stiffness and added mass are not included in the steering model",
