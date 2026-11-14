@@ -58,6 +58,27 @@ def guide_mesh(kind):
     return trimesh.boolean.difference([solid] + cutters, engine="manifold")
 
 
+
+def body_cross_sections(mesh, z_values=GUIDE_Z_MM):
+    """Summarize section contours to expose internal structure where guides collide."""
+    summary = {}
+    for z in z_values:
+        section = mesh.section(plane_origin=[0.0, 0.0, z], plane_normal=[0.0, 0.0, 1.0])
+        paths = [] if section is None else section.discrete
+        contours = []
+        for points in paths:
+            xy = points[:, :2]
+            radius = np.linalg.norm(xy, axis=1)
+            contours.append({
+                "points": int(len(points)),
+                "closed": bool(np.linalg.norm(points[0] - points[-1]) < 1e-5),
+                "min_radius_mm": round(float(radius.min()), 3),
+                "max_radius_mm": round(float(radius.max()), 3),
+                "bounds_xy_mm": np.round(np.c_[xy.min(axis=0), xy.max(axis=0)], 3).tolist(),
+            })
+        summary[str(z)] = contours
+    return summary
+
 def check_kind(kind):
     part = guide_mesh(kind)
     if not part.is_watertight:
@@ -83,6 +104,7 @@ def check_kind(kind):
             "bounds_mm": np.round(part.bounds, 3).tolist(),
         },
         "body_file": body_path.name,
+        "body_cross_sections": body_cross_sections(body),
         "straight_pose_intersections": rows,
         "all_straight_pose_positions_clear": all(row["straight_pose_clear"] for row in rows),
         "limitations": [
