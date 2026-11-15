@@ -4,7 +4,9 @@
 
 ## Latest simulation report
 
-- [Guide refinement and V3 design report](daily/Report_2026_11_15.md) — 15 November 2026. Corrected CAD contact measurement, actual socket geometry, expanded selected-state validation and remaining manufacturing blockers; 500 g head payload.
+**Morning Report timing:** reporting cutoff and actual run start **15 November 2026 07:01:11 EST (12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same date. These are recorded execution times; future morning runs are scheduled for **07:00 US Eastern Time (12:00 UTC in EST / 11:00 UTC in EDT)**, with a maximum runtime of **two hours**.
+
+- [Morning Report — guide refinement and V3 design](daily/Morning_Report_2026_11_15.md) — 15 November 2026. Corrected CAD contact measurement, actual socket geometry, expanded selected-state validation and remaining manufacturing blockers; 500 g head payload.
 - [Guided full-path validation](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) — 14 November 2026. Ideal guided controller cycle and separate physical-mount failures.
 
 - [Closed-loop round-trip report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) — 12 November 2026. Results remain beside their source and data.
@@ -12,7 +14,7 @@
 
 ## Daily reports and weekly presentation
 
-- [**Daily report — 15 November 2026**](daily/Report_2026_11_15.md): detailed English report, actual V3 CAD previews and reproducible evidence. Markdown is the source deliverable for this run.
+- [**Morning Report — 15 November 2026**](daily/Morning_Report_2026_11_15.md): detailed English report, actual V3 CAD previews and reproducible evidence. Markdown is the source deliverable for this run.
 - [**Engineering update — 14 November 2026**](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md): guided 500 g motion, archive coverage, V2 mounting and finite end-routing failures.
 
 - [**Daily report — 13 November 2026**](daily/Report_2026_11_13.pdf): separate rope lanes (A 21 / B 24 / C 27 mm) re-run through the whole pipeline (everything passes, about 1 N lower peak tension); rope-chord limit in M5 beyond about 15° yaw; renewed lane-routed 3D modules, base interface, head adapter, assembly check and build guide. Built by [`build_report_2026_11_13.py`](builders/build_report_2026_11_13.py).

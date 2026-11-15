@@ -1,6 +1,6 @@
-# 15 November 2026 — guided CAD refinement and V3 development
+# Morning Report evidence — 15 November 2026: guided CAD refinement and V3 development
 
-[Full daily report](../../../../reports/daily/Report_2026_11_15.md)
+[Full Morning Report](../../../../reports/daily/Morning_Report_2026_11_15.md)
 · [Final candidate CAD](../../../../cad/lanes_u4m2/guides_v3/README.md)
 · [Machine-readable final summary](validated_summary.json)
 · [Consolidated selected poses](selected_pose_metrics.csv.gz)
@@ -10,6 +10,11 @@
 **No manufacturing release.** Positive guide/land contact and finite end-region
 rope penetration remain blockers. This folder distinguishes numerical checks,
 rejected geometry variants, selected ideal equilibria and physical limitations.
+
+**Morning edition:** cutoff and actual start **15 November 2026 07:01:11 EST
+(12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same
+date. See [run context](run_context.json) for exact timestamps and the original
+90-minute deadline. The later two-hour schedule does not alter this run.
 
 ## Evidence map
 
@@ -89,7 +94,10 @@ fails its component-count check, as recorded in its log.
 and counts before regenerating this dated report's pose table, figure and
 README entry. It is specific to this study; do not use it to overwrite the next
 day's report. `SHA256SUMS` records the retained dated evidence after publication
-preparation, excluding itself.
+preparation and subsequent documentation edits, excluding itself.
+`source_sha256.json` retains the engineering-run source snapshot; later
+presentation-only edits to the report generator are tracked in Git and do not
+represent a new simulation run.
 
 ## Interpretation and next work
 

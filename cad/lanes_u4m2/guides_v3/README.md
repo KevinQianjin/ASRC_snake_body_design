@@ -4,8 +4,10 @@
 the mouths of the four outer-web saddles at each local z = ±12 mm station. It
 addresses the guide/body interference identified by the refined CAD screen.
 It does not establish joint strength, guide stiffness, assembly access or a
-physically valid complete robot cycle. See the [daily report](../../../reports/daily/Report_2026_11_15.md)
-for the measured coverage, failures and comparison with V2.
+physically valid complete robot cycle. See the [Morning Report](../../../reports/daily/Morning_Report_2026_11_15.md)
+for the measured coverage, failures and comparison with V2. That morning
+run started at **15 November 2026 07:01:11 EST (12:01:11 UTC)**; its report
+preparation time was **08:12:54 EST (13:12:54 UTC)** on the same date.
 
 ## What changes
 
@@ -62,7 +64,7 @@ necessary, including loads shared by the four saddles and cap/wire effects.
 - [Updated CAD mass estimate](mass_model.json), including frames/caps/wire but
   excluding adhesive and closure tails. The head remains a separate **500 g payload**.
 - [Dated simulation and contact evidence](../../../simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md).
-- [Full English daily report](../../../reports/daily/Report_2026_11_15.md).
+- [Full English Morning Report](../../../reports/daily/Morning_Report_2026_11_15.md).
 
 With the V2 CAD dependencies available, run `python build.py` from this folder.
 The default slope is 1.5. For a separate experimental variant, use

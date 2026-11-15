@@ -9,6 +9,21 @@ fixed five-hour subtraction throughout the year.
 Example: `2026-11-15 07:01:11 EST (2026-11-15 12:01:11 UTC)`.
 In summer: `2026-07-15 07:00:00 EDT (2026-07-15 11:00:00 UTC)`.
 
+## Morning report edition
+
+The Codex daily engineering task produces the **Morning Report**, scheduled
+to start at **07:00 US Eastern Time**: **12:00 UTC in EST** or **11:00 UTC
+in EDT**. The current maximum runtime is **two hours**. For an on-time start,
+the deadline is **09:00 Eastern**, corresponding to **14:00 UTC in EST** or
+**13:00 UTC in EDT**. Record the actual start, deadline and reporting cutoff
+for each execution; the scheduled time is not evidence of actual execution.
+
+Use `Morning Engineering Report — YYYY-MM-DD` as the title and
+`reports/daily/Morning_Report_YYYY_MM_DD.md` as the report path. Label its
+README entry **Morning Report**. Keep morning and evening editions separate
+and retain older report links. Historical reports retain their recorded
+times and execution limits; do not retroactively apply the current schedule.
+
 ## Recorded timestamps
 
 JSON records expose paired `*_et` and `*_utc` values for known instants.
@@ -35,6 +50,6 @@ source files lived in the current checkout.
 Historical source hashes still identify the files used at execution time.
 Later presentation-only changes to timestamps or path labels do not constitute
 a simulation rerun. The [metadata migration record](time_metadata_migration.json)
-links the pre-edit and current hashes of the affected files. Current delivery
+links the pre-edit and post-edit hashes at the time of that migration. Current delivery
 manifests and the dated evidence checksum list are refreshed for edited files;
 archived numerical arrays, measurements and solver results remain unchanged.
