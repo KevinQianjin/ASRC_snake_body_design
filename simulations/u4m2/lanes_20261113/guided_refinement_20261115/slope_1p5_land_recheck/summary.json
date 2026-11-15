@@ -1,0 +1,1412 @@
+{
+  "scope": "Compare rigid-guide contact using converged beam-mapped CAD tessellations.\n\nUses saved 500 g equilibria; does not re-solve contact, mounting stiffness or\ncontrol. An axial surface resolution is distinct from the eight-cell rod mesh.\n",
+  "archive": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+  "archive_sha256": "f16dd94a26905640669b1020e7e5b95bb9784ce290a03272a99861d413809c77",
+  "guide_design": {
+    "status": "socket-relief engineering candidate; not released for manufacture",
+    "lane_radii_mm": {
+      "A": 21.0,
+      "B": 24.0,
+      "C": 28.0
+    },
+    "stations_z_mm": [
+      -24,
+      -12,
+      12,
+      24
+    ],
+    "plate_thickness_mm": 3.2,
+    "arm_width_mm": 6.0,
+    "arm_tip_radius_mm": 30.6,
+    "rope_bore_mm": 2.6,
+    "rope_mouth_mm": 3.0,
+    "rope_throat_length_mm": 1.0,
+    "web_angles_deg": [
+      -22.5,
+      67.5,
+      157.5,
+      247.5
+    ],
+    "axial_retention": "Outer-web stations: only the central 0.5 mm land is a proposed bond zone; flared mouths are unbonded relief. Inner-web stations retain the V2 socket. Bond strength and retention are unvalidated.",
+    "adhesive": "Unspecified pending PA12 surface preparation, actual bond gap and pull/shear coupon tests",
+    "design_load_factor": 3.0,
+    "retaining_wire_d_mm": 0.35,
+    "wire_groove_d_mm": 0.45,
+    "radial_retention": "Removable inward socket caps retained by 0.35 mm stainless lockwire in a 0.45 mm groove; CAD models a conservative square-section wire envelope, closure tail excluded.",
+    "socket_wall_mm": 0.85,
+    "bond_gap_mm": 0.15,
+    "non_mounting_web_clearance_mm": 0.3,
+    "mounting_webs": "CAD-derived rectangular webs: radius ~6.896 mm at +/-24 mm stations, ~19.229 mm at +/-12 mm; sockets follow the actual web slope.",
+    "socket_axial_span_mm": 3.24,
+    "cap_seat_boolean_clearance_mm": 0.03,
+    "socket_flare_slope": 1.5,
+    "socket_land_axial_mm": 0.5,
+    "socket_explicit_land_breakpoints": true,
+    "mounting_stiffness": "Four webs remain connected by a rigid frame. No claim that relief decouples their motion or preserves homogenised stiffness.",
+    "body_source": "../guides_v2; unchanged module bodies, disks, anchors and 21/24/28 mm lanes"
+  },
+  "cad_sha256": {
+    "M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+    "M5_z+12_caps.stl": "46821f04261afa1a71efd22ebc88dfc64197a74de15c29d358821b280f6c6639",
+    "M5_z+12_guide.stl": "69bb41386f384783003edd57d4ef104f3dd0746c7d656d96b7b500c39c42d8b2",
+    "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z-12_caps.stl": "a7d3df756642ade6e9ae6f3ec0b4c81969f9ba73cbf0e7d13eaf40e3f8e62782",
+    "M5_z-12_guide.stl": "56fe89fa8738b39d5bfb1716cfc5ef3cef79c3d3421dc7a91998696cc6e6590b",
+    "M5_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b",
+    "M6_z+12_caps.stl": "46821f04261afa1a71efd22ebc88dfc64197a74de15c29d358821b280f6c6639",
+    "M6_z+12_guide.stl": "81b348fdfade7a791bac7bb90ea63c6664a30e91b90f41cdfc1a87da4438f4ff",
+    "M6_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z-12_caps.stl": "a7d3df756642ade6e9ae6f3ec0b4c81969f9ba73cbf0e7d13eaf40e3f8e62782",
+    "M6_z-12_guide.stl": "2dac18977560e9a5f3ad1fd8fc0a78121ee7d0defa07931adfcc8e6c333f8abe",
+    "M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414"
+  },
+  "guide_cad_sha256": {
+    "M5_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M5_z+12_guide.stl": "763c14efc5af841776dc340d9f6c8a8213f991311dc8044a8dae302229bb9fb2",
+    "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M5_z-12_guide.stl": "2f840539abf2d14909e9a95326fa4c80e9e8e63f5f68871d77be8e184db88954",
+    "M5_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M6_z+12_guide.stl": "31fb75cf77e7d111dbb26af54bd2013957ecb48c00fb2ceb428534ba6c2faff3",
+    "M6_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M6_z-12_guide.stl": "c57d733bf41332953440ca0892c56f1182addb5d832d61202a560b2263a2d46e",
+    "M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414"
+  },
+  "coverage": {
+    "path": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+    "format": "reference",
+    "states": 181,
+    "unsolved_records_without_states": 0,
+    "sha256": "f16dd94a26905640669b1020e7e5b95bb9784ce290a03272a99861d413809c77"
+  },
+  "selected_states": [
+    "60",
+    "61",
+    "62",
+    "70",
+    "82",
+    "107",
+    "120",
+    "128",
+    "129",
+    "137",
+    "140",
+    "141",
+    "142",
+    "143",
+    "146",
+    "155",
+    "164"
+  ],
+  "selected_parts": [
+    "M5_z-12",
+    "M5_z+12",
+    "M6_z-12",
+    "M6_z+12"
+  ],
+  "requested_axial_resolutions_mm": [
+    0.5
+  ],
+  "rod_cells_per_module": 8,
+  "payload_g": 500,
+  "boolean_transfer_precision": "float64",
+  "body_scope": "complete deformed body; no cropping",
+  "surface_meshes": [
+    {
+      "module": "M5",
+      "resolution_mm": 0.5,
+      "vertices": 362720,
+      "faces": 725712,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31561.026388579558,
+      "watertight": true
+    },
+    {
+      "module": "M6",
+      "resolution_mm": 0.5,
+      "vertices": 326502,
+      "faces": 653244,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31760.738586685737,
+      "watertight": true
+    }
+  ],
+  "rows": [
+    {
+      "resolution_mm": 0.5,
+      "state": "60",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.00024880333961051676,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00024880333961051676,
+          "center_station_cad_mm": [
+            7.461590921892565,
+            19.73058881300667,
+            -0.2490940642210765
+          ],
+          "bounds_mm": [
+            [
+              6.676242803209956,
+              18.894282585207122,
+              -0.2668259715182444
+            ],
+            [
+              9.461978213823816,
+              20.092098875605842,
+              -0.23008328639156161
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "60",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0038095478243640782,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0038095478243640782,
+          "center_station_cad_mm": [
+            7.874680895197381,
+            19.5789387872073,
+            0.25064495538438264
+          ],
+          "bounds_mm": [
+            [
+              6.651614572519904,
+              18.859229148935356,
+              0.2032646530508373
+            ],
+            [
+              9.482369273244863,
+              20.19102093955354,
+              0.3010242694485328
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "60",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "60",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "61",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0005577828134970911,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0005577828134970911,
+          "center_station_cad_mm": [
+            7.64323009596613,
+            19.657579653148204,
+            -0.2490012239597168
+          ],
+          "bounds_mm": [
+            [
+              6.670822504531724,
+              18.886724251971117,
+              -0.27242794035504403
+            ],
+            [
+              9.465333321635077,
+              20.10852852649313,
+              -0.2246672814155204
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "61",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.004953643691496525,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.004953643691496525,
+          "center_station_cad_mm": [
+            7.896539672523951,
+            19.57499050780319,
+            0.25147388235080403
+          ],
+          "bounds_mm": [
+            [
+              6.650390917243051,
+              18.852118299562846,
+              0.19877892483555115
+            ],
+            [
+              9.491037662594813,
+              20.21157801972828,
+              0.30878890526383884
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "61",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "61",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "62",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008346489770049531,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008346489770049531,
+          "center_station_cad_mm": [
+            7.716463768062196,
+            19.628981890071366,
+            -0.24900227124900215
+          ],
+          "bounds_mm": [
+            [
+              6.666856021171707,
+              18.882256081438754,
+              -0.2762261751323649
+            ],
+            [
+              9.466939623499952,
+              20.119963441551704,
+              -0.22126881244116703
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "62",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.005826352185065452,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.005826352185065452,
+          "center_station_cad_mm": [
+            7.9086901607658895,
+            19.573737368785796,
+            0.25214787314604853
+          ],
+          "bounds_mm": [
+            [
+              6.64980775410989,
+              18.847398621811635,
+              0.1958111475040596
+            ],
+            [
+              9.497473111067862,
+              20.22621931061758,
+              0.3143773000787178
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "62",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "62",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "70",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0009935288212667595,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0009935288212667595,
+          "center_station_cad_mm": [
+            7.769866141059397,
+            19.607623583835128,
+            -0.24901613116095733
+          ],
+          "bounds_mm": [
+            [
+              6.655977441960648,
+              18.882900770194397,
+              -0.27718919111822515
+            ],
+            [
+              9.45763846426928,
+              20.12808341600271,
+              -0.2204516046344338
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "70",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.007026401954805639,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.007026401954805639,
+          "center_station_cad_mm": [
+            7.928893893867083,
+            19.570410326431706,
+            0.25310770765695606
+          ],
+          "bounds_mm": [
+            [
+              6.653410661406969,
+              18.839728781395593,
+              0.19226585673561658
+            ],
+            [
+              9.51251804941667,
+              20.242028937721898,
+              0.3215784297750588
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "70",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "70",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "82",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.001075327289015626,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.001075327289015626,
+          "center_station_cad_mm": [
+            7.790109539414205,
+            19.599664273698014,
+            -0.24902845973452292
+          ],
+          "bounds_mm": [
+            [
+              6.654809820299247,
+              18.881696473272484,
+              -0.2778354835120922
+            ],
+            [
+              9.457774237248367,
+              20.130333800379162,
+              -0.21990417864014944
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "82",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.00728314897635939,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00728314897635939,
+          "center_station_cad_mm": [
+            7.935375342125897,
+            19.56873665513422,
+            0.2533052072212685
+          ],
+          "bounds_mm": [
+            [
+              6.653611221504676,
+              18.83820610472867,
+              0.191689925318542
+            ],
+            [
+              9.515092985518905,
+              20.245021782031984,
+              0.3228152967136566
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "82",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "82",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "107",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008342580831674452,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008342580831674452,
+          "center_station_cad_mm": [
+            7.7163952432261835,
+            19.629007854327398,
+            -0.249002229806202
+          ],
+          "bounds_mm": [
+            [
+              6.666857269166087,
+              18.882262905466575,
+              -0.27622092383296604
+            ],
+            [
+              9.466933373066887,
+              20.11994975998067,
+              -0.22127337211139775
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "107",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.005825249847181371,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.005825249847181371,
+          "center_station_cad_mm": [
+            7.908677195225087,
+            19.573738036210766,
+            0.2521470069249471
+          ],
+          "bounds_mm": [
+            [
+              6.649810327891085,
+              18.84740353478395,
+              0.19581462615411738
+            ],
+            [
+              9.497467862448676,
+              20.22620021768796,
+              0.31437050411244627
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "107",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "107",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "120",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008134206132119864,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008134206132119864,
+          "center_station_cad_mm": [
+            7.712588865832741,
+            19.63045575267172,
+            -0.24900017891729936
+          ],
+          "bounds_mm": [
+            [
+              6.666958816365824,
+              18.88261814868133,
+              -0.27594245080132396
+            ],
+            [
+              9.466636773793764,
+              20.119205862372752,
+              -0.22151567182777399
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "120",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.00576457403249699,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00576457403249699,
+          "center_station_cad_mm": [
+            7.907949583832442,
+            19.5737801397201,
+            0.252099346471438
+          ],
+          "bounds_mm": [
+            [
+              6.649932304870141,
+              18.84768263520084,
+              0.1960074817193913
+            ],
+            [
+              9.497149826980976,
+              20.225158517845443,
+              0.3139947183442473
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "120",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "120",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "128",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0009935288212667595,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0009935288212667595,
+          "center_station_cad_mm": [
+            7.769866141059397,
+            19.607623583835128,
+            -0.24901613116095733
+          ],
+          "bounds_mm": [
+            [
+              6.655977441960648,
+              18.882900770194397,
+              -0.27718919111822515
+            ],
+            [
+              9.45763846426928,
+              20.12808341600271,
+              -0.2204516046344338
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "70"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "128",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.007026401954805639,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.007026401954805639,
+          "center_station_cad_mm": [
+            7.928893893867083,
+            19.570410326431706,
+            0.25310770765695606
+          ],
+          "bounds_mm": [
+            [
+              6.653410661406969,
+              18.839728781395593,
+              0.19226585673561658
+            ],
+            [
+              9.51251804941667,
+              20.242028937721898,
+              0.3215784297750588
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "70"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "128",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "70"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "128",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "70"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "129",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0010337359369307917,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0010337359369307917,
+          "center_station_cad_mm": [
+            7.780149407859528,
+            19.60357355965972,
+            -0.2490218261969113
+          ],
+          "bounds_mm": [
+            [
+              6.655389623198712,
+              18.88230204992479,
+              -0.27750880908848785
+            ],
+            [
+              9.457698602746554,
+              20.1292010283139,
+              -0.2201802011290397
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "129",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0071552028855880745,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0071552028855880745,
+          "center_station_cad_mm": [
+            7.932164958916188,
+            19.56956328769868,
+            0.25320661757905405
+          ],
+          "bounds_mm": [
+            [
+              6.6535120952339,
+              18.838960505063426,
+              0.1919743425703473
+            ],
+            [
+              9.513811615247562,
+              20.243538349388302,
+              0.3222022084493119
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "129",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "129",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "137",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0007405929402143216,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0007405929402143216,
+          "center_station_cad_mm": [
+            7.743576000364702,
+            19.616904865529772,
+            -0.24898917053814343
+          ],
+          "bounds_mm": [
+            [
+              6.65540036758485,
+              18.887429000832014,
+              -0.27361325890683474
+            ],
+            [
+              9.452492256807865,
+              20.11934554834039,
+              -0.22360012328192624
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "137",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.006541630117731618,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.006541630117731618,
+          "center_station_cad_mm": [
+            7.928980755518134,
+            19.568297780847058,
+            0.25270022122186253
+          ],
+          "bounds_mm": [
+            [
+              6.6553741115641,
+              18.841002464679548,
+              0.19375795580015165
+            ],
+            [
+              9.511863321659618,
+              20.23276693263699,
+              0.3184673245809222
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "137",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "137",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "140",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008342580831674452,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008342580831674452,
+          "center_station_cad_mm": [
+            7.7163952432261835,
+            19.629007854327398,
+            -0.249002229806202
+          ],
+          "bounds_mm": [
+            [
+              6.666857269166087,
+              18.882262905466575,
+              -0.27622092383296604
+            ],
+            [
+              9.466933373066887,
+              20.11994975998067,
+              -0.22127337211139775
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "107"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "140",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.005825249847181371,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.005825249847181371,
+          "center_station_cad_mm": [
+            7.908677195225087,
+            19.573738036210766,
+            0.2521470069249471
+          ],
+          "bounds_mm": [
+            [
+              6.649810327891085,
+              18.84740353478395,
+              0.19581462615411738
+            ],
+            [
+              9.497467862448676,
+              20.22620021768796,
+              0.31437050411244627
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "107"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "140",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "107"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "140",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "107"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "141",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008413854135302215,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008413854135302215,
+          "center_station_cad_mm": [
+            7.772013344233645,
+            19.605706169244815,
+            -0.24899173657208173
+          ],
+          "bounds_mm": [
+            [
+              6.654488409265154,
+              18.88552233077567,
+              -0.2746527880672147
+            ],
+            [
+              9.453468292870129,
+              20.122444374077276,
+              -0.2226689430720512
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "141",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.006811412436656898,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.006811412436656898,
+          "center_station_cad_mm": [
+            7.935933993685369,
+            19.56648945861979,
+            0.2529042986344648
+          ],
+          "bounds_mm": [
+            [
+              6.655311424146772,
+              18.839441406037395,
+              0.19312101300789664
+            ],
+            [
+              9.514232315643598,
+              20.236148557573983,
+              0.31978769536249274
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "141",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "141",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "142",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0006982776041094158,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0006982776041094158,
+          "center_station_cad_mm": [
+            7.678330848894501,
+            19.64397340233432,
+            -0.24899568221234092
+          ],
+          "bounds_mm": [
+            [
+              6.6679558358067474,
+              18.8848180450332,
+              -0.27458662354769103
+            ],
+            [
+              9.465274829099194,
+              20.115328288040644,
+              -0.22270941422146961
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "142",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.005403716323428921,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.005403716323428921,
+          "center_station_cad_mm": [
+            7.899803919173108,
+            19.575648135563974,
+            0.2518294976402623
+          ],
+          "bounds_mm": [
+            [
+              6.650269053219237,
+              18.849771830738746,
+              0.19708387442506137
+            ],
+            [
+              9.494462117546414,
+              20.219660907738216,
+              0.3119278440100288
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "142",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "142",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "143",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0017652216828636103,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0017652216828636103,
+          "center_station_cad_mm": [
+            7.898030290855157,
+            19.558461499334964,
+            -0.24922658115745827
+          ],
+          "bounds_mm": [
+            [
+              6.6479991776538405,
+              18.873000475383463,
+              -0.28268637769309635
+            ],
+            [
+              9.46038814244162,
+              20.146349650264796,
+              -0.21596379997140502
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "143",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.008863095498724723,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.008860661565999961,
+          "center_station_cad_mm": [
+            7.974774992533834,
+            19.558491189733424,
+            0.2545373157986897
+          ],
+          "bounds_mm": [
+            [
+              6.654750295130519,
+              18.829357413118714,
+              0.1886516257141011
+            ],
+            [
+              9.530935494312807,
+              20.26153131039149,
+              0.3296629089122689
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "143",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "143",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0017993504579029245,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0017993504579029245,
+          "center_station_cad_mm": [
+            7.898918560361373,
+            19.55827256565118,
+            -0.24924094331791535
+          ],
+          "bounds_mm": [
+            [
+              6.647710502998876,
+              18.872729642069714,
+              -0.2830070911941789
+            ],
+            [
+              9.460468020806136,
+              20.14732937356331,
+              -0.21571259427662426
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.008955995617058315,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.008953282089660378,
+          "center_station_cad_mm": [
+            7.974969452917699,
+            19.558790146999883,
+            0.2546182440462644
+          ],
+          "bounds_mm": [
+            [
+              6.654707187406071,
+              18.82904681801432,
+              0.18841965118980397
+            ],
+            [
+              9.531519474565332,
+              20.262932742460805,
+              0.33020393030597006
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "155",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0009851533829151428,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0009851533829151428,
+          "center_station_cad_mm": [
+            7.768159314146503,
+            19.60828481405208,
+            -0.24901488101810657
+          ],
+          "bounds_mm": [
+            [
+              6.656187825976733,
+              18.88297818427003,
+              -0.27711048819060125
+            ],
+            [
+              9.457731332873383,
+              20.12777384848451,
+              -0.22051865036615936
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "155",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.00699033287036092,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00699033287036092,
+          "center_station_cad_mm": [
+            7.928448711533848,
+            19.570444509734358,
+            0.2530781148808627
+          ],
+          "bounds_mm": [
+            [
+              6.653374995072243,
+              18.83991433958613,
+              0.19236616367663828
+            ],
+            [
+              9.512180288008187,
+              20.24151457270017,
+              0.3213656554665363
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "155",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "155",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "164",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0008134206132119864,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0008134206132119864,
+          "center_station_cad_mm": [
+            7.712588865832741,
+            19.63045575267172,
+            -0.24900017891729936
+          ],
+          "bounds_mm": [
+            [
+              6.666958816365824,
+              18.88261814868133,
+              -0.27594245080132396
+            ],
+            [
+              9.466636773793764,
+              20.119205862372752,
+              -0.22151567182777399
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "120"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "164",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.00576457403249699,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00576457403249699,
+          "center_station_cad_mm": [
+            7.907949583832442,
+            19.5737801397201,
+            0.252099346471438
+          ],
+          "bounds_mm": [
+            [
+              6.649932304870141,
+              18.84768263520084,
+              0.1960074817193913
+            ],
+            [
+              9.497149826980976,
+              20.225158517845443,
+              0.3139947183442473
+            ]
+          ]
+        }
+      ],
+      "reused_geometry_from_state": "120"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "164",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "120"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "164",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "120"
+    }
+  ],
+  "completed": true,
+  "elapsed_seconds": 92.7372513549999,
+  "all_selected_poses_clear": false
+}

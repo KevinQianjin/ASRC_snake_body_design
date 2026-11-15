@@ -1,0 +1,48 @@
+{
+  "scope": "Reproducible targeted contact subset of the saved V2 500 g trajectory.\n\nIncludes all startup/inverse holds, each phase's endpoints and angle-range\nsamples, and recorded motion extrema. This does not certify unsampled motion.\n",
+  "source_coverage": [
+    {
+      "path": "guided_validation_20261114/candidate/inverse/startup_niti18_E40_p20_pre3_states.npz",
+      "format": "inverse",
+      "states": 29,
+      "unsolved_records_without_states": 0,
+      "sha256": "d22cc0989055bc1ac8eb77566c725106ab9701eb3f2eb5d58eec99d6d952f0bb"
+    },
+    {
+      "path": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+      "format": "inverse",
+      "states": 36,
+      "unsolved_records_without_states": 0,
+      "sha256": "a9a0f9d74d251f6191cccdb6e5276f65f6cb1c951c202fe5c1f050d84a8ddb17"
+    },
+    {
+      "path": "guided_validation_20261114/candidate/closed_loop/nominal_states.npz",
+      "format": "closed",
+      "states": 1200,
+      "unsolved_records_without_states": 0,
+      "sha256": "fbe11efb8c78b53ef2d0c08f12f7e3c7cc993c8c8175082dd1769c29dddfe8e1"
+    },
+    {
+      "path": "guided_validation_20261114/candidate/closed_loop/nominal_trace_states.npz",
+      "format": "trace",
+      "states": 2526,
+      "unsolved_records_without_states": 0,
+      "sha256": "6fd81017b92bbe36b6d130c8b8773eb818bfe88be96a8ce66667abc7c66fa2a5"
+    }
+  ],
+  "selected_records": 217,
+  "extra_motion_samples": 36,
+  "extra_sample_seed": 20261115,
+  "unique_geometries": 199,
+  "phase_counts": {
+    "entry": 4,
+    "exit": 4,
+    "inverse": 36,
+    "left_out": 36,
+    "left_return": 34,
+    "right_out": 34,
+    "right_return": 34,
+    "startup": 29,
+    "straighten": 6
+  }
+}

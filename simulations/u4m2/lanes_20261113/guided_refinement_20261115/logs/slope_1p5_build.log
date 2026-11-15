@@ -1,0 +1,15 @@
+M5_z-24 straight overlap 0.0 valid True
+M5_z-12 straight overlap 0.0 valid False
+M5_z+12 straight overlap 0.0 valid False
+M5_z+24 straight overlap 0.0 valid True
+M6_z-24 straight overlap 0.0 valid True
+M6_z-12 straight overlap 0.0 valid False
+M6_z+12 straight overlap 0.0 valid False
+M6_z+24 straight overlap 0.0 valid True
+Traceback (most recent call last):
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/../../../cad/lanes_u4m2/guides_v3/build.py", line 77, in <module>
+    build(a.out,a.slope)
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/../../../cad/lanes_u4m2/guides_v3/build.py", line 67, in build
+    if not report['all_straight_positions_clear']: raise RuntimeError('Candidate fails straight assembly')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Candidate fails straight assembly

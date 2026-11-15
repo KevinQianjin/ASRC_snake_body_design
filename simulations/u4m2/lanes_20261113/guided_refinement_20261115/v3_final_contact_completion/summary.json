@@ -1,0 +1,2048 @@
+{
+  "scope": "Compare rigid-guide contact using converged beam-mapped CAD tessellations.\n\nUses saved 500 g equilibria; does not re-solve contact, mounting stiffness or\ncontrol. An axial surface resolution is distinct from the eight-cell rod mesh.\n",
+  "archive": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+  "archive_sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944",
+  "guide_design": {
+    "status": "socket-relief engineering candidate; not released for manufacture",
+    "lane_radii_mm": {
+      "A": 21.0,
+      "B": 24.0,
+      "C": 28.0
+    },
+    "stations_z_mm": [
+      -24,
+      -12,
+      12,
+      24
+    ],
+    "plate_thickness_mm": 3.2,
+    "arm_width_mm": 6.0,
+    "arm_tip_radius_mm": 30.6,
+    "rope_bore_mm": 2.6,
+    "rope_mouth_mm": 3.0,
+    "rope_throat_length_mm": 1.0,
+    "web_angles_deg": [
+      -22.5,
+      67.5,
+      157.5,
+      247.5
+    ],
+    "axial_retention": "Outer-web stations: only the central 0.5 mm land is a proposed bond zone; flared mouths are unbonded relief. Inner-web stations retain the V2 socket. Bond strength and retention are unvalidated.",
+    "adhesive": "Unspecified pending PA12 surface preparation, actual bond gap and pull/shear coupon tests",
+    "design_load_factor": 3.0,
+    "retaining_wire_d_mm": 0.35,
+    "wire_groove_d_mm": 0.45,
+    "radial_retention": "Removable inward socket caps retained by 0.35 mm stainless lockwire in a 0.45 mm groove; CAD models a conservative square-section wire envelope, closure tail excluded.",
+    "socket_wall_mm": 0.85,
+    "bond_gap_mm": 0.15,
+    "non_mounting_web_clearance_mm": 0.3,
+    "mounting_webs": "CAD-derived rectangular webs: radius ~6.896 mm at +/-24 mm stations, ~19.229 mm at +/-12 mm; sockets follow the actual web slope.",
+    "socket_axial_span_mm": 3.24,
+    "cap_seat_boolean_clearance_mm": 0.03,
+    "socket_flare_slope": 1.5,
+    "socket_land_axial_mm": 0.5,
+    "socket_explicit_land_breakpoints": true,
+    "mounting_stiffness": "Four webs remain connected by a rigid frame. No claim that relief decouples their motion or preserves homogenised stiffness.",
+    "body_source": "../guides_v2; unchanged module bodies, disks, anchors and 21/24/28 mm lanes"
+  },
+  "cad_sha256": {
+    "M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+    "M5_z+12_caps.stl": "46821f04261afa1a71efd22ebc88dfc64197a74de15c29d358821b280f6c6639",
+    "M5_z+12_guide.stl": "69bb41386f384783003edd57d4ef104f3dd0746c7d656d96b7b500c39c42d8b2",
+    "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M5_z+24_guide.stl": "1855d0d503a48cdf5bc884c65492ae58e0971f1e269c48dd1717af9a2d073ad0",
+    "M5_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M5_z-12_caps.stl": "a7d3df756642ade6e9ae6f3ec0b4c81969f9ba73cbf0e7d13eaf40e3f8e62782",
+    "M5_z-12_guide.stl": "56fe89fa8738b39d5bfb1716cfc5ef3cef79c3d3421dc7a91998696cc6e6590b",
+    "M5_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M5_z-24_guide.stl": "009643ade2d0e8fef0f0f40806de32158ebb7a53c41708c5db9b5069abb064d8",
+    "M5_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b",
+    "M6_z+12_caps.stl": "46821f04261afa1a71efd22ebc88dfc64197a74de15c29d358821b280f6c6639",
+    "M6_z+12_guide.stl": "81b348fdfade7a791bac7bb90ea63c6664a30e91b90f41cdfc1a87da4438f4ff",
+    "M6_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M6_z+24_guide.stl": "4f243bc1f4b85ed134bc8c790fe2d1b4fcd42e5988001161626d9a32659e441b",
+    "M6_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_z-12_caps.stl": "a7d3df756642ade6e9ae6f3ec0b4c81969f9ba73cbf0e7d13eaf40e3f8e62782",
+    "M6_z-12_guide.stl": "2dac18977560e9a5f3ad1fd8fc0a78121ee7d0defa07931adfcc8e6c333f8abe",
+    "M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M6_z-24_guide.stl": "9dab856e1f06507b4b45474a976852954da9c74158b6edf052695cf5f25518c0",
+    "M6_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70"
+  },
+  "guide_cad_sha256": {
+    "M5_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M5_z+12_guide.stl": "763c14efc5af841776dc340d9f6c8a8213f991311dc8044a8dae302229bb9fb2",
+    "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M5_z+24_guide.stl": "1855d0d503a48cdf5bc884c65492ae58e0971f1e269c48dd1717af9a2d073ad0",
+    "M5_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M5_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M5_z-12_guide.stl": "2f840539abf2d14909e9a95326fa4c80e9e8e63f5f68871d77be8e184db88954",
+    "M5_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M5_z-24_guide.stl": "009643ade2d0e8fef0f0f40806de32158ebb7a53c41708c5db9b5069abb064d8",
+    "M5_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M6_z+12_guide.stl": "31fb75cf77e7d111dbb26af54bd2013957ecb48c00fb2ceb428534ba6c2faff3",
+    "M6_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M6_z+24_guide.stl": "4f243bc1f4b85ed134bc8c790fe2d1b4fcd42e5988001161626d9a32659e441b",
+    "M6_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M6_z-12_guide.stl": "c57d733bf41332953440ca0892c56f1182addb5d832d61202a560b2263a2d46e",
+    "M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M6_z-24_guide.stl": "9dab856e1f06507b4b45474a976852954da9c74158b6edf052695cf5f25518c0",
+    "M6_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70"
+  },
+  "coverage": {
+    "path": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944"
+  },
+  "selected_states": [
+    "193",
+    "194",
+    "195",
+    "196",
+    "197",
+    "198",
+    "199",
+    "198",
+    "199",
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "208",
+    "209",
+    "210",
+    "211",
+    "212",
+    "213",
+    "214",
+    "215",
+    "216"
+  ],
+  "selected_parts": [
+    "M5_z-24",
+    "M5_z-12",
+    "M5_z+12",
+    "M5_z+24",
+    "M6_z-24",
+    "M6_z-12",
+    "M6_z+12",
+    "M6_z+24"
+  ],
+  "requested_axial_resolutions_mm": [
+    0.5
+  ],
+  "rod_cells_per_module": 8,
+  "payload_g": 500,
+  "boolean_transfer_precision": "float64",
+  "body_scope": "complete deformed body; no cropping",
+  "surface_meshes": [
+    {
+      "module": "M5",
+      "resolution_mm": 0.5,
+      "vertices": 362720,
+      "faces": 725712,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31561.026388579558,
+      "watertight": true
+    },
+    {
+      "module": "M6",
+      "resolution_mm": 0.5,
+      "vertices": 326502,
+      "faces": 653244,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31760.738586685737,
+      "watertight": true
+    }
+  ],
+  "rows": [
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "193",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "194",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "195",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "196",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "197",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "198",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "198"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "199",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": [],
+      "reused_geometry_from_state": "199"
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "200",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "201",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "202",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "203",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "204",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "205",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.00015259851386350645,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00015259851386350645,
+          "center_station_cad_mm": [
+            7.296298923758096,
+            19.798323771417447,
+            -0.24915537621379202
+          ],
+          "bounds_mm": [
+            [
+              6.66499216197654,
+              19.00272121290257,
+              -0.26479703346615224
+            ],
+            [
+              9.207024074400032,
+              20.092495063735072,
+              -0.23217728055567477
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.004035283862405485,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.004035283862405485,
+          "center_station_cad_mm": [
+            7.846717526953453,
+            19.59204754860616,
+            0.25091235594506084
+          ],
+          "bounds_mm": [
+            [
+              6.656123063224191,
+              18.85809198850626,
+              0.20111737758242043
+            ],
+            [
+              9.488779157126695,
+              20.197221819703543,
+              0.3045957533835235
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "206",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.00024091201698170361,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00024091201698170361,
+          "center_station_cad_mm": [
+            7.430468315415577,
+            19.74345272608512,
+            -0.24909855909452963
+          ],
+          "bounds_mm": [
+            [
+              6.662499146406585,
+              18.90082102189865,
+              -0.26676901218809235
+            ],
+            [
+              9.446844988958048,
+              20.09860840914027,
+              -0.23014621712309236
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.00463166441363073,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.00463166441363073,
+          "center_station_cad_mm": [
+            7.87138509054873,
+            19.584345795657537,
+            0.2513132670730307
+          ],
+          "bounds_mm": [
+            [
+              6.6559499470757055,
+              18.853417114636102,
+              0.19911056194871435
+            ],
+            [
+              9.494622186093032,
+              20.20629676171336,
+              0.30814513253403675
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "207",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0011633220620573947,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0011633220620573947,
+          "center_station_cad_mm": [
+            7.809125171246696,
+            19.592244460989807,
+            -0.24904489401969984
+          ],
+          "bounds_mm": [
+            [
+              6.653671742009955,
+              18.880458290592003,
+              -0.27851666330957414
+            ],
+            [
+              9.45797782226165,
+              20.13266312804936,
+              -0.2193330214171283
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.007538363418083301,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.007538363316324866,
+          "center_station_cad_mm": [
+            7.941631939629483,
+            19.567145358105293,
+            0.25350296869058947
+          ],
+          "bounds_mm": [
+            [
+              6.653799025839877,
+              18.836730960191687,
+              0.19113626958517216
+            ],
+            [
+              9.517628340087615,
+              20.247944388837254,
+              0.32402163707024556
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "208",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M5_z-12",
+      "overlap_mm3": 9.802768375600912e-05,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 9.802768375600912e-05,
+          "center_station_cad_mm": [
+            7.2018195461338665,
+            19.83684498114684,
+            -0.24922510185476593
+          ],
+          "bounds_mm": [
+            [
+              6.667426306631741,
+              19.24705191346297,
+              -0.2630675833563032
+            ],
+            [
+              8.617157601723841,
+              20.087050859240918,
+              -0.2340172482925027
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.003505338977202996,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.003505338977202996,
+          "center_station_cad_mm": [
+            7.822267030730569,
+            19.599871638914347,
+            0.2505675592469019
+          ],
+          "bounds_mm": [
+            [
+              6.656315299774295,
+              18.86256219639887,
+              0.20314181617970917
+            ],
+            [
+              9.4834665948685,
+              20.188464726031498,
+              0.30117520514863827
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "209",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M5_z-12",
+      "overlap_mm3": 4.7082578407519016e-07,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0020458755786937808,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0020458755786937808,
+          "center_station_cad_mm": [
+            7.7455247990954845,
+            19.624726934763505,
+            0.2496834872134727
+          ],
+          "bounds_mm": [
+            [
+              6.661478071183012,
+              18.87474734640375,
+              0.2106742385705047
+            ],
+            [
+              9.473397309043591,
+              20.15646934290561,
+              0.2896846888396567
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "210",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "211",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "212",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "213",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "214",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "215",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "216",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    }
+  ],
+  "completed": true,
+  "elapsed_seconds": 102.10624796500088,
+  "all_selected_poses_clear": false
+}

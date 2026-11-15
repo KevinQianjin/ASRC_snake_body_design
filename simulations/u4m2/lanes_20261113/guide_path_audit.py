@@ -16,6 +16,7 @@ import vtk
 from vtk.util.numpy_support import numpy_to_vtk, numpy_to_vtkIdTypeArray, vtk_to_numpy
 import trimesh
 import lanes
+from cad_surface_refinement import refine_axial, axial_span
 from state_archives import load_states
 from rope_guide_study import _guide_spans
 
@@ -56,8 +57,12 @@ def map_cad(vertices, module, rod, details):
 
 
 class FlexureDistance:
-    def __init__(self, path):
+    def __init__(self, path, max_axial_span_mm=None):
         self.mesh = trimesh.load_mesh(path, force='mesh')
+        self.source_max_axial_span_mm = axial_span(self.mesh)
+        if max_axial_span_mm is not None:
+            self.mesh = refine_axial(self.mesh, max_axial_span_mm)
+        self.max_axial_span_mm = axial_span(self.mesh)
         self.faces = self.mesh.faces[np.max(abs(self.mesh.vertices[self.mesh.faces, 2]), axis=1) <= 40.0001]
         self.poly = vtk.vtkPolyData()
         cells = vtk.vtkCellArray()
@@ -108,12 +113,14 @@ class FlexureDistance:
         return signed
 
 
-def audit(archives, output, radii=(21., 24., 27.), geometry=True, cad=CAD):
+def audit(archives, output, radii=(21., 24., 27.), geometry=True, cad=CAD, max_axial_span_mm=1.):
     lanes.install(radii, 24.)
     rod = lanes.backbone.spatial_rod(4, 2, [4, 5, 6], 20, 8)
-    bodies = {j: FlexureDistance(cad / name) for j, name in [(4, 'M5_lane_anchorB.stl'), (5, 'M6_lane_anchorC.stl')]} if geometry else {}
+    bodies = {j: FlexureDistance(cad / name, max_axial_span_mm) for j, name in [(4, 'M5_lane_anchorB.stl'), (5, 'M6_lane_anchorC.stl')]} if geometry else {}
     output.mkdir(parents=True, exist_ok=True)
-    summary = dict(scope=__doc__, radii_mm=list(radii), coverage=[], maximum_hole_force_n=0., maximum_station_force_n=0.,
+    summary = dict(scope=__doc__, cad_max_axial_span_mm=max_axial_span_mm,
+                   surface_discretisation_note='Refine undeformed STL before nonlinear beam mapping. Rope sampling allowance does not bound CAD mapping, physical deformation or contact error.',
+                   radii_mm=list(radii), coverage=[], maximum_hole_force_n=0., maximum_station_force_n=0.,
                    maximum_station_moment_nmm=0., per_hole={}, per_station={}, minimum_flexure_clearance_bound_mm=None,
                    end_region_penetrating_states=0, maximum_end_region_center_penetration_mm=0.,
                    flexure_screen_failed_states=0, geometry_checked=geometry, unique_geometry_states=0,
@@ -121,8 +128,8 @@ def audit(archives, output, radii=(21., 24., 27.), geometry=True, cad=CAD):
     cache = {}
     with gzip.open(output / 'hole_loads.csv.gz', 'wt', newline='') as lf, (output / 'path_checks.csv').open('w', newline='') as pf:
         fields = ['archive', 'state', 'phase', 'module', 'station_z_mm', 'set', 'ray', 'tension_n', 'fx_n', 'fy_n', 'fz_n', 'force_n']
-        loads = csv.DictWriter(lf, fields); loads.writeheader()
-        checks = csv.DictWriter(pf, ['archive', 'state', 'phase', 'maximum_hole_force_n', 'maximum_station_force_n', 'flexure_clearance_bound_mm', 'flexure_screen_pass', 'end_region_centerline_points_inside', 'maximum_end_region_center_penetration_mm'])
+        loads = csv.DictWriter(lf, fields, lineterminator='\n'); loads.writeheader()
+        checks = csv.DictWriter(pf, ['archive', 'state', 'phase', 'maximum_hole_force_n', 'maximum_station_force_n', 'flexure_clearance_bound_mm', 'flexure_screen_pass', 'end_region_centerline_points_inside', 'maximum_end_region_center_penetration_mm'], lineterminator='\n')
         checks.writeheader()
         for archive in archives:
             states, coverage = load_states(archive, rod.ndof); summary['coverage'].append(coverage)
@@ -197,5 +204,6 @@ if __name__ == '__main__':
     ap.add_argument('--radii', nargs=3, type=float, default=(21.,24.,27.))
     ap.add_argument('--loads-only', action='store_true')
     ap.add_argument('--cad', type=Path, default=CAD)
+    ap.add_argument('--cad-max-axial-span-mm', type=float, default=1., help='Undeformed CAD surface axial refinement, distinct from rod mesh')
     args = ap.parse_args()
-    audit(args.archives, args.out, args.radii, not args.loads_only, args.cad)
+    audit(args.archives, args.out, args.radii, not args.loads_only, args.cad, args.cad_max_axial_span_mm)
