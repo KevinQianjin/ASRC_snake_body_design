@@ -2,6 +2,11 @@
 
 [GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 15 November 2026
 
+Times in reports, updates and scheduled handoffs use **US Eastern Time
+(America/New_York)** and include the equivalent **UTC** timestamp. Use EST
+(UTC−05:00) or EDT (UTC−04:00) according to the date; see
+[time and provenance conventions](docs/time_conventions.md).
+
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
 ## Daily updates

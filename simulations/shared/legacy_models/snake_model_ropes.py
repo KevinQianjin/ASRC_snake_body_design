@@ -12,6 +12,7 @@ import copy
 import csv
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import hashlib
 import json
 import os
@@ -630,8 +631,10 @@ def print_case(summary):
 
 def save_outputs(output_dir, config, seed, cases, properties, con, before):
     output_dir.mkdir(parents=True, exist_ok=True)
-    created = datetime.now(timezone.utc).isoformat()
-    body = dict(created_utc=created, config=config, material_catalog=seed,
+    created_at = datetime.now(timezone.utc)
+    created = created_at.isoformat()
+    body = dict(created_et=created_at.astimezone(ZoneInfo("America/New_York")).isoformat(),
+                created_utc=created, config=config, material_catalog=seed,
                 original_sha256=before, backbone_properties=properties, cases=cases,
                 model_scope="3D bending + axial strain, no independent twist/shear/contact; reference materials")
     write_json(output_dir/"comparison.json", body)

@@ -1,6 +1,14 @@
 {
   "study": "h8u12_front5to8_payload500g",
-  "created_date_hong_kong": "2026-11-05",
+  "created_time_precision": "calendar day only; exact creation instant was not recorded",
+  "created_time_window_et": {
+    "start": "2026-11-04T11:00:00-05:00",
+    "end_exclusive": "2026-11-05T11:00:00-05:00"
+  },
+  "created_time_window_utc": {
+    "start": "2026-11-04T16:00:00+00:00",
+    "end_exclusive": "2026-11-05T16:00:00+00:00"
+  },
   "configurations": 22,
   "unit_tests_passed": 6,
   "equilibrium_and_data_checks_passed": true,
@@ -40,8 +48,8 @@
     },
     {
       "path": "input_provenance.json",
-      "bytes": 1617,
-      "sha256": "88e718b767d76b18f5d3354602b4edcc7a68e4af0c5f019687cbd4a1ec2c2940"
+      "bytes": 1277,
+      "sha256": "349c959384ed50af5241f3dcba9b76ce7158a2d6e663039babf85354e8d7a551"
     },
     {
       "path": "inputs/craft_data.py",

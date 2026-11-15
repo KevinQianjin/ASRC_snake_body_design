@@ -143,7 +143,10 @@ for attempt in 1 2 3; do
     if [ -n "$remote_head" ] && [ "$upload_tree" = "$remote_tree" ] && [ "$preserve_history" = 0 ]; then
         upload_commit="$remote_head"
     else
-        upload_commit="$(git commit-tree "$upload_tree" "${parents[@]}" -m "Upload ASRC folder $(TZ=Asia/Hong_Kong date '+%Y-%m-%d %H:%M:%S %Z')")"
+        upload_timestamp_epoch="$(date +%s)"
+        upload_time_et="$(TZ=America/New_York date -d "@$upload_timestamp_epoch" '+%Y-%m-%d %H:%M:%S %Z (UTC%z)' 2>/dev/null || TZ=America/New_York date -r "$upload_timestamp_epoch" '+%Y-%m-%d %H:%M:%S %Z (UTC%z)')"
+        upload_time_utc="$(date -u -d "@$upload_timestamp_epoch" '+%Y-%m-%d %H:%M:%S UTC' 2>/dev/null || date -u -r "$upload_timestamp_epoch" '+%Y-%m-%d %H:%M:%S UTC')"
+        upload_commit="$(git commit-tree "$upload_tree" "${parents[@]}" -m "Upload ASRC folder $upload_time_et / $upload_time_utc")"
     fi
     git update-ref refs/uploader/pending "$upload_commit"
     printf '\n正在上傳 GitHub……\n'
