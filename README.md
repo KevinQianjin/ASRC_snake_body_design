@@ -13,7 +13,9 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 15 November 2026 (latest): refined CAD checks and V3 saddle development
+### 15 November 2026 — Morning Report (latest): refined CAD checks and V3 saddle development
+
+**Morning Report timing:** reporting cutoff and actual run start **15 November 2026 07:01:11 EST (12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same date. These are recorded execution times; future morning runs are scheduled for **07:00 US Eastern Time (12:00 UTC in EST / 11:00 UTC in EDT)**, with a maximum runtime of **two hours**.
 
 The head remains **500 g**. Today's work separates numerical collision error from actual mounting problems, and produces reproducible V3 CAD, updated mass equilibria and a detailed English report.
 
@@ -23,11 +25,11 @@ The head remains **500 g**. Today's work separates numerical collision error fro
 - **Rope and force evidence:** minimum sampled middle-flexure clearance **4.890 mm**, peak hole load **5.522 N**. **57/217 records** still contain end-region rope-centre penetration, maximum **0.2406 mm**.
 - **Verification and limits:** 30 distinct tests and 11 configuration checks pass; all 24 V2 guide/cap/wire STLs reproduce exactly with relief disabled. The final nominal bonding area is only about **5.67 mm² per outer saddle**. Joint strength, mounting stiffness and finite rope contact remain unresolved; **not released for manufacture**, and no new full closed-loop replay is claimed. A 0.25 mm refinement attempt exceeded the 8 GiB memory limit; the completed contact results use 0.5 mm resolution.
 
-[Full English daily report](reports/daily/Report_2026_11_15.md) · [V3 CAD and installation limits](cad/lanes_u4m2/guides_v3/README.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md) · [Comparison figure](simulations/u4m2/lanes_20261113/guided_refinement_20261115/comparison.png)
+[Full English Morning Report](reports/daily/Morning_Report_2026_11_15.md) · [V3 CAD and installation limits](cad/lanes_u4m2/guides_v3/README.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md) · [Comparison figure](simulations/u4m2/lanes_20261113/guided_refinement_20261115/comparison.png)
 
 ### 14 November 2026: guided 500 g paths and a rejected rigid-mount candidate
 
-Validated ideal guided startup and a complete 500 g closed-loop cycle, corrected archive coverage, and produced the V2 mounting CAD and guide loads. Physical mounting and finite end routing failed their separate checks. The 15 November update refines the coarse CAD collision screen; retain the older numbers as a dated snapshot.
+Validated ideal guided startup and a complete 500 g closed-loop cycle, corrected archive coverage, and produced the V2 mounting CAD and guide loads. Physical mounting and finite end routing failed their separate checks. The 15 November Morning Report refines the coarse CAD collision screen; retain the older numbers as a dated snapshot.
 
 [Full validation report](simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) · [V2 CAD](cad/lanes_u4m2/guides_v2/README.md) · [Archived evidence](simulations/u4m2/lanes_20261113/guided_validation_20261114/)
 
@@ -100,7 +102,7 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
-The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture; see the latest daily report.
+The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture; see the latest Morning Report.
 
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 

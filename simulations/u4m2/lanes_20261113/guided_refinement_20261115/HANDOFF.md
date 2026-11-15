@@ -1,11 +1,20 @@
-# Next-run handoff — 15 November 2026
+# Next morning-run handoff — 15 November 2026
 
-Read the [daily report](../../../../reports/daily/Report_2026_11_15.md),
+Read the [Morning Report](../../../../reports/daily/Morning_Report_2026_11_15.md),
 [validated summary](validated_summary.json), [evidence map](README.md) and
 [V3 CAD notes](../../../../cad/lanes_u4m2/guides_v3/README.md) before launching work.
 Fetch `codex/guide-validation` and compare `origin/main`; do not assume this
 cloud filesystem or a particular commit remains current. The report identifies
 the baseline revision; the Git commit containing these files records the update.
+
+## Next morning schedule and reference status
+
+Next scheduled start: **16 November 2026 07:00 EST (12:00 UTC)**. The current
+runtime limit is **two hours**, giving **09:00 EST (14:00 UTC)** as the deadline
+for an on-time start. Treat the priorities below as a reference: fetch the
+latest GitHub commits and any newer evening report before choosing the work.
+Publish an English Morning Report and send a completion summary, including
+failures or incomplete work, when the run finishes.
 
 ## Completed evidence to reuse
 
