@@ -1,0 +1,18 @@
+test_closed_surface_volume_winding_and_original_vertices_are_preserved (test_cad_surface_refinement.SurfaceRefinementTests.test_closed_surface_volume_winding_and_original_vertices_are_preserved) ... ok
+test_curved_surface_chord_error_decreases_with_refinement (test_cad_surface_refinement.SurfaceRefinementTests.test_curved_surface_chord_error_decreases_with_refinement) ... ok
+test_invalid_resolution_is_rejected (test_cad_surface_refinement.SurfaceRefinementTests.test_invalid_resolution_is_rejected) ... ok
+test_refines_actual_cad_without_open_edges (test_cad_surface_refinement.SurfaceRefinementTests.test_refines_actual_cad_without_open_edges) ... ok
+test_station_slab_preserves_actual_bent_guide_intersection (test_cad_surface_refinement.SurfaceRefinementTests.test_station_slab_preserves_actual_bent_guide_intersection) ... FAIL
+
+======================================================================
+FAIL: test_station_slab_preserves_actual_bent_guide_intersection (test_cad_surface_refinement.SurfaceRefinementTests.test_station_slab_preserves_actual_bent_guide_intersection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/test_cad_surface_refinement.py", line 74, in test_station_slab_preserves_actual_bent_guide_intersection
+    self.assertAlmostEqual(a,b,delta=1e-4)
+AssertionError: np.float64(5.349993200399784) != np.float64(5.350972358944698) within 0.0001 delta (np.float64(0.0009791585449132612) difference)
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.976s
+
+FAILED (failures=1)

@@ -1,0 +1,62 @@
+mass_holds_states.npz 0 hole N 0.634 gap mm 5.356048151590232
+mass_holds_states.npz 100 hole N 1.917 gap mm 5.584547426407563
+{
+  "scope": "Per-hole loads and sampled deformed-CAD flexure clearance along saved paths.\n\nThis maps the supplied M CAD to the rod's material frames, not a solid FEA.\nRopes are 2 mm diameter; sample spacing <=1 mm yields a 0.5 mm distance bound.\nEnd disks/anchors are excluded from the flexure screen (|local Z| <=40 mm).\nGuide mounts and intended rope/eyelet contact need separate physical validation.\n",
+  "cad_max_axial_span_mm": 0.5,
+  "surface_discretisation_note": "Refine undeformed STL before nonlinear beam mapping. Rope sampling allowance does not bound CAD mapping, physical deformation or contact error.",
+  "radii_mm": [
+    21.0,
+    24.0,
+    28.0
+  ],
+  "coverage": [
+    {
+      "path": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+      "format": "reference",
+      "states": 181,
+      "unsolved_records_without_states": 0,
+      "sha256": "f16dd94a26905640669b1020e7e5b95bb9784ce290a03272a99861d413809c77"
+    }
+  ],
+  "maximum_hole_force_n": 5.521499496535515,
+  "maximum_station_force_n": 27.44142654925045,
+  "maximum_station_moment_nmm": 60.8422013156261,
+  "minimum_flexure_clearance_bound_mm": 4.890516453367939,
+  "end_region_penetrating_states": 46,
+  "maximum_end_region_center_penetration_mm": 0.2406042982745616,
+  "flexure_screen_failed_states": 0,
+  "geometry_checked": true,
+  "unique_geometry_states": 163,
+  "cad_sha256": {
+    "M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+    "M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b"
+  },
+  "peak_station_moment": {
+    "archive": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+    "state": "47",
+    "phase": "inverse",
+    "module": "M5",
+    "station_z_mm": -12,
+    "force_local_n": [
+      -0.6033512449870169,
+      7.761477926877646,
+      7.653383003832768
+    ],
+    "moment_local_nmm": [
+      58.012351400403816,
+      9.026503603227805,
+      15.964422276679956
+    ],
+    "moment_nmm": 60.8422013156261
+  },
+  "worst_clearance_state": {
+    "archive": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+    "state": "63",
+    "phase": "inverse"
+  },
+  "worst_end_region_penetration_state": {
+    "archive": "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+    "state": "155",
+    "phase": "left_out"
+  }
+}

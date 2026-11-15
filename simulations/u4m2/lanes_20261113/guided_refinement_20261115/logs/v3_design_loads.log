@@ -1,0 +1,48 @@
+{
+  "scope": "Turn exported guide loads into traceable preliminary design-load requirements.\n\nNo material allowables are assumed. This is not a stress FEA or a strength pass.\nThe arm calculation idealises each radial arm as a rectangular cantilever rooted\nat r=7.8 mm and ignores hole stress concentrations and frame/web load sharing.\n",
+  "factor": 3.0,
+  "assumed_arm_root_radius_mm": 7.8,
+  "assumed_arm_width_mm": 4.0,
+  "assumed_thickness_mm": 3.2,
+  "operating_maxima": {
+    "station_sum_hole_force_n": {
+      "value": 27.453507580286516,
+      "location": [
+        "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+        "141",
+        "M5",
+        "24"
+      ]
+    },
+    "hole_projected_bearing_mpa": {
+      "value": 0.862734296333674,
+      "location": [
+        "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+        "137",
+        "M5",
+        "24",
+        "B",
+        "up"
+      ]
+    },
+    "arm_nominal_normal_stress_mpa": {
+      "value": 17.38472840744808,
+      "location": [
+        "guided_refinement_20261115/v3_mass_holds/mass_holds_states.npz",
+        "64",
+        "M5",
+        "24",
+        "left"
+      ]
+    }
+  },
+  "scaled_design_requirements": {
+    "single_hole_force_n": 16.564498489606546,
+    "station_net_force_n": 82.32427964775135,
+    "station_net_moment_nmm": 182.5266039468783,
+    "station_sum_absolute_hole_forces_n": 82.36052274085955,
+    "nominal_arm_normal_stress_mpa": 52.15418522234424,
+    "nominal_hole_bearing_mpa": 2.588202889001022
+  },
+  "acceptance": "Not assessed: printed strength, stress concentrations, anisotropy, fatigue, friction, bond/wire capacity and mount load sharing are unvalidated. Moment and force maxima may occur in different states; use the per-state loads for combined-load tests."
+}

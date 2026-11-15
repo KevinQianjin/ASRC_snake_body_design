@@ -1,0 +1,66 @@
+{
+  "scope": "CAD volume estimates, not measured mass. Each module total is distributed uniformly over rod cells. Nominal homogenised module stiffness retained. Adhesive/closure tails excluded; wire square envelope is conservative. 500 g head includes its adapter. Base mass is supported at the clamp.",
+  "densities_kg_per_mm3": {
+    "PA12": 9.3e-07,
+    "NiTi": 6.45e-06,
+    "steel": 7.9e-06
+  },
+  "components": [
+    {
+      "module": "U1",
+      "body_kg": 0.022232859,
+      "elastic_insert_kg": 0.017082180000000002,
+      "guide_and_caps_kg": 0.0,
+      "wire_envelope_kg": 0.0,
+      "joint_allocation_kg": 0.0013
+    },
+    {
+      "module": "U2",
+      "body_kg": 0.022232859,
+      "elastic_insert_kg": 0.017082180000000002,
+      "guide_and_caps_kg": 0.0,
+      "wire_envelope_kg": 0.0,
+      "joint_allocation_kg": 0.0013
+    },
+    {
+      "module": "U3",
+      "body_kg": 0.022232859,
+      "elastic_insert_kg": 0.017082180000000002,
+      "guide_and_caps_kg": 0.0,
+      "wire_envelope_kg": 0.0,
+      "joint_allocation_kg": 0.0013
+    },
+    {
+      "module": "U4",
+      "body_kg": 0.023424654,
+      "elastic_insert_kg": 0.017082180000000002,
+      "guide_and_caps_kg": 0.0,
+      "wire_envelope_kg": 0.0,
+      "joint_allocation_kg": 0.0013
+    },
+    {
+      "module": "M5",
+      "body_kg": 0.02935173,
+      "elastic_insert_kg": 0.0015756720785932681,
+      "guide_and_caps_kg": 0.008206072332511936,
+      "wire_envelope_kg": 0.0002557048388240116,
+      "joint_allocation_kg": 0.0013
+    },
+    {
+      "module": "M6",
+      "body_kg": 0.029537451,
+      "elastic_insert_kg": 0.0015756720785932681,
+      "guide_and_caps_kg": 0.008470506444066593,
+      "wire_envelope_kg": 0.0002557048388240116,
+      "joint_allocation_kg": 0.0013
+    }
+  ],
+  "module_mass_kg": [
+    0.040615039000000006,
+    0.040615039000000006,
+    0.040615039000000006,
+    0.041806834,
+    0.040689179249929215,
+    0.04113933436148387
+  ]
+}

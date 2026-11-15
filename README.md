@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 14 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 15 November 2026
 
 Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm tendon-driven flexible front. The front has proximal U modules (PA12 + NiTi) and distal M modules (PA12), 96 mm each. It carries a 500 g camera and induction thermography head. Development targets are a 500 g payload, about 1.5 m reach and a diameter below 100 mm.
 
@@ -8,21 +8,23 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 14 November 2026 (latest): guided 500 g paths and a rejected rigid-mount candidate
+### 15 November 2026 (latest): refined CAD checks and V3 saddle development
 
-The guide study now reads every saved state format, records closed-loop motion states, and uses the four actual guide stations at **−24, −12, +12 and +24 mm** on both the eight- and sixteen-cell meshes. The old archive reader silently missed matrix-form results; coverage of the four supplied historical archives is corrected from **68 to 2,270 states**.
+The head remains **500 g**. Today's work separates numerical collision error from actual mounting problems, and produces reproducible V3 CAD, updated mass equilibria and a detailed English report.
 
-- **500 g validation:** rerun startup, 0–175° held-elevation steering and the complete insertion/right/left/return/withdrawal cycle with ideal guides. Export every guide-hole load and screen the moving ropes against beam-mapped M-body flexures. The V2 comparison includes CAD-estimated module, guide, cap and retaining-wire masses.
-- **A real mounting error found:** the previous ±12 mm clips had no inner web to grip. V2 uses actual inner webs at ±24 mm and actual outer webs at ±12 mm, with eight distinct CAD-derived socket frames.
-- **V2 CAD:** A/B/C radii become **21/24/28 mm**, with regenerated matching disks and anchors. Ø2.6 mm bores, Ø3.0 mm rounded entries and a 3.2 mm guide thickness leave 1.4 mm at the B–C bore bridge and 1.0 mm at the mouth. Removable caps, retaining-wire envelopes and an adhesive gap define the proposed attachment.
-- **Release decision:** all eight frames pass straight assembly and mesh checks, but rigid guide mounting intersects the M body in bent poses, and some rope spans penetrate end-region material. The mounting is **not ready for manufacture**. The ideal guided-rope simulation does not include that contact or the extra stiffness imposed by the mounts.
-- **Verification:** nine new archive/geometry/mass/load tests and fourteen existing numerical/control tests pass. The report distinguishes simulation checks, preliminary sizing requirements and unresolved physical behaviour.
+- **Corrected CAD deformation:** the source STL has triangles spanning 24.6 mm axially. Conforming surface refinement reduces the V2 175° maximum overlap from 31.10 to **5.97 mm³**; remaining contact lies at the outer saddles in the three checked holds. This reduction corrects the measurement rather than proving a mechanical improvement.
+- **V3 geometry:** flared outer sockets retain a true **0.5 mm land**, a 0.15 mm central gap and **1.5:1 mouth relief**. Explicit loft breakpoints fix an error that otherwise distorted the land and could split caps. All eight straight assemblies pass; **112 exported-STL gap measurements** agree with the design. Rope lanes/stations and the independent NiTi backbone are retained; no end ferrule is added.
+- **Expanded validation:** **217 re-solved records / 199 unique geometries**, including 36 additional unseen motion geometries, receive **1736 guide-part checks**. **55 records still have guide contact**, maximum **0.008959 mm³**. The earlier three-pose pass missed intermediate-angle failures; this remains a development candidate.
+- **Rope and force evidence:** minimum sampled middle-flexure clearance **4.890 mm**, peak hole load **5.522 N**. **57/217 records** still contain end-region rope-centre penetration, maximum **0.2406 mm**.
+- **Verification and limits:** 30 distinct tests and 11 configuration checks pass; all 24 V2 guide/cap/wire STLs reproduce exactly with relief disabled. The final nominal bonding area is only about **5.67 mm² per outer saddle**. Joint strength, mounting stiffness and finite rope contact remain unresolved; **not released for manufacture**, and no new full closed-loop replay is claimed. A 0.25 mm refinement attempt exceeded the 8 GiB memory limit; the completed contact results use 0.5 mm resolution.
 
-<!-- GUIDED_METRICS -->
-V2 recorded **1,200 settled samples** and **2,526 motion trace states**. Control and envelope failures (settled / motion): **0 / 0**. Motion tension range: **3.00–18.06 N**. The sampled rope/flexure clearance bound is **4.92 mm**; the largest single-hole load is **5.52 N**. **985 audited records** also contain rope-centre penetration of end-region material. The ideal-guide results do not resolve the rigid mounting or finite end-hole contact problems.
-<!-- END_GUIDED_METRICS -->
+[Full English daily report](reports/daily/Report_2026_11_15.md) · [V3 CAD and installation limits](cad/lanes_u4m2/guides_v3/README.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md) · [Comparison figure](simulations/u4m2/lanes_20261113/guided_refinement_20261115/comparison.png)
 
-[Full English validation report](simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) · [V2 CAD and installation concept](cad/lanes_u4m2/guides_v2/README.md) · [Results and load exports](simulations/u4m2/lanes_20261113/guided_validation_20261114/) · [Current limitations](docs/limitations.md)
+### 14 November 2026: guided 500 g paths and a rejected rigid-mount candidate
+
+Validated ideal guided startup and a complete 500 g closed-loop cycle, corrected archive coverage, and produced the V2 mounting CAD and guide loads. Physical mounting and finite end routing failed their separate checks. The 15 November update refines the coarse CAD collision screen; retain the older numbers as a dated snapshot.
+
+[Full validation report](simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) · [V2 CAD](cad/lanes_u4m2/guides_v2/README.md) · [Archived evidence](simulations/u4m2/lanes_20261113/guided_validation_20261114/)
 
 ### 13 November 2026: separate rope lanes and build package
 
@@ -93,6 +95,8 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
+The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture; see the latest daily report.
+
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 
 The U STEP contains one full-envelope body solid (96 mm long, about 63.24 mm across) and four separate leaf-spring solids (about 94 mm long). The M STEP contains one full-envelope body solid. The STEP product tree lists wing and disk items, but not as separate solid meshes; the full-envelope body geometry means that alone does not show the module body is missing. The STEP files do not encode material labels. The intended split is U body in PA12 with four NiTi spring elements, and M body in PA12. The current M study adds a separate Ø1.8 mm NiTi backbone to each M module.
@@ -105,11 +109,11 @@ The original SCAD preview arranges the six modules in a straight line without th
 
 ## Next steps
 
-1. ~~Enforce operating pretension throughout the control sequence and refine the corrected path below the 5 mm sampling bound~~ — done in simulation on 12 November (v2). The 17° insertion reference was then fixed (v3); four of five cases pass every check. Next: online gain update for the 550 g large-yaw transient.
-2. Add intermediate rope guides to the M modules and route the ropes through them in the model (per-cell chords); without them the M5 ropes rub the spring strips beyond about 15° yaw (13 November).
-3. Re-run the lane pipeline with the printed part masses, then print one U and one M module and test them ([build guide](cad/lanes_u4m2/BUILD_GUIDE.md), section 10).
-4. Add actuator dynamics, sensing noise/delay and calibrated friction, backlash and hysteresis.
-5. Test the backbone module and interfaces, then integrate the actual head, cables and rear deployment mechanism.
+1. Resolve the remaining guide/land contact with an explicit local structural/contact model and a defensible bonded, articulated or compliant attachment. Include the effect on M-module stiffness and guide position.
+2. Revise finite end-hole/anchor routing and check the full 2 mm rope envelope, material bridges and contact/friction.
+3. With a physically compatible candidate, update mass/stiffness and replay the complete **500 g** closed-loop path, including finer equilibrium meshes and uncertainty cases.
+4. Qualify printed parts, adhesive, lockwire, assembly access and cyclic wear using the simultaneous exported guide loads.
+5. Add measured friction/backlash/hysteresis, actuator/sensor dynamics, actual head/harness geometry and rear deployment hardware.
 
 [Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 

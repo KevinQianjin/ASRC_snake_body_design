@@ -15,7 +15,7 @@ def inspect(root,radii,cad):
     lanes.install(radii,24);r=lanes.backbone.spatial_rod(4,2,[4,5,6],20,8)
     d=r.evaluate(z,T,detail=True)[2];records=[]
     for j,filename in [(4,'M5_lane_anchorB.stl'),(5,'M6_lane_anchorC.stl')]:
-        body=FlexureDistance(cad/filename);body.update(map_cad(body.mesh.vertices,j,r,d))
+        body=FlexureDistance(cad/filename,summary.get('cad_max_axial_span_mm'));body.update(map_cad(body.mesh.vertices,j,r,d))
         nodes=np.array([0,2,3,5,6,8])+j*8
         for k in ([1,2] if j==4 else [2]):
             for ray in range(4):

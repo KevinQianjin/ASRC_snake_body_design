@@ -35,7 +35,7 @@ def loft(bounds,zs):
     n=len(v);f.extend([[n-4,n-3,n-2],[n-4,n-2,n-1]])
     m=trimesh.Trimesh(v,f,process=True);m.fix_normals();return m
 
-def expand(bounds,g):return bounds+np.array([-g,-g,g,g])
+def expand(bounds,g):return bounds+np.asarray(g)[...,None]*np.array([-1.,-1.,1.,1.])
 
 def sections(body,z):
     sec=body.section(plane_origin=[0,0,z],plane_normal=[0,0,1])
@@ -45,6 +45,9 @@ def sections(body,z):
 def profiles(station):
     body=trimesh.load_mesh(HERE/'M5_lane_anchorB.stl',force='mesh')
     h=D['plate_thickness_mm'];zs=np.linspace(-h/2-.02,h/2+.02,9)
+    if abs(station)==12 and D.get('socket_flare_slope',0)>0 and D.get('socket_explicit_land_breakpoints',False):
+        land=D['socket_land_axial_mm']/2
+        zs=np.unique(np.r_[zs,-land,land])
     reference=sections(body,station)
     stack=[sections(body,station+z) for z in zs]
     out=[]
@@ -80,12 +83,17 @@ def guide(kind,station):
     expected=6.896 if abs(station)==24 else 19.229
     for p in profiles(station):
         angle=p['angle'];selected=abs(p['radius']-expected)<.2 and any(abs((angle-a+180)%360-180)<.2 for a in D['web_angles_deg'])
-        gap=.15 if selected else .30
+        gap=D['bond_gap_mm'] if selected else D['non_mounting_web_clearance_mm']
+        # Optional V3 socket-mouth relief. Zero slope reproduces the V2 CAD.
+        # The narrow central land keeps the original datum gap; the flanks are
+        # relieved rather than assumed to be bonded over the full socket depth.
+        if selected and abs(station)==12 and D.get('socket_flare_slope',0):
+            gap=gap+D['socket_flare_slope']*np.maximum(abs(p['zs'])-D['socket_land_axial_mm']/2,0)
         inner=expand(p['bounds'],gap)
         bore=place(loft(inner,p['zs']),angle);cuts.append(bore)
         if not selected:continue
         # The four keyed saddles follow each web's actual slope through the plate.
-        outer=expand(inner,.85)
+        outer=expand(inner,D['socket_wall_mm'])
         solid=place(loft(outer,p['zs']),angle);solids.append(solid)
         # Inward cap closes a radial assembly opening; lockwire holds it after bonding.
         cb=outer.copy();cb[:,1]=inner[:,1];cb[:,2]=inner[:,0];cb[:,3]=inner[:,3]
@@ -104,8 +112,9 @@ def guide(kind,station):
         groove=place(prism(wire_outer.buffer(.05).difference(wire_inner.buffer(-.05)),D['wire_groove_d_mm']),angle)
         wires.append(wire);cuts.append(groove)
         caps[-1]=boolean('difference',[caps[-1],groove])
-        mounts.append(dict(angle_deg=angle,web_center_radius_mm=p['radius'],bond_gap_mm=gap,section_bounds_radial_tangential_mm=p['bounds'][4].tolist(),
-                           station_z_mm=station,web_section_count=len(p['zs']),bond_area_estimate_mm2=float(2*((p['bounds'][4,2]-p['bounds'][4,0])+(p['bounds'][4,3]-p['bounds'][4,1]))*h)))
+        center_bounds=p['bounds'][len(p['bounds'])//2]
+        mounts.append(dict(angle_deg=angle,web_center_radius_mm=p['radius'],bond_gap_mm=float(np.min(gap)),maximum_socket_gap_mm=float(np.max(gap)),section_bounds_radial_tangential_mm=center_bounds.tolist(),
+                           station_z_mm=station,web_section_count=len(p['zs']),bond_area_estimate_mm2=float(2*((center_bounds[2]-center_bounds[0])+(center_bounds[3]-center_bounds[1]))*h)))
     if len(mounts)!=4:raise RuntimeError(f'{station}: four real web mounts required, found {len(mounts)}')
     main=boolean('difference',[boolean('union',solids)]+cuts+cap_cuts)
     parts=[c for c in main.split(only_watertight=False) if abs(c.volume)>1e-4]

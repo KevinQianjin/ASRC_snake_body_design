@@ -1,0 +1,21 @@
+{
+  "negative_cases": [
+    {
+      "case": "mismatched_input_hash",
+      "rejected": true,
+      "reason": "Checkpoint inputs or numerical methods differ"
+    },
+    {
+      "case": "conflicting_duplicate_measurement",
+      "rejected": true,
+      "reason": "Duplicate checkpoint measurements disagree"
+    },
+    {
+      "case": "missing_part_check",
+      "rejected": true,
+      "reason": "Combined checkpoints do not cover all requested checks"
+    }
+  ],
+  "all_pass": true,
+  "complete_unique_part_checks": 1736
+}

@@ -11,9 +11,11 @@ import trimesh
 import lanes
 from guide_path_audit import map_cad
 from state_archives import load_states
+from cad_surface_refinement import refine_axial
+from mesh_boolean64 import intersection64
 
 
-def audit(archive,cad,out,labels):
+def audit(archive,cad,out,labels,max_axial_span_mm=1.):
     lanes.install((21,24,28),24)
     rod=lanes.backbone.spatial_rod(4,2,[4,5,6],20,8)
     states,coverage=load_states(archive)
@@ -25,6 +27,7 @@ def audit(archive,cad,out,labels):
         details=rod.evaluate(z,T,detail=True)[2]
         for j,kind in [(4,'M5'),(5,'M6')]:
             body=trimesh.load_mesh(cad/('M5_lane_anchorB.stl' if j==4 else 'M6_lane_anchorC.stl'))
+            body=refine_axial(body,max_axial_span_mm)
             body.vertices=map_cad(body.vertices,j,rod,details)*1000
             for station in [-24,-12,12,24]:
                 tag=f'{kind}_z{station:+d}'
@@ -32,7 +35,7 @@ def audit(archive,cad,out,labels):
                 node=j*8+(station+48)//12
                 v=assembly.vertices
                 assembly.vertices=(details['points'][node]+np.c_[v[:,2],v[:,1],-v[:,0]]/1000@details['frames'][node].T)*1000
-                overlap=trimesh.boolean.intersection([body,assembly],engine='manifold')
+                overlap=intersection64(body,assembly)
                 volume=0. if overlap.is_empty else float(overlap.volume)
                 row=dict(state=label,part=tag,overlap_mm3=volume,pass_interference=volume<1e-6)
                 rows.append(row);print(row,flush=True)
@@ -41,7 +44,7 @@ def audit(archive,cad,out,labels):
                     body.export(out/'bent_M5_body.stl');assembly.export(out/'bent_M5_z-12_guide.stl')
                     if not overlap.is_empty:overlap.export(out/'bent_M5_z-12_overlap.stl')
     result=dict(scope=__doc__,archive=str(archive),archive_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),
-        coverage=coverage,selected_states=labels,rows=rows,all_selected_poses_clear=all(r['pass_interference'] for r in rows),
+        coverage=coverage,boolean_transfer_precision='float64',cad_max_axial_span_mm=max_axial_span_mm,selected_states=labels,rows=rows,all_selected_poses_clear=all(r['pass_interference'] for r in rows),
         maximum_overlap_mm3=max(r['overlap_mm3'] for r in rows),
         decision='Do not release rigid saddle mounting for manufacture. Resolve motion interference and mount-induced stiffness before hardware tests.')
     (out/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
@@ -50,4 +53,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('archive',type=Path)
     p.add_argument('--cad',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
     p.add_argument('--states',nargs='+',default=['y0_z8','y90_z8','y175_z8'])
-    a=p.parse_args();audit(a.archive,a.cad,a.out,a.states)
+    p.add_argument('--cad-max-axial-span-mm',type=float,default=1.)
+    a=p.parse_args();audit(a.archive,a.cad,a.out,a.states,a.cad_max_axial_span_mm)

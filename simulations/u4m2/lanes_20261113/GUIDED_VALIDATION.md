@@ -2,6 +2,8 @@
 
 14 November 2026. Work based on repository commit `64a14a6402790f0d353bf07b110cf32853784cbe`.
 
+**15 November follow-up:** The [new daily report](../../../reports/daily/Report_2026_11_15.md) identifies and corrects a long-triangle error in this report's deformed-CAD collision screen. At 175°, refined V2 overlap is about 5.97 mm³ rather than 31.10 mm³; the physical mounting still fails. A V3 relief candidate, selected-state mass re-solves and expanded contact checks are recorded separately in [dated evidence](guided_refinement_20261115/README.md). The historical outputs and ideal full-controller results below are unchanged; they do not validate the newer physical joint.
+
 **The ideal guided-rope simulation and the physical guide assembly have different validation status.** The full-path calculations below assess a frictionless rod with ideal guide locations. The revised physical guide frames pass straight assembly checks but intersect the deformed M-body CAD in selected bent poses. The mounting design is therefore not released for manufacture.
 
 ## Scope and corrected coverage

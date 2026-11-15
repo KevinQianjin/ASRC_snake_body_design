@@ -1,0 +1,61 @@
+{
+  "selected_records": 217,
+  "unique_geometries": 199,
+  "guide_part_checks": 1736,
+  "failed_guide_part_checks": 96,
+  "records_with_guide_contact": 55,
+  "maximum_guide_overlap_mm3": 0.008958823627868604,
+  "largest_head_change_mm": 0.301838237389281,
+  "largest_yaw_change_deg": 0.14321412813358592,
+  "largest_elevation_change_deg": 0.038803650721728644,
+  "mass_change_g": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.024328998670677948,
+    0.024328998670677948
+  ],
+  "total_mass_change_g": 0.048657997341355896,
+  "minimum_fixed_winch_eigenvalue": 0.20740296068331351,
+  "maximum_equilibrium_residual": 3.045064200790648e-13,
+  "all_rod_geometry_checks_pass": true,
+  "all_fixed_winch_tangents_positive": true,
+  "minimum_tension_n": 2.995196805466188,
+  "maximum_tension_n": 18.064278274773223,
+  "rope_flexure_clearance_mm": 4.89049840664582,
+  "end_region_penetrating_records": 57,
+  "maximum_end_region_center_penetration_mm": 0.2406403778270609,
+  "cad_axial_resolution_mm": 0.5,
+  "finer_025mm_check_completed": false,
+  "contact_checkpoint_recovery": {
+    "note": "Complete coverage reconstructed from preserved checkpoints; elapsed_seconds sums recorded segment compute times, not total wall time.",
+    "identical_cached_duplicate_rows_omitted": 16,
+    "segments": [
+      {
+        "path": "guided_refinement_20261115/diagnostics/v3_final_contact_partial/summary.json",
+        "sha256": "68758c561d66fdfbe35a68a064c89512680fe24484c8d4912c5a9a61452812e0",
+        "completed": false,
+        "rows": 1544,
+        "stop_reason": "Process exited 137; cgroup reported two OOM kills while 0.5 mm main audit and 0.25 mm refinement overlapped."
+      },
+      {
+        "path": "guided_refinement_20261115/v3_final_contact_completion/summary.json",
+        "sha256": "b91552645accbfd1c2ff9f986d74d860ad98093d8103e412b81d8bb0ec0b6d8f",
+        "completed": true,
+        "rows": 208,
+        "stop_reason": null
+      }
+    ]
+  },
+  "full_closed_loop_replayed": false,
+  "manufacturing_release": false,
+  "limitations": [
+    "selected-state geometric screen, not all motion",
+    "remaining joint/contact incompatibility",
+    "short bond land and mount-induced stiffness unvalidated",
+    "finite end routing fails",
+    "no friction/dynamics/hardware validation",
+    "finer 0.25 mm check incomplete after memory-limit termination"
+  ]
+}
