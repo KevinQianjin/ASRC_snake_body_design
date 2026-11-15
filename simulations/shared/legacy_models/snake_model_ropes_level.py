@@ -10,6 +10,7 @@ import copy
 import csv
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import hashlib
 import json
 import os
@@ -485,7 +486,9 @@ def plot_results(output, results, source, settings):
 
 
 def save_results(output, source_path, source, settings, results, preservation):
-    body = dict(created_utc=datetime.now(timezone.utc).isoformat(), settings=settings,
+    created_at = datetime.now(timezone.utc)
+    body = dict(created_et=created_at.astimezone(ZoneInfo("America/New_York")).isoformat(),
+                created_utc=created_at.isoformat(), settings=settings,
                 source_results=str(source_path),
                 source_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest(),
                 source_config=source["config"], material_catalog=source["material_catalog"],
