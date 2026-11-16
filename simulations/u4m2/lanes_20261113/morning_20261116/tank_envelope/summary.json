@@ -1,0 +1,5894 @@
+{
+  "scope": "Selected-state tank envelope, tension and strain checks after end routing.\n\nUse recorded clamp depth where available. Startup holds are explicitly placed\nat -750 mm and inverse steering holds at +15 mm, following the existing study.\nThe 63 mm head/front envelope and 1.5 mm sampling/mesh allowance are retained.\nThis is not a full command replay, a continuous collision proof or actual head CAD.\n",
+  "coverage": {
+    "path": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544"
+  },
+  "tank_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+  "records": 217,
+  "phase_counts": {
+    "startup": 29,
+    "inverse": 36,
+    "entry": 4,
+    "exit": 4,
+    "left_out": 36,
+    "left_return": 34,
+    "right_out": 34,
+    "right_return": 34,
+    "straighten": 6
+  },
+  "recorded_depth_records": 152,
+  "minimum_clearance_mm": 9.187011930071932,
+  "minimum_allowance_adjusted_clearance_mm": 7.687011930071932,
+  "clearance_failures": 0,
+  "minimum_tension_n": 2.882692103973485,
+  "maximum_tension_n": 18.732424153662464,
+  "tension_failures": 0,
+  "maximum_axial_strain": 0.0009607247492822988,
+  "strain_failures": 0,
+  "geometry_failures": 0,
+  "rows": [
+    {
+      "state": "0",
+      "source_state": "0",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 108.79962921698453,
+      "allowance_adjusted_clearance_mm": 107.29962921698453,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9967226590529497,
+      "maximum_tension_n": 3.0252584786996146,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003017266883780524,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        286.932734984911,
+        -111.51605514568178,
+        648.0000000000002
+      ],
+      "critical_tank_point_mm": [
+        161.97668325152944,
+        -24.127009019681793,
+        648.0000000000001
+      ],
+      "critical_arclength_fraction": 0.738248581292174
+    },
+    {
+      "state": "1",
+      "source_state": "1",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 108.71934968457623,
+      "allowance_adjusted_clearance_mm": 107.21934968457623,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9969345486510437,
+      "maximum_tension_n": 3.1940527750958045,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003054845520227577,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        287.72070282550146,
+        -110.42801271095286,
+        648.0000000000002
+      ],
+      "critical_tank_point_mm": [
+        161.96526188130076,
+        -24.04567736587819,
+        648.0000000000001
+      ],
+      "critical_arclength_fraction": 0.7382478593452302
+    },
+    {
+      "state": "2",
+      "source_state": "2",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 108.46950123356876,
+      "allowance_adjusted_clearance_mm": 106.96950123356876,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9976062082275945,
+      "maximum_tension_n": 3.8008815065002515,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003158103949053189,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        290.3225756887641,
+        -106.71809988989972,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        161.93349457972903,
+        -23.792813500399063,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7382458768443768
+    },
+    {
+      "state": "3",
+      "source_state": "3",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 108.21880904265333,
+      "allowance_adjusted_clearance_mm": 106.71880904265333,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998207952725946,
+      "maximum_tension_n": 4.398198388057321,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003260158154750109,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        292.822093685058,
+        -102.91419858212441,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        161.9004131815342,
+        -23.539012983103277,
+        648.0000000000001
+      ],
+      "critical_arclength_fraction": 0.7382440051974688
+    },
+    {
+      "state": "4",
+      "source_state": "4",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 107.96727482969993,
+      "allowance_adjusted_clearance_mm": 106.46727482969993,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9987403571539586,
+      "maximum_tension_n": 4.985686731157992,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00033609589344290984,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        295.2158062193589,
+        -99.01924467712786,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        161.86600037662913,
+        -23.284276350993565,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7382422432493189
+    },
+    {
+      "state": "5",
+      "source_state": "5",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 107.71490102718204,
+      "allowance_adjusted_clearance_mm": 106.21490102718204,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999203986518693,
+      "maximum_tension_n": 5.563037561555625,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003460458221271047,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        297.50033426438154,
+        -95.03630597728127,
+        647.9999999999999
+      ],
+      "critical_tank_point_mm": [
+        161.8302387582416,
+        -23.02860485144427,
+        647.9999999999999
+      ],
+      "critical_arclength_fraction": 0.7382405898235154
+    },
+    {
+      "state": "6",
+      "source_state": "6",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 107.46169079622294,
+      "allowance_adjusted_clearance_mm": 105.96169079622294,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9995993968279104,
+      "maximum_tension_n": 6.129950032829466,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003558609150624128,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        299.67237535698894,
+        -90.96858190239077,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        161.79311084288224,
+        -22.772000457663694,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7382390437250581
+    },
+    {
+      "state": "7",
+      "source_state": "7",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 107.20764804677839,
+      "allowance_adjusted_clearance_mm": 105.70764804677839,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999927138901917,
+      "maximum_tension_n": 6.686131779990188,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003655366115900768,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        301.72870874258615,
+        -86.81940306692645,
+        647.9999999999995
+      ],
+      "critical_tank_point_mm": [
+        161.75459909194518,
+        -22.51446589042493,
+        647.9999999999999
+      ],
+      "critical_arclength_fraction": 0.7382376037430436
+    },
+    {
+      "state": "8",
+      "source_state": "8",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 106.95277743282105,
+      "allowance_adjusted_clearance_mm": 105.45277743282105,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000017416243456,
+      "maximum_tension_n": 7.231299699623976,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00037506848979612997,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        303.66620055475914,
+        -82.59223083944315,
+        648.0000000000002
+      ],
+      "critical_tank_point_mm": [
+        161.71468592848402,
+        -22.25600461438455,
+        648.0000000000001
+      ],
+      "critical_arclength_fraction": 0.7382362686535849
+    },
+    {
+      "state": "9",
+      "source_state": "9",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 106.69808578666886,
+      "allowance_adjusted_clearance_mm": 105.19808578666886,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016938048724,
+      "maximum_tension_n": 7.764873591028204,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0003844402302672891,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        305.481386882372,
+        -78.29479429905953,
+        648.0000000000001
+      ],
+      "critical_tank_point_mm": [
+        161.67349550190625,
+        -21.997635348303476,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7382350340675445
+    },
+    {
+      "state": "10",
+      "source_state": "10",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 106.38239604938258,
+      "allowance_adjusted_clearance_mm": 104.88239604938258,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016780963175,
+      "maximum_tension_n": 8.286394431213244,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00039363150135997114,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        307.1717754167281,
+        -73.92791482734818,
+        647.9999999999999
+      ],
+      "critical_tank_point_mm": [
+        171.60540404538776,
+        -22.355163992347144,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7550079632248943
+    },
+    {
+      "state": "11",
+      "source_state": "11",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 105.99930238651118,
+      "allowance_adjusted_clearance_mm": 104.49930238651118,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016634459947,
+      "maximum_tension_n": 8.795639624405974,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00040263878277380593,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        308.73464923747235,
+        -69.49448485133404,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        173.56462080764305,
+        -22.072471382383583,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7583621134058027
+    },
+    {
+      "state": "12",
+      "source_state": "12",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 105.59445320893079,
+      "allowance_adjusted_clearance_mm": 104.09445320893079,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016498603377,
+      "maximum_tension_n": 9.292374349073476,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00041145866968729863,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        310.16728855565566,
+        -64.9984731754724,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        173.52573541041926,
+        -21.665041748906532,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7583615393881296
+    },
+    {
+      "state": "13",
+      "source_state": "13",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 105.1883697535898,
+      "allowance_adjusted_clearance_mm": 103.6883697535898,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016373583467,
+      "maximum_tension_n": 9.776374986899935,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00042008792991838647,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        311.46708923168205,
+        -60.44397421457366,
+        647.9999999999998
+      ],
+      "critical_tank_point_mm": [
+        173.48360556682883,
+        -21.256204658721288,
+        647.9999999999999
+      ],
+      "critical_arclength_fraction": 0.7583610520660761
+    },
+    {
+      "state": "14",
+      "source_state": "14",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 104.7810862205288,
+      "allowance_adjusted_clearance_mm": 103.2810862205288,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000001625944314,
+      "maximum_tension_n": 10.24742960706393,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00042852351112758057,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        312.6315690160359,
+        -55.835206833221235,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        173.43819536293137,
+        -20.84598819136022,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7583606500637681
+    },
+    {
+      "state": "15",
+      "source_state": "15",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 104.37263890266524,
+      "allowance_adjusted_clearance_mm": 102.87263890266524,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000016156355183,
+      "maximum_tension_n": 10.705338455966936,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00043676254808598853,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.65837402287445,
+        -51.17651310467143,
+        647.9999999999994
+      ],
+      "critical_tank_point_mm": [
+        173.3894691999077,
+        -20.434422173972422,
+        647.9999999999998
+      ],
+      "critical_arclength_fraction": 0.7583603320089545
+    },
+    {
+      "state": "16",
+      "source_state": "16",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 103.96306632639013,
+      "allowance_adjusted_clearance_mm": 102.46306632639013,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000001606426744,
+      "maximum_tension_n": 11.149914451755002,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00044480236999968795,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        314.5452854657241,
+        -46.47235700660298,
+        647.9999999999957
+      ],
+      "critical_tank_point_mm": [
+        173.33739186463453,
+        -20.02153831213235,
+        647.9999999999982
+      ],
+      "critical_arclength_fraction": 0.7583600965355187
+    },
+    {
+      "state": "17",
+      "source_state": "17",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 103.5362292926282,
+      "allowance_adjusted_clearance_mm": 102.0362292926282,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000015983247144,
+      "maximum_tension_n": 11.580983683046622,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000452640507873935,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        315.29022669227095,
+        -41.72732307752767,
+        648.0000000000011
+      ],
+      "critical_tank_point_mm": [
+        175.2798914499011,
+        -19.67129029178457,
+        648.0000000000003
+      ],
+      "critical_arclength_fraction": 0.7617153448828413
+    },
+    {
+      "state": "18",
+      "source_state": "18",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 103.07194260715883,
+      "allowance_adjusted_clearance_mm": 101.57194260715883,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000001591332633,
+      "maximum_tension_n": 11.998385910933171,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00046027470191100587,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        315.8912705651818,
+        -36.94611506591528,
+        648.0000000000027
+      ],
+      "critical_tank_point_mm": [
+        177.2205235092657,
+        -19.255934350436736,
+        648.0000000000007
+      ],
+      "critical_arclength_fraction": 0.7650707394601617
+    },
+    {
+      "state": "19",
+      "source_state": "19",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 102.57007086896894,
+      "allowance_adjusted_clearance_mm": 101.07007086896894,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000015854480586,
+      "maximum_tension_n": 12.401975073455201,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00046770290892334584,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.3466472490056,
+        -32.1335546148937,
+        648.0000000000008
+      ],
+      "critical_tank_point_mm": [
+        179.15771948012753,
+        -18.775188010822816,
+        648.0000000000002
+      ],
+      "critical_arclength_fraction": 0.7684262717066851
+    },
+    {
+      "state": "20",
+      "source_state": "20",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 102.0304929769487,
+      "allowance_adjusted_clearance_mm": 100.5304929769487,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000015806657645,
+      "maximum_tension_n": 12.791619791497048,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0004749233097428202,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.6547524803136,
+        -27.29458003934147,
+        647.9999999999999
+      ],
+      "critical_tank_point_mm": [
+        181.0898923928427,
+        -18.228808041095686,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.7717819329931144
+    },
+    {
+      "state": "21",
+      "source_state": "21",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 101.4531036507143,
+      "allowance_adjusted_clearance_mm": 99.9531036507143,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000015769789203,
+      "maximum_tension_n": 13.167203874991824,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00048193431660969115,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.8141564207675,
+        -22.434245270350033,
+        647.9999999999999
+      ],
+      "critical_tank_point_mm": [
+        183.01543793095493,
+        -17.616592397111575,
+        648.0000000000006
+      ],
+      "critical_arclength_fraction": 0.7751377146247727
+    },
+    {
+      "state": "22",
+      "source_state": "22",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 100.6792017743698,
+      "allowance_adjusted_clearance_mm": 99.1792017743698,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000001574373602,
+      "maximum_tension_n": 13.52862682821004,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0004887345805362683,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.82361322263864,
+        -17.55771906580651,
+        648.0000000000001
+      ],
+      "critical_tank_point_mm": [
+        200.9223510372233,
+        -16.637828055129074,
+        648.0000000000001
+      ],
+      "critical_arclength_fraction": 0.8053388763040047
+    },
+    {
+      "state": "23",
+      "source_state": "23",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 99.69501424153003,
+      "allowance_adjusted_clearance_mm": 98.19501424153003,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000001572843222,
+      "maximum_tension_n": 13.875804352756045,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000495322998606853,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.6820714762845,
+        -12.670284617974716,
+        647.9999999999999
+      ],
+      "critical_tank_point_mm": [
+        204.8215945655396,
+        -15.566833243636504,
+        647.9999999999999
+      ],
+      "critical_arclength_fraction": 0.8120507168590904
+    },
+    {
+      "state": "24",
+      "source_state": "24",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 98.63230228332193,
+      "allowance_adjusted_clearance_mm": 97.13230228332193,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9997171074450337,
+      "maximum_tension_n": 14.209159832442046,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005017005669347953,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.3885716965551,
+        -7.775569104226662,
+        648.0000000000003
+      ],
+      "critical_tank_point_mm": [
+        206.70301077819465,
+        -14.41859245731258,
+        648.0000000000002
+      ],
+      "critical_arclength_fraction": 0.8154068804296052
+    },
+    {
+      "state": "25",
+      "source_state": "25",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 97.4677357895074,
+      "allowance_adjusted_clearance_mm": 95.9677357895074,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9993698585257964,
+      "maximum_tension_n": 14.528398074877687,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000507868088108316,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        315.9424178225597,
+        -2.8803138787346256,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        212.5451589608422,
+        -12.82729714126584,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.8254743333410397
+    },
+    {
+      "state": "26",
+      "source_state": "26",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 96.18992893239319,
+      "allowance_adjusted_clearance_mm": 94.68992893239319,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999142385173725,
+      "maximum_tension_n": 14.83333849877265,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005138247860513104,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        315.3432320317445,
+        2.009293211785348,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        216.35148602876347,
+        -11.131953396556915,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.8321860303509873
+    },
+    {
+      "state": "27",
+      "source_state": "27",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 94.8094321141868,
+      "allowance_adjusted_clearance_mm": 93.3094321141868,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.99902451977793,
+      "maximum_tension_n": 15.123952311113603,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005195702968556151,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        314.5908738521183,
+        6.887482437814356,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        218.13019700913728,
+        -9.504398208356562,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.8355420506662613
+    },
+    {
+      "state": "28",
+      "source_state": "28",
+      "phase": "startup",
+      "clamp_s_mm": -750.0,
+      "placement": "explicit startup-hold placement",
+      "clearance_mm": 93.15740058669606,
+      "allowance_adjusted_clearance_mm": 91.65740058669606,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990062395086814,
+      "maximum_tension_n": 15.40022979806195,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005251045457951155,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.68547538085284,
+        11.748357272378286,
+        647.9999999999997
+      ],
+      "critical_tank_point_mm": [
+        313.68547538085284,
+        11.748357272378286,
+        647.9999999999997
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "29",
+      "source_state": "29",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 64.72396900193998,
+      "allowance_adjusted_clearance_mm": 63.22396900193998,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999006469865124,
+      "maximum_tension_n": 15.401945223351477,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263472956928401,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5374445394884,
+        273.44825881920644,
+        648.0
+      ],
+      "critical_tank_point_mm": [
+        615.6162304492241,
+        158.10409285872802,
+        648.0
+      ],
+      "critical_arclength_fraction": 0.2718150424988445
+    },
+    {
+      "state": "30",
+      "source_state": "30",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 64.6174114098434,
+      "allowance_adjusted_clearance_mm": 63.1174114098434,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9989707866408546,
+      "maximum_tension_n": 15.405674728707421,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005312594821387895,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.1961002717112,
+        273.44391563038283,
+        660.1910192178815
+      ],
+      "critical_tank_point_mm": [
+        615.6150321838625,
+        158.10495667172967,
+        648.1623611150919
+      ],
+      "critical_arclength_fraction": 0.2718151978199437
+    },
+    {
+      "state": "31",
+      "source_state": "31",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 64.48244751649487,
+      "allowance_adjusted_clearance_mm": 62.98244751649487,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9989297860050224,
+      "maximum_tension_n": 15.415521924904777,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005392436337378481,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1031.1389159580358,
+        273.33604815606355,
+        673.0513476692303
+      ],
+      "critical_tank_point_mm": [
+        630.7187077969144,
+        163.3528298061813,
+        648.4540790323493
+      ],
+      "critical_arclength_fraction": 0.29865976586617915
+    },
+    {
+      "state": "32",
+      "source_state": "32",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 64.32455764675642,
+      "allowance_adjusted_clearance_mm": 62.82455764675642,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9988882383864883,
+      "maximum_tension_n": 15.428111309720173,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000550424423026045,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1029.2987844318272,
+        273.000960372606,
+        686.524454521352
+      ],
+      "critical_tank_point_mm": [
+        630.7165400992532,
+        163.34892777252915,
+        648.7281037978245
+      ],
+      "critical_arclength_fraction": 0.29866034245345463
+    },
+    {
+      "state": "33",
+      "source_state": "33",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 64.14932852907782,
+      "allowance_adjusted_clearance_mm": 62.64932852907782,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998865749075555,
+      "maximum_tension_n": 15.442014378132207,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005643015936345581,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1026.633241223889,
+        272.35198713872234,
+        700.365813704556
+      ],
+      "critical_tank_point_mm": [
+        630.7140841708385,
+        163.3416437515173,
+        649.0288126161992
+      ],
+      "critical_arclength_fraction": 0.2986611805738758
+    },
+    {
+      "state": "34",
+      "source_state": "34",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.96075512174113,
+      "allowance_adjusted_clearance_mm": 62.46075512174113,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9983014695549564,
+      "maximum_tension_n": 15.458597471095196,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005801865184695817,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1023.1379684604531,
+        271.36385145736165,
+        714.2704585708473
+      ],
+      "critical_tank_point_mm": [
+        630.7113661064417,
+        163.33086131508324,
+        649.3491094640528
+      ],
+      "critical_arclength_fraction": 0.29866229564130525
+    },
+    {
+      "state": "35",
+      "source_state": "35",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.76356839708764,
+      "allowance_adjusted_clearance_mm": 62.26356839708764,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.99778919163066,
+      "maximum_tension_n": 15.482460204436006,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005973327575042488,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1018.8524212115028,
+        270.07818298609084,
+        727.9158653130492
+      ],
+      "critical_tank_point_mm": [
+        632.5971250819562,
+        163.96892124504217,
+        649.7324029470274
+      ],
+      "critical_arclength_fraction": 0.30201923543112824
+    },
+    {
+      "state": "36",
+      "source_state": "36",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.56185082529977,
+      "allowance_adjusted_clearance_mm": 62.06185082529977,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9977784486762236,
+      "maximum_tension_n": 15.518999933003032,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006149789974659139,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1013.8549023998312,
+        268.59372948723905,
+        741.0038773433092
+      ],
+      "critical_tank_point_mm": [
+        632.5937423516289,
+        163.9518091511543,
+        650.0741537947425
+      ],
+      "critical_arclength_fraction": 0.3020208865436428
+    },
+    {
+      "state": "37",
+      "source_state": "37",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.3648423069272,
+      "allowance_adjusted_clearance_mm": 61.8648423069272,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9975956379368047,
+      "maximum_tension_n": 15.573506235811612,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006324640647528083,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1008.2461593663785,
+        267.0492353808793,
+        753.3039253890581
+      ],
+      "critical_tank_point_mm": [
+        632.5898688462187,
+        163.93363705783082,
+        650.4069201159226
+      ],
+      "critical_arclength_fraction": 0.3020227504250338
+    },
+    {
+      "state": "38",
+      "source_state": "38",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.178657762777746,
+      "allowance_adjusted_clearance_mm": 61.678657762777746,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.994849186969969,
+      "maximum_tension_n": 15.648873048712295,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006490690343817103,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1002.149443050426,
+        265.6120941142649,
+        764.6242150307118
+      ],
+      "critical_tank_point_mm": [
+        632.585459410437,
+        163.91583498720064,
+        650.7215918007987
+      ],
+      "critical_arclength_fraction": 0.3020247775704359
+    },
+    {
+      "state": "39",
+      "source_state": "39",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.005055575177835,
+      "allowance_adjusted_clearance_mm": 61.505055575177835,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.991005104733482,
+      "maximum_tension_n": 15.74798287892483,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006643576620931045,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        995.5021692462956,
+        264.3334881553058,
+        775.1300592651744
+      ],
+      "critical_tank_point_mm": [
+        632.5804561045853,
+        163.89940190477176,
+        651.0163109898018
+      ],
+      "critical_arclength_fraction": 0.30202698081265983
+    },
+    {
+      "state": "40",
+      "source_state": "40",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.857628720983485,
+      "allowance_adjusted_clearance_mm": 61.357628720983485,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9885691852918965,
+      "maximum_tension_n": 15.870945654448677,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00067800744957742,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        988.8187279922568,
+        263.5495370502339,
+        784.1315986015278
+      ],
+      "critical_tank_point_mm": [
+        632.5749249746636,
+        163.8867319372906,
+        651.2695654623573
+      ],
+      "critical_arclength_fraction": 0.3020291965357041
+    },
+    {
+      "state": "41",
+      "source_state": "41",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.73277719092131,
+      "allowance_adjusted_clearance_mm": 61.23277719092131,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.987617415555771,
+      "maximum_tension_n": 16.015931663286807,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006897425194056077,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        981.8455943770368,
+        263.19309093612844,
+        792.1349392008475
+      ],
+      "critical_tank_point_mm": [
+        632.5688680249458,
+        163.87813112121,
+        651.4881623484312
+      ],
+      "critical_arclength_fraction": 0.3020315049711835
+    },
+    {
+      "state": "42",
+      "source_state": "42",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.63429040291281,
+      "allowance_adjusted_clearance_mm": 61.13429040291281,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9883063784807686,
+      "maximum_tension_n": 16.179350134139497,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000699340217640029,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        974.7425666282909,
+        263.4052058523406,
+        799.0029969714233
+      ],
+      "critical_tank_point_mm": [
+        634.4508555453727,
+        164.52037926034137,
+        651.7708170727892
+      ],
+      "critical_arclength_fraction": 0.3053895370133665
+    },
+    {
+      "state": "43",
+      "source_state": "43",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.56648162554454,
+      "allowance_adjusted_clearance_mm": 61.06648162554454,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.98975442010232,
+      "maximum_tension_n": 16.357031646246774,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007065899208172875,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        967.5723458790771,
+        264.277970553403,
+        804.7306357918528
+      ],
+      "critical_tank_point_mm": [
+        634.443877068814,
+        164.5229513456736,
+        651.9044304996057
+      ],
+      "critical_arclength_fraction": 0.30539196092514326
+    },
+    {
+      "state": "44",
+      "source_state": "44",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.532138217623796,
+      "allowance_adjusted_clearance_mm": 61.032138217623796,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9927896319732077,
+      "maximum_tension_n": 16.547566158237466,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007113541864165085,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.3801826220858,
+        265.8958492711266,
+        809.3138544752416
+      ],
+      "critical_tank_point_mm": [
+        634.4365872120615,
+        164.53270412741855,
+        651.9866427207411
+      ],
+      "critical_arclength_fraction": 0.30539443411552103
+    },
+    {
+      "state": "45",
+      "source_state": "45",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.5399172056034,
+      "allowance_adjusted_clearance_mm": 61.0399172056034,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.001029955331079,
+      "maximum_tension_n": 16.740671573054318,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007142123095321754,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        953.270945017403,
+        268.5232502204357,
+        812.5858552176819
+      ],
+      "critical_tank_point_mm": [
+        634.4289072840473,
+        164.55134238670684,
+        652.0037783796251
+      ],
+      "critical_arclength_fraction": 0.30539687559418155
+    },
+    {
+      "state": "46",
+      "source_state": "46",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.59718130383875,
+      "allowance_adjusted_clearance_mm": 61.09718130383875,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000677430323173,
+      "maximum_tension_n": 16.92752028638521,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007155531397358186,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        946.294689049923,
+        272.4145292692303,
+        814.4025363394726
+      ],
+      "critical_tank_point_mm": [
+        634.4207278428474,
+        164.58026649752014,
+        651.9442005141409
+      ],
+      "critical_arclength_fraction": 0.30539925706682935
+    },
+    {
+      "state": "47",
+      "source_state": "47",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.70898538551059,
+      "allowance_adjusted_clearance_mm": 61.20898538551059,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000766263279695,
+      "maximum_tension_n": 17.098353752205036,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007163812408163088,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        939.4259411183726,
+        277.81834082410353,
+        814.6155483940084
+      ],
+      "critical_tank_point_mm": [
+        632.5239358838296,
+        163.97309951364707,
+        651.6915890007498
+      ],
+      "critical_arclength_fraction": 0.3020458839536585
+    },
+    {
+      "state": "48",
+      "source_state": "48",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 62.87689650524469,
+      "allowance_adjusted_clearance_mm": 61.37689650524469,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9991350300211463,
+      "maximum_tension_n": 17.24256970069388,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007168541319975438,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        932.5411357507694,
+        284.9070406132076,
+        813.0790871871473
+      ],
+      "critical_tank_point_mm": [
+        632.5139235911915,
+        164.02341192679452,
+        651.4621132427103
+      ],
+      "critical_arclength_fraction": 0.30204847700064175
+    },
+    {
+      "state": "49",
+      "source_state": "49",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.10183333022509,
+      "allowance_adjusted_clearance_mm": 61.60183333022509,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9977113279900323,
+      "maximum_tension_n": 17.350255596408374,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007169126849623669,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        925.4250227152802,
+        293.79183452486774,
+        809.5992662397031
+      ],
+      "critical_tank_point_mm": [
+        632.502296261361,
+        164.08460420804195,
+        651.1453130900866
+      ],
+      "critical_arclength_fraction": 0.302051459025926
+    },
+    {
+      "state": "50",
+      "source_state": "50",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 63.37926428781755,
+      "allowance_adjusted_clearance_mm": 61.87926428781755,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.995614183850171,
+      "maximum_tension_n": 17.414254096984042,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007166584247339235,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.7702132674485,
+        304.4601299435527,
+        803.9418388916351
+      ],
+      "critical_tank_point_mm": [
+        632.4885083614874,
+        164.15544723423756,
+        650.7484477755264
+      ],
+      "critical_arclength_fraction": 0.3020550815955884
+    },
+    {
+      "state": "51",
+      "source_state": "51",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 57.0516423094828,
+      "allowance_adjusted_clearance_mm": 55.5516423094828,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.992614379289024,
+      "maximum_tension_n": 17.433673916486555,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007165032477859646,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        909.2180227702871,
+        316.62738733340205,
+        795.9151563767498
+      ],
+      "critical_tank_point_mm": [
+        909.2180227702871,
+        316.62738733340205,
+        795.9151563767498
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "52",
+      "source_state": "52",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 46.42340402834385,
+      "allowance_adjusted_clearance_mm": 44.92340402834385,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.977030762665471,
+      "maximum_tension_n": 17.423061395827663,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007194352976244439,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        899.5760623667866,
+        329.07453799454504,
+        786.0681815190349
+      ],
+      "critical_tank_point_mm": [
+        899.5760623667866,
+        329.07453799454504,
+        786.0681815190349
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "53",
+      "source_state": "53",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 37.53632482686683,
+      "allowance_adjusted_clearance_mm": 36.03632482686683,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9794125514508245,
+      "maximum_tension_n": 17.41509622706446,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007336109435192636,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        888.8579714568177,
+        339.73576021602696,
+        776.2500854263556
+      ],
+      "critical_tank_point_mm": [
+        888.8579714568177,
+        339.73576021602696,
+        776.2500854263556
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "54",
+      "source_state": "54",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 29.343025979861743,
+      "allowance_adjusted_clearance_mm": 27.843025979861743,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9790180011928356,
+      "maximum_tension_n": 17.389239038035225,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007485759690226548,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        877.8418142970706,
+        350.0578526436849,
+        764.3648701111384
+      ],
+      "critical_tank_point_mm": [
+        877.8418142970706,
+        350.0578526436849,
+        764.3648701111384
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "55",
+      "source_state": "55",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 22.325636427994226,
+      "allowance_adjusted_clearance_mm": 20.825636427994226,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.963435703387435,
+      "maximum_tension_n": 17.36222001738675,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007638866315795628,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        866.4970495119574,
+        359.51902656963057,
+        750.5899568326164
+      ],
+      "critical_tank_point_mm": [
+        866.4970495119574,
+        359.51902656963057,
+        750.5899568326164
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "56",
+      "source_state": "56",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 16.467942311786253,
+      "allowance_adjusted_clearance_mm": 14.967942311786253,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.908162036231047,
+      "maximum_tension_n": 17.348141064598703,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007790534479299615,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        855.3676488257322,
+        367.4313629807956,
+        735.5529466360524
+      ],
+      "critical_tank_point_mm": [
+        855.3676488257322,
+        367.4313629807956,
+        735.5529466360524
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "57",
+      "source_state": "57",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 12.151143046697548,
+      "allowance_adjusted_clearance_mm": 10.651143046697548,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8945140357537156,
+      "maximum_tension_n": 17.356205648122888,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000798950109961714,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        844.9922939592361,
+        373.45321436845836,
+        719.8380235499594
+      ],
+      "critical_tank_point_mm": [
+        844.9922939592361,
+        373.45321436845836,
+        719.8380235499594
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "58",
+      "source_state": "58",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 9.808974497829382,
+      "allowance_adjusted_clearance_mm": 8.308974497829382,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8859926091156303,
+      "maximum_tension_n": 17.38469028697987,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008206257881184193,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        836.0736312507961,
+        377.24704034311276,
+        705.2812429142887
+      ],
+      "critical_tank_point_mm": [
+        836.0736312507961,
+        377.24704034311276,
+        705.2812429142887
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "59",
+      "source_state": "59",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 9.677753479378033,
+      "allowance_adjusted_clearance_mm": 8.177753479378033,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.882692103973485,
+      "maximum_tension_n": 17.42313352748143,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008433591841389507,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        828.7569042173106,
+        379.36950563735553,
+        692.1651495546975
+      ],
+      "critical_tank_point_mm": [
+        828.7569042173106,
+        379.36950563735553,
+        692.1651495546975
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "60",
+      "source_state": "60",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 12.502498420202933,
+      "allowance_adjusted_clearance_mm": 11.002498420202933,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8839440639313785,
+      "maximum_tension_n": 17.461472393692272,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008666293485483855,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        822.9939857426762,
+        380.3631541719647,
+        680.5011916208508
+      ],
+      "critical_tank_point_mm": [
+        822.9939857426762,
+        380.3631541719647,
+        680.5011916208508
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "61",
+      "source_state": "61",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 13.602322404572853,
+      "allowance_adjusted_clearance_mm": 12.102322404572853,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.888487040675164,
+      "maximum_tension_n": 17.491891663223868,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008896928498372372,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        818.6483587984203,
+        380.6643377035196,
+        670.123217712677
+      ],
+      "critical_tank_point_mm": [
+        818.6483587984203,
+        380.6643377035196,
+        670.123217712677
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "62",
+      "source_state": "62",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 14.95204757530501,
+      "allowance_adjusted_clearance_mm": 13.45204757530501,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.895407992765485,
+      "maximum_tension_n": 17.511514465827453,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009121879068860761,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5718760495535,
+        380.57318018523614,
+        660.8399727116417
+      ],
+      "critical_tank_point_mm": [
+        815.5718760495535,
+        380.57318018523614,
+        660.8399727116417
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "63",
+      "source_state": "63",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 19.053328804231285,
+      "allowance_adjusted_clearance_mm": 17.553328804231285,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8951112185119303,
+      "maximum_tension_n": 17.89243413769658,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009256913988532862,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.7292175639743,
+        364.82947677844464,
+        727.4217791776204
+      ],
+      "critical_tank_point_mm": [
+        816.7292175639743,
+        364.82947677844464,
+        727.4217791776204
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "64",
+      "source_state": "64",
+      "phase": "inverse",
+      "clamp_s_mm": 15.0,
+      "placement": "explicit inverse-hold placement",
+      "clearance_mm": 12.929206025020306,
+      "allowance_adjusted_clearance_mm": 11.429206025020306,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.949673736272109,
+      "maximum_tension_n": 17.59937402500461,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009464564920111857,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.8986057235105,
+        375.28498589787824,
+        694.2457314658215
+      ],
+      "critical_tank_point_mm": [
+        813.8986057235105,
+        375.28498589787824,
+        694.2457314658215
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "65",
+      "source_state": "65",
+      "phase": "entry",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 93.1146264339886,
+      "allowance_adjusted_clearance_mm": 91.6146264339886,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "66",
+      "source_state": "66",
+      "phase": "entry",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.72396865142072,
+      "allowance_adjusted_clearance_mm": 63.22396865142072,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5374428686553,
+        273.44824652874354,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        615.616229589087,
+        158.10409206256378,
+        647.9999999999861
+      ],
+      "critical_arclength_fraction": 0.27181504269788015
+    },
+    {
+      "state": "67",
+      "source_state": "67",
+      "phase": "exit",
+      "clamp_s_mm": 10.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.66713566841521,
+      "allowance_adjusted_clearance_mm": 63.16713566841521,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838324982,
+      "maximum_tension_n": 15.84558874817863,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006238042,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1027.8211357357686,
+        271.81012634641684,
+        647.7857214148804
+      ],
+      "critical_tank_point_mm": [
+        616.5810349967692,
+        158.36037404798645,
+        648.0015227184516
+      ],
+      "critical_arclength_fraction": 0.28188186815378186
+    },
+    {
+      "state": "68",
+      "source_state": "68",
+      "phase": "exit",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 92.92000028108805,
+      "allowance_adjusted_clearance_mm": 91.42000028108805,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838324982,
+      "maximum_tension_n": 15.84558874817863,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006238042,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.6547439384783,
+        11.874817418908634,
+        647.7857214148804
+      ],
+      "critical_tank_point_mm": [
+        313.6547439384783,
+        11.874817418908634,
+        647.7857214148804
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "69",
+      "source_state": "69",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.76301807292286,
+      "allowance_adjusted_clearance_mm": 63.26301807292286,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.997757803323701,
+      "maximum_tension_n": 15.736984414795888,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000537908158715671,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.4736450693817,
+        273.5660718796843,
+        644.0327652428248
+      ],
+      "critical_tank_point_mm": [
+        615.6147600124547,
+        158.1032695434506,
+        647.9407130607732
+      ],
+      "critical_arclength_fraction": 0.27181523530921115
+    },
+    {
+      "state": "70",
+      "source_state": "70",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 25.122376767392502,
+      "allowance_adjusted_clearance_mm": 23.622376767392502,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.147819732279011,
+      "maximum_tension_n": 17.771837129589485,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009381774559955018,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.8353330674342,
+        375.4495397848891,
+        602.4944746403212
+      ],
+      "critical_tank_point_mm": [
+        813.8353330674342,
+        375.4495397848891,
+        602.4944746403212
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "71",
+      "source_state": "71",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 17.370436089615488,
+      "allowance_adjusted_clearance_mm": 15.870436089615488,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.90531672898714,
+      "maximum_tension_n": 17.72547899859346,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009192332832551495,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5547892175086,
+        380.55800696708343,
+        634.9440534748459
+      ],
+      "critical_tank_point_mm": [
+        815.5547892175086,
+        380.55800696708343,
+        634.9440534748459
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "72",
+      "source_state": "72",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 21.553255927963058,
+      "allowance_adjusted_clearance_mm": 20.053255927963058,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.889848706018195,
+      "maximum_tension_n": 17.63466296752683,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000850137010245158,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        828.7227102794235,
+        379.38171120385175,
+        603.8699849390688
+      ],
+      "critical_tank_point_mm": [
+        828.7227102794235,
+        379.38171120385175,
+        603.8699849390688
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "73",
+      "source_state": "73",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 38.574246900915256,
+      "allowance_adjusted_clearance_mm": 37.074246900915256,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.913986335159263,
+      "maximum_tension_n": 17.55204471644752,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007849727001761558,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        855.301564317984,
+        367.5293361768693,
+        560.5825632534649
+      ],
+      "critical_tank_point_mm": [
+        855.301564317984,
+        367.5293361768693,
+        560.5825632534649
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "74",
+      "source_state": "74",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.47719643036007,
+      "allowance_adjusted_clearance_mm": 63.97719643036007,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.986707728384515,
+      "maximum_tension_n": 17.61456604455438,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007375475105577233,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        888.7924869961814,
+        339.8590851622796,
+        519.825808530342
+      ],
+      "critical_tank_point_mm": [
+        575.9130208510925,
+        144.39839860406852,
+        647.544154218681
+      ],
+      "critical_arclength_fraction": 0.201389012457448
+    },
+    {
+      "state": "75",
+      "source_state": "75",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.73775661218649,
+      "allowance_adjusted_clearance_mm": 64.23775661218649,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.018461204079117,
+      "maximum_tension_n": 17.616908326877894,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007204977913516719,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.7093418824254,
+        304.56623812770147,
+        492.0738088195378
+      ],
+      "critical_tank_point_mm": [
+        551.4546092473282,
+        135.63786824438336,
+        647.540385143449
+      ],
+      "critical_arclength_fraction": 0.1577513935066618
+    },
+    {
+      "state": "76",
+      "source_state": "76",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.88997472715943,
+      "allowance_adjusted_clearance_mm": 64.38997472715943,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.045400000875502,
+      "maximum_tension_n": 17.304344156886067,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007203807078861487,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        939.3678278489255,
+        277.8944954857554,
+        481.36511118493536
+      ],
+      "critical_tank_point_mm": [
+        549.5788181153221,
+        134.94345146696512,
+        647.3937659185566
+      ],
+      "critical_arclength_fraction": 0.15439080517317677
+    },
+    {
+      "state": "77",
+      "source_state": "77",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.90826383823953,
+      "allowance_adjusted_clearance_mm": 64.40826383823953,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.994486965821368,
+      "maximum_tension_n": 16.75842855166307,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007155896096282027,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.3247225853036,
+        265.94229366727933,
+        486.64685129362215
+      ],
+      "critical_tank_point_mm": [
+        527.0006055533598,
+        126.86528531849633,
+        647.7377720695364
+      ],
+      "critical_arclength_fraction": 0.11411844002439643
+    },
+    {
+      "state": "78",
+      "source_state": "78",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.84564381961192,
+      "allowance_adjusted_clearance_mm": 64.34564381961192,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.989668743338779,
+      "maximum_tension_n": 16.225247424586474,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006941972908661098,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        981.7958732350046,
+        263.2110128035394,
+        503.8112167878214
+      ],
+      "critical_tank_point_mm": [
+        549.5909569104491,
+        134.91640787731546,
+        647.4287740803491
+      ],
+      "critical_arclength_fraction": 0.1543830196323286
+    },
+    {
+      "state": "79",
+      "source_state": "79",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.7161766018416,
+      "allowance_adjusted_clearance_mm": 64.2161766018416,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.995986513646458,
+      "maximum_tension_n": 15.959836857074947,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006582689194481753,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1002.1648897530108,
+        265.8537882926773,
+        531.4163427419903
+      ],
+      "critical_tank_point_mm": [
+        551.4808388104389,
+        135.5782393164261,
+        647.5327717581368
+      ],
+      "critical_arclength_fraction": 0.1577345889847085
+    },
+    {
+      "state": "80",
+      "source_state": "80",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.47812906787226,
+      "allowance_adjusted_clearance_mm": 63.97812906787226,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9982213612986603,
+      "maximum_tension_n": 15.800758142810993,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006069223030042371,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1018.8711597676761,
+        270.2270492871489,
+        568.1474213310692
+      ],
+      "critical_tank_point_mm": [
+        575.9852937138257,
+        144.23238597821796,
+        647.4222121392337
+      ],
+      "critical_arclength_fraction": 0.20135294408066828
+    },
+    {
+      "state": "81",
+      "source_state": "81",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.09976675145207,
+      "allowance_adjusted_clearance_mm": 63.599766751452066,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9984392216206777,
+      "maximum_tension_n": 15.75679494051779,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005603648805720244,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1029.3123428620838,
+        273.0527806183412,
+        609.5585333553771
+      ],
+      "critical_tank_point_mm": [
+        613.7227209971949,
+        157.44370641278482,
+        647.4509305561409
+      ],
+      "critical_arclength_fraction": 0.26846072046903413
+    },
+    {
+      "state": "82",
+      "source_state": "82",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 26.710517532474228,
+      "allowance_adjusted_clearance_mm": 25.210517532474228,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.1451538521322395,
+      "maximum_tension_n": 17.800036649124245,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009350182087945214,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.1895015259552,
+        374.3718856348516,
+        597.750981395286
+      ],
+      "critical_tank_point_mm": [
+        814.1895015259552,
+        374.3718856348516,
+        597.750981395286
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "83",
+      "source_state": "83",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.72076320095273,
+      "allowance_adjusted_clearance_mm": 63.22076320095273,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838326647,
+      "maximum_tension_n": 15.845588748178649,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006237803,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5195988396958,
+        273.5202270630562,
+        647.7857214148673
+      ],
+      "critical_tank_point_mm": [
+        615.6154723028504,
+        158.1006658764992,
+        648.0014634927599
+      ],
+      "critical_arclength_fraction": 0.27181529173723507
+    },
+    {
+      "state": "84",
+      "source_state": "84",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 17.376943148201903,
+      "allowance_adjusted_clearance_mm": 15.876943148201903,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9304938005955874,
+      "maximum_tension_n": 18.120556963586633,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009329974456238415,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.4941790523355,
+        380.53237145637996,
+        635.1697126639245
+      ],
+      "critical_tank_point_mm": [
+        815.4941790523355,
+        380.53237145637996,
+        635.1697126639245
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "85",
+      "source_state": "85",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 21.61011268499886,
+      "allowance_adjusted_clearance_mm": 20.11011268499886,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.896980577648124,
+      "maximum_tension_n": 17.933931652231884,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008571361947161866,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        828.6214229246049,
+        379.31700414654614,
+        603.9021820676068
+      ],
+      "critical_tank_point_mm": [
+        828.6214229246049,
+        379.31700414654614,
+        603.9021820676068
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "86",
+      "source_state": "86",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 38.53907972578524,
+      "allowance_adjusted_clearance_mm": 37.03907972578524,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.916450035229087,
+      "maximum_tension_n": 17.816413822777942,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007920086821757628,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        855.1440599273354,
+        367.58313235566953,
+        560.7450274394204
+      ],
+      "critical_tank_point_mm": [
+        855.1440599273354,
+        367.58313235566953,
+        560.7450274394204
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "87",
+      "source_state": "87",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.47795703952934,
+      "allowance_adjusted_clearance_mm": 63.97795703952934,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9908911813671977,
+      "maximum_tension_n": 17.87127874220985,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007429687717907687,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        888.6197211346014,
+        339.9621670784578,
+        519.9090753850354
+      ],
+      "critical_tank_point_mm": [
+        575.91276577541,
+        144.39747728376892,
+        647.5427204532134
+      ],
+      "critical_arclength_fraction": 0.20138912455232952
+    },
+    {
+      "state": "88",
+      "source_state": "88",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.73832352915358,
+      "allowance_adjusted_clearance_mm": 64.23832352915358,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.024765990243377,
+      "maximum_tension_n": 17.87181632732464,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007259871783553786,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.534103116059,
+        304.6655653143413,
+        492.07209861337424
+      ],
+      "critical_tank_point_mm": [
+        551.4543600639838,
+        135.6373393416899,
+        647.5395595230806
+      ],
+      "critical_arclength_fraction": 0.15775151569060242
+    },
+    {
+      "state": "89",
+      "source_state": "89",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.89041177209768,
+      "allowance_adjusted_clearance_mm": 64.39041177209768,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0473937532788393,
+      "maximum_tension_n": 17.533452317092227,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007260882261251886,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        939.1953014762578,
+        277.98732073558386,
+        481.31416885936846
+      ],
+      "critical_tank_point_mm": [
+        549.5785514556405,
+        134.9429552826262,
+        647.3931108445983
+      ],
+      "critical_arclength_fraction": 0.1543909752409211
+    },
+    {
+      "state": "90",
+      "source_state": "90",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.90844997650295,
+      "allowance_adjusted_clearance_mm": 64.40844997650295,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000866896361055,
+      "maximum_tension_n": 16.9634627051007,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007219020212918485,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.162316665989,
+        266.02194330947316,
+        486.55866594600985
+      ],
+      "critical_tank_point_mm": [
+        527.0003747521326,
+        126.86502644805731,
+        647.7375242183134
+      ],
+      "critical_arclength_fraction": 0.11411864395249066
+    },
+    {
+      "state": "91",
+      "source_state": "91",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.84590814080737,
+      "allowance_adjusted_clearance_mm": 64.34590814080737,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.006015116059788,
+      "maximum_tension_n": 16.43405117946621,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007009116050402118,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        981.6544750435866,
+        263.260946799097,
+        503.6917272874414
+      ],
+      "critical_tank_point_mm": [
+        549.5906285163392,
+        134.91587543547595,
+        647.4283052992812
+      ],
+      "critical_arclength_fraction": 0.1543832278286384
+    },
+    {
+      "state": "92",
+      "source_state": "92",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.7147408215481,
+      "allowance_adjusted_clearance_mm": 64.2147408215481,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.02047218974373,
+      "maximum_tension_n": 16.06971164601378,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006608536367023112,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1001.9983429622481,
+        265.63308630321785,
+        531.1696065117455
+      ],
+      "critical_tank_point_mm": [
+        551.4808449362524,
+        135.577688867792,
+        647.5341178143356
+      ],
+      "critical_arclength_fraction": 0.15773470543487023
+    },
+    {
+      "state": "93",
+      "source_state": "93",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.47492640413336,
+      "allowance_adjusted_clearance_mm": 63.974926404133356,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0094197197755768,
+      "maximum_tension_n": 15.911697215921677,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006096812611084639,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1018.7489955633737,
+        270.0749494417823,
+        567.8560066885284
+      ],
+      "critical_tank_point_mm": [
+        575.985387456566,
+        144.23137412901988,
+        647.425407864405
+      ],
+      "critical_arclength_fraction": 0.20135306999975902
+    },
+    {
+      "state": "94",
+      "source_state": "94",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.09355088900953,
+      "allowance_adjusted_clearance_mm": 63.593550889009535,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0039108111306607,
+      "maximum_tension_n": 15.86885094271936,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005631613017349942,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1029.2446966850227,
+        273.0132590767757,
+        609.2490064990646
+      ],
+      "critical_tank_point_mm": [
+        613.7230396767382,
+        157.4417393773301,
+        647.4580263696533
+      ],
+      "critical_arclength_fraction": 0.2684608517409538
+    },
+    {
+      "state": "95",
+      "source_state": "95",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.68876501019794,
+      "allowance_adjusted_clearance_mm": 63.18876501019794,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.995580551674885,
+      "maximum_tension_n": 15.404324871440396,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005279060244146956,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.4721325317025,
+        273.5797038292855,
+        652.0617230512024
+      ],
+      "critical_tank_point_mm": [
+        615.6157765258483,
+        158.10466591399913,
+        648.0539516615955
+      ],
+      "critical_arclength_fraction": 0.27181507543210554
+    },
+    {
+      "state": "96",
+      "source_state": "96",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.905604547004792,
+      "allowance_adjusted_clearance_mm": 11.405604547004792,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0325141140833662,
+      "maximum_tension_n": 17.740730628786945,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009376923804612938,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.8936735313149,
+        375.4947184828043,
+        693.4660570401111
+      ],
+      "critical_tank_point_mm": [
+        813.8936735313149,
+        375.4947184828043,
+        693.4660570401111
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "97",
+      "source_state": "97",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.32459111119722,
+      "allowance_adjusted_clearance_mm": 62.82459111119722,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000608923122791,
+      "maximum_tension_n": 15.431441239485377,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005506061497989632,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1029.2987317604889,
+        273.0008440996384,
+        686.5238377590897
+      ],
+      "critical_tank_point_mm": [
+        630.7165187366857,
+        163.34890364659077,
+        648.7280213940435
+      ],
+      "critical_arclength_fraction": 0.2986603458782377
+    },
+    {
+      "state": "98",
+      "source_state": "98",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.76362003896644,
+      "allowance_adjusted_clearance_mm": 62.26362003896644,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9987074480092173,
+      "maximum_tension_n": 15.486633278046774,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005975822556470144,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1018.8521555525145,
+        270.07931546046024,
+        727.9149218877087
+      ],
+      "critical_tank_point_mm": [
+        632.5970949143133,
+        163.96889247693105,
+        649.7322823438092
+      ],
+      "critical_arclength_fraction": 0.3020192399002785
+    },
+    {
+      "state": "99",
+      "source_state": "99",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.178709930362544,
+      "allowance_adjusted_clearance_mm": 61.678709930362544,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996209769008379,
+      "maximum_tension_n": 15.652797812478326,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006493111466891558,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1002.1489036939613,
+        265.61513828581417,
+        764.6233016623191
+      ],
+      "critical_tank_point_mm": [
+        632.5854278899914,
+        163.9158160488777,
+        650.7214838104384
+      ],
+      "critical_arclength_fraction": 0.3020247816013854
+    },
+    {
+      "state": "100",
+      "source_state": "100",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.73283403654352,
+      "allowance_adjusted_clearance_mm": 61.23283403654352,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9900490655135363,
+      "maximum_tension_n": 16.0194632363021,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000689979896401554,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        981.8447772440159,
+        263.1981071106348,
+        792.1339466268294
+      ],
+      "critical_tank_point_mm": [
+        632.5688351694066,
+        163.87812032584816,
+        651.4880574258755
+      ],
+      "critical_arclength_fraction": 0.30203150835466347
+    },
+    {
+      "state": "101",
+      "source_state": "101",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.53220473464482,
+      "allowance_adjusted_clearance_mm": 61.03220473464482,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9950709347849807,
+      "maximum_tension_n": 16.552440168929948,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007115797071786963,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.3791049101435,
+        265.9025986816281,
+        809.3124883858327
+      ],
+      "critical_tank_point_mm": [
+        634.4365545899557,
+        164.53269960998074,
+        651.9865262685341
+      ],
+      "critical_arclength_fraction": 0.3053944371306612
+    },
+    {
+      "state": "102",
+      "source_state": "102",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.70905684135322,
+      "allowance_adjusted_clearance_mm": 61.20905684135322,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.00103879251669,
+      "maximum_tension_n": 17.10302514091515,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000716595507841953,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        939.4245020023602,
+        277.82672888639564,
+        814.6132505594016
+      ],
+      "critical_tank_point_mm": [
+        632.5239049105365,
+        163.9730968117808,
+        651.6914680011093
+      ],
+      "critical_arclength_fraction": 0.3020458867000531
+    },
+    {
+      "state": "103",
+      "source_state": "103",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.379335827841814,
+      "allowance_adjusted_clearance_mm": 61.879335827841814,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996562618207819,
+      "maximum_tension_n": 17.418745670894136,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000716864199310797,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.7681115395508,
+        304.47006764614554,
+        803.9372670296761
+      ],
+      "critical_tank_point_mm": [
+        632.4884786117849,
+        164.1554423919823,
+        650.7483239394364
+      ],
+      "critical_arclength_fraction": 0.3020550841099192
+    },
+    {
+      "state": "104",
+      "source_state": "104",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 37.52724215257152,
+      "allowance_adjusted_clearance_mm": 36.02724215257152,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.980585919826535,
+      "maximum_tension_n": 17.419086852898296,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007338127530862153,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        888.8549222125575,
+        339.74656014897903,
+        776.2410819740792
+      ],
+      "critical_tank_point_mm": [
+        888.8549222125575,
+        339.74656014897903,
+        776.2410819740792
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "105",
+      "source_state": "105",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 16.458043233624082,
+      "allowance_adjusted_clearance_mm": 14.958043233624082,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9092415675521095,
+      "maximum_tension_n": 17.352309633054922,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007792723006262531,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        855.3639348596189,
+        367.4407519340834,
+        735.5378408242161
+      ],
+      "critical_tank_point_mm": [
+        855.3639348596189,
+        367.4407519340834,
+        735.5378408242161
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "106",
+      "source_state": "106",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 9.678387890794475,
+      "allowance_adjusted_clearance_mm": 8.178387890794475,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.883793201145291,
+      "maximum_tension_n": 17.4276237073506,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008436733393935423,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        828.7546835323394,
+        379.3734268276234,
+        692.1500298898244
+      ],
+      "critical_tank_point_mm": [
+        828.7546835323394,
+        379.3734268276234,
+        692.1500298898244
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "107",
+      "source_state": "107",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.952675522666901,
+      "allowance_adjusted_clearance_mm": 13.452675522666901,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.896647006112569,
+      "maximum_tension_n": 17.516249822942463,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009125258030307603,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5714344136285,
+        380.57317261981746,
+        660.8354839315529
+      ],
+      "critical_tank_point_mm": [
+        815.5714344136285,
+        380.57317261981746,
+        660.8354839315529
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "108",
+      "source_state": "108",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 13.040785859207269,
+      "allowance_adjusted_clearance_mm": 11.540785859207269,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.029838660568634,
+      "maximum_tension_n": 17.769059649624406,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009345460394637983,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.2482905067911,
+        374.4158535971345,
+        698.2180126374434
+      ],
+      "critical_tank_point_mm": [
+        814.2482905067911,
+        374.4158535971345,
+        698.2180126374434
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "109",
+      "source_state": "109",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.726642263526,
+      "allowance_adjusted_clearance_mm": 63.226642263526,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999295021856606,
+      "maximum_tension_n": 15.734910546131298,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005364759095785666,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5370396702658,
+        273.428129622834,
+        648.095569202084
+      ],
+      "critical_tank_point_mm": [
+        615.6152032759084,
+        158.10268120121492,
+        647.9948388700075
+      ],
+      "critical_arclength_fraction": 0.2718152041992478
+    },
+    {
+      "state": "110",
+      "source_state": "110",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.32724590856805,
+      "allowance_adjusted_clearance_mm": 62.827245908568045,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.010635097074355,
+      "maximum_tension_n": 15.761618008335946,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005599680450844299,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1029.2776453865895,
+        272.9487433465482,
+        686.611306354715
+      ],
+      "critical_tank_point_mm": [
+        630.7155215944543,
+        163.34740283246964,
+        648.7217301137705
+      ],
+      "critical_arclength_fraction": 0.29866052647269703
+    },
+    {
+      "state": "111",
+      "source_state": "111",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.76562305332688,
+      "allowance_adjusted_clearance_mm": 62.26562305332688,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.015054486972461,
+      "maximum_tension_n": 15.806911377557055,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006065719598431084,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1018.8061301651402,
+        270.03573550403456,
+        727.994040790804
+      ],
+      "critical_tank_point_mm": [
+        632.5960943184508,
+        163.9676303140784,
+        649.7273173898957
+      ],
+      "critical_arclength_fraction": 0.3020194091515144
+    },
+    {
+      "state": "112",
+      "source_state": "112",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.180499288496705,
+      "allowance_adjusted_clearance_mm": 61.680499288496705,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0130124028929344,
+      "maximum_tension_n": 15.967440545743875,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006578709471041414,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1002.0819854187864,
+        265.60985601997663,
+        764.6830865899916
+      ],
+      "critical_tank_point_mm": [
+        632.5844114101106,
+        163.91488227543772,
+        650.7173381712614
+      ],
+      "critical_arclength_fraction": 0.3020249382433779
+    },
+    {
+      "state": "113",
+      "source_state": "113",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.73465304051854,
+      "allowance_adjusted_clearance_mm": 61.23465304051854,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9985018465641815,
+      "maximum_tension_n": 16.334303061585715,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006980791136133447,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        981.7627503697431,
+        263.2431552699828,
+        792.172138108043
+      ],
+      "critical_tank_point_mm": [
+        632.5678110602577,
+        163.87748813043402,
+        651.4842677190427
+      ],
+      "critical_arclength_fraction": 0.30203165460563647
+    },
+    {
+      "state": "114",
+      "source_state": "114",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.534242301232936,
+      "allowance_adjusted_clearance_mm": 61.034242301232936,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996993760183994,
+      "maximum_tension_n": 16.866319298659548,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007192315275168023,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.2901650146434,
+        266.0012943277047,
+        809.3229903684376
+      ],
+      "critical_tank_point_mm": [
+        634.4355323076077,
+        164.5323002892764,
+        651.982574653648
+      ],
+      "critical_arclength_fraction": 0.3053945735003909
+    },
+    {
+      "state": "115",
+      "source_state": "115",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.7110013403524,
+      "allowance_adjusted_clearance_mm": 61.2110013403524,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.050005188846472,
+      "maximum_tension_n": 17.431209764319448,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007237866332044694,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        939.336966712385,
+        277.96562383803104,
+        814.5897249607033
+      ],
+      "critical_tank_point_mm": [
+        632.52295480564,
+        163.9727118806071,
+        651.6877665015417
+      ],
+      "critical_arclength_fraction": 0.3020459631355739
+    },
+    {
+      "state": "116",
+      "source_state": "116",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.38071669177755,
+      "allowance_adjusted_clearance_mm": 61.88071669177755,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.031918174905787,
+      "maximum_tension_n": 17.79091388074889,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007238367151674066,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.6882286804944,
+        304.6270700578909,
+        803.8665764408153
+      ],
+      "critical_tank_point_mm": [
+        632.487598300924,
+        164.15482216638824,
+        650.7453078539328
+      ],
+      "critical_arclength_fraction": 0.3020550206085451
+    },
+    {
+      "state": "117",
+      "source_state": "117",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 37.37671436647081,
+      "allowance_adjusted_clearance_mm": 35.87671436647081,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9992693436408207,
+      "maximum_tension_n": 17.79048502169827,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007408143512326659,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        888.7770488262975,
+        339.92798260446693,
+        776.0765228157295
+      ],
+      "critical_tank_point_mm": [
+        888.7770488262975,
+        339.92798260446693,
+        776.0765228157295
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "118",
+      "source_state": "118",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 16.311927051345165,
+      "allowance_adjusted_clearance_mm": 14.811927051345165,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.925605821276588,
+      "maximum_tension_n": 17.73022708450939,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007886000731972677,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        855.292047127347,
+        367.5789437033818,
+        735.2867664653287
+      ],
+      "critical_tank_point_mm": [
+        855.292047127347,
+        367.5789437033818,
+        735.2867664653287
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "119",
+      "source_state": "119",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 9.700412093360868,
+      "allowance_adjusted_clearance_mm": 8.200412093360868,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9020569109438994,
+      "maximum_tension_n": 17.8176127661134,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008542336571728947,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        828.7358224198604,
+        379.37413686664837,
+        692.0717551672798
+      ],
+      "critical_tank_point_mm": [
+        828.7358224198604,
+        379.37413686664837,
+        692.0717551672798
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "120",
+      "source_state": "120",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.965800963724675,
+      "allowance_adjusted_clearance_mm": 13.465800963724675,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9226559108432926,
+      "maximum_tension_n": 17.976554920668562,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009301147962702632,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5550946945546,
+        380.5662741997067,
+        660.7889083974673
+      ],
+      "critical_tank_point_mm": [
+        815.5550946945546,
+        380.5662741997067,
+        660.7889083974673
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "121",
+      "source_state": "121",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 108.79962921686246,
+      "allowance_adjusted_clearance_mm": 107.29962921686246,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996722658886409,
+      "maximum_tension_n": 3.0252584788081403,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00030172668837602317,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        286.93273498664473,
+        -111.51605514356747,
+        647.9999999999951
+      ],
+      "critical_tank_point_mm": [
+        161.97668325151272,
+        -24.127009019558244,
+        647.9999999999972
+      ],
+      "critical_arclength_fraction": 0.7382485812921729
+    },
+    {
+      "state": "122",
+      "source_state": "122",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 93.1146264339886,
+      "allowance_adjusted_clearance_mm": 91.6146264339886,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "123",
+      "source_state": "123",
+      "phase": "entry",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 93.1146264339886,
+      "allowance_adjusted_clearance_mm": 91.6146264339886,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "124",
+      "source_state": "124",
+      "phase": "entry",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.72396865142072,
+      "allowance_adjusted_clearance_mm": 63.22396865142072,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5374428686553,
+        273.44824652874354,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        615.616229589087,
+        158.10409206256378,
+        647.9999999999861
+      ],
+      "critical_arclength_fraction": 0.27181504269788015
+    },
+    {
+      "state": "125",
+      "source_state": "125",
+      "phase": "exit",
+      "clamp_s_mm": 12.5,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.69580336507191,
+      "allowance_adjusted_clearance_mm": 63.19580336507191,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838324982,
+      "maximum_tension_n": 15.845588748178626,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006237692,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1030.1703672877356,
+        272.6651767047208,
+        647.7857214148947
+      ],
+      "critical_tank_point_mm": [
+        615.1538432458192,
+        157.9033848449727,
+        648.0014852059172
+      ],
+      "critical_arclength_fraction": 0.27517081678195077
+    },
+    {
+      "state": "126",
+      "source_state": "126",
+      "phase": "exit",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 92.92000028108805,
+      "allowance_adjusted_clearance_mm": 91.42000028108805,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838324982,
+      "maximum_tension_n": 15.84558874817863,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006238042,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.6547439384783,
+        11.874817418908634,
+        647.7857214148804
+      ],
+      "critical_tank_point_mm": [
+        313.6547439384783,
+        11.874817418908634,
+        647.7857214148804
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "127",
+      "source_state": "127",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.73879238937225,
+      "allowance_adjusted_clearance_mm": 63.23879238937225,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998839419489859,
+      "maximum_tension_n": 15.735770775471437,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005369254890156791,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5213050340822,
+        273.48887889190894,
+        646.741904291656
+      ],
+      "critical_tank_point_mm": [
+        615.6150515487986,
+        158.1029112128341,
+        647.9767951631595
+      ],
+      "critical_arclength_fraction": 0.2718152120608329
+    },
+    {
+      "state": "128",
+      "source_state": "128",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 25.122376767392502,
+      "allowance_adjusted_clearance_mm": 23.622376767392502,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.147819732279011,
+      "maximum_tension_n": 17.771837129589485,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009381774559955018,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.8353330674342,
+        375.4495397848891,
+        602.4944746403212
+      ],
+      "critical_tank_point_mm": [
+        813.8353330674342,
+        375.4495397848891,
+        602.4944746403212
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "129",
+      "source_state": "129",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 25.906696635521875,
+      "allowance_adjusted_clearance_mm": 24.406696635521875,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.1463806421362155,
+      "maximum_tension_n": 17.78543035713857,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009365572695760265,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.0113257961616,
+        374.92246440327654,
+        600.1028087631604
+      ],
+      "critical_tank_point_mm": [
+        814.0113257961616,
+        374.92246440327654,
+        600.1028087631604
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "130",
+      "source_state": "130",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.72076320095273,
+      "allowance_adjusted_clearance_mm": 63.22076320095273,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000118838326647,
+      "maximum_tension_n": 15.845588748178649,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005394126006237803,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5195988396958,
+        273.5202270630562,
+        647.7857214148673
+      ],
+      "critical_tank_point_mm": [
+        615.6154723028504,
+        158.1006658764992,
+        648.0014634927599
+      ],
+      "critical_arclength_fraction": 0.27181529173723507
+    },
+    {
+      "state": "131",
+      "source_state": "131",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.7122573114879,
+      "allowance_adjusted_clearance_mm": 63.2122573114879,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9971072582880542,
+      "maximum_tension_n": 15.40248770312062,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005268436311728208,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5210592985868,
+        273.50688961580073,
+        649.3533235592142
+      ],
+      "critical_tank_point_mm": [
+        615.6160746081164,
+        158.1043173410646,
+        648.0179846671662
+      ],
+      "critical_arclength_fraction": 0.27181505108620413
+    },
+    {
+      "state": "132",
+      "source_state": "132",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.905604547004792,
+      "allowance_adjusted_clearance_mm": 11.405604547004792,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0325141140833662,
+      "maximum_tension_n": 17.740730628786945,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009376923804612938,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.8936735313149,
+        375.4947184828043,
+        693.4660570401111
+      ],
+      "critical_tank_point_mm": [
+        813.8936735313149,
+        375.4947184828043,
+        693.4660570401111
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "133",
+      "source_state": "133",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.911688594532954,
+      "allowance_adjusted_clearance_mm": 11.411688594532954,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0310701130264186,
+      "maximum_tension_n": 17.754386632960095,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009360784539302449,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.0698803401766,
+        374.96707243494717,
+        695.8620715797712
+      ],
+      "critical_tank_point_mm": [
+        814.0698803401766,
+        374.96707243494717,
+        695.8620715797712
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "134",
+      "source_state": "134",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.726642263526,
+      "allowance_adjusted_clearance_mm": 63.226642263526,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.999295021856606,
+      "maximum_tension_n": 15.734910546131298,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005364759095785666,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.5370396702658,
+        273.428129622834,
+        648.095569202084
+      ],
+      "critical_tank_point_mm": [
+        615.6152032759084,
+        158.10268120121492,
+        647.9948388700075
+      ],
+      "critical_arclength_fraction": 0.2718152041992478
+    },
+    {
+      "state": "135",
+      "source_state": "135",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 108.79962921686246,
+      "allowance_adjusted_clearance_mm": 107.29962921686246,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996722658886409,
+      "maximum_tension_n": 3.0252584788081403,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00030172668837602317,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        286.93273498664473,
+        -111.51605514356747,
+        647.9999999999951
+      ],
+      "critical_tank_point_mm": [
+        161.97668325151272,
+        -24.127009019558244,
+        647.9999999999972
+      ],
+      "critical_arclength_fraction": 0.7382485812921729
+    },
+    {
+      "state": "136",
+      "source_state": "136",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 93.1146264339886,
+      "allowance_adjusted_clearance_mm": 91.6146264339886,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9990095474157847,
+      "maximum_tension_n": 15.401947423853528,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005263548735531148,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_tank_point_mm": [
+        313.67258796743533,
+        11.80283688460699,
+        647.9999999989166
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "137",
+      "source_state": "137",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 29.458660098246767,
+      "allowance_adjusted_clearance_mm": 27.958660098246767,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998386529079418,
+      "maximum_tension_n": 18.732424153662464,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009593935640109348,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.8504982587635,
+        372.90186399695733,
+        589.3943538455752
+      ],
+      "critical_tank_point_mm": [
+        816.8504982587635,
+        372.90186399695733,
+        589.3943538455752
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "138",
+      "source_state": "138",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.4132141474619,
+      "allowance_adjusted_clearance_mm": 62.9132141474619,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.994975153717931,
+      "maximum_tension_n": 15.42222071332702,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005441238336477471,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1030.3870559203374,
+        273.35618464171404,
+        679.0398775766247
+      ],
+      "critical_tank_point_mm": [
+        630.7176466310823,
+        163.3516976579311,
+        648.575015861976
+      ],
+      "critical_arclength_fraction": 0.29865999253383013
+    },
+    {
+      "state": "139",
+      "source_state": "139",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 9.187011930071932,
+      "allowance_adjusted_clearance_mm": 7.687011930071932,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.90307586787647,
+      "maximum_tension_n": 17.797835008383714,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008452026912605563,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        831.4463560810789,
+        378.71776151187254,
+        697.1170845924179
+      ],
+      "critical_tank_point_mm": [
+        831.4463560810789,
+        378.71776151187254,
+        697.1170845924179
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "140",
+      "source_state": "140",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.952675522666901,
+      "allowance_adjusted_clearance_mm": 13.452675522666901,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.896647006112569,
+      "maximum_tension_n": 17.516249822942463,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009125258030307603,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5714344136285,
+        380.57317261981746,
+        660.8354839315529
+      ],
+      "critical_tank_point_mm": [
+        815.5714344136285,
+        380.57317261981746,
+        660.8354839315529
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "141",
+      "source_state": "141",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 30.395834518395993,
+      "allowance_adjusted_clearance_mm": 28.895834518395993,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9641178394019625,
+      "maximum_tension_n": 18.53352935667424,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009607247492822988,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.9260417814783,
+        372.2106571342755,
+        586.8895409498573
+      ],
+      "critical_tank_point_mm": [
+        816.9260417814783,
+        372.2106571342755,
+        586.8895409498573
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "142",
+      "source_state": "142",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.531983971369051,
+      "allowance_adjusted_clearance_mm": 13.031983971369051,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.953388105339419,
+      "maximum_tension_n": 18.199569267026945,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009398948492135057,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.8075653670753,
+        380.75811697275435,
+        662.5594312122546
+      ],
+      "critical_tank_point_mm": [
+        815.8075653670753,
+        380.75811697275435,
+        662.5594312122546
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "143",
+      "source_state": "143",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 39.32180700087399,
+      "allowance_adjusted_clearance_mm": 37.82180700087399,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9165998705752743,
+      "maximum_tension_n": 18.275921806993566,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009341314010732197,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.7560475925978,
+        365.7099970794421,
+        570.0833596158794
+      ],
+      "critical_tank_point_mm": [
+        816.7560475925978,
+        365.7099970794421,
+        570.0833596158794
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "144",
+      "source_state": "144",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.80359501810919,
+      "allowance_adjusted_clearance_mm": 64.30359501810919,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0305994097033864,
+      "maximum_tension_n": 17.55387031117032,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007207911706804756,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        925.3654229347956,
+        293.8879675878524,
+        486.40195786121444
+      ],
+      "critical_tank_point_mm": [
+        549.5745655163485,
+        134.95850887837204,
+        647.4968006339631
+      ],
+      "critical_arclength_fraction": 0.15439365290159487
+    },
+    {
+      "state": "145",
+      "source_state": "145",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.10190566744053,
+      "allowance_adjusted_clearance_mm": 61.60190566744053,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998667551637732,
+      "maximum_tension_n": 17.354801057986723,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000717120803379002,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        925.4231901618166,
+        293.80127119999975,
+        809.5956783703097
+      ],
+      "critical_tank_point_mm": [
+        632.5022661200086,
+        164.08460062287293,
+        651.1451893799835
+      ],
+      "critical_arclength_fraction": 0.3020514616004043
+    },
+    {
+      "state": "146",
+      "source_state": "146",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 39.92660435885769,
+      "allowance_adjusted_clearance_mm": 38.42660435885769,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.899702599272017,
+      "maximum_tension_n": 18.22061769621566,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009275801042260373,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.5411579164852,
+        365.20260073700695,
+        569.4791372361238
+      ],
+      "critical_tank_point_mm": [
+        816.5411579164852,
+        365.20260073700695,
+        569.4791372361238
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "147",
+      "source_state": "147",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.89944811866437,
+      "allowance_adjusted_clearance_mm": 64.39944811866437,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.001276022545732,
+      "maximum_tension_n": 16.776123260658437,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000717345756813922,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        967.3620974959392,
+        264.38387366871353,
+        491.12527702883534
+      ],
+      "critical_tank_point_mm": [
+        549.5864012941711,
+        134.9222174830544,
+        647.3725799345543
+      ],
+      "critical_arclength_fraction": 0.15438593553168428
+    },
+    {
+      "state": "148",
+      "source_state": "148",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.56850486896083,
+      "allowance_adjusted_clearance_mm": 61.06850486896083,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9961839053331074,
+      "maximum_tension_n": 16.678091226723975,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007146203103833378,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        967.4839709347195,
+        264.3648639857425,
+        804.7498996153643
+      ],
+      "critical_tank_point_mm": [
+        634.4428143681896,
+        164.5224787954725,
+        651.9004170420606
+      ],
+      "critical_arclength_fraction": 0.3053921030603005
+    },
+    {
+      "state": "149",
+      "source_state": "149",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.76244218842764,
+      "allowance_adjusted_clearance_mm": 64.26244218842764,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.021713726166787,
+      "maximum_tension_n": 17.60286847083008,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007211079705977039,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        920.6744592050677,
+        300.6417645332168,
+        489.86707078784843
+      ],
+      "critical_tank_point_mm": [
+        551.4555391649244,
+        135.6343560055689,
+        647.5111875044465
+      ],
+      "critical_arclength_fraction": 0.15775064898004257
+    },
+    {
+      "state": "150",
+      "source_state": "150",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.276000722371535,
+      "allowance_adjusted_clearance_mm": 61.776000722371535,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.997137809657367,
+      "maximum_tension_n": 17.404369072631496,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007174609330186287,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        920.7327452077654,
+        300.54913533633965,
+        806.1387794413528
+      ],
+      "critical_tank_point_mm": [
+        632.4937187948309,
+        164.1290215016019,
+        650.8959315694498
+      ],
+      "critical_arclength_fraction": 0.30205363596709817
+    },
+    {
+      "state": "151",
+      "source_state": "151",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.90844997650295,
+      "allowance_adjusted_clearance_mm": 64.40844997650295,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.000866896361055,
+      "maximum_tension_n": 16.9634627051007,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007219020212918485,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.162316665989,
+        266.02194330947316,
+        486.55866594600985
+      ],
+      "critical_tank_point_mm": [
+        527.0003747521326,
+        126.86502644805731,
+        647.7375242183134
+      ],
+      "critical_arclength_fraction": 0.11411864395249066
+    },
+    {
+      "state": "152",
+      "source_state": "152",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.534242301232936,
+      "allowance_adjusted_clearance_mm": 61.034242301232936,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996993760183994,
+      "maximum_tension_n": 16.866319298659548,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007192315275168023,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.2901650146434,
+        266.0012943277047,
+        809.3229903684376
+      ],
+      "critical_tank_point_mm": [
+        634.4355323076077,
+        164.5323002892764,
+        651.982574653648
+      ],
+      "critical_arclength_fraction": 0.3053945735003909
+    },
+    {
+      "state": "153",
+      "source_state": "153",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.73775661218649,
+      "allowance_adjusted_clearance_mm": 64.23775661218649,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.018461204079117,
+      "maximum_tension_n": 17.616908326877894,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007204977913516719,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.7093418824254,
+        304.56623812770147,
+        492.0738088195378
+      ],
+      "critical_tank_point_mm": [
+        551.4546092473282,
+        135.63786824438336,
+        647.540385143449
+      ],
+      "critical_arclength_fraction": 0.1577513935066618
+    },
+    {
+      "state": "154",
+      "source_state": "154",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.379335827841814,
+      "allowance_adjusted_clearance_mm": 61.879335827841814,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996562618207819,
+      "maximum_tension_n": 17.418745670894136,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000716864199310797,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        917.7681115395508,
+        304.47006764614554,
+        803.9372670296761
+      ],
+      "critical_tank_point_mm": [
+        632.4884786117849,
+        164.1554423919823,
+        650.7483239394364
+      ],
+      "critical_arclength_fraction": 0.3020550841099192
+    },
+    {
+      "state": "155",
+      "source_state": "155",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 24.930629131057728,
+      "allowance_adjusted_clearance_mm": 23.430629131057728,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.1469180689366447,
+      "maximum_tension_n": 17.849413204491736,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009462713006196938,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.7260105434386,
+        375.5613955170433,
+        603.140942051125
+      ],
+      "critical_tank_point_mm": [
+        813.7260105434386,
+        375.5613955170433,
+        603.140942051125
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "156",
+      "source_state": "156",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.71361191550388,
+      "allowance_adjusted_clearance_mm": 64.21361191550388,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0122836093272514,
+      "maximum_tension_n": 17.633949565866605,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000721054874495404,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        915.1403323047302,
+        308.45495149735353,
+        494.4776634117575
+      ],
+      "critical_tank_point_mm": [
+        551.453703810324,
+        135.6409902832405,
+        647.5688027536179
+      ],
+      "critical_arclength_fraction": 0.1577520898653721
+    },
+    {
+      "state": "157",
+      "source_state": "157",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.479339003901615,
+      "allowance_adjusted_clearance_mm": 61.979339003901615,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9952732785982894,
+      "maximum_tension_n": 17.43599152606637,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007174264328879079,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        915.1994709068974,
+        308.35597175757863,
+        801.5384668246611
+      ],
+      "critical_tank_point_mm": [
+        632.483418429294,
+        164.17997920570104,
+        650.6041028958916
+      ],
+      "critical_arclength_fraction": 0.30205640380641147
+    },
+    {
+      "state": "158",
+      "source_state": "158",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.91027662551507,
+      "allowance_adjusted_clearance_mm": 64.41027662551507,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0491305945673077,
+      "maximum_tension_n": 17.162451075185313,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007243045784926578,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        953.0474615683095,
+        268.66361771121814,
+        483.305450483056
+      ],
+      "critical_tank_point_mm": [
+        526.9994411067254,
+        126.86725058146492,
+        647.7364032970236
+      ],
+      "critical_arclength_fraction": 0.114119614104657
+    },
+    {
+      "state": "159",
+      "source_state": "159",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.54211896145459,
+      "allowance_adjusted_clearance_mm": 61.04211896145459,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0480184378444974,
+      "maximum_tension_n": 17.058252806314133,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007219025833518793,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        953.180048429073,
+        268.64647793784115,
+        812.5835899163824
+      ],
+      "critical_tank_point_mm": [
+        634.4278698301132,
+        164.55099476437357,
+        651.9996036375184
+      ],
+      "critical_arclength_fraction": 0.30539701504245226
+    },
+    {
+      "state": "160",
+      "source_state": "160",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.68505174728324,
+      "allowance_adjusted_clearance_mm": 64.18505174728324,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0064543398517385,
+      "maximum_tension_n": 17.64098493539236,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007209953267709958,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        911.9310509721838,
+        313.02254282505834,
+        497.4934180905463
+      ],
+      "critical_tank_point_mm": [
+        551.4526479883313,
+        135.64474091616103,
+        647.6024434237396
+      ],
+      "critical_arclength_fraction": 0.15775297378589517
+    },
+    {
+      "state": "161",
+      "source_state": "161",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 60.2719822147194,
+      "allowance_adjusted_clearance_mm": 58.7719822147194,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9941159399554116,
+      "maximum_tension_n": 17.44326363520669,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007173724292104073,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        911.9907422156533,
+        312.9202543979688,
+        798.529070295986
+      ],
+      "critical_tank_point_mm": [
+        911.9907422156533,
+        312.9202543979688,
+        798.529070295986
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "162",
+      "source_state": "162",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.6615817872513,
+      "allowance_adjusted_clearance_mm": 64.1615817872513,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0029453428104813,
+      "maximum_tension_n": 17.63565461826021,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007203265972117911,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        909.1553889098312,
+        316.7427402040697,
+        500.118747343454
+      ],
+      "critical_tank_point_mm": [
+        551.4517952958564,
+        135.64787039230674,
+        647.6301094461453
+      ],
+      "critical_arclength_fraction": 0.15775375004870698
+    },
+    {
+      "state": "163",
+      "source_state": "163",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 57.04237852378117,
+      "allowance_adjusted_clearance_mm": 55.54237852378117,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9935134232207847,
+      "maximum_tension_n": 17.43791625600304,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007167057675169058,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        909.2155471586434,
+        316.6378187800637,
+        795.9092838140848
+      ],
+      "critical_tank_point_mm": [
+        909.2155471586434,
+        316.6378187800637,
+        795.9092838140848
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "164",
+      "source_state": "164",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.965800963724675,
+      "allowance_adjusted_clearance_mm": 13.465800963724675,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9226559108432926,
+      "maximum_tension_n": 17.976554920668562,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009301147962702632,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.5550946945546,
+        380.5662741997067,
+        660.7889083974673
+      ],
+      "critical_tank_point_mm": [
+        815.5550946945546,
+        380.5662741997067,
+        660.7889083974673
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "165",
+      "source_state": "165",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 51.4341626035947,
+      "allowance_adjusted_clearance_mm": 49.9341626035947,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9832374308528484,
+      "maximum_tension_n": 17.845639016033914,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007663678845310884,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        872.0079827915099,
+        355.0993488018997,
+        538.4578488137186
+      ],
+      "critical_tank_point_mm": [
+        872.0079827915099,
+        355.0993488018997,
+        538.4578488137186
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "166",
+      "source_state": "166",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 25.53942622852854,
+      "allowance_adjusted_clearance_mm": 24.03942622852854,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.992124716894471,
+      "maximum_tension_n": 17.762324730153157,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007641524981214453,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        872.1645522652988,
+        355.07401379429297,
+        757.5555971898784
+      ],
+      "critical_tank_point_mm": [
+        872.1645522652988,
+        355.07401379429297,
+        757.5555971898784
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "167",
+      "source_state": "167",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 41.2465341411273,
+      "allowance_adjusted_clearance_mm": 39.7465341411273,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.941039770669217,
+      "maximum_tension_n": 17.82528011933775,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007830285305691035,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        859.829404561762,
+        364.41680319127187,
+        554.1294808991305
+      ],
+      "critical_tank_point_mm": [
+        859.829404561762,
+        364.41680319127187,
+        554.1294808991305
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "168",
+      "source_state": "168",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 18.971312484743315,
+      "allowance_adjusted_clearance_mm": 17.471312484743315,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9501754284486474,
+      "maximum_tension_n": 17.740103117497334,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007806995996242933,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        859.9806058555453,
+        364.405302571287,
+        741.8990661343313
+      ],
+      "critical_tank_point_mm": [
+        859.9806058555453,
+        364.405302571287,
+        741.8990661343313
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "169",
+      "source_state": "169",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 32.74150162005979,
+      "allowance_adjusted_clearance_mm": 31.241501620059793,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9059707487188935,
+      "maximum_tension_n": 17.82917909796366,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008091328279031402,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        846.5323481308593,
+        372.62372353122873,
+        573.6314589932708
+      ],
+      "critical_tank_point_mm": [
+        846.5323481308593,
+        372.62372353122873,
+        573.6314589932708
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "170",
+      "source_state": "170",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.523622513946549,
+      "allowance_adjusted_clearance_mm": 11.023622513946549,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.915052434660185,
+      "maximum_tension_n": 17.741022876007783,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008056171407697244,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        846.6723008095704,
+        372.63634380423105,
+        722.3993514781428
+      ],
+      "critical_tank_point_mm": [
+        846.6723008095704,
+        372.63634380423105,
+        722.3993514781428
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "171",
+      "source_state": "171",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 31.526254991839345,
+      "allowance_adjusted_clearance_mm": 30.026254991839345,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9030053323241063,
+      "maximum_tension_n": 17.831414714000037,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008125390934610063,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        844.7924768723137,
+        373.540365737128,
+        576.4462589476855
+      ],
+      "critical_tank_point_mm": [
+        844.7924768723137,
+        373.540365737128,
+        576.4462589476855
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "172",
+      "source_state": "172",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.093165827095092,
+      "allowance_adjusted_clearance_mm": 10.593165827095092,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.911995535803402,
+      "maximum_tension_n": 17.74244260274077,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008090114398176461,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        844.9303950169822,
+        373.5570050941958,
+        719.5826549843994
+      ],
+      "critical_tank_point_mm": [
+        844.9303950169822,
+        373.5570050941958,
+        719.5826549843994
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "173",
+      "source_state": "173",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.955776129035286,
+      "allowance_adjusted_clearance_mm": 11.455776129035286,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0320594978707955,
+      "maximum_tension_n": 17.82396780677805,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009460906946610532,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        813.7832724430375,
+        375.61365056340367,
+        692.7935948076993
+      ],
+      "critical_tank_point_mm": [
+        813.7832724430375,
+        375.61365056340367,
+        692.7935948076993
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "174",
+      "source_state": "174",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 25.704911489450538,
+      "allowance_adjusted_clearance_mm": 24.204911489450538,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8986500117751857,
+      "maximum_tension_n": 17.890262804452817,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008339022385995791,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        835.9044679896248,
+        377.2624198659882,
+        590.9261102643579
+      ],
+      "critical_tank_point_mm": [
+        835.9044679896248,
+        377.2624198659882,
+        590.9261102643579
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "175",
+      "source_state": "175",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 9.7587959158422,
+      "allowance_adjusted_clearance_mm": 8.2587959158422,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.904149704279282,
+      "maximum_tension_n": 17.775302271444485,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008311233307450804,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        836.0312417204248,
+        377.2996396093467,
+        705.0830365731686
+      ],
+      "critical_tank_point_mm": [
+        836.0312417204248,
+        377.2996396093467,
+        705.0830365731686
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "176",
+      "source_state": "176",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 18.770330997185468,
+      "allowance_adjusted_clearance_mm": 17.270330997185468,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.8956802201098935,
+      "maximum_tension_n": 18.195336416134026,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000927588430684293,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.600441736739,
+        365.2397626491737,
+        726.5223582171691
+      ],
+      "critical_tank_point_mm": [
+        816.600441736739,
+        365.2397626491737,
+        726.5223582171691
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "177",
+      "source_state": "177",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.5665453020749,
+      "allowance_adjusted_clearance_mm": 61.0665453020749,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.992087808338874,
+      "maximum_tension_n": 16.361970272243205,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007068193618073566,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        967.5713596184021,
+        264.28415548868963,
+        804.7294327158957
+      ],
+      "critical_tank_point_mm": [
+        634.4438441523187,
+        164.52294516182042,
+        651.9043170767759
+      ],
+      "critical_arclength_fraction": 0.30539196404688185
+    },
+    {
+      "state": "178",
+      "source_state": "178",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.89911125533351,
+      "allowance_adjusted_clearance_mm": 64.39911125533351,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.991565824402637,
+      "maximum_tension_n": 16.569906668073923,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000710898897327426,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        967.5184147522837,
+        264.3146002672176,
+        491.224846552767
+      ],
+      "critical_tank_point_mm": [
+        549.5867164556446,
+        134.9227336893164,
+        647.3731240932062
+      ],
+      "critical_arclength_fraction": 0.15438573200218428
+    },
+    {
+      "state": "179",
+      "source_state": "179",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.5352295041273,
+      "allowance_adjusted_clearance_mm": 61.0352295041273,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9961705420704985,
+      "maximum_tension_n": 16.537060820933277,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007111971476015394,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.9927079927529,
+        265.7850644846259,
+        808.9394126036503
+      ],
+      "critical_tank_point_mm": [
+        634.4371766729282,
+        164.53187634033463,
+        651.9793458723306
+      ],
+      "critical_arclength_fraction": 0.3053942203022619
+    },
+    {
+      "state": "180",
+      "source_state": "180",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.90768063596263,
+      "allowance_adjusted_clearance_mm": 64.40768063596263,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9953113748231615,
+      "maximum_tension_n": 16.74324627370703,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007152117008810849,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        960.9384526866203,
+        265.8239635522564,
+        487.0195113048476
+      ],
+      "critical_tank_point_mm": [
+        527.0006904034508,
+        126.86511578688953,
+        647.7383238458972
+      ],
+      "critical_arclength_fraction": 0.11411835090750526
+    },
+    {
+      "state": "181",
+      "source_state": "181",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 108.05119669322141,
+      "allowance_adjusted_clearance_mm": 106.55119669322141,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9985389677842442,
+      "maximum_tension_n": 4.790501804431253,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00033275053188238756,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        294.4298214375616,
+        -100.32748919873707,
+        647.9999999993847
+      ],
+      "critical_tank_point_mm": [
+        161.87761766464075,
+        -23.36927597884886,
+        647.9999999998503
+      ],
+      "critical_arclength_fraction": 0.7382428188263597
+    },
+    {
+      "state": "182",
+      "source_state": "182",
+      "phase": "straighten",
+      "clamp_s_mm": -750.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 100.99315607814523,
+      "allowance_adjusted_clearance_mm": 99.49315607814523,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9995407625861468,
+      "maximum_tension_n": 13.409074361215751,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.00048648678193785773,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        316.8371878688562,
+        -19.185164893284878,
+        647.9999999991896
+      ],
+      "critical_tank_point_mm": [
+        200.95164572875865,
+        -16.952002567261843,
+        647.999999999783
+      ],
+      "critical_arclength_fraction": 0.8053387312627682
+    },
+    {
+      "state": "183",
+      "source_state": "183",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.638967694864135,
+      "allowance_adjusted_clearance_mm": 62.138967694864135,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9999645412278073,
+      "maximum_tension_n": 15.508073414712275,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006084687154959726,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1015.8016486543506,
+        269.2925882145621,
+        736.1168196407531
+      ],
+      "critical_tank_point_mm": [
+        632.5949610019444,
+        163.95878889271907,
+        649.9440626073298
+      ],
+      "critical_arclength_fraction": 0.30202023346537854
+    },
+    {
+      "state": "184",
+      "source_state": "184",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.90828705166017,
+      "allowance_adjusted_clearance_mm": 61.40828705166017,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.996311094128115,
+      "maximum_tension_n": 15.832856360863488,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006736775368886466,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        991.1255439040482,
+        263.90454752022845,
+        781.119837486334
+      ],
+      "critical_tank_point_mm": [
+        632.5767790548996,
+        163.8912128375492,
+        651.1826954771583
+      ],
+      "critical_arclength_fraction": 0.30202842291984217
+    },
+    {
+      "state": "185",
+      "source_state": "185",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 23.955581953652242,
+      "allowance_adjusted_clearance_mm": 22.455581953652242,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9699901821155135,
+      "maximum_tension_n": 17.379686683542374,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007606305522176464,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        869.388406664968,
+        357.2407552779449,
+        754.2575969935688
+      ],
+      "critical_tank_point_mm": [
+        869.388406664968,
+        357.2407552779449,
+        754.2575969935688
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "186",
+      "source_state": "186",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 12.11810524410911,
+      "allowance_adjusted_clearance_mm": 10.61810524410911,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.951744352085938,
+      "maximum_tension_n": 18.29353348259184,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009501275649157876,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.7873541151098,
+        375.67178391329605,
+        696.585348936586
+      ],
+      "critical_tank_point_mm": [
+        816.7873541151098,
+        375.67178391329605,
+        696.585348936586
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "187",
+      "source_state": "187",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 17.843932862435132,
+      "allowance_adjusted_clearance_mm": 16.343932862435132,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.940430688977567,
+      "maximum_tension_n": 18.188334996857098,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009335038826099912,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.8417103934578,
+        366.68548839780465,
+        723.5973171545694
+      ],
+      "critical_tank_point_mm": [
+        816.8417103934578,
+        366.68548839780465,
+        723.5973171545694
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "188",
+      "source_state": "188",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.027274417458585,
+      "allowance_adjusted_clearance_mm": 12.527274417458585,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.027170681292369,
+      "maximum_tension_n": 17.89973904020921,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009384100147541308,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.6649318122445,
+        372.8153414493137,
+        704.3570485550399
+      ],
+      "critical_tank_point_mm": [
+        814.6649318122445,
+        372.8153414493137,
+        704.3570485550399
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "189",
+      "source_state": "189",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 13.548542624418182,
+      "allowance_adjusted_clearance_mm": 12.048542624418182,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0277657338191886,
+      "maximum_tension_n": 17.88288833532719,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009398121461417314,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.4857230027251,
+        373.4164782073291,
+        702.1234743219202
+      ],
+      "critical_tank_point_mm": [
+        814.4857230027251,
+        373.4164782073291,
+        702.1234743219202
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "190",
+      "source_state": "190",
+      "phase": "right_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 13.016511564776934,
+      "allowance_adjusted_clearance_mm": 11.516511564776934,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.029505719423087,
+      "maximum_tension_n": 17.85154595224571,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009428014085440473,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.1307572792407,
+        374.55969068198107,
+        697.5368334605936
+      ],
+      "critical_tank_point_mm": [
+        814.1307572792407,
+        374.55969068198107,
+        697.5368334605936
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "191",
+      "source_state": "191",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 14.144457328937811,
+      "allowance_adjusted_clearance_mm": 12.644457328937811,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9586177159187272,
+      "maximum_tension_n": 18.18876247337315,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009384728271574297,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        815.9957657759279,
+        380.13354899725846,
+        669.7957255489127
+      ],
+      "critical_tank_point_mm": [
+        815.9957657759279,
+        380.13354899725846,
+        669.7957255489127
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "192",
+      "source_state": "192",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 20.298720134748905,
+      "allowance_adjusted_clearance_mm": 18.798720134748905,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9639744097779457,
+      "maximum_tension_n": 17.74251724781082,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007768271329857929,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        862.7572987973565,
+        362.4222934885635,
+        745.6272040568284
+      ],
+      "critical_tank_point_mm": [
+        862.7572987973565,
+        362.4222934885635,
+        745.6272040568284
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "193",
+      "source_state": "193",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 48.16056603567209,
+      "allowance_adjusted_clearance_mm": 46.66056603567209,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0006034332565625,
+      "maximum_tension_n": 17.808882590136196,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007265118329965761,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        901.3600216762061,
+        327.00627715091633,
+        787.8799939307971
+      ],
+      "critical_tank_point_mm": [
+        901.3600216762061,
+        327.00627715091633,
+        787.8799939307971
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "194",
+      "source_state": "194",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.92083252521617,
+      "allowance_adjusted_clearance_mm": 61.42083252521617,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0510300248036826,
+      "maximum_tension_n": 17.64680103088364,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000724428876934801,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        931.1738221548298,
+        286.75637863916796,
+        812.4255705835283
+      ],
+      "critical_tank_point_mm": [
+        632.5108443483587,
+        164.03434471782958,
+        651.3990596460258
+      ],
+      "critical_arclength_fraction": 0.3020489296998507
+    },
+    {
+      "state": "195",
+      "source_state": "195",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.6142309214176,
+      "allowance_adjusted_clearance_mm": 61.1142309214176,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0008393376163864,
+      "maximum_tension_n": 16.55988708870228,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007099166070263177,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        972.3097830986351,
+        263.8246928225577,
+        800.9632344105646
+      ],
+      "critical_tank_point_mm": [
+        634.4475071142728,
+        164.52072390466142,
+        651.8102785994496
+      ],
+      "critical_arclength_fraction": 0.30539045917487273
+    },
+    {
+      "state": "196",
+      "source_state": "196",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 62.818665405596164,
+      "allowance_adjusted_clearance_mm": 61.318665405596164,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0048879105551833,
+      "maximum_tension_n": 16.238413189121243,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000690350312698472,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        986.4658233168359,
+        263.5366793758096,
+        786.8674904604932
+      ],
+      "critical_tank_point_mm": [
+        632.571891580045,
+        163.88329324790251,
+        651.3371638036635
+      ],
+      "critical_arclength_fraction": 0.302030087926981
+    },
+    {
+      "state": "197",
+      "source_state": "197",
+      "phase": "right_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 63.58967965352916,
+      "allowance_adjusted_clearance_mm": 62.08967965352916,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0159291129604844,
+      "maximum_tension_n": 15.836451897915074,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006218260545899462,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1014.4603961042918,
+        268.811444257195,
+        739.4520684706591
+      ],
+      "critical_tank_point_mm": [
+        632.5931227244433,
+        163.95302456894242,
+        650.0258064026841
+      ],
+      "critical_arclength_fraction": 0.30202083237870525
+    },
+    {
+      "state": "198",
+      "source_state": "198",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.81127388695857,
+      "allowance_adjusted_clearance_mm": 63.311273886958574,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.998337963600631,
+      "maximum_tension_n": 15.738064070981059,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005401224563072635,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.3136056306912,
+        273.543254580872,
+        638.6111342377707
+      ],
+      "critical_tank_point_mm": [
+        615.6142358472115,
+        158.1035833963197,
+        647.8684154290012
+      ],
+      "critical_arclength_fraction": 0.2718153076702413
+    },
+    {
+      "state": "199",
+      "source_state": "199",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.0375727114958,
+      "allowance_adjusted_clearance_mm": 63.5375727114958,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.997555042399136,
+      "maximum_tension_n": 15.754542839240042,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005551833116023391,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1030.1946180288019,
+        273.35800973739487,
+        615.5473731122528
+      ],
+      "critical_tank_point_mm": [
+        615.6111289022652,
+        158.10261234221696,
+        647.5274339353704
+      ],
+      "critical_arclength_fraction": 0.27181597121141515
+    },
+    {
+      "state": "200",
+      "source_state": "200",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.62317852718994,
+      "allowance_adjusted_clearance_mm": 64.12317852718994,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.001510992298736,
+      "maximum_tension_n": 15.861523668895684,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006329984554854901,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1011.1433910628181,
+        268.1526429377066,
+        548.8702231131946
+      ],
+      "critical_tank_point_mm": [
+        574.0958268731997,
+        143.56835679442406,
+        647.2811198796147
+      ],
+      "critical_arclength_fraction": 0.1979993721609628
+    },
+    {
+      "state": "201",
+      "source_state": "201",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.82999520928455,
+      "allowance_adjusted_clearance_mm": 64.32999520928455,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9936954045984607,
+      "maximum_tension_n": 16.165692844556226,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006893273826033815,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        984.7584452683094,
+        263.4293543902696,
+        507.11510444304656
+      ],
+      "critical_tank_point_mm": [
+        549.5918726456761,
+        134.91544080460503,
+        647.4455093563063
+      ],
+      "critical_arclength_fraction": 0.1543824298986405
+    },
+    {
+      "state": "202",
+      "source_state": "202",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.83932557135638,
+      "allowance_adjusted_clearance_mm": 64.33932557135638,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9919439954135387,
+      "maximum_tension_n": 16.201643426857395,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006922492255466791,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        982.9902487270837,
+        263.31050134794566,
+        505.12721603491957
+      ],
+      "critical_tank_point_mm": [
+        549.5913245733063,
+        134.91602122550606,
+        647.4355330831623
+      ],
+      "critical_arclength_fraction": 0.15438278092893018
+    },
+    {
+      "state": "203",
+      "source_state": "203",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.8815494541367,
+      "allowance_adjusted_clearance_mm": 64.3815494541367,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.993726062116903,
+      "maximum_tension_n": 16.43622430591927,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007055402537786707,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        972.9347809512258,
+        263.69847420143776,
+        495.49552641243145
+      ],
+      "critical_tank_point_mm": [
+        549.5882900890138,
+        134.92013445781333,
+        647.3911407261708
+      ],
+      "critical_arclength_fraction": 0.1543847094102584
+    },
+    {
+      "state": "204",
+      "source_state": "204",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.6378037952297,
+      "allowance_adjusted_clearance_mm": 64.1378037952297,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9963431542907433,
+      "maximum_tension_n": 17.64456829067691,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007219380075757313,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        906.2352111010139,
+        320.73377481823,
+        503.0596812441728
+      ],
+      "critical_tank_point_mm": [
+        553.3329097689357,
+        136.3226846369922,
+        647.6346600531521
+      ],
+      "critical_arclength_fraction": 0.16111059256978386
+    },
+    {
+      "state": "205",
+      "source_state": "205",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 61.866907717387875,
+      "allowance_adjusted_clearance_mm": 60.366907717387875,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9880338038056347,
+      "maximum_tension_n": 17.614202095895365,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0007447255421014496,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        884.0758041415556,
+        344.45599488481395,
+        524.7829710871397
+      ],
+      "critical_tank_point_mm": [
+        884.0758041415556,
+        344.45599488481395,
+        524.7829710871397
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "206",
+      "source_state": "206",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 20.50060707198668,
+      "allowance_adjusted_clearance_mm": 19.00060707198668,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.947399622869932,
+      "maximum_tension_n": 18.088441314395517,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000937737485147176,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.2156256280373,
+        379.0975632148015,
+        617.7022685877495
+      ],
+      "critical_tank_point_mm": [
+        816.2156256280373,
+        379.0975632148015,
+        617.7022685877495
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "207",
+      "source_state": "207",
+      "phase": "left_out",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 22.444404506027055,
+      "allowance_adjusted_clearance_mm": 20.944404506027055,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9517986229503905,
+      "maximum_tension_n": 18.239254614122522,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009468401952743513,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.4759456846823,
+        377.9276188833073,
+        610.0844091299703
+      ],
+      "critical_tank_point_mm": [
+        816.4759456846823,
+        377.9276188833073,
+        610.0844091299703
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "208",
+      "source_state": "208",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 28.36972131708663,
+      "allowance_adjusted_clearance_mm": 26.86972131708663,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.1434946149160194,
+      "maximum_tension_n": 17.832511029809016,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009321388889584638,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        814.5507081683713,
+        373.20680110150295,
+        593.1687115886505
+      ],
+      "critical_tank_point_mm": [
+        814.5507081683713,
+        373.20680110150295,
+        593.1687115886505
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "209",
+      "source_state": "209",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 18.829928305410647,
+      "allowance_adjusted_clearance_mm": 17.329928305410647,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.9757237647460233,
+      "maximum_tension_n": 18.44360221125438,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0009465346971417089,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        816.0173712295235,
+        380.04257544969767,
+        624.9082243355293
+      ],
+      "critical_tank_point_mm": [
+        816.0173712295235,
+        380.04257544969767,
+        624.9082243355293
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "210",
+      "source_state": "210",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 19.88535415394729,
+      "allowance_adjusted_clearance_mm": 18.38535415394729,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.913414352644988,
+      "maximum_tension_n": 18.064275031004165,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0008868375682808692,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        822.8606378017939,
+        380.42417126385453,
+        615.9805320055765
+      ],
+      "critical_tank_point_mm": [
+        822.8606378017939,
+        380.42417126385453,
+        615.9805320055765
+      ],
+      "critical_arclength_fraction": 1.0
+    },
+    {
+      "state": "211",
+      "source_state": "211",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.47209004907741,
+      "allowance_adjusted_clearance_mm": 63.97209004907741,
+      "clearance_pass": true,
+      "minimum_tension_n": 2.991074411885036,
+      "maximum_tension_n": 17.872436555406946,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000744052316616133,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        887.9580342562273,
+        340.6245713470458,
+        520.5955374591799
+      ],
+      "critical_tank_point_mm": [
+        575.9122849032565,
+        144.3986570301897,
+        647.5506332609251
+      ],
+      "critical_arclength_fraction": 0.20138939624724309
+    },
+    {
+      "state": "212",
+      "source_state": "212",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.74673676538391,
+      "allowance_adjusted_clearance_mm": 64.24673676538391,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0236642405615664,
+      "maximum_tension_n": 16.13586421266745,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006708646606662321,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        997.8455909089881,
+        264.996843000327,
+        524.4981361545495
+      ],
+      "critical_tank_point_mm": [
+        551.4793795846103,
+        135.57861300341312,
+        647.4992312877341
+      ],
+      "critical_arclength_fraction": 0.15773558180367236
+    },
+    {
+      "state": "213",
+      "source_state": "213",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.73082001423282,
+      "allowance_adjusted_clearance_mm": 64.23082001423282,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0217666304975492,
+      "maximum_tension_n": 16.10353750868283,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0006658346875846763,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        999.9060711648699,
+        265.3365767349711,
+        527.750205096179
+      ],
+      "critical_tank_point_mm": [
+        551.4801101754925,
+        135.5781681284302,
+        647.5165921782204
+      ],
+      "critical_arclength_fraction": 0.1577351422953003
+    },
+    {
+      "state": "214",
+      "source_state": "214",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 65.54882448475853,
+      "allowance_adjusted_clearance_mm": 64.04882448475853,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.009603570278899,
+      "maximum_tension_n": 15.937258554829285,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.000622671823550369,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1015.0465373192205,
+        269.0766315443026,
+        558.0254704828096
+      ],
+      "critical_tank_point_mm": [
+        575.9833723365197,
+        144.2307555933824,
+        647.3366742912776
+      ],
+      "critical_arclength_fraction": 0.20135402290229834
+    },
+    {
+      "state": "215",
+      "source_state": "215",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.74494894199746,
+      "allowance_adjusted_clearance_mm": 63.244948941997464,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0001133643182434,
+      "maximum_tension_n": 15.847678802393782,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005402809518321979,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.4792770869506,
+        273.61720085538286,
+        645.0770421063736
+      ],
+      "critical_tank_point_mm": [
+        615.6151841197892,
+        158.1010919472949,
+        647.9655079613267
+      ],
+      "critical_arclength_fraction": 0.2718153130795919
+    },
+    {
+      "state": "216",
+      "source_state": "216",
+      "phase": "left_return",
+      "clamp_s_mm": 15.0,
+      "placement": "recorded clamp_s_mm",
+      "clearance_mm": 64.73286849339904,
+      "allowance_adjusted_clearance_mm": 63.23286849339904,
+      "clearance_pass": true,
+      "minimum_tension_n": 3.0000859358110725,
+      "maximum_tension_n": 15.846718858605202,
+      "tension_2p5_to_250_n_pass": true,
+      "maximum_axial_strain": 0.0005398328993132184,
+      "strain_pass": true,
+      "geometry_pass": true,
+      "head_tank_mm": [
+        1032.502137195438,
+        273.57609801913037,
+        646.4316808607405
+      ],
+      "critical_tank_point_mm": [
+        615.6153262275186,
+        158.10089580182483,
+        647.9834847966453
+      ],
+      "critical_arclength_fraction": 0.27181530115458513
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 15 November 2026 (Evening Report)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 16 November 2026 (Morning Report)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,32 +13,32 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 15 November 2026 — Evening Report (latest): finite-rope end exits and bellmouth candidate
+### 16 November 2026 — Morning Report (latest): bellmouth routing in the equilibrium solver
 
-**Evening Report timing:** run start and reporting cutoff **15 November 2026 20:01:41 EST (16 November 2026 01:01:41 UTC)**; deadline **22:01:41 EST (03:01:41 UTC)**. It builds on the same-day Morning Report below.
+**Morning Report timing:** start/cutoff **16 November 2026 07:19:33 EST (12:19:33 UTC)**; two-hour deadline **09:19:33 EST (14:19:33 UTC)**. Report preparation: **16 November 2026 08:04:21 EST (16 November 2026 13:04:21 UTC)**.
 
-The head remains **500 g** and the lanes remain **21/24/28 mm**.
+The head remains **500 g**. This run connects the published bellmouth geometry to the rope energy, loads and selected equilibrium checks. Existing CAD is retained; no backbone end ferrule is added.
 
-- **Real rope diameter:** the end-region screen now uses the full Ø2 mm rope, not only its centreline. With the solver's interface-pivot routing, **214/217** saved V3 equilibria interfere with the M5/M6 end bores; the minimum clearance is **−1.25 mm** at the 7 mm M5 distal anchor bore. The centre-only screen had flagged 57–60 records.
-- **Root cause:** the bores are rigid and give the rope only 0.25 mm radial play, so the rope must bend where it leaves the inboard face. On V2 parts it bends over a 0.25 mm chamfer edge. Treating the end regions as rigid gives exit deflections up to **27.1°** (M5 distal, inner rope). The beam map had also bent the 7 mm blocks by about 3–4°.
-- **New CAD candidate:** convex-fillet exits ([end_bellmouth_v1](cad/lanes_u4m2/end_bellmouth_v1/README.md)) with rope centreline radii of 4.9–8 mm and wraps of 18–29° per exit. Both bodies are watertight single components, and the minimum B–C bridge is **0.544 mm**. In all 217 equilibria, the rigid-end exit-pivot rope envelopes give **0/5208 failures** against the new STL, compared with 5200/5208 for the same paths in V2. Three variants were rejected and are recorded.
-- **Not yet done:** the solver still pivots ropes at the module interface. Exit pivots lengthen the paths by 0.005–0.307 mm per rope, and no equilibrium or closed-loop replay was re-solved. Rope D/d, friction and printing are not qualified. The V3 saddle-joint stiffness and the 55/217 guide/body contacts remain open. **Not released for manufacture.** 21 tests pass.
+- **Connected rope paths:** exact incoming/outgoing tangents and fillet arcs reach the prescribed guide centres. The previous CAD-check rays missed those centres by up to **0.586 mm**. The new model retains ideal interface-centre constraints and is explicitly opt-in.
+- **217/217 fixed-winch holds solve**, representing 199 unique equilibria. With the same reconstructed V3 rest lengths, maximum head displacement is **3.479 mm**, yaw change **1.147°** and elevation change **0.626°**. The minimum scaled fixed-winch tangent eigenvalue is **0.225526**; this is quasi-static evidence, not dynamic stability.
+- **Finite-rope and tank checks:** **0/5208** end-envelope failures on the actual bellmouth STL within the **0.005 mm mesh tolerance**. Minimum wrap margin is **3.242°**. All 217 selected tank-envelope checks pass, with minimum clearance **7.687 mm** after the existing allowance; tensions span **2.883–18.732 N**.
+- **Mounting still fails:** six of 48 targeted guide checks have contact at 0.5 mm CAD resolution. All six remain positive at 0.25 mm, up to **0.009765 mm³**. Loading only the required complete M5 body allowed this finer study to finish at **3.503 GiB peak RSS**, without cropping.
+- **Refinement and verification:** five 16-cell holds give maximum differences of **0.332 mm** head position, **0.096°** yaw and **0.032°** elevation from the new eight-cell model. **45 tests pass.** Two fixed-tension diagnostic states did not converge; their failures are retained.
+- **Decision:** no new full closed-loop replay or manufacturing release. Guide-joint stiffness, shared-bore/guide contact, friction, printing and hardware validation remain unresolved. The bellmouth mass removal (**0.0433 g**) is included in the solver inputs.
 
-[Full English Evening Report](reports/daily/Evening_Report_2026_11_15.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261115/HANDOFF.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/evening_20261115/README.md) · [Bellmouth CAD](cad/lanes_u4m2/end_bellmouth_v1/README.md)
+[Full English Morning Report](reports/daily/Morning_Report_2026_11_16.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/morning_20261116/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/morning_20261116/HANDOFF.md) · [Pose comparison](simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/pose_changes.svg)
 
-### 15 November 2026 — Morning Report: refined CAD checks and V3 saddle development
+### 15 November 2026 — Evening Report: finite-rope exits and bellmouth CAD
 
-**Morning Report timing:** reporting cutoff and actual run start **15 November 2026 07:01:11 EST (12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same date. These are recorded execution times; future morning runs are scheduled for **07:00 US Eastern Time (12:00 UTC in EST / 11:00 UTC in EDT)**, with a maximum runtime of **two hours**.
+Added the full 2 mm rope envelope and M5/M6 bellmouth bodies. Constructed rigid-end paths passed 5208 end checks, but had not been integrated into the equilibrium solver. The 16 November Morning Report adds endpoint-consistent paths and re-solved holds while retaining physical contact limitations.
 
-The head remains **500 g**. Today's work separates numerical collision error from actual mounting problems, and produces reproducible V3 CAD, updated mass equilibria and a detailed English report.
+[Full Evening Report](reports/daily/Evening_Report_2026_11_15.md) · [Bellmouth CAD](cad/lanes_u4m2/end_bellmouth_v1/README.md) · [Archived evidence](simulations/u4m2/lanes_20261113/evening_20261115/README.md)
 
-- **Corrected CAD deformation:** the source STL has triangles spanning 24.6 mm axially. Conforming surface refinement reduces the V2 175° maximum overlap from 31.10 to **5.97 mm³**; remaining contact lies at the outer saddles in the three checked holds. This reduction corrects the measurement rather than proving a mechanical improvement.
-- **V3 geometry:** flared outer sockets retain a true **0.5 mm land**, a 0.15 mm central gap and **1.5:1 mouth relief**. Explicit loft breakpoints fix an error that otherwise distorted the land and could split caps. All eight straight assemblies pass; **112 exported-STL gap measurements** agree with the design. Rope lanes/stations and the independent NiTi backbone are retained; no end ferrule is added.
-- **Expanded validation:** **217 re-solved records / 199 unique geometries**, including 36 additional unseen motion geometries, receive **1736 guide-part checks**. **55 records still have guide contact**, maximum **0.008959 mm³**. The earlier three-pose pass missed intermediate-angle failures; this remains a development candidate.
-- **Rope and force evidence:** minimum sampled middle-flexure clearance **4.890 mm**, peak hole load **5.522 N**. **57/217 records** still contain end-region rope-centre penetration, maximum **0.2406 mm**.
-- **Verification and limits:** 30 distinct tests and 11 configuration checks pass; all 24 V2 guide/cap/wire STLs reproduce exactly with relief disabled. The final nominal bonding area is only about **5.67 mm² per outer saddle**. Joint strength, mounting stiffness and finite rope contact remain unresolved; **not released for manufacture**, and no new full closed-loop replay is claimed. A 0.25 mm refinement attempt exceeded the 8 GiB memory limit; the completed contact results use 0.5 mm resolution.
+### 15 November 2026 — Morning Report: refined CAD screening and V3 saddles
 
-[Full English Morning Report](reports/daily/Morning_Report_2026_11_15.md) · [V3 CAD and installation limits](cad/lanes_u4m2/guides_v3/README.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md) · [Comparison figure](simulations/u4m2/lanes_20261113/guided_refinement_20261115/comparison.png)
+Corrected coarse-surface collision measurements and developed V3 flared sockets. All straight checks passed, but guide/body contact remained in 55/217 selected records; joint strength and finite rope routing were unresolved.
+
+[Full Morning Report](reports/daily/Morning_Report_2026_11_15.md) · [V3 CAD](cad/lanes_u4m2/guides_v3/README.md) · [Archived evidence](simulations/u4m2/lanes_20261113/guided_refinement_20261115/README.md)
 
 ### 14 November 2026: guided 500 g paths and a rejected rigid-mount candidate
 

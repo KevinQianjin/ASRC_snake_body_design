@@ -1,0 +1,554 @@
+{
+  "validation_et": "2026-11-16T08:14:54.899376-05:00",
+  "validation_utc": "2026-11-16T13:14:54.899376+00:00",
+  "language_gate": {
+    "base": "73b0b51d1e9593cb924c33e4f5c85258effe584d",
+    "tree": "index",
+    "scope": "Entire contents and names of new/changed/renamed outgoing files; not a whole-repository historical audit",
+    "checked_files": 119,
+    "passed": true,
+    "files": [
+      {
+        "path": "README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl",
+        "method": "binary STL header; triangle records are numeric"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl",
+        "method": "binary STL header; triangle records are numeric"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/build.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/end_bellmouth_v1/geometry_check.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/guides_v2/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "cad/lanes_u4m2/guides_v3/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "docs/limitations.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "docs/time_conventions.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "reports/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "reports/daily/Evening_Report_2026_11_15.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "reports/daily/Morning_Report_2026_11_16.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "scripts/check_publication_language.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/audit_bellmouth_envelope.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/audit_bellmouth_holds.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/bellmouth_cad_check.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/bellmouth_model.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/compare_bellmouth_paths.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/end_bellmouth_kernel.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/end_bellmouth_study.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/end_exit_routing.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/end_region_envelope.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/HANDOFF.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/bellmouth_cad_check_v1/cad_envelope.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/bellmouth_cad_check_v1/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/bellmouth_paths_on_v2_bodies/cad_envelope.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/bellmouth_paths_on_v2_bodies/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/end_envelope_v2_bodies/end_envelope.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/end_envelope_v2_bodies/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_bellmouth_v1/exit_pivot.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_bellmouth_v1/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_trial_R4_w28_rejected/design_used_after_edit_NOTE.txt",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_trial_R4_w28_rejected/exit_pivot.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_trial_R4_w28_rejected/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_uniform_R7_w18_rejected/design_uniform.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_uniform_R7_w18_rejected/exit_pivot.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_pivot_uniform_R7_w18_rejected/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_routing/exit_routing.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/exit_routing/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/bellmouth_cad_check_v1.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/bellmouth_paths_on_v2_bodies.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/end_envelope_v2_bodies.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/exit_pivot_R7_w18.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/exit_pivot_bellmouth_v1.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/exit_pivot_uniform_R7_w18_rejected.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/logs/exit_routing.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/evening_20261115/run_context.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/lanes.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/HANDOFF.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/README.md",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/SHA256SUMS",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/artifact_validation.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/bellmouth_holds/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/bellmouth_holds/equilibria.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/bellmouth_holds/equilibria_states.npz",
+        "method": "NPZ member names and string arrays; numerical arrays parsed without pickle"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/bellmouth_holds/mass_model.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/bellmouth_holds/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/environment.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/equilibria.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/equilibria_states.npz",
+        "method": "NPZ member names and string arrays; numerical arrays parsed without pickle"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/mass_model.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/lane_gradient_validation.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/artifact_validation.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/bellmouth_holds.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/bellmouth_solver_tests.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/control_regression_tests.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/fixed_winch_holds.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/geometry_regression_initial_missing_pytest.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/geometry_regression_tests.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/mount_selected_0p5mm.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/mount_targeted_0p25mm.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/path_comparison.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/refined_16_cell.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/rest_probe.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/rigid_end_audit.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/solver_probe.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/logs/tank_envelope.log",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/mount_selected_0p5mm/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/mount_targeted_0p25mm/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/mount_targeted_resources.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/endpoint_closure.svg",
+        "method": "SVG text/XML plus recorded rendered review"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/endpoint_comparison.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/pose_changes.svg",
+        "method": "SVG text/XML plus recorded rendered review"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/publication_validation.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/refined_16_cell/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/refined_16_cell/equilibria.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/refined_16_cell/equilibria_states.npz",
+        "method": "NPZ member names and string arrays; numerical arrays parsed without pickle"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/refined_16_cell/mass_model.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/refined_16_cell/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rest_probe/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rest_probe/equilibria.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rest_probe/equilibria_states.npz",
+        "method": "NPZ member names and string arrays; numerical arrays parsed without pickle"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rest_probe/mass_model.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rest_probe/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rigid_end_audit/guide_holes.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rigid_end_audit/guide_stations.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rigid_end_audit/rope_exits.csv",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rigid_end_audit/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/rod_mesh_comparison.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/run_context.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/solver_probe/design.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/solver_probe/equilibria.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/solver_probe/equilibria_states.npz",
+        "method": "NPZ member names and string arrays; numerical arrays parsed without pickle"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/solver_probe/mass_model.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/solver_probe/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/source_sha256.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/morning_20261116/tank_envelope/summary.json",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/mount_refinement_study.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/solve_bellmouth_holds.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/test_bellmouth_solver.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/test_end_bellmouth.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      },
+      {
+        "path": "simulations/u4m2/lanes_20261113/validate_bellmouth_results.py",
+        "method": "UTF-8 text with escaped/HTML/URL text checks"
+      }
+    ],
+    "errors": []
+  },
+  "relative_links": {
+    "passed": true,
+    "scope": "Relative inline links in all outgoing Markdown files; path existence checked, external URLs and heading-fragment targets not fetched or fully validated.",
+    "relative_links_checked": 178,
+    "heading_fragments": [
+      {
+        "source": "README.md",
+        "target": "simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12"
+      },
+      {
+        "source": "README.md",
+        "target": "simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12"
+      },
+      {
+        "source": "README.md",
+        "target": "simulations/u4m2/backbone_20261108/README.md#10-round-trip-cycle-with-3-n-pretension-and-a-stable-startup-2026-11-11"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/history.md#original-1-n-cycle-limitations-11-november-2026"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/history.md#10-november-2026-coordinated-winch-control-and-winch-accuracy"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/history.md#9-november-2026-entry-stability-tendon-force-3d-tank-and-horizontal-flexibility"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/history.md#8-november-2026-m-stiffness-requirement-and-niti-backbone"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/history.md#previous-baseline-studies-6-november-2026-current-m-module"
+      },
+      {
+        "source": "cad/lanes_u4m2/guides_v2/README.md",
+        "target": "../../../reports/daily/Morning_Report_2026_11_15.md#1-correct-the-cad-deformation-screen-before-changing-the-part"
+      },
+      {
+        "source": "docs/limitations.md",
+        "target": "../simulations/u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12"
+      },
+      {
+        "source": "docs/limitations.md",
+        "target": "../simulations/u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12"
+      }
+    ],
+    "broken": []
+  },
+  "rendered_review": {
+    "files": [
+      "path_comparison/endpoint_closure.svg",
+      "path_comparison/pose_changes.svg"
+    ],
+    "result": "Both final SVG figures rendered and visually inspected; all labels and metadata are English; no embedded images."
+  },
+  "configuration_checks": 11,
+  "regression_tests": 45,
+  "forbidden_location_and_private_address_pattern_hits": 0,
+  "source_base_revision": "e9c4858524fc21db2e1a19d1d748836c3a1eb28e",
+  "publication_process": "Exact staged blobs checked before commit. The exact committed outgoing set must be checked again before push. This saved record is not a claim of completed push or notification delivery."
+}

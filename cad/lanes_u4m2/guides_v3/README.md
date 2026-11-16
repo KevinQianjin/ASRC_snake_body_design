@@ -1,5 +1,7 @@
 # V3 flared-socket guide candidate — 15 November 2026
 
+**16 November Morning Report follow-up:** [Re-solved bellmouth-route states](../../../reports/daily/Morning_Report_2026_11_16.md) increase the selected peak station load to 28.449 N. All six targeted M5 outer-saddle contact checks remain positive at 0.25 mm CAD resolution (maximum 0.009765 mm³). The guide geometry is unchanged and its joint still needs a physical stiffness/contact model.
+
 **Engineering candidate; not released for manufacture.** This revision relieves
 the mouths of the four outer-web saddles at each local z = ±12 mm station. It
 addresses the guide/body interference identified by the refined CAD screen.

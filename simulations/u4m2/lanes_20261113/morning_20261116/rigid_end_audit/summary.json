@@ -1,0 +1,108 @@
+{
+  "scope": "Audit re-solved rope curves against the actual rigid M5/M6 end CAD.\n\nChecks both complete curve endpoint closure and the finite 2 mm rope envelope\nin the end regions |CAD z| >= 38 mm. Intended bore/fillet bearing is allowed\nwithin the declared 0.005 mm mesh tolerance. This is sampled clearance, not a\ncontact-force FEA or a tolerance/strength qualification. Guide loads are ideal\npoint-guide reactions with simultaneous station resultants.\n",
+  "coverage": {
+    "path": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544"
+  },
+  "completed": true,
+  "sample_step_mm": 0.02,
+  "tolerance_mm": 0.005,
+  "cad_sha256": {
+    "M5": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+    "M6": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+  },
+  "elapsed_seconds": 698.114400071001,
+  "records": 217,
+  "rope_exit_checks": 5208,
+  "unique_geometry_states": 199,
+  "envelope_failing_checks": 0,
+  "envelope_failing_records": 0,
+  "min_envelope_clearance_mm": -0.0004245842411859657,
+  "max_endpoint_error_mm": 0.0,
+  "max_exit_angle_deg": 18.247437745223223,
+  "min_design_margin_deg": 3.2419282693451286,
+  "wrap_failing_checks": 0,
+  "max_fillet_resultant_n": 4.841473287921823,
+  "max_guide_hole_force_n": 5.718504806255794,
+  "max_station_force_n": 28.44919065503356,
+  "max_station_moment_nmm": 61.121934893801466,
+  "worst_envelope": {
+    "state": "48",
+    "source_state": "48",
+    "module": "M5",
+    "end": "proximal",
+    "set": "C",
+    "ray": "up",
+    "tension_n": 17.201854405376196,
+    "contact": true,
+    "entry_angle_deg": 8.920999042889923,
+    "exit_angle_deg": 15.758071730654873,
+    "wrap_deg": 6.83707268776495,
+    "design_margin_deg": 3.2419282693451286,
+    "margin_pass": true,
+    "span_length_mm": 20.067376925564627,
+    "length_increase_mm": 0.014982951155258911,
+    "fillet_resultant_n": 2.0514698047790367,
+    "fillet_force_base_n": [
+      -0.7100412533518174,
+      -0.6143289023803243,
+      1.823998294450657
+    ],
+    "end_resultant_base_n": [
+      15.754421178360406,
+      -2.331615554483867,
+      6.501198137626516
+    ],
+    "end_moment_base_nmm": [
+      189.43179306259518,
+      227.64790915733118,
+      -377.40748622052337
+    ],
+    "end_moment_nmm": 479.73366092229645,
+    "endpoint_error_mm": 0.0,
+    "envelope_clearance_mm": -0.0004245842411859657,
+    "worst_cad_z_mm": -45.0523766733029,
+    "samples": 517
+  },
+  "minimum_wrap_margin": {
+    "state": "48",
+    "source_state": "48",
+    "module": "M5",
+    "end": "proximal",
+    "set": "C",
+    "ray": "up",
+    "tension_n": 17.201854405376196,
+    "contact": true,
+    "entry_angle_deg": 8.920999042889923,
+    "exit_angle_deg": 15.758071730654873,
+    "wrap_deg": 6.83707268776495,
+    "design_margin_deg": 3.2419282693451286,
+    "margin_pass": true,
+    "span_length_mm": 20.067376925564627,
+    "length_increase_mm": 0.014982951155258911,
+    "fillet_resultant_n": 2.0514698047790367,
+    "fillet_force_base_n": [
+      -0.7100412533518174,
+      -0.6143289023803243,
+      1.823998294450657
+    ],
+    "end_resultant_base_n": [
+      15.754421178360406,
+      -2.331615554483867,
+      6.501198137626516
+    ],
+    "end_moment_base_nmm": [
+      189.43179306259518,
+      227.64790915733118,
+      -377.40748622052337
+    ],
+    "end_moment_nmm": 479.73366092229645,
+    "endpoint_error_mm": 0.0,
+    "envelope_clearance_mm": -0.0004245842411859657,
+    "worst_cad_z_mm": -45.0523766733029,
+    "samples": 517
+  }
+}

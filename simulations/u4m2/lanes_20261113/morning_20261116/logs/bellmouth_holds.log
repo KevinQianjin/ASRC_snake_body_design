@@ -1,0 +1,79 @@
+0 head_change_mm 0.047477 margin_deg 10.1411 winch_eigenvalue 0.821429
+1 head_change_mm 0.046541 margin_deg 10.1967 winch_eigenvalue 0.821081
+2 head_change_mm 0.042934 margin_deg 10.3857 winch_eigenvalue 0.819744
+3 head_change_mm 0.038632 margin_deg 10.5755 winch_eigenvalue 0.818269
+4 head_change_mm 0.033593 margin_deg 10.7662 winch_eigenvalue 0.816658
+5 head_change_mm 0.02777 margin_deg 10.9577 winch_eigenvalue 0.814919
+6 head_change_mm 0.021114 margin_deg 11.1501 winch_eigenvalue 0.813058
+7 head_change_mm 0.013567 margin_deg 11.3433 winch_eigenvalue 0.811085
+8 head_change_mm 0.005092 margin_deg 11.5374 winch_eigenvalue 0.809005
+9 head_change_mm 0.003467 margin_deg 11.7321 winch_eigenvalue 0.806852
+10 head_change_mm 0.003571 margin_deg 11.9275 winch_eigenvalue 0.804755
+11 head_change_mm 0.003679 margin_deg 12.1238 winch_eigenvalue 0.802621
+12 head_change_mm 0.003791 margin_deg 12.3209 winch_eigenvalue 0.800458
+13 head_change_mm 0.003907 margin_deg 12.5189 winch_eigenvalue 0.798275
+14 head_change_mm 0.004029 margin_deg 12.7176 winch_eigenvalue 0.796077
+15 head_change_mm 0.004156 margin_deg 12.9172 winch_eigenvalue 0.793867
+16 head_change_mm 0.004289 margin_deg 13.1176 winch_eigenvalue 0.791649
+17 head_change_mm 0.004428 margin_deg 13.3188 winch_eigenvalue 0.789423
+18 head_change_mm 0.004575 margin_deg 13.5208 winch_eigenvalue 0.787185
+19 head_change_mm 0.00473 margin_deg 13.7236 winch_eigenvalue 0.78493
+20 head_change_mm 0.004893 margin_deg 13.9271 winch_eigenvalue 0.782646
+21 head_change_mm 0.005066 margin_deg 14.1314 winch_eigenvalue 0.780317
+22 head_change_mm 0.005249 margin_deg 14.3365 winch_eigenvalue 0.777921
+23 head_change_mm 0.005445 margin_deg 14.5423 winch_eigenvalue 0.775422
+24 head_change_mm 0.005209 margin_deg 14.7489 winch_eigenvalue 0.772785
+25 head_change_mm 0.004785 margin_deg 14.9102 winch_eigenvalue 0.769946
+26 head_change_mm 0.004295 margin_deg 14.7829 winch_eigenvalue 0.766829
+27 head_change_mm 0.003735 margin_deg 14.6598 winch_eigenvalue 0.763336
+28 head_change_mm 0.003097 margin_deg 14.5411 winch_eigenvalue 0.759356
+29 head_change_mm 0.003093 margin_deg 14.5403 winch_eigenvalue 0.759356
+30 head_change_mm 0.003098 margin_deg 14.5337 winch_eigenvalue 0.759792
+31 head_change_mm 0.00324 margin_deg 14.2547 winch_eigenvalue 0.76096
+32 head_change_mm 0.003594 margin_deg 13.5554 winch_eigenvalue 0.763052
+33 head_change_mm 0.004345 margin_deg 12.8653 winch_eigenvalue 0.766161
+34 head_change_mm 0.045952 margin_deg 12.2021 winch_eigenvalue 0.771105
+35 head_change_mm 0.196081 margin_deg 11.5813 winch_eigenvalue 0.776354
+36 head_change_mm 0.50226 margin_deg 10.9284 winch_eigenvalue 0.783858
+37 head_change_mm 1.537868 margin_deg 9.9334 winch_eigenvalue 0.791797
+Traceback (most recent call last):
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/solve_bellmouth_holds.py", line 119, in <module>
+    a=p.parse_args();run(a.archive,a.out,a.max_seconds,a.indices,a.sub)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/solve_bellmouth_holds.py", line 85, in run
+    x=stationary(after,T,seed);cached=False
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/steering_63mm_20261106/refine_steering.py", line 14, in stationary
+    return r.solve(T,z)
+           ^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/steering_63mm_20261106/spatial_model.py", line 203, in solve
+    opt=minimize(fun,initial,jac=True,method='L-BFGS-B',bounds=bounds,options={'maxiter':maxiter,'gtol':1e-9,'ftol':1e-15,'maxls':40,'maxcor':40})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_minimize.py", line 784, in minimize
+    res = _minimize_lbfgsb(fun, x0, args, jac, bounds,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py", line 469, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 412, in fun_and_grad
+    self._update_fun()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 362, in _update_fun
+    fx = self._wrapped_fun(self.x)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/_lib/_util.py", line 603, in __call__
+    fx = self.f(np.copy(x), *self.args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 80, in __call__
+    self._compute_if_needed(x, *args)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 74, in _compute_if_needed
+    fg = self.fun(x, *args)
+         ^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/steering_63mm_20261106/spatial_model.py", line 200, in fun
+    def fun(z):return self.evaluate(z,T)
+                      ^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/lanes.py", line 151, in _evaluate
+    result = kernel_lanes(np.asarray(z), C, self.scale, self.K, self.mass, self.l, self.sub, self.guide_cells, self.routes, self.offsets3,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ASRC_guide_validation/simulations/u4m2/lanes_20261113/end_bellmouth_kernel.py", line 42, in span_geometry
+    raise ValueError('Guide lies outside the supported bellmouth tangent domain')
+ValueError: Guide lies outside the supported bellmouth tangent domain

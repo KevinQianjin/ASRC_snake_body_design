@@ -1,5 +1,7 @@
 # End-exit bellmouth candidate v1 (M5/M6) — 15 November 2026 evening run
 
+**16 November Morning Report follow-up:** The [new constrained solver study](../../../reports/daily/Morning_Report_2026_11_16.md) now uses these exact fillet dimensions, includes the CAD mass removal and re-solves 217 fixed-winch holds. Connected paths pass 5208 rigid-end envelope checks within mesh tolerance. Interface-centre constraints, shared-bore sliding and physical contact limitations remain; this is not a full controller or manufacturing qualification.
+
 **Engineering candidate; not released for manufacture.** Geometry only: no
 printed tolerance, strength, wear, friction or rope-qualification evidence.
 

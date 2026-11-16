@@ -1,0 +1,51 @@
+{
+  "scope": "Compare endpoint closure on saved V3 poses and plot the re-solved changes.\n\nThe previous CAD check built an outgoing ray from an estimated angle without\nenforcing its intersection with the prescribed guide centre. This comparison\nmeasures that geometric mismatch; it is not a new physical guide-contact test.\n",
+  "coverage": {
+    "path": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944"
+  },
+  "checks": 5208,
+  "maximum_previous_ray_to_guide_miss_mm": 0.5861107803546264,
+  "rays_missing_guide_centre_by_over_0p3_mm": 4803,
+  "per_rope_length_increase_at_saved_geometry_mm": {
+    "min": -6.938893903907228e-15,
+    "max": 0.1509554275939129
+  },
+  "worst": {
+    "record": {
+      "state": "63",
+      "module": "M5",
+      "end": "distal",
+      "set": "C",
+      "ray": "right",
+      "previous_ray_to_guide_miss_mm": 0.5861107803546264,
+      "previous_exit_angle_deg": 20.08440033560082,
+      "connected_exit_angle_deg": 17.89947913737929,
+      "connected_span_length_increase_mm": 0.14511893404809892
+    },
+    "local": [
+      -0.02133351294659843,
+      0.005199454566293161,
+      0.0006577726977044021
+    ],
+    "profile": [
+      0.007,
+      0.0039,
+      0.5061454830783556,
+      0.00125,
+      0.001
+    ],
+    "sign": -1.0,
+    "previous_tip": [
+      0.006791922075549244,
+      0.0005479798585599606
+    ],
+    "previous_direction": [
+      0.939187783967355,
+      0.34340399887958334
+    ]
+  }
+}

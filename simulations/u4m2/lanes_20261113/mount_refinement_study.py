@@ -37,8 +37,13 @@ def run(archive, cad, out, resolutions, labels, tags, max_seconds, guide_cad=Non
     selected = {s[0]: s for s in states if s[0] in labels}
     if len(selected) != len(set(labels)):
         raise ValueError('Missing selected states')
-    bodies = {kind: trimesh.load_mesh(cad / name) for kind, name in
-              [('M5', 'M5_lane_anchorB.stl'), ('M6', 'M6_lane_anchorC.stl')]}
+    body_names = {'M5': 'M5_lane_anchorB.stl', 'M6': 'M6_lane_anchorC.stl'}
+    needed_bodies = sorted({tag.split('_z')[0] for tag in tags})
+    if not needed_bodies or not set(needed_bodies).issubset(body_names):
+        raise ValueError('Select guide parts belonging to M5 or M6')
+    # Retain each complete body, but do not load/refine unrelated modules for
+    # a targeted part check. This bounds memory without cropping the solid.
+    bodies = {kind: trimesh.load_mesh(cad / body_names[kind]) for kind in needed_bodies}
     guide_cad = cad if guide_cad is None else guide_cad
     assemblies = {tag: trimesh.util.concatenate([trimesh.load_mesh(guide_cad / f'{tag}_{suffix}.stl')
                   for suffix in ('guide', 'caps', 'wire_envelope')]) for tag in tags}
@@ -46,13 +51,14 @@ def run(archive, cad, out, resolutions, labels, tags, max_seconds, guide_cad=Non
     result = dict(scope=__doc__, archive=str(archive), archive_sha256=sha(archive),
         guide_design=json.loads((guide_cad/'design.json').read_text()),
         cad_sha256={p.name: sha(p) for p in sorted(cad.glob('*.stl')) if
-                    p.name in ('M5_lane_anchorB.stl', 'M6_lane_anchorC.stl') or
+                    p.name in [body_names[k] for k in needed_bodies] or
                     any(p.name.startswith(tag + '_') for tag in tags)},
         guide_cad_sha256={p.name:sha(p) for p in sorted(guide_cad.glob('*.stl')) if any(p.name.startswith(tag + '_') for tag in tags)},
         coverage=coverage, selected_states=labels, selected_parts=tags,
         requested_axial_resolutions_mm=resolutions, rod_cells_per_module=8,
         payload_g=500, boolean_transfer_precision='float32' if legacy_float32 else 'float64',
-        body_scope='complete deformed body; no cropping', surface_meshes=[], rows=[], completed=False)
+        body_scope='complete deformed body; no cropping', loaded_body_modules=needed_bodies,
+        surface_meshes=[], rows=[], completed=False)
     def save():
         result['elapsed_seconds'] = time.monotonic() - start
         (out / 'summary.json').write_text(json.dumps(result, indent=2) + '\n')

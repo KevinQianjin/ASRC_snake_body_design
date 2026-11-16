@@ -1,0 +1,669 @@
+{
+  "scope": "Compare rigid-guide contact using axially refined beam-mapped CAD surfaces.\n\nUses saved 500 g equilibria; does not re-solve contact, mounting stiffness or\ncontrol. An axial surface resolution is distinct from the eight-cell rod mesh.\n",
+  "archive": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+  "archive_sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544",
+  "guide_design": {
+    "status": "socket-relief engineering candidate; not released for manufacture",
+    "lane_radii_mm": {
+      "A": 21.0,
+      "B": 24.0,
+      "C": 28.0
+    },
+    "stations_z_mm": [
+      -24,
+      -12,
+      12,
+      24
+    ],
+    "plate_thickness_mm": 3.2,
+    "arm_width_mm": 6.0,
+    "arm_tip_radius_mm": 30.6,
+    "rope_bore_mm": 2.6,
+    "rope_mouth_mm": 3.0,
+    "rope_throat_length_mm": 1.0,
+    "web_angles_deg": [
+      -22.5,
+      67.5,
+      157.5,
+      247.5
+    ],
+    "axial_retention": "Outer-web stations: only the central 0.5 mm land is a proposed bond zone; flared mouths are unbonded relief. Inner-web stations retain the V2 socket. Bond strength and retention are unvalidated.",
+    "adhesive": "Unspecified pending PA12 surface preparation, actual bond gap and pull/shear coupon tests",
+    "design_load_factor": 3.0,
+    "retaining_wire_d_mm": 0.35,
+    "wire_groove_d_mm": 0.45,
+    "radial_retention": "Removable inward socket caps retained by 0.35 mm stainless lockwire in a 0.45 mm groove; CAD models a conservative square-section wire envelope, closure tail excluded.",
+    "socket_wall_mm": 0.85,
+    "bond_gap_mm": 0.15,
+    "non_mounting_web_clearance_mm": 0.3,
+    "mounting_webs": "CAD-derived rectangular webs: radius ~6.896 mm at +/-24 mm stations, ~19.229 mm at +/-12 mm; sockets follow the actual web slope.",
+    "socket_axial_span_mm": 3.24,
+    "cap_seat_boolean_clearance_mm": 0.03,
+    "socket_flare_slope": 1.5,
+    "socket_land_axial_mm": 0.5,
+    "socket_explicit_land_breakpoints": true,
+    "mounting_stiffness": "Four webs remain connected by a rigid frame. No claim that relief decouples their motion or preserves homogenised stiffness.",
+    "body_source": "../guides_v2; unchanged module bodies, disks, anchors and 21/24/28 mm lanes"
+  },
+  "cad_sha256": {
+    "M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+    "M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+  },
+  "guide_cad_sha256": {
+    "M5_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M5_z+12_guide.stl": "763c14efc5af841776dc340d9f6c8a8213f991311dc8044a8dae302229bb9fb2",
+    "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M5_z+24_guide.stl": "1855d0d503a48cdf5bc884c65492ae58e0971f1e269c48dd1717af9a2d073ad0",
+    "M5_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M5_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M5_z-12_guide.stl": "2f840539abf2d14909e9a95326fa4c80e9e8e63f5f68871d77be8e184db88954",
+    "M5_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M5_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M5_z-24_guide.stl": "009643ade2d0e8fef0f0f40806de32158ebb7a53c41708c5db9b5069abb064d8",
+    "M5_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+    "M6_z+12_guide.stl": "31fb75cf77e7d111dbb26af54bd2013957ecb48c00fb2ceb428534ba6c2faff3",
+    "M6_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z+24_caps.stl": "148bf418cc9389d70bd61e210b022bfc6ef068cf778edbf0b5fe6f7727d21086",
+    "M6_z+24_guide.stl": "4f243bc1f4b85ed134bc8c790fe2d1b4fcd42e5988001161626d9a32659e441b",
+    "M6_z+24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70",
+    "M6_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "M6_z-12_guide.stl": "c57d733bf41332953440ca0892c56f1182addb5d832d61202a560b2263a2d46e",
+    "M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "M6_z-24_caps.stl": "2b62dd610fc64ac1df765081cba8366836d564b81cf4b343023b68d83cadbe92",
+    "M6_z-24_guide.stl": "9dab856e1f06507b4b45474a976852954da9c74158b6edf052695cf5f25518c0",
+    "M6_z-24_wire_envelope.stl": "9792b632dedc7fb7bfced7ba3501918d7d1d268f05c86da5270df196f5801c70"
+  },
+  "coverage": {
+    "path": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544"
+  },
+  "selected_states": [
+    "0",
+    "38",
+    "48",
+    "63",
+    "64",
+    "146"
+  ],
+  "selected_parts": [
+    "M5_z-24",
+    "M5_z-12",
+    "M5_z+12",
+    "M5_z+24",
+    "M6_z-24",
+    "M6_z-12",
+    "M6_z+12",
+    "M6_z+24"
+  ],
+  "requested_axial_resolutions_mm": [
+    0.5
+  ],
+  "rod_cells_per_module": 8,
+  "payload_g": 500,
+  "boolean_transfer_precision": "float64",
+  "body_scope": "complete deformed body; no cropping",
+  "loaded_body_modules": [
+    "M5",
+    "M6"
+  ],
+  "surface_meshes": [
+    {
+      "module": "M5",
+      "resolution_mm": 0.5,
+      "vertices": 568584,
+      "faces": 1137440,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31529.29426692102,
+      "watertight": true
+    },
+    {
+      "module": "M6",
+      "resolution_mm": 0.5,
+      "vertices": 424290,
+      "faces": 848820,
+      "maximum_axial_span_mm": 0.5,
+      "undeformed_volume_mm3": 31745.871765308217,
+      "watertight": true
+    }
+  ],
+  "rows": [
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "0",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "38",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "48",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M5_z-12",
+      "overlap_mm3": 5.8885072687644514e-05,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 5.8885072687644514e-05,
+          "center_station_cad_mm": [
+            7.026379670974617,
+            19.9095090246207,
+            -0.24925768645667454
+          ],
+          "bounds_mm": [
+            [
+              6.685552618927311,
+              19.42473741334325,
+              -0.26305654138531054
+            ],
+            [
+              8.188186871399616,
+              20.078534043639507,
+              -0.2339995327424731
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.0010172911579551386,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0010172911579551386,
+          "center_station_cad_mm": [
+            7.5520407579585305,
+            19.699871104103647,
+            0.24929104309759967
+          ],
+          "bounds_mm": [
+            [
+              6.653579749723171,
+              18.896145570242766,
+              0.21767777357314344
+            ],
+            [
+              9.447841124415703,
+              20.13767115659823,
+              0.2804676570706306
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "63",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.000272874458255921,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.000272874458255921,
+          "center_station_cad_mm": [
+            7.318191237810104,
+            19.7910064075927,
+            -0.24904003275191147
+          ],
+          "bounds_mm": [
+            [
+              6.675403291041366,
+              18.97871318212688,
+              -0.27010337666439455
+            ],
+            [
+              9.264984586104418,
+              20.10052227445695,
+              -0.22682752245384563
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.002900365860109541,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.002900365860109541,
+          "center_station_cad_mm": [
+            7.770230180846521,
+            19.618874449679325,
+            0.25022718941970945
+          ],
+          "bounds_mm": [
+            [
+              6.650766840085353,
+              18.871483716989985,
+              0.20546306183035767
+            ],
+            [
+              9.469180576693503,
+              20.182431366903984,
+              0.29744119822714765
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "64",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z-12",
+      "overlap_mm3": 0.0025505932830548143,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.0025505932830548143,
+          "center_station_cad_mm": [
+            7.917839294890416,
+            19.55422298299528,
+            -0.24961196029659607
+          ],
+          "bounds_mm": [
+            [
+              6.645997422531096,
+              18.865790806135067,
+              -0.28957340218801164
+            ],
+            [
+              9.467197801626885,
+              20.16513001337549,
+              -0.21081931591930925
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z+12",
+      "overlap_mm3": 0.010654979968308775,
+      "pass_interference": false,
+      "overlap_components": [
+        {
+          "volume_mm3": 0.010627053181093117,
+          "center_station_cad_mm": [
+            7.983251426387109,
+            19.562017417110894,
+            0.2560712121663072
+          ],
+          "bounds_mm": [
+            [
+              6.652040435856357,
+              18.824105013104543,
+              0.18484236647088892
+            ],
+            [
+              9.539215655332882,
+              20.287276169130166,
+              0.3389977660509089
+            ]
+          ]
+        },
+        {
+          "volume_mm3": 2.7926787215777482e-05,
+          "center_station_cad_mm": [
+            5.6265261539708,
+            16.477738348351565,
+            -0.24920316846824478
+          ],
+          "bounds_mm": [
+            [
+              5.2469287255642385,
+              16.0353867341056,
+              -0.2563868617136791
+            ],
+            [
+              6.698159781725138,
+              16.645694171792456,
+              -0.24083083293822938
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M5_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z-24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z-12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z+12",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    },
+    {
+      "resolution_mm": 0.5,
+      "state": "146",
+      "part": "M6_z+24",
+      "overlap_mm3": 0.0,
+      "pass_interference": true,
+      "overlap_components": []
+    }
+  ],
+  "completed": true,
+  "elapsed_seconds": 58.31529820899959,
+  "all_selected_poses_clear": false
+}
