@@ -1,0 +1,682 @@
+{
+ "scope": "Finite-diameter rope screen of the M5/M6 end disks and anchor blocks.\n\nEvening study, 15 November 2026 (EST).  The 15 November morning audit counted\nonly rope *centre* points inside end-region material.  A \u00d82 mm rope interferes\nwhenever its centreline comes within 1 mm (its radius) of any body surface, so\nthis script reports the signed centreline-to-surface distance minus the rope\nradius (\"envelope clearance\") along the ideal rope chords near both module\nends, and classifies where the minimum occurs.\n\nKinematics: the same constant-strain beam mapping of the refined CAD as\n``guide_path_audit.py``; rope centrelines are the frictionless polyline through\nthe end-hole centres and the four guide stations of the rod model.  This is a\ngeometric screen of the ideal path; it is not a contact-force or wrap solution\nand does not model rope flattening, friction or printed tolerances.\n",
+ "archive": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+ "coverage": {
+  "path": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+  "format": "reference",
+  "states": 217,
+  "unsolved_records_without_states": 0,
+  "sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944"
+ },
+ "cad": "../../../cad/lanes_u4m2/guides_v2",
+ "cad_sha256": {
+  "M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+  "M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b"
+ },
+ "cad_max_axial_span_mm": 0.5,
+ "radii_mm": [
+  21.0,
+  24.0,
+  28.0
+ ],
+ "rope_radius_mm": 1.0,
+ "end_window_abs_local_axial_mm": 36.0,
+ "sample_step_mm": 0.05,
+ "records": 217,
+ "rope_end_checks": 5208,
+ "records_with_centre_penetration": 60,
+ "records_with_envelope_interference": 214,
+ "min_envelope_clearance_mm": -1.2523262618623214,
+ "max_centre_penetration_mm": 0.2523262618623215,
+ "max_chord_angle_to_axis_deg": 15.163390527937676,
+ "groups": {
+  "M5/B/down/distal": {
+   "checks": 217,
+   "envelope_failures": 160,
+   "min_envelope_clearance_mm": -1.1820095326515954,
+   "max_chord_angle_deg": 12.12165179318859,
+   "worst": {
+    "state": "155",
+    "phase": "left_out",
+    "module": "M5",
+    "set": "B",
+    "ray": "down",
+    "end": "distal",
+    "tension_n": 3.246523785657647,
+    "min_center_signed_distance_mm": -0.18200953265159542,
+    "envelope_clearance_mm": -1.1820095326515954,
+    "at_local_axial_mm": 41.25,
+    "nearest_face_cad_xyz_mm": [
+     0.105,
+     -22.757,
+     41.382
+    ],
+    "nearest_face_radius_mm": 22.757150822605077,
+    "chord_angle_to_axis_deg": 12.045023174854562,
+    "chord_tilt_radial_outward_deg": -11.951660313151649,
+    "chord_tilt_tangential_deg": 1.5411968813858081
+   }
+  },
+  "M5/B/down/proximal": {
+   "checks": 217,
+   "envelope_failures": 130,
+   "min_envelope_clearance_mm": -0.3409305897329141,
+   "max_chord_angle_deg": 10.186791464617341,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "B",
+    "ray": "down",
+    "end": "proximal",
+    "tension_n": 3.326081176218449,
+    "min_center_signed_distance_mm": 0.6590694102670859,
+    "envelope_clearance_mm": -0.3409305897329141,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     0.054,
+     -22.673,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 22.673501073592703,
+    "chord_angle_to_axis_deg": 10.186791464617341,
+    "chord_tilt_radial_outward_deg": -10.076253655095366,
+    "chord_tilt_tangential_deg": -1.5279548964248162
+   }
+  },
+  "M5/B/left/distal": {
+   "checks": 217,
+   "envelope_failures": 159,
+   "min_envelope_clearance_mm": -0.8234815466248415,
+   "max_chord_angle_deg": 13.494301275277696,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "B",
+    "ray": "left",
+    "end": "distal",
+    "tension_n": 8.65475576283931,
+    "min_center_signed_distance_mm": 0.1765184533751585,
+    "envelope_clearance_mm": -0.8234815466248415,
+    "at_local_axial_mm": 41.2,
+    "nearest_face_cad_xyz_mm": [
+     23.819,
+     1.236,
+     41.341
+    ],
+    "nearest_face_radius_mm": 23.851031752438896,
+    "chord_angle_to_axis_deg": 10.47705362884619,
+    "chord_tilt_radial_outward_deg": -1.810768820727685,
+    "chord_tilt_tangential_deg": 10.32615575531656
+   }
+  },
+  "M5/B/left/proximal": {
+   "checks": 217,
+   "envelope_failures": 130,
+   "min_envelope_clearance_mm": -0.21380245175086077,
+   "max_chord_angle_deg": 13.38139364155938,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "B",
+    "ray": "left",
+    "end": "proximal",
+    "tension_n": 8.65475576283931,
+    "min_center_signed_distance_mm": 0.7861975482491392,
+    "envelope_clearance_mm": -0.21380245175086077,
+    "at_local_axial_mm": -45.05,
+    "nearest_face_cad_xyz_mm": [
+     23.849,
+     1.317,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 23.885031619587934,
+    "chord_angle_to_axis_deg": 13.38139364155938,
+    "chord_tilt_radial_outward_deg": -1.183822226458328,
+    "chord_tilt_tangential_deg": 13.332621806537835
+   }
+  },
+  "M5/B/right/distal": {
+   "checks": 217,
+   "envelope_failures": 158,
+   "min_envelope_clearance_mm": -0.8228473811247781,
+   "max_chord_angle_deg": 13.509243349347617,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "B",
+    "ray": "right",
+    "end": "distal",
+    "tension_n": 8.69542291563451,
+    "min_center_signed_distance_mm": 0.17715261887522188,
+    "envelope_clearance_mm": -0.8228473811247781,
+    "at_local_axial_mm": 41.2,
+    "nearest_face_cad_xyz_mm": [
+     -23.802,
+     1.232,
+     41.384
+    ],
+    "nearest_face_radius_mm": 23.834152704061534,
+    "chord_angle_to_axis_deg": 10.498976794804555,
+    "chord_tilt_radial_outward_deg": -1.776202497061259,
+    "chord_tilt_tangential_deg": -10.354167265436992
+   }
+  },
+  "M5/B/right/proximal": {
+   "checks": 217,
+   "envelope_failures": 115,
+   "min_envelope_clearance_mm": -0.2133630438440023,
+   "max_chord_angle_deg": 13.343277008650508,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "B",
+    "ray": "right",
+    "end": "proximal",
+    "tension_n": 8.69542291563451,
+    "min_center_signed_distance_mm": 0.7866369561559977,
+    "envelope_clearance_mm": -0.2133630438440023,
+    "at_local_axial_mm": -45.05,
+    "nearest_face_cad_xyz_mm": [
+     -23.939,
+     1.246,
+     -45.353
+    ],
+    "nearest_face_radius_mm": 23.97121988079519,
+    "chord_angle_to_axis_deg": 13.343277008650508,
+    "chord_tilt_radial_outward_deg": -1.1542682053901854,
+    "chord_tilt_tangential_deg": -13.296762826719007
+   }
+  },
+  "M5/B/up/distal": {
+   "checks": 217,
+   "envelope_failures": 157,
+   "min_envelope_clearance_mm": -0.34547392229760376,
+   "max_chord_angle_deg": 11.927768873330352,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "B",
+    "ray": "up",
+    "end": "distal",
+    "tension_n": 17.279961719153448,
+    "min_center_signed_distance_mm": 0.6545260777023962,
+    "envelope_clearance_mm": -0.34547392229760376,
+    "at_local_axial_mm": 41.1,
+    "nearest_face_cad_xyz_mm": [
+     -0.224,
+     25.31,
+     41.165
+    ],
+    "nearest_face_radius_mm": 25.31089057908993,
+    "chord_angle_to_axis_deg": 11.737632773907247,
+    "chord_tilt_radial_outward_deg": 11.704558998306668,
+    "chord_tilt_tangential_deg": -0.905556571828183
+   }
+  },
+  "M5/B/up/proximal": {
+   "checks": 217,
+   "envelope_failures": 76,
+   "min_envelope_clearance_mm": -0.2426606680194775,
+   "max_chord_angle_deg": 13.517702425754802,
+   "worst": {
+    "state": "0",
+    "phase": "startup",
+    "module": "M5",
+    "set": "B",
+    "ray": "up",
+    "end": "proximal",
+    "tension_n": 3.0,
+    "min_center_signed_distance_mm": 0.7573393319805225,
+    "envelope_clearance_mm": -0.2426606680194775,
+    "at_local_axial_mm": -45.1,
+    "nearest_face_cad_xyz_mm": [
+     -0.061,
+     22.754,
+     -45.353
+    ],
+    "nearest_face_radius_mm": 22.75409269901218,
+    "chord_angle_to_axis_deg": 8.719211268398045,
+    "chord_tilt_radial_outward_deg": -8.719211268398046,
+    "chord_tilt_tangential_deg": 5.020832082638443e-16
+   }
+  },
+  "M5/C/down/distal": {
+   "checks": 217,
+   "envelope_failures": 160,
+   "min_envelope_clearance_mm": -1.2523262618623214,
+   "max_chord_angle_deg": 12.153706407423336,
+   "worst": {
+    "state": "155",
+    "phase": "left_out",
+    "module": "M5",
+    "set": "C",
+    "ray": "down",
+    "end": "distal",
+    "tension_n": 3.09265194903937,
+    "min_center_signed_distance_mm": -0.2523262618623215,
+    "envelope_clearance_mm": -1.2523262618623214,
+    "at_local_axial_mm": 41.25,
+    "nearest_face_cad_xyz_mm": [
+     0.105,
+     -26.757,
+     41.382
+    ],
+    "nearest_face_radius_mm": 26.757114352990556,
+    "chord_angle_to_axis_deg": 12.055327877739312,
+    "chord_tilt_radial_outward_deg": -11.95303496734915,
+    "chord_tilt_tangential_deg": 1.6136227167289963
+   }
+  },
+  "M5/C/down/proximal": {
+   "checks": 217,
+   "envelope_failures": 122,
+   "min_envelope_clearance_mm": -0.3658862226396742,
+   "max_chord_angle_deg": 10.247739309273014,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "C",
+    "ray": "down",
+    "end": "proximal",
+    "tension_n": 3.166728443313976,
+    "min_center_signed_distance_mm": 0.6341137773603258,
+    "envelope_clearance_mm": -0.3658862226396742,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     0.054,
+     -26.673,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 26.67349129210358,
+    "chord_angle_to_axis_deg": 10.247739309273014,
+    "chord_tilt_radial_outward_deg": -10.089565549277667,
+    "chord_tilt_tangential_deg": -1.8312147481236416
+   }
+  },
+  "M5/C/left/distal": {
+   "checks": 217,
+   "envelope_failures": 159,
+   "min_envelope_clearance_mm": -0.8334125710911996,
+   "max_chord_angle_deg": 13.782894025748963,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "C",
+    "ray": "left",
+    "end": "distal",
+    "tension_n": 14.746900539888896,
+    "min_center_signed_distance_mm": 0.16658742890880043,
+    "envelope_clearance_mm": -0.8334125710911996,
+    "at_local_axial_mm": 41.25,
+    "nearest_face_cad_xyz_mm": [
+     27.818,
+     1.236,
+     41.382
+    ],
+    "nearest_face_radius_mm": 27.845306482661226,
+    "chord_angle_to_axis_deg": 10.259280020817686,
+    "chord_tilt_radial_outward_deg": -1.8136754238681188,
+    "chord_tilt_tangential_deg": 10.104341278630317
+   }
+  },
+  "M5/C/left/proximal": {
+   "checks": 217,
+   "envelope_failures": 130,
+   "min_envelope_clearance_mm": -0.2182101648881143,
+   "max_chord_angle_deg": 13.921335674903068,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "C",
+    "ray": "left",
+    "end": "proximal",
+    "tension_n": 14.746900539888896,
+    "min_center_signed_distance_mm": 0.7817898351118857,
+    "envelope_clearance_mm": -0.2182101648881143,
+    "at_local_axial_mm": -45.05,
+    "nearest_face_cad_xyz_mm": [
+     27.849,
+     1.317,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 27.87981861938785,
+    "chord_angle_to_axis_deg": 13.921335674903068,
+    "chord_tilt_radial_outward_deg": -1.2018834621471564,
+    "chord_tilt_tangential_deg": 13.87331260433948
+   }
+  },
+  "M5/C/right/distal": {
+   "checks": 217,
+   "envelope_failures": 157,
+   "min_envelope_clearance_mm": -0.8326291976626545,
+   "max_chord_angle_deg": 13.80223605129201,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "C",
+    "ray": "right",
+    "end": "distal",
+    "tension_n": 14.25246279848109,
+    "min_center_signed_distance_mm": 0.16737080233734553,
+    "envelope_clearance_mm": -0.8326291976626545,
+    "at_local_axial_mm": 41.2,
+    "nearest_face_cad_xyz_mm": [
+     -27.802,
+     1.232,
+     41.384
+    ],
+    "nearest_face_radius_mm": 27.829570204319374,
+    "chord_angle_to_axis_deg": 10.283218359946687,
+    "chord_tilt_radial_outward_deg": -1.7790396992215394,
+    "chord_tilt_tangential_deg": -10.134573825798716
+   }
+  },
+  "M5/C/right/proximal": {
+   "checks": 217,
+   "envelope_failures": 116,
+   "min_envelope_clearance_mm": -0.21768330442705575,
+   "max_chord_angle_deg": 13.877432252971936,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M5",
+    "set": "C",
+    "ray": "right",
+    "end": "proximal",
+    "tension_n": 14.25246279848109,
+    "min_center_signed_distance_mm": 0.7823166955729443,
+    "envelope_clearance_mm": -0.21768330442705575,
+    "at_local_axial_mm": -45.05,
+    "nearest_face_cad_xyz_mm": [
+     -27.946,
+     1.327,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 27.977081804828686,
+    "chord_angle_to_axis_deg": 13.877432252971936,
+    "chord_tilt_radial_outward_deg": -1.1718956516596357,
+    "chord_tilt_tangential_deg": -13.831612727616951
+   }
+  },
+  "M5/C/up/distal": {
+   "checks": 217,
+   "envelope_failures": 156,
+   "min_envelope_clearance_mm": -0.27632707678571955,
+   "max_chord_angle_deg": 11.955818797473833,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "C",
+    "ray": "up",
+    "end": "distal",
+    "tension_n": 17.2799617191534,
+    "min_center_signed_distance_mm": 0.7236729232142805,
+    "envelope_clearance_mm": -0.27632707678571955,
+    "at_local_axial_mm": 41.05,
+    "nearest_face_cad_xyz_mm": [
+     -0.182,
+     29.236,
+     41.382
+    ],
+    "nearest_face_radius_mm": 29.23610130275105,
+    "chord_angle_to_axis_deg": 11.812111075310073,
+    "chord_tilt_radial_outward_deg": 11.686445394724824,
+    "chord_tilt_tangential_deg": -1.7671017371690443
+   }
+  },
+  "M5/C/up/proximal": {
+   "checks": 217,
+   "envelope_failures": 87,
+   "min_envelope_clearance_mm": -0.26137519461589687,
+   "max_chord_angle_deg": 15.163390527937676,
+   "worst": {
+    "state": "0",
+    "phase": "startup",
+    "module": "M5",
+    "set": "C",
+    "ray": "up",
+    "end": "proximal",
+    "tension_n": 3.0,
+    "min_center_signed_distance_mm": 0.7386248053841031,
+    "envelope_clearance_mm": -0.26137519461589687,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     -0.061,
+     26.754,
+     -45.353
+    ],
+    "nearest_face_radius_mm": 26.754080400316358,
+    "chord_angle_to_axis_deg": 8.714092428979335,
+    "chord_tilt_radial_outward_deg": -8.714092428979322,
+    "chord_tilt_tangential_deg": 4.987838244964619e-16
+   }
+  },
+  "M6/C/down/distal": {
+   "checks": 217,
+   "envelope_failures": 190,
+   "min_envelope_clearance_mm": -0.2811121022912042,
+   "max_chord_angle_deg": 5.197431699909046,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M6",
+    "set": "C",
+    "ray": "down",
+    "end": "distal",
+    "tension_n": 3.0,
+    "min_center_signed_distance_mm": 0.7188878977087958,
+    "envelope_clearance_mm": -0.2811121022912042,
+    "at_local_axial_mm": 41.25,
+    "nearest_face_cad_xyz_mm": [
+     0.558,
+     -26.795,
+     41.165
+    ],
+    "nearest_face_radius_mm": 26.80103504235959,
+    "chord_angle_to_axis_deg": 5.197431699909046,
+    "chord_tilt_radial_outward_deg": -4.7893618681656,
+    "chord_tilt_tangential_deg": 2.028171560909294
+   }
+  },
+  "M6/C/down/proximal": {
+   "checks": 217,
+   "envelope_failures": 82,
+   "min_envelope_clearance_mm": -0.19929914118124492,
+   "max_chord_angle_deg": 7.939477002386558,
+   "worst": {
+    "state": "61",
+    "phase": "inverse",
+    "module": "M6",
+    "set": "C",
+    "ray": "down",
+    "end": "proximal",
+    "tension_n": 3.0,
+    "min_center_signed_distance_mm": 0.8007008588187551,
+    "envelope_clearance_mm": -0.19929914118124492,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     -0.457,
+     -26.754,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 26.757512227942104,
+    "chord_angle_to_axis_deg": 7.939477002386558,
+    "chord_tilt_radial_outward_deg": -7.635282323092558,
+    "chord_tilt_tangential_deg": -2.2026284525630944
+   }
+  },
+  "M6/C/left/distal": {
+   "checks": 217,
+   "envelope_failures": 188,
+   "min_envelope_clearance_mm": -0.22924312179700645,
+   "max_chord_angle_deg": 5.2037457500436615,
+   "worst": {
+    "state": "146",
+    "phase": "left_return",
+    "module": "M6",
+    "set": "C",
+    "ray": "left",
+    "end": "distal",
+    "tension_n": 6.917872190276333,
+    "min_center_signed_distance_mm": 0.7707568782029935,
+    "envelope_clearance_mm": -0.22924312179700645,
+    "at_local_axial_mm": 41.15,
+    "nearest_face_cad_xyz_mm": [
+     27.47,
+     1.129,
+     41.343
+    ],
+    "nearest_face_radius_mm": 27.492909984968673,
+    "chord_angle_to_axis_deg": 5.2037457500436615,
+    "chord_tilt_radial_outward_deg": -2.0316943312184503,
+    "chord_tilt_tangential_deg": 4.794744745686211
+   }
+  },
+  "M6/C/left/proximal": {
+   "checks": 217,
+   "envelope_failures": 73,
+   "min_envelope_clearance_mm": -0.13253802754775823,
+   "max_chord_angle_deg": 8.97158482824585,
+   "worst": {
+    "state": "119",
+    "phase": "right_return",
+    "module": "M6",
+    "set": "C",
+    "ray": "left",
+    "end": "proximal",
+    "tension_n": 6.313854135024625,
+    "min_center_signed_distance_mm": 0.8674619724522418,
+    "envelope_clearance_mm": -0.13253802754775823,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     27.58,
+     1.175,
+     -45.353
+    ],
+    "nearest_face_radius_mm": 27.60470697699536,
+    "chord_angle_to_axis_deg": 8.05836582013408,
+    "chord_tilt_radial_outward_deg": -2.802179990966057,
+    "chord_tilt_tangential_deg": 7.567426369305676
+   }
+  },
+  "M6/C/right/distal": {
+   "checks": 217,
+   "envelope_failures": 188,
+   "min_envelope_clearance_mm": -0.23105730786261147,
+   "max_chord_angle_deg": 5.218165522061192,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M6",
+    "set": "C",
+    "ray": "right",
+    "end": "distal",
+    "tension_n": 7.327615280724313,
+    "min_center_signed_distance_mm": 0.7689426921373885,
+    "envelope_clearance_mm": -0.23105730786261147,
+    "at_local_axial_mm": 41.15,
+    "nearest_face_cad_xyz_mm": [
+     -27.442,
+     1.205,
+     41.165
+    ],
+    "nearest_face_radius_mm": 27.468533976001968,
+    "chord_angle_to_axis_deg": 5.218165522061192,
+    "chord_tilt_radial_outward_deg": -2.055261539233549,
+    "chord_tilt_tangential_deg": -4.800471792528795
+   }
+  },
+  "M6/C/right/proximal": {
+   "checks": 217,
+   "envelope_failures": 72,
+   "min_envelope_clearance_mm": -0.13252606469679284,
+   "max_chord_angle_deg": 8.963196339798415,
+   "worst": {
+    "state": "85",
+    "phase": "left_return",
+    "module": "M6",
+    "set": "C",
+    "ray": "right",
+    "end": "proximal",
+    "tension_n": 6.43525966137073,
+    "min_center_signed_distance_mm": 0.8674739353032072,
+    "envelope_clearance_mm": -0.13252606469679284,
+    "at_local_axial_mm": -45.15,
+    "nearest_face_cad_xyz_mm": [
+     -27.543,
+     1.246,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 27.570779861550246,
+    "chord_angle_to_axis_deg": 8.058080177601711,
+    "chord_tilt_radial_outward_deg": -2.799609926754455,
+    "chord_tilt_tangential_deg": -7.568053491788196
+   }
+  },
+  "M6/C/up/distal": {
+   "checks": 217,
+   "envelope_failures": 152,
+   "min_envelope_clearance_mm": -0.10828850225456554,
+   "max_chord_angle_deg": 5.180812289099113,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M6",
+    "set": "C",
+    "ray": "up",
+    "end": "distal",
+    "tension_n": 17.2799617191534,
+    "min_center_signed_distance_mm": 0.8917114977454345,
+    "envelope_clearance_mm": -0.10828850225456554,
+    "at_local_axial_mm": 41.1,
+    "nearest_face_cad_xyz_mm": [
+     0.558,
+     29.205,
+     41.165
+    ],
+    "nearest_face_radius_mm": 29.21010062369872,
+    "chord_angle_to_axis_deg": 5.180812289099113,
+    "chord_tilt_radial_outward_deg": 4.73639006246626,
+    "chord_tilt_tangential_deg": -2.108978702296894
+   }
+  },
+  "M6/C/up/proximal": {
+   "checks": 217,
+   "envelope_failures": 0,
+   "min_envelope_clearance_mm": 0.00611862693197418,
+   "max_chord_angle_deg": 8.185839402638164,
+   "worst": {
+    "state": "175",
+    "phase": "right_return",
+    "module": "M6",
+    "set": "C",
+    "ray": "up",
+    "end": "proximal",
+    "tension_n": 17.17397446992451,
+    "min_center_signed_distance_mm": 1.0061186269319742,
+    "envelope_clearance_mm": 0.00611862693197418,
+    "at_local_axial_mm": -45.1,
+    "nearest_face_cad_xyz_mm": [
+     -0.641,
+     29.16,
+     -45.165
+    ],
+    "nearest_face_radius_mm": 29.167389217197794,
+    "chord_angle_to_axis_deg": 8.109140242965788,
+    "chord_tilt_radial_outward_deg": 7.2411780230380165,
+    "chord_tilt_tangential_deg": 3.6892493272493128
+   }
+  }
+ }
+}

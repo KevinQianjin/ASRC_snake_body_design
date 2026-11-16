@@ -1,0 +1,29 @@
+{
+ "scope": "Check exit-pivot rope envelopes against actual end-region CAD (evening 15 Nov 2026 EST).\n\nUses the per-exit deflections written by ``end_bellmouth_study.py``.  Because the\nend regions are treated as rigid, each rope centreline can be built directly in\nthe undeformed CAD frame: along the lane bore (centre 0.25 mm toward the bend\nside), around an arc of radius R_w + 1 mm concentric with the fillet, then\nstraight at the measured deflection until |local z| = 38 mm.  The signed\ndistance of these samples to the CAD surface minus the 1 mm rope radius is the\nfinite-rope clearance.  Intended bearing on the bore/fillet gives ~0; the\nacceptance tolerance only covers the 128-sided cutter faceting.\n\nRunning the same paths against the V2 bodies shows what the unchanged sharp\n(0.25 mm chamfer) exits would do under the same rigid-end assumption.\n",
+ "exit_csv": "evening_20261115/exit_pivot_bellmouth_v1/exit_pivot.csv",
+ "design": "../../../cad/lanes_u4m2/end_bellmouth_v1/design.json",
+ "cad": "../../../cad/lanes_u4m2/end_bellmouth_v1",
+ "every": 1,
+ "cad_sha256": {
+  "M5": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+  "M6": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+ },
+ "records": 217,
+ "rope_exit_checks": 5208,
+ "tolerance_mm": 0.005,
+ "failing_checks": 0,
+ "failing_records": 0,
+ "min_envelope_clearance_mm": -0.0026773141229616826,
+ "worst": {
+  "state": "208",
+  "phase": "left_return",
+  "module": "M5",
+  "set": "B",
+  "ray": "up",
+  "end": "distal",
+  "exit_deflection_deg": 23.436245713079373,
+  "envelope_clearance_mm": -0.0026773141229616826,
+  "at_z_mm": 42.9,
+  "samples": 518
+ }
+}

@@ -24,6 +24,17 @@ README entry **Morning Report**. Keep morning and evening editions separate
 and retain older report links. Historical reports retain their recorded
 times and execution limits; do not retroactively apply the current schedule.
 
+## Evening report edition
+
+The evening engineering task produces the **Evening Report**, scheduled for
+**20:01 US Eastern Time**. That is **01:01 UTC on the following date in EST**
+or **00:01 UTC on the following date in EDT**. Its maximum runtime is two
+hours. Title and date it by the **Eastern** calendar date, even when the UTC
+date has already advanced: `Evening Engineering Report — YYYY-MM-DD` at
+`reports/daily/Evening_Report_YYYY_MM_DD.md`. Evening study folders use an
+`evening_YYYYMMDD` suffix, so they remain distinct from same-day morning
+output. Each run writes a `HANDOFF.md` in its output folder.
+
 ## Recorded timestamps
 
 JSON records expose paired `*_et` and `*_utc` values for known instants.

@@ -1,0 +1,18 @@
+{
+ "status": "Engineering candidate from the 15 November 2026 evening run (EST). Not released for manufacture.",
+ "source_bodies": "../guides_v2/M5_lane_anchorB.stl and ../guides_v2/M6_lane_anchorC.stl (V2 lanes A/B/C 21/24/28 mm, unchanged guides/stations)",
+ "feature": "Axisymmetric convex fillet (bellmouth) on each inboard lane-hole exit of the rigid end regions; return holes, outer interface faces, backbone bores, joints and guides are unchanged.",
+ "hole_diameter_mm": 2.5,
+ "rope_diameter_mm": 2.0,
+ "exits": {
+  "M5/proximal": {"face_z_mm": -45.0, "inboard_sign": 1, "lanes": ["B", "C"], "wall_radius_mm": 6.0, "design_wrap_deg": 19.0},
+  "M5/distal":   {"face_z_mm": 41.0,  "inboard_sign": -1, "lanes": ["B", "C"], "wall_radius_mm": 3.9, "design_wrap_deg": 29.0},
+  "M6/proximal": {"face_z_mm": -45.0, "inboard_sign": 1, "lanes": ["C"], "wall_radius_mm": 7.0, "design_wrap_deg": 18.0},
+  "M6/distal":   {"face_z_mm": 41.0,  "inboard_sign": -1, "lanes": ["C"], "wall_radius_mm": 7.0, "design_wrap_deg": 18.0}
+ },
+ "lane_radii_mm": {"B": 24.0, "C": 28.0},
+ "rays_cad_xy": {"up": [0, 1], "right": [-1, 0], "down": [0, -1], "left": [1, 0]},
+ "acceptance_margin_deg": 1.0,
+ "minimum_bridge_target_mm": 0.5,
+ "assumptions": "Rope centreline bend radius = wall radius + 1 mm. No rope D/d rating is available for the uncalibrated PA6 surrogate rope; the 5-8 mm centreline radii are geometric choices, not a qualified bend limit."
+}

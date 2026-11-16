@@ -66,7 +66,7 @@ python build_mass.py
 ## Release blockers
 
 1. Resolve rigid guide/web interference during bending. Investigate articulated or compliant supports and relief around non-mounting webs, while maintaining the intended guide coordinates under load.
-2. Revise finite end-hole and anchor-block entry/exit geometry, or include rope contact, so the bending rope spans do not pass through material.
+2. Revise finite end-hole and anchor-block entry/exit geometry, or include rope contact, so the bending rope spans do not pass through material. A first candidate for M5/M6 inboard exits is [end_bellmouth_v1](../end_bellmouth_v1/README.md) (15 November 2026 evening); the solver still needs exit-pivot routing.
 3. Include the actual support stiffness and deformation in a local structural model, then update the rod model if stiffness or guide position changes.
 4. Verify printed eyelet, arm, socket, adhesive and wire strength and cyclic wear against the exported guide loads. The load factor of three is a proposed screening assumption, not a measured safety factor.
 5. Demonstrate threading, cap installation and wire closure without scraping ropes or interfering with adjacent moving strips.
