@@ -1,0 +1,83 @@
+{
+ "archive": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+ "radii_mm": [
+  21.0,
+  24.0,
+  28.0
+ ],
+ "rigid_end_depth_mm": {
+  "proximal": 3.0,
+  "distal": 7.0
+ },
+ "design_exits": {
+  "M5/proximal": {
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 18.0
+  },
+  "M5/distal": {
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 18.0
+  },
+  "M6/proximal": {
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 18.0
+  },
+  "M6/distal": {
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 18.0
+  }
+ },
+ "margin_deg": 1.0,
+ "records": 217,
+ "rope_end_checks": 5208,
+ "exits_beyond_design_wrap": 279,
+ "records_beyond_design_wrap": 102,
+ "max_exit_deflection_deg": 27.087615536888162,
+ "per_rope_m5_m6_length_change_mm": {
+  "min": 0.005089482119281286,
+  "max": 0.25306673213205855,
+  "mean": 0.10439630590667856
+ },
+ "groups": {
+  "M5/proximal": {
+   "checks": 1736,
+   "fail": 24,
+   "max_deflection_deg": 17.775933777174963,
+   "max_radial_deg": 12.430479578853442,
+   "max_tangential_deg": 17.406138924853707,
+   "max_interface_chord_deg": 15.163390527937723,
+   "max_straight_flare_mm": 1.8130239510991932,
+   "max_abs_length_change_mm": 0.04929193934196263
+  },
+  "M5/distal": {
+   "checks": 1736,
+   "fail": 255,
+   "max_deflection_deg": 27.087615536888162,
+   "max_radial_deg": 26.97556901836788,
+   "max_tangential_deg": 19.938143667465948,
+   "max_interface_chord_deg": 13.80223605129201,
+   "max_straight_flare_mm": 2.7196545787495845,
+   "max_abs_length_change_mm": 0.1906979921238765
+  },
+  "M6/proximal": {
+   "checks": 868,
+   "fail": 0,
+   "max_deflection_deg": 10.2642151161719,
+   "max_radial_deg": 9.471569710092446,
+   "max_tangential_deg": 10.263630282581033,
+   "max_interface_chord_deg": 8.971584828245932,
+   "max_straight_flare_mm": 1.4736283029473687,
+   "max_abs_length_change_mm": 0.02720355466778912
+  },
+  "M6/distal": {
+   "checks": 868,
+   "fail": 0,
+   "max_deflection_deg": 8.144861828257845,
+   "max_radial_deg": 7.451086284006517,
+   "max_tangential_deg": 6.929796500639805,
+   "max_interface_chord_deg": 5.218165522061192,
+   "max_straight_flare_mm": 1.6392876879009814,
+   "max_abs_length_change_mm": 0.03760555285231604
+  }
+ }
+}

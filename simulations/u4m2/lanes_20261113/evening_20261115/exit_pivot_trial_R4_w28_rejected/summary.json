@@ -1,0 +1,189 @@
+{
+ "scope": "Rigid-end, exit-pivot rope geometry and bellmouth sizing for M5/M6 (evening 15 Nov 2026 EST).\n\nPhysical assumption replacing the ideal interface pivot: the bolted end\nregions (proximal disk z -48..-45 mm; distal anchor block + disk z +41..+48 mm)\nare rigid and keep the orientation of the rod frame at the module interface\nnode.  Lane bores are only 0.25 mm larger than the \u00d82 mm rope in radius, so the\nrope follows the bore axis across the joint and turns where it leaves the\n*inboard* face.  The proposed CAD change is a convex fillet (bellmouth) of wall\nradius ``R_w`` on each inboard lane-hole exit, swept to a design wrap angle\n``theta_d``; a rope deflected by theta <= theta_d bends over the fillet with\ncentreline radius R_w + 1 mm instead of over a 0.25 mm chamfer edge.\n\nFor every saved equilibrium (fixed saved tensions, no re-solution):\n* deflection theta at each inboard exit relative to the rigid bore axis, with\n  radial/tangential components;  pass if theta <= theta_d - margin;\n* length change of the exit-pivot path relative to the solver's interface-pivot\n  chord (straight bore + fillet arc + tangent span vs one straight chord);\n* the same deflection measured against the cell-mapped (bent) bore, for\n  comparison with the CAD beam-map screen.\n\nNot modelled: friction/capstan losses on the fillet, rope bending stiffness\nand flattening, wear, printing tolerance, U4 distal exits (outside M scope).\n",
+ "archive": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+ "coverage": {
+  "path": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+  "format": "reference",
+  "states": 217,
+  "unsolved_records_without_states": 0,
+  "sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944"
+ },
+ "radii_mm": [
+  21.0,
+  24.0,
+  28.0
+ ],
+ "rigid_end_depth_mm": {
+  "proximal": 3.0,
+  "distal": 7.0
+ },
+ "design_exits": {
+  "M5/proximal": {
+   "face_z_mm": -45.0,
+   "inboard_sign": 1,
+   "lanes": [
+    "B",
+    "C"
+   ],
+   "wall_radius_mm": 6.0,
+   "design_wrap_deg": 19.0
+  },
+  "M5/distal": {
+   "face_z_mm": 41.0,
+   "inboard_sign": -1,
+   "lanes": [
+    "B",
+    "C"
+   ],
+   "wall_radius_mm": 4.0,
+   "design_wrap_deg": 28.0
+  },
+  "M6/proximal": {
+   "face_z_mm": -45.0,
+   "inboard_sign": 1,
+   "lanes": [
+    "C"
+   ],
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 12.0
+  },
+  "M6/distal": {
+   "face_z_mm": 41.0,
+   "inboard_sign": -1,
+   "lanes": [
+    "C"
+   ],
+   "wall_radius_mm": 7.0,
+   "design_wrap_deg": 10.0
+  }
+ },
+ "margin_deg": 1.0,
+ "records": 217,
+ "rope_end_checks": 5208,
+ "exits_beyond_design_wrap": 9,
+ "records_beyond_design_wrap": 9,
+ "max_exit_deflection_deg": 27.087615536888162,
+ "per_rope_m5_m6_length_change_mm": {
+  "min": 0.005155706684529804,
+  "max": 0.30469316689498704,
+  "mean": 0.11658384822308035
+ },
+ "groups": {
+  "M5/proximal": {
+   "checks": 1736,
+   "fail": 0,
+   "max_deflection_deg": 17.775933777174963,
+   "max_radial_deg": 12.430479578853442,
+   "max_tangential_deg": 17.406138924853707,
+   "max_interface_chord_deg": 15.163390527937723,
+   "max_straight_flare_mm": 1.8130239510991932,
+   "max_abs_length_change_mm": 0.05794496866319676,
+   "worst": {
+    "state": "48",
+    "phase": "inverse",
+    "module": "M5",
+    "set": "C",
+    "ray": "up",
+    "end": "proximal",
+    "tension_n": 17.09760245703784,
+    "exit_deflection_deg": 17.775933777174963,
+    "exit_deflection_radial_deg": 3.8394553745237894,
+    "exit_deflection_tangential_deg": 17.406138924853707,
+    "interface_chord_angle_deg": 15.163390527937723,
+    "straight_flare_halfwidth_needed_mm": 1.8130239510991932,
+    "length_change_mm": 0.05794496866319676,
+    "wrap_within_fillet": true,
+    "fillet_axial_extent_mm": 2.137067453524373,
+    "design_wrap_deg": 19.0,
+    "wall_radius_mm": 6.0
+   }
+  },
+  "M5/distal": {
+   "checks": 1736,
+   "fail": 9,
+   "max_deflection_deg": 27.087615536888162,
+   "max_radial_deg": 26.97556901836788,
+   "max_tangential_deg": 19.938143667465948,
+   "max_interface_chord_deg": 13.80223605129201,
+   "max_straight_flare_mm": 2.7196545787495845,
+   "max_abs_length_change_mm": 0.22771883473136612,
+   "worst": {
+    "state": "155",
+    "phase": "left_out",
+    "module": "M5",
+    "set": "C",
+    "ray": "up",
+    "end": "distal",
+    "tension_n": 16.991707852299758,
+    "exit_deflection_deg": 27.087615536888162,
+    "exit_deflection_radial_deg": 26.97556901836788,
+    "exit_deflection_tangential_deg": -2.8709935574156495,
+    "interface_chord_angle_deg": 11.95581879747365,
+    "straight_flare_halfwidth_needed_mm": 2.4822552309259693,
+    "length_change_mm": 0.20421848963310474,
+    "wrap_within_fillet": false,
+    "fillet_axial_extent_mm": 2.276762387003037,
+    "design_wrap_deg": 28.0,
+    "wall_radius_mm": 4.0
+   }
+  },
+  "M6/proximal": {
+   "checks": 868,
+   "fail": 0,
+   "max_deflection_deg": 10.2642151161719,
+   "max_radial_deg": 9.471569710092446,
+   "max_tangential_deg": 10.263630282581033,
+   "max_interface_chord_deg": 8.971584828245932,
+   "max_straight_flare_mm": 1.4736283029473687,
+   "max_abs_length_change_mm": 0.02720355466778912,
+   "worst": {
+    "state": "176",
+    "phase": "right_return",
+    "module": "M6",
+    "set": "C",
+    "ray": "left",
+    "end": "proximal",
+    "tension_n": 14.050401558395118,
+    "exit_deflection_deg": 10.2642151161719,
+    "exit_deflection_radial_deg": 0.11195247218273756,
+    "exit_deflection_tangential_deg": 10.263630282581033,
+    "interface_chord_angle_deg": 8.971584828245932,
+    "straight_flare_halfwidth_needed_mm": 1.4736283029473687,
+    "length_change_mm": 0.02720355466778912,
+    "wrap_within_fillet": true,
+    "fillet_axial_extent_mm": 1.425501448506788,
+    "design_wrap_deg": 12.0,
+    "wall_radius_mm": 7.0
+   }
+  },
+  "M6/distal": {
+   "checks": 868,
+   "fail": 0,
+   "max_deflection_deg": 8.144861828257845,
+   "max_radial_deg": 7.451086284006517,
+   "max_tangential_deg": 6.929796500639805,
+   "max_interface_chord_deg": 5.218165522061192,
+   "max_straight_flare_mm": 1.6392876879009814,
+   "max_abs_length_change_mm": 0.03760555285231604,
+   "worst": {
+    "state": "63",
+    "phase": "inverse",
+    "module": "M6",
+    "set": "C",
+    "ray": "up",
+    "end": "distal",
+    "tension_n": 17.2799617191534,
+    "exit_deflection_deg": 8.144861828257845,
+    "exit_deflection_radial_deg": 7.451086284006517,
+    "exit_deflection_tangential_deg": 3.3267427489081283,
+    "interface_chord_angle_deg": 5.180812289099113,
+    "straight_flare_halfwidth_needed_mm": 1.6346863401463247,
+    "length_change_mm": 0.03760555285231604,
+    "wrap_within_fillet": true,
+    "fillet_axial_extent_mm": 1.1334109114918536,
+    "design_wrap_deg": 10.0,
+    "wall_radius_mm": 7.0
+   }
+  }
+ }
+}

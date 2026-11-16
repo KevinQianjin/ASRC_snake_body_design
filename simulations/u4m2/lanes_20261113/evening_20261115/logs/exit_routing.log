@@ -1,0 +1,73 @@
+{
+ "archive": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+ "radii_mm": [
+  21.0,
+  24.0,
+  28.0
+ ],
+ "hole_radius_mm": 1.25,
+ "rope_radius_mm": 1.0,
+ "inboard_exit_z_mm": {
+  "proximal": -45.0,
+  "distal": 41.0
+ },
+ "interface_z_mm": {
+  "proximal": -48.0,
+  "distal": 48.0
+ },
+ "records": 217,
+ "rope_end_checks": 5208,
+ "groups": {
+  "M5/proximal": {
+   "checks": 1736,
+   "max_exit_deflection_deg": 8.703325874960198,
+   "max_radial_deflection_deg": 8.659937560383892,
+   "max_tangential_deflection_deg": 8.557831437186884,
+   "max_abs_length_change_mm": 0.05767657468772569,
+   "max_interface_offset_mm": 0.0,
+   "max_flare_radial_mm": 1.3900330470693611,
+   "max_flare_tangential_mm": 1.38491158604159
+  },
+  "M5/distal": {
+   "checks": 1736,
+   "max_exit_deflection_deg": 8.255639002204168,
+   "max_radial_deflection_deg": 8.230375921429308,
+   "max_tangential_deflection_deg": 8.231232546472917,
+   "max_abs_length_change_mm": 0.1607546982115906,
+   "max_interface_offset_mm": 2.7667862628444393e-13,
+   "max_flare_radial_mm": 1.5814046545736717,
+   "max_flare_tangential_mm": 1.5816575682935172
+  },
+  "M6/proximal": {
+   "checks": 868,
+   "max_exit_deflection_deg": 6.784054811925831,
+   "max_radial_deflection_deg": 6.601433662329412,
+   "max_tangential_deflection_deg": 6.573944903175208,
+   "max_abs_length_change_mm": 0.03273202383552842,
+   "max_interface_offset_mm": 0.0,
+   "max_flare_radial_mm": 1.296400460249513,
+   "max_flare_tangential_mm": 1.2946967966182739
+  },
+  "M6/distal": {
+   "checks": 868,
+   "max_exit_deflection_deg": 3.6479042542446924,
+   "max_radial_deflection_deg": 3.382843126671497,
+   "max_tangential_deflection_deg": 3.3795787212381283,
+   "max_abs_length_change_mm": 0.024731459559962587,
+   "max_interface_offset_mm": 1.3981632351088642e-12,
+   "max_flare_radial_mm": 1.2426476471405128,
+   "max_flare_tangential_mm": 1.2419235377066198
+  }
+ },
+ "per_rope_m5_m6_length_change_mm": {
+  "min": 0.005175531486056428,
+  "max": 0.2697833119216426,
+  "mean": 0.0733283534898108
+ },
+ "b_c_radial_pitch_mm": 4.0,
+ "note": "flare_needed_* is the half-width from the hole axis, at the inboard face, that a cone with its throat at the interface face would need for the full rope radius. Two facing radial flares on one ray (B 24 mm, C 28 mm) overlap when their sum exceeds 4 mm."
+}
+
+real	0m3.179s
+user	0m3.318s
+sys	0m0.215s

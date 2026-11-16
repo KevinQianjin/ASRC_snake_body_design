@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 15 November 2026
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 15 November 2026 (Evening Report)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,7 +13,20 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 15 November 2026 — Morning Report (latest): refined CAD checks and V3 saddle development
+### 15 November 2026 — Evening Report (latest): finite-rope end exits and bellmouth candidate
+
+**Evening Report timing:** run start and reporting cutoff **15 November 2026 20:01:41 EST (16 November 2026 01:01:41 UTC)**; deadline **22:01:41 EST (03:01:41 UTC)**. It builds on the same-day Morning Report below.
+
+The head remains **500 g** and the lanes remain **21/24/28 mm**.
+
+- **Real rope diameter:** the end-region screen now uses the full Ø2 mm rope, not only its centreline. With the solver's interface-pivot routing, **214/217** saved V3 equilibria interfere with the M5/M6 end bores; the minimum clearance is **−1.25 mm** at the 7 mm M5 distal anchor bore. The centre-only screen had flagged 57–60 records.
+- **Root cause:** the bores are rigid and give the rope only 0.25 mm radial play, so the rope must bend where it leaves the inboard face. On V2 parts it bends over a 0.25 mm chamfer edge. Treating the end regions as rigid gives exit deflections up to **27.1°** (M5 distal, inner rope). The beam map had also bent the 7 mm blocks by about 3–4°.
+- **New CAD candidate:** convex-fillet exits ([end_bellmouth_v1](cad/lanes_u4m2/end_bellmouth_v1/README.md)) with rope centreline radii of 4.9–8 mm and wraps of 18–29° per exit. Both bodies are watertight single components, and the minimum B–C bridge is **0.544 mm**. In all 217 equilibria, the rigid-end exit-pivot rope envelopes give **0/5208 failures** against the new STL, compared with 5200/5208 for the same paths in V2. Three variants were rejected and are recorded.
+- **Not yet done:** the solver still pivots ropes at the module interface. Exit pivots lengthen the paths by 0.005–0.307 mm per rope, and no equilibrium or closed-loop replay was re-solved. Rope D/d, friction and printing are not qualified. The V3 saddle-joint stiffness and the 55/217 guide/body contacts remain open. **Not released for manufacture.** 21 tests pass.
+
+[Full English Evening Report](reports/daily/Evening_Report_2026_11_15.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261115/HANDOFF.md) · [Evidence and reproduction](simulations/u4m2/lanes_20261113/evening_20261115/README.md) · [Bellmouth CAD](cad/lanes_u4m2/end_bellmouth_v1/README.md)
+
+### 15 November 2026 — Morning Report: refined CAD checks and V3 saddle development
 
 **Morning Report timing:** reporting cutoff and actual run start **15 November 2026 07:01:11 EST (12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same date. These are recorded execution times; future morning runs are scheduled for **07:00 US Eastern Time (12:00 UTC in EST / 11:00 UTC in EDT)**, with a maximum runtime of **two hours**.
 

@@ -1,0 +1,278 @@
+{
+ "design": {
+  "status": "Engineering candidate from the 15 November 2026 evening run (EST). Not released for manufacture.",
+  "source_bodies": "../guides_v2/M5_lane_anchorB.stl and ../guides_v2/M6_lane_anchorC.stl (V2 lanes A/B/C 21/24/28 mm, unchanged guides/stations)",
+  "feature": "Axisymmetric convex fillet (bellmouth) on each inboard lane-hole exit of the rigid end regions; return holes, outer interface faces, backbone bores, joints and guides are unchanged.",
+  "hole_diameter_mm": 2.5,
+  "rope_diameter_mm": 2.0,
+  "exits": {
+   "M5/proximal": {
+    "face_z_mm": -45.0,
+    "inboard_sign": 1,
+    "lanes": [
+     "B",
+     "C"
+    ],
+    "wall_radius_mm": 6.0,
+    "design_wrap_deg": 19.0
+   },
+   "M5/distal": {
+    "face_z_mm": 41.0,
+    "inboard_sign": -1,
+    "lanes": [
+     "B",
+     "C"
+    ],
+    "wall_radius_mm": 3.9,
+    "design_wrap_deg": 29.0
+   },
+   "M6/proximal": {
+    "face_z_mm": -45.0,
+    "inboard_sign": 1,
+    "lanes": [
+     "C"
+    ],
+    "wall_radius_mm": 7.0,
+    "design_wrap_deg": 18.0
+   },
+   "M6/distal": {
+    "face_z_mm": 41.0,
+    "inboard_sign": -1,
+    "lanes": [
+     "C"
+    ],
+    "wall_radius_mm": 7.0,
+    "design_wrap_deg": 18.0
+   }
+  },
+  "lane_radii_mm": {
+   "B": 24.0,
+   "C": 28.0
+  },
+  "rays_cad_xy": {
+   "up": [
+    0,
+    1
+   ],
+   "right": [
+    -1,
+    0
+   ],
+   "down": [
+    0,
+    -1
+   ],
+   "left": [
+    1,
+    0
+   ]
+  },
+  "acceptance_margin_deg": 1.0,
+  "minimum_bridge_target_mm": 0.5,
+  "assumptions": "Rope centreline bend radius = wall radius + 1 mm. No rope D/d rating is available for the uncalibrated PA6 surrogate rope; the 5-8 mm centreline radii are geometric choices, not a qualified bend limit."
+ },
+ "source": {
+  "M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+  "M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b"
+ },
+ "parts": {
+  "M5_lane_anchorB.stl": {
+   "watertight": true,
+   "winding_consistent": true,
+   "components": 1,
+   "source_components": 1,
+   "volume_mm3": 31529.29426692102,
+   "source_volume_mm3": 31561.026388579558,
+   "removed_volume_mm3": 31.732121658536926,
+   "bounds": [
+    [
+     -31.474842071533203,
+     -31.474842071533203,
+     -48.0
+    ],
+    [
+     31.450000762939453,
+     31.474842071533203,
+     48.0
+    ]
+   ],
+   "source_bounds": [
+    [
+     -31.474842071533203,
+     -31.474842071533203,
+     -48.0
+    ],
+    [
+     31.450000762939453,
+     31.474842071533203,
+     48.0
+    ]
+   ],
+   "cutters": 16,
+   "sha256": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+   "section_checks": {
+    "M5/proximal@h=0.020": {
+     "z_mm": -45.02,
+     "nominal_hole_d_mm": 3.1400827605143675,
+     "measured_hole_d_mm": [
+      3.14
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 0.8598669150407829,
+     "source_b_c_bridge_mm": 1.057687988281259
+    },
+    "M5/proximal@h=0.977": {
+     "z_mm": -45.97670446337147,
+     "nominal_hole_d_mm": 2.6600593935222374,
+     "measured_hole_d_mm": [
+      2.66
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 1.3399393832286037,
+     "source_b_c_bridge_mm": 1.5
+    },
+    "M5/proximal@h=2.153": {
+     "z_mm": -47.15340892674294,
+     "nominal_hole_d_mm": 2.5,
+     "measured_hole_d_mm": [
+      2.498
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 1.5,
+     "source_b_c_bridge_mm": 1.5
+    },
+    "M5/distal@h=0.020": {
+     "z_mm": 41.02,
+     "nominal_hole_d_mm": 3.455946725732784,
+     "measured_hole_d_mm": [
+      3.456
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 0.5439656609014705,
+     "source_b_c_bridge_mm": 1.057687988281259
+    },
+    "M5/distal@h=0.945": {
+     "z_mm": 41.945378759480356,
+     "nominal_hole_d_mm": 2.7326334828757295,
+     "measured_hole_d_mm": [
+      2.733
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 1.267369081787267,
+     "source_b_c_bridge_mm": 1.5
+    },
+    "M5/distal@h=2.091": {
+     "z_mm": 43.090757518960714,
+     "nominal_hole_d_mm": 2.5,
+     "measured_hole_d_mm": [
+      2.498
+     ],
+     "lane_holes_found": 8,
+     "b_c_bridge_mm": 1.5,
+     "source_b_c_bridge_mm": 1.5
+    }
+   }
+  },
+  "M6_lane_anchorC.stl": {
+   "watertight": true,
+   "winding_consistent": true,
+   "components": 1,
+   "source_components": 1,
+   "volume_mm3": 31745.871765308217,
+   "source_volume_mm3": 31760.738586685733,
+   "removed_volume_mm3": 14.866821377516317,
+   "bounds": [
+    [
+     -31.474842071533203,
+     -31.474842071533203,
+     -48.0
+    ],
+    [
+     31.450000762939453,
+     31.474842071533203,
+     48.0
+    ]
+   ],
+   "source_bounds": [
+    [
+     -31.474842071533203,
+     -31.474842071533203,
+     -48.0
+    ],
+    [
+     31.450000762939453,
+     31.474842071533203,
+     48.0
+    ]
+   ],
+   "cutters": 8,
+   "sha256": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5",
+   "section_checks": {
+    "M6/proximal@h=0.020": {
+     "z_mm": -45.02,
+     "nominal_hole_d_mm": 3.1722783461521527,
+     "measured_hole_d_mm": [
+      3.172
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    },
+    "M6/proximal@h=1.082": {
+     "z_mm": -46.081559480312315,
+     "nominal_hole_d_mm": 2.6681195652150684,
+     "measured_hole_d_mm": [
+      2.668
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    },
+    "M6/proximal@h=2.363": {
+     "z_mm": -47.36311896062463,
+     "nominal_hole_d_mm": 2.5,
+     "measured_hole_d_mm": [
+      2.498
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    },
+    "M6/distal@h=0.020": {
+     "z_mm": 41.02,
+     "nominal_hole_d_mm": 3.1722783461521527,
+     "measured_hole_d_mm": [
+      3.172
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    },
+    "M6/distal@h=1.082": {
+     "z_mm": 42.081559480312315,
+     "nominal_hole_d_mm": 2.6681195652150684,
+     "measured_hole_d_mm": [
+      2.668
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    },
+    "M6/distal@h=2.363": {
+     "z_mm": 43.36311896062463,
+     "nominal_hole_d_mm": 2.5,
+     "measured_hole_d_mm": [
+      2.498
+     ],
+     "lane_holes_found": 4,
+     "b_c_bridge_mm": null,
+     "source_b_c_bridge_mm": null
+    }
+   }
+  }
+ },
+ "all_watertight_single_component": true,
+ "minimum_b_c_bridge_mm": 0.5439656609014705,
+ "minimum_bridge_target_met": true,
+ "note": "Bridge is the minimum polygon distance between same-ray B (24 mm) and C (28 mm) hole sections at the listed depths. Section diameters are mean distances of the sliced polygon from its centroid (128-sided cutter).  Geometry only: no printed tolerance, strength, wear or rope-qualification claim."
+}

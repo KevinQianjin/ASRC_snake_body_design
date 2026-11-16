@@ -1,0 +1,34 @@
+/home/user/ASRC_snake_body_design/simulations/u4m2/lanes_20261113/bellmouth_cad_check.py:37: DeprecationWarning: Call to deprecated method SetCells. (Use ImportLegacyFormat or SetData instead.) -- Deprecated since version 9.6.0.
+  cells.SetCells(len(m.faces), numpy_to_vtkIdTypeArray(np.c_[np.full(len(m.faces), 3), m.faces].astype(np.int64).ravel(), deep=True))
+{
+ "exit_csv": "evening_20261115/exit_pivot_bellmouth_v1/exit_pivot.csv",
+ "design": "../../../cad/lanes_u4m2/end_bellmouth_v1/design.json",
+ "cad": "../../../cad/lanes_u4m2/end_bellmouth_v1",
+ "every": 1,
+ "cad_sha256": {
+  "M5": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+  "M6": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+ },
+ "records": 217,
+ "rope_exit_checks": 5208,
+ "tolerance_mm": 0.005,
+ "failing_checks": 0,
+ "failing_records": 0,
+ "min_envelope_clearance_mm": -0.0026773141229616826,
+ "worst": {
+  "state": "208",
+  "phase": "left_return",
+  "module": "M5",
+  "set": "B",
+  "ray": "up",
+  "end": "distal",
+  "exit_deflection_deg": 23.436245713079373,
+  "envelope_clearance_mm": -0.0026773141229616826,
+  "at_z_mm": 42.9,
+  "samples": 518
+ }
+}
+
+real	9m48.577s
+user	9m43.663s
+sys	0m0.792s

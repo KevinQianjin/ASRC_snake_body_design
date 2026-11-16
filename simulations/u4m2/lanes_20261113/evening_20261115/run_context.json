@@ -1,0 +1,47 @@
+{
+ "edition": "Evening Report",
+ "report": "reports/daily/Evening_Report_2026_11_15.md",
+ "run_start_et": "2026-11-15T20:01:41-05:00",
+ "run_start_utc": "2026-11-16T01:01:41Z",
+ "deadline_et": "2026-11-15T22:01:41-05:00",
+ "deadline_utc": "2026-11-16T03:01:41Z",
+ "reporting_interval_et": [
+  "2026-11-14T20:01:41-05:00",
+  "2026-11-15T20:01:41-05:00"
+ ],
+ "reporting_interval_utc": [
+  "2026-11-15T01:01:41Z",
+  "2026-11-16T01:01:41Z"
+ ],
+ "source_commit": "d70550594bfb524b8e2e7e703cb1b8e4234a80f8",
+ "source_refs": {
+  "origin_main": "d70550594bfb524b8e2e7e703cb1b8e4234a80f8",
+  "claude_great_goodall_1wf2yh": "d70550594bfb524b8e2e7e703cb1b8e4234a80f8",
+  "codex_guide_validation": "73b0b51d1e9593cb924c33e4f5c85258effe584d (contained in origin/main)"
+ },
+ "resources": {
+  "cpus": 4,
+  "memory_total_gib": 15.7,
+  "note": "Studies ran sequentially except the two independent bellmouth CAD checks, which ran concurrently. RSS was observed once at about 0.9 GB for the beam-mapped envelope screen; peak memory of other runs was not measured."
+ },
+ "input_sha256": {
+  "simulations/u4m2/lanes_20261113/guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944",
+  "cad/lanes_u4m2/guides_v2/M5_lane_anchorB.stl": "4ebc948c973989782ce6c357fa9fb0d3d20b3a25719d469ad709f6d37b3d4194",
+  "cad/lanes_u4m2/guides_v2/M6_lane_anchorC.stl": "b7910e1b97dfa21f9314298e61535051256d84fc68079c6bdd744e1503f1a04b",
+  "cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+  "cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5",
+  "cad/lanes_u4m2/end_bellmouth_v1/design.json": "2d02a572f20d62a61cca51c1c35ce09dac921b1fc17320ed3fa92c1e95e442b8"
+ },
+ "environment": {
+  "python": "3.11.18",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "trimesh": "5.2.1",
+  "vtk": "9.7.2",
+  "manifold3d": "3.5.5",
+  "shapely": "2.2.0",
+  "numba": "0.68.1",
+  "pytest": "installed for tests"
+ },
+ "environment_note": "Versions differ from the 15 November morning environment (numpy 2.5.4, vtk 9.3.1, Python 3.12). No historical result was recomputed with this environment."
+}
