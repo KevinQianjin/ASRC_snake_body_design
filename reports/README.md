@@ -4,16 +4,20 @@
 
 ## Latest simulation report
 
-**Morning Report timing:** reporting cutoff and actual run start **15 November 2026 07:01:11 EST (12:01:11 UTC)**; report preparation **08:12:54 EST (13:12:54 UTC)** on the same date. These are recorded execution times; future morning runs are scheduled for **07:00 US Eastern Time (12:00 UTC in EST / 11:00 UTC in EDT)**, with a maximum runtime of **two hours**.
-
-- [Morning Report — guide refinement and V3 design](daily/Morning_Report_2026_11_15.md) — 15 November 2026. Corrected CAD contact measurement, actual socket geometry, expanded selected-state validation and remaining manufacturing blockers; 500 g head payload.
-- [Guided full-path validation](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) — 14 November 2026. Ideal guided controller cycle and separate physical-mount failures.
+- [Evening Report — 16 November 2026](daily/Evening_Report_2026_11_16.md): full-coverage guide/web compatibility (V3 contact in 59/217 holds) and a 0.25 mm bond-gap candidate clearing all 1736 checks. Start/cutoff: **20:02:13 EST (01:02:13 UTC, 17 November)**.
+- [Morning Report — 16 November 2026](daily/Morning_Report_2026_11_16.md): constrained bellmouth routing, 217 re-solved fixed-winch holds, finite-rope/tank checks and persistent refined guide contact. Start/cutoff: **07:19:33 EST (12:19:33 UTC)**.
+- [Evening Report — 15 November 2026](daily/Evening_Report_2026_11_15.md): finite-rope exit diagnosis and bellmouth CAD before solver integration.
+- [Morning Report — 15 November 2026](daily/Morning_Report_2026_11_15.md): V3 saddle development and corrected CAD surface screening.
+- [Guided full-path validation — 14 November 2026](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md): earlier ideal controller cycle and separate physical-mount failures.
 
 - [Closed-loop round-trip report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md) — 12 November 2026. Results remain beside their source and data.
 - [Full-cycle MP4](../simulations/u4m2/backbone_20261108/closed_loop_results/E75_full_cycle.mp4) · [Steering GIF](../simulations/u4m2/backbone_20261108/closed_loop_results/E75_steering.gif) · [Feedback correction GIF](../simulations/u4m2/backbone_20261108/closed_loop_results/payload550g_feedback_convergence.gif).
 
 ## Daily reports and weekly presentation
 
+- [**Evening Report — 16 November 2026**](daily/Evening_Report_2026_11_16.md): full-coverage guide compatibility screen, mechanism and bond-gap candidate.
+- [**Morning Report — 16 November 2026**](daily/Morning_Report_2026_11_16.md): detailed English results, comparison figures and next-run handoff.
+- [**Evening Report — 15 November 2026**](daily/Evening_Report_2026_11_15.md): bellmouth CAD and finite-rope end checks.
 - [**Morning Report — 15 November 2026**](daily/Morning_Report_2026_11_15.md): detailed English report, actual V3 CAD previews and reproducible evidence. Markdown is the source deliverable for this run.
 - [**Engineering update — 14 November 2026**](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md): guided 500 g motion, archive coverage, V2 mounting and finite end-routing failures.
 

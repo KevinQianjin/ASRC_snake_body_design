@@ -1,0 +1,1295 @@
+{
+  "scope": "Re-solve saved tensions with constrained CAD-consistent bellmouth paths.\n\nThis is selected-state equilibrium coverage, not a new closed-loop replay.\nCheckpoint after every state; an existing output folder is never overwritten.\n",
+  "source_revision": "e9c4858524fc21db2e1a19d1d748836c3a1eb28e",
+  "started_utc": "2026-11-16T12:31:36.039500+00:00",
+  "payload_g": 500,
+  "cells_per_module": 8,
+  "input_coverage": {
+    "path": "guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz",
+    "format": "reference",
+    "states": 217,
+    "unsolved_records_without_states": 0,
+    "sha256": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944"
+  },
+  "selected_indices": [
+    38,
+    39,
+    64,
+    146
+  ],
+  "requested_records": 4,
+  "inputs_sha256": {
+    "simulations/u4m2/lanes_20261113/guided_refinement_20261115/v3_final_mass_holds/mass_holds_states.npz": "db7148962360e24d914040c2dfd9e5a537832aa0c3aa8581ad3539a0830dd944",
+    "cad/lanes_u4m2/end_bellmouth_v1/design.json": "2d02a572f20d62a61cca51c1c35ce09dac921b1fc17320ed3fa92c1e95e442b8",
+    "cad/lanes_u4m2/end_bellmouth_v1/geometry_check.json": "5d0fba4d9af581b9e01b87c998fe90d3c7859d5ae200eefe2ee4e524b8a8a937",
+    "cad/lanes_u4m2/guides_v3/mass_model.json": "7ee01c6031ca42dc3bdd0b8ae41fcd7d92691c3a380af43d2fc21842df92502f"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.17.0",
+    "numba": "0.68.1",
+    "trimesh": "5.2.1",
+    "vtk": "9.3.1"
+  },
+  "mass_change_g": [
+    -0.029510873142439338,
+    -0.013826143881090174
+  ],
+  "mode": "rest",
+  "free_rope_length_m": 1.0,
+  "command_scope": "Reconstructed rest lengths of the saved V3 equilibria; not original archived controller commands",
+  "completed": true,
+  "rows": [
+    {
+      "state": "38",
+      "source_metadata": {
+        "source_state": "38",
+        "source_metadata": {
+          "archive": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+          "source_state": "y45_z8",
+          "phase": "inverse",
+          "source_metadata": {},
+          "selection_reasons": [
+            "all saved startup or inverse holds"
+          ]
+        },
+        "phase": "inverse",
+        "tensions_n": [
+          8.438996978407678,
+          4.752810924432701,
+          3.0,
+          3.0000000000000084,
+          15.624914394979998,
+          8.327235508525572,
+          3.000000000000013,
+          3.0,
+          15.62491439497994,
+          3.0,
+          3.000000000000008,
+          9.78431393105692
+        ]
+      },
+      "solved": true,
+      "reused_identical_equilibrium": false,
+      "solver_trace": [
+        {
+          "iteration": 0,
+          "residual": 0.005663090459917419,
+          "gradient_norm": 0.004576375021986252,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 1,
+          "residual": 4.1107757386277255e-06,
+          "gradient_norm": 5.258018786470571e-06,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 2,
+          "residual": 6.6647613354102e-12,
+          "gradient_norm": 5.186502897278593e-12
+        }
+      ],
+      "baseline": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            8.438996978407678,
+            4.752810924432701,
+            3.0,
+            3.0000000000000084
+          ],
+          [
+            15.624914394979998,
+            8.327235508525572,
+            3.000000000000013,
+            3.0
+          ],
+          [
+            15.62491439497994,
+            3.0,
+            3.000000000000008,
+            9.78431393105692
+          ]
+        ],
+        "maximum_single_tendon_n": 15.624914394979998,
+        "sum_tensions_n": 80.55318613238285,
+        "yaw_deg": 44.97460021087096,
+        "vertical_projected_deg": 7.229597107069724,
+        "world_elevation_deg": 20.00285470338417,
+        "true_head_axis_angle_deg": 42.12782227725462,
+        "head_world_mm": [
+          539.0846032000164,
+          161.8236288767997,
+          116.56606284642821
+        ],
+        "max_abs_axial_strain": 0.0006483475596684504,
+        "max_compression": 0.0006483475596684504,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0006483475596684504,
+        "max_M_strain": 0.0006134035848228633,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": 32.76002108393675,
+        "equilibrium_residual": 1.1535217225855376e-13,
+        "minimum_geometry_constraint": 0.13277313896495727,
+        "maximum_radius_curvature": 0.2106814236048232,
+        "nonlocal_capsule_clearance_mm": 66.15734792048042,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.9396755788170935,
+        "vertical_projection_norm": 0.7475937008658198,
+        "minimum_fixed_winch_eigenvalue": null,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": null,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "candidate": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            8.434806745018248,
+            4.7379363639899665,
+            3.000488882344995,
+            3.011126124852756
+          ],
+          [
+            15.635739968834757,
+            8.353295159894365,
+            3.0041654391647463,
+            2.994849186969969
+          ],
+          [
+            15.648873048712295,
+            3.01688182427641,
+            3.005511064694774,
+            9.80218336538936
+          ]
+        ],
+        "maximum_single_tendon_n": 15.648873048712295,
+        "sum_tensions_n": 80.64585717414263,
+        "yaw_deg": 44.964171046618645,
+        "vertical_projected_deg": 7.236624995088383,
+        "world_elevation_deg": 20.011756924137753,
+        "true_head_axis_angle_deg": 42.11687252534474,
+        "head_world_mm": [
+          539.0540537386374,
+          161.88349615523688,
+          116.62421503071174
+        ],
+        "max_abs_axial_strain": 0.0006490690343817103,
+        "max_compression": 0.0006490690343817103,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0006490690343817103,
+        "max_M_strain": 0.0006143582867153324,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": 32.70864047250006,
+        "equilibrium_residual": 6.6647613354102e-12,
+        "minimum_geometry_constraint": 0.13276913918096497,
+        "maximum_radius_curvature": 0.21074275087002284,
+        "nonlocal_capsule_clearance_mm": 66.15765122653386,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.9396224194834345,
+        "vertical_projection_norm": 0.7477345484011927,
+        "minimum_fixed_winch_eigenvalue": 0.7976859713568816,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": true,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "head_change_mm": 0.08887652758162544,
+      "yaw_change_deg": -0.010429164252315104,
+      "elevation_change_deg": 0.008902220753583379,
+      "baseline_rope_lengths_mm": [
+        [
+          384.2462958373286,
+          381.38257924225235,
+          383.38669430142016,
+          386.25043417068485
+        ],
+        [
+          477.27629191351184,
+          464.22688308401126,
+          482.4267022980672,
+          495.48513785475143
+        ],
+        [
+          565.5582078439086,
+          559.2667799456946,
+          586.2126700307757,
+          592.5194186244813
+        ]
+      ],
+      "candidate_rope_lengths_mm": [
+        [
+          384.24573680825284,
+          381.38059819311087,
+          383.3867595180693,
+          386.25192146239385
+        ],
+        [
+          477.2778321761913,
+          464.2305606838269,
+          482.4272977470505,
+          495.4843950606954
+        ],
+        [
+          565.5618203930834,
+          559.2693182888559,
+          586.2135129917259,
+          592.5221609692135
+        ]
+      ],
+      "reconstructed_rest_lengths_mm": [
+        [
+          1383.1204290317696,
+          1380.7495822513085,
+          1382.9864958704254,
+          1385.8494072915005
+        ],
+        [
+          1475.053179048234,
+          1463.0517238565888,
+          1481.997852690963,
+          1495.052510587039
+        ],
+        [
+          1563.202241927275,
+          1558.8157013561672,
+          1585.753796294036,
+          1591.017862320675
+        ]
+      ],
+      "candidate_rest_lengths_mm": [
+        [
+          1383.1204290317696,
+          1380.7495822513085,
+          1382.9864958704254,
+          1385.8494072915005
+        ],
+        [
+          1475.053179048234,
+          1463.0517238565888,
+          1481.997852690963,
+          1495.052510587039
+        ],
+        [
+          1563.202241927275,
+          1558.8157013561672,
+          1585.753796294036,
+          1591.017862320675
+        ]
+      ],
+      "max_tension_change_n": 0.026059651368793624,
+      "head_frame_base": [
+        [
+          0.7417783808248287,
+          -0.36602937994211127,
+          -0.5619495767060322
+        ],
+        [
+          0.09419017259582299,
+          0.8864790328564682,
+          -0.4530818200857661
+        ],
+        [
+          0.6639977749415013,
+          0.28315617126429515,
+          0.6920473520993206
+        ]
+      ],
+      "max_exit_angle_deg": 9.89019325799596,
+      "min_design_margin_deg": 9.109806742004041,
+      "wrap_failures": 0,
+      "max_fillet_resultant_n": 0.3920271320571303,
+      "max_guide_hole_force_n": 1.5518014610087063
+    },
+    {
+      "state": "39",
+      "source_metadata": {
+        "source_state": "39",
+        "source_metadata": {
+          "archive": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+          "source_state": "y50_z8",
+          "phase": "inverse",
+          "source_metadata": {},
+          "selection_reasons": [
+            "all saved startup or inverse holds"
+          ]
+        },
+        "phase": "inverse",
+        "tensions_n": [
+          8.585132706403,
+          5.03584563702399,
+          3.0000000000000226,
+          3.0,
+          15.716734659034405,
+          9.044725743162324,
+          3.0000000000000075,
+          3.0,
+          15.716734659034405,
+          3.0,
+          3.000000000000005,
+          10.388487541481236
+        ]
+      },
+      "solved": true,
+      "reused_identical_equilibrium": false,
+      "solver_trace": [
+        {
+          "iteration": 0,
+          "residual": 0.007897793946462006,
+          "gradient_norm": 0.006297468094775741,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 1,
+          "residual": 7.612348730624829e-06,
+          "gradient_norm": 9.925019311648022e-06,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 2,
+          "residual": 2.610393382932822e-11,
+          "gradient_norm": 2.2320620229208216e-11
+        }
+      ],
+      "baseline": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            8.585132706403,
+            5.03584563702399,
+            3.0000000000000226,
+            3.0
+          ],
+          [
+            15.716734659034405,
+            9.044725743162324,
+            3.0000000000000075,
+            3.0
+          ],
+          [
+            15.716734659034405,
+            3.0,
+            3.000000000000005,
+            10.388487541481236
+          ]
+        ],
+        "maximum_single_tendon_n": 15.716734659034405,
+        "sum_tensions_n": 82.48766094613939,
+        "yaw_deg": 50.10611276862496,
+        "vertical_projected_deg": 9.524244763610547,
+        "world_elevation_deg": 19.962377387893245,
+        "true_head_axis_angle_deg": 46.90234036938116,
+        "head_world_mm": [
+          532.452110290483,
+          160.51198787040445,
+          127.05205222330702
+        ],
+        "max_abs_axial_strain": 0.0006633758083774389,
+        "max_compression": 0.0006633758083774389,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0006633758083774389,
+        "max_M_strain": 0.0006272443625833238,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": 35.79024197939978,
+        "equilibrium_residual": 1.2256862191861728e-13,
+        "minimum_geometry_constraint": 0.1321553191359196,
+        "maximum_radius_curvature": 0.2205080493795995,
+        "nonlocal_capsule_clearance_mm": 65.58230183949107,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.939917001762544,
+        "vertical_projection_norm": 0.6927936420372954,
+        "minimum_fixed_winch_eigenvalue": null,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": null,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "candidate": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            8.579164455823257,
+            5.013176550004911,
+            3.0008049237651906,
+            3.0174263677357414
+          ],
+          [
+            15.736252587141902,
+            9.08374813475603,
+            3.0029755323753626,
+            2.991005104733482
+          ],
+          [
+            15.74798287892483,
+            3.022177973380246,
+            3.008594821561197,
+            10.410436818612931
+          ]
+        ],
+        "maximum_single_tendon_n": 15.74798287892483,
+        "sum_tensions_n": 82.6137461488151,
+        "yaw_deg": 50.09335871496907,
+        "vertical_projected_deg": 9.54620679021968,
+        "world_elevation_deg": 19.983712939929458,
+        "true_head_axis_angle_deg": 46.88712764614444,
+        "head_world_mm": [
+          532.406779934507,
+          160.6048901962778,
+          127.13005926517442
+        ],
+        "max_abs_axial_strain": 0.0006643576620931045,
+        "max_compression": 0.0006643576620931045,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0006643576620931045,
+        "max_M_strain": 0.0006285129979425241,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": 35.714283053129535,
+        "equilibrium_residual": 2.610393382932822e-11,
+        "minimum_geometry_constraint": 0.13216201195974003,
+        "maximum_radius_curvature": 0.22039806985703683,
+        "nonlocal_capsule_clearance_mm": 65.58243773750195,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.9397898064302068,
+        "vertical_projection_norm": 0.6930348222611417,
+        "minimum_fixed_winch_eigenvalue": 0.8037462730583091,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": true,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "head_change_mm": 0.1295020536767248,
+      "yaw_change_deg": -0.012754053655896769,
+      "elevation_change_deg": 0.021335552036212846,
+      "baseline_rope_lengths_mm": [
+        [
+          384.23481220193725,
+          381.16884559473175,
+          383.4109528214025,
+          386.47695198059324
+        ],
+        [
+          475.95711980231005,
+          462.9833558380812,
+          483.792707013121,
+          496.7782341079415
+        ],
+        [
+          563.4964797392568,
+          558.0718871458772,
+          588.3489302653581,
+          593.7937209032262
+        ]
+      ],
+      "candidate_rope_lengths_mm": [
+        [
+          384.2340159811484,
+          381.16582699113405,
+          383.41106019969465,
+          386.4792818418609
+        ],
+        [
+          475.95989430883776,
+          462.9888577131957,
+          483.79313275703163,
+          496.7769358406887
+        ],
+        [
+          563.5011851819261,
+          558.0752192601133,
+          588.3502466818434,
+          593.797091862882
+        ]
+      ],
+      "reconstructed_rest_lengths_mm": [
+        [
+          1383.0894747120824,
+          1380.498275062043,
+          1383.0107473726869,
+          1386.0758595723184
+        ],
+        [
+          1473.7229593594288,
+          1461.7081148943007,
+          1483.3634622359996,
+          1496.3452327618213
+        ],
+        [
+          1561.1298107210637,
+          1557.6211542255874,
+          1587.8894385322203,
+          1592.1982618738566
+        ]
+      ],
+      "candidate_rest_lengths_mm": [
+        [
+          1383.0894747120824,
+          1380.498275062043,
+          1383.0107473726869,
+          1386.0758595723184
+        ],
+        [
+          1473.7229593594288,
+          1461.7081148943007,
+          1483.3634622359996,
+          1496.3452327618213
+        ],
+        [
+          1561.1298107210637,
+          1557.6211542255874,
+          1587.8894385322203,
+          1592.1982618738566
+        ]
+      ],
+      "max_tension_change_n": 0.03902239159370602,
+      "head_frame_base": [
+        [
+          0.6834377983121926,
+          -0.42728776548995867,
+          -0.5918935219283785
+        ],
+        [
+          0.11493494118289184,
+          0.8636728646180759,
+          -0.4907740235767307
+        ],
+        [
+          0.7209041095273823,
+          0.26738427101272383,
+          0.6393769752513199
+        ]
+      ],
+      "max_exit_angle_deg": 10.806795407127755,
+      "min_design_margin_deg": 8.193204592872247,
+      "wrap_failures": 0,
+      "max_fillet_resultant_n": 0.5301395428409956,
+      "max_guide_hole_force_n": 1.636288814561413
+    },
+    {
+      "state": "64",
+      "source_metadata": {
+        "source_state": "64",
+        "source_metadata": {
+          "archive": "guided_validation_20261114/candidate/inverse/minforce_niti18_E40_p20_a456_pre3_exact_smooth1_fromstartup_tol1_states.npz",
+          "source_state": "y175_z8",
+          "phase": "inverse",
+          "source_metadata": {},
+          "selection_reasons": [
+            "all saved startup or inverse holds"
+          ]
+        },
+        "phase": "inverse",
+        "tensions_n": [
+          12.74383994690414,
+          7.543303342738122,
+          3.0000000000000004,
+          3.3325591405408215,
+          16.910088882086814,
+          14.31703061288568,
+          3.0,
+          10.541990610612572,
+          16.910088882086814,
+          9.318048999236742,
+          3.0000000000000027,
+          13.786823656719701
+        ]
+      },
+      "solved": true,
+      "reused_identical_equilibrium": false,
+      "solver_trace": [
+        {
+          "iteration": 0,
+          "residual": 0.10025964812154364,
+          "gradient_norm": 0.059678294997773454,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 1,
+          "residual": 0.001834878454356037,
+          "gradient_norm": 0.0027096644470638322,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 2,
+          "residual": 2.5240774430834723e-06,
+          "gradient_norm": 2.932954881912742e-06,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 3,
+          "residual": 5.343318380350107e-12,
+          "gradient_norm": 6.4115783141854935e-12
+        }
+      ],
+      "baseline": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            12.74383994690414,
+            7.543303342738122,
+            3.0000000000000004,
+            3.3325591405408215
+          ],
+          [
+            16.910088882086814,
+            14.31703061288568,
+            3.0,
+            10.541990610612572
+          ],
+          [
+            16.910088882086814,
+            9.318048999236742,
+            3.0000000000000027,
+            13.786823656719701
+          ]
+        ],
+        "maximum_single_tendon_n": 16.910088882086814,
+        "sum_tensions_n": 114.4037740738114,
+        "yaw_deg": 175.00230029586152,
+        "vertical_projected_deg": 139.93268666255815,
+        "world_elevation_deg": 19.997077743342484,
+        "true_head_axis_angle_deg": 139.704585115405,
+        "head_world_mm": [
+          351.8879725038985,
+          270.5851736466131,
+          48.81008561191127
+        ],
+        "max_abs_axial_strain": 0.0009128161944143638,
+        "max_compression": 0.0009128161944143638,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0009128161944143638,
+        "max_M_strain": 0.0009097922194464407,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": 16.57115749353003,
+        "equilibrium_residual": 7.26640969617165e-14,
+        "minimum_geometry_constraint": 0.09498924235222445,
+        "maximum_radius_curvature": 0.5519767995160488,
+        "nonlocal_capsule_clearance_mm": 46.58639210223116,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.939710063617147,
+        "vertical_projection_norm": 0.9966435471261963,
+        "minimum_fixed_winch_eigenvalue": null,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": null,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "candidate": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            12.61698782830411,
+            7.473551742729751,
+            2.949673736272109,
+            3.2252407359053152
+          ],
+          [
+            17.59937402500461,
+            14.848243646749628,
+            3.297556782487945,
+            10.938403995721718
+          ],
+          [
+            17.396703015720274,
+            9.803407012412457,
+            3.4529780612466774,
+            14.157771030470657
+          ]
+        ],
+        "maximum_single_tendon_n": 17.59937402500461,
+        "sum_tensions_n": 117.75989161302527,
+        "yaw_deg": 175.99463298581583,
+        "vertical_projected_deg": 139.77362700077154,
+        "world_elevation_deg": 20.180960380237703,
+        "true_head_axis_angle_deg": 139.62811017084948,
+        "head_world_mm": [
+          350.8032164117219,
+          271.55638793885026,
+          46.24573146582146
+        ],
+        "max_abs_axial_strain": 0.0009464564920111857,
+        "max_compression": 0.0009464564920111857,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0009390150078576243,
+        "max_M_strain": 0.0009464564920111857,
+        "maximum_strain_module": 5,
+        "total_material_twist_deg": 15.26202843952294,
+        "equilibrium_residual": 5.343318380350107e-12,
+        "minimum_geometry_constraint": 0.0953728363860348,
+        "maximum_radius_curvature": 0.5495317218618125,
+        "nonlocal_capsule_clearance_mm": 46.55321832818629,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.93860771493152,
+        "vertical_projection_norm": 0.997848519194033,
+        "minimum_fixed_winch_eigenvalue": 0.28179873037993886,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": true,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "head_change_mm": 2.9488752377013068,
+      "yaw_change_deg": 0.9923326899543099,
+      "elevation_change_deg": 0.18388263689521978,
+      "baseline_rope_lengths_mm": [
+        [
+          383.6973466774776,
+          382.688070409112,
+          383.62863388977144,
+          384.6379132661515
+        ],
+        [
+          441.93084553184593,
+          475.40150485248444,
+          516.3117615635213,
+          482.82897440547606
+        ],
+        [
+          507.0802784526944,
+          573.3429176870636,
+          642.8082598580125,
+          576.5208360401847
+        ]
+      ],
+      "candidate_rope_lengths_mm": [
+        [
+          383.6804367596793,
+          382.67877435386674,
+          383.6219192183918,
+          384.6235845581435
+        ],
+        [
+          442.02655870936127,
+          475.47699943558905,
+          516.3552695405276,
+          482.88561583052467
+        ],
+        [
+          507.15090199385406,
+          573.4165098579339,
+          642.880018560787,
+          576.5771700990482
+        ]
+      ],
+      "reconstructed_rest_lengths_mm": [
+        [
+          1381.9985395285387,
+          1381.682746307607,
+          1383.2283654683365,
+          1384.1929638000656
+        ],
+        [
+          1439.582734078118,
+          1473.3668065515883,
+          1515.8731093845054,
+          1481.3226847758524
+        ],
+        [
+          1504.6260744425033,
+          1571.9300730743887,
+          1642.3330136446953,
+          1574.4270950128189
+        ]
+      ],
+      "candidate_rest_lengths_mm": [
+        [
+          1381.9985395285387,
+          1381.682746307607,
+          1383.2283654683365,
+          1384.1929638000656
+        ],
+        [
+          1439.582734078118,
+          1473.3668065515883,
+          1515.8731093845054,
+          1481.3226847758524
+        ],
+        [
+          1504.6260744425033,
+          1571.9300730743887,
+          1642.3330136446953,
+          1574.4270950128189
+        ]
+      ],
+      "max_tension_change_n": 0.6892851429177966,
+      "head_frame_base": [
+        [
+          -0.7618561932393608,
+          -0.6409941848691116,
+          -0.09328234445388117
+        ],
+        [
+          0.6444197452596824,
+          -0.7354669881966175,
+          -0.2093119709726207
+        ],
+        [
+          0.06556167128952682,
+          -0.2195786060548244,
+          0.9733893892069836
+        ]
+      ],
+      "max_exit_angle_deg": 18.214069701222282,
+      "min_design_margin_deg": 6.461209042211082,
+      "wrap_failures": 0,
+      "max_fillet_resultant_n": 4.6845372758354955,
+      "max_guide_hole_force_n": 5.422111902846991
+    },
+    {
+      "state": "146",
+      "source_metadata": {
+        "source_state": "146",
+        "source_metadata": {
+          "archive": "guided_validation_20261114/candidate/closed_loop/nominal_trace_states.npz",
+          "source_state": "1799",
+          "phase": "left_return",
+          "source_metadata": {
+            "index": 792,
+            "phase": "left_return",
+            "kind": "feedforward",
+            "clamp_s_mm": 15.0,
+            "node_move_mm": 1.9731752740875643,
+            "operating_tension_pass": true,
+            "yaw_deg": -170.20248265791056,
+            "elevation_deg": 19.98758677575402,
+            "yaw_error_deg": 0.20248265791056497,
+            "elevation_error_deg": 0.012413224245978682,
+            "minimum_tension_n": 3.0052479224806343,
+            "peak_tension_n": 17.604259780669235,
+            "clearance_mm": 41.954125470485934,
+            "minimum_eigenvalue": 0.3813611329291591,
+            "geometry_pass": true,
+            "strain": 0.0009052047977501848,
+            "residual": 1.6231460620019789e-13,
+            "checks_pass": true,
+            "tensions_n": [
+              12.528638039550234,
+              3.0052479224806343,
+              3.20292375443881,
+              8.045801694371034,
+              17.604259780669235,
+              8.69542291563451,
+              3.326081176218449,
+              15.271345776557153,
+              17.43003703146427,
+              14.25246279848109,
+              3.166728443313976,
+              6.917872190276333
+            ],
+            "head_tank_mm": [
+              817.7542269080958,
+              363.5007788738505,
+              566.7028982717061
+            ]
+          },
+          "selection_reasons": [
+            "M-cell DOF 129 extremum",
+            "M-cell DOF 133 extremum"
+          ]
+        },
+        "phase": "left_return",
+        "tensions_n": [
+          12.528638039550234,
+          3.0052479224806343,
+          3.20292375443881,
+          8.045801694371034,
+          17.604259780669235,
+          8.69542291563451,
+          3.326081176218449,
+          15.271345776557153,
+          17.43003703146427,
+          14.25246279848109,
+          3.166728443313976,
+          6.917872190276333
+        ]
+      },
+      "solved": true,
+      "reused_identical_equilibrium": false,
+      "solver_trace": [
+        {
+          "iteration": 0,
+          "residual": 0.09878983066383551,
+          "gradient_norm": 0.06840857068890362,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 1,
+          "residual": 0.0023782255481077166,
+          "gradient_norm": 0.0030889237302566984,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 2,
+          "residual": 4.511163580349364e-06,
+          "gradient_norm": 4.939895153141576e-06,
+          "step_factor": 1.0
+        },
+        {
+          "iteration": 3,
+          "residual": 1.4635700059291896e-11,
+          "gradient_norm": 2.0074500890397747e-11
+        }
+      ],
+      "baseline": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            12.528638039550234,
+            3.0052479224806343,
+            3.20292375443881,
+            8.045801694371034
+          ],
+          [
+            17.604259780669235,
+            8.69542291563451,
+            3.326081176218449,
+            15.271345776557153
+          ],
+          [
+            17.43003703146427,
+            14.25246279848109,
+            3.166728443313976,
+            6.917872190276333
+          ]
+        ],
+        "maximum_single_tendon_n": 17.604259780669235,
+        "sum_tensions_n": 113.44682152345572,
+        "yaw_deg": -170.20697902917567,
+        "vertical_projected_deg": 139.7446043931095,
+        "world_elevation_deg": 19.983758386652912,
+        "true_head_axis_angle_deg": 138.8821405004378,
+        "head_world_mm": [
+          354.6507585980427,
+          259.771127398568,
+          -81.28797508847599
+        ],
+        "max_abs_axial_strain": 0.0009052060938520783,
+        "max_compression": 0.0009052060938520783,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0009052060938520783,
+        "max_M_strain": 0.0008943430260439534,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": -27.871255487789263,
+        "equilibrium_residual": 2.0522472610196016e-13,
+        "minimum_geometry_constraint": 0.09541995494748234,
+        "maximum_radius_curvature": 0.5492958543122497,
+        "nonlocal_capsule_clearance_mm": 46.778734152511944,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.9397895353531468,
+        "vertical_projection_norm": 0.9871415907708402,
+        "minimum_fixed_winch_eigenvalue": null,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": null,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "candidate": {
+        "configuration": "U4-M2",
+        "n_uni": 4,
+        "n_medium": 2,
+        "anchors": [
+          4,
+          5,
+          6
+        ],
+        "anchor_sets": 3,
+        "pitch_deg": 20,
+        "cells_per_module": 8,
+        "tension_order": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "tensions_n": [
+          [
+            12.401398959433296,
+            2.899702599272017,
+            3.1518011340099923,
+            7.973097545917524
+          ],
+          [
+            18.22061769621566,
+            9.033929152314998,
+            3.545769034145839,
+            15.787511526184277
+          ],
+          [
+            17.82357978870776,
+            14.580411369121398,
+            3.531026321496213,
+            7.363699881368143
+          ]
+        ],
+        "maximum_single_tendon_n": 18.22061769621566,
+        "sum_tensions_n": 116.31254500818712,
+        "yaw_deg": -171.34969915452373,
+        "vertical_projected_deg": 139.36193624587875,
+        "world_elevation_deg": 20.422782706242614,
+        "true_head_axis_angle_deg": 138.6999154131671,
+        "head_world_mm": [
+          353.4457686046966,
+          261.47400277797897,
+          -78.52086276387614
+        ],
+        "max_abs_axial_strain": 0.0009275801042260373,
+        "max_compression": 0.0009275801042260373,
+        "max_extension": 0.0,
+        "max_U_strain": 0.0009275801042260373,
+        "max_M_strain": 0.0009264293378264999,
+        "maximum_strain_module": 1,
+        "total_material_twist_deg": -26.258731169298198,
+        "equilibrium_residual": 1.4635700059291896e-11,
+        "minimum_geometry_constraint": 0.095514135137091,
+        "maximum_radius_curvature": 0.5486668386685811,
+        "nonlocal_capsule_clearance_mm": 46.713085106328904,
+        "geometry_pass": true,
+        "strain_5percent_pass": true,
+        "horizontal_projection_norm": 0.9371433115663785,
+        "vertical_projection_norm": 0.9900167905314384,
+        "minimum_fixed_winch_eigenvalue": 0.3799717637157508,
+        "minimum_force_control_eigenvalue": null,
+        "stable_fixed_winch": true,
+        "scope": "Finite local free-space spatial equilibrium; no tank, material strength or hardware rating"
+      },
+      "head_change_mm": 3.465356555799236,
+      "yaw_change_deg": -1.1427201253480632,
+      "elevation_change_deg": 0.4390243195897021,
+      "baseline_rope_lengths_mm": [
+        [
+          383.72356725470144,
+          385.1644143116773,
+          383.6571682392578,
+          382.21633102311665
+        ],
+        [
+          442.3455842721203,
+          485.89089501530924,
+          516.1245218417565,
+          472.5457485239998
+        ],
+        [
+          507.9356029109542,
+          578.6074729547025,
+          642.2940791606685,
+          571.553995485999
+        ]
+      ],
+      "candidate_rope_lengths_mm": [
+        [
+          383.70660508023474,
+          385.1503165347998,
+          383.65034730853574,
+          382.20664524571936
+        ],
+        [
+          442.4311897705475,
+          485.9393708924865,
+          516.1566390511625,
+          472.6189559110488
+        ],
+        [
+          507.99274832167686,
+          578.6573406669274,
+          642.3517705661284,
+          571.6215326522632
+        ]
+      ],
+      "reconstructed_rest_lengths_mm": [
+        [
+          1382.053381144721,
+          1384.7630008393944,
+          1383.229824710042,
+          1381.1444548530233
+        ],
+        [
+          1439.9005415543202,
+          1484.64566462488,
+          1515.638266266933,
+          1470.379825423079
+        ],
+        [
+          1505.4046285587697,
+          1576.4402498686468,
+          1641.7925856699123,
+          1570.5060267446183
+        ]
+      ],
+      "candidate_rest_lengths_mm": [
+        [
+          1382.053381144721,
+          1384.7630008393944,
+          1383.229824710042,
+          1381.1444548530233
+        ],
+        [
+          1439.9005415543202,
+          1484.64566462488,
+          1515.638266266933,
+          1470.379825423079
+        ],
+        [
+          1505.4046285587697,
+          1576.4402498686468,
+          1641.7925856699123,
+          1570.5060267446183
+        ]
+      ],
+      "max_tension_change_n": 0.6163579155464234,
+      "head_frame_base": [
+        [
+          -0.7512631591298627,
+          -0.6416404919253481,
+          0.1545999510220345
+        ],
+        [
+          0.64477663672654,
+          -0.6634882284671523,
+          0.3795345299404674
+        ],
+        [
+          -0.14094947486893936,
+          0.38481274642001856,
+          0.9121690609348976
+        ]
+      ],
+      "max_exit_angle_deg": 17.80169947248536,
+      "min_design_margin_deg": 4.821814078085117,
+      "wrap_failures": 0,
+      "max_fillet_resultant_n": 4.672342527957105,
+      "max_guide_hole_force_n": 5.551845886496082
+    }
+  ],
+  "elapsed_seconds": 5.679673193000781,
+  "aggregate": {
+    "solved_records": 4,
+    "failed_records": 0,
+    "max_head_change_mm": 3.465356555799236,
+    "max_abs_yaw_change_deg": 1.1427201253480632,
+    "max_abs_elevation_change_deg": 0.4390243195897021,
+    "max_residual": 2.610393382932822e-11,
+    "minimum_fixed_winch_eigenvalue": 0.28179873037993886,
+    "nonpositive_fixed_winch_records": 0,
+    "max_exit_angle_deg": 18.214069701222282,
+    "min_design_margin_deg": 4.821814078085117,
+    "wrap_failing_records": 0,
+    "wrap_failing_exits": 0,
+    "max_fillet_resultant_n": 4.6845372758354955,
+    "max_guide_hole_force_n": 5.551845886496082
+  },
+  "unique_solves": 4,
+  "heading_comparison": "Shortest signed angular difference; raw rod headings are retained. Postprocessing fixes unwrap-branch differences without changing equilibria.",
+  "started_et": "2026-11-16T07:31:36.039500-05:00"
+}

@@ -1,0 +1,249 @@
+{
+ "scope": "Full-coverage point-sampled web/guide compatibility screen for rigid V3-style guides.\n\nFor every saved equilibrium and every requested guide, dense samples of the\nactual module-body surface near the guide are beam-mapped (same exact\nconstant-strain-cell map as the Boolean audits), expressed in the guide's rigid\nstation frame and evaluated against the guide, cap and lockwire-envelope\nsurfaces with a signed distance (negative = body point inside a guide part).\n\nThe screen also reports the relative motion of the body at the proposed bond\nland with respect to the rigid guide and the implied bond-line shear strain\n(axial relative displacement / nominal bond gap). This is a kinematic screen of\nthe homogenised beam map, not solid FEA, adhesive qualification or a contact\nsolution. A sampled point set can miss very thin slivers; results are\ncross-checked against the existing manifold Boolean audits.\n",
+ "archive": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+ "archive_sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544",
+ "coverage": {
+  "path": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+  "format": "reference",
+  "states": 217,
+  "unsolved_records_without_states": 0,
+  "sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544"
+ },
+ "body_cad": "../../../cad/lanes_u4m2/end_bellmouth_v1",
+ "guide_cad": "evening_20261116/cad_v3_gap0p25",
+ "body_sha256": {
+  "M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+  "M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+ },
+ "guide_sha256": {
+  "M5_z+12_caps.stl": "407aed0ecf04fcc74c8470287f1efbce500d9df73eb27167b6710dd9ef5d0802",
+  "M5_z+12_guide.stl": "866c6c1c4518f859906bad0ea633ba25d69cc7c44c215ae9704eafd86bccff59",
+  "M5_z+12_wire_envelope.stl": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd",
+  "M5_z+24_caps.stl": "4744b4e0b823976f391d3f9c105ec8f7642a87da109d5c6665983a1361302d88",
+  "M5_z+24_guide.stl": "5a10bc0974a2f1774c25fc77abf72d919ac014f74f41440232b6e89a958a56b4",
+  "M5_z+24_wire_envelope.stl": "e1366a851cf92314b70d6125c517756a0df197f81d6d5f779f44670c82b215ee",
+  "M5_z-12_caps.stl": "d9f6c115b6f5dd8f779755e3df3db36fd25ed0cec06bed06c07463a272d7c62c",
+  "M5_z-12_guide.stl": "8997383beaf9f3b6b9bdee308f2fe9804d0206abb5242039f23526e442606bac",
+  "M5_z-12_wire_envelope.stl": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd",
+  "M5_z-24_caps.stl": "a6708368a415d9c0af3d8b5cef661d50000be76ce9c93442ce6bf4a480f69848",
+  "M5_z-24_guide.stl": "59f5bb5aa288eac443fc29f655edf86ff77a7f92154ab6e3b32a6aa67d8425c6",
+  "M5_z-24_wire_envelope.stl": "e1366a851cf92314b70d6125c517756a0df197f81d6d5f779f44670c82b215ee",
+  "M6_z+12_caps.stl": "407aed0ecf04fcc74c8470287f1efbce500d9df73eb27167b6710dd9ef5d0802",
+  "M6_z+12_guide.stl": "f6036355606b2a3b5379fc842ccc0d977e26588e1e58a75178867b6c28adc10a",
+  "M6_z+12_wire_envelope.stl": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd",
+  "M6_z+24_caps.stl": "4744b4e0b823976f391d3f9c105ec8f7642a87da109d5c6665983a1361302d88",
+  "M6_z+24_guide.stl": "adb3be1512f0020145426d21f39f36ea9d53baf703968d0796621a5e853b143f",
+  "M6_z+24_wire_envelope.stl": "e1366a851cf92314b70d6125c517756a0df197f81d6d5f779f44670c82b215ee",
+  "M6_z-12_caps.stl": "d9f6c115b6f5dd8f779755e3df3db36fd25ed0cec06bed06c07463a272d7c62c",
+  "M6_z-12_guide.stl": "c92ffa430f5ec5be68020b39cfdcd783a656838312125a430c724b4d3e583e1a",
+  "M6_z-12_wire_envelope.stl": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd",
+  "M6_z-24_caps.stl": "a6708368a415d9c0af3d8b5cef661d50000be76ce9c93442ce6bf4a480f69848",
+  "M6_z-24_guide.stl": "183c767d2dd156f502c20f1797e091b3527a1ccd654aa80c5d3c10a03a171e21",
+  "M6_z-24_wire_envelope.stl": "e1366a851cf92314b70d6125c517756a0df197f81d6d5f779f44670c82b215ee"
+ },
+ "sampling": {
+  "spacing_mm": 0.03,
+  "window_mm": 0.6,
+  "seed": 7,
+  "note": "Random area-weighted samples of complete-body faces near each guide; sliver-depth sensitivity is limited by spacing and the 0.005 mm mesh tolerance used elsewhere."
+ },
+ "query_margin_mm": 0.03,
+ "land_axial_mm": 0.5,
+ "nominal_bond_gap_mm": 0.25,
+ "straight": {
+  "M5_z-24": {
+   "samples": 261729,
+   "land_samples": 27974,
+   "minimum_signed_distance_mm": 0.24619698346742605
+  },
+  "M5_z-12": {
+   "samples": 129267,
+   "land_samples": 35366,
+   "minimum_signed_distance_mm": 0.14062632910778183
+  },
+  "M5_z+12": {
+   "samples": 129632,
+   "land_samples": 35857,
+   "minimum_signed_distance_mm": 0.14062633286384138
+  },
+  "M5_z+24": {
+   "samples": 260508,
+   "land_samples": 28435,
+   "minimum_signed_distance_mm": 0.24619699161368058
+  },
+  "M6_z-24": {
+   "samples": 261904,
+   "land_samples": 27974,
+   "minimum_signed_distance_mm": 0.24619698346742605
+  },
+  "M6_z-12": {
+   "samples": 129200,
+   "land_samples": 35366,
+   "minimum_signed_distance_mm": 0.14062632910778183
+  },
+  "M6_z+12": {
+   "samples": 129659,
+   "land_samples": 35857,
+   "minimum_signed_distance_mm": 0.14062633286384138
+  },
+  "M6_z+24": {
+   "samples": 260590,
+   "land_samples": 28435,
+   "minimum_signed_distance_mm": 0.24619699161368058
+  }
+ },
+ "payload_g": 500,
+ "rod_cells_per_module": 8,
+ "shards": 4,
+ "records": 217,
+ "unique_geometries": 199,
+ "checks": 1736,
+ "penetrating_checks": 0,
+ "penetrating_records": 0,
+ "minimum_signed_distance_mm": 0.01820130369466539,
+ "worst": {
+  "state": "146",
+  "phase": "left_return",
+  "part": "M5_z+12",
+  "minimum_signed_distance_mm": 0.01820130369466539,
+  "minimum_is_lipschitz_bound": false,
+  "penetrating_samples": 0,
+  "worst_point_station_mm": [
+   6.742353752290872,
+   20.122946166703,
+   0.26623196297349766
+  ],
+  "worst_point_undeformed_station_mm": [
+   6.730540116287234,
+   20.125930502890114,
+   0.4132847407014033
+  ],
+  "worst_point_displacement_mm": [
+   0.011813636003638273,
+   -0.002984336187115133,
+   -0.14705277772790565
+  ],
+  "max_relative_displacement_mm": 0.5063001117284702,
+  "land_max_relative_displacement_mm": 0.08737446356562195,
+  "land_max_axial_relative_displacement_mm": 0.08705356464419378,
+  "land_implied_shear_strain": 0.3482142585767751,
+  "module_max_curvature_rad_per_mm": 0.01748791036298669,
+  "distance_queries": 2950
+ },
+ "minimum_reported_value_is_lipschitz_bound": false,
+ "max_land_axial_relative_displacement_mm": 0.08705356464419378,
+ "max_land_implied_shear_strain": 0.3482142585767751,
+ "max_module_curvature_rad_per_mm": 0.01748791036298669,
+ "by_part": {
+  "M5_z+12": {
+   "minimum_signed_distance_mm": 0.01820130369466539,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.08705356464419378,
+   "max_land_implied_shear_strain": 0.3482142585767751
+  },
+  "M5_z+24": {
+   "minimum_signed_distance_mm": 0.030000419103400344,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.033921100179920394,
+   "max_land_implied_shear_strain": 0.13568440071968157
+  },
+  "M5_z-12": {
+   "minimum_signed_distance_mm": 0.02990982491401499,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.08456740303555776,
+   "max_land_implied_shear_strain": 0.33826961214223106
+  },
+  "M5_z-24": {
+   "minimum_signed_distance_mm": 0.032342392738379966,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.030293282095117058,
+   "max_land_implied_shear_strain": 0.12117312838046823
+  },
+  "M6_z+12": {
+   "minimum_signed_distance_mm": 0.07458087762455073,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.04717870571191499,
+   "max_land_implied_shear_strain": 0.18871482284765995
+  },
+  "M6_z+24": {
+   "minimum_signed_distance_mm": 0.13871326491186997,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.0162567104465213,
+   "max_land_implied_shear_strain": 0.0650268417860852
+  },
+  "M6_z-12": {
+   "minimum_signed_distance_mm": 0.0580411937039324,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.05506530911325294,
+   "max_land_implied_shear_strain": 0.22026123645301177
+  },
+  "M6_z-24": {
+   "minimum_signed_distance_mm": 0.0931325499020125,
+   "penetrating_records": 0,
+   "max_land_axial_relative_displacement_mm": 0.021915086271853346,
+   "max_land_implied_shear_strain": 0.08766034508741338
+  }
+ },
+ "by_phase": {
+  "entry": {
+   "records": 4,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.11724883133647393,
+   "max_land_implied_shear_strain": 0.06237518498862782
+  },
+  "exit": {
+   "records": 4,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.1172470277835456,
+   "max_land_implied_shear_strain": 0.062364261430643664
+  },
+  "inverse": {
+   "records": 36,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.021797500866760126,
+   "max_land_implied_shear_strain": 0.3395951066970475
+  },
+  "left_out": {
+   "records": 36,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.018301338120187076,
+   "max_land_implied_shear_strain": 0.34794482242797
+  },
+  "left_return": {
+   "records": 34,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.01820130369466539,
+   "max_land_implied_shear_strain": 0.3482142585767751
+  },
+  "right_out": {
+   "records": 34,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.021798497176186704,
+   "max_land_implied_shear_strain": 0.33959177161845244
+  },
+  "right_return": {
+   "records": 34,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.021853420044625576,
+   "max_land_implied_shear_strain": 0.3394119318421618
+  },
+  "startup": {
+   "records": 29,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.06043482898886712,
+   "max_land_implied_shear_strain": 0.21344427578593828
+  },
+  "straighten": {
+   "records": 6,
+   "penetrating_records": 0,
+   "minimum_signed_distance_mm": 0.06043482898962296,
+   "max_land_implied_shear_strain": 0.2134442757836934
+  }
+ },
+ "elapsed_seconds_per_shard": [
+  159.54574485000012,
+  160.9960918270001,
+  160.45709461900015,
+  157.14138768599992
+ ]
+}

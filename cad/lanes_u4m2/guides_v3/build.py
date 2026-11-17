@@ -19,15 +19,18 @@ spec = importlib.util.spec_from_file_location('guide_v2_builder', SOURCE / 'buil
 V = importlib.util.module_from_spec(spec); spec.loader.exec_module(V)
 
 
-def build(out, slope, explicit_land=True):
+def build(out, slope, explicit_land=True, land=.5, bond_gap=None):
     out.mkdir(parents=True, exist_ok=True)
     V.D = {**json.loads((SOURCE/'design.json').read_text()),
         'status': 'socket-relief engineering candidate; not released for manufacture',
-        'socket_flare_slope': slope, 'socket_land_axial_mm': .5,
+        'socket_flare_slope': slope, 'socket_land_axial_mm': land,
         'socket_explicit_land_breakpoints': explicit_land,
         'axial_retention': 'Outer-web stations: only the central 0.5 mm land is a proposed bond zone; flared mouths are unbonded relief. Inner-web stations retain the V2 socket. Bond strength and retention are unvalidated.',
         'mounting_stiffness': 'Four webs remain connected by a rigid frame. No claim that relief decouples their motion or preserves homogenised stiffness.',
         'body_source': '../guides_v2; unchanged module bodies, disks, anchors and 21/24/28 mm lanes'}
+    if bond_gap is not None:
+        # Experimental variants only; the published V3 default keeps the V2 0.15 mm datum gap.
+        V.D['bond_gap_mm'] = bond_gap
     V.profiles.cache_clear()
     report = dict(design=V.D, parts={}, all_straight_positions_clear=True,
         source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in
@@ -74,7 +77,11 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out',type=Path,default=HERE)
     p.add_argument('--slope',type=float,default=1.5)
+    p.add_argument('--land',type=float,default=.5,help='Outer-socket central land, mm (default reproduces V3)')
+    p.add_argument('--bond-gap',type=float,help='Outer-socket land gap, mm (default: V2 design value 0.15)')
     p.add_argument('--legacy-nine-sections',action='store_true',help='Reproduce rejected early variants without explicit land breakpoints')
     a=p.parse_args()
     if not 0<=a.slope<=2: raise ValueError('slope must be between 0 and 2')
-    build(a.out,a.slope,not a.legacy_nine_sections)
+    if not 0<a.land<=3.2: raise ValueError('land must be within the plate thickness')
+    if a.bond_gap is not None and not 0.05<=a.bond_gap<=0.5: raise ValueError('bond gap must be 0.05-0.5 mm')
+    build(a.out,a.slope,not a.legacy_nine_sections,a.land,a.bond_gap)

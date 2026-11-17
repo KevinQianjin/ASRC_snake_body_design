@@ -1,0 +1,48 @@
+{
+  "edition": "Evening Report",
+  "report_date_et": "2026-11-16",
+  "run_start_et": "2026-11-16T20:02:13-05:00",
+  "run_start_utc": "2026-11-17T01:02:13Z",
+  "deadline_et": "2026-11-16T22:02:13-05:00",
+  "deadline_utc": "2026-11-17T03:02:13Z",
+  "expensive_work_stop_et": "2026-11-16T21:37:13-05:00",
+  "expensive_work_stop_utc": "2026-11-17T02:37:13Z",
+  "reporting_interval_et": [
+    "2026-11-15T20:02:13-05:00",
+    "2026-11-16T20:02:13-05:00"
+  ],
+  "reporting_interval_utc": [
+    "2026-11-16T01:02:13Z",
+    "2026-11-17T01:02:13Z"
+  ],
+  "base_revisions": {
+    "origin_main": "e9c4858524fc21db2e1a19d1d748836c3a1eb28e",
+    "codex_guide_validation": "df190616539bcce8d1a78eb248dd98f371b260a9",
+    "previous_claude_great_goodall_1wf2yh": "e80406891b1d2485567412183ae79eba550d0bed"
+  },
+  "branch": "claude/great-goodall-1wf2yh",
+  "requested_model": "Claude Opus 5.5",
+  "model_verification": "Session configuration names claude-opus-5-5; get_session metadata tool was not available in this run, so the serving model is not independently verified.",
+  "python": "3.11.18",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "numba": "0.68.1",
+    "trimesh": "5.2.1",
+    "vtk": "9.7.2",
+    "manifold3d": "3.5.5",
+    "matplotlib": "3.11.2",
+    "pillow": "13.0.0",
+    "shapely": "2.2.0",
+    "networkx": "3.6.1",
+    "rtree": "1.4.1"
+  },
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "machine": {
+    "cpus": 4,
+    "memory_total_gib": 15
+  }
+}

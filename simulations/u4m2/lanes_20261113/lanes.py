@@ -22,6 +22,7 @@ import types
 from pathlib import Path
 import numpy as np
 from numba import njit
+from end_bellmouth_kernel import span_end_loads
 
 # The solver scripts live, unchanged, in ../backbone_20261108; make them importable from here.
 BACKBONE_DIR = Path(__file__).resolve().parent.parent / 'backbone_20261108'
@@ -37,7 +38,7 @@ GUIDE_SPACING_MM = None
 
 
 @njit(cache=True)
-def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets3, gauss_u, gauss_w, gravity, gw, payload):
+def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets3, gauss_u, gauss_w, gravity, gw, payload, bellmouth_profiles=None):
     """Pinned spatial kernel with per-set lanes and optional M-module guide stations.
 
     M5/M6 ropes are represented as consecutive straight spans between material-frame
@@ -94,6 +95,22 @@ def kernel_lanes(z, C, scale, K, mass, length, sub, guide_cells, routes, offsets
                         i0 = module_start + a_cell
                         i1 = module_start + b_cell
                         a = p[i0] + F[i0] @ off; b = p[i1] + F[i1] @ off
+                        if bellmouth_profiles is not None and (a_cell == 0 or b_cell == sub):
+                            proximal = a_cell == 0
+                            end_node = i0 if proximal else i1
+                            guide_node = i1 if proximal else i0
+                            guide_point = b if proximal else a
+                            end_index = 0 if proximal else 1
+                            sign = 1. if proximal else -1.
+                            ll, dg, dframe = span_end_loads(p[end_node], F[end_node], guide_point,
+                                off, sign, bellmouth_profiles[j - 4, end_index])
+                            rope_lengths[k, rope] += routes[k, j] * ll
+                            energy += tension * ll
+                            force = tension * dg
+                            ap[guide_node] += force; ap[end_node] -= force
+                            af[guide_node] += np.outer(force, off)
+                            af[end_node] += tension * dframe
+                            continue
                         chord = b - a; ll = np.sqrt(np.dot(chord, chord))
                         if ll < 1e-10: ll = 1e-10
                         rope_lengths[k, rope] += routes[k, j] * ll
@@ -132,7 +149,8 @@ def lane_offsets(radii_mm, n_sets):
 def _evaluate(self, z, T=None, gravity=9.81, detail=False):
     C = np.zeros((self.k, 4)) if T is None else np.asarray(T, dtype=float).reshape(self.k, 4)
     result = kernel_lanes(np.asarray(z), C, self.scale, self.K, self.mass, self.l, self.sub, self.guide_cells, self.routes, self.offsets3,
-                          self.planar.u, self.planar.w, gravity, self.gw, self.payload)
+                          self.planar.u, self.planar.w, gravity, self.gw, self.payload,
+                          getattr(self, 'bellmouth_profiles', None))
     if not detail:
         return result[:2]
     E, g, p, F, q, lengths = result

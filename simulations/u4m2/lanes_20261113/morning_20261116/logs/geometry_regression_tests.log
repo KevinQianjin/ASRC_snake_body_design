@@ -1,0 +1,36 @@
+test_all_published_formats_and_force_alignment (test_guides.ArchiveTests.test_all_published_formats_and_force_alignment) ... ok
+test_unsupported_empty_and_misaligned_archives_fail (test_guides.ArchiveTests.test_unsupported_empty_and_misaligned_archives_fail) ... ok
+test_actual_eight_and_sixteen_cell_guided_gradients (test_guides.GeometryTests.test_actual_eight_and_sixteen_cell_guided_gradients) ... ok
+test_cad_mapping_matches_rod_nodes (test_guides.GeometryTests.test_cad_mapping_matches_rod_nodes) ... ok
+test_cad_mass_updates_all_cells_without_changing_stiffness (test_guides.GeometryTests.test_cad_mass_updates_all_cells_without_changing_stiffness) ... ok
+test_force_balance_and_rotation_covariance (test_guides.GeometryTests.test_force_balance_and_rotation_covariance) ... ok
+test_interleaved_hole_loads_are_combined_per_station (test_guides.GeometryTests.test_interleaved_hole_loads_are_combined_per_station) ... ok
+test_rope_center_inside_solid_is_not_positive_clearance (test_guides.GeometryTests.test_rope_center_inside_solid_is_not_positive_clearance) ... ok
+test_station_positions_survive_mesh_refinement (test_guides.GeometryTests.test_station_positions_survive_mesh_refinement) ... ok
+test_boolean_known_volume_and_invalid_input (test_cad_surface_refinement.SurfaceRefinementTests.test_boolean_known_volume_and_invalid_input) ... ok
+test_closed_surface_volume_winding_and_original_vertices_are_preserved (test_cad_surface_refinement.SurfaceRefinementTests.test_closed_surface_volume_winding_and_original_vertices_are_preserved) ... ok
+test_curved_surface_chord_error_decreases_with_refinement (test_cad_surface_refinement.SurfaceRefinementTests.test_curved_surface_chord_error_decreases_with_refinement) ... ok
+test_invalid_resolution_is_rejected (test_cad_surface_refinement.SurfaceRefinementTests.test_invalid_resolution_is_rejected) ... ok
+test_refines_actual_cad_without_open_edges (test_cad_surface_refinement.SurfaceRefinementTests.test_refines_actual_cad_without_open_edges) ... ok
+test_rejected_cad_cannot_start_mass_equilibrium_study (test_cad_surface_refinement.SurfaceRefinementTests.test_rejected_cad_cannot_start_mass_equilibrium_study) ... ok
+test_rigid_frame_invariance_of_actual_bent_intersection (test_cad_surface_refinement.SurfaceRefinementTests.test_rigid_frame_invariance_of_actual_bent_intersection) ... ok
+test_actual_stations_required_and_refinement_supported (test_bellmouth_solver.BellmouthTests.test_actual_stations_required_and_refinement_supported) ... ok
+test_contact_curve_reaches_guide_and_is_tangent (test_bellmouth_solver.BellmouthTests.test_contact_curve_reaches_guide_and_is_tangent) ... ok
+test_contact_transition_is_continuous_with_continuous_gradient (test_bellmouth_solver.BellmouthTests.test_contact_transition_is_continuous_with_continuous_gradient) ... ok
+test_endpoint_derivative_and_rigid_frame_virtual_work (test_bellmouth_solver.BellmouthTests.test_endpoint_derivative_and_rigid_frame_virtual_work) ... ok
+test_exit_and_guide_loads_balance_force_and_moment (test_bellmouth_solver.BellmouthTests.test_exit_and_guide_loads_balance_force_and_moment) ... ok
+test_fixed_winch_energy_and_tangent_match_finite_differences (test_bellmouth_solver.BellmouthTests.test_fixed_winch_energy_and_tangent_match_finite_differences) ... ok
+test_heading_comparison_is_periodic (test_bellmouth_solver.BellmouthTests.test_heading_comparison_is_periodic) ... ok
+test_mass_delta_uses_cad_removed_volume (test_bellmouth_solver.BellmouthTests.test_mass_delta_uses_cad_removed_volume) ... ok
+test_saved_state_energy_and_rope_length_derivatives (test_bellmouth_solver.BellmouthTests.test_saved_state_energy_and_rope_length_derivatives) ... ok
+test_straight_preserves_original_lengths_energy_gradient (test_bellmouth_solver.BellmouthTests.test_straight_preserves_original_lengths_energy_gradient) ... ok
+unittest.case.FunctionTestCase (test_cutter_is_volume) ... ok
+unittest.case.FunctionTestCase (test_profile_tangent_to_bore_and_face_radius) ... ok
+unittest.case.FunctionTestCase (test_published_bodies_match_check_file) ... ok
+unittest.case.FunctionTestCase (test_rope_arc_concentric_with_fillet) ... ok
+unittest.case.FunctionTestCase (test_straight_rope_length_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 7.060s
+
+OK

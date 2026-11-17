@@ -1,5 +1,9 @@
 # Separate rope lanes (radial spread) for U4+M2 — 13 November 2026
 
+**16 November Evening Report:** [Full-coverage guide/web compatibility](evening_20261116/README.md) adds `guide_web_compatibility.py`, which screens all 217 holds × 8 guides and is calibrated against the Boolean audit. V3 contacts the body in 59/217 records; a 0.25 mm land bond-gap variant clears all checks.
+
+**16 November Morning Report:** [Constrained bellmouth routing and re-solved holds](../../../reports/daily/Morning_Report_2026_11_16.md) use the actual end profiles in the energy kernel. The [new evidence](morning_20261116/README.md) covers 217 fixed-winch holds, finite-rope/tank checks and targeted guide contact/refinement. Use `bellmouth_model.apply_bellmouth()` explicitly; the older full-cycle pipeline below is not automatically converted.
+
 **14 November:** [four-station guide validation, full 500 g paths and V2 CAD](GUIDED_VALIDATION.md). This update fixes archive coverage and refined-mesh guide placement, saves motion states and exports hole loads. The V2 physical mounting remains rejected because of bent-pose interference. Earlier endpoint-only results below remain historical comparisons.
 
 This folder holds the rope-lane study. `lanes.py` adds `../backbone_20261108` to the Python path and reuses its solvers. On 14 November, `closed_loop_v2.py` gained aligned motion-state output without changing its control law. The hash-pinned files in `steering_63mm_20261106` remain untouched.
