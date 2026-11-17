@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 16 November 2026 (Morning Report)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 16 November 2026 (Evening Report)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,20 +13,25 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 16 November 2026 — Morning Report (latest): bellmouth routing in the equilibrium solver
+### 16 November 2026 — Evening Report (latest): full-coverage guide/web compatibility and a 0.25 mm bond-gap candidate
 
-**Morning Report timing:** start/cutoff **16 November 2026 07:19:33 EST (12:19:33 UTC)**; two-hour deadline **09:19:33 EST (14:19:33 UTC)**. Report preparation: **16 November 2026 08:04:21 EST (16 November 2026 13:04:21 UTC)**.
+**Evening Report timing:** start/cutoff **16 November 2026 20:02:13 EST (17 November 2026 01:02:13 UTC)**; two-hour deadline **22:02:13 EST (03:02:13 UTC)**.
 
-The head remains **500 g**. This run connects the published bellmouth geometry to the rope energy, loads and selected equilibrium checks. Existing CAD is retained; no backbone end ferrule is added.
+The head remains **500 g**; U4+M2, lanes, guide stations, rope bores and backbone are unchanged; no end ferrule is added.
 
-- **Connected rope paths:** exact incoming/outgoing tangents and fillet arcs reach the prescribed guide centres. The previous CAD-check rays missed those centres by up to **0.586 mm**. The new model retains ideal interface-centre constraints and is explicitly opt-in.
-- **217/217 fixed-winch holds solve**, representing 199 unique equilibria. With the same reconstructed V3 rest lengths, maximum head displacement is **3.479 mm**, yaw change **1.147°** and elevation change **0.626°**. The minimum scaled fixed-winch tangent eigenvalue is **0.225526**; this is quasi-static evidence, not dynamic stability.
-- **Finite-rope and tank checks:** **0/5208** end-envelope failures on the actual bellmouth STL within the **0.005 mm mesh tolerance**. Minimum wrap margin is **3.242°**. All 217 selected tank-envelope checks pass, with minimum clearance **7.687 mm** after the existing allowance; tensions span **2.883–18.732 N**.
-- **Mounting still fails:** six of 48 targeted guide checks have contact at 0.5 mm CAD resolution. All six remain positive at 0.25 mm, up to **0.009765 mm³**. Loading only the required complete M5 body allowed this finer study to finish at **3.503 GiB peak RSS**, without cropping.
-- **Refinement and verification:** five 16-cell holds give maximum differences of **0.332 mm** head position, **0.096°** yaw and **0.032°** elevation from the new eight-cell model. **45 tests pass.** Two fixed-tension diagnostic states did not converge; their failures are retained.
-- **Decision:** no new full closed-loop replay or manufacturing release. Guide-joint stiffness, shared-bore/guide contact, friction, printing and hardware validation remain unresolved. The bellmouth mass removal (**0.0433 g**) is included in the solver inputs.
+- **New calibrated screen covering every hold:** a point-sampled signed-distance check of all **217 saved holds × 8 M5/M6 guides** (1736 checks, about 4 min on 4 CPUs). It agrees with the manifold Boolean in all **54** comparisons, including near-threshold failures and passes.
+- **V3 contact is widespread:** **59 of 217 records** penetrate (103 checks, all at M5 ±12 mm outer saddles; insertion holds and both yaw excursions/returns), worst **−0.0211 mm**. The morning audit found 6 failures in 48 checks on six selected poses.
+- **Mechanism found:** curvature up to 0.0175 rad/mm rotates the body section across the 3.24 mm socket, moving web points 0.127 mm axially into the land-to-flare corner. The bonded land slips by up to **0.087 mm**, i.e. **58% shear strain** in a 0.15 mm bond line.
+- **Candidate:** with a **0.25 mm** land bond gap (`build.py --bond-gap 0.25`; default output unchanged), **0/1736** checks fail (minimum +0.0182 mm). Booleans find no overlap: **10/10** at 0.25 mm on the worst records and **48/48** at 0.5 mm. Rope bores are identical to V3. Implied shear falls to **35%**, which is still unqualified.
+- **Decision:** not released. The next step is a strut-level joint model; the ±12 mm section is four inclined struts, not the homogenised beam. No adhesive is qualified and no closed-loop replay was run. **49 tests pass.**
 
-[Full English Morning Report](reports/daily/Morning_Report_2026_11_16.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/morning_20261116/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/morning_20261116/HANDOFF.md) · [Pose comparison](simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/pose_changes.svg)
+[Full English Evening Report](reports/daily/Evening_Report_2026_11_16.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261116/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261116/HANDOFF.md) · [Comparison figure](simulations/u4m2/lanes_20261113/evening_20261116/compatibility_comparison.svg)
+
+### 16 November 2026 — Morning Report: bellmouth routing in the equilibrium solver
+
+Start/cutoff **07:19:33 EST (12:19:33 UTC)**. Connected the bellmouth geometry to rope energy and loads with endpoint-consistent paths: **217/217** fixed-winch holds solve, head change up to **3.479 mm / 1.147° yaw**, and **0/5208** finite-rope end failures. Simultaneous guide load tables were exported. Six targeted V3 mount contacts persisted at 0.25 mm; the Evening Report above extends that check to every hold.
+
+[Full English Morning Report](reports/daily/Morning_Report_2026_11_16.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/morning_20261116/README.md) · [Morning handoff](simulations/u4m2/lanes_20261113/morning_20261116/HANDOFF.md) · [Pose comparison](simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/pose_changes.svg)
 
 ### 15 November 2026 — Evening Report: finite-rope exits and bellmouth CAD
 
@@ -115,7 +120,7 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
-The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture; see the latest Morning Report.
+The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest published mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture. The 16 November Evening Report found body contact in 59/217 holds. Its [0.25 mm bond-gap variant](simulations/u4m2/lanes_20261113/evening_20261116/README.md) clears all checks kinematically but still needs a joint model; it is evidence CAD, not a replacement release.
 
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 
@@ -129,7 +134,7 @@ The original SCAD preview arranges the six modules in a straight line without th
 
 ## Next steps
 
-1. Resolve the remaining guide/land contact with an explicit local structural/contact model and a defensible bonded, articulated or compliant attachment. Include the effect on M-module stiffness and guide position.
+1. Model the ±12 mm saddle joint at strut level and choose a bonded, articulated or compliant attachment for the measured land slip (up to 0.087 mm in the homogenised map). Include the effect on M-module stiffness and guide position. Screen candidates against all 217 holds with `guide_web_compatibility.py`.
 2. Revise finite end-hole/anchor routing and check the full 2 mm rope envelope, material bridges and contact/friction.
 3. With a physically compatible candidate, update mass/stiffness and replay the complete **500 g** closed-loop path, including finer equilibrium meshes and uncertainty cases.
 4. Qualify printed parts, adhesive, lockwire, assembly access and cyclic wear using the simultaneous exported guide loads.

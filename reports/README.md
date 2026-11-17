@@ -4,6 +4,7 @@
 
 ## Latest simulation report
 
+- [Evening Report — 16 November 2026](daily/Evening_Report_2026_11_16.md): full-coverage guide/web compatibility (V3 contact in 59/217 holds) and a 0.25 mm bond-gap candidate clearing all 1736 checks. Start/cutoff: **20:02:13 EST (01:02:13 UTC, 17 November)**.
 - [Morning Report — 16 November 2026](daily/Morning_Report_2026_11_16.md): constrained bellmouth routing, 217 re-solved fixed-winch holds, finite-rope/tank checks and persistent refined guide contact. Start/cutoff: **07:19:33 EST (12:19:33 UTC)**.
 - [Evening Report — 15 November 2026](daily/Evening_Report_2026_11_15.md): finite-rope exit diagnosis and bellmouth CAD before solver integration.
 - [Morning Report — 15 November 2026](daily/Morning_Report_2026_11_15.md): V3 saddle development and corrected CAD surface screening.
@@ -14,6 +15,7 @@
 
 ## Daily reports and weekly presentation
 
+- [**Evening Report — 16 November 2026**](daily/Evening_Report_2026_11_16.md): full-coverage guide compatibility screen, mechanism and bond-gap candidate.
 - [**Morning Report — 16 November 2026**](daily/Morning_Report_2026_11_16.md): detailed English results, comparison figures and next-run handoff.
 - [**Evening Report — 15 November 2026**](daily/Evening_Report_2026_11_15.md): bellmouth CAD and finite-rope end checks.
 - [**Morning Report — 15 November 2026**](daily/Morning_Report_2026_11_15.md): detailed English report, actual V3 CAD previews and reproducible evidence. Markdown is the source deliverable for this run.

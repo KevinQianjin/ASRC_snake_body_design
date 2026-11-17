@@ -1,0 +1,162 @@
+{
+ "scope": "Full-coverage point-sampled web/guide compatibility screen for rigid V3-style guides.\n\nFor every saved equilibrium and every requested guide, dense samples of the\nactual module-body surface near the guide are beam-mapped (same exact\nconstant-strain-cell map as the Boolean audits), expressed in the guide's rigid\nstation frame and evaluated against the guide, cap and lockwire-envelope\nsurfaces with a signed distance (negative = body point inside a guide part).\n\nThe screen also reports the relative motion of the body at the proposed bond\nland with respect to the rigid guide and the implied bond-line shear strain\n(axial relative displacement / nominal bond gap). This is a kinematic screen of\nthe homogenised beam map, not solid FEA, adhesive qualification or a contact\nsolution. A sampled point set can miss very thin slivers; results are\ncross-checked against the existing manifold Boolean audits.\n",
+ "archive": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+ "archive_sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544",
+ "coverage": {
+  "path": "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+  "format": "reference",
+  "states": 217,
+  "unsolved_records_without_states": 0,
+  "sha256": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544"
+ },
+ "body_cad": "../../../cad/lanes_u4m2/end_bellmouth_v1",
+ "guide_cad": "../../../cad/lanes_u4m2/guides_v3",
+ "body_sha256": {
+  "M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3"
+ },
+ "guide_sha256": {
+  "M5_z+12_caps.stl": "488442de27bae2b6474f7e2a374d31cb9e7801d905a4b84c5c146cf9d88793ba",
+  "M5_z+12_guide.stl": "763c14efc5af841776dc340d9f6c8a8213f991311dc8044a8dae302229bb9fb2",
+  "M5_z+12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414"
+ },
+ "guide_design": {
+  "status": "socket-relief engineering candidate; not released for manufacture",
+  "lane_radii_mm": {
+   "A": 21.0,
+   "B": 24.0,
+   "C": 28.0
+  },
+  "stations_z_mm": [
+   -24,
+   -12,
+   12,
+   24
+  ],
+  "plate_thickness_mm": 3.2,
+  "arm_width_mm": 6.0,
+  "arm_tip_radius_mm": 30.6,
+  "rope_bore_mm": 2.6,
+  "rope_mouth_mm": 3.0,
+  "rope_throat_length_mm": 1.0,
+  "web_angles_deg": [
+   -22.5,
+   67.5,
+   157.5,
+   247.5
+  ],
+  "axial_retention": "Outer-web stations: only the central 0.5 mm land is a proposed bond zone; flared mouths are unbonded relief. Inner-web stations retain the V2 socket. Bond strength and retention are unvalidated.",
+  "adhesive": "Unspecified pending PA12 surface preparation, actual bond gap and pull/shear coupon tests",
+  "design_load_factor": 3.0,
+  "retaining_wire_d_mm": 0.35,
+  "wire_groove_d_mm": 0.45,
+  "radial_retention": "Removable inward socket caps retained by 0.35 mm stainless lockwire in a 0.45 mm groove; CAD models a conservative square-section wire envelope, closure tail excluded.",
+  "socket_wall_mm": 0.85,
+  "bond_gap_mm": 0.15,
+  "non_mounting_web_clearance_mm": 0.3,
+  "mounting_webs": "CAD-derived rectangular webs: radius ~6.896 mm at +/-24 mm stations, ~19.229 mm at +/-12 mm; sockets follow the actual web slope.",
+  "socket_axial_span_mm": 3.24,
+  "cap_seat_boolean_clearance_mm": 0.03,
+  "socket_flare_slope": 1.5,
+  "socket_land_axial_mm": 0.5,
+  "socket_explicit_land_breakpoints": true,
+  "mounting_stiffness": "Four webs remain connected by a rigid frame. No claim that relief decouples their motion or preserves homogenised stiffness.",
+  "body_source": "../guides_v2; unchanged module bodies, disks, anchors and 21/24/28 mm lanes"
+ },
+ "sampling": {
+  "spacing_mm": 0.015,
+  "window_mm": 0.6,
+  "seed": 7,
+  "note": "Random area-weighted samples of complete-body faces near each guide; sliver-depth sensitivity is limited by spacing and the 0.005 mm mesh tolerance used elsewhere."
+ },
+ "shard": {
+  "index": 0,
+  "count": 1
+ },
+ "query_margin_mm": 0.03,
+ "land_axial_mm": 0.5,
+ "nominal_bond_gap_mm": 0.15,
+ "payload_g": 500,
+ "rod_cells_per_module": 8,
+ "straight": {
+  "M5_z+12": {
+   "samples": 557482,
+   "land_samples": 142251,
+   "minimum_signed_distance_mm": 0.08437601392717857
+  }
+ },
+ "rows": [
+  {
+   "state": "143",
+   "phase": "left_out",
+   "part": "M5_z+12",
+   "minimum_signed_distance_mm": -0.02099377277504661,
+   "minimum_is_lipschitz_bound": false,
+   "penetrating_samples": 5193,
+   "worst_point_station_mm": [
+    6.715891968704979,
+    20.046342538931714,
+    0.23150663170649166
+   ],
+   "worst_point_undeformed_station_mm": [
+    6.705812060767629,
+    20.048985533983604,
+    0.35848219212497767
+   ],
+   "worst_point_displacement_mm": [
+    0.010079907937350363,
+    -0.002642995051889585,
+    -0.126975560418486
+   ],
+   "max_relative_displacement_mm": 0.5318980603192688,
+   "land_max_relative_displacement_mm": 0.08808060999983633,
+   "land_max_axial_relative_displacement_mm": 0.08778401081275256,
+   "land_implied_shear_strain": 0.5852267387516837,
+   "module_max_curvature_rad_per_mm": 0.01747842919968221,
+   "distance_queries": 55097
+  },
+  {
+   "state": "146",
+   "phase": "left_return",
+   "part": "M5_z+12",
+   "minimum_signed_distance_mm": -0.02108421296421001,
+   "minimum_is_lipschitz_bound": false,
+   "penetrating_samples": 5220,
+   "worst_point_station_mm": [
+    6.716004023845983,
+    20.046305255722064,
+    0.2314140427473801
+   ],
+   "worst_point_undeformed_station_mm": [
+    6.705812060767629,
+    20.048985533983604,
+    0.35848219212497767
+   ],
+   "worst_point_displacement_mm": [
+    0.010191963078353794,
+    -0.0026802782615398257,
+    -0.12706814937759758
+   ],
+   "max_relative_displacement_mm": 0.5323163866923044,
+   "land_max_relative_displacement_mm": 0.088150980161159,
+   "land_max_axial_relative_displacement_mm": 0.08784786496217864,
+   "land_implied_shear_strain": 0.585652433081191,
+   "module_max_curvature_rad_per_mm": 0.01748791036298669,
+   "distance_queries": 55287
+  }
+ ],
+ "completed": true,
+ "elapsed_seconds": 51.67660980200003,
+ "records": 2,
+ "unique_geometries": 2,
+ "penetrating_checks": 2,
+ "penetrating_records": 2,
+ "minimum_signed_distance_mm": -0.02108421296421001,
+ "by_part": {
+  "M5_z+12": {
+   "minimum_signed_distance_mm": -0.02108421296421001,
+   "penetrating_checks": 2,
+   "max_land_axial_relative_displacement_mm": 0.08784786496217864,
+   "max_land_implied_shear_strain": 0.585652433081191
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "command": [
+  "python3",
+  "mount_refinement_study.py",
+  "morning_20261116/fixed_winch_holds/equilibria_states.npz",
+  "--cad",
+  "../../../cad/lanes_u4m2/end_bellmouth_v1",
+  "--guide-cad",
+  "../../../cad/lanes_u4m2/guides_v3",
+  "--out",
+  "evening_20261116/v3_boolean_crosscheck_0p25mm",
+  "--resolutions",
+  "0.25",
+  "--states",
+  "143",
+  "208",
+  "118",
+  "105",
+  "168",
+  "205",
+  "--parts",
+  "M5_z+12",
+  "--max-seconds",
+  "1100"
+ ],
+ "returncode": 0,
+ "elapsed_seconds": 82.84265565872192,
+ "peak_rss_kib": 5262760
+}
