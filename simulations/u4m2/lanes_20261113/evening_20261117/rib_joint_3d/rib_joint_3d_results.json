@@ -1,0 +1,2684 @@
+{
+ "scope": "Rib-level joint model with in-plane AND out-of-plane rib stiffness.\n\nExtends rib_joint_model.py. Each 3.0 mm rib is a flat plate: the in-plane\n(membrane) field uses the same constant-strain triangles, and the out-of-plane\nfield uses linear Mindlin-Reissner triangles (shear factor 5/6) on the same\nmesh. For a flat linear plate the two fields are uncoupled. Every rigid\nmaster (disks, rings, guide lands) now has six DOFs per rib:\nin-plane (u_r, u_z, beta about -e_theta) and out-of-plane (w along -e_theta,\nOmega_r = omega.e_r, Omega_z = omega.e_z). Torsion about z is therefore\nresisted and the database GJ can be checked as well as EA and EI.\n\nJoint variants at the four mounting lands (z = +/-12 mm):\n  rigid_bond : all six components tied to the rigid guide\n  hinge_t    : beta (rotation about the rib's tangential axis) released, others tied\n  ball       : translations (u_r, u_z, w) tied, all three rotations released (point contact)\n  none       : nothing tied\nLimitations: linear, small rotation; plate theory is approximate for struts\nnarrower (1.53 mm) than the plate thickness (3.0 mm); rings, disks and guides\nrigid; ideal bonds/releases.\n",
+ "body": "../../../cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl",
+ "body_sha256": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+ "parameters": {
+  "areas": [
+   0.02,
+   0.01
+  ],
+  "E": 1700.0,
+  "nu": 0.4,
+  "kappa": 0.01748791036298669,
+  "psi": [
+   0.0,
+   22.5,
+   67.5
+  ],
+  "out": "evening_20261117/rib_joint_3d",
+  "module_length_mm": 96.0,
+  "database_EA_N": 166.694,
+  "database_EI_Nmm2": 44117.8,
+  "database_GJ_Nmm2": 41990.016,
+  "mount_rib_angles_deg": [
+   -22.5,
+   67.5,
+   157.5,
+   247.5
+  ],
+  "land_half_mm": 0.25,
+  "socket_half_mm": 1.62
+ },
+ "runs": [
+  {
+   "mesh": {
+    "max_triangle_area_mm2": 0.02,
+    "nodes": 29547,
+    "triangles": 54715
+   },
+   "setup_s": 50.33947665599999,
+   "global_stiffness": {
+    "rigid_bond": {
+     "EA_N": 196.29420826318966,
+     "GJ_Nmm2": 52834.65913222274
+    },
+    "hinge_t": {
+     "EA_N": 194.18519421862,
+     "GJ_Nmm2": 52834.65913222253
+    },
+    "ball": {
+     "EA_N": 194.18519421862578,
+     "GJ_Nmm2": 47264.13048401379
+    },
+    "none": {
+     "EA_N": 187.27495477705872,
+     "GJ_Nmm2": 47264.13048396471
+    }
+   },
+   "cases": [
+    {
+     "peak_surface_principal_strain": 0.08385429324115727,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 7.594968782537535,
+        "axial_N": -8.563106493694477,
+        "inplane_moment_Nmm": 104.03512870474015,
+        "tangential_N": 3.1459390744520306,
+        "moment_about_r_Nmm": 25.2519090266172,
+        "moment_about_z_Nmm": 20.54415714735643,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11490502688477007,
+        "socket_rel_tangential_max_mm": 0.018237016977439513
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 3.14593907552819,
+        "axial_N": -3.5469548457342626,
+        "inplane_moment_Nmm": 43.09276127274427,
+        "tangential_N": -7.594968779940274,
+        "moment_about_r_Nmm": -60.963501247867725,
+        "moment_about_z_Nmm": -49.5979828126691,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.04759522052052965,
+        "socket_rel_tangential_max_mm": 0.04402805372415752
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -7.594968782537762,
+        "axial_N": 8.563106493694477,
+        "inplane_moment_Nmm": -104.03512870474412,
+        "tangential_N": -3.145939074452329,
+        "moment_about_r_Nmm": -25.251909026624674,
+        "moment_about_z_Nmm": -20.544157147361545,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11490502688477547,
+        "socket_rel_tangential_max_mm": 0.01823701697744262
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -3.145939075529327,
+        "axial_N": 3.5469548457342626,
+        "inplane_moment_Nmm": -43.09276127274808,
+        "tangential_N": 7.594968779940132,
+        "moment_about_r_Nmm": 60.96350124786045,
+        "moment_about_z_Nmm": 49.59798281266387,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.04759522052053147,
+        "socket_rel_tangential_max_mm": 0.04402805372415575
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 7.672521912461889,
+        "axial_N": 8.587094878235803,
+        "inplane_moment_Nmm": -103.59934704972875,
+        "tangential_N": 3.1780626288120004,
+        "moment_about_r_Nmm": -25.412259324560523,
+        "moment_about_z_Nmm": 20.577784426507606,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11238630402405836,
+        "socket_rel_tangential_max_mm": 0.017880473675200292
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 3.178062633747686,
+        "axial_N": 3.5568911599514195,
+        "inplane_moment_Nmm": -42.91225460100418,
+        "tangential_N": -7.672521900546258,
+        "moment_about_r_Nmm": 61.35062111187972,
+        "moment_about_z_Nmm": -49.679166246046634,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.04655193135176787,
+        "socket_rel_tangential_max_mm": 0.04316728204830511
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -7.672521912461889,
+        "axial_N": -8.587094878236258,
+        "inplane_moment_Nmm": 103.59934704973011,
+        "tangential_N": -3.178062628811901,
+        "moment_about_r_Nmm": 25.41225932455967,
+        "moment_about_z_Nmm": -20.577784426506696,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11238630402406183,
+        "socket_rel_tangential_max_mm": 0.017880473675198516
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -3.178062633746322,
+        "axial_N": -3.556891159951874,
+        "inplane_moment_Nmm": 42.91225460100566,
+        "tangential_N": 7.672521900546087,
+        "moment_about_r_Nmm": -61.35062111188017,
+        "moment_about_z_Nmm": 49.67916624604641,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.0465519313517675,
+        "socket_rel_tangential_max_mm": 0.04316728204830511
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 53995.245886997836
+    },
+    {
+     "peak_surface_principal_strain": 0.08024675181829471,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 15.334526725555634,
+        "axial_N": -4.550120215567176,
+        "inplane_moment_Nmm": -1.1368683772161603e-12,
+        "tangential_N": 6.351768941375077,
+        "moment_about_r_Nmm": 36.31584708001705,
+        "moment_about_z_Nmm": 37.164477481698555,
+        "hinge_rotation_rad": -0.1692788452573611,
+        "socket_rel_inplane_max_mm": 0.7153607179760522,
+        "socket_rel_tangential_max_mm": 0.03563624200615845
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 6.35176894229653,
+        "axial_N": -1.884721503715923,
+        "inplane_moment_Nmm": -5.115907697472721e-13,
+        "tangential_N": -15.334526723330129,
+        "moment_about_r_Nmm": -87.67421054967804,
+        "moment_about_z_Nmm": -89.72298557485385,
+        "hinge_rotation_rad": -0.07011759352844132,
+        "socket_rel_inplane_max_mm": 0.2963121113745661,
+        "socket_rel_tangential_max_mm": 0.08603349876329514
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -15.334526725556543,
+        "axial_N": 4.550120215567858,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": -6.351768941375298,
+        "moment_about_r_Nmm": -36.315847080024184,
+        "moment_about_z_Nmm": -37.16447748170384,
+        "hinge_rotation_rad": 0.16927884525736386,
+        "socket_rel_inplane_max_mm": 0.7153607179760639,
+        "socket_rel_tangential_max_mm": 0.03563624200616067
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -6.351768942297326,
+        "axial_N": 1.884721503715582,
+        "inplane_moment_Nmm": 9.094947017729282e-13,
+        "tangential_N": 15.334526723329816,
+        "moment_about_r_Nmm": 87.67421054967019,
+        "moment_about_z_Nmm": 89.72298557484794,
+        "hinge_rotation_rad": 0.07011759352844515,
+        "socket_rel_inplane_max_mm": 0.29631211137458174,
+        "socket_rel_tangential_max_mm": 0.08603349876329425
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 15.504890651610367,
+        "axial_N": 4.612547180339334,
+        "inplane_moment_Nmm": -2.2737367544323206e-12,
+        "tangential_N": 6.422335986228646,
+        "moment_about_r_Nmm": -36.70042645680712,
+        "moment_about_z_Nmm": 37.29551615237483,
+        "hinge_rotation_rad": 0.16815079429780355,
+        "socket_rel_inplane_max_mm": 0.720512507603726,
+        "socket_rel_tangential_max_mm": 0.03499164292041712
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 6.42233599100723,
+        "axial_N": 1.910579599182256,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": -15.504890640073143,
+        "moment_about_r_Nmm": 88.60266729692512,
+        "moment_about_z_Nmm": -90.03934091079282,
+        "hinge_rotation_rad": 0.06965033952193905,
+        "socket_rel_inplane_max_mm": 0.298446052508818,
+        "socket_rel_tangential_max_mm": 0.08447729890821165
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -15.504890651614915,
+        "axial_N": -4.612547180341153,
+        "inplane_moment_Nmm": 2.5011104298755527e-12,
+        "tangential_N": -6.422335986228546,
+        "moment_about_r_Nmm": 36.700426456805985,
+        "moment_about_z_Nmm": -37.29551615237369,
+        "hinge_rotation_rad": -0.16815079429780622,
+        "socket_rel_inplane_max_mm": 0.7205125076037333,
+        "socket_rel_tangential_max_mm": 0.0349916429204189
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -6.422335991009277,
+        "axial_N": -1.910579599183393,
+        "inplane_moment_Nmm": 2.3874235921539366e-12,
+        "tangential_N": 15.504890640072858,
+        "moment_about_r_Nmm": -88.60266729692603,
+        "moment_about_z_Nmm": 90.03934091079122,
+        "hinge_rotation_rad": -0.06965033952193866,
+        "socket_rel_inplane_max_mm": 0.2984460525088157,
+        "socket_rel_tangential_max_mm": 0.0844772989082152
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 51199.433795209436
+    },
+    {
+     "peak_surface_principal_strain": 0.07698499965739364,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.393208335130112,
+        "axial_N": -1.2050804798491299e-11,
+        "inplane_moment_Nmm": -5.684341886080801e-13,
+        "tangential_N": 2.233940036291301,
+        "moment_about_r_Nmm": -1.1652900866465643e-12,
+        "moment_about_z_Nmm": -5.684341886080802e-14,
+        "hinge_rotation_rad": -0.20265607519723644,
+        "socket_rel_inplane_max_mm": 0.8411971771686707,
+        "socket_rel_tangential_max_mm": 0.10401351420703175
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.2339400371141664,
+        "axial_N": -4.888534022029489e-12,
+        "inplane_moment_Nmm": -1.1368683772161603e-13,
+        "tangential_N": -5.393208333140734,
+        "moment_about_r_Nmm": 9.663381206337363e-13,
+        "moment_about_z_Nmm": 0.0,
+        "hinge_rotation_rad": -0.0839428948439845,
+        "socket_rel_inplane_max_mm": 0.34843527941315733,
+        "socket_rel_tangential_max_mm": 0.25111083666875444
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.3932083351330675,
+        "axial_N": 1.2278178473934531e-11,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": -2.2339400362912087,
+        "moment_about_r_Nmm": -1.7053025658242404e-13,
+        "moment_about_z_Nmm": 8.526512829121202e-13,
+        "hinge_rotation_rad": 0.20265607519724854,
+        "socket_rel_inplane_max_mm": 0.8411971771687246,
+        "socket_rel_tangential_max_mm": 0.10401351420705685
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -2.2339400371166676,
+        "axial_N": 4.888534022029489e-12,
+        "inplane_moment_Nmm": 9.663381206337363e-13,
+        "tangential_N": 5.393208333140677,
+        "moment_about_r_Nmm": -9.094947017729282e-13,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": 0.08394289484399772,
+        "socket_rel_inplane_max_mm": 0.3484352794132127,
+        "socket_rel_tangential_max_mm": 0.251110836668734
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.457783448871851,
+        "axial_N": -2.7284841053187847e-11,
+        "inplane_moment_Nmm": -9.094947017729282e-13,
+        "tangential_N": 2.2606879203340497,
+        "moment_about_r_Nmm": 0.0,
+        "moment_about_z_Nmm": 1.4779288903810084e-12,
+        "hinge_rotation_rad": 0.20244801126351497,
+        "socket_rel_inplane_max_mm": 0.8517494439552186,
+        "socket_rel_tangential_max_mm": 0.10324459718717449
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.260687925017919,
+        "axial_N": -1.2050804798491299e-11,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": -5.457783437562682,
+        "moment_about_r_Nmm": -1.1368683772161603e-12,
+        "moment_about_z_Nmm": 4.547473508864641e-13,
+        "hinge_rotation_rad": 0.08385671194081612,
+        "socket_rel_inplane_max_mm": 0.35280617143002535,
+        "socket_rel_tangential_max_mm": 0.2492545067710097
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.457783448871851,
+        "axial_N": 2.6830093702301383e-11,
+        "inplane_moment_Nmm": 2.5011104298755527e-12,
+        "tangential_N": -2.260687920333936,
+        "moment_about_r_Nmm": -1.7053025658242404e-13,
+        "moment_about_z_Nmm": 1.4779288903810084e-12,
+        "hinge_rotation_rad": -0.20244801126351764,
+        "socket_rel_inplane_max_mm": 0.8517494439552311,
+        "socket_rel_tangential_max_mm": 0.10324459718718693
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -2.260687925017919,
+        "axial_N": 1.0913936421275139e-11,
+        "inplane_moment_Nmm": 1.1368683772161603e-13,
+        "tangential_N": 5.457783437562625,
+        "moment_about_r_Nmm": -1.1368683772161603e-12,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": -0.0838567119408205,
+        "socket_rel_inplane_max_mm": 0.35280617143004217,
+        "socket_rel_tangential_max_mm": 0.2492545067710097
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 49533.59201684572
+    },
+    {
+     "peak_surface_principal_strain": 0.07542052929756918,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -6.821210263296962e-13,
+        "axial_N": -2.2737367544323206e-13,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": -5.684341886080802e-14,
+        "moment_about_r_Nmm": 8.526512829121202e-14,
+        "moment_about_z_Nmm": -5.684341886080802e-14,
+        "hinge_rotation_rad": 0.2501344701451091,
+        "socket_rel_inplane_max_mm": 10.793344020323595,
+        "socket_rel_tangential_max_mm": 1.7581829977912125
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 4.547473508864641e-13,
+        "axial_N": -4.547473508864641e-13,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": -1.7053025658242404e-13,
+        "moment_about_r_Nmm": -6.252776074688882e-13,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": 0.10360908995113267,
+        "socket_rel_inplane_max_mm": 4.470749476576605,
+        "socket_rel_tangential_max_mm": 4.24462923839955
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 1.1368683772161603e-12,
+        "axial_N": -4.547473508864641e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 7.815970093361102e-14,
+        "moment_about_r_Nmm": 3.410605131648481e-13,
+        "moment_about_z_Nmm": -3.410605131648481e-13,
+        "hinge_rotation_rad": -0.25013447014508394,
+        "socket_rel_inplane_max_mm": 10.793344020324929,
+        "socket_rel_tangential_max_mm": 1.7581829977905277
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 0.0,
+        "axial_N": -5.684341886080801e-13,
+        "inplane_moment_Nmm": 2.8421709430404007e-13,
+        "tangential_N": 1.7053025658242404e-13,
+        "moment_about_r_Nmm": 4.547473508864641e-13,
+        "moment_about_z_Nmm": 7.958078640513122e-13,
+        "hinge_rotation_rad": -0.10360908995111648,
+        "socket_rel_inplane_max_mm": 4.470749476578013,
+        "socket_rel_tangential_max_mm": 4.244629238400231
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -9.094947017729282e-13,
+        "axial_N": -1.8189894035458565e-12,
+        "inplane_moment_Nmm": -6.821210263296962e-13,
+        "tangential_N": -1.7053025658242404e-13,
+        "moment_about_r_Nmm": -4.547473508864641e-13,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": 1.3003096865100312,
+        "socket_rel_inplane_max_mm": 35.54957900693841,
+        "socket_rel_tangential_max_mm": 9.90290440011141
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.1368683772161603e-12,
+        "axial_N": -2.2737367544323206e-13,
+        "inplane_moment_Nmm": -1.2505552149377763e-12,
+        "tangential_N": 9.094947017729282e-13,
+        "moment_about_r_Nmm": 2.2737367544323206e-13,
+        "moment_about_z_Nmm": 9.094947017729282e-13,
+        "hinge_rotation_rad": 0.5386059074375981,
+        "socket_rel_inplane_max_mm": 14.725117761328315,
+        "socket_rel_tangential_max_mm": 23.907726109628992
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 0.0,
+        "axial_N": 0.0,
+        "inplane_moment_Nmm": 1.1368683772161603e-12,
+        "tangential_N": -1.4210854715202004e-13,
+        "moment_about_r_Nmm": 2.1600499167107046e-12,
+        "moment_about_z_Nmm": -5.684341886080801e-13,
+        "hinge_rotation_rad": -1.300309686510044,
+        "socket_rel_inplane_max_mm": 35.549579006940554,
+        "socket_rel_tangential_max_mm": 9.902904400110302
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -4.547473508864641e-13,
+        "axial_N": 1.3642420526593924e-12,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": 5.115907697472721e-13,
+        "moment_about_r_Nmm": -2.2737367544323206e-13,
+        "moment_about_z_Nmm": -1.5916157281026244e-12,
+        "hinge_rotation_rad": -0.538605907437591,
+        "socket_rel_inplane_max_mm": 14.725117761330177,
+        "socket_rel_tangential_max_mm": 23.907726109630236
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 48921.85815113291
+    },
+    {
+     "peak_surface_principal_strain": 0.08604984558023662,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.812937444812633,
+        "axial_N": -6.553917969428312,
+        "inplane_moment_Nmm": 79.62504027855027,
+        "tangential_N": 5.812937442826936,
+        "moment_about_r_Nmm": 46.659443813058374,
+        "moment_about_z_Nmm": 37.9606526022759,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08794450016853739,
+        "socket_rel_tangential_max_mm": 0.03369761343903299
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.812937444814679,
+        "axial_N": -6.553917969429222,
+        "inplane_moment_Nmm": 79.6250402785605,
+        "tangential_N": -5.812937442826566,
+        "moment_about_r_Nmm": -46.659443813058715,
+        "moment_about_z_Nmm": -37.96065260227624,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08794450016854626,
+        "socket_rel_tangential_max_mm": 0.033697613439031215
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.812937444814679,
+        "axial_N": 6.553917969428994,
+        "inplane_moment_Nmm": -79.62504027855437,
+        "tangential_N": -5.812937442827206,
+        "moment_about_r_Nmm": -46.65944381306457,
+        "moment_about_z_Nmm": -37.96065260227999,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08794450016853719,
+        "socket_rel_tangential_max_mm": 0.033697613439035656
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.8129374448149065,
+        "axial_N": 6.553917969429676,
+        "inplane_moment_Nmm": -79.62504027856471,
+        "tangential_N": 5.812937442826225,
+        "moment_about_r_Nmm": 46.65944381305246,
+        "moment_about_z_Nmm": 37.96065260227158,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08794450016854799,
+        "socket_rel_tangential_max_mm": 0.03369761343902944
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.872294040713314,
+        "axial_N": 6.572277884096366,
+        "inplane_moment_Nmm": -79.29150743953596,
+        "tangential_N": 5.872294031596283,
+        "moment_about_r_Nmm": -46.95573252965221,
+        "moment_about_z_Nmm": 38.02278771215333,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08601675314951132,
+        "socket_rel_tangential_max_mm": 0.033038807320242114
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.872294040714678,
+        "axial_N": 6.57227788409682,
+        "inplane_moment_Nmm": -79.29150743955006,
+        "tangential_N": -5.872294031595516,
+        "moment_about_r_Nmm": 46.95573252964175,
+        "moment_about_z_Nmm": -38.022787712145146,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08601675314952249,
+        "socket_rel_tangential_max_mm": 0.033038807320242114
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.872294040715133,
+        "axial_N": -6.572277884096366,
+        "inplane_moment_Nmm": 79.29150743953824,
+        "tangential_N": -5.872294031596425,
+        "moment_about_r_Nmm": 46.95573252965164,
+        "moment_about_z_Nmm": -38.022787712152876,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08601675314951034,
+        "socket_rel_tangential_max_mm": 0.03303880732024922
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.872294040713314,
+        "axial_N": -6.572277884097275,
+        "inplane_moment_Nmm": 79.29150743955188,
+        "tangential_N": 5.872294031595516,
+        "moment_about_r_Nmm": -46.95573252964289,
+        "moment_about_z_Nmm": 38.02278771214628,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08601675314952671,
+        "socket_rel_tangential_max_mm": 0.03303880732023856
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 53995.24588699754
+    },
+    {
+     "peak_surface_principal_strain": 0.08245027248303052,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 11.736538642058804,
+        "axial_N": -3.4825112435335086,
+        "inplane_moment_Nmm": -1.7053025658242404e-12,
+        "tangential_N": 11.736538640355064,
+        "moment_about_r_Nmm": 67.10293564608912,
+        "moment_about_z_Nmm": 68.67100016364697,
+        "hinge_rotation_rad": -0.12956041905977078,
+        "socket_rel_inplane_max_mm": 0.5475133898684525,
+        "socket_rel_tangential_max_mm": 0.06584718921022414
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 11.736538642058122,
+        "axial_N": -3.4825112435332812,
+        "inplane_moment_Nmm": -1.1368683772161603e-12,
+        "tangential_N": -11.736538640356144,
+        "moment_about_r_Nmm": -67.10293564609776,
+        "moment_about_z_Nmm": -68.67100016365413,
+        "hinge_rotation_rad": -0.129560419059761,
+        "socket_rel_inplane_max_mm": 0.5475133898684155,
+        "socket_rel_tangential_max_mm": 0.06584718921023036
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -11.736538642059259,
+        "axial_N": 3.482511243533736,
+        "inplane_moment_Nmm": 1.0231815394945443e-12,
+        "tangential_N": -11.736538640355278,
+        "moment_about_r_Nmm": -67.10293564609395,
+        "moment_about_z_Nmm": -68.67100016365038,
+        "hinge_rotation_rad": 0.129560419059771,
+        "socket_rel_inplane_max_mm": 0.5475133898684543,
+        "socket_rel_tangential_max_mm": 0.06584718921022592
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -11.736538642058349,
+        "axial_N": 3.482511243533736,
+        "inplane_moment_Nmm": 1.3642420526593924e-12,
+        "tangential_N": 11.736538640355931,
+        "moment_about_r_Nmm": 67.10293564609299,
+        "moment_about_z_Nmm": 68.67100016365072,
+        "hinge_rotation_rad": 0.12956041905976207,
+        "socket_rel_inplane_max_mm": 0.5475133898684194,
+        "socket_rel_tangential_max_mm": 0.06584718921022814
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 11.866929546012216,
+        "axial_N": 3.5302907738373506,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": 11.866929537174371,
+        "moment_about_r_Nmm": -67.81354567576147,
+        "moment_about_z_Nmm": 68.91312805524603,
+        "hinge_rotation_rad": 0.12869704623359868,
+        "socket_rel_inplane_max_mm": 0.5514563989435334,
+        "socket_rel_tangential_max_mm": 0.06465612540623411
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 11.866929546009487,
+        "axial_N": 3.5302907738378053,
+        "inplane_moment_Nmm": 2.2737367544323206e-12,
+        "tangential_N": -11.866929537176532,
+        "moment_about_r_Nmm": 67.81354567577512,
+        "moment_about_z_Nmm": -68.91312805526059,
+        "hinge_rotation_rad": 0.12869704623357503,
+        "socket_rel_inplane_max_mm": 0.5514563989434271,
+        "socket_rel_tangential_max_mm": 0.06465612540624832
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -11.866929546010851,
+        "axial_N": -3.530290773836441,
+        "inplane_moment_Nmm": -2.0463630789890885e-12,
+        "tangential_N": -11.866929537174428,
+        "moment_about_r_Nmm": 67.81354567576147,
+        "moment_about_z_Nmm": -68.91312805524694,
+        "hinge_rotation_rad": -0.12869704623360145,
+        "socket_rel_inplane_max_mm": 0.5514563989435479,
+        "socket_rel_tangential_max_mm": 0.06465612540623411
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -11.866929546010851,
+        "axial_N": -3.5302907738391696,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": 11.866929537176645,
+        "moment_about_r_Nmm": -67.81354567577637,
+        "moment_about_z_Nmm": 68.91312805526127,
+        "hinge_rotation_rad": -0.1286970462335737,
+        "socket_rel_inplane_max_mm": 0.5514563989434186,
+        "socket_rel_tangential_max_mm": 0.06465612540624832
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 51199.43379521037
+    },
+    {
+     "peak_surface_principal_strain": 0.0791679085455862,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 4.127782954293934,
+        "axial_N": -9.777068044058979e-12,
+        "inplane_moment_Nmm": 1.8189894035458565e-12,
+        "tangential_N": 4.127782952774439,
+        "moment_about_r_Nmm": -7.389644451905042e-13,
+        "moment_about_z_Nmm": -5.684341886080802e-14,
+        "hinge_rotation_rad": -0.15510624489222236,
+        "socket_rel_inplane_max_mm": 0.6438244461094343,
+        "socket_rel_tangential_max_mm": 0.19219191376092493
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 4.12778295429689,
+        "axial_N": -9.094947017729282e-12,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": -4.127782952772151,
+        "moment_about_r_Nmm": -8.526512829121202e-13,
+        "moment_about_z_Nmm": -3.0127011996228248e-12,
+        "hinge_rotation_rad": -0.1551062448922297,
+        "socket_rel_inplane_max_mm": 0.6438244461094237,
+        "socket_rel_tangential_max_mm": 0.19219191376092626
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -4.127782954295753,
+        "axial_N": 9.777068044058979e-12,
+        "inplane_moment_Nmm": -2.0463630789890885e-12,
+        "tangential_N": -4.127782952774325,
+        "moment_about_r_Nmm": -2.2737367544323206e-13,
+        "moment_about_z_Nmm": -5.684341886080802e-14,
+        "hinge_rotation_rad": 0.15510624489223104,
+        "socket_rel_inplane_max_mm": 0.6438244461094728,
+        "socket_rel_tangential_max_mm": 0.19219191376094402
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -4.1277829542982545,
+        "axial_N": 9.322320693172514e-12,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": 4.127782952772236,
+        "moment_about_r_Nmm": 9.094947017729282e-13,
+        "moment_about_z_Nmm": 2.2168933355715126e-12,
+        "hinge_rotation_rad": 0.15510624489224012,
+        "socket_rel_inplane_max_mm": 0.6438244461094664,
+        "socket_rel_tangential_max_mm": 0.19219191376090983
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 4.177206606639629,
+        "axial_N": -2.2282620193436742e-11,
+        "inplane_moment_Nmm": 2.9558577807620168e-12,
+        "tangential_N": 4.177206597985133,
+        "moment_about_r_Nmm": 6.821210263296962e-13,
+        "moment_about_z_Nmm": 2.7284841053187847e-12,
+        "hinge_rotation_rad": 0.15494699965159286,
+        "socket_rel_inplane_max_mm": 0.6519008014555823,
+        "socket_rel_tangential_max_mm": 0.1907711403672323
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 4.177206606637355,
+        "axial_N": -2.000888343900442e-11,
+        "inplane_moment_Nmm": -4.547473508864641e-13,
+        "tangential_N": -4.177206597982064,
+        "moment_about_r_Nmm": -4.092726157978177e-12,
+        "moment_about_z_Nmm": 3.637978807091713e-12,
+        "hinge_rotation_rad": 0.15494699965163694,
+        "socket_rel_inplane_max_mm": 0.6519008014557571,
+        "socket_rel_tangential_max_mm": 0.19077114036715592
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -4.177206606639629,
+        "axial_N": 2.1373125491663814e-11,
+        "inplane_moment_Nmm": -1.3642420526593924e-12,
+        "tangential_N": -4.177206597985247,
+        "moment_about_r_Nmm": 1.4779288903810084e-12,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": -0.15494699965159553,
+        "socket_rel_inplane_max_mm": 0.6519008014555935,
+        "socket_rel_tangential_max_mm": 0.19077114036724296
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -4.177206606639629,
+        "axial_N": 1.8189894035458565e-11,
+        "inplane_moment_Nmm": 1.3642420526593924e-12,
+        "tangential_N": 4.177206597981865,
+        "moment_about_r_Nmm": 1.3642420526593924e-12,
+        "moment_about_z_Nmm": -4.092726157978177e-12,
+        "hinge_rotation_rad": -0.15494699965164038,
+        "socket_rel_inplane_max_mm": 0.651900801455773,
+        "socket_rel_tangential_max_mm": 0.19077114036715948
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 49533.59201684316
+    },
+    {
+     "peak_surface_principal_strain": 0.0775754011944321,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.5916157281026244e-12,
+        "axial_N": -1.4779288903810084e-12,
+        "inplane_moment_Nmm": 5.684341886080802e-14,
+        "tangential_N": -1.1368683772161603e-13,
+        "moment_about_r_Nmm": -2.8421709430404007e-13,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": 0.191444635175866,
+        "socket_rel_inplane_max_mm": 8.260867872787815,
+        "socket_rel_tangential_max_mm": 3.2486985721380623
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.2737367544323206e-12,
+        "axial_N": -1.8189894035458565e-12,
+        "inplane_moment_Nmm": -3.410605131648481e-13,
+        "tangential_N": 1.8474111129762605e-13,
+        "moment_about_r_Nmm": 3.979039320256561e-13,
+        "moment_about_z_Nmm": 1.0231815394945443e-12,
+        "hinge_rotation_rad": 0.19144463517596547,
+        "socket_rel_inplane_max_mm": 8.260867872790719,
+        "socket_rel_tangential_max_mm": 3.2486985721347175
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -1.5916157281026244e-12,
+        "axial_N": 2.0463630789890885e-12,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 6.252776074688882e-13,
+        "moment_about_r_Nmm": 6.252776074688882e-13,
+        "moment_about_z_Nmm": 6.821210263296962e-13,
+        "hinge_rotation_rad": -0.19144463517583976,
+        "socket_rel_inplane_max_mm": 8.260867872789206,
+        "socket_rel_tangential_max_mm": 3.24869857213755
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -1.8189894035458565e-12,
+        "axial_N": 5.684341886080801e-13,
+        "inplane_moment_Nmm": 3.979039320256561e-13,
+        "tangential_N": -9.947598300641403e-14,
+        "moment_about_r_Nmm": -3.410605131648481e-13,
+        "moment_about_z_Nmm": -1.7053025658242404e-13,
+        "hinge_rotation_rad": -0.19144463517595145,
+        "socket_rel_inplane_max_mm": 8.260867872792204,
+        "socket_rel_tangential_max_mm": 3.2486985721352104
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -9.094947017729282e-13,
+        "axial_N": 4.547473508864641e-13,
+        "inplane_moment_Nmm": 9.094947017729282e-13,
+        "tangential_N": 5.684341886080802e-14,
+        "moment_about_r_Nmm": -4.547473508864641e-13,
+        "moment_about_z_Nmm": 2.2737367544323206e-13,
+        "hinge_rotation_rad": 0.9952139479424265,
+        "socket_rel_inplane_max_mm": 27.208469827015556,
+        "socket_rel_tangential_max_mm": 18.298181375358674
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.2737367544323206e-12,
+        "axial_N": 0.0,
+        "inplane_moment_Nmm": -2.2737367544323206e-12,
+        "tangential_N": 1.7337242752546445e-12,
+        "moment_about_r_Nmm": 1.3642420526593924e-12,
+        "moment_about_z_Nmm": 1.8189894035458565e-12,
+        "hinge_rotation_rad": 0.9952139479425274,
+        "socket_rel_inplane_max_mm": 27.208469827021137,
+        "socket_rel_tangential_max_mm": 18.29818137535205
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 4.547473508864641e-13,
+        "axial_N": -4.547473508864641e-13,
+        "inplane_moment_Nmm": 2.0463630789890885e-12,
+        "tangential_N": -3.694822225952521e-13,
+        "moment_about_r_Nmm": 1.0231815394945443e-12,
+        "moment_about_z_Nmm": -1.3642420526593924e-12,
+        "hinge_rotation_rad": -0.995213947942427,
+        "socket_rel_inplane_max_mm": 27.208469827017687,
+        "socket_rel_tangential_max_mm": 18.298181375357874
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -1.3642420526593924e-12,
+        "axial_N": 4.547473508864641e-13,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": -1.4210854715202004e-13,
+        "moment_about_r_Nmm": -2.2737367544323206e-12,
+        "moment_about_z_Nmm": -2.2737367544323206e-12,
+        "hinge_rotation_rad": -0.9952139479425192,
+        "socket_rel_inplane_max_mm": 27.20846982702309,
+        "socket_rel_tangential_max_mm": 18.298181375353025
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 48921.8581511326
+    },
+    {
+     "peak_surface_principal_strain": 0.08628375947985091,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -2.5465430957051667e-12,
+        "axial_N": 9.507119178602976e-13,
+        "inplane_moment_Nmm": -8.707763521530005e-12,
+        "tangential_N": 8.220734968871284,
+        "moment_about_r_Nmm": 65.98641825320749,
+        "moment_about_z_Nmm": 53.684469746667105,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 1.415965659947552e-14,
+        "socket_rel_tangential_max_mm": 0.04765562194508011
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 8.22073497168185,
+        "axial_N": -9.26863967904842,
+        "inplane_moment_Nmm": 112.60681186643137,
+        "tangential_N": -3.3506876195083467e-14,
+        "moment_about_r_Nmm": 3.868650645950295e-12,
+        "moment_about_z_Nmm": 1.044448559034274e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12437230487446466,
+        "socket_rel_tangential_max_mm": 1.6394788743527142e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 2.2384109751021e-12,
+        "axial_N": -1.1503599349134663e-12,
+        "inplane_moment_Nmm": 5.85091007955838e-12,
+        "tangential_N": -8.220734968871312,
+        "moment_about_r_Nmm": -65.98641825320851,
+        "moment_about_z_Nmm": -53.6844697466679,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 1.0901484257069127e-14,
+        "socket_rel_tangential_max_mm": 0.04765562194508188
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -8.22073497168185,
+        "axial_N": 9.268639679047737,
+        "inplane_moment_Nmm": -112.60681186643399,
+        "tangential_N": 2.5730998179323676e-14,
+        "moment_about_r_Nmm": -4.868277045607016e-12,
+        "moment_about_z_Nmm": -1.6243970149570299e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12437230487446814,
+        "socket_rel_tangential_max_mm": 1.4036224475799783e-15
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -2.3694957734341773e-12,
+        "axial_N": -1.6499268443822839e-12,
+        "inplane_moment_Nmm": 1.0654430070504812e-11,
+        "tangential_N": 8.304677861723633,
+        "moment_about_r_Nmm": -66.4054337745963,
+        "moment_about_z_Nmm": 53.77234206175149,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 1.9763466922387197e-14,
+        "socket_rel_tangential_max_mm": 0.04672392939690795
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 8.304677874626577,
+        "axial_N": 9.294604519375753,
+        "inplane_moment_Nmm": -112.13512520201607,
+        "tangential_N": 8.051747955894486e-15,
+        "moment_about_r_Nmm": -7.261858349502416e-12,
+        "moment_about_z_Nmm": 3.912084252807957e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12164605889533317,
+        "socket_rel_tangential_max_mm": 2.59253102492886e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 1.0151607870450962e-12,
+        "axial_N": 7.91890599974904e-13,
+        "inplane_moment_Nmm": -8.872466954985762e-12,
+        "tangential_N": -8.304677861723633,
+        "moment_about_r_Nmm": 66.40543377459494,
+        "moment_about_z_Nmm": -53.77234206174967,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 1.8241226026752056e-14,
+        "socket_rel_tangential_max_mm": 0.04672392939690795
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -8.304677874626577,
+        "axial_N": -9.294604519375753,
+        "inplane_moment_Nmm": 112.13512520201789,
+        "tangential_N": 1.0746719288655546e-13,
+        "moment_about_r_Nmm": 5.413572896013133e-12,
+        "moment_about_z_Nmm": -2.499616576146253e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12164605889533664,
+        "socket_rel_tangential_max_mm": 2.4168735594335777e-15
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 53995.24588699745
+    },
+    {
+     "peak_surface_principal_strain": 0.08013144117016416,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.6405359818461316e-13,
+        "axial_N": 2.3340319471445364e-13,
+        "inplane_moment_Nmm": 5.268595204866628e-13,
+        "tangential_N": 16.597972120508757,
+        "moment_about_r_Nmm": 94.89788166577466,
+        "moment_about_z_Nmm": 97.11545977317815,
+        "hinge_rotation_rad": 8.536011544734594e-15,
+        "socket_rel_inplane_max_mm": 4.526194827885286e-14,
+        "socket_rel_tangential_max_mm": 0.09312198802526517
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 16.597972122918236,
+        "axial_N": -4.925014631724025,
+        "inplane_moment_Nmm": -7.958078640513122e-13,
+        "tangential_N": 5.699232526002393e-13,
+        "moment_about_r_Nmm": 8.315394902878864e-12,
+        "moment_about_z_Nmm": 7.101499023916066e-12,
+        "hinge_rotation_rad": -0.1832261017810931,
+        "socket_rel_inplane_max_mm": 0.7743008615329591,
+        "socket_rel_tangential_max_mm": 5.263850201080338e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 6.574539180434018e-13,
+        "axial_N": 9.213241265550118e-14,
+        "inplane_moment_Nmm": -1.3297980752992043e-12,
+        "tangential_N": -16.597972120508672,
+        "moment_about_r_Nmm": -94.89788166577262,
+        "moment_about_z_Nmm": -97.11545977317678,
+        "hinge_rotation_rad": -1.3406202755562334e-14,
+        "socket_rel_inplane_max_mm": 6.58913079793901e-14,
+        "socket_rel_tangential_max_mm": 0.09312198802526428
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -16.59797212291778,
+        "axial_N": 4.925014631724025,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": -4.4406747381853597e-13,
+        "moment_about_r_Nmm": -6.443358862925755e-12,
+        "moment_about_z_Nmm": -5.622491528619554e-12,
+        "hinge_rotation_rad": 0.18322610178108895,
+        "socket_rel_inplane_max_mm": 0.7743008615329399,
+        "socket_rel_tangential_max_mm": 4.483807521913757e-15
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -8.071038003687515e-13,
+        "axial_N": -6.630912555789132e-13,
+        "inplane_moment_Nmm": -1.1702167826046147e-12,
+        "tangential_N": 16.782372695200763,
+        "moment_about_r_Nmm": -95.90283600729049,
+        "moment_about_z_Nmm": 97.45788032130304,
+        "hinge_rotation_rad": -5.982498755036318e-15,
+        "socket_rel_inplane_max_mm": 2.5568897494601826e-14,
+        "socket_rel_tangential_max_mm": 0.09143756944001069
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 16.78237270768932,
+        "axial_N": 4.992585091479214,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": 4.942870737744061e-13,
+        "moment_about_r_Nmm": -2.7327136847974665e-12,
+        "moment_about_z_Nmm": 3.482479256363357e-12,
+        "hinge_rotation_rad": 0.18200510822091487,
+        "socket_rel_inplane_max_mm": 0.7798771184433878,
+        "socket_rel_tangential_max_mm": 2.809469008476535e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 1.0653253713297895e-12,
+        "axial_N": 8.629366026530328e-13,
+        "inplane_moment_Nmm": -1.3862345279128628e-13,
+        "tangential_N": -16.78237269520065,
+        "moment_about_r_Nmm": 95.90283600729049,
+        "moment_about_z_Nmm": -97.45788032130349,
+        "hinge_rotation_rad": 5.80283828033445e-15,
+        "socket_rel_inplane_max_mm": 2.5815841471561844e-14,
+        "socket_rel_tangential_max_mm": 0.09143756944000714
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -16.782372707692048,
+        "axial_N": -4.992585091478759,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": -3.7790977025603904e-13,
+        "moment_about_r_Nmm": 2.7430541499282248e-12,
+        "moment_about_z_Nmm": -3.1147964857818792e-12,
+        "hinge_rotation_rad": -0.18200510822091243,
+        "socket_rel_inplane_max_mm": 0.7798771184433753,
+        "socket_rel_tangential_max_mm": 3.5413709404130216e-15
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 51199.43379521722
+    },
+    {
+     "peak_surface_principal_strain": 0.07786589443631013,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -2.3733299023968337e-12,
+        "axial_N": 1.8720312053277398e-13,
+        "inplane_moment_Nmm": 5.0589533035923354e-14,
+        "tangential_N": 5.83756663434454,
+        "moment_about_r_Nmm": -6.821210263296962e-13,
+        "moment_about_z_Nmm": -1.2505552149377763e-12,
+        "hinge_rotation_rad": 4.858949123287244e-15,
+        "socket_rel_inplane_max_mm": 2.6812783654710443e-14,
+        "socket_rel_tangential_max_mm": 0.27180041101909236
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.837566636501833,
+        "axial_N": -1.546140993013978e-11,
+        "inplane_moment_Nmm": 1.9326762412674725e-12,
+        "tangential_N": 1.802953362893416e-12,
+        "moment_about_r_Nmm": -1.899918593972063e-13,
+        "moment_about_z_Nmm": -2.3588626735398346e-13,
+        "hinge_rotation_rad": -0.21935335513531612,
+        "socket_rel_inplane_max_mm": 0.9105052634751373,
+        "socket_rel_tangential_max_mm": 1.5048243000380512e-14
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 3.079074112911316e-12,
+        "axial_N": -5.590363149913419e-13,
+        "inplane_moment_Nmm": 2.442516357861105e-13,
+        "tangential_N": -5.837566634344569,
+        "moment_about_r_Nmm": 4.547473508864641e-13,
+        "moment_about_z_Nmm": -5.684341886080801e-13,
+        "hinge_rotation_rad": -5.747961347673526e-15,
+        "socket_rel_inplane_max_mm": 2.984072476689525e-14,
+        "socket_rel_tangential_max_mm": 0.271800411019095
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.837566636501606,
+        "axial_N": 1.5234036254696548e-11,
+        "inplane_moment_Nmm": -9.094947017729282e-13,
+        "tangential_N": -1.70850747752109e-12,
+        "moment_about_r_Nmm": -7.655346398063239e-14,
+        "moment_about_z_Nmm": -5.08001623844066e-14,
+        "hinge_rotation_rad": 0.21935335513531645,
+        "socket_rel_inplane_max_mm": 0.9105052634751406,
+        "socket_rel_tangential_max_mm": 1.2807351457853634e-14
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 8.12404620938882e-13,
+        "axial_N": 9.061893473738686e-16,
+        "inplane_moment_Nmm": 4.959714146837669e-13,
+        "tangential_N": 5.9074622237036465,
+        "moment_about_r_Nmm": -9.094947017729282e-13,
+        "moment_about_z_Nmm": 6.821210263296962e-13,
+        "hinge_rotation_rad": -3.9168098584378263e-14,
+        "socket_rel_inplane_max_mm": 1.595928692003859e-13,
+        "socket_rel_tangential_max_mm": 0.2697911340166641
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.907462235937601,
+        "axial_N": -2.955857780762017e-11,
+        "inplane_moment_Nmm": -1.3642420526593924e-12,
+        "tangential_N": 1.7346593185201747e-12,
+        "moment_about_r_Nmm": -2.0491860461627695e-12,
+        "moment_about_z_Nmm": -5.514498531725567e-13,
+        "hinge_rotation_rad": 0.21912814835631456,
+        "socket_rel_inplane_max_mm": 0.9219269547404164,
+        "socket_rel_tangential_max_mm": 7.115276548216113e-14
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -8.850518800312522e-13,
+        "axial_N": 2.927536309122496e-13,
+        "inplane_moment_Nmm": -9.11484125494883e-13,
+        "tangential_N": -5.907462223703362,
+        "moment_about_r_Nmm": 2.9558577807620168e-12,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": 3.8038038813079485e-14,
+        "socket_rel_inplane_max_mm": 1.544695308611438e-13,
+        "socket_rel_tangential_max_mm": 0.26979113401667476
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.90746223593851,
+        "axial_N": 2.864908310584724e-11,
+        "inplane_moment_Nmm": 2.5011104298755527e-12,
+        "tangential_N": -1.8039368233557102e-12,
+        "moment_about_r_Nmm": -8.965299900207558e-13,
+        "moment_about_z_Nmm": -6.69548522701045e-13,
+        "hinge_rotation_rad": -0.21912814835631433,
+        "socket_rel_inplane_max_mm": 0.921926954740423,
+        "socket_rel_tangential_max_mm": 6.193050672679653e-14
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 49533.59201682833
+    },
+    {
+     "peak_surface_principal_strain": 0.07757540119435626,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -9.511400108033854e-13,
+        "axial_N": 2.8664681588556055e-13,
+        "inplane_moment_Nmm": -3.262841108942248e-13,
+        "tangential_N": 0.0,
+        "moment_about_r_Nmm": 1.1368683772161603e-13,
+        "moment_about_z_Nmm": 5.684341886080801e-13,
+        "hinge_rotation_rad": -9.467910894114869e-14,
+        "socket_rel_inplane_max_mm": 3.700967044567914e-12,
+        "socket_rel_tangential_max_mm": 4.594353580780264
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 0.0,
+        "axial_N": -9.094947017729282e-13,
+        "inplane_moment_Nmm": -7.958078640513122e-13,
+        "tangential_N": 1.1193382574246013e-13,
+        "moment_about_r_Nmm": 2.1274347532497187e-13,
+        "moment_about_z_Nmm": 5.59183494542333e-13,
+        "hinge_rotation_rad": 0.2707435995094256,
+        "socket_rel_inplane_max_mm": 11.682631382673584,
+        "socket_rel_tangential_max_mm": 2.8145004486409415e-12
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 3.510448622274917e-13,
+        "axial_N": -1.3255198175762072e-13,
+        "inplane_moment_Nmm": 4.0543459557693243e-13,
+        "tangential_N": 2.5579538487363607e-13,
+        "moment_about_r_Nmm": 6.821210263296962e-13,
+        "moment_about_z_Nmm": 2.2737367544323206e-13,
+        "hinge_rotation_rad": 1.0708936020909541e-13,
+        "socket_rel_inplane_max_mm": 3.126643629472264e-12,
+        "socket_rel_tangential_max_mm": 4.594353580780349
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 4.547473508864641e-13,
+        "axial_N": -4.547473508864641e-13,
+        "inplane_moment_Nmm": 7.958078640513122e-13,
+        "tangential_N": 2.6536438988382234e-14,
+        "moment_about_r_Nmm": -1.156454520076324e-13,
+        "moment_about_z_Nmm": 3.174792428893381e-14,
+        "hinge_rotation_rad": -0.27074359950942145,
+        "socket_rel_inplane_max_mm": 11.682631382674519,
+        "socket_rel_tangential_max_mm": 2.903898499259432e-12
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.9789504363025183e-13,
+        "axial_N": 7.698912734552697e-13,
+        "inplane_moment_Nmm": 4.114496412224796e-13,
+        "tangential_N": 2.8421709430404007e-13,
+        "moment_about_r_Nmm": -4.547473508864641e-13,
+        "moment_about_z_Nmm": 4.547473508864641e-13,
+        "hinge_rotation_rad": -1.228501240449101e-13,
+        "socket_rel_inplane_max_mm": 6.768974881335859e-12,
+        "socket_rel_tangential_max_mm": 25.877536267794497
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 9.094947017729282e-13,
+        "axial_N": -9.094947017729282e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 8.451552962361963e-13,
+        "moment_about_r_Nmm": -8.707714009453951e-13,
+        "moment_about_z_Nmm": 5.198935787368362e-13,
+        "hinge_rotation_rad": 1.407445062643119,
+        "socket_rel_inplane_max_mm": 38.478587040792256,
+        "socket_rel_tangential_max_mm": 5.77103982202297e-12
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 5.562738312489547e-13,
+        "axial_N": -1.677831870614247e-12,
+        "inplane_moment_Nmm": 4.923409897614335e-13,
+        "tangential_N": -5.684341886080801e-13,
+        "moment_about_r_Nmm": 9.094947017729282e-13,
+        "moment_about_z_Nmm": -1.1368683772161603e-12,
+        "hinge_rotation_rad": 1.0237840752289734e-13,
+        "socket_rel_inplane_max_mm": 5.818078189285946e-12,
+        "socket_rel_tangential_max_mm": 25.87753626779464
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 0.0,
+        "axial_N": 2.7284841053187847e-12,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": 7.9881830433029e-14,
+        "moment_about_r_Nmm": 1.4401489333478145e-12,
+        "moment_about_z_Nmm": -1.322501227029404e-12,
+        "hinge_rotation_rad": -1.4074450626431052,
+        "socket_rel_inplane_max_mm": 38.47858704079341,
+        "socket_rel_tangential_max_mm": 5.785141733350238e-12
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 48921.85815112961
+    }
+   ],
+   "elapsed_s": 52.580918268000005
+  },
+  {
+   "mesh": {
+    "max_triangle_area_mm2": 0.01,
+    "nodes": 55846,
+    "triangles": 105903
+   },
+   "setup_s": 97.63977034200002,
+   "global_stiffness": {
+    "rigid_bond": {
+     "EA_N": 194.35039489905475,
+     "GJ_Nmm2": 52681.8084550922
+    },
+    "hinge_t": {
+     "EA_N": 192.27719241879328,
+     "GJ_Nmm2": 52681.808455092854
+    },
+    "ball": {
+     "EA_N": 192.27719241877998,
+     "GJ_Nmm2": 47131.675283712066
+    },
+    "none": {
+     "EA_N": 185.39991040862103,
+     "GJ_Nmm2": 47131.67528366324
+    }
+   },
+   "cases": [
+    {
+     "peak_surface_principal_strain": 0.08410124339640022,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 7.6169551809809946,
+        "axial_N": -8.48226990506032,
+        "inplane_moment_Nmm": 102.7662032296771,
+        "tangential_N": 3.1550461388713344,
+        "moment_about_r_Nmm": 25.184133527224958,
+        "moment_about_z_Nmm": 20.60426770472668,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11543927551082545,
+        "socket_rel_tangential_max_mm": 0.018305218721119232
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 3.1550461399507412,
+        "axial_N": -3.5134712343848378,
+        "inplane_moment_Nmm": 42.56715513132741,
+        "tangential_N": -7.616955178372649,
+        "moment_about_r_Nmm": -60.799876718052815,
+        "moment_about_z_Nmm": -49.743102535518915,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.04781651354712494,
+        "socket_rel_tangential_max_mm": 0.04419270729872338
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -7.616955180978721,
+        "axial_N": 8.482269905059866,
+        "inplane_moment_Nmm": -102.76620322966721,
+        "tangential_N": -3.155046138871512,
+        "moment_about_r_Nmm": -25.184133527228767,
+        "moment_about_z_Nmm": -20.604267704729864,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11543927551081812,
+        "socket_rel_tangential_max_mm": 0.018305218721120564
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -3.155046139950059,
+        "axial_N": 3.513471234385179,
+        "inplane_moment_Nmm": -42.56715513131746,
+        "tangential_N": 7.616955178372564,
+        "moment_about_r_Nmm": 60.79987671804929,
+        "moment_about_z_Nmm": 49.74310253551539,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.04781651354711588,
+        "socket_rel_tangential_max_mm": 0.04419270729872071
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 7.682220409300044,
+        "axial_N": 8.508750598720326,
+        "inplane_moment_Nmm": -102.45545369263868,
+        "tangential_N": 3.1820798777382038,
+        "moment_about_r_Nmm": -25.339392861580905,
+        "moment_about_z_Nmm": 20.632391112807,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.11255962653842112,
+        "socket_rel_tangential_max_mm": 0.0179120680617757
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 3.1820798826711325,
+        "axial_N": 3.5244398968422956,
+        "inplane_moment_Nmm": -42.4384384585901,
+        "tangential_N": -7.682220397385947,
+        "moment_about_r_Nmm": 61.17470590871528,
+        "moment_about_z_Nmm": -49.81099844870596,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.046623723887882204,
+        "socket_rel_tangential_max_mm": 0.043243557644867536
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -7.682220409298225,
+        "axial_N": -8.508750598720326,
+        "inplane_moment_Nmm": 102.45545369263095,
+        "tangential_N": -3.1820798777382606,
+        "moment_about_r_Nmm": 25.33939286158136,
+        "moment_about_z_Nmm": -20.63239111280734,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.1125596265384107,
+        "socket_rel_tangential_max_mm": 0.0179120680617757
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -3.1820798826697683,
+        "axial_N": -3.5244398968409314,
+        "inplane_moment_Nmm": 42.43843845858191,
+        "tangential_N": 7.682220397386118,
+        "moment_about_r_Nmm": -61.17470590871619,
+        "moment_about_z_Nmm": 49.81099844870778,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.0466237238878745,
+        "socket_rel_tangential_max_mm": 0.04324355764487109
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 53492.278902352635
+    },
+    {
+     "peak_surface_principal_strain": 0.0804739965876845,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 15.278790013398293,
+        "axial_N": -4.5157667665621375,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 6.328682039276046,
+        "moment_about_r_Nmm": 36.06923867549929,
+        "moment_about_z_Nmm": 37.062489715609786,
+        "hinge_rotation_rad": -0.16911961157756328,
+        "socket_rel_inplane_max_mm": 0.7135478566285481,
+        "socket_rel_tangential_max_mm": 0.03554484681022929
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 6.328682040200874,
+        "axial_N": -1.870491839223405,
+        "inplane_moment_Nmm": -4.547473508864641e-13,
+        "tangential_N": -15.278790011167416,
+        "moment_about_r_Nmm": -87.07884519487635,
+        "moment_about_z_Nmm": -89.47676532674859,
+        "hinge_rotation_rad": -0.07005163677869158,
+        "socket_rel_inplane_max_mm": 0.29556119961776367,
+        "socket_rel_tangential_max_mm": 0.08581285124173554
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -15.278790013395792,
+        "axial_N": 4.5157667665621375,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": -6.328682039275989,
+        "moment_about_r_Nmm": -36.06923867549756,
+        "moment_about_z_Nmm": -37.06248971560865,
+        "hinge_rotation_rad": 0.1691196115775519,
+        "socket_rel_inplane_max_mm": 0.7135478566284996,
+        "socket_rel_tangential_max_mm": 0.03554484681022885
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -6.328682040197577,
+        "axial_N": 1.870491839223405,
+        "inplane_moment_Nmm": 1.1368683772161603e-13,
+        "tangential_N": 15.278790011167445,
+        "moment_about_r_Nmm": 87.07884519487777,
+        "moment_about_z_Nmm": 89.47676532674927,
+        "hinge_rotation_rad": 0.0700516367786792,
+        "socket_rel_inplane_max_mm": 0.29556119961771027,
+        "socket_rel_tangential_max_mm": 0.08581285124173732
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 15.442795749141624,
+        "axial_N": 4.5771726894736275,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": 6.396615435467638,
+        "moment_about_r_Nmm": -36.46021056461308,
+        "moment_about_z_Nmm": 37.21912840356458,
+        "hinge_rotation_rad": 0.16792226735345173,
+        "socket_rel_inplane_max_mm": 0.7173064001294824,
+        "socket_rel_tangential_max_mm": 0.03487402899004799
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 6.39661544025239,
+        "axial_N": 1.8959270053042019,
+        "inplane_moment_Nmm": -7.958078640513122e-13,
+        "tangential_N": -15.442795737588938,
+        "moment_about_r_Nmm": 88.02273483206056,
+        "moment_about_z_Nmm": -89.85492457158193,
+        "hinge_rotation_rad": 0.06955568056224626,
+        "socket_rel_inplane_max_mm": 0.29711803931067543,
+        "socket_rel_tangential_max_mm": 0.08419335376236248
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -15.442795749138895,
+        "axial_N": -4.577172689472718,
+        "inplane_moment_Nmm": -1.1368683772161603e-12,
+        "tangential_N": -6.396615435467737,
+        "moment_about_r_Nmm": 36.46021056461342,
+        "moment_about_z_Nmm": -37.21912840356538,
+        "hinge_rotation_rad": -0.16792226735344218,
+        "socket_rel_inplane_max_mm": 0.7173064001294363,
+        "socket_rel_tangential_max_mm": 0.03487402899005154
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -6.396615440249661,
+        "axial_N": -1.8959270053035198,
+        "inplane_moment_Nmm": 2.0463630789890885e-12,
+        "tangential_N": 15.442795737588995,
+        "moment_about_r_Nmm": -88.02273483206011,
+        "moment_about_z_Nmm": 89.85492457158125,
+        "hinge_rotation_rad": -0.06955568056223477,
+        "socket_rel_inplane_max_mm": 0.2971180393106286,
+        "socket_rel_tangential_max_mm": 0.08419335376236603
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 50732.13559659228
+    },
+    {
+     "peak_surface_principal_strain": 0.07719242122253875,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.383527552037549,
+        "axial_N": -1.2278178473934531e-11,
+        "inplane_moment_Nmm": 3.751665644813329e-12,
+        "tangential_N": 2.229930124638429,
+        "moment_about_r_Nmm": 1.2505552149377763e-12,
+        "moment_about_z_Nmm": 2.8990143619012088e-12,
+        "hinge_rotation_rad": -0.2023253276738094,
+        "socket_rel_inplane_max_mm": 0.8383511625300437,
+        "socket_rel_tangential_max_mm": 0.10355419214556849
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.229930125466126,
+        "axial_N": -4.888534022029489e-12,
+        "inplane_moment_Nmm": 6.252776074688882e-13,
+        "tangential_N": -5.383527550043567,
+        "moment_about_r_Nmm": -2.3874235921539366e-12,
+        "moment_about_z_Nmm": -3.183231456205249e-12,
+        "hinge_rotation_rad": -0.08380589473408677,
+        "socket_rel_inplane_max_mm": 0.3472564215512392,
+        "socket_rel_tangential_max_mm": 0.25000193511841395
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.383527552033911,
+        "axial_N": 1.2050804798491299e-11,
+        "inplane_moment_Nmm": -4.092726157978177e-12,
+        "tangential_N": -2.2299301246384573,
+        "moment_about_r_Nmm": -1.4210854715202004e-13,
+        "moment_about_z_Nmm": -2.0463630789890885e-12,
+        "hinge_rotation_rad": 0.20232532767379202,
+        "socket_rel_inplane_max_mm": 0.8383511625299668,
+        "socket_rel_tangential_max_mm": 0.10355419214557804
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -2.229930125461806,
+        "axial_N": 4.888534022029489e-12,
+        "inplane_moment_Nmm": -7.958078640513122e-13,
+        "tangential_N": 5.383527550043581,
+        "moment_about_r_Nmm": 2.6147972675971687e-12,
+        "moment_about_z_Nmm": 4.320099833421409e-12,
+        "hinge_rotation_rad": 0.08380589473406934,
+        "socket_rel_inplane_max_mm": 0.34725642155116454,
+        "socket_rel_tangential_max_mm": 0.2500019351184024
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.445000723841076,
+        "axial_N": -2.9103830456733704e-11,
+        "inplane_moment_Nmm": 2.7284841053187847e-12,
+        "tangential_N": 2.2553931422635856,
+        "moment_about_r_Nmm": 7.389644451905042e-13,
+        "moment_about_z_Nmm": 1.5916157281026244e-12,
+        "hinge_rotation_rad": 0.20205704564478744,
+        "socket_rel_inplane_max_mm": 0.8471490385380767,
+        "socket_rel_tangential_max_mm": 0.10306419945961132
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.2553931469474264,
+        "axial_N": -1.0459189070388675e-11,
+        "inplane_moment_Nmm": 1.0231815394945443e-12,
+        "tangential_N": -5.445000712535318,
+        "moment_about_r_Nmm": -1.5916157281026244e-12,
+        "moment_about_z_Nmm": -1.1368683772161603e-12,
+        "hinge_rotation_rad": 0.08369476867912168,
+        "socket_rel_inplane_max_mm": 0.3509006211138457,
+        "socket_rel_tangential_max_mm": 0.24881898813050896
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.445000723841076,
+        "axial_N": 3.092281986027956e-11,
+        "inplane_moment_Nmm": -1.3642420526593924e-12,
+        "tangential_N": -2.255393142263472,
+        "moment_about_r_Nmm": -1.8189894035458565e-12,
+        "moment_about_z_Nmm": 9.094947017729282e-13,
+        "hinge_rotation_rad": -0.20205704564477522,
+        "socket_rel_inplane_max_mm": 0.8471490385380305,
+        "socket_rel_tangential_max_mm": 0.1030641994596273
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -2.255393146944243,
+        "axial_N": 1.2050804798491299e-11,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 5.445000712535261,
+        "moment_about_r_Nmm": -1.3642420526593924e-12,
+        "moment_about_z_Nmm": 2.9558577807620168e-12,
+        "hinge_rotation_rad": -0.08369476867910869,
+        "socket_rel_inplane_max_mm": 0.3509006211137909,
+        "socket_rel_tangential_max_mm": 0.24881898813050896
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 49081.019842331894
+    },
+    {
+     "peak_surface_principal_strain": 0.07562473396232998,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 3.183231456205249e-12,
+        "axial_N": -2.0463630789890885e-12,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": -1.4210854715202004e-14,
+        "moment_about_r_Nmm": 0.0,
+        "moment_about_z_Nmm": -3.979039320256561e-13,
+        "hinge_rotation_rad": 0.25011036892229516,
+        "socket_rel_inplane_max_mm": 10.794748964186773,
+        "socket_rel_tangential_max_mm": 1.763195545997956
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.7053025658242404e-12,
+        "axial_N": -7.958078640513122e-13,
+        "inplane_moment_Nmm": 1.1368683772161603e-13,
+        "tangential_N": 2.5579538487363607e-13,
+        "moment_about_r_Nmm": 1.0231815394945443e-12,
+        "moment_about_z_Nmm": 1.7053025658242404e-12,
+        "hinge_rotation_rad": 0.10359910689779976,
+        "socket_rel_inplane_max_mm": 4.4713314233810095,
+        "socket_rel_tangential_max_mm": 4.256730600260287
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -2.7284841053187847e-12,
+        "axial_N": 2.5011104298755527e-12,
+        "inplane_moment_Nmm": -1.1368683772161603e-13,
+        "tangential_N": -1.5631940186722204e-13,
+        "moment_about_r_Nmm": 3.126388037344441e-13,
+        "moment_about_z_Nmm": 6.821210263296962e-13,
+        "hinge_rotation_rad": -0.25011036892230276,
+        "socket_rel_inplane_max_mm": 10.794748964185668,
+        "socket_rel_tangential_max_mm": 1.7631955459976503
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.684341886080801e-13,
+        "axial_N": 7.958078640513122e-13,
+        "inplane_moment_Nmm": 2.8421709430404007e-13,
+        "tangential_N": -1.8474111129762605e-13,
+        "moment_about_r_Nmm": -9.094947017729282e-13,
+        "moment_about_z_Nmm": -1.0231815394945443e-12,
+        "hinge_rotation_rad": -0.10359910689780968,
+        "socket_rel_inplane_max_mm": 4.471331423379921,
+        "socket_rel_tangential_max_mm": 4.256730600260603
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -9.094947017729282e-13,
+        "axial_N": 0.0,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 2.842170943040401e-14,
+        "moment_about_r_Nmm": -5.684341886080801e-13,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": 1.3003781169727855,
+        "socket_rel_inplane_max_mm": 35.55582854169802,
+        "socket_rel_tangential_max_mm": 9.902708069070302
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.3642420526593924e-12,
+        "axial_N": -9.094947017729282e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": -4.547473508864641e-13,
+        "moment_about_r_Nmm": 2.2737367544323206e-13,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": 0.5386342522633728,
+        "socket_rel_inplane_max_mm": 14.72770640338738,
+        "socket_rel_tangential_max_mm": 23.907252124562508
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 4.547473508864641e-12,
+        "axial_N": 2.7284841053187847e-12,
+        "inplane_moment_Nmm": -4.547473508864641e-13,
+        "tangential_N": 1.4210854715202004e-13,
+        "moment_about_r_Nmm": -1.1368683772161603e-13,
+        "moment_about_z_Nmm": 5.684341886080801e-13,
+        "hinge_rotation_rad": -1.3003781169727944,
+        "socket_rel_inplane_max_mm": 35.555828541696485,
+        "socket_rel_tangential_max_mm": 9.902708069069746
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 2.5011104298755527e-12,
+        "axial_N": -4.547473508864641e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 2.8421709430404007e-13,
+        "moment_about_r_Nmm": -2.2737367544323206e-13,
+        "moment_about_z_Nmm": 0.0,
+        "hinge_rotation_rad": -0.538634252263402,
+        "socket_rel_inplane_max_mm": 14.727706403386113,
+        "socket_rel_tangential_max_mm": 23.907252124563026
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 0.0,
+     "EI_Nmm2": 48468.9295386158
+    },
+    {
+     "peak_surface_principal_strain": 0.08632367529736004,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.829765105652768,
+        "axial_N": -6.492048323029394,
+        "inplane_moment_Nmm": 78.65384676609756,
+        "tangential_N": 5.829765103663874,
+        "moment_about_r_Nmm": 46.53421101965267,
+        "moment_about_z_Nmm": 38.07172242955278,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08835339636443308,
+        "socket_rel_tangential_max_mm": 0.0338236338291642
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.829765105655724,
+        "axial_N": -6.492048323030076,
+        "inplane_moment_Nmm": 78.65384676610279,
+        "tangential_N": -5.829765103661387,
+        "moment_about_r_Nmm": -46.53421101966023,
+        "moment_about_z_Nmm": -38.071722429553574,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08835339636445726,
+        "socket_rel_tangential_max_mm": 0.033823633829157984
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.829765105652314,
+        "axial_N": 6.492048323029621,
+        "inplane_moment_Nmm": -78.65384676608869,
+        "tangential_N": -5.8297651036639735,
+        "moment_about_r_Nmm": -46.53421101965557,
+        "moment_about_z_Nmm": -38.07172242955494,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08835339636442595,
+        "socket_rel_tangential_max_mm": 0.03382363382916509
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.829765105654587,
+        "axial_N": 6.492048323030076,
+        "inplane_moment_Nmm": -78.65384676609358,
+        "tangential_N": 5.829765103661302,
+        "moment_about_r_Nmm": 46.53421101965739,
+        "moment_about_z_Nmm": 38.0717224295513,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08835339636444926,
+        "socket_rel_tangential_max_mm": 0.033823633829157984
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.879716948832538,
+        "axial_N": 6.512315768512963,
+        "inplane_moment_Nmm": -78.41600936723262,
+        "tangential_N": 5.8797169397143705,
+        "moment_about_r_Nmm": -46.8210928621545,
+        "moment_about_z_Nmm": 38.123687711774664,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08614940845889306,
+        "socket_rel_tangential_max_mm": 0.03309718613443735
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.879716948832538,
+        "axial_N": 6.512315768516146,
+        "inplane_moment_Nmm": -78.41600936725513,
+        "tangential_N": -5.879716939712466,
+        "moment_about_r_Nmm": 46.821092862137675,
+        "moment_about_z_Nmm": -38.123687711759885,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08614940845891984,
+        "socket_rel_tangential_max_mm": 0.03309718613442314
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -5.8797169488316285,
+        "axial_N": -6.512315768512508,
+        "inplane_moment_Nmm": 78.41600936722648,
+        "tangential_N": -5.879716939714513,
+        "moment_about_r_Nmm": 46.82109286215439,
+        "moment_about_z_Nmm": -38.12368771177421,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.08614940845889132,
+        "socket_rel_tangential_max_mm": 0.03309718613443735
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.879716948832538,
+        "axial_N": -6.512315768515236,
+        "inplane_moment_Nmm": 78.41600936724831,
+        "tangential_N": 5.879716939712409,
+        "moment_about_r_Nmm": -46.821092862138244,
+        "moment_about_z_Nmm": 38.12368771176011,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.0861494084589129,
+        "socket_rel_tangential_max_mm": 0.03309718613442669
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 53492.27890234681
+    },
+    {
+     "peak_surface_principal_strain": 0.08270573094185192,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 11.69387960942754,
+        "axial_N": -3.456218251977134,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": 11.693879607717946,
+        "moment_about_r_Nmm": 66.64726273111751,
+        "moment_about_z_Nmm": 68.48255134432452,
+        "hinge_rotation_rad": -0.12943854687751388,
+        "socket_rel_inplane_max_mm": 0.5461258858627746,
+        "socket_rel_tangential_max_mm": 0.06567831290844106
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 11.693879609426403,
+        "axial_N": -3.456218251976452,
+        "inplane_moment_Nmm": -1.1368683772161603e-12,
+        "tangential_N": -11.69387960771823,
+        "moment_about_r_Nmm": -66.64726273113178,
+        "moment_about_z_Nmm": -68.48255134433555,
+        "hinge_rotation_rad": -0.12943854687749334,
+        "socket_rel_inplane_max_mm": 0.5461258858626583,
+        "socket_rel_tangential_max_mm": 0.06567831290844728
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -11.693879609425267,
+        "axial_N": 3.4562182519773614,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": -11.693879607717832,
+        "moment_about_r_Nmm": -66.64726273111546,
+        "moment_about_z_Nmm": -68.48255134432338,
+        "hinge_rotation_rad": 0.1294385468775035,
+        "socket_rel_inplane_max_mm": 0.54612588586273,
+        "socket_rel_tangential_max_mm": 0.06567831290844017
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -11.693879609423675,
+        "axial_N": 3.456218251976452,
+        "inplane_moment_Nmm": 9.094947017729282e-13,
+        "tangential_N": 11.693879607718301,
+        "moment_about_r_Nmm": 66.6472627311336,
+        "moment_about_z_Nmm": 68.48255134433634,
+        "hinge_rotation_rad": 0.12943854687748252,
+        "socket_rel_inplane_max_mm": 0.5461258858626117,
+        "socket_rel_tangential_max_mm": 0.06567831290844861
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 11.819404165189553,
+        "axial_N": 3.5032163106716325,
+        "inplane_moment_Nmm": -1.3642420526593924e-12,
+        "tangential_N": 11.819404156349378,
+        "moment_about_r_Nmm": -67.36968458339823,
+        "moment_about_z_Nmm": 68.7719818999301,
+        "hinge_rotation_rad": 0.12852213928269696,
+        "socket_rel_inplane_max_mm": 0.5490025505180006,
+        "socket_rel_tangential_max_mm": 0.06443880320022544
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 11.819404165189553,
+        "axial_N": 3.503216310672542,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": -11.819404156348355,
+        "moment_about_r_Nmm": 67.36968458339368,
+        "moment_about_z_Nmm": -68.77198189992487,
+        "hinge_rotation_rad": 0.12852213928270662,
+        "socket_rel_inplane_max_mm": 0.5490025505180357,
+        "socket_rel_tangential_max_mm": 0.06443880320022544
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -11.819404165186825,
+        "axial_N": -3.5032163106716325,
+        "inplane_moment_Nmm": 1.8189894035458565e-12,
+        "tangential_N": -11.819404156349435,
+        "moment_about_r_Nmm": 67.36968458339959,
+        "moment_about_z_Nmm": -68.77198189993169,
+        "hinge_rotation_rad": -0.1285221392826894,
+        "socket_rel_inplane_max_mm": 0.549002550517969,
+        "socket_rel_tangential_max_mm": 0.06443880320023254
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -11.819404165185915,
+        "axial_N": -3.5032163106720873,
+        "inplane_moment_Nmm": 1.1368683772161603e-12,
+        "tangential_N": 11.819404156348384,
+        "moment_about_r_Nmm": -67.36968458339322,
+        "moment_about_z_Nmm": 68.77198189992373,
+        "hinge_rotation_rad": -0.1285221392826965,
+        "socket_rel_inplane_max_mm": 0.5490025505179974,
+        "socket_rel_tangential_max_mm": 0.06443880320022188
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 50732.13559659404
+    },
+    {
+     "peak_surface_principal_strain": 0.07941154663934255,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 4.120373603692087,
+        "axial_N": -8.640199666842818e-12,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 4.120373602166268,
+        "moment_about_r_Nmm": 2.8421709430404007e-13,
+        "moment_about_z_Nmm": 1.5347723092418164e-12,
+        "hinge_rotation_rad": -0.15485310169720445,
+        "socket_rel_inplane_max_mm": 0.6416462008085043,
+        "socket_rel_tangential_max_mm": 0.1913431972580475
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 4.120373603695043,
+        "axial_N": -8.640199666842818e-12,
+        "inplane_moment_Nmm": -3.410605131648481e-13,
+        "tangential_N": -4.120373602164122,
+        "moment_about_r_Nmm": 1.1368683772161603e-13,
+        "moment_about_z_Nmm": 1.3073986337985843e-12,
+        "hinge_rotation_rad": -0.1548531016972112,
+        "socket_rel_inplane_max_mm": 0.6416462008085004,
+        "socket_rel_tangential_max_mm": 0.19134319725804438
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -4.120373603687767,
+        "axial_N": 9.094947017729282e-12,
+        "inplane_moment_Nmm": -3.410605131648481e-13,
+        "tangential_N": -4.120373602166282,
+        "moment_about_r_Nmm": 7.958078640513122e-13,
+        "moment_about_z_Nmm": -6.252776074688882e-13,
+        "hinge_rotation_rad": 0.15485310169718514,
+        "socket_rel_inplane_max_mm": 0.6416462008084194,
+        "socket_rel_tangential_max_mm": 0.19134319725805282
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -4.120373603691178,
+        "axial_N": 9.549694368615746e-12,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": 4.120373602164136,
+        "moment_about_r_Nmm": -1.1368683772161603e-13,
+        "moment_about_z_Nmm": -1.1368683772161603e-13,
+        "hinge_rotation_rad": 0.154853101697192,
+        "socket_rel_inplane_max_mm": 0.6416462008084172,
+        "socket_rel_tangential_max_mm": 0.19134319725803506
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 4.167423132459589,
+        "axial_N": -2.1827872842550278e-11,
+        "inplane_moment_Nmm": 6.821210263296962e-13,
+        "tangential_N": 4.167423123806316,
+        "moment_about_r_Nmm": -1.9326762412674725e-12,
+        "moment_about_z_Nmm": 2.2737367544323206e-13,
+        "hinge_rotation_rad": 0.15464776752177578,
+        "socket_rel_inplane_max_mm": 0.6483798035850024,
+        "socket_rel_tangential_max_mm": 0.19043780883079187
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 4.167423132460499,
+        "axial_N": -2.091837814077735e-11,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": -4.167423123806202,
+        "moment_about_r_Nmm": 3.410605131648481e-13,
+        "moment_about_z_Nmm": -2.7284841053187847e-12,
+        "hinge_rotation_rad": 0.15464776752180442,
+        "socket_rel_inplane_max_mm": 0.6483798035851303,
+        "socket_rel_tangential_max_mm": 0.19043780883075456
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -4.16742313245777,
+        "axial_N": 2.2282620193436742e-11,
+        "inplane_moment_Nmm": 9.094947017729282e-13,
+        "tangential_N": -4.1674231238060315,
+        "moment_about_r_Nmm": 2.2737367544323206e-13,
+        "moment_about_z_Nmm": 3.183231456205249e-12,
+        "hinge_rotation_rad": -0.15464776752176268,
+        "socket_rel_inplane_max_mm": 0.6483798035849488,
+        "socket_rel_tangential_max_mm": 0.19043780883079897
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -4.167423132459135,
+        "axial_N": 2.1827872842550278e-11,
+        "inplane_moment_Nmm": 1.3642420526593924e-12,
+        "tangential_N": 4.167423123805776,
+        "moment_about_r_Nmm": -1.7053025658242404e-12,
+        "moment_about_z_Nmm": 9.094947017729282e-13,
+        "hinge_rotation_rad": -0.15464776752179132,
+        "socket_rel_inplane_max_mm": 0.6483798035850808,
+        "socket_rel_tangential_max_mm": 0.19043780883076344
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 49081.01984232677
+    },
+    {
+     "peak_surface_principal_strain": 0.07780938422907523,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -1.1368683772161603e-12,
+        "axial_N": 1.0231815394945443e-12,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": 1.4210854715202004e-14,
+        "moment_about_r_Nmm": 0.0,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": 0.1914261888985604,
+        "socket_rel_inplane_max_mm": 8.261943170268818,
+        "socket_rel_tangential_max_mm": 3.2579605535247387
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 2.0463630789890885e-12,
+        "axial_N": -1.0231815394945443e-12,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": -9.947598300641403e-14,
+        "moment_about_r_Nmm": -5.684341886080802e-14,
+        "moment_about_z_Nmm": -1.7053025658242404e-13,
+        "hinge_rotation_rad": 0.19142618889864305,
+        "socket_rel_inplane_max_mm": 8.261943170271534,
+        "socket_rel_tangential_max_mm": 3.2579605535221208
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 4.547473508864641e-13,
+        "axial_N": 4.547473508864641e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 8.526512829121202e-14,
+        "moment_about_r_Nmm": 1.7053025658242404e-13,
+        "moment_about_z_Nmm": 6.252776074688882e-13,
+        "hinge_rotation_rad": -0.1914261888985679,
+        "socket_rel_inplane_max_mm": 8.261943170267795,
+        "socket_rel_tangential_max_mm": 3.257960553524284
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -6.821210263296962e-13,
+        "axial_N": 6.821210263296962e-13,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": 1.4210854715202004e-14,
+        "moment_about_r_Nmm": 5.684341886080802e-14,
+        "moment_about_z_Nmm": 2.2737367544323206e-13,
+        "hinge_rotation_rad": -0.191426188898653,
+        "socket_rel_inplane_max_mm": 8.261943170270534,
+        "socket_rel_tangential_max_mm": 3.257960553522571
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 2.7284841053187847e-12,
+        "axial_N": 4.547473508864641e-13,
+        "inplane_moment_Nmm": -6.821210263296962e-13,
+        "tangential_N": 3.410605131648481e-13,
+        "moment_about_r_Nmm": -1.3642420526593924e-12,
+        "moment_about_z_Nmm": 6.821210263296962e-13,
+        "hinge_rotation_rad": 0.9952663223511508,
+        "socket_rel_inplane_max_mm": 27.213253013842287,
+        "socket_rel_tangential_max_mm": 18.297818602895767
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.8189894035458565e-12,
+        "axial_N": -1.3642420526593924e-12,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": -3.694822225952521e-13,
+        "moment_about_r_Nmm": 9.094947017729282e-13,
+        "moment_about_z_Nmm": -6.821210263296962e-13,
+        "hinge_rotation_rad": 0.9952663223512848,
+        "socket_rel_inplane_max_mm": 27.213253013848202,
+        "socket_rel_tangential_max_mm": 18.297818602889578
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 2.7284841053187847e-12,
+        "axial_N": 4.547473508864641e-13,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": 2.842170943040401e-14,
+        "moment_about_r_Nmm": 3.410605131648481e-13,
+        "moment_about_z_Nmm": -2.2737367544323206e-13,
+        "hinge_rotation_rad": -0.9952663223511581,
+        "socket_rel_inplane_max_mm": 27.213253013840955,
+        "socket_rel_tangential_max_mm": 18.297818602894946
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 1.8189894035458565e-12,
+        "axial_N": -1.3642420526593924e-12,
+        "inplane_moment_Nmm": 2.2737367544323206e-13,
+        "tangential_N": 0.0,
+        "moment_about_r_Nmm": -1.1368683772161603e-13,
+        "moment_about_z_Nmm": 0.0,
+        "hinge_rotation_rad": -0.9952663223513206,
+        "socket_rel_inplane_max_mm": 27.213253013847233,
+        "socket_rel_tangential_max_mm": 18.297818602890327
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 22.5,
+     "EI_Nmm2": 48468.92953861315
+    },
+    {
+     "peak_surface_principal_strain": 0.08653306875611771,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -6.294363209116846e-13,
+        "axial_N": 4.222151255541805e-13,
+        "inplane_moment_Nmm": 1.3649613642204418e-13,
+        "tangential_N": 8.244532875049458,
+        "moment_about_r_Nmm": 65.80931233831586,
+        "moment_about_z_Nmm": 53.841546202769905,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 6.2925049606084274e-15,
+        "socket_rel_tangential_max_mm": 0.047833841689937984
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 8.244532877866732,
+        "axial_N": -9.181142786009787,
+        "inplane_moment_Nmm": 111.2333368294162,
+        "tangential_N": 4.671992696328683e-13,
+        "moment_about_r_Nmm": -3.7771210881449196e-13,
+        "moment_about_z_Nmm": 6.040584672037655e-13,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12495057142031614,
+        "socket_rel_tangential_max_mm": 1.499863030756184e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 8.791605760173598e-13,
+        "axial_N": -1.5925417305414418e-13,
+        "inplane_moment_Nmm": 2.9869433433496897e-12,
+        "tangential_N": -8.244532875049487,
+        "moment_about_r_Nmm": -65.809312338317,
+        "moment_about_z_Nmm": -53.84154620277013,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 4.788653127881952e-15,
+        "socket_rel_tangential_max_mm": 0.047833841689937096
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -8.244532877865822,
+        "axial_N": 9.181142786009332,
+        "inplane_moment_Nmm": -111.23333682941268,
+        "tangential_N": -4.562725740550418e-13,
+        "moment_about_r_Nmm": -3.306259256900034e-13,
+        "moment_about_z_Nmm": -8.09715153115673e-13,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.1249505714203146,
+        "socket_rel_tangential_max_mm": 1.3067953551420485e-15
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.812475483211958e-13,
+        "axial_N": 1.688047483586937e-13,
+        "inplane_moment_Nmm": -4.500634959623494e-12,
+        "tangential_N": 8.315175439056702,
+        "moment_about_r_Nmm": -66.2150245307846,
+        "moment_about_z_Nmm": 53.91503620966023,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 5.583194061411381e-15,
+        "socket_rel_tangential_max_mm": 0.0468064895076985
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 8.315175451954929,
+        "axial_N": 9.209805282292109,
+        "inplane_moment_Nmm": -110.8969839543347,
+        "tangential_N": -4.347870896717804e-13,
+        "moment_about_r_Nmm": 1.8575035953539468e-12,
+        "moment_about_z_Nmm": -2.2260106055899954e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12183366183299667,
+        "socket_rel_tangential_max_mm": 2.0844284079017863e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -4.9625729064376595e-15,
+        "axial_N": -1.3311847911555481e-13,
+        "inplane_moment_Nmm": 2.4977702233139853e-12,
+        "tangential_N": -8.31517543905693,
+        "moment_about_r_Nmm": 66.2150245307846,
+        "moment_about_z_Nmm": -53.915036209659775,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 3.72282882635716e-15,
+        "socket_rel_tangential_max_mm": 0.0468064895076985
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -8.315175451955838,
+        "axial_N": -9.209805282293019,
+        "inplane_moment_Nmm": 110.89698395433356,
+        "tangential_N": 4.0044367768940485e-13,
+        "moment_about_r_Nmm": -2.3775724827230083e-12,
+        "moment_about_z_Nmm": 2.2340573968426173e-12,
+        "hinge_rotation_rad": 0.0,
+        "socket_rel_inplane_max_mm": 0.12183366183299318,
+        "socket_rel_tangential_max_mm": 2.432401000572081e-15
+       }
+      ]
+     },
+     "variant": "rigid_bond",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 53492.27890233834
+    },
+    {
+     "peak_surface_principal_strain": 0.08041789942395768,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 5.031913061595378e-13,
+        "axial_N": -1.7900924359826308e-13,
+        "inplane_moment_Nmm": 6.83731993897191e-13,
+        "tangential_N": 16.537643137992973,
+        "moment_about_r_Nmm": 94.25346284938917,
+        "moment_about_z_Nmm": 96.84895289705662,
+        "hinge_rotation_rad": -9.27203525831677e-15,
+        "socket_rel_inplane_max_mm": 5.6430104102101294e-14,
+        "socket_rel_tangential_max_mm": 0.09288316086890092
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 16.537643140406544,
+        "axial_N": -4.8878307264667455,
+        "inplane_moment_Nmm": -2.2737367544323206e-13,
+        "tangential_N": 2.358120327656806e-13,
+        "moment_about_r_Nmm": -6.07885514112536e-12,
+        "moment_about_z_Nmm": -3.803689420235183e-12,
+        "hinge_rotation_rad": -0.18305374848800848,
+        "socket_rel_inplane_max_mm": 0.7723386345499591,
+        "socket_rel_tangential_max_mm": 1.9329695845873425e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 2.0985956899163694e-13,
+        "axial_N": 2.845285562747237e-13,
+        "inplane_moment_Nmm": -4.2683198371012424e-13,
+        "tangential_N": -16.537643137992774,
+        "moment_about_r_Nmm": -94.253462849387,
+        "moment_about_z_Nmm": -96.8489528970548,
+        "hinge_rotation_rad": 5.73160967451183e-15,
+        "socket_rel_inplane_max_mm": 4.104566956409107e-14,
+        "socket_rel_tangential_max_mm": 0.09288316086890003
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -16.53764314040518,
+        "axial_N": 4.8878307264667455,
+        "inplane_moment_Nmm": -3.410605131648481e-13,
+        "tangential_N": -1.6242663926458448e-13,
+        "moment_about_r_Nmm": 7.79755246661311e-12,
+        "moment_about_z_Nmm": 5.074803268259741e-12,
+        "hinge_rotation_rad": 0.18305374848800376,
+        "socket_rel_inplane_max_mm": 0.7723386345499412,
+        "socket_rel_tangential_max_mm": 2.4399767470172913e-15
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 7.791899886067055e-13,
+        "axial_N": 5.908324588948432e-14,
+        "inplane_moment_Nmm": -2.458912829634808e-13,
+        "tangential_N": 16.71516165707783,
+        "moment_about_r_Nmm": -95.2751216306392,
+        "moment_about_z_Nmm": 97.25826951415843,
+        "hinge_rotation_rad": -6.559473240328115e-15,
+        "socket_rel_inplane_max_mm": 2.8552328934144294e-14,
+        "socket_rel_tangential_max_mm": 0.09113022942885607
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 16.715161669578265,
+        "axial_N": 4.9542960184799085,
+        "inplane_moment_Nmm": 4.092726157978177e-12,
+        "tangential_N": 1.1476249541387703e-12,
+        "moment_about_r_Nmm": -5.326294275458552e-12,
+        "moment_about_z_Nmm": 6.753084636477327e-12,
+        "hinge_rotation_rad": 0.181757752438805,
+        "socket_rel_inplane_max_mm": 0.7764068527200206,
+        "socket_rel_tangential_max_mm": 6.023885691566118e-15
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -1.039765785344729e-12,
+        "axial_N": -2.5470444280829047e-13,
+        "inplane_moment_Nmm": 1.090744240222513e-13,
+        "tangential_N": -16.715161657077715,
+        "moment_about_r_Nmm": 95.27512163063943,
+        "moment_about_z_Nmm": -97.25826951415866,
+        "hinge_rotation_rad": 8.090188806203575e-15,
+        "socket_rel_inplane_max_mm": 3.459604652757961e-14,
+        "socket_rel_tangential_max_mm": 0.09113022942885607
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -16.715161669577355,
+        "axial_N": -4.9542960184799085,
+        "inplane_moment_Nmm": -3.410605131648481e-12,
+        "tangential_N": -1.1018315837747768e-12,
+        "moment_about_r_Nmm": 5.420254952143612e-12,
+        "moment_about_z_Nmm": -6.6829166025216924e-12,
+        "hinge_rotation_rad": -0.18175775243880254,
+        "socket_rel_inplane_max_mm": 0.7764068527200146,
+        "socket_rel_tangential_max_mm": 6.397736535073176e-15
+       }
+      ]
+     },
+     "variant": "hinge_t",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 50732.13559659422
+    },
+    {
+     "peak_surface_principal_strain": 0.07813128081328127,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.4996830081408523e-12,
+        "axial_N": -3.364685484711255e-14,
+        "inplane_moment_Nmm": -1.1236091592184653e-13,
+        "tangential_N": 5.827088230226622,
+        "moment_about_r_Nmm": 9.094947017729282e-13,
+        "moment_about_z_Nmm": 1.3642420526593924e-12,
+        "hinge_rotation_rad": -2.6200848779968843e-14,
+        "socket_rel_inplane_max_mm": 1.2265764107025105e-13,
+        "socket_rel_tangential_max_mm": 0.2706001446301318
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.827088232386359,
+        "axial_N": -1.2732925824820995e-11,
+        "inplane_moment_Nmm": 5.684341886080801e-13,
+        "tangential_N": 3.8793667800242345e-13,
+        "moment_about_r_Nmm": 5.828008618290115e-14,
+        "moment_about_z_Nmm": 1.4449644405981085e-12,
+        "hinge_rotation_rad": -0.2189953565956987,
+        "socket_rel_inplane_max_mm": 0.907424759428398,
+        "socket_rel_tangential_max_mm": 2.3682298488771183e-14
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 1.7086940592223275e-12,
+        "axial_N": 2.7866043176480845e-13,
+        "inplane_moment_Nmm": 3.6332296694999683e-13,
+        "tangential_N": -5.827088230226678,
+        "moment_about_r_Nmm": -4.547473508864641e-13,
+        "moment_about_z_Nmm": -1.4779288903810084e-12,
+        "hinge_rotation_rad": 1.2030345361327471e-14,
+        "socket_rel_inplane_max_mm": 6.113921768905753e-14,
+        "socket_rel_tangential_max_mm": 0.27060014463012827
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.827088232383403,
+        "axial_N": 1.2732925824820995e-11,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": -3.755881221684587e-13,
+        "moment_about_r_Nmm": -6.94396762845016e-13,
+        "moment_about_z_Nmm": -1.0335231321590406e-12,
+        "hinge_rotation_rad": 0.21899535659568498,
+        "socket_rel_inplane_max_mm": 0.9074247594283396,
+        "socket_rel_tangential_max_mm": 2.6693912593181005e-14
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -8.235236376144956e-13,
+        "axial_N": 7.955461126838041e-14,
+        "inplane_moment_Nmm": -3.14611165357278e-13,
+        "tangential_N": 5.893626301834502,
+        "moment_about_r_Nmm": -3.637978807091713e-12,
+        "moment_about_z_Nmm": 2.2737367544323206e-12,
+        "hinge_rotation_rad": -1.3559938936017624e-15,
+        "socket_rel_inplane_max_mm": 1.1029539566204431e-14,
+        "socket_rel_tangential_max_mm": 0.2693197320371148
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 5.893626314070389,
+        "axial_N": -3.092281986027956e-11,
+        "inplane_moment_Nmm": 0.0,
+        "tangential_N": -6.76692240510099e-13,
+        "moment_about_r_Nmm": 1.1212561788196848e-12,
+        "moment_about_z_Nmm": -5.561365065559541e-12,
+        "hinge_rotation_rad": 0.21870497022004054,
+        "socket_rel_inplane_max_mm": 0.916947511798824,
+        "socket_rel_tangential_max_mm": 1.9308960357620846e-14
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 2.1288569978003484e-12,
+        "axial_N": 7.847328691377343e-13,
+        "inplane_moment_Nmm": 1.572833682548368e-12,
+        "tangential_N": -5.893626301834217,
+        "moment_about_r_Nmm": 1.3642420526593924e-12,
+        "moment_about_z_Nmm": -4.547473508864641e-13,
+        "hinge_rotation_rad": 9.423977008632463e-15,
+        "socket_rel_inplane_max_mm": 4.140509908151433e-14,
+        "socket_rel_tangential_max_mm": 0.26931973203711834
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -5.89362631406766,
+        "axial_N": 3.2741809263825417e-11,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": 1.1112434416830693e-13,
+        "moment_about_r_Nmm": -9.60765613934502e-13,
+        "moment_about_z_Nmm": 6.020496971692721e-13,
+        "hinge_rotation_rad": -0.21870497022003277,
+        "socket_rel_inplane_max_mm": 0.9169475117987891,
+        "socket_rel_tangential_max_mm": 1.0930034347679568e-14
+       }
+      ]
+     },
+     "variant": "ball",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 49081.01984232086
+    },
+    {
+     "peak_surface_principal_strain": 0.07780938422903722,
+     "stations": {
+      "G-12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": -3.452804944133807e-13,
+        "axial_N": 4.2789481312914483e-13,
+        "inplane_moment_Nmm": -2.347798939949873e-13,
+        "tangential_N": -1.1368683772161603e-13,
+        "moment_about_r_Nmm": -4.547473508864641e-13,
+        "moment_about_z_Nmm": -5.684341886080801e-13,
+        "hinge_rotation_rad": 1.2671523311678202e-14,
+        "socket_rel_inplane_max_mm": 7.134439659667588e-13,
+        "socket_rel_tangential_max_mm": 4.607452000470739
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.3642420526593924e-12,
+        "axial_N": -1.1368683772161603e-12,
+        "inplane_moment_Nmm": -1.1368683772161603e-13,
+        "tangential_N": -1.657214627536224e-14,
+        "moment_about_r_Nmm": 2.0585746050483172e-13,
+        "moment_about_z_Nmm": 2.6980058006821463e-13,
+        "hinge_rotation_rad": 0.2707175125338396,
+        "socket_rel_inplane_max_mm": 11.684152082952506,
+        "socket_rel_tangential_max_mm": 1.23754992986911e-13
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": 1.603884680555423e-13,
+        "axial_N": -4.555042949200612e-14,
+        "inplane_moment_Nmm": -2.8890924332785314e-13,
+        "tangential_N": 6.252776074688882e-13,
+        "moment_about_r_Nmm": 3.410605131648481e-13,
+        "moment_about_z_Nmm": 1.0231815394945443e-12,
+        "hinge_rotation_rad": -1.8722161032587873e-14,
+        "socket_rel_inplane_max_mm": 4.061618261950641e-13,
+        "socket_rel_tangential_max_mm": 4.607452000470165
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": -1.8189894035458565e-12,
+        "axial_N": 1.1368683772161603e-12,
+        "inplane_moment_Nmm": 3.410605131648481e-13,
+        "tangential_N": -1.0142445142776052e-14,
+        "moment_about_r_Nmm": 9.843648178893757e-14,
+        "moment_about_z_Nmm": 1.6742462497031192e-13,
+        "hinge_rotation_rad": -0.2707175125338454,
+        "socket_rel_inplane_max_mm": 11.684152082952078,
+        "socket_rel_tangential_max_mm": 7.136932446898197e-13
+       }
+      ],
+      "G+12": [
+       {
+        "rib_deg": 67.5,
+        "radial_N": 1.6649287057250615e-12,
+        "axial_N": -7.811951149387312e-14,
+        "inplane_moment_Nmm": -2.578315275386064e-13,
+        "tangential_N": 1.1368683772161603e-13,
+        "moment_about_r_Nmm": -6.821210263296962e-13,
+        "moment_about_z_Nmm": -1.5916157281026244e-12,
+        "hinge_rotation_rad": 1.306219206504742e-14,
+        "socket_rel_inplane_max_mm": 1.225615115647515e-12,
+        "socket_rel_tangential_max_mm": 25.877023230056242
+       },
+       {
+        "rib_deg": 157.5,
+        "radial_N": 1.8189894035458565e-12,
+        "axial_N": 9.094947017729282e-13,
+        "inplane_moment_Nmm": 9.094947017729282e-13,
+        "tangential_N": -6.974995168175325e-13,
+        "moment_about_r_Nmm": 3.573516082440071e-13,
+        "moment_about_z_Nmm": 6.060921712327888e-13,
+        "hinge_rotation_rad": 1.4075191312423303,
+        "socket_rel_inplane_max_mm": 38.485351488471984,
+        "socket_rel_tangential_max_mm": 6.243842790424099e-13
+       },
+       {
+        "rib_deg": 247.5,
+        "radial_N": -1.7395434090879361e-12,
+        "axial_N": -7.045491130549398e-13,
+        "inplane_moment_Nmm": 3.143359675575488e-13,
+        "tangential_N": 3.410605131648481e-13,
+        "moment_about_r_Nmm": 0.0,
+        "moment_about_z_Nmm": 6.821210263296962e-13,
+        "hinge_rotation_rad": -2.1965407162676602e-14,
+        "socket_rel_inplane_max_mm": 9.800839472154779e-13,
+        "socket_rel_tangential_max_mm": 25.877023230055297
+       },
+       {
+        "rib_deg": 337.5,
+        "radial_N": 3.637978807091713e-12,
+        "axial_N": -9.094947017729282e-13,
+        "inplane_moment_Nmm": 4.547473508864641e-13,
+        "tangential_N": 7.534587470973283e-14,
+        "moment_about_r_Nmm": 1.3812294274668212e-12,
+        "moment_about_z_Nmm": 3.280183575096645e-14,
+        "hinge_rotation_rad": -1.407519131242361,
+        "socket_rel_inplane_max_mm": 38.4853514884719,
+        "socket_rel_tangential_max_mm": 1.4804159510640781e-12
+       }
+      ]
+     },
+     "variant": "none",
+     "bending_axis_deg": 67.5,
+     "EI_Nmm2": 48468.92953861012
+    }
+   ],
+   "elapsed_s": 102.26041186900011
+  }
+ ]
+}

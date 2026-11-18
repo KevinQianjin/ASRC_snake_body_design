@@ -1,0 +1,1221 @@
+{
+ "scope": "Joint-concept screen on the rib-level model (companion to rib_joint_model.py).\n\nEach mounting rib's land patch at z = +/-12 mm is a rigid master with in-plane\nDOFs (u_r, u_z, beta). A joint variant ties a subset of them to the rigid guide\nbody; released components get their own free DOFs (an ideal frictionless\nrelease):\n\n  rigid_bond : u_r, u_z, beta tied (the published bonded-land concept)\n  pinned     : u_r, u_z tied, beta released (in-plane hinge at the land)\n  radial_only: u_r tied, u_z and beta released (axially sliding saddle)\n  none       : nothing tied (must reproduce the unbonded module)\n\nReported at the record-146 curvature (linear scaling): module EI, joint loads,\njoint stroke (relative land/guide motion in released components), strut-point\nmotion inside the +/-1.62 mm socket relative to the guide, and the peak\nin-plane principal strain in the ribs. Same assumptions as rib_joint_model.py.\n",
+ "parameters": {
+  "area": 0.02,
+  "E": 1700.0,
+  "nu": 0.4,
+  "kappa": 0.01748791036298669,
+  "psi": [
+   0,
+   22.5,
+   67.5
+  ],
+  "out": "evening_20261117/rib_joint"
+ },
+ "mesh": {
+  "nodes": 29547,
+  "triangles": 54715
+ },
+ "cases": [
+  {
+   "EI_Nmm2": 44793.925484909814,
+   "peak_principal_strain": 0.07337620462106878,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 1.4239560641726712e-09,
+      "axial_N": -6.277317947265857,
+      "moment_Nmm": 120.95480324085952,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.14593397637550548,
+      "socket_rel_axial_max_mm": 0.14132746139354246
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 5.90020476920472e-10,
+      "axial_N": -2.600150229085802,
+      "moment_Nmm": 50.10111993652822,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.060447832225766156,
+      "socket_rel_axial_max_mm": 0.05853975124496236
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.4240697510103928e-09,
+      "axial_N": 6.27731794726585,
+      "moment_Nmm": -120.95480324086282,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.1459339763755057,
+      "socket_rel_axial_max_mm": 0.14132746139354246
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -5.899210009374656e-10,
+      "axial_N": 2.600150229085372,
+      "moment_Nmm": -50.10111993653135,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.060447832225769334,
+      "socket_rel_axial_max_mm": 0.058539751244965466
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 1.073749444913119e-08,
+      "axial_N": 6.291842266187814,
+      "moment_Nmm": -120.860337075919,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.14313967466488636,
+      "socket_rel_axial_max_mm": 0.1387637159470625
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 4.448338586371392e-09,
+      "axial_N": 2.6061663989667068,
+      "moment_Nmm": -50.061990769824774,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.05929039455986897,
+      "socket_rel_axial_max_mm": 0.05747781311056155
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.073749444913119e-08,
+      "axial_N": -6.291842266187814,
+      "moment_Nmm": 120.86033707592037,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 3.552713678800501e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.14313967466489325,
+      "socket_rel_axial_max_mm": 0.1387637159470696
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -4.448338586371392e-09,
+      "axial_N": -2.606166398968071,
+      "moment_Nmm": 50.06199076982648,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.05929039455987241,
+      "socket_rel_axial_max_mm": 0.0574778131105651
+     }
+    ]
+   },
+   "variant": "rigid_bond",
+   "bending_axis_deg": 0
+  },
+  {
+   "EI_Nmm2": 39508.62381372934,
+   "peak_principal_strain": 0.06546399083218435,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 4.1234216041630134e-10,
+      "axial_N": -1.2732925824820995e-11,
+      "moment_Nmm": 6.0254023992456496e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -1.7763568394002505e-15,
+      "stroke_rotation_rad": -0.27374027436296655,
+      "socket_rel_max_mm": 1.1230923881500166,
+      "socket_rel_axial_max_mm": 1.0332089763241648
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.709850039333105e-10,
+      "axial_N": -5.172751116333529e-12,
+      "moment_Nmm": -5.343281372915953e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.1133869342088924,
+      "socket_rel_max_mm": 0.4652000989698002,
+      "socket_rel_axial_max_mm": 0.42796917075915974
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -4.133653419557959e-10,
+      "axial_N": 1.261923898709938e-11,
+      "moment_Nmm": -5.7980287238024175e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.27374027436297366,
+      "socket_rel_max_mm": 1.1230923881500443,
+      "socket_rel_axial_max_mm": 1.0332089763241896
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.7251977624255233e-10,
+      "axial_N": 5.172751116333529e-12,
+      "moment_Nmm": 3.069544618483633e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.11338693420889628,
+      "socket_rel_max_mm": 0.46520009896981945,
+      "socket_rel_axial_max_mm": 0.4279691707591775
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 9.72795533016324e-09,
+      "axial_N": -2.637534635141492e-11,
+      "moment_Nmm": -2.0463630789890885e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.2739867006756591,
+      "socket_rel_max_mm": 1.139335198910979,
+      "socket_rel_axial_max_mm": 1.0502087847039867
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 4.029061528854072e-09,
+      "axial_N": -1.0913936421275139e-11,
+      "moment_Nmm": -1.8189894035458565e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.11348900732970113,
+      "socket_rel_max_mm": 0.47192809147791404,
+      "socket_rel_axial_max_mm": 0.43501072194769996
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -9.726136340759695e-09,
+      "axial_N": 2.4556356947869062e-11,
+      "moment_Nmm": 1.3642420526593924e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.2739867006756622,
+      "socket_rel_max_mm": 1.139335198910985,
+      "socket_rel_axial_max_mm": 1.0502087847039903
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -4.030880518257618e-09,
+      "axial_N": 1.000444171950221e-11,
+      "moment_Nmm": 3.410605131648481e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.11348900732970496,
+      "socket_rel_max_mm": 0.47192809147792525,
+      "socket_rel_axial_max_mm": 0.4350107219477106
+     }
+    ]
+   },
+   "variant": "pinned",
+   "bending_axis_deg": 0
+  },
+  {
+   "EI_Nmm2": 39508.623813673315,
+   "peak_principal_strain": 0.06546399083221796,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 4.1382008930668235e-10,
+      "axial_N": -4.547473508864641e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 9.426507638905546,
+      "stroke_rotation_rad": 0.2154770530693769,
+      "socket_rel_max_mm": 10.168858116115922,
+      "socket_rel_axial_max_mm": 10.163622100413049
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.722924025671091e-10,
+      "axial_N": -4.547473508864641e-13,
+      "moment_Nmm": 0.0,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 3.904587309847956,
+      "stroke_rotation_rad": 0.08925351776147972,
+      "socket_rel_max_mm": 4.212078945542462,
+      "socket_rel_axial_max_mm": 4.209910116825535
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -4.1302428144263104e-10,
+      "axial_N": 1.0231815394945443e-12,
+      "moment_Nmm": -1.1368683772161603e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -9.426507638904523,
+      "stroke_rotation_rad": -0.21547705306938172,
+      "socket_rel_max_mm": 10.168858116114922,
+      "socket_rel_axial_max_mm": 10.163622100412047
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.709281605144497e-10,
+      "axial_N": 3.410605131648481e-13,
+      "moment_Nmm": 5.684341886080802e-14,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -3.9045873098469324,
+      "stroke_rotation_rad": -0.0892535177614849,
+      "socket_rel_max_mm": 4.212078945541459,
+      "socket_rel_axial_max_mm": 4.209910116824532
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 9.722498361952603e-09,
+      "axial_N": -1.8189894035458565e-12,
+      "moment_Nmm": 6.821210263296962e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 20.379071789267723,
+      "stroke_rotation_rad": 1.3348964112733466,
+      "socket_rel_max_mm": 25.419115658421465,
+      "socket_rel_axial_max_mm": 25.33149677500456
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 4.031790012959391e-09,
+      "axial_N": 4.547473508864641e-13,
+      "moment_Nmm": 6.821210263296962e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 8.441287923689421,
+      "stroke_rotation_rad": 0.552932197912557,
+      "socket_rel_max_mm": 10.528942449248133,
+      "socket_rel_axial_max_mm": 10.492649519416867
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -9.724317351356149e-09,
+      "axial_N": 1.8189894035458565e-12,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -20.379071789265993,
+      "stroke_rotation_rad": -1.334896411273345,
+      "socket_rel_max_mm": 25.41911565841973,
+      "socket_rel_axial_max_mm": 25.33149677500282
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -4.029061528854072e-09,
+      "axial_N": 9.094947017729282e-13,
+      "moment_Nmm": -6.821210263296962e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -8.441287923687668,
+      "stroke_rotation_rad": -0.5529321979125534,
+      "socket_rel_max_mm": 10.528942449246372,
+      "socket_rel_axial_max_mm": 10.492649519415101
+     }
+    ]
+   },
+   "variant": "radial_only",
+   "bending_axis_deg": 0
+  },
+  {
+   "EI_Nmm2": 39508.62379854228,
+   "peak_principal_strain": 0.06546399081267082,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 1.3642420526593924e-12,
+      "axial_N": -4.547473508864641e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": -0.8247765719720954,
+      "stroke_axial_mm": 9.426507643442454,
+      "stroke_rotation_rad": 0.21547705345825108,
+      "socket_rel_max_mm": 10.175839486898486,
+      "socket_rel_axial_max_mm": 10.163622106475787
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 5.115907697472721e-13,
+      "axial_N": -9.094947017729282e-13,
+      "moment_Nmm": 5.684341886080802e-14,
+      "stroke_radial_mm": -0.34163364204034613,
+      "stroke_axial_mm": 3.904587311728968,
+      "stroke_rotation_rad": 0.08925351792265941,
+      "socket_rel_max_mm": 4.214970724006809,
+      "socket_rel_axial_max_mm": 4.209910119338969
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.1368683772161603e-12,
+      "axial_N": 1.1368683772161603e-12,
+      "moment_Nmm": -1.1368683772161603e-13,
+      "stroke_radial_mm": 0.824776571972128,
+      "stroke_axial_mm": -9.426507643442013,
+      "stroke_rotation_rad": -0.21547705345824675,
+      "socket_rel_max_mm": 10.175839486898038,
+      "socket_rel_axial_max_mm": 10.163622106475335
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.1368683772161603e-13,
+      "axial_N": 5.115907697472721e-13,
+      "moment_Nmm": 5.684341886080802e-14,
+      "stroke_radial_mm": 0.34163364204030244,
+      "stroke_axial_mm": -3.9045873117286343,
+      "stroke_rotation_rad": -0.08925351792266796,
+      "socket_rel_max_mm": 4.214970724006502,
+      "socket_rel_axial_max_mm": 4.209910119338663
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": -1.8189894035458565e-12,
+      "axial_N": -1.8189894035458565e-12,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": -19.45405574605623,
+      "stroke_axial_mm": 20.379071792904302,
+      "stroke_rotation_rad": 1.3348964114460355,
+      "socket_rel_max_mm": 33.266171243713664,
+      "socket_rel_axial_max_mm": 25.33149677923441
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": -1.8189894035458565e-12,
+      "axial_N": 1.3642420526593924e-12,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": -8.058133733183272,
+      "stroke_axial_mm": 8.44128792519847,
+      "stroke_rotation_rad": 0.5529321979842736,
+      "socket_rel_max_mm": 13.779299297377486,
+      "socket_rel_axial_max_mm": 10.492649521172343
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.8189894035458565e-12,
+      "axial_N": 0.0,
+      "moment_Nmm": 2.2737367544323206e-13,
+      "stroke_radial_mm": 19.454055746056067,
+      "stroke_axial_mm": -20.379071792903797,
+      "stroke_rotation_rad": -1.3348964114460067,
+      "socket_rel_max_mm": 33.266171243713075,
+      "socket_rel_axial_max_mm": 25.331496779233813
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": 0.0,
+      "axial_N": -9.094947017729282e-13,
+      "moment_Nmm": -5.684341886080801e-13,
+      "stroke_radial_mm": 8.058133733183197,
+      "stroke_axial_mm": -8.441287925198088,
+      "stroke_rotation_rad": -0.5529321979842605,
+      "socket_rel_max_mm": 13.779299297377102,
+      "socket_rel_axial_max_mm": 10.492649521171916
+     }
+    ]
+   },
+   "variant": "none",
+   "bending_axis_deg": 0
+  },
+  {
+   "EI_Nmm2": 44793.9254849104,
+   "peak_principal_strain": 0.07682036025988101,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 1.0926299864877365e-09,
+      "axial_N": -4.8044511562141174,
+      "moment_Nmm": 92.5747985305278,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.11169302995612418,
+      "socket_rel_axial_max_mm": 0.10816735602704686
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.0922178717009956e-09,
+      "axial_N": -4.804451156214316,
+      "moment_Nmm": 92.57479853052939,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.11169302995613442,
+      "socket_rel_axial_max_mm": 0.10816735602705663
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.093724222300807e-09,
+      "axial_N": 4.804451156214075,
+      "moment_Nmm": -92.57479853053303,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 8.881784197001252e-16,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.11169302995612773,
+      "socket_rel_axial_max_mm": 0.10816735602705041
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.0923031368292868e-09,
+      "axial_N": 4.804451156214569,
+      "moment_Nmm": -92.57479853053451,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.1116930299561397,
+      "socket_rel_axial_max_mm": 0.10816735602706196
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 8.220013114623725e-09,
+      "axial_N": 4.815567588649174,
+      "moment_Nmm": -92.50249725802541,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.1095543640167588,
+      "socket_rel_axial_max_mm": 0.10620515021270904
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 8.216375135816634e-09,
+      "axial_N": 4.815567588649174,
+      "moment_Nmm": -92.50249725803269,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.10955436401676785,
+      "socket_rel_axial_max_mm": 0.10620515021271792
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -8.21819412522018e-09,
+      "axial_N": -4.815567588650083,
+      "moment_Nmm": 92.50249725802769,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.10955436401676397,
+      "socket_rel_axial_max_mm": 0.10620515021271437
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -8.21819412522018e-09,
+      "axial_N": -4.8155675886509925,
+      "moment_Nmm": 92.50249725803519,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.109554364016773,
+      "socket_rel_axial_max_mm": 0.10620515021272325
+     }
+    ]
+   },
+   "variant": "rigid_bond",
+   "bending_axis_deg": 22.5
+  },
+  {
+   "EI_Nmm2": 39508.623813729355,
+   "peak_principal_strain": 0.07085771307671676,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 3.163904693792574e-10,
+      "axial_N": -9.833911462919787e-12,
+      "moment_Nmm": 2.751221472863108e-11,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -1.7763568394002505e-15,
+      "stroke_rotation_rad": -0.20951173553955196,
+      "socket_rel_max_mm": 0.8595776999207224,
+      "socket_rel_axial_max_mm": 0.7907839148203228
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 3.1513991416431963e-10,
+      "axial_N": -9.43600753089413e-12,
+      "moment_Nmm": -1.4779288903810084e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.209511735539601,
+      "socket_rel_max_mm": 0.8595776999208548,
+      "socket_rel_axial_max_mm": 0.7907839148204383
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -3.1820945878280327e-10,
+      "axial_N": 9.833911462919787e-12,
+      "moment_Nmm": -2.717115421546623e-11,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -8.881784197001252e-16,
+      "stroke_rotation_rad": 0.20951173553956,
+      "socket_rel_max_mm": 0.859577699920754,
+      "socket_rel_axial_max_mm": 0.7907839148203513
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -3.1729996408103034e-10,
+      "axial_N": 9.777068044058979e-12,
+      "moment_Nmm": -2.8421709430404007e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.20951173553960636,
+      "socket_rel_max_mm": 0.8595776999208806,
+      "socket_rel_axial_max_mm": 0.7907839148204623
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 7.444214134011418e-09,
+      "axial_N": -2.091837814077735e-11,
+      "moment_Nmm": -2.5011104298755527e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.20970034207386834,
+      "socket_rel_max_mm": 0.8720094090671145,
+      "socket_rel_axial_max_mm": 0.8037950048608735
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 7.443304639309645e-09,
+      "axial_N": -2.091837814077735e-11,
+      "moment_Nmm": -2.9558577807620168e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.2097003420739184,
+      "socket_rel_max_mm": 0.872009409067325,
+      "socket_rel_axial_max_mm": 0.8037950048610689
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -7.448761607520282e-09,
+      "axial_N": 1.8189894035458565e-11,
+      "moment_Nmm": 2.0463630789890885e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": -0.209700342073872,
+      "socket_rel_max_mm": 0.8720094090671259,
+      "socket_rel_axial_max_mm": 0.8037950048608842
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -7.444214134011418e-09,
+      "axial_N": 2.000888343900442e-11,
+      "moment_Nmm": 2.2737367544323206e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.20970034207392274,
+      "socket_rel_max_mm": 0.8720094090673441,
+      "socket_rel_axial_max_mm": 0.8037950048610867
+     }
+    ]
+   },
+   "variant": "pinned",
+   "bending_axis_deg": 22.5
+  },
+  {
+   "EI_Nmm2": 39508.623813674494,
+   "peak_principal_strain": 0.07085771307684524,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 3.163904693792574e-10,
+      "axial_N": -1.7053025658242404e-13,
+      "moment_Nmm": -5.684341886080802e-14,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 7.214736596944797,
+      "stroke_rotation_rad": 0.16491899652900682,
+      "socket_rel_max_mm": 7.7829070542182475,
+      "socket_rel_axial_max_mm": 7.778899581296062
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 3.1729996408103034e-10,
+      "axial_N": -5.684341886080802e-14,
+      "moment_Nmm": 3.979039320256561e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 7.2147365969434505,
+      "stroke_rotation_rad": 0.16491899652893657,
+      "socket_rel_max_mm": 7.78290705421663,
+      "socket_rel_axial_max_mm": 7.778899581294446
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -3.15026227326598e-10,
+      "axial_N": 0.0,
+      "moment_Nmm": 5.115907697472721e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -7.214736596943388,
+      "stroke_rotation_rad": -0.16491899652901348,
+      "socket_rel_max_mm": 7.782907054216868,
+      "socket_rel_axial_max_mm": 7.778899581294681
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -3.1525360100204125e-10,
+      "axial_N": -1.1368683772161603e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -7.214736596942037,
+      "stroke_rotation_rad": -0.16491899652894373,
+      "socket_rel_max_mm": 7.782907054215247,
+      "socket_rel_axial_max_mm": 7.778899581293063
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 7.444214134011418e-09,
+      "axial_N": 0.0,
+      "moment_Nmm": 2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 15.597466281464358,
+      "stroke_rotation_rad": 1.0216854810359022,
+      "socket_rel_max_mm": 19.454948855701318,
+      "socket_rel_axial_max_mm": 19.387888265609362
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 7.443304639309645e-09,
+      "axial_N": -9.094947017729282e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 15.597466281462177,
+      "stroke_rotation_rad": 1.0216854810357627,
+      "socket_rel_max_mm": 19.454948855698607,
+      "socket_rel_axial_max_mm": 19.38788826560666
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -7.4451236287131906e-09,
+      "axial_N": -2.7284841053187847e-12,
+      "moment_Nmm": 4.547473508864641e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -15.59746628146194,
+      "stroke_rotation_rad": -1.021685481035899,
+      "socket_rel_max_mm": 19.454948855698895,
+      "socket_rel_axial_max_mm": 19.387888265606932
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -7.4451236287131906e-09,
+      "axial_N": 0.0,
+      "moment_Nmm": 0.0,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -15.597466281459749,
+      "stroke_rotation_rad": -1.0216854810357598,
+      "socket_rel_max_mm": 19.454948855696177,
+      "socket_rel_axial_max_mm": 19.38788826560422
+     }
+    ]
+   },
+   "variant": "radial_only",
+   "bending_axis_deg": 22.5
+  },
+  {
+   "EI_Nmm2": 39508.623798541776,
+   "peak_principal_strain": 0.07085771305559244,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 7.958078640513122e-13,
+      "axial_N": -1.1368683772161603e-13,
+      "moment_Nmm": 2.8421709430404007e-13,
+      "stroke_radial_mm": -0.6312566589942973,
+      "stroke_axial_mm": 7.214736600416959,
+      "stroke_rotation_rad": 0.16491899682666875,
+      "socket_rel_max_mm": 7.788250364085557,
+      "socket_rel_axial_max_mm": 7.778899585936168
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": -1.1368683772161603e-13,
+      "axial_N": -6.252776074688882e-13,
+      "moment_Nmm": -1.1368683772161603e-13,
+      "stroke_radial_mm": -0.6312566589938552,
+      "stroke_axial_mm": 7.214736600417385,
+      "stroke_rotation_rad": 0.16491899682665342,
+      "socket_rel_max_mm": 7.788250364085908,
+      "socket_rel_axial_max_mm": 7.778899585936539
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": 0.0,
+      "axial_N": 3.410605131648481e-13,
+      "moment_Nmm": 1.7053025658242404e-13,
+      "stroke_radial_mm": 0.6312566589943202,
+      "stroke_axial_mm": -7.214736600416444,
+      "stroke_rotation_rad": -0.1649189968266664,
+      "socket_rel_max_mm": 7.788250364085039,
+      "socket_rel_axial_max_mm": 7.7788995859356485
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": 2.2737367544323206e-13,
+      "axial_N": 5.115907697472721e-13,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": 0.631256658993806,
+      "stroke_axial_mm": -7.214736600416971,
+      "stroke_rotation_rad": -0.16491899682666428,
+      "socket_rel_max_mm": 7.788250364085525,
+      "socket_rel_axial_max_mm": 7.778899585936159
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": -1.8189894035458565e-12,
+      "axial_N": -9.094947017729282e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": -14.889489652646716,
+      "stroke_axial_mm": 15.597466284246691,
+      "stroke_rotation_rad": 1.0216854811680214,
+      "socket_rel_max_mm": 25.460825186379598,
+      "socket_rel_axial_max_mm": 19.387888268845572
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 0.0,
+      "axial_N": 9.094947017729282e-13,
+      "moment_Nmm": 6.821210263296962e-13,
+      "stroke_radial_mm": -14.889489652647248,
+      "stroke_axial_mm": 15.597466284248153,
+      "stroke_rotation_rad": 1.0216854811681146,
+      "socket_rel_max_mm": 25.460825186381406,
+      "socket_rel_axial_max_mm": 19.387888268847373
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": 1.8189894035458565e-12,
+      "axial_N": 1.8189894035458565e-12,
+      "moment_Nmm": 2.2737367544323206e-13,
+      "stroke_radial_mm": 14.889489652646603,
+      "stroke_axial_mm": -15.597466284245932,
+      "stroke_rotation_rad": -1.0216854811680016,
+      "socket_rel_max_mm": 25.460825186378877,
+      "socket_rel_axial_max_mm": 19.38788826884475
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": 0.0,
+      "axial_N": -9.094947017729282e-13,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": 14.889489652647216,
+      "stroke_axial_mm": -15.59746628424751,
+      "stroke_rotation_rad": -1.0216854811681082,
+      "socket_rel_max_mm": 25.460825186380877,
+      "socket_rel_axial_max_mm": 19.387888268846712
+     }
+    ]
+   },
+   "variant": "none",
+   "bending_axis_deg": 22.5
+  },
+  {
+   "EI_Nmm2": 44793.92548490764,
+   "peak_principal_strain": 0.07942183156882596,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 8.957919232605083e-13,
+      "axial_N": 4.488004911529008e-13,
+      "moment_Nmm": -8.931548765097609e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 1.7773514647181926e-14,
+      "socket_rel_axial_max_mm": 1.7136046085036967e-14
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.542275640531443e-09,
+      "axial_N": -6.794519984877226,
+      "moment_Nmm": 130.92053561582304,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.15795779778651164,
+      "socket_rel_axial_max_mm": 0.15297174189950447
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.6664358386275994e-12,
+      "axial_N": -5.935431080259151e-13,
+      "moment_Nmm": 2.661285139835948e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 1.3344115963078402e-14,
+      "socket_rel_axial_max_mm": 1.2740311104155216e-14
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.5432419786520768e-09,
+      "axial_N": 6.79451998487729,
+      "moment_Nmm": -130.9205356158294,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.15795779778651337,
+      "socket_rel_axial_max_mm": 0.15297174189950624
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": -3.6996191260897424e-13,
+      "axial_N": -1.7828808987921983e-12,
+      "moment_Nmm": 1.1808464881459533e-11,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 1.7590956267847922e-14,
+      "socket_rel_axial_max_mm": 1.70934105698599e-14
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.1625161278061569e-08,
+      "axial_N": 6.810240994396736,
+      "moment_Nmm": -130.8182861756909,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.15493326740966162,
+      "socket_rel_axial_max_mm": 0.15019676382468816
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.7847270944079983e-13,
+      "axial_N": 1.1307752750261429e-12,
+      "moment_Nmm": -8.903213603365963e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 1.3482814441675983e-14,
+      "socket_rel_axial_max_mm": 1.304833628359166e-14
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.1626980267465115e-08,
+      "axial_N": -6.810240994394917,
+      "moment_Nmm": 130.81828617569386,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.0,
+      "socket_rel_max_mm": 0.15493326740966593,
+      "socket_rel_axial_max_mm": 0.15019676382469171
+     }
+    ]
+   },
+   "variant": "rigid_bond",
+   "bending_axis_deg": 67.5
+  },
+  {
+   "EI_Nmm2": 39508.62381372629,
+   "peak_principal_strain": 0.07085771307581129,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": -1.99907372902552e-12,
+      "axial_N": -3.6884565718992366e-13,
+      "moment_Nmm": -4.1746032417086354e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 2.6478444768761544e-14,
+      "socket_rel_max_mm": 1.0322298513265383e-13,
+      "socket_rel_axial_max_mm": 9.39466456824582e-14
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 4.4872194848721847e-10,
+      "axial_N": -1.2846612662542611e-11,
+      "moment_Nmm": 1.057287590811029e-11,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.7763568394002505e-15,
+      "stroke_rotation_rad": -0.2962943378764072,
+      "socket_rel_max_mm": 1.2156264411414832,
+      "socket_rel_axial_max_mm": 1.1183373372455012
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": 5.904675444693943e-13,
+      "axial_N": 2.5335093466932823e-13,
+      "moment_Nmm": 4.772562332289612e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -2.0109730257561432e-14,
+      "socket_rel_max_mm": 8.122389480554175e-14,
+      "socket_rel_axial_max_mm": 7.441780147103848e-14
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -4.501998773775995e-10,
+      "axial_N": 1.318767317570746e-11,
+      "moment_Nmm": -1.057287590811029e-11,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.2962943378764129,
+      "socket_rel_max_mm": 1.21562644114151,
+      "socket_rel_axial_max_mm": 1.118337337245526
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 2.099678491323111e-13,
+      "axial_N": -5.804604809153572e-13,
+      "moment_Nmm": -3.680093832068787e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -6.517019525161067e-14,
+      "socket_rel_max_mm": 2.834397798011729e-13,
+      "socket_rel_axial_max_mm": 2.6261173618000556e-13
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.0524672688916326e-08,
+      "axial_N": -3.092281986027956e-11,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 0.2965610677952397,
+      "socket_rel_max_mm": 1.2332075328200853,
+      "socket_rel_axial_max_mm": 1.1367377972423895
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -2.4185169504974473e-12,
+      "axial_N": -8.367615152854982e-13,
+      "moment_Nmm": 5.468783969157231e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": 6.202801191828741e-14,
+      "socket_rel_max_mm": 2.7081167189201197e-13,
+      "socket_rel_axial_max_mm": 2.5104489729125704e-13
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.0526491678319871e-08,
+      "axial_N": 2.637534635141492e-11,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 0.0,
+      "stroke_rotation_rad": -0.29656106779524305,
+      "socket_rel_max_mm": 1.2332075328200993,
+      "socket_rel_axial_max_mm": 1.1367377972424002
+     }
+    ]
+   },
+   "variant": "pinned",
+   "bending_axis_deg": 67.5
+  },
+  {
+   "EI_Nmm2": 39508.62381367783,
+   "peak_principal_strain": 0.07085771307589586,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 4.704148312797506e-13,
+      "axial_N": 3.430163883628534e-13,
+      "moment_Nmm": 1.8262884239982913e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 8.41419978437747e-13,
+      "stroke_rotation_rad": -1.4218740535231267e-14,
+      "socket_rel_max_mm": 8.824171134482394e-13,
+      "socket_rel_axial_max_mm": 8.821754776256208e-13
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 4.483808879740536e-10,
+      "axial_N": -1.1368683772161603e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 10.203178344347375,
+      "stroke_rotation_rad": 0.2332306815842074,
+      "socket_rel_max_mm": 11.006692710762916,
+      "socket_rel_axial_max_mm": 11.00102528820552
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": 1.4645042596004728e-12,
+      "axial_N": -2.69547382493172e-13,
+      "moment_Nmm": 1.6022031641661788e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 6.763113988656124e-13,
+      "stroke_rotation_rad": 6.905929408933147e-15,
+      "socket_rel_max_mm": 7.058394884282512e-13,
+      "socket_rel_axial_max_mm": 7.057485611726753e-13
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -4.46789272245951e-10,
+      "axial_N": 3.410605131648481e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -10.203178344345853,
+      "stroke_rotation_rad": -0.2332306815842152,
+      "socket_rel_max_mm": 11.006692710761426,
+      "socket_rel_axial_max_mm": 11.00102528820403
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": -7.149474148924269e-13,
+      "axial_N": -4.054195561009892e-13,
+      "moment_Nmm": 3.2458542724931585e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 1.8702341388837913e-12,
+      "stroke_rotation_rad": 4.749481025206571e-14,
+      "socket_rel_max_mm": 2.050195151662566e-12,
+      "socket_rel_axial_max_mm": 2.048805239479755e-12
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": 1.0526491678319871e-08,
+      "axial_N": 0.0,
+      "moment_Nmm": -6.821210263296962e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 22.058148353901696,
+      "stroke_rotation_rad": 1.4448814637605263,
+      "socket_rel_max_mm": 27.513452527005008,
+      "socket_rel_axial_max_mm": 27.418614530996226
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -3.6676436598542935e-13,
+      "axial_N": -1.7596506203638433e-13,
+      "moment_Nmm": -1.043062074676031e-12,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": 7.229433380910354e-13,
+      "stroke_rotation_rad": -4.6927438404834325e-14,
+      "socket_rel_max_mm": 8.873373933064524e-13,
+      "socket_rel_axial_max_mm": 8.84317879602314e-13
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": -1.0526491678319871e-08,
+      "axial_N": 0.0,
+      "moment_Nmm": -4.547473508864641e-13,
+      "stroke_radial_mm": 0.0,
+      "stroke_axial_mm": -22.058148353899096,
+      "stroke_rotation_rad": -1.4448814637605263,
+      "socket_rel_max_mm": 27.513452527002414,
+      "socket_rel_axial_max_mm": 27.418614530993626
+     }
+    ]
+   },
+   "variant": "radial_only",
+   "bending_axis_deg": 67.5
+  },
+  {
+   "EI_Nmm2": 39508.623798544264,
+   "peak_principal_strain": 0.07085771305561894,
+   "stations": {
+    "G-12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 6.362786385149779e-14,
+      "axial_N": 9.627286619339535e-14,
+      "moment_Nmm": -3.974667533296343e-14,
+      "stroke_radial_mm": -2.6899988374758423e-12,
+      "stroke_axial_mm": 1.0034196483984996e-12,
+      "stroke_rotation_rad": 7.448012834709566e-14,
+      "socket_rel_max_mm": 2.9546246593884754e-12,
+      "socket_rel_axial_max_mm": 1.2971219514386302e-12
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": -5.684341886080801e-13,
+      "axial_N": -5.684341886080801e-13,
+      "moment_Nmm": 6.821210263296962e-13,
+      "stroke_radial_mm": -0.8927317284846489,
+      "stroke_axial_mm": 10.203178349258584,
+      "stroke_rotation_rad": 0.23323068200513855,
+      "socket_rel_max_mm": 11.014249292045802,
+      "socket_rel_axial_max_mm": 11.001025294768352
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": 1.2048963401942494e-13,
+      "axial_N": -3.515504317030612e-14,
+      "moment_Nmm": 1.2168963434065014e-13,
+      "stroke_radial_mm": 2.6794152583094323e-12,
+      "stroke_axial_mm": -5.875256039922412e-13,
+      "stroke_rotation_rad": -7.878193075854456e-14,
+      "socket_rel_max_mm": 2.8473333567444774e-12,
+      "socket_rel_axial_max_mm": 8.964615779973602e-13
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": 1.1368683772161603e-12,
+      "axial_N": -2.2737367544323206e-13,
+      "moment_Nmm": -2.2737367544323206e-13,
+      "stroke_radial_mm": 0.8927317284845927,
+      "stroke_axial_mm": -10.203178349258232,
+      "stroke_rotation_rad": -0.23323068200515065,
+      "socket_rel_max_mm": 11.014249292045486,
+      "socket_rel_axial_max_mm": 11.001025294768038
+     }
+    ],
+    "G+12": [
+     {
+      "rib_deg": 67.5,
+      "radial_N": 6.191804727622693e-13,
+      "axial_N": 1.3341095329861735e-12,
+      "moment_Nmm": -4.514044559211499e-13,
+      "stroke_radial_mm": -4.2098221672444555e-12,
+      "stroke_axial_mm": 1.292887792625774e-12,
+      "stroke_rotation_rad": 5.815278513695936e-14,
+      "socket_rel_max_mm": 4.555897654631848e-12,
+      "socket_rel_axial_max_mm": 1.5034508116031e-12
+     },
+     {
+      "rib_deg": 157.5,
+      "radial_N": -1.8189894035458565e-12,
+      "axial_N": 3.637978807091713e-12,
+      "moment_Nmm": -9.094947017729282e-13,
+      "stroke_radial_mm": -21.05691820358278,
+      "stroke_axial_mm": 22.058148357839478,
+      "stroke_rotation_rad": 1.4448814639475485,
+      "socket_rel_max_mm": 36.00704428778662,
+      "socket_rel_axial_max_mm": 27.41861453557655
+     },
+     {
+      "rib_deg": 247.5,
+      "radial_N": -1.216491304047754e-13,
+      "axial_N": 7.833212485273655e-14,
+      "moment_Nmm": 2.819148393255666e-12,
+      "stroke_radial_mm": 4.130653981721099e-12,
+      "stroke_axial_mm": -2.5476389234587257e-13,
+      "stroke_rotation_rad": -3.89540637509675e-14,
+      "socket_rel_max_mm": 4.212670747417188e-12,
+      "socket_rel_axial_max_mm": 4.049104270303864e-13
+     },
+     {
+      "rib_deg": 337.5,
+      "radial_N": 3.637978807091713e-12,
+      "axial_N": 0.0,
+      "moment_Nmm": -1.1368683772161603e-12,
+      "stroke_radial_mm": 21.05691820358284,
+      "stroke_axial_mm": -22.058148357838636,
+      "stroke_rotation_rad": -1.444881463947558,
+      "socket_rel_max_mm": 36.007044287786044,
+      "socket_rel_axial_max_mm": 27.41861453557573
+     }
+    ]
+   },
+   "variant": "none",
+   "bending_axis_deg": 67.5
+  }
+ ]
+}

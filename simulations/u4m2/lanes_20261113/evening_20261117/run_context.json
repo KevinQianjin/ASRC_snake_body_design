@@ -1,0 +1,57 @@
+{
+  "edition": "Evening Report",
+  "report_date_et": "2026-11-17",
+  "run_start_et": "2026-11-17T20:02:11-05:00",
+  "run_start_utc": "2026-11-18T01:02:11Z",
+  "deadline_et": "2026-11-17T22:02:11-05:00",
+  "deadline_utc": "2026-11-18T03:02:11Z",
+  "expensive_work_stop_et": "2026-11-17T21:37:11-05:00",
+  "expensive_work_stop_utc": "2026-11-18T02:37:11Z",
+  "reporting_interval_et": [
+    "2026-11-16T20:02:11-05:00",
+    "2026-11-17T20:02:11-05:00"
+  ],
+  "reporting_interval_utc": [
+    "2026-11-17T01:02:11Z",
+    "2026-11-18T01:02:11Z"
+  ],
+  "base_revisions": {
+    "origin_main": "b8c0f3a",
+    "previous_claude_great_goodall_1wf2yh": "db34ee0 (contained in origin/main)",
+    "codex_guide_validation": "df19061 (contained in origin/main)"
+  },
+  "branch": "claude/great-goodall-1wf2yh",
+  "branch_reconciliation": "fast-forwarded to origin/main b8c0f3a; no other branch had commits in the interval",
+  "requested_model": "Claude Opus 5.5",
+  "model_verification": "Session configuration names claude-opus-5-5; no get_session metadata tool was available in this run, so the serving model is not independently verified.",
+  "python": "3.13.18",
+  "python_note": "/usr/bin/python3 (3.13) used because pip installed into it; /usr/local/bin/python3 (3.11) had no geometry packages",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "trimesh": "5.2.1",
+    "shapely": "2.2.0",
+    "triangle": "20250106",
+    "matplotlib": "3.11.2",
+    "rtree": "1.4.1",
+    "pytest": "9.1.1"
+  },
+  "install_command": "pip install numpy scipy numba trimesh manifold3d matplotlib shapely networkx rtree 'cadquery-ocp==7.8.1.1.post1' triangle",
+  "machine": {
+    "cpus": 4,
+    "memory_total_gib": 15,
+    "memory_used_at_start_gib": 0
+  },
+  "commands": [
+    "python rib_joint_model.py --areas 0.02 0.01 --out evening_20261117/rib_joint",
+    "python rib_joint_variants.py --area 0.02 --out evening_20261117/rib_joint",
+    "python rib_joint_variants.py --area 0.01 --psi 67.5 --out evening_20261117/rib_joint/fine_0p01",
+    "python evening_20261117/plot_rib_joint.py",
+    "python -m pytest -q test_rib_joint_model.py"
+  ],
+  "inputs": {
+    "body": "cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl",
+    "stiffness_database": "data/materials/module_stiffness.sqlite3 (middle_stiffness_pa12)",
+    "curvature_source": "evening_20261116/v3_compatibility/summary_rows.json record 146 M5_z+12 module_max_curvature_rad_per_mm"
+  }
+}
