@@ -13,17 +13,24 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 16 November 2026 — Evening Report (latest): full-coverage guide/web compatibility and a 0.25 mm bond-gap candidate
+### 17 November 2026 — Evening Report (latest): rib-level model of the guide joint
 
-**Evening Report timing:** start/cutoff **16 November 2026 20:02:13 EST (17 November 2026 01:02:13 UTC)**; two-hour deadline **22:02:13 EST (03:02:13 UTC)**.
+**Evening Report timing:** start/cutoff **17 November 2026 20:02:11 EST (18 November 2026 01:02:11 UTC)**; two-hour deadline **22:02:11 EST (03:02:11 UTC)**. No Morning Report was published for 17 November.
 
-The head remains **500 g**; U4+M2, lanes, guide stations, rope bores and backbone are unchanged; no end ferrule is added.
+The head remains **500 g**. No CAD or solver input was changed: U4+M2, lanes, guide stations, rope bores and the backbone are as before, and no end ferrule is added.
 
-- **New calibrated screen covering every hold:** a point-sampled signed-distance check of all **217 saved holds × 8 M5/M6 guides** (1736 checks, about 4 min on 4 CPUs). It agrees with the manifold Boolean in all **54** comparisons, including near-threshold failures and passes.
-- **V3 contact is widespread:** **59 of 217 records** penetrate (103 checks, all at M5 ±12 mm outer saddles; insertion holds and both yaw excursions/returns), worst **−0.0211 mm**. The morning audit found 6 failures in 48 checks on six selected poses.
-- **Mechanism found:** curvature up to 0.0175 rad/mm rotates the body section across the 3.24 mm socket, moving web points 0.127 mm axially into the land-to-flare corner. The bonded land slips by up to **0.087 mm**, i.e. **58% shear strain** in a 0.15 mm bond line.
-- **Candidate:** with a **0.25 mm** land bond gap (`build.py --bond-gap 0.25`; default output unchanged), **0/1736** checks fail (minimum +0.0182 mm). Booleans find no overlap: **10/10** at 0.25 mm on the worst records and **48/48** at 0.5 mm. Rope bores are identical to V3. Implied shear falls to **35%**, which is still unqualified.
-- **Decision:** not released. The next step is a strut-level joint model; the ±12 mm section is four inclined struts, not the homogenised beam. No adhesive is qualified and no closed-loop replay was run. **49 tests pass.**
+- **The CAD corrected the joint premise.** The M body is **eight 3.0 mm flat radial ribs**, joined only by the end disks and four inner rings; it is not four struts. Each ±12 mm guide grips one 1.53 × 3.0 mm strut on each of four ribs.
+- **New calibrated rib-level model.** A membrane plus Mindlin plate superelement of the actual CAD rib is assembled in 3D. A single PA12 modulus, **1530 MPa ± 1%**, reproduces the database **EA, EI and GJ**. Two meshes agree within 1%.
+- **The rigid bonded land fights the module.** At the worst V3 hold, each land carries about **8.3 N axial, 7.5 N radial and tangential, and up to 100 N·mm**. The bond stiffens M5 by **+10% in bending and +12% in torsion**, which the solver does not include. This also applies to the 0.25 mm bond-gap candidate. 145 of 217 holds exceed half of that curvature.
+- **The homogenised map understated the joint motion about 6-fold** (0.535 vs 0.086 mm), so the earlier bond-shear estimates were optimistic.
+- **Least intrusive idealisation: a translation-only (ball/point) contact.** It carries about 5.3 N, no moments, and changes EI by +1.3% and GJ by 0%. It needs about 0.22 rad of rotation freedom, which the V3 socket cannot provide, so new CAD is required. A tangential pin is not load-free (15 N, 88 N·mm).
+- **Limits:** the analysis is linear, and module rotation is about 1.68 rad at the worst hold. The bare module reaches 7.8% linear peak rib strain, so a nonlinear check comes next. **6 new unit tests pass.**
+
+[Full English Evening Report](reports/daily/Evening_Report_2026_11_17.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261117/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261117/HANDOFF.md) · [Summary figure](simulations/u4m2/lanes_20261113/evening_20261117/rib_joint_3d/rib_joint_summary.png)
+
+### 16 November 2026 — Evening Report: full-coverage guide/web compatibility and a 0.25 mm bond-gap candidate
+
+Start/cutoff **20:02:13 EST (17 November 01:02:13 UTC)**. A calibrated signed-distance screen of all **217 holds × 8 guides** found V3 body contact in **59/217** records (worst −0.0211 mm). A **0.25 mm** land bond gap cleared all 1736 checks and the Booleans. Its homogenised bond-shear estimate (35%) is superseded by the 17 November rib-level model above.
 
 [Full English Evening Report](reports/daily/Evening_Report_2026_11_16.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261116/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261116/HANDOFF.md) · [Comparison figure](simulations/u4m2/lanes_20261113/evening_20261116/compatibility_comparison.svg)
 
@@ -120,7 +127,7 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
-The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest published mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture. The 16 November Evening Report found body contact in 59/217 holds. Its [0.25 mm bond-gap variant](simulations/u4m2/lanes_20261113/evening_20261116/README.md) clears all checks kinematically but still needs a joint model; it is evidence CAD, not a replacement release.
+The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest published mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture. The 16 November Evening Report found body contact in 59/217 holds. Its [0.25 mm bond-gap variant](simulations/u4m2/lanes_20261113/evening_20261116/README.md) clears all checks kinematically, but the 17 November [rib-level joint model](simulations/u4m2/lanes_20261113/evening_20261117/README.md) shows that any rigid bonded land loads the ribs (about 8 N and 100 N·mm per land) and stiffens M5 by 10–12%. It is evidence CAD, not a replacement release.
 
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 
@@ -134,11 +141,11 @@ The original SCAD preview arranges the six modules in a straight line without th
 
 ## Next steps
 
-1. Model the ±12 mm saddle joint at strut level and choose a bonded, articulated or compliant attachment for the measured land slip (up to 0.087 mm in the homogenised map). Include the effect on M-module stiffness and guide position. Screen candidates against all 217 holds with `guide_web_compatibility.py`.
-2. Revise finite end-hole/anchor routing and check the full 2 mm rope envelope, material bridges and contact/friction.
-3. With a physically compatible candidate, update mass/stiffness and replay the complete **500 g** closed-loop path, including finer equilibrium meshes and uncertainty cases.
-4. Qualify printed parts, adhesive, lockwire, assembly access and cyclic wear using the simultaneous exported guide loads.
-5. Add measured friction/backlash/hysteresis, actuator/sensor dynamics, actual head/harness geometry and rear deployment hardware.
+1. Verify the rib-level joint model with a nonlinear (large-rotation) solve at the most-bent holds. Report EI(κ), the joint loads and the 7.8% linear peak rib strain against the linear values ([handoff](simulations/u4m2/lanes_20261113/evening_20261117/HANDOFF.md)).
+2. Design a point/line-contact guide saddle that transmits force but no moment. It must allow about 0.22 rad of rotation. Screen it over all 217 holds with rib-level, not homogenised, kinematics. Rope bores must stay unchanged and the load path must be stated.
+3. Revise finite end-hole/anchor routing and check the full 2 mm rope envelope, material bridges and contact/friction.
+4. With a physically compatible joint, update M5 stiffness and mass if they change, then replay the complete **500 g** closed-loop path, including finer equilibrium meshes and uncertainty cases.
+5. Qualify printed parts, joint hardware, lockwire, assembly access and cyclic wear using the simultaneous exported guide loads. Add measured friction/backlash/hysteresis, actuator/sensor dynamics, actual head/harness geometry and rear deployment hardware.
 
 [Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 

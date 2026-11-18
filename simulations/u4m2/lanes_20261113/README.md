@@ -1,5 +1,7 @@
 # Separate rope lanes (radial spread) for U4+M2 — 13 November 2026
 
+**17 November Evening Report:** [Rib-level joint model](evening_20261117/README.md) adds `rib_joint_3d.py`, a membrane plus Mindlin plate model of the actual eight-rib M body, calibrated to the database EA/EI/GJ (E = 1530 MPa ± 1%). A rigid bonded ±12 mm land carries about 8.3 N axial and up to 100 N·mm per land, and stiffens M5 by 10–12%. A translation-only contact is the least intrusive idealisation tested.
+
 **16 November Evening Report:** [Full-coverage guide/web compatibility](evening_20261116/README.md) adds `guide_web_compatibility.py`, which screens all 217 holds × 8 guides and is calibrated against the Boolean audit. V3 contacts the body in 59/217 records; a 0.25 mm land bond-gap variant clears all checks.
 
 **16 November Morning Report:** [Constrained bellmouth routing and re-solved holds](../../../reports/daily/Morning_Report_2026_11_16.md) use the actual end profiles in the energy kernel. The [new evidence](morning_20261116/README.md) covers 217 fixed-winch holds, finite-rope/tank checks and targeted guide contact/refinement. Use `bellmouth_model.apply_bellmouth()` explicitly; the older full-cycle pipeline below is not automatically converted.

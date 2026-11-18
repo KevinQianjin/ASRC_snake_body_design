@@ -1,0 +1,118 @@
+{
+ "scope": "Scale the worst-axis rib-level joint loads to every saved 500 g hold (linear, magnitude only).\n\nUses the per-record M5 module maximum curvature recorded by the 16 Nov\nfull-coverage screen. The bending direction of each record is not used: the\nworst bending axis (67.5 deg) is assumed, so the per-record values are upper\nbounds under the linear rib model. Run from lanes_20261113/.\n",
+ "E_calibrated_MPa": 1530.1372332880796,
+ "reference_curvature": 0.01748791036298669,
+ "records": 217,
+ "by_phase": {
+  "entry": {
+   "records": 4,
+   "max_curvature_ratio": 0.2966600781474422,
+   "median_curvature_ratio": 0.2966600781474422,
+   "rigid_bond_max_axial_N": 2.459183955913579,
+   "rigid_bond_max_moment_Nmm": 29.701305175208404,
+   "ball_max_radial_N": 1.5737044193081409
+  },
+  "exit": {
+   "records": 4,
+   "max_curvature_ratio": 0.2963197995442638,
+   "median_curvature_ratio": 0.2963197995442479,
+   "rigid_bond_max_axial_N": 2.4563631932187713,
+   "rigid_bond_max_moment_Nmm": 29.667236827688544,
+   "ball_max_radial_N": 1.5718993299784207
+  },
+  "inverse": {
+   "records": 36,
+   "max_curvature_ratio": 0.9996973088114377,
+   "median_curvature_ratio": 0.6105528318157232,
+   "rigid_bond_max_axial_N": 8.287059040607438,
+   "rigid_bond_max_moment_Nmm": 100.08867737534193,
+   "ball_max_radial_N": 5.303133750491055
+  },
+  "left_out": {
+   "records": 36,
+   "max_curvature_ratio": 0.9994578446991271,
+   "median_curvature_ratio": 0.67655252980299,
+   "rigid_bond_max_axial_N": 8.28507398651223,
+   "rigid_bond_max_moment_Nmm": 100.06470247206994,
+   "ball_max_radial_N": 5.30186345576801
+  },
+  "left_return": {
+   "records": 34,
+   "max_curvature_ratio": 1.0,
+   "median_curvature_ratio": 0.7286443907477864,
+   "rigid_bond_max_axial_N": 8.289568219864577,
+   "rigid_bond_max_moment_Nmm": 100.11898250915527,
+   "ball_max_radial_N": 5.304739448379698
+  },
+  "right_out": {
+   "records": 34,
+   "max_curvature_ratio": 0.9981356708013907,
+   "median_curvature_ratio": 0.6837269305075377,
+   "rigid_bond_max_axial_N": 8.27411373578842,
+   "rigid_bond_max_moment_Nmm": 99.93232776672839,
+   "ball_max_radial_N": 5.294849667735069
+  },
+  "right_return": {
+   "records": 34,
+   "max_curvature_ratio": 0.999465765703023,
+   "median_curvature_ratio": 0.7549418194813792,
+   "rigid_bond_max_axial_N": 8.285139648214395,
+   "rigid_bond_max_moment_Nmm": 100.06549551492044,
+   "ball_max_radial_N": 5.301905474629847
+  },
+  "startup": {
+   "records": 29,
+   "max_curvature_ratio": 0.7439790935344206,
+   "median_curvature_ratio": 0.5324958402114162,
+   "rigid_bond_max_axial_N": 6.167265450006589,
+   "rigid_bond_max_moment_Nmm": 74.48642985274985,
+   "ball_max_radial_N": 3.9466152462418105
+  },
+  "straighten": {
+   "records": 6,
+   "max_curvature_ratio": 0.7439790935283969,
+   "median_curvature_ratio": 0.5514807739341795,
+   "rigid_bond_max_axial_N": 6.167265449956655,
+   "rigid_bond_max_moment_Nmm": 74.48642985214676,
+   "ball_max_radial_N": 3.946615246209856
+  }
+ },
+ "variants": {
+  "rigid_bond": {
+   "record146_worst_axis": {
+    "axial_N": 8.289568219864577,
+    "radial_N": 7.484329153153332,
+    "tangential_N": 7.484329141543273,
+    "inplane_moment_Nmm": 100.11898250915527,
+    "moment_about_r_Nmm": 59.598867316257106,
+    "moment_about_z_Nmm": 48.52788490498597
+   }
+  },
+  "hinge_t": {
+   "record146_worst_axis": {
+    "axial_N": 4.459266354474703,
+    "radial_N": 15.044994841794969,
+    "tangential_N": 15.044994830543567,
+    "inplane_moment_Nmm": 3.683783929396753e-12,
+    "moment_about_r_Nmm": 85.75530059593642,
+    "moment_about_z_Nmm": 87.54029378163595
+   }
+  },
+  "ball": {
+   "record146_worst_axis": {
+    "axial_N": 2.9470271435174024e-11,
+    "radial_N": 5.304739448379698,
+    "tangential_N": 5.304739437366413,
+    "inplane_moment_Nmm": 1.4156772820216833e-12,
+    "moment_about_r_Nmm": 3.274474603908225e-12,
+    "moment_about_z_Nmm": 5.0056775027766215e-12
+   }
+  }
+ },
+ "records_with_curvature_ratio_above": {
+  "0.25": 217,
+  "0.5": 145,
+  "0.75": 72,
+  "0.9": 52
+ }
+}
