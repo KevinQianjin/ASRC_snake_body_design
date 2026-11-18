@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 16 November 2026 (Evening Report)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026 (validation test plan)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,18 +13,21 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 17 November 2026 — Evening Report (latest): rib-level model of the guide joint
+### 18 November 2026 — Validation test plan for the 500 g front
 
-**Evening Report timing:** start/cutoff **17 November 2026 20:02:11 EST (18 November 2026 01:02:11 UTC)**; two-hour deadline **22:02:11 EST (03:02:11 UTC)**. No Morning Report was published for 17 November.
+The next design decision is how to locate the rope guides while letting the M5 ribs rotate. The new plan gives the test cases, measurements and criteria for that decision. All numerical results cited in the plan come from the 14–17 November studies.
 
-The head remains **500 g**. No CAD or solver input was changed: U4+M2, lanes, guide stations, rope bores and the backbone are as before, and no end ferrule is added.
+- **Test the mount at three different extremes.** Record 146 supplies the largest M5 curvature. Record 141 gives the largest station force (28.45 N with 22.04 N·mm at M5 +12 mm). Record 47 gives the largest station moment (61.12 N·mm with 11.11 N at M5 -12 mm). Compare the bare body, rigid bond and rotating seat in pure bending, then apply each record's simultaneous rope loads to the mounted guides.
+- **Check geometry and physical behaviour.** Screen a retained seat first at the critical poses, then across 217 holds and eight guides. Check the full 2 mm rope at the shared bores. Measure printed clearances, joint stiffness and pull-through friction on one-module builds.
+- **Verify the complete motion.** Use the selected joint and measured properties in the 500 g round trip, including both steering reversals. Compare the simulation with a trial using the actual head and harness.
 
-- **The CAD corrected the joint premise.** The M body is **eight 3.0 mm flat radial ribs**, joined only by the end disks and four inner rings; it is not four struts. Each ±12 mm guide grips one 1.53 × 3.0 mm strut on each of four ribs.
-- **New calibrated rib-level model.** A membrane plus Mindlin plate superelement of the actual CAD rib is assembled in 3D. A single PA12 modulus, **1530 MPa ± 1%**, reproduces the database **EA, EI and GJ**. Two meshes agree within 1%.
-- **The rigid bonded land fights the module.** At the worst V3 hold, each land carries about **8.3 N axial, 7.5 N radial and tangential, and up to 100 N·mm**. The bond stiffens M5 by **+10% in bending and +12% in torsion**, which the solver does not include. This also applies to the 0.25 mm bond-gap candidate. 145 of 217 holds exceed half of that curvature.
-- **The homogenised map understated the joint motion about 6-fold** (0.535 vs 0.086 mm), so the earlier bond-shear estimates were optimistic.
-- **Least intrusive idealisation: a translation-only (ball/point) contact.** It carries about 5.3 N, no moments, and changes EI by +1.3% and GJ by 0%. It needs about 0.22 rad of rotation freedom, which the V3 socket cannot provide, so new CAD is required. A tangential pin is not load-free (15 N, 88 N·mm).
-- **Limits:** the analysis is linear, and module rotation is about 1.68 rad at the worst hold. The bare module reaches 7.8% linear peak rib strain, so a nonlinear check comes next. **6 new unit tests pass.**
+[Full test plan and decision criteria](docs/500g_validation_plan.md) · [Current limitations](docs/limitations.md)
+
+<a id="17-november-2026--evening-report-latest-rib-level-model-of-the-guide-joint"></a>
+
+### 17 November 2026 — Evening Report on the M5 guide joint
+
+The model built from the eight actual ribs predicts that rigid bonding increases M5 body bending stiffness by 10.4% and torsional stiffness by 11.8%. A seat that allows rotation has a smaller effect on bending but needs about 12.5 degrees of travel. The linear result at the most bent hold calls for a large-rotation check.
 
 [Full English Evening Report](reports/daily/Evening_Report_2026_11_17.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261117/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261117/HANDOFF.md) · [Summary figure](simulations/u4m2/lanes_20261113/evening_20261117/rib_joint_3d/rib_joint_summary.png)
 
@@ -141,11 +144,7 @@ The original SCAD preview arranges the six modules in a straight line without th
 
 ## Next steps
 
-1. Verify the rib-level joint model with a nonlinear (large-rotation) solve at the most-bent holds. Report EI(κ), the joint loads and the 7.8% linear peak rib strain against the linear values ([handoff](simulations/u4m2/lanes_20261113/evening_20261117/HANDOFF.md)).
-2. Design a point/line-contact guide saddle that transmits force but no moment. It must allow about 0.22 rad of rotation. Screen it over all 217 holds with rib-level, not homogenised, kinematics. Rope bores must stay unchanged and the load path must be stated.
-3. Revise finite end-hole/anchor routing and check the full 2 mm rope envelope, material bridges and contact/friction.
-4. With a physically compatible joint, update M5 stiffness and mass if they change, then replay the complete **500 g** closed-loop path, including finer equilibrium meshes and uncertainty cases.
-5. Qualify printed parts, joint hardware, lockwire, assembly access and cyclic wear using the simultaneous exported guide loads. Add measured friction/backlash/hysteresis, actuator/sensor dynamics, actual head/harness geometry and rear deployment hardware.
+Start with large-rotation bending of M5 at its ±12 mm guide stations. The result sets the rotation and clearance a retained saddle must provide. The plan then covers the full rope diameter, printed-module measurements and the complete 500 g control path. [Test cases, measurements and acceptance criteria](docs/500g_validation_plan.md)
 
 [Detailed roadmap](docs/roadmap.md) · [Current limitations](docs/limitations.md) · [Module test plan](simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md).
 
