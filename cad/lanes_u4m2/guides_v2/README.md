@@ -6,6 +6,8 @@
 
 ## What this revision fixes
 
+For the U1–U4 bodies in this directory, the two leaf-spring pairs are a separate insert set. The inspection view loads the chosen body and the four individual strips at the same origin. [Body and spring illustrations](../../../docs/installation_guide.md#2-install-the-u-module-leaf-springs) · [OpenSCAD assembly view](U_spring_assembly.scad)
+
 The previous four-station design used the same inner-web clips at all stations. Actual CAD sections show inner webs at radius about 6.896 mm at z = ±24 mm, but no such webs at z = ±12 mm. The latter stations have suitable outer webs at radius about 19.229 mm. A zero-overlap check alone did not detect those unsupported clips.
 
 This folder contains eight distinct guide frames, each generated from nine sections through its actual station. Four keyed rectangular saddles attach to existing webs. The ±12 mm frames use forked arms to reach the outer webs. The ±24 mm frames attach to inner webs. Neither clamps the central NiTi backbone.

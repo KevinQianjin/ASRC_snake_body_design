@@ -18,11 +18,13 @@ from the SCAD files.
 
 ## What is in the STEP files
 
-The U STEP contains five solids: one full-module body and four long leaf-spring
-solids. The body spans 96 mm by about 63.24 mm; each spring is about 94 mm long.
-The STEP product tree also lists NPJ-wing and disk items, but these are not
-separate solid meshes. Their names alone do not mean the physical body geometry
-is missing; the main body solid already spans the full module envelope.
+The U STEP contains five solids. The 96 mm body combines the disks, rings and
+four zigzag Octo-Flex ribs. The other four solids are 94 mm leaf-spring strips.
+The CRAFT figure counts them as two leaf springs, each drawn as a pair of
+slightly bowed strips on one side of the body. The ASRC print package keeps
+the four strips in one separate reference STL. [Original labelled figure](https://github.com/ContinuumRoboticsLab/CRAFT/blob/d90b56b1eef5c3dbd116e9e19423d34a606f3b29/media/craft_overview.png) · [Current U body and inserts together](../../lanes_u4m2/guides_v2/U_spring_assembly.scad)
+
+The 19 November geometry check re-exported solids 2–5 from the [ASRC U STEP](../../modules/UniDirectional_96.step) at 0.12 mm linear and 0.25 rad angular deflection. A +90° rotation about X followed by −45° about Z maps the strips to the print frame. All 368 triangles matched the [current spring STL](../../lanes_u4m2/guides_v2/U_leaf_springs.stl) by their vertices, with less than 0.000001 mm maximum vertex separation. This comparison checks the digital geometry. The installed spring stiffness still needs a bench measurement.
 
 The M STEP imports as one solid with a 96 mm by about 63.24 mm envelope. It does
 not include the separate 1.8 mm NiTi backbone from the latest M-module study.

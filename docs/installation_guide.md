@@ -36,8 +36,8 @@ Use millimetres at 1:1 scale in the slicer. The candidate material for these par
 | Printed part | Installed quantity | Use this geometry |
 |---|---:|---|
 | Base interface | 1 | [28 mm C-lane base](../cad/lanes_u4m2/guides_v2/base_interface.stl) |
-| U1, U2, U3 | 3 identical | [U pass-through body](../cad/lanes_u4m2/guides_v2/U_lane_pass.stl) |
-| U4 | 1 | [U4 body with A anchors](../cad/lanes_u4m2/guides_v2/U4_lane_anchorA.stl) |
+| U1, U2, U3 | 3 identical PA12 bodies | [U pass-through body](../cad/lanes_u4m2/guides_v2/U_lane_pass.stl). Fit two separate spring pairs in each one. |
+| U4 | 1 PA12 body | [U4 body with A anchors](../cad/lanes_u4m2/guides_v2/U4_lane_anchorA.stl). The same two spring pairs fit U4. |
 | M5 | 1 | [Machined-body geometry](../cad/lanes_u4m2/retained_seat_20261118/parts/M5_machined_body.stl). Quote the PA12 body to this final geometry, including the bellmouth exits and eight relieved pin seats. Inspect the seats after printing or finish-machining. |
 | M6 | 1 | [Bellmouth body with C anchors](../cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl) |
 | Head adapter | 1 | [6 mm plate](../cad/lanes_u4m2/guides_v2/head_adapter.stl) |
@@ -62,7 +62,7 @@ Quantities below are installed quantities for one front. Add stock separately fo
 
 | Buy or source | Quantity | Specification and use |
 |---|---:|---|
-| Superelastic NiTi leaf springs | 16 | Four per U module, 94.0 mm long. The central strip is about 6 mm wide and 1.03–1.18 mm thick across the sampled sections. Quote the shaped ends from the [spring geometry](../cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and [source STEP, solids 2–5](../cad/modules/UniDirectional_96.step). A flat-stock strip with epoxy-formed ends needs its own fit and stiffness test. |
+| Superelastic NiTi leaf-spring strips | 16 individual strips (8 pairs) | Each U uses two opposed pairs of two strips, 94.0 mm long. The central strip is about 6 mm wide and 1.03–1.18 mm thick across the sampled sections. Quote the inward bend and shaped ends from the [spring geometry](../cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and [source STEP, solids 2–5](../cad/modules/UniDirectional_96.step). A substitute made from flat stock needs a profile, fit and stiffness check. |
 | Straight superelastic NiTi round stock | 2 finished lengths | Ø1.80 × 96.0 mm each. One separately end-bonded rod per M module. Order enough stock for cutting and deburring. |
 | Ø2.0 mm PA6 monofilament test line | 12 runs, four per set | The solver uses a solid PA6 surrogate with axial stiffness EA about 10.4 kN. For a 1 m external run, initial handling blanks are approximately A 1.51 m, B 1.60 m, C 1.70 m each, or **19.24 m** total. Measure the actual winch span and add drum wraps, termination allowance and test stock before purchase. The controller's unstretched-length entries serve a different purpose from these cutting lengths. |
 | Rope-tail crimp sleeves | 12 | One aluminium or copper sleeve matched to Ø2 mm line per anchor, outer diameter up to 3.5 mm, about 6 mm long in the original anchor proposal. Pull-test the chosen sleeve, line and crimp tool on a spare anchor. These sleeves are fitted to rope tails only. |
@@ -93,7 +93,13 @@ Quantities below are installed quantities for one front. Add stock separately fo
 
 ### 2. Install the U-module leaf springs
 
-Fit four 94 mm NiTi springs in each of U1–U4. Support the straight module and feed each spring through its proximal through-pocket into its 2 mm deep distal blind pocket. Match the spring's broad face to the long side of the pocket. Check the nominal 7.05 × 6.33 mm shaped end against the pocket. Seat the distal end on the bottom and check the proximal end sits about 1 mm below its disk face. Bond the end seats using the preparation and cure verified on a PA12/NiTi sample. Keep the free spring length, ropes and disk mating surfaces clear. After cure, check seating, bend and release the module, and measure the bending response of a representative U. [Spring geometry](../cad/lanes_u4m2/guides_v2/spring_strip.json) · [Module test plan](../simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md)
+The dark-purple, nearly straight members in the CRAFT U-module illustration are the **leaf springs**. Each illustrated spring is a pair of blades that draw closer together near the middle. In the 96 mm ASRC module one pair runs along +Y and the other along −Y. The four zigzag Octo-Flex ribs are integral to the PA12 body. The dark-purple blades are separate inserts. [Original labelled CRAFT figure](https://github.com/ContinuumRoboticsLab/CRAFT/blob/d90b56b1eef5c3dbd116e9e19423d34a606f3b29/media/craft_overview.png)
+
+![Actual U body, four separate dark-purple spring strips and the assembled module in the same orientation](../cad/lanes_u4m2/guides_v2/U_spring_assembly.png)
+
+To inspect either U body before assembly, open the [U spring assembly view](../cad/lanes_u4m2/guides_v2/U_spring_assembly.scad) in OpenSCAD beside the two body STLs and [spring STL](../cad/lanes_u4m2/guides_v2/U_leaf_springs.stl). Press **F5**, choose **U1-U3** or **U4**, and switch between **assembly**, **body** and **springs**. The meshes share an origin and clocking. The strip centres in each pair are 18.12 mm apart at z = ±40 mm and 11.20 mm apart at the midplane. The two pairs lie on opposite sides at y = ±26.41 mm. Send the body STL to the PA12 printer and the strip geometry to the spring supplier.
+
+Fit the four 94 mm NiTi strips in each of U1–U4. Support the straight module and feed each strip through its proximal through-pocket into its 2 mm deep distal blind pocket. Match its broad face to the long side of the pocket. Check the nominal 7.05 × 6.33 mm shaped end against the pocket. Seat the distal end on the bottom and check the proximal end sits about 1 mm below its disk face. Bond the end seats using the preparation and cure verified on a PA12/NiTi sample. Keep the free spring length, ropes and disk mating surfaces clear. After cure, check seating, bend and release the module, and measure the bending response of a representative U. [Spring geometry](../cad/lanes_u4m2/guides_v2/spring_strip.json) · [Module test plan](../simulations/u4m2/backbone_20261108/M_BACKBONE_TEST_PLAN.md)
 
 ### 3. Assemble the two rotating guides inside M5
 
