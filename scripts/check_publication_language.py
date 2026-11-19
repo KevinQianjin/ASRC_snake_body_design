@@ -9,6 +9,7 @@ recorded rendered review as well as a machine-readable text/metadata check.
 """
 import argparse
 import ast
+import base64
 import gzip
 import html
 import io
@@ -19,17 +20,19 @@ import struct
 import subprocess
 import sys
 from urllib.parse import unquote
+from xml.etree import ElementTree
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 RANGES=((0x3400,0x4DBF),(0x4E00,0x9FFF),(0xF900,0xFAFF),
         (0x20000,0x33FFF),(0x2E80,0x2FDF),(0x31C0,0x31EF),
         (0x3021,0x3029),(0x3038,0x303B))
+HAN_PATTERN = re.compile('[' + chr(0x3005) + chr(0x3007) + ''.join(
+    chr(lo) + '-' + chr(hi) for lo, hi in RANGES) + ']')
 
 
 def han_codepoints(text):
-    return sorted({ord(c) for c in text if ord(c) in (0x3005,0x3007) or
-                   any(lo<=ord(c)<=hi for lo,hi in RANGES)})
+    return sorted({ord(c) for c in HAN_PATTERN.findall(text)})
 
 
 def inspect_text(text):
@@ -48,6 +51,21 @@ def strings(value):
         for k,v in value.items():yield from strings(k);yield from strings(v)
     elif isinstance(value,(list,tuple)):
         for v in value:yield from strings(v)
+
+
+def inspect_svg_images(name, text, reviewed):
+    count = 0
+    for node in ElementTree.fromstring(text).iter():
+        if node.tag.rsplit('}', 1)[-1] != 'image':
+            continue
+        count += 1
+        hrefs = [value for key, value in node.attrib.items() if key.rsplit('}', 1)[-1] == 'href']
+        if len(hrefs) != 1 or not hrefs[0].startswith('data:image/png;base64,'):
+            raise ValueError('SVG image requires one embedded PNG data URI')
+        payload = ''.join(hrefs[0].partition(',')[2].split())
+        nested = f'{name}#image-{count}.png'
+        inspect_blob(nested, base64.b64decode(payload, validate=True), reviewed)
+    return count
 
 
 def inspect_blob(name,data,reviewed):
@@ -76,7 +94,12 @@ def inspect_blob(name,data,reviewed):
         if name not in reviewed:raise ValueError('Rendered PNG review not recorded')
         from PIL import Image
         with Image.open(io.BytesIO(data)) as image:
+            if image.format != 'PNG':raise ValueError('Expected a PNG payload')
+            image.verify()
+        with Image.open(io.BytesIO(data)) as image:
+            image.load()
             for text in strings(image.info):inspect_text(text)
+            for text in strings(image.text):inspect_text(text)
         return 'PNG metadata plus recorded rendered review'
     if b'\0' in data:raise ValueError('Unsupported binary format requires a dedicated text/metadata extractor')
     text=data.decode('utf-8');inspect_text(text)
@@ -87,8 +110,8 @@ def inspect_blob(name,data,reviewed):
             if isinstance(node,ast.Constant) and isinstance(node.value,str):inspect_text(node.value)
     if suffix=='.svg':
         if name not in reviewed:raise ValueError('Rendered SVG review not recorded')
-        if '<image' in text:raise ValueError('Embedded SVG images require separate inspection')
-        return 'SVG text/XML plus recorded rendered review'
+        count = inspect_svg_images(name, text, reviewed)
+        return f'SVG text/XML and rendered review; {count} embedded PNGs with individual metadata and rendered review'
     return 'UTF-8 text with escaped/HTML/URL text checks'
 
 

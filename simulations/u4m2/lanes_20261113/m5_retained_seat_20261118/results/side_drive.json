@@ -1,0 +1,1342 @@
+{
+  "screw_face_z_in_station_mm": 1.88,
+  "engagement_to_seating_mm": 1.6,
+  "side_shank_length_mm": 55.0,
+  "side_entry_travel_mm": 55.0,
+  "shaft_tip_radius_mm": 0.45,
+  "tip_face_offset_mm": 0.002,
+  "yaw_step_deg": 5,
+  "directions_per_screw_and_driver": 72,
+  "driver_dimensions_mm": {
+    "wide": {
+      "housing_diameter": 2.5,
+      "height_over_screw_head": 1.55,
+      "side_shank_diameter": 1.1
+    },
+    "slim": {
+      "housing_diameter": 1.7,
+      "height_over_screw_head": 1.55,
+      "side_shank_diameter": 0.9
+    },
+    "low": {
+      "housing_diameter": 2.5,
+      "height_over_screw_head": 1.15,
+      "side_shank_diameter": 0.8
+    }
+  },
+  "scope": "Axisymmetric tool exterior and fixed housing attitude. The internal drive, blade/slot engagement, hand, fixture, strength and torque are untested.",
+  "rows": [
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 22.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854118568502228
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.261866543084798
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 192.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.028801074535815638,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.028801074535815638,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.028801074535815638,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 192.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.1342477564061848,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.1342477564061848,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.1342477564061848,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 67.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854117217849218
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.261865144783722
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 237.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.028800937886205368,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.028800937886205368,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.028800937886205368,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 237.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.13424765698584135,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.13424765698584135,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.13424765698584135,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 112.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.85411856850223
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.261866543084799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 140,
+      "selected_azimuth_deg": 252.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.028801074535814555,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.028801074535814555,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.028801074535814555,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 327.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.13424775640618225,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.13424775640618225,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.13424775640618225,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 157.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854117217849224
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.261865144783715
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 12.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.028800937886204313,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.028800937886204313,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.028800937886204313,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 12.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.1342476569858403,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.1342476569858403,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.1342476569858403,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 202.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854118568502233
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.2618665430848
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 140,
+      "selected_azimuth_deg": 342.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.02880107453581401,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.02880107453581401,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.02880107453581401,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 57.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.13424775640618325,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.13424775640618325,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.13424775640618325,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 247.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854117217849222
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.2618651447837115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 57.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.02880093788620438,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.02880093788620438,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.02880093788620438,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 170,
+      "selected_azimuth_deg": 57.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.13424765698584035,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.13424765698584035,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.13424765698584035,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 292.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854118568502233
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.261866543084799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": 140,
+      "selected_azimuth_deg": 72.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.02880107453581401,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.02880107453581401,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.02880107453581401,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 147.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.13424775640618314,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.13424775640618314,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.13424775640618314,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "wide",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 337.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.854117217849222
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.26186514478371
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "slim",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 192.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.02880093788620487,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.02880093788620487,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.02880093788620487,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": -12,
+      "driver": "low",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 8,
+      "selected_offset_deg": -145,
+      "selected_azimuth_deg": 192.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.1342476569858408,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.1342476569858408,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.1342476569858408,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 22.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860227226862627
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.2472775120132615
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": -20,
+      "selected_azimuth_deg": 2.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.2631846945135325,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.2631846945135325,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.2631846945135325,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_0",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 7.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890547,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_0@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 67.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860245143700757
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.2472961662206865
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 20,
+      "selected_azimuth_deg": 87.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.24973835825393165,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.24973835825393165,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.24973835825393165,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_1",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 52.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890547,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_2@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 112.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860270336056699
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247320621207333
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 20,
+      "selected_azimuth_deg": 132.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.26442972509128326,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.26442972509128326,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.26442972509128326,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_2",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 97.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890724,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_2@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 157.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860246606750724
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247297629270677
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 20,
+      "selected_azimuth_deg": 177.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.24973835825393365,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.24973835825393365,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.24973835825393365,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_3",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 142.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890724,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_4@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 202.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860227205144124
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247277490294755
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 80,
+      "selected_azimuth_deg": 282.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.26318497861002393,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.26318497861002393,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.26318497861002393,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_4",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 187.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890547,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_4@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 247.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.86022259124444
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247273613764401
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 25,
+      "selected_azimuth_deg": 272.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.26318491154272927,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.26318491154272927,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.26318491154272927,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_5",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 232.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890724,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_6@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 292.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.86023753917897
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247287824329603
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 80,
+      "selected_azimuth_deg": 12.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.2497384467791954,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.2497384467791954,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.2497384467791954,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_6",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 277.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890547,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_6@12",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "wide",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 0,
+      "selected_offset_deg": 0,
+      "selected_azimuth_deg": 337.5,
+      "full_sweep_clear": false,
+      "minimum_gap_mm": 0.0,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 8.860222612493244
+            }
+          ]
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.0,
+          "closest": "M5 body",
+          "intersections": [
+            {
+              "obstacle": "M5 body",
+              "intersection_mm3": 7.247273635013181
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "slim",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 32,
+      "selected_offset_deg": 80,
+      "selected_azimuth_deg": 57.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.26318459966645386,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.26318459966645386,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.26318459966645386,
+          "closest": "M5 body",
+          "intersections": []
+        }
+      ]
+    },
+    {
+      "station": 12,
+      "driver": "low",
+      "screw": "lap_screw_7",
+      "positive_surface_directions": 48,
+      "selected_offset_deg": -15,
+      "selected_azimuth_deg": 322.5,
+      "full_sweep_clear": true,
+      "minimum_gap_mm": 0.28199997615814104,
+      "selected_sweeps": [
+        {
+          "phase": "side entry",
+          "surface_gap_mm": 0.34031402587890724,
+          "closest": "M5 body",
+          "intersections": []
+        },
+        {
+          "phase": "tightening stroke",
+          "surface_gap_mm": 0.28199997615814104,
+          "closest": "hub_0@12",
+          "intersections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026, Evening Report (retained rotating-seat sizing)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026, M5 retained-seat CAD and loaded contact checks
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,19 +13,23 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+### 18 November 2026 — M5 retained-seat CAD and loaded contact checks
+
+The 500 g validation programme now has a physical guide design for the two M5 stations at −12 and +12 mm. Each station has four pinned web seats, removable gates, screw-on thrust caps and a segmented hub that fits through the cage. The original B/C rope centres and the independent NiTi backbone are retained.
+
+- **A full-body check changed the fork.** In the 96.19° bend about 67.5°, the returning leg of a rib intersected the outboard fork tip at both stations. Trimming the tip to a 24.6 mm radius left 0.224 and 0.228 mm between those parts. The closest remaining pair is a rib and the hub at +12 mm, with only 0.044 mm nominal clearance. [Loaded CAD sections](simulations/u4m2/lanes_20261113/m5_retained_seat_20261118/results/loaded_clearance.svg)
+- **Contact remains the strength limit.** The six endpoints supply 48 paired force/rotation inputs. The fine local model predicts up to 6.06% incremental tensile strain and 242 MPa peak nodal pressure. None of the 48 sites met the 5% joint mesh-change criterion on the first refinement. A web coupon is needed to measure strength, backlash and permanent set.
+- **Assembly and mass.** The straight assemblies passed 1,980 pair checks. Across 88 component placements, none of the 15,928 sampled poses showed solid interference. The two stations add 2.20 g in total after machining. The tightest hub lap screw has 3.45 mm of coaxial tool space. A 1.15 mm high side-drive envelope cleared the full tightening stroke at all 16 hub screws with at least 0.134 mm nominal clearance. A physical driver must still supply the torque.
+
+[Full English test report](reports/daily/M5_Retained_Seat_2026_11_18.md) · [CAD, exploded view and sections](cad/lanes_u4m2/retained_seat_20261118/README.md) · [Results and reproduction](simulations/u4m2/lanes_20261113/m5_retained_seat_20261118/README.md)
+
 <a id="18-november-2026--evening-report-retained-rotating-seat"></a>
 
-### 18 November 2026 — Evening Report: sizing a retained rotating seat for the M5 guides
+### 18 November 2026 — Evening Report: sizing the M5 rotating seat
 
-Start/cutoff **20:02:32 EST (19 November 01:02:32 UTC)**. This run is stage 1 of test 2 in the 500 g plan. It converts today's ideal rotating seat into cavity and retainer requirements on the real M5 ±12 mm webs. All results are simulations.
+The six-case shell study found that the original V3 land interferes with a rotating web. A pivot-centred bow-tie cavity, a 0.20 mm running gap and an ideal spherical pin release gave +0.058 to +0.107 mm of local wall clearance. This provided the sizing inputs for the later physical-CAD follow-up.
 
-- **The V3 socket shape cannot host a rotating seat.** The mounting web crosses the guide plate at 34.2°, so the flat V3 land holds web material up to about 1.1 mm from the pivot, and seat rotation swings it into the walls. With the 0.15 mm land gap all six cases interfere (−0.065 to −0.636 mm). The 0.25 mm variant fails record 47 and both 96° bends.
-- **A bow-tie seat clears every case.** With a 0.3 mm land along the web, 0.15 mm running clearance and flare slope 0.25, the minimum clearance is +0.032 to +0.057 mm on the 0.025 mm² mesh, with ≤ 0.004 mm middle-to-fine mesh change. A 0.10 mm clearance fails, because the 3 mm web tilts by 4.7–5.8° out of plane.
-- **The retainer must carry a reversing along-web force** of up to 12.3 N in the saved holds and 24.7 N in the 96° bend, while allowing about 10.4° in-plane rotation and about 5° tilt. A slot or a cylindrical pin cannot do this.
-- **Pinned seat.** A Ø0.6 mm pin through the web, modelled as a perfectly fitting rigid ring with a spherical release, gives a mesh-converged hole-edge strain of 2.4–2.7% in the saved holds and the pure bends (fine-mesh change ≤ 0.18 points). The rigid-band idealisation used so far has a non-converging 7.1% corner singularity. The pin changes the 96° holding couple by −1.2%, but raises seat rotation to 11.3° and tilt to 6.6°, so the pinned seat needs 0.20 mm running clearance at the land (margins +0.058 to +0.107 mm).
-- **Not yet done:** seat CAD, a contact model, PA12 strength at the hole, M6 and the ±24 mm stations, and hardware.
-
-[Full English Evening Report](reports/daily/Evening_Report_2026_11_18.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261118/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261118/HANDOFF.md) · [Clearance figure](simulations/u4m2/lanes_20261113/evening_20261118/seat_clearance.png)
+[Full English Evening Report](reports/daily/Evening_Report_2026_11_18.md) · [Evening evidence](simulations/u4m2/lanes_20261113/evening_20261118/README.md) · [Evening handoff](simulations/u4m2/lanes_20261113/evening_20261118/HANDOFF.md)
 
 <a id="18-november-2026--validation-test-plan-for-the-500-g-front"></a>
 

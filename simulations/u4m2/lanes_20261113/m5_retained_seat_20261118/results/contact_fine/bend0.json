@@ -1,0 +1,534 @@
+{
+  "case": "bend0",
+  "level": "fine",
+  "length_half_mm": 2.7,
+  "source_shell_area": "0p025",
+  "hexes": 5376,
+  "nodes": 6528,
+  "youngs_modulus_MPa": 1530.0,
+  "poisson_ratio": 0.4,
+  "crown_radius_mm": 1.0,
+  "thrust_rim_fillet_mm": 0.06,
+  "sites": [
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 12.253461601863252,
+      "pin_nominal_bending_stress_MPa": 577.8367359772654,
+      "converged": true,
+      "normal_iterations": 10,
+      "station_mm": 12,
+      "rib_deg": 67.5,
+      "applied_force_spn_N": [
+        17.218091732171676,
+        -2.9547542382896608,
+        1.6193765767689967
+      ],
+      "tilt_deg": 2.3729574138602434,
+      "relative_translation_spn_mm": [
+        -0.051395491163788554,
+        0.01782913819257443,
+        -0.00971364460114813
+      ],
+      "translation_mm": 0.055260560729098636,
+      "max_elastic_deflection_mm": 0.034495019872163836,
+      "minimum_gap_mm": -1.4939042780603984e-09,
+      "force_residual_N": 4.168560525025629e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        0.0027410604451974974,
+        0.6800660121713091,
+        -5.2258544891061515e-17
+      ],
+      "peak_nodal_pressure_MPa": 200.66520130600938,
+      "active_nodes": 42,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 18.798176852651423,
+          "resultant_spn_N": [
+            16.678291448977614,
+            -2.7469191082898865,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 1.73934747729914,
+          "resultant_spn_N": [
+            0.5397884033238358,
+            -0.20779523279969403,
+            1.6193787684124976
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 4.182961854030253e-09,
+          "resultant_spn_N": [
+            1.6700827362872158e-10,
+            -1.2219768381076275e-10,
+            -4.0620032577745205e-09
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.05172535135892742,
+      "p95_volume_tensile_principal_strain": 0.004453302339721249,
+      "most_compressive_principal_strain": -0.09240880939479568,
+      "peak_element_centre_spn_mm": [
+        0.2921986582857594,
+        -0.218308894974365,
+        0.09076256381697555
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 12.297537698659271,
+      "pin_nominal_bending_stress_MPa": 579.9152333631272,
+      "converged": true,
+      "normal_iterations": 10,
+      "station_mm": -12,
+      "rib_deg": 67.5,
+      "applied_force_spn_N": [
+        -17.2808096435479,
+        -2.9417726279206797,
+        1.598353159627518
+      ],
+      "tilt_deg": 2.464750152685156,
+      "relative_translation_spn_mm": [
+        0.05142786060385402,
+        0.017841960490364357,
+        -0.00962857109163717
+      ],
+      "translation_mm": 0.05527992204856908,
+      "max_elastic_deflection_mm": 0.03452736150562707,
+      "minimum_gap_mm": -1.4888247856781334e-09,
+      "force_residual_N": 4.250032048470695e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        -0.004510596601951802,
+        -0.6930246545330673,
+        1.0628567800908427e-17
+      ],
+      "peak_nodal_pressure_MPa": 200.6229398680964,
+      "active_nodes": 42,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 18.880160505993306,
+          "resultant_spn_N": [
+            -16.750133194479606,
+            -2.733583093274226,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 1.716435796762355,
+          "resultant_spn_N": [
+            -0.5306649746664996,
+            -0.20814866311499597,
+            1.5983552217268149
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 1.3272903942122068e-08,
+          "resultant_spn_N": [
+            -1.4465945242542699e-09,
+            -4.024977890490932e-10,
+            -1.2865897938918336e-08
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.051801236160557124,
+      "p95_volume_tensile_principal_strain": 0.004462515784572159,
+      "most_compressive_principal_strain": -0.0924326355061681,
+      "peak_element_centre_spn_mm": [
+        -0.29219865827736274,
+        -0.21830889498207603,
+        0.0907625638170133
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 7.696180760273959,
+      "pin_nominal_bending_stress_MPa": 362.9289513855828,
+      "converged": true,
+      "normal_iterations": 11,
+      "station_mm": 12,
+      "rib_deg": 157.5,
+      "applied_force_spn_N": [
+        -11.497342484550268,
+        -0.9359316393299624,
+        -2.6706700385368385
+      ],
+      "tilt_deg": 6.1414500939871015,
+      "relative_translation_spn_mm": [
+        0.03785030338207356,
+        -0.00010511181425301505,
+        0.022898543106494987
+      ],
+      "translation_mm": 0.04423799035906258,
+      "max_elastic_deflection_mm": 0.018596174274909998,
+      "minimum_gap_mm": -9.050531990517641e-10,
+      "force_residual_N": 3.5935217389039665e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        0.42619744521870556,
+        -0.8987936888363209,
+        2.3042085961179775e-19
+      ],
+      "peak_nodal_pressure_MPa": 112.09005107812817,
+      "active_nodes": 44,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 11.806328144229596,
+          "resultant_spn_N": [
+            -10.747473548075563,
+            -1.4487685679353404,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 5.145508568170388e-09,
+          "resultant_spn_N": [
+            -3.0287271117351233e-10,
+            -1.8088968775730868e-10,
+            4.957847896151344e-09
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 2.856524425391027,
+          "resultant_spn_N": [
+            -0.7498382768110441,
+            0.5128192507112399,
+            -2.670676274795344
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.03404843399973442,
+      "p95_volume_tensile_principal_strain": 0.0026051194159413733,
+      "most_compressive_principal_strain": -0.05058393207614472,
+      "peak_element_centre_spn_mm": [
+        0.5075936224796923,
+        -0.2765345316721116,
+        1.295948484970886
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 7.7703434111027905,
+      "pin_nominal_bending_stress_MPa": 366.4262410069774,
+      "converged": true,
+      "normal_iterations": 11,
+      "station_mm": -12,
+      "rib_deg": 157.5,
+      "applied_force_spn_N": [
+        11.594327116468111,
+        -0.9256084322325272,
+        -2.667108703286166
+      ],
+      "tilt_deg": 6.026692057244029,
+      "relative_translation_spn_mm": [
+        -0.03812136403155421,
+        -1.835342231090934e-05,
+        0.022799638132924602
+      ],
+      "translation_mm": 0.044419165136984455,
+      "max_elastic_deflection_mm": 0.018846534332631483,
+      "minimum_gap_mm": -9.112917087605865e-10,
+      "force_residual_N": 4.3341365702061865e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        0.4095014346361975,
+        0.8823348763159369,
+        2.699663416011839e-17
+      ],
+      "peak_nodal_pressure_MPa": 114.28673087088997,
+      "active_nodes": 42,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 11.91104253548697,
+          "resultant_spn_N": [
+            10.845045595454009,
+            -1.4329897555002349,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 1.2135502045491357e-08,
+          "resultant_spn_N": [
+            -1.38421817614398e-10,
+            -5.033953997667264e-10,
+            1.1678218665914561e-08
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 2.853485900884482,
+          "resultant_spn_N": [
+            0.7492441792995026,
+            0.5073606227852617,
+            -2.667116166754728
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.03386676980723575,
+      "p95_volume_tensile_principal_strain": 0.002611267276999319,
+      "most_compressive_principal_strain": -0.05134005360028121,
+      "peak_element_centre_spn_mm": [
+        -0.5075936224681429,
+        -0.27653453168605396,
+        1.2959484849723797
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 7.271761029562795,
+      "pin_nominal_bending_stress_MPa": 342.9145815816086,
+      "converged": true,
+      "normal_iterations": 9,
+      "station_mm": 12,
+      "rib_deg": 247.5,
+      "applied_force_spn_N": [
+        11.17059483540192,
+        1.1581529746617936,
+        -3.591600912545736
+      ],
+      "tilt_deg": 2.6909711794449707,
+      "relative_translation_spn_mm": [
+        -0.04074228070372971,
+        -0.0069386191234985985,
+        0.019045433380842778
+      ],
+      "translation_mm": 0.04550611392930193,
+      "max_elastic_deflection_mm": 0.021766157637789045,
+      "minimum_gap_mm": -1.016088546634819e-09,
+      "force_residual_N": 1.0647452640288119e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        0.03961142683865778,
+        -0.393644162784156,
+        -1.95156389391414e-18
+      ],
+      "peak_nodal_pressure_MPa": 142.8070120571499,
+      "active_nodes": 44,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 10.792702520575318,
+          "resultant_spn_N": [
+            9.919688680439718,
+            0.8487961808673659,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 9.890532648314507e-09,
+          "resultant_spn_N": [
+            -3.7272506862012514e-10,
+            -1.7379369216916388e-10,
+            9.621330141439651e-09
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 3.887457971235014,
+          "resultant_spn_N": [
+            1.2508985111026998,
+            0.3093641881507628,
+            -3.591601432094368
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.03113711680047705,
+      "p95_volume_tensile_principal_strain": 0.002843351589026347,
+      "most_compressive_principal_strain": -0.062465234943691765,
+      "peak_element_centre_spn_mm": [
+        0.3318902231203676,
+        0.18055076729919406,
+        -0.09051991417135336
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 7.33417534127557,
+      "pin_nominal_bending_stress_MPa": 345.8578545382802,
+      "converged": true,
+      "normal_iterations": 9,
+      "station_mm": -12,
+      "rib_deg": 247.5,
+      "applied_force_spn_N": [
+        -11.25705067480259,
+        1.154990397603048,
+        -3.5489926032417527
+      ],
+      "tilt_deg": 2.5406652692120035,
+      "relative_translation_spn_mm": [
+        0.041027377662583256,
+        -0.00701679735116593,
+        0.018861544767542947
+      ],
+      "translation_mm": 0.04569725411831209,
+      "max_elastic_deflection_mm": 0.022023961258970923,
+      "minimum_gap_mm": -1.0422568363921414e-09,
+      "force_residual_N": 1.2652373052351661e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        0.012768203661686899,
+        0.3614431282925135,
+        3.252606521814812e-17
+      ],
+      "peak_nodal_pressure_MPa": 144.9762187298056,
+      "active_nodes": 43,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 10.890715944857508,
+          "resultant_spn_N": [
+            -9.998049226078214,
+            0.8389434922930787,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 4.629591636485363e-10,
+          "resultant_spn_N": [
+            -2.294043263518653e-11,
+            -1.4754132172388532e-11,
+            4.4659474211633547e-10
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 3.8497358203147347,
+          "resultant_spn_N": [
+            -1.2589932218051196,
+            0.31605650108200345,
+            -3.5489931712824667
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.031685150072123046,
+      "p95_volume_tensile_principal_strain": 0.002859937925850335,
+      "most_compressive_principal_strain": -0.0635195929498438,
+      "peak_element_centre_spn_mm": [
+        -0.3318902231233073,
+        0.18055076729637595,
+        -0.09051991417132958
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 10.582443008958471,
+      "pin_nominal_bending_stress_MPa": 499.0364784782256,
+      "converged": true,
+      "normal_iterations": 14,
+      "station_mm": 12,
+      "rib_deg": 337.5,
+      "applied_force_spn_N": [
+        -15.806235986687202,
+        1.9945500852304971,
+        4.642894372147916
+      ],
+      "tilt_deg": 5.8464497488274,
+      "relative_translation_spn_mm": [
+        0.043406611877589124,
+        -0.007747003542859714,
+        -0.027935778793016404
+      ],
+      "translation_mm": 0.052197296437239804,
+      "max_elastic_deflection_mm": 0.02485998956148229,
+      "minimum_gap_mm": -1.1718390702242232e-09,
+      "force_residual_N": 5.414124563417713e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        -0.44658936574956704,
+        1.1002824025990077,
+        -1.1240195213787346e-18
+      ],
+      "peak_nodal_pressure_MPa": 152.76547519813056,
+      "active_nodes": 59,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 16.413621097593833,
+          "resultant_spn_N": [
+            -14.880622061151369,
+            0.9167755376520831,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 4.9442184239426785,
+          "resultant_spn_N": [
+            -0.9255692065265411,
+            1.0777452166223194,
+            4.642902820555056
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 8.942347394684494e-09,
+          "resultant_spn_N": [
+            -6.01625033259734e-10,
+            -6.816184737707469e-11,
+            -8.649404950645278e-09
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.046424155573851794,
+      "p95_volume_tensile_principal_strain": 0.0037282093242502084,
+      "most_compressive_principal_strain": -0.06592356895418837,
+      "peak_element_centre_spn_mm": [
+        0.5075936224796923,
+        -0.27653453167211156,
+        -1.2959484849708858
+      ]
+    },
+    {
+      "pin_simple_support_span_mm": 3.0,
+      "pin_max_bending_moment_Nmm": 10.620924264042067,
+      "pin_nominal_bending_stress_MPa": 500.85113980057656,
+      "converged": true,
+      "normal_iterations": 14,
+      "station_mm": -12,
+      "rib_deg": 337.5,
+      "applied_force_spn_N": [
+        15.850604327980047,
+        1.9690889183172,
+        4.6177481475316515
+      ],
+      "tilt_deg": 5.981087756606857,
+      "relative_translation_spn_mm": [
+        -0.043331590443167714,
+        -0.007958493964790765,
+        -0.027703012128688306
+      ],
+      "translation_mm": 0.052042494535949044,
+      "max_elastic_deflection_mm": 0.024825627627987866,
+      "minimum_gap_mm": -1.1680045264306216e-09,
+      "force_residual_N": 4.3714660913365785e-05,
+      "contact_moment_about_pivot_spn_Nmm": [
+        -0.4958437989933022,
+        -1.109732480515337,
+        3.486535164531512e-17
+      ],
+      "peak_nodal_pressure_MPa": 152.59939931650328,
+      "active_nodes": 61,
+      "contact_components": {
+        "shaft": {
+          "normal_force_sum_N": 16.50399829813539,
+          "resultant_spn_N": [
+            14.94649812503192,
+            0.9151502255922007,
+            0.0
+          ]
+        },
+        "negative_thrust": {
+          "normal_force_sum_N": 4.9090571708206765,
+          "resultant_spn_N": [
+            0.9040700712101405,
+            1.0539150672265465,
+            4.61775503175987
+          ]
+        },
+        "positive_thrust": {
+          "normal_force_sum_N": 7.144141686577651e-09,
+          "resultant_spn_N": [
+            -3.1551524187808383e-11,
+            -1.0817837666282996e-10,
+            -6.908930543082061e-09
+          ]
+        }
+      },
+      "peak_tensile_principal_strain": 0.045928742018671566,
+      "p95_volume_tensile_principal_strain": 0.003735295499464481,
+      "most_compressive_principal_strain": -0.06579874732724901,
+      "peak_element_centre_spn_mm": [
+        -0.5075936224681428,
+        -0.27653453168605396,
+        -1.2959484849723797
+      ]
+    }
+  ]
+}

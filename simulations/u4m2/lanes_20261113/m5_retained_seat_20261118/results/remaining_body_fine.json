@@ -1,0 +1,381 @@
+{
+  "shell_mesh": "0p025",
+  "web_surface_edge_mm": 0.25,
+  "free_web_simplification_mm": 0.001,
+  "previous_tip_comparison": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.597994595052689,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.652364252344988,
+        -12.253524568199902,
+        -1.6,
+        26.810988120797102,
+        -8.649079577964487,
+        -0.7999325664428786
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22377926631338313
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.5682398451023474,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.69054623679167,
+        -12.253524566123684,
+        0.8151028003238333,
+        26.81098812024615,
+        -8.664895074855826,
+        1.6
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22801575906403299
+    }
+  ],
+  "rows": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_7",
+        0.04528643569334285
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_6",
+          "gap_mm": 1.2144510590436135,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            0.7806540783818453,
+            -7.280919865885254,
+            -1.980226093371345
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 0.534646893421278,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.600583033890312,
+            -7.217310616540033,
+            -1.8362746765012696
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "lap_screw_6",
+          "gap_mm": 2.3733838244214667,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.191069080849925,
+            -9.408803528850846,
+            3.0597939277785353
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_0",
+          "gap_mm": 0.04528643569334285,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            7.637608627387253,
+            -1.5385377106758804,
+            -1.621040651679764
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "fork_0",
+          "gap_mm": 0.22377926631338313,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            22.280013540656007,
+            -10.634282588807196,
+            -0.10570925112493501
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_1",
+          "gap_mm": 0.5346468700689769,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.942299148830299,
+            3.264519509214729,
+            -1.8362746674438026
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "lap_screw_0",
+          "gap_mm": 2.3733838310984527,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.616562097373947,
+            3.689495852941623,
+            3.059793934788305
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.4624263996606444,
+      "rigid_fit_max_error_mm": 7.57871773515427e-14
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_7",
+        0.044041774929577275
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_6",
+          "gap_mm": 1.2144891814098002,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            0.7781072504026133,
+            -7.2805010762753195,
+            1.9794253190115774
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 2.5985929004650457,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            5.229119798857002,
+            -9.6433686657781,
+            -2.8992964740743807
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "fork_0",
+          "gap_mm": 0.22801575906403299,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            22.298366975487667,
+            -10.59242801787371,
+            0.10380873877775489
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 0.5337233871981715,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.5990955247285727,
+            -7.217864168623512,
+            1.8357489765018271
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_0",
+          "gap_mm": 0.044041774929577275,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            7.637830470877367,
+            -1.538673115692637,
+            1.6204690535079287
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_0",
+          "gap_mm": 2.598592901910154,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            10.516437576195308,
+            3.121345451843929,
+            -2.8992964747969356
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_0",
+          "gap_mm": 0.5337233454948493,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.941638695635686,
+            3.2659627659407158,
+            1.8357489574258816
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.4624263996606466,
+      "rigid_fit_max_error_mm": 7.57871773515427e-14
+    },
+    {
+      "case": "bend0",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_6",
+        0.11939431967552676
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_7",
+          "gap_mm": 1.209739685367767,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.314817227762256,
+            -3.689180966742697,
+            -1.961271217051638
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "hub_5",
+          "gap_mm": 0.1196966950680874,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -2.4392866851736477,
+            -7.381992801544295,
+            -1.6549946822809147
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "fork_3",
+          "gap_mm": 0.47886039138673736,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -10.022752075176072,
+            -19.59514243919314,
+            1.8117749793158755
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 0.11939431967552676,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.472380693286693,
+            -7.372055014601894,
+            -1.6548717079431385
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "lap_screw_6",
+          "gap_mm": 2.1309524857651825,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.717322541608886,
+            -9.54419394274265,
+            2.9439846536450154
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "lap_screw_7",
+          "gap_mm": 2.50394398627367,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.454659570544361,
+            -4.19132411178418,
+            3.121521890590089
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.1565971331189624,
+      "rigid_fit_max_error_mm": 3.2174255591641477e-14
+    },
+    {
+      "case": "bend0",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_6",
+        0.1169517312903866
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_7",
+          "gap_mm": 1.1980116791692288,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.391212934487071,
+            -3.5859169719553528,
+            1.9727630626303756
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "fork_3",
+          "gap_mm": 0.4797562585866376,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -10.023281973599003,
+            -19.595087068102018,
+            -1.8122474929236643
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "hub_6",
+          "gap_mm": 0.11977887593023731,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -2.389749875980465,
+            -7.397056961663195,
+            1.6550546933950243
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 2.363576119568118,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.0446935734108713,
+            -10.834290097897071,
+            -2.7817635149541045
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_7",
+          "gap_mm": 2.7233910939898003,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.924782753167598,
+            -5.2850876544092,
+            -2.9616955433836893
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 0.1169517312903866,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.5243139612106233,
+            -7.354964620687495,
+            1.653728810669295
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.1565971331189666,
+      "rigid_fit_max_error_mm": 3.2174255591641477e-14
+    }
+  ]
+}

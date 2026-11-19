@@ -1,0 +1,501 @@
+{
+  "part_sha256": {
+    "M5_machined_body.stl": "5989a1b69cc3fecbab948950639e34a1c82bd7c8fa610aafa1074ab8d5243527",
+    "fork_+12.stl": "4d4f0566f82381bfddb3758db5ada38b10d50147baa539f8d37a0de4a5b67853",
+    "fork_-12.stl": "9363a20680a99c9cae203d8856729843336459776dc803e5367b0de43c0950d6",
+    "gate_+12.stl": "4033ba39e15e08c4b5d5cc50651e3ea8f188924775b7f85bc52b1ff85a4aef41",
+    "gate_-12.stl": "a6a7567c9ff80f5948af28d625c2166d9855661e379b5aa4ec8723edaa6e8cc1",
+    "hub_lower_sector.stl": "f4b36963aa06de0b01762091e63320f9a7a763823b625973d437a4a49167ee59",
+    "hub_screw.stl": "42146d3ed581429677b950de425e8691fb03f44f935a819a1198796ab9acff61",
+    "hub_upper_sector.stl": "6b56716a6ef1fca24d5826009e6729ba2134f76b95aae5f19925cd54ebd3956d",
+    "lap_screw.stl": "04a4db51003e88a27975b4414303c6a38b2e3cb542cb5c66694b2fb805f9cdcd",
+    "rope_arm.stl": "2e452ac162582ccc9541a9f69a82a446d6a16543ee419e4b3bbc91399f0bf00a",
+    "shoulder_pin.stl": "aa80a1fe18d8cdd8481eba8b1449506dd2c39aca57c81a3e65d50cace218ac95",
+    "threaded_cap.stl": "38019fa176df3c43f0584990013d5feea45386073eaa8aa5bc9db58d3bc154a9"
+  },
+  "shell_triangle_area_mm2": 0.055,
+  "surface_edge_target_mm": 0.2,
+  "surface_simplification_bound_mm": 0.0005,
+  "slab_half_height_mm": 4.85,
+  "search_limit_mm": 1,
+  "web_mesh": {
+    "-12": {
+      "web_count": 8,
+      "vertices": 156674,
+      "extrapolated_vertices": 52065,
+      "faces": 313332
+    },
+    "12": {
+      "web_count": 8,
+      "vertices": 152749,
+      "extrapolated_vertices": 50872,
+      "faces": 305482
+    }
+  },
+  "recovery_errors": {
+    "bend67.5": [
+      8.510883734826682e-07,
+      1.8039831950602297e-06,
+      8.520916274790125e-07
+    ],
+    "bend0": [
+      1.0366887384704252e-07,
+      7.790532927630543e-08,
+      3.8880474839686485e-08
+    ],
+    "146": [
+      0.0,
+      3.8623241748508235e-06,
+      4.288593763224213e-06
+    ],
+    "141": [
+      0.0,
+      4.801541061612885e-06,
+      5.6196020281618075e-06
+    ],
+    "47": [
+      0.0,
+      9.714381730951182e-10,
+      3.2229419133500414e-10
+    ],
+    "64": [
+      0.0,
+      2.350587132925915e-06,
+      2.1755014953939167e-06
+    ]
+  },
+  "stations": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "unintended": {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "clearance_mm": 0.0853499901180304,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 8.72334083394001,
+        "nearest_y_mm": 17.886698148979377,
+        "nearest_z_mm": 0.665813827283396,
+        "slab_end_axial_lower_bound_mm": 2.741820369585856,
+        "independent_manifold_gap_mm": 0.0853499901180304,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.011352541946994407,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 7.218360637076293,
+        "nearest_y_mm": 17.7803231012743,
+        "nearest_z_mm": 0.30307592797449506,
+        "slab_end_axial_lower_bound_mm": 3.3018204315746864,
+        "independent_manifold_gap_mm": 0.011352541946994407,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 58,
+      "min_axial_distance_to_cut_faces_mm": 1.0612954759020798
+    },
+    {
+      "case": "bend0",
+      "station": -12,
+      "unintended": {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 337.5,
+        "part": "fork_0",
+        "family": "fork",
+        "clearance_mm": 0.07610457145747243,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 17.89507388929646,
+        "nearest_y_mm": -8.71795710324951,
+        "nearest_z_mm": 0.667775931853042,
+        "slab_end_axial_lower_bound_mm": 1.93230662104127,
+        "independent_manifold_gap_mm": 0.07610457145747243,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.012570169837257209,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.83462034236263,
+        "nearest_y_mm": 7.243779261597059,
+        "nearest_z_mm": -0.3056233211549387,
+        "slab_end_axial_lower_bound_mm": 4.003567513535773,
+        "independent_manifold_gap_mm": 0.012570169837257209,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 58,
+      "min_axial_distance_to_cut_faces_mm": 0.8758563837051363
+    },
+    {
+      "case": "146",
+      "station": -12,
+      "unintended": {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "clearance_mm": 0.0907086594109428,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -18.751403206126053,
+        "nearest_y_mm": 6.437914618392802,
+        "nearest_z_mm": 0.7140561372875758,
+        "slab_end_axial_lower_bound_mm": 3.0802392572030044,
+        "independent_manifold_gap_mm": 0.0907086594109428,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.014958446281277524,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.62645667275114,
+        "nearest_y_mm": 7.1635226980540345,
+        "nearest_z_mm": -0.2310109044133269,
+        "slab_end_axial_lower_bound_mm": 3.640239319191835,
+        "independent_manifold_gap_mm": 0.014958446281277524,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.4530636647037127
+    },
+    {
+      "case": "141",
+      "station": -12,
+      "unintended": {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "clearance_mm": 0.08956394458501518,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -18.715671658050418,
+        "nearest_y_mm": 6.422439262014453,
+        "nearest_z_mm": 0.7412229811456561,
+        "slab_end_axial_lower_bound_mm": 3.0629900050344157,
+        "independent_manifold_gap_mm": 0.08956394458501518,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.01479113583343507,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.61341993112278,
+        "nearest_y_mm": 7.1576834902412845,
+        "nearest_z_mm": -0.21752231055649165,
+        "slab_end_axial_lower_bound_mm": 3.622990067023246,
+        "independent_manifold_gap_mm": 0.01479113583343507,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.4421170310390217
+    },
+    {
+      "case": "47",
+      "station": -12,
+      "unintended": {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "clearance_mm": 0.11649142285284421,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 8.741808648774644,
+        "nearest_y_mm": 17.870772481057827,
+        "nearest_z_mm": 0.6522081827567894,
+        "slab_end_axial_lower_bound_mm": 2.99349288139713,
+        "independent_manifold_gap_mm": 0.11649142285284421,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.01681112759216691,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.750491594133248,
+        "nearest_y_mm": 7.447198719751272,
+        "nearest_z_mm": -0.3077407574376228,
+        "slab_end_axial_lower_bound_mm": 3.4823419552743617,
+        "independent_manifold_gap_mm": 0.01681112759216691,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 60,
+      "min_axial_distance_to_cut_faces_mm": 2.5583758000793235
+    },
+    {
+      "case": "64",
+      "station": -12,
+      "unintended": {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "clearance_mm": 0.11375620583636763,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 8.644247023088385,
+        "nearest_y_mm": 17.641918123197385,
+        "nearest_z_mm": 0.8229980344660626,
+        "slab_end_axial_lower_bound_mm": 2.8697577230094486,
+        "independent_manifold_gap_mm": 0.11375620583636763,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.016698768082735006,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 7.368119905952149,
+        "nearest_y_mm": 17.55824840851453,
+        "nearest_z_mm": -0.24468694069853905,
+        "slab_end_axial_lower_bound_mm": 3.429757784998279,
+        "independent_manifold_gap_mm": 0.016698768082735006,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.4206299263790623
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "unintended": {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "clearance_mm": 0.08608464185411623,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 8.724048697102875,
+        "nearest_y_mm": 17.88616470885193,
+        "nearest_z_mm": -0.6655204190224067,
+        "slab_end_axial_lower_bound_mm": 2.74234464515143,
+        "independent_manifold_gap_mm": 0.08608464185411623,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.011396251857916628,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 7.218445964501666,
+        "nearest_y_mm": 17.780287178608727,
+        "nearest_z_mm": -0.303097854941827,
+        "slab_end_axial_lower_bound_mm": 3.3023447071402607,
+        "independent_manifold_gap_mm": 0.011396251857916628,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 58,
+      "min_axial_distance_to_cut_faces_mm": 0.7920203113306252
+    },
+    {
+      "case": "bend0",
+      "station": 12,
+      "unintended": {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 337.5,
+        "part": "fork_0",
+        "family": "fork",
+        "clearance_mm": 0.07932550625349143,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 17.893529307148253,
+        "nearest_y_mm": -8.719787265274451,
+        "nearest_z_mm": -0.666338009032915,
+        "slab_end_axial_lower_bound_mm": 1.927525986831915,
+        "independent_manifold_gap_mm": 0.07932550625349143,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.012331175194765986,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.834817358920464,
+        "nearest_y_mm": 7.243265351786288,
+        "nearest_z_mm": 0.30550460543486013,
+        "slab_end_axial_lower_bound_mm": 4.004911183695329,
+        "independent_manifold_gap_mm": 0.012331175194765986,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 58,
+      "min_axial_distance_to_cut_faces_mm": 0.6025413610777992
+    },
+    {
+      "case": "146",
+      "station": 12,
+      "unintended": {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 337.5,
+        "part": "fork_0",
+        "family": "fork",
+        "clearance_mm": 0.1281719363826861,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": 17.633325835719962,
+        "nearest_y_mm": -8.652673220448357,
+        "nearest_z_mm": -0.8174957314738367,
+        "slab_end_axial_lower_bound_mm": 3.2770242139089225,
+        "independent_manifold_gap_mm": 0.1281719363826861,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.017495606352172843,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.534541639415366,
+        "nearest_y_mm": 7.170531138348673,
+        "nearest_z_mm": 0.11837089497559741,
+        "slab_end_axial_lower_bound_mm": 3.668337755585651,
+        "independent_manifold_gap_mm": 0.017495606352172843,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.762597493609287
+    },
+    {
+      "case": "141",
+      "station": 12,
+      "unintended": {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "clearance_mm": 0.12044276361136276,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -18.692851500840362,
+        "nearest_y_mm": 6.3902017771508834,
+        "nearest_z_mm": -0.7452774407418753,
+        "slab_end_axial_lower_bound_mm": 3.086506003076039,
+        "independent_manifold_gap_mm": 0.12044276361136276,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.01681524685372014,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.55228170423716,
+        "nearest_y_mm": 7.17519853094515,
+        "nearest_z_mm": 0.15439230747844732,
+        "slab_end_axial_lower_bound_mm": 3.6465060650648695,
+        "independent_manifold_gap_mm": 0.01681524685372014,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.741793359706964
+    },
+    {
+      "case": "47",
+      "station": 12,
+      "unintended": {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "clearance_mm": 0.13444225205703209,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -18.818302913553058,
+        "nearest_y_mm": 6.443098673437971,
+        "nearest_z_mm": -0.6442907624596519,
+        "slab_end_axial_lower_bound_mm": 2.899183464474752,
+        "independent_manifold_gap_mm": 0.13444225205703209,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.018477853616609603,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.691898423890954,
+        "nearest_y_mm": 7.2762753650973035,
+        "nearest_z_mm": 0.2928591001636445,
+        "slab_end_axial_lower_bound_mm": 3.4591835264635824,
+        "independent_manifold_gap_mm": 0.018477853616609603,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 60,
+      "min_axial_distance_to_cut_faces_mm": 2.716170806466904
+    },
+    {
+      "case": "64",
+      "station": 12,
+      "unintended": {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "clearance_mm": 0.08850009387056881,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -18.71757007822386,
+        "nearest_y_mm": 6.424383043738567,
+        "nearest_z_mm": -0.7401677737092163,
+        "slab_end_axial_lower_bound_mm": 3.0041970770062276,
+        "independent_manifold_gap_mm": 0.08850009387056881,
+        "independent_intersection_mm3": 0.0
+      },
+      "bearing": {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 157.5,
+        "part": "shoulder_pin_2",
+        "family": "shoulder_pin",
+        "clearance_mm": 0.014593602971998125,
+        "intersection_mm3": 0.0,
+        "nearest_x_mm": -17.6135911506254,
+        "nearest_y_mm": 7.157378365180012,
+        "nearest_z_mm": 0.21742558803630524,
+        "slab_end_axial_lower_bound_mm": 3.564197138995058,
+        "independent_manifold_gap_mm": 0.014593602971998125,
+        "independent_intersection_mm3": 0.0
+      },
+      "pairs_in_broad_phase": 59,
+      "min_axial_distance_to_cut_faces_mm": 2.663208330758785
+    }
+  ]
+}
