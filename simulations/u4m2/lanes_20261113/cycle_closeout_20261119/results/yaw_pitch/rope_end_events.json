@@ -1,0 +1,5356 @@
+{
+  "source_sha256": {
+    "cad/lanes_u4m2/retained_seat_20261118/parts/M5_machined_body.stl": "5989a1b69cc3fecbab948950639e34a1c82bd7c8fa610aafa1074ab8d5243527",
+    "cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5"
+  },
+  "rope_diameter_mm": 2.0,
+  "sampling_mm": 0.02,
+  "rigid_end_depth_mm": 10.0,
+  "allowed_mesh_faceting_mm": 0.005,
+  "minimum_required_design_margin_deg": 1.0,
+  "event_count": 14,
+  "distinct_motion_steps": 13,
+  "checks": 312,
+  "worst_gap": {
+    "step": 1796,
+    "event": "Left turn",
+    "module": "M6",
+    "end": "proximal",
+    "rope": "C_down",
+    "route": "free shared bore",
+    "tension_N": 3.1526770749478463,
+    "minimum_rope_gap_mm": -0.00225714336782179,
+    "design_margin_deg": 10.392056296607166,
+    "samples": 566,
+    "worst_cad_xyz_mm": [
+      -0.01218397998326116,
+      -27.750516434896475,
+      -47.14494149036728
+    ]
+  },
+  "smallest_design_margin": {
+    "step": 1796,
+    "event": "Left turn",
+    "module": "M5",
+    "end": "proximal",
+    "rope": "C_right",
+    "route": "fixed end",
+    "tension_N": 13.251982483217473,
+    "minimum_rope_gap_mm": -0.0003478392900512217,
+    "design_margin_deg": 6.312892427553608,
+    "samples": 513,
+    "worst_cad_xyz_mm": [
+      -27.982503811390547,
+      0.416359671129519,
+      -45.43473129655599
+    ]
+  },
+  "below_faceting_allowance": 0,
+  "below_design_margin": 0,
+  "rows": [
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 3.014153198358172,
+      "minimum_rope_gap_mm": 0.0069265109421150495,
+      "design_margin_deg": 10.271621666881552,
+      "samples": 506,
+      "worst_cad_xyz_mm": [
+        9.057805284564069e-09,
+        23.675322329070813,
+        -45.88522776152575
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 3.014153198358172,
+      "minimum_rope_gap_mm": -0.0002962892993874089,
+      "design_margin_deg": 24.323756037616807,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -1.728955825195075e-08,
+        23.744403695445808,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.024533883732853,
+      "minimum_rope_gap_mm": 0.005370969894938016,
+      "design_margin_deg": 10.230006752521412,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -23.999999995817728,
+        -0.3260693651985197,
+        -45.88639895218079
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.024533883732853,
+      "minimum_rope_gap_mm": -0.00029581098139352946,
+      "design_margin_deg": 24.27451406384265,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -23.99999999788635,
+        -0.2555963045541912,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.0353515225646506,
+      "minimum_rope_gap_mm": 0.0024883039937015905,
+      "design_margin_deg": 10.152737510797905,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -4.864795440974636e-09,
+        -24.32904281141926,
+        -45.886048236675904
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.0353515225646506,
+      "minimum_rope_gap_mm": -0.000296289584594156,
+      "design_margin_deg": 24.20048187098903,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        2.8927593849452423e-08,
+        -24.25559630455419,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.0245327913156315,
+      "minimum_rope_gap_mm": 0.005370956967954532,
+      "design_margin_deg": 10.230006407059653,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        24.000000004182272,
+        -0.3260693754217764,
+        -45.88639897048539
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.0245327913156315,
+      "minimum_rope_gap_mm": -0.0002958109813928633,
+      "design_margin_deg": 24.274515000186735,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        24.00000000211366,
+        -0.2555963045541903,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 2.907710447922737,
+      "minimum_rope_gap_mm": 0.007117333123438874,
+      "design_margin_deg": 10.276759749674083,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        9.658076009028245e-09,
+        27.67556126213582,
+        -45.8855198711403
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 2.904413961072775,
+      "minimum_rope_gap_mm": 0.0053709709721871945,
+      "design_margin_deg": 10.230006781309902,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -27.999999995817728,
+        -0.32606936434658157,
+        -45.886398950655405
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 2.901220780086281,
+      "minimum_rope_gap_mm": 0.0017486078821453699,
+      "design_margin_deg": 10.132928325117023,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -7.177556620121861e-09,
+        -28.329452199060523,
+        -45.888222678005526
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 2.904413724416156,
+      "minimum_rope_gap_mm": 0.005370955890705353,
+      "design_margin_deg": 10.230006378271165,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        28.000000004182272,
+        -0.3260693762737145,
+        -45.886398972010774
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 2.907710447922737,
+      "minimum_rope_gap_mm": 0.22041956606168256,
+      "design_margin_deg": 17.68072272280595,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -1.1674498027894125e-09,
+        27.973038234604978,
+        43.16163696585473
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 2.904413961072775,
+      "minimum_rope_gap_mm": 0.22056831651790554,
+      "design_margin_deg": 17.682527254154664,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -28.000000014764964,
+        -0.026815684407483487,
+        43.160498538648696
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 2.901220780086281,
+      "minimum_rope_gap_mm": 0.22073785380767363,
+      "design_margin_deg": 17.684394840539372,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -2.882241658664355e-08,
+        -28.02664183117584,
+        43.16342176142558
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 2.904413724416156,
+      "minimum_rope_gap_mm": 0.22056828859138355,
+      "design_margin_deg": 17.682526925436783,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        27.99999998523504,
+        -0.02681571253819507,
+        43.160498472843656
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 2.907710447922737,
+      "minimum_rope_gap_mm": -0.0016723961883576832,
+      "design_margin_deg": 24.328861053625292,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        7.667291871242215e-08,
+        27.750469923393545,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 2.907710447922737,
+      "minimum_rope_gap_mm": -0.0017587730353016973,
+      "design_margin_deg": 15.00889187499658,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        9.029576099103709e-08,
+        27.75038417296031,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 2.904413961072775,
+      "minimum_rope_gap_mm": -0.00167192468719779,
+      "design_margin_deg": 24.27247015133385,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.99999997738993,
+        -0.24952986376240785,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 2.904413961072775,
+      "minimum_rope_gap_mm": -0.0017577738121470343,
+      "design_margin_deg": 15.04971397129517,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.999999974442012,
+        -0.2496158526939251,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 2.901220780086281,
+      "minimum_rope_gap_mm": -0.0016972600286132566,
+      "design_margin_deg": 24.181441531692244,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -4.5424529300431744e-08,
+        -28.24955499585035,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 2.901220780086281,
+      "minimum_rope_gap_mm": -0.0017587309920863436,
+      "design_margin_deg": 15.103956449181087,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -5.6953002012209697e-08,
+        -28.249615787091596,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 2.904413724416156,
+      "minimum_rope_gap_mm": -0.0016719246818079903,
+      "design_margin_deg": 24.272471246231987,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.000000022610056,
+        -0.2495298637570076,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 0,
+      "event": "Loaded start + Lowest rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 2.904413724416156,
+      "minimum_rope_gap_mm": -0.0017577738117601216,
+      "design_margin_deg": 15.049710563633315,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        28.00000002555797,
+        -0.24961585269353853,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.41042641113554,
+      "minimum_rope_gap_mm": 0.17532137203567655,
+      "design_margin_deg": 15.619457327504106,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -5.245571105046893e-13,
+        23.91275335297685,
+        -46.522999670689835
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.41042641113554,
+      "minimum_rope_gap_mm": 0.13038056076015003,
+      "design_margin_deg": 27.689248645760866,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -4.931069168484735e-13,
+        24.11757656307208,
+        42.86137049913163
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.0001508061811526,
+      "minimum_rope_gap_mm": 0.17485900657639486,
+      "design_margin_deg": 15.601504166699431,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -24.000000000000274,
+        -0.08771781629514401,
+        -46.52288617483513
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.0001508061811526,
+      "minimum_rope_gap_mm": 0.13101319029771252,
+      "design_margin_deg": 27.69637622487387,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -24.000000000000608,
+        0.11687273847048647,
+        42.864193771308486
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.001183612262132,
+      "minimum_rope_gap_mm": 0.17427757446407877,
+      "design_margin_deg": 15.579000064228662,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        4.297385483947135e-14,
+        -24.08830854919763,
+        -46.52274387833933
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.001183612262132,
+      "minimum_rope_gap_mm": 0.1316044091213422,
+      "design_margin_deg": 27.702962523460968,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -7.144846396232827e-13,
+        -23.883683743648817,
+        42.862683429140105
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.000150806173215,
+      "minimum_rope_gap_mm": 0.1748590065769604,
+      "design_margin_deg": 15.601504166721243,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999999999999726,
+        -0.08771781629464709,
+        -46.522886174834
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.000150806173215,
+      "minimum_rope_gap_mm": 0.13101319029794234,
+      "design_margin_deg": 27.696376224876413,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999999999999392,
+        0.11687273847031532,
+        42.86419377130598
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.497818939422169,
+      "minimum_rope_gap_mm": 0.17538831958061651,
+      "design_margin_deg": 15.622102393905545,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -5.614464254434742e-13,
+        27.912854884774678,
+        -46.523560599517936
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.0962192335174454,
+      "minimum_rope_gap_mm": 0.17485900657634734,
+      "design_margin_deg": 15.601504166697605,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -28.000000000000274,
+        -0.08771781629518552,
+        -46.52288617483523
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.10367331757867,
+      "minimum_rope_gap_mm": 0.17416490734784928,
+      "design_margin_deg": 15.574682802660295,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        1.035007633999379e-13,
+        -28.088379464601147,
+        -46.52342544501674
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.096219233533361,
+      "minimum_rope_gap_mm": 0.17485900657700792,
+      "design_margin_deg": 15.60150416672307,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        27.999999999999726,
+        -0.08771781629460558,
+        -46.5228861748339
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.497818939422169,
+      "minimum_rope_gap_mm": -0.00029858514469127684,
+      "design_margin_deg": 14.540763596662718,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        3.364829190960543e-13,
+        28.260714649772847,
+        42.749211250324635
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.0962192335174454,
+      "minimum_rope_gap_mm": -0.00029763513179359435,
+      "design_margin_deg": 14.59446767526648,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -27.99999999999966,
+        0.2629835342498159,
+        42.707522674604384
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.10367331757867,
+      "minimum_rope_gap_mm": -0.0002992496555269675,
+      "design_margin_deg": 14.633030973886822,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        3.3754333870602726e-13,
+        -27.737245429675152,
+        42.71155451767836
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.096219233533361,
+      "minimum_rope_gap_mm": -0.00029763513179448253,
+      "design_margin_deg": 14.594467675266353,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        28.00000000000034,
+        0.26298353424981763,
+        42.70752267460437
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.497818939422169,
+      "minimum_rope_gap_mm": 0.06550003007585703,
+      "design_margin_deg": 27.897444038136523,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -2.0136702735020866e-12,
+        28.182375432123,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.497818939422169,
+      "minimum_rope_gap_mm": 0.16834267118967605,
+      "design_margin_deg": 16.897656226055958,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -1.9859116057880397e-12,
+        28.079490848645968,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.0962192335174454,
+      "minimum_rope_gap_mm": 0.06692098115315948,
+      "design_margin_deg": 27.891540922393958,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -28.00000000000222,
+        0.18095157789955274,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.0962192335174454,
+      "minimum_rope_gap_mm": 0.17033062201884097,
+      "design_margin_deg": 16.891583937038998,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -28.000000000002046,
+        0.07749824968144092,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.10367331757867,
+      "minimum_rope_gap_mm": 0.06848230569211844,
+      "design_margin_deg": 27.88593230317296,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -2.3730864181060424e-12,
+        -27.820613695673522,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.10367331757867,
+      "minimum_rope_gap_mm": 0.17246724735210917,
+      "design_margin_deg": 16.885489683211194,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -2.051422705251063e-12,
+        -27.924643999944816,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.096219233533361,
+      "minimum_rope_gap_mm": 0.06692098115049028,
+      "design_margin_deg": 27.891540922406126,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        27.99999999999778,
+        0.18095157790222838,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 165,
+      "event": "Straighten",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.096219233533361,
+      "minimum_rope_gap_mm": 0.17033062201629767,
+      "design_margin_deg": 16.89158393703768,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.999999999997954,
+        0.07749824968399051,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.410426349805428,
+      "minimum_rope_gap_mm": 0.1753213721938911,
+      "design_margin_deg": 15.619457333660133,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -5.285719411289673e-13,
+        23.912753353151942,
+        -46.522999670957994
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.410426349805428,
+      "minimum_rope_gap_mm": 0.13038056033214107,
+      "design_margin_deg": 27.689248641009986,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -4.74698750575115e-13,
+        24.11757656347853,
+        42.86137049999964
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.000150735543432,
+      "minimum_rope_gap_mm": 0.17485900673612487,
+      "design_margin_deg": 15.601504172885196,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -24.000000000000277,
+        -0.08771781613630801,
+        -46.52288617481495
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.000150735543432,
+      "minimum_rope_gap_mm": 0.13101318987543786,
+      "design_margin_deg": 27.69637622015384,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -24.000000000000576,
+        0.11687273889412307,
+        42.864193771294005
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.0011835320426385,
+      "minimum_rope_gap_mm": 0.1742775746258114,
+      "design_margin_deg": 15.579000070461504,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        3.56281937555475e-14,
+        -24.088308549059175,
+        -46.5227438779576
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.0011835320426385,
+      "minimum_rope_gap_mm": 0.13160440870312362,
+      "design_margin_deg": 27.702962518767006,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -6.692564170047603e-13,
+        -23.883683743208945,
+        42.86268342831064
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.0001507355370496,
+      "minimum_rope_gap_mm": 0.17485900673668842,
+      "design_margin_deg": 15.601504172906917,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999999999999723,
+        -0.08771781613581521,
+        -46.522886174813785
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.0001507355370496,
+      "minimum_rope_gap_mm": 0.13101318987564214,
+      "design_margin_deg": 27.696376220156104,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999999999999424,
+        0.11687273889397048,
+        42.86419377129179
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.49781887781695,
+      "minimum_rope_gap_mm": 0.17538831973869962,
+      "design_margin_deg": 15.622102400057791,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -5.652421395980391e-13,
+        27.912854884952093,
+        -46.523560599828464
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.096219171707418,
+      "minimum_rope_gap_mm": 0.17485900673607802,
+      "design_margin_deg": 15.6015041728834,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -28.000000000000277,
+        -0.08771781613634892,
+        -46.52288617481504
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.103673255372351,
+      "minimum_rope_gap_mm": 0.1741649075096341,
+      "design_margin_deg": 15.574682808903443,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        9.580327459155381e-14,
+        -28.088379464466666,
+        -46.52342544456586
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.096219171723334,
+      "minimum_rope_gap_mm": 0.1748590067367346,
+      "design_margin_deg": 15.601504172908713,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        27.999999999999723,
+        -0.0877178161357743,
+        -46.52288617481369
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.49781887781695,
+      "minimum_rope_gap_mm": -0.00029858514471114983,
+      "design_margin_deg": 14.54076359708819,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        3.336722582696716e-13,
+        28.260714649772233,
+        42.7492112503365
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.096219171707418,
+      "minimum_rope_gap_mm": -0.0002976351318833004,
+      "design_margin_deg": 14.59446767566968,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -27.999999999999662,
+        0.26298353424741155,
+        42.70752267464654
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.103673255372351,
+      "minimum_rope_gap_mm": -0.0002992496554664603,
+      "design_margin_deg": 14.6330309742755,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        3.34613914552847e-13,
+        -27.73724542967745,
+        42.711554517718994
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.096219171723334,
+      "minimum_rope_gap_mm": -0.0002976351318824122,
+      "design_margin_deg": 14.594467675669572,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        28.000000000000338,
+        0.26298353424741155,
+        42.707522674646526
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.49781887781695,
+      "minimum_rope_gap_mm": 0.06550002885461881,
+      "design_margin_deg": 27.897444036021778,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -1.97737028301912e-12,
+        28.18237543334704,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.49781887781695,
+      "minimum_rope_gap_mm": 0.16834267016188154,
+      "design_margin_deg": 16.897656224004955,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -1.9600957578373837e-12,
+        28.079490849676322,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.096219171707418,
+      "minimum_rope_gap_mm": 0.06692097990265888,
+      "design_margin_deg": 27.89154092018525,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -28.000000000002128,
+        0.18095157915292015,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.096219171707418,
+      "minimum_rope_gap_mm": 0.1703306209685569,
+      "design_margin_deg": 16.891583934869004,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -28.000000000001968,
+        0.0774982507343458,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.103673255372351,
+      "minimum_rope_gap_mm": 0.0684823041034186,
+      "design_margin_deg": 27.88593230192972,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -2.2234877675551412e-12,
+        -27.820613694081185,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.103673255372351,
+      "minimum_rope_gap_mm": 0.17246724608769992,
+      "design_margin_deg": 16.885489680600443,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -1.923634238517265e-12,
+        -27.92464399867725,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.096219171723334,
+      "minimum_rope_gap_mm": 0.06692097991029144,
+      "design_margin_deg": 27.891540920158615,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        27.999999999997872,
+        0.18095157914526996,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 472,
+      "event": "Insert",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.096219171723334,
+      "minimum_rope_gap_mm": 0.1703306209768889,
+      "design_margin_deg": 16.891583934899586,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.999999999998032,
+        0.0774982507259932,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 17.608931813753124,
+      "minimum_rope_gap_mm": -0.0003466605818367441,
+      "design_margin_deg": 8.180820494896444,
+      "samples": 509,
+      "worst_cad_xyz_mm": [
+        -0.11976662334875271,
+        24.343501372971144,
+        -45.696428558664984
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 17.608931813753124,
+      "minimum_rope_gap_mm": -0.00037450782545944694,
+      "design_margin_deg": 12.109482683901748,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        0.017073061166971517,
+        24.461061753197704,
+        41.46709273682673
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 14.042015391989604,
+      "minimum_rope_gap_mm": 0.02705745573870244,
+      "design_margin_deg": 10.821805790837962,
+      "samples": 506,
+      "worst_cad_xyz_mm": [
+        -24.015981758123726,
+        0.2925810954460317,
+        -45.96110472527065
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 14.042015391989604,
+      "minimum_rope_gap_mm": -0.00039753768869588146,
+      "design_margin_deg": 13.84868251407517,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        -24.02792118759348,
+        0.3852219163880382,
+        41.743360953070905
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.1625101356982173,
+      "minimum_rope_gap_mm": -0.0003418279656357548,
+      "design_margin_deg": 8.691165524480331,
+      "samples": 509,
+      "worst_cad_xyz_mm": [
+        0.03258324634769494,
+        -23.645137969149868,
+        -45.73782035569831
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.1625101356982173,
+      "minimum_rope_gap_mm": -0.0003776239608153098,
+      "design_margin_deg": 15.836441294044684,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -0.04754352368979177,
+        -23.624243150558176,
+        41.774872640925636
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 10.508454579469259,
+      "minimum_rope_gap_mm": -0.0003349937437611139,
+      "design_margin_deg": 6.666139947489089,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        23.985664102442914,
+        0.3374807775425904,
+        -45.848291026719885
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 10.508454579469259,
+      "minimum_rope_gap_mm": -0.00036530193585049275,
+      "design_margin_deg": 16.105808856829032,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        23.96907925727778,
+        0.3678961319795709,
+        41.81656627692341
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 17.067502625424552,
+      "minimum_rope_gap_mm": -0.0003840812279684025,
+      "design_margin_deg": 7.821480331940479,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        -0.135174210549397,
+        28.309532284174836,
+        -45.848443724323225
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 8.73531448700838,
+      "minimum_rope_gap_mm": 0.03875565410616577,
+      "design_margin_deg": 11.149469985203348,
+      "samples": 505,
+      "worst_cad_xyz_mm": [
+        -28.0154773459316,
+        0.2753446222384683,
+        -45.99988243467735
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.143709114882669,
+      "minimum_rope_gap_mm": -0.00035646604452310715,
+      "design_margin_deg": 8.669783396353084,
+      "samples": 509,
+      "worst_cad_xyz_mm": [
+        0.03904255048135536,
+        -27.63863724055618,
+        -45.69816143146833
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 12.98891400499173,
+      "minimum_rope_gap_mm": -0.00034704492369075357,
+      "design_margin_deg": 6.3210758444826265,
+      "samples": 512,
+      "worst_cad_xyz_mm": [
+        27.98260223043478,
+        0.4159753605038723,
+        -45.43647858373564
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 17.067502625424552,
+      "minimum_rope_gap_mm": -0.0003474728773870117,
+      "design_margin_deg": 12.514350951661397,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        0.06673575704309624,
+        28.25671427906861,
+        42.66944208254013
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 8.73531448700838,
+      "minimum_rope_gap_mm": -0.0002997607395350821,
+      "design_margin_deg": 12.67108578942942,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -27.93609789468872,
+        0.2550364548686403,
+        42.7086329783491
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.143709114882669,
+      "minimum_rope_gap_mm": -0.00032146147089062715,
+      "design_margin_deg": 12.754065238716516,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        0.06356986569004794,
+        -27.742382756623282,
+        42.667862865829804
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 12.98891400499173,
+      "minimum_rope_gap_mm": -0.00031785594714672794,
+      "design_margin_deg": 12.657745922881814,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        28.065215062959282,
+        0.25709424912630663,
+        42.66960751384207
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 17.067502625424552,
+      "minimum_rope_gap_mm": -0.0018769746179467806,
+      "design_margin_deg": 10.679380280264954,
+      "samples": 568,
+      "worst_cad_xyz_mm": [
+        0.010511419392777173,
+        28.24921895958225,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 17.067502625424552,
+      "minimum_rope_gap_mm": -0.002129565569424452,
+      "design_margin_deg": 10.413707880444043,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        -0.02533274434547453,
+        28.248327081979035,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 8.73531448700838,
+      "minimum_rope_gap_mm": -0.0019385117956399744,
+      "design_margin_deg": 13.638061704893596,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        -28.014684889353713,
+        0.24900805245999058,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 8.73531448700838,
+      "minimum_rope_gap_mm": -0.0018540263304137605,
+      "design_margin_deg": 11.402259741458664,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        -28.002779918950274,
+        0.249530152071183,
+        -47.74096539257429
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.143709114882669,
+      "minimum_rope_gap_mm": -0.001835856618303433,
+      "design_margin_deg": 15.916186206150652,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -0.023649611146840988,
+        -27.751683108616806,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.143709114882669,
+      "minimum_rope_gap_mm": -0.0022530679397040343,
+      "design_margin_deg": 10.394480661792452,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        0.011943734889685352,
+        -27.75050477324571,
+        -47.14494149036728
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 12.98891400499173,
+      "minimum_rope_gap_mm": -0.001941524308479825,
+      "design_margin_deg": 16.273633370520773,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.982630716246344,
+        0.2488351473412644,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 913,
+      "event": "Right turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 12.98891400499173,
+      "minimum_rope_gap_mm": -0.0019110222625022821,
+      "design_margin_deg": 9.502087670947434,
+      "samples": 567,
+      "worst_cad_xyz_mm": [
+        27.99745822428232,
+        0.24960284125292725,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.877566564416275,
+      "minimum_rope_gap_mm": 0.17532327163597672,
+      "design_margin_deg": 15.619833295151558,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -0.0003409792426740879,
+        23.912766510024298,
+        -46.52304648355463
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 15.877566564416275,
+      "minimum_rope_gap_mm": 0.12968824470063245,
+      "design_margin_deg": 27.681762403993694,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.00029049577807082434,
+        24.118213647094322,
+        42.86286207760822
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.0817106817083215,
+      "minimum_rope_gap_mm": 0.17451849526736574,
+      "design_margin_deg": 15.58834807521668,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -24.000025775892478,
+        -0.088050765624987,
+        -46.5230106107732
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.0817106817083215,
+      "minimum_rope_gap_mm": 0.12955240642622523,
+      "design_margin_deg": 27.680397555964202,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -24.00050251766866,
+        0.11827905766990562,
+        42.86530682657984
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.40166946567038,
+      "minimum_rope_gap_mm": 0.17427872952325885,
+      "design_margin_deg": 15.579365679516865,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0003693157151794273,
+        -24.088298015503387,
+        -46.522748914301715
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.40166946567038,
+      "minimum_rope_gap_mm": 0.13086618913600034,
+      "design_margin_deg": 27.69550483066495,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -0.0012358076461032453,
+        -23.88299516727876,
+        42.86153823578186
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1334029826121763,
+      "minimum_rope_gap_mm": 0.17521870687373142,
+      "design_margin_deg": 15.615455914531593,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999974137536533,
+        -0.08736088084973248,
+        -46.52281829154448
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1334029826121763,
+      "minimum_rope_gap_mm": 0.13108075852841883,
+      "design_margin_deg": 27.697467836117127,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        23.999497183503365,
+        0.11679356554346491,
+        42.86332258460737
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.952699439215603,
+      "minimum_rope_gap_mm": 0.17538910907834437,
+      "design_margin_deg": 15.622471330543268,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -0.00038726442811378776,
+        27.912868208384733,
+        -46.5236101248457
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1086131671341954,
+      "minimum_rope_gap_mm": 0.17446014515884722,
+      "design_margin_deg": 15.586088838812284,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -28.00002576867823,
+        -0.08810825602292488,
+        -46.523026637375594
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.5973447779114682,
+      "minimum_rope_gap_mm": 0.17416420246094977,
+      "design_margin_deg": 15.575034428618869,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.0004449169291497965,
+        -28.088369215836153,
+        -46.52342602155785
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0624506663363533,
+      "minimum_rope_gap_mm": 0.1752770586990109,
+      "design_margin_deg": 15.617714651163078,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        27.999974130322286,
+        -0.08730339045179461,
+        -46.52280226494209
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 15.952699439215603,
+      "minimum_rope_gap_mm": -0.0003244600984734225,
+      "design_margin_deg": 14.553994350487994,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0011319441259290545,
+        28.260693084890516,
+        42.749580228266915
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1086131671341954,
+      "minimum_rope_gap_mm": -0.0003256309658411505,
+      "design_margin_deg": 14.606519702892731,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -28.001167898547926,
+        0.26290916445134704,
+        42.70878271735931
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.5973447779114682,
+      "minimum_rope_gap_mm": -0.0003235223821154154,
+      "design_margin_deg": 14.645031435612328,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0011789419314452373,
+        -27.73925347237791,
+        42.74854503425398
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0624506663363533,
+      "minimum_rope_gap_mm": -0.000325723795085886,
+      "design_margin_deg": 14.60739620118076,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        27.99883191319023,
+        0.26290395133696937,
+        42.70887435593436
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.952699439215603,
+      "minimum_rope_gap_mm": 0.06538162061966224,
+      "design_margin_deg": 27.887378290757475,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -0.003537055946216469,
+        28.182262508640388,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 15.952699439215603,
+      "minimum_rope_gap_mm": 0.16903901677082844,
+      "design_margin_deg": 16.88756835480894,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -0.005178488419076146,
+        28.078449060304127,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1086131671341954,
+      "minimum_rope_gap_mm": 0.06608199820847505,
+      "design_margin_deg": 27.871114666091312,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -28.00454774005677,
+        0.1814949070226919,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1086131671341954,
+      "minimum_rope_gap_mm": 0.1713493135326838,
+      "design_margin_deg": 16.871140217094013,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -28.005171838230545,
+        0.07613378468425791,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.5973447779114682,
+      "minimum_rope_gap_mm": 0.06833804697768464,
+      "design_margin_deg": 27.876040222666134,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -0.005199953667663783,
+        -27.820809705775318,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.5973447779114682,
+      "minimum_rope_gap_mm": 0.1732679900722387,
+      "design_margin_deg": 16.875520632370236,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -0.004822426125829183,
+        -27.92576679607915,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0624506663363533,
+      "minimum_rope_gap_mm": 0.0674798417086091,
+      "design_margin_deg": 27.892083980084617,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        27.99544702736578,
+        0.18009350927750142,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1355,
+      "event": "Right return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0624506663363533,
+      "minimum_rope_gap_mm": 0.17079479481105087,
+      "design_margin_deg": 16.892088679622777,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.99482232421887,
+        0.0766892944835914,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 17.695234446048214,
+      "minimum_rope_gap_mm": -0.00035137744580326924,
+      "design_margin_deg": 8.163132683935737,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        0.11281766972962579,
+        24.32496796441166,
+        -45.8101312757565
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 17.695234446048214,
+      "minimum_rope_gap_mm": -0.00037908823676169323,
+      "design_margin_deg": 12.094035637627472,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        -0.01677635315996075,
+        24.461456891553826,
+        41.46582872750337
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 10.520609913928118,
+      "minimum_rope_gap_mm": -0.0003356655958870469,
+      "design_margin_deg": 6.656178964242277,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        -23.9826195617354,
+        0.40722344277988476,
+        -45.476424656606945
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 10.520609913928118,
+      "minimum_rope_gap_mm": -0.00036089623903112766,
+      "design_margin_deg": 16.093734439868307,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        -23.968914863473486,
+        0.3681043961622516,
+        41.81558169818488
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.2183648396816533,
+      "minimum_rope_gap_mm": -0.00034764559171640563,
+      "design_margin_deg": 8.672789105404199,
+      "samples": 509,
+      "worst_cad_xyz_mm": [
+        -0.032792657946293824,
+        -23.638082676209297,
+        -45.69852269747082
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.2183648396816533,
+      "minimum_rope_gap_mm": -0.0003757339294974127,
+      "design_margin_deg": 15.827166977951334,
+      "samples": 507,
+      "worst_cad_xyz_mm": [
+        0.04765192626156941,
+        -23.62407474795599,
+        41.77410034638053
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 14.116383014082862,
+      "minimum_rope_gap_mm": 0.0260605130795335,
+      "design_margin_deg": 10.794098588184484,
+      "samples": 506,
+      "worst_cad_xyz_mm": [
+        24.01610158658292,
+        0.2935181782462513,
+        -45.96154974573114
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 14.116383014082862,
+      "minimum_rope_gap_mm": -0.00039855090605211974,
+      "design_margin_deg": 13.840310251170905,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        24.028759767389797,
+        0.39470303853086747,
+        41.70454441176602
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 17.056446441600514,
+      "minimum_rope_gap_mm": -0.00038048763133158303,
+      "design_margin_deg": 7.8055456656497935,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        0.1346907638617098,
+        28.309766895569975,
+        -45.84830641172691
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 13.251982483217473,
+      "minimum_rope_gap_mm": -0.0003478392900512217,
+      "design_margin_deg": 6.312892427553608,
+      "samples": 513,
+      "worst_cad_xyz_mm": [
+        -27.982503811390547,
+        0.416359671129519,
+        -45.43473129655599
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.1526770749478463,
+      "minimum_rope_gap_mm": -0.0003449418414267491,
+      "design_margin_deg": 8.65181364825783,
+      "samples": 509,
+      "worst_cad_xyz_mm": [
+        -0.03583274842568305,
+        -27.664197269555483,
+        -45.848766453833214
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 8.965078137923582,
+      "minimum_rope_gap_mm": 0.037725538326503605,
+      "design_margin_deg": 11.12023663723199,
+      "samples": 506,
+      "worst_cad_xyz_mm": [
+        28.01559637559965,
+        0.276312748813443,
+        -46.00036423670831
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 17.056446441600514,
+      "minimum_rope_gap_mm": -0.00035653262807178177,
+      "design_margin_deg": 12.517324955664243,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -0.06734670001780438,
+        28.256547709907736,
+        42.669551150451966
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 13.251982483217473,
+      "minimum_rope_gap_mm": -0.00033060973342458055,
+      "design_margin_deg": 12.660267625658468,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -28.065825437106184,
+        0.256932421013158,
+        42.669705132083365
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.1526770749478463,
+      "minimum_rope_gap_mm": -0.0003077947453550278,
+      "design_margin_deg": 12.756560140969231,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.06417005647899347,
+        -27.742538138579533,
+        42.66796512642928
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 8.965078137923582,
+      "minimum_rope_gap_mm": -0.00031413826801862665,
+      "design_margin_deg": 12.67383307574083,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        27.935502501901862,
+        0.2548827875475902,
+        42.70869680736631
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 17.056446441600514,
+      "minimum_rope_gap_mm": -0.0018742167272643995,
+      "design_margin_deg": 10.659594219939887,
+      "samples": 568,
+      "worst_cad_xyz_mm": [
+        -0.010406013027584185,
+        28.24922338614636,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 17.056446441600514,
+      "minimum_rope_gap_mm": -0.0021380870231783033,
+      "design_margin_deg": 10.414036553450881,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        0.02509545392812081,
+        28.248351174020005,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 13.251982483217473,
+      "minimum_rope_gap_mm": -0.0019419528979124356,
+      "design_margin_deg": 16.261220580562643,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.98259519290674,
+        0.2488326678087217,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 13.251982483217473,
+      "minimum_rope_gap_mm": -0.0018988295210329298,
+      "design_margin_deg": 9.500647548664011,
+      "samples": 567,
+      "worst_cad_xyz_mm": [
+        -27.99767732832579,
+        0.2496049826361421,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.1526770749478463,
+      "minimum_rope_gap_mm": -0.0018363021153809944,
+      "design_margin_deg": 15.90700548178706,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.02364482657068123,
+        -27.751682679456074,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.1526770749478463,
+      "minimum_rope_gap_mm": -0.00225714336782179,
+      "design_margin_deg": 10.392056296607166,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        -0.01218397998326116,
+        -27.750516434896475,
+        -47.14494149036728
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 8.965078137923582,
+      "minimum_rope_gap_mm": -0.001939235614297652,
+      "design_margin_deg": 13.629898498956134,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        28.01471014839572,
+        0.2490065604764553,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 1796,
+      "event": "Left turn",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 8.965078137923582,
+      "minimum_rope_gap_mm": -0.0018394723830422732,
+      "design_margin_deg": 11.399638764397334,
+      "samples": 566,
+      "worst_cad_xyz_mm": [
+        28.002538764890165,
+        0.24953137288060184,
+        -47.74096539257429
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.042758015779853,
+      "minimum_rope_gap_mm": 0.17553586910972085,
+      "design_margin_deg": 15.628193236687435,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.00045253626633833416,
+        23.91300581776499,
+        -46.523429175789225
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.042758015779853,
+      "minimum_rope_gap_mm": 0.12871758790838972,
+      "design_margin_deg": 27.67135772137576,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0009234168801230988,
+        24.119097881856444,
+        42.86484212204906
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1467480300829433,
+      "minimum_rope_gap_mm": 0.175299938662699,
+      "design_margin_deg": 15.618877842776637,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -23.999745268334557,
+        -0.08722548751949256,
+        -46.52360525211557
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1467480300829433,
+      "minimum_rope_gap_mm": 0.1292143555298615,
+      "design_margin_deg": 27.67677378640977,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999253147764158,
+        0.11865915693026578,
+        42.86286267466488
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4979313609943876,
+      "minimum_rope_gap_mm": 0.17450491687613323,
+      "design_margin_deg": 15.58787780311183,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        6.9610624101550925e-06,
+        -24.088025455940333,
+        -46.52363920932875
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4979313609943876,
+      "minimum_rope_gap_mm": 0.12998724891126257,
+      "design_margin_deg": 27.685321496482207,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0005834345529551058,
+        -23.88213150727153,
+        42.86394230552772
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1954606276647635,
+      "minimum_rope_gap_mm": 0.17485782720434218,
+      "design_margin_deg": 15.60173167352472,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        24.000254728033553,
+        -0.08767870279780808,
+        -46.52343951284342
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1954606276647635,
+      "minimum_rope_gap_mm": 0.12954788160770536,
+      "design_margin_deg": 27.680468847000505,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.000747022422832,
+        0.1183566726500688,
+        42.8616037633872
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.043683219857932,
+      "minimum_rope_gap_mm": 0.17560449359807873,
+      "design_margin_deg": 15.630827666560522,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.00048183815138720415,
+        27.91304658322621,
+        -46.52296171390128
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1152280872284104,
+      "minimum_rope_gap_mm": 0.1753369632933186,
+      "design_margin_deg": 15.620305601325587,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -27.99974525034245,
+        -0.08719380837843828,
+        -46.523516524798865
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.718676796647742,
+      "minimum_rope_gap_mm": 0.1743944675583684,
+      "design_margin_deg": 15.583573442746262,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -4.0571614701434775e-05,
+        -28.088184756749236,
+        -46.52283511937409
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0873795804796003,
+      "minimum_rope_gap_mm": 0.1748207638410999,
+      "design_margin_deg": 15.600301736358118,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        28.00025471002644,
+        -0.08771040836016435,
+        -46.523528314161226
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.043683219857932,
+      "minimum_rope_gap_mm": -0.0003145458277018509,
+      "design_margin_deg": 14.565538945776368,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006440739799622515,
+        28.26067808828968,
+        42.74990218350883
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1152280872284104,
+      "minimum_rope_gap_mm": -0.00031551585208833277,
+      "design_margin_deg": 14.617658771784253,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -28.00065925239341,
+        0.26284476982267946,
+        42.70994732008708
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.718676796647742,
+      "minimum_rope_gap_mm": -0.00031342800181277664,
+      "design_margin_deg": 14.655508580452722,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.000661627726529098,
+        -27.73927059059315,
+        42.74891026463324
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0873795804796003,
+      "minimum_rope_gap_mm": -0.0003155154387800563,
+      "design_margin_deg": 14.618063438555868,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        27.999340709585244,
+        0.2628423693473558,
+        42.70998962865457
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.043683219857932,
+      "minimum_rope_gap_mm": 0.06434154513195556,
+      "design_margin_deg": 27.87804116018933,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0013126470841573286,
+        28.183450537771762,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.043683219857932,
+      "minimum_rope_gap_mm": 0.16904307677082842,
+      "design_margin_deg": 16.87827743450826,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0004275357244450228,
+        28.078760320446577,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1152280872284104,
+      "minimum_rope_gap_mm": 0.06578303569225441,
+      "design_margin_deg": 27.869369732874848,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.99876962070408,
+        0.1820114949052036,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1152280872284104,
+      "minimum_rope_gap_mm": 0.17129744250747758,
+      "design_margin_deg": 16.869418990292374,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.999409528919642,
+        0.07648983287497492,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.718676796647742,
+      "minimum_rope_gap_mm": 0.06742954945763446,
+      "design_margin_deg": 27.866451117169802,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.001237236412874307,
+        -27.81963961959293,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.718676796647742,
+      "minimum_rope_gap_mm": 0.17325827773806557,
+      "design_margin_deg": 16.86591339540092,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0008388042836612279,
+        -27.92549267167926,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0873795804796003,
+      "minimum_rope_gap_mm": 0.065861658431837,
+      "design_margin_deg": 27.87478112635218,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.001230142017665,
+        0.18193270707176343,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2240,
+      "event": "Left return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0873795804796003,
+      "minimum_rope_gap_mm": 0.17087071407388343,
+      "design_margin_deg": 16.8748411370389,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        28.00059031432568,
+        0.07691763402102456,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 14.433845278522304,
+      "minimum_rope_gap_mm": 0.20562504233047618,
+      "design_margin_deg": 16.865850523406706,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0005926989554691826,
+        24.04914453486724,
+        -46.681124817416105
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 14.433845278522304,
+      "minimum_rope_gap_mm": -0.00029978214615666854,
+      "design_margin_deg": 21.70058218939831,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        0.00014420031336488104,
+        24.25559626387729,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.2235918890078907,
+      "minimum_rope_gap_mm": 0.20494179493043263,
+      "design_margin_deg": 16.83589861788675,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999781288512747,
+        0.049819606775401926,
+        -46.681612986704096
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.2235918890078907,
+      "minimum_rope_gap_mm": -0.0003040806509838623,
+      "design_margin_deg": 22.090682817923266,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -23.999653097643055,
+        0.255596069141357,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4927167284179217,
+      "minimum_rope_gap_mm": 0.20499429254223145,
+      "design_margin_deg": 16.83805232541461,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -9.909522468249461e-05,
+        -23.95023635572475,
+        -46.68179088882772
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4927167284179217,
+      "minimum_rope_gap_mm": -0.0003078879205939966,
+      "design_margin_deg": 22.30682886335818,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        0.0004894106292422263,
+        -23.739956802438165,
+        42.577186196345195
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.262410539949856,
+      "minimum_rope_gap_mm": 0.2056314907191492,
+      "design_margin_deg": 16.865866450017748,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.000218660515273,
+        0.04913861210860055,
+        -46.68135675359232
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.262410539949856,
+      "minimum_rope_gap_mm": -0.000304152832565574,
+      "design_margin_deg": 22.08023781736932,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        24.000349244498096,
+        0.2576552570570483,
+        42.616959724612286
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 21.199302205080535,
+      "minimum_rope_gap_mm": 0.20568750269796765,
+      "design_margin_deg": 16.868592919227947,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0006614128101952657,
+        28.04907160527034,
+        -46.6813621356272
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1236155093598055,
+      "minimum_rope_gap_mm": 0.20488425085092565,
+      "design_margin_deg": 16.83340308046535,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -27.999781269080323,
+        0.04987976873458733,
+        -46.68154276701574
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.599961883325483,
+      "minimum_rope_gap_mm": 0.20494781333591372,
+      "design_margin_deg": 16.83609169014104,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -0.00014749929120960696,
+        -27.95018357903648,
+        -46.68158648310051
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.088353883198755,
+      "minimum_rope_gap_mm": 0.2056890732494563,
+      "design_margin_deg": 16.86836555236147,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        28.00021864106664,
+        0.04907839997263517,
+        -46.681427031845885
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 21.199302205080535,
+      "minimum_rope_gap_mm": -0.0003115744790552766,
+      "design_margin_deg": 11.777454046699905,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -0.0005061578050570719,
+        28.265320557023724,
+        42.66824331667221
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1236155093598055,
+      "minimum_rope_gap_mm": -0.0003117230323961273,
+      "design_margin_deg": 12.05173159635221,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -28.00050654184251,
+        0.2653350982081987,
+        42.668008743171704
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.599961883325483,
+      "minimum_rope_gap_mm": -0.00031166007091032455,
+      "design_margin_deg": 12.206492724787516,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -0.000506720372089381,
+        -27.734692835011767,
+        42.6684594230352
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.088353883198755,
+      "minimum_rope_gap_mm": -0.0003117398447108899,
+      "design_margin_deg": 12.05258113643333,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        27.99949346015608,
+        0.2653334298148464,
+        42.66803565017168
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 21.199302205080535,
+      "minimum_rope_gap_mm": -0.001677264328183825,
+      "design_margin_deg": 21.60373799737814,
+      "samples": 562,
+      "worst_cad_xyz_mm": [
+        3.1342794968452224e-05,
+        28.249532905791764,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 21.199302205080535,
+      "minimum_rope_gap_mm": -0.0017601758584312455,
+      "design_margin_deg": 14.675043524420762,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        2.072656047560818e-05,
+        28.249615880346575,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1236155093598055,
+      "minimum_rope_gap_mm": -0.0016751038979326838,
+      "design_margin_deg": 22.088940927196496,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.99999193925485,
+        0.2495325229503487,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1236155093598055,
+      "minimum_rope_gap_mm": -0.0017606664455530607,
+      "design_margin_deg": 14.564084977090431,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -28.000043671510298,
+        0.24961589093688696,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.599961883325483,
+      "minimum_rope_gap_mm": -0.0016753022611583068,
+      "design_margin_deg": 22.333066765111816,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -2.0447969052304373e-05,
+        -27.750468346362315,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.599961883325483,
+      "minimum_rope_gap_mm": -0.0017652739839586484,
+      "design_margin_deg": 14.490044140742397,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -9.878676768392405e-05,
+        -27.75038412675124,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.088353883198755,
+      "minimum_rope_gap_mm": -0.0016749063469101433,
+      "design_margin_deg": 22.07675009524176,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.00000784607136,
+        0.2495323390458363,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2390,
+      "event": "Pitch up",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.088353883198755,
+      "minimum_rope_gap_mm": -0.0017606788837808418,
+      "design_margin_deg": 14.569464668807102,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.999956140463222,
+        0.2496158910783692,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 13.795111166090475,
+      "minimum_rope_gap_mm": 0.24536925221466266,
+      "design_margin_deg": 18.892282336831627,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.00038946083326461746,
+        24.001915279932664,
+        -46.960401679276075
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 13.795111166090475,
+      "minimum_rope_gap_mm": -0.0003048908471197098,
+      "design_margin_deg": 24.028313450085996,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        0.00036141577114985385,
+        24.255596049031276,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1809914023194197,
+      "minimum_rope_gap_mm": 0.24515745360542107,
+      "design_margin_deg": 18.88061331619061,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999823993236003,
+        0.002159393428399181,
+        -46.96023371479918
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1809914023194197,
+      "minimum_rope_gap_mm": -0.00030679039322167867,
+      "design_margin_deg": 24.17342744552525,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -23.999534923965935,
+        0.2555958814340351,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.482820189735714,
+      "minimum_rope_gap_mm": 0.24534867954801176,
+      "design_margin_deg": 18.89100694609097,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -3.338322626322077e-05,
+        -23.99802336626894,
+        -46.96077061363924
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.482820189735714,
+      "minimum_rope_gap_mm": -0.0003090081726225824,
+      "design_margin_deg": 24.26825654728358,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        0.0005424689365451388,
+        -23.744404271105303,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.2231021250992398,
+      "minimum_rope_gap_mm": 0.24558135942418846,
+      "design_margin_deg": 18.903940899981215,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.00017598905996,
+        0.0017345792560222036,
+        -46.960075663846304
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.2231021250992398,
+      "minimum_rope_gap_mm": -0.00030708765009657135,
+      "design_margin_deg": 24.16924036581984,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        24.00047774893538,
+        0.2627446584090604,
+        42.53757276333813
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 21.553808667686177,
+      "minimum_rope_gap_mm": 0.24536735183894987,
+      "design_margin_deg": 18.892153732769955,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0004254703189411031,
+        28.001910055030777,
+        -46.96037026075105
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.10568189138215,
+      "minimum_rope_gap_mm": 0.24512200713157006,
+      "design_margin_deg": 18.878669118767238,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -27.999823979539208,
+        0.002194915066323359,
+        -46.96017466874414
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.6281642489116726,
+      "minimum_rope_gap_mm": 0.2453414315354805,
+      "design_margin_deg": 18.890679424463066,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -6.786556719671021e-05,
+        -27.998018362952596,
+        -46.960800699719925
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0740433380501293,
+      "minimum_rope_gap_mm": 0.2456168354614039,
+      "design_margin_deg": 18.905884148193596,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        28.000175975351738,
+        0.0016990279920447156,
+        -46.96013475914744
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 21.553808667686177,
+      "minimum_rope_gap_mm": -0.000310747832903302,
+      "design_margin_deg": 11.864800050898383,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.00046730555085110946,
+        28.26800218032574,
+        42.62672609095748
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.10568189138215,
+      "minimum_rope_gap_mm": -0.00031082231711021535,
+      "design_margin_deg": 12.142618098571653,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -28.000463401825957,
+        0.2628938094147368,
+        42.709091181222355
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.6281642489116726,
+      "minimum_rope_gap_mm": -0.0003111399965320949,
+      "design_margin_deg": 12.301762357770071,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0004757315474239643,
+        -27.732022266407036,
+        42.62708978250925
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.0740433380501293,
+      "minimum_rope_gap_mm": -0.00031083540636378526,
+      "design_margin_deg": 12.143537397155098,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        27.999536585898408,
+        0.2628928160317099,
+        42.70910865641595
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 21.553808667686177,
+      "minimum_rope_gap_mm": -0.0016799284736473963,
+      "design_margin_deg": 23.994363254751335,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -5.7999612478198026e-05,
+        28.24953382837932,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 21.553808667686177,
+      "minimum_rope_gap_mm": -0.0017663554135713966,
+      "design_margin_deg": 16.024627573153147,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -0.00011543938176993743,
+        28.249615865565904,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.10568189138215,
+      "minimum_rope_gap_mm": -0.0016744708858956736,
+      "design_margin_deg": 24.17152368287355,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -28.000016964235666,
+        0.2495313050177594,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.10568189138215,
+      "minimum_rope_gap_mm": -0.00176331070835134,
+      "design_margin_deg": 15.942418661820515,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -28.000084745940182,
+        0.24961584881634924,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.6281642489116726,
+      "minimum_rope_gap_mm": -0.0016864647697213409,
+      "design_margin_deg": 24.279793409658282,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        1.0456228368998512e-05,
+        -27.750456504971275,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.6281642489116726,
+      "minimum_rope_gap_mm": -0.0017629899809624705,
+      "design_margin_deg": 15.877319972179615,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -6.467374773034698e-05,
+        -27.75038417984555,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0740433380501293,
+      "minimum_rope_gap_mm": -0.0016744769300385265,
+      "design_margin_deg": 24.166628047099696,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        27.999982921701584,
+        0.24953130359884484,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2432,
+      "event": "Peak rope tension",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.0740433380501293,
+      "minimum_rope_gap_mm": -0.00176331706135191,
+      "design_margin_deg": 15.942569519818761,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        27.999915156351495,
+        0.24961584877908524,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.022221215194197,
+      "minimum_rope_gap_mm": 0.1755119196272117,
+      "design_margin_deg": 15.627252923923168,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.0004416123797107469,
+        23.91297883577155,
+        -46.52338491337453
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.022221215194197,
+      "minimum_rope_gap_mm": 0.12886061030347862,
+      "design_margin_deg": 27.67294318774106,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0009027811609214819,
+        24.11896282844034,
+        42.86454138855628
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1293646566652624,
+      "minimum_rope_gap_mm": 0.17526852158033845,
+      "design_margin_deg": 15.617657191483397,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -23.999749824025805,
+        -0.08725647257609317,
+        -46.52361526477654
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.1293646566652624,
+      "minimum_rope_gap_mm": 0.12935497506427596,
+      "design_margin_deg": 27.67833112145563,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999275257663605,
+        0.11851882310320472,
+        42.86289575844293
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4827044390538946,
+      "minimum_rope_gap_mm": 0.1744801825148603,
+      "design_margin_deg": 15.586925607385043,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        1.0387695840185501e-05,
+        -24.088046774840596,
+        -46.523694601328536
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4827044390538946,
+      "minimum_rope_gap_mm": 0.13012843235586313,
+      "design_margin_deg": 27.686885736042544,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0005599883629191567,
+        -23.882277570861568,
+        42.86419890052346
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.177121318534219,
+      "minimum_rope_gap_mm": 0.174840647836207,
+      "design_margin_deg": 15.60106140113785,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        24.000250177349102,
+        -0.08769664820239746,
+        -46.52342944714317
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.177121318534219,
+      "minimum_rope_gap_mm": 0.12969173859791017,
+      "design_margin_deg": 27.682059639322127,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.000724919575173,
+        0.11821533127955816,
+        42.861548788439194
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.028137104116745,
+      "minimum_rope_gap_mm": 0.17558060953906307,
+      "design_margin_deg": 15.629888139686203,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.00046997166868694546,
+        27.913019222293233,
+        -46.52291091551906
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.0995712442092507,
+      "minimum_rope_gap_mm": 0.17530435799236543,
+      "design_margin_deg": 15.619039139592976,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -27.999749806766957,
+        -0.08722588131891516,
+        -46.52352820995759
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.702981373594334,
+      "minimum_rope_gap_mm": 0.17436983492078206,
+      "design_margin_deg": 15.582619988746359,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -3.561206538921626e-05,
+        -28.088205483412295,
+        -46.52290117410044
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.071847202297982,
+      "minimum_rope_gap_mm": 0.1748047723178685,
+      "design_margin_deg": 15.59967738340504,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        28.000250160075858,
+        -0.08772726497355143,
+        -46.523516574568305
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.028137104116745,
+      "minimum_rope_gap_mm": -0.0003144862490791489,
+      "design_margin_deg": 14.565647946653561,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006412254531280593,
+        28.260677938089536,
+        42.74990522332442
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.0995712442092507,
+      "minimum_rope_gap_mm": -0.0003154517524752709,
+      "design_margin_deg": 14.617762882886364,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -28.00065634707466,
+        0.2628441595117128,
+        42.70995820507049
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.702981373594334,
+      "minimum_rope_gap_mm": -0.0003133708422560222,
+      "design_margin_deg": 14.655608190227975,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006587217602611965,
+        -27.739270763262354,
+        42.74891373700668
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.071847202297982,
+      "minimum_rope_gap_mm": -0.0003154509381418924,
+      "design_margin_deg": 14.618165991481794,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        27.999343615191066,
+        0.2628417683372998,
+        42.71000035073137
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.028137104116745,
+      "minimum_rope_gap_mm": 0.06473602629416053,
+      "design_margin_deg": 27.878807090050465,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0012569480395147547,
+        28.18305880093639,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.028137104116745,
+      "minimum_rope_gap_mm": 0.1693674486121679,
+      "design_margin_deg": 16.879023032449723,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0003824641602930638,
+        28.078438132207513,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.0995712442092507,
+      "minimum_rope_gap_mm": 0.06617970735635259,
+      "design_margin_deg": 27.870156114244313,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.998830465170222,
+        0.18161789978938483,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.0995712442092507,
+      "minimum_rope_gap_mm": 0.17162197184455996,
+      "design_margin_deg": 16.870185595648127,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.999458365118116,
+        0.07616773689575294,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.702981373594334,
+      "minimum_rope_gap_mm": 0.06783618484490561,
+      "design_margin_deg": 27.86727336473757,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0011716582542817477,
+        -27.82004289067031,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.702981373594334,
+      "minimum_rope_gap_mm": 0.1735878662490422,
+      "design_margin_deg": 16.866719272539882,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0007866128157291646,
+        -27.92581961626925,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.071847202297982,
+      "minimum_rope_gap_mm": 0.06626637426866111,
+      "design_margin_deg": 27.875587140395147,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.00116931710827,
+        0.18153104802879333,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 2540,
+      "event": "Up return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.071847202297982,
+      "minimum_rope_gap_mm": 0.17120148328054685,
+      "design_margin_deg": 16.875627087792488,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        28.000541489897977,
+        0.07658928179162575,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 3.643229595830136,
+      "minimum_rope_gap_mm": -0.0002964496232933378,
+      "design_margin_deg": 7.671290212121203,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        0.00035051646442767697,
+        23.66225368544285,
+        -45.848532688176924
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 3.643229595830136,
+      "minimum_rope_gap_mm": -0.0003043643753024572,
+      "design_margin_deg": 21.08328040652588,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        0.00033866333266609845,
+        23.74440391980919,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.2099582779418387,
+      "minimum_rope_gap_mm": -0.00029593638595648564,
+      "design_margin_deg": 7.549619300924134,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        -23.999719878237084,
+        -0.33769957143348334,
+        -45.84882557027421
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.2099582779418387,
+      "minimum_rope_gap_mm": -0.0003033312842544156,
+      "design_margin_deg": 20.81128981875652,
+      "samples": 505,
+      "worst_cad_xyz_mm": [
+        -23.999685364450073,
+        -0.2555961108980905,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 7.943802355062189,
+      "minimum_rope_gap_mm": -0.0002917446791360634,
+      "design_margin_deg": 7.2309894899882075,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        0.000123417876571192,
+        -24.33770229672364,
+        -45.84880910189337
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 7.943802355062189,
+      "minimum_rope_gap_mm": -0.0003028630550637734,
+      "design_margin_deg": 20.270143610277994,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        0.00027425502488328635,
+        -24.255596157416228,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.2706196799041365,
+      "minimum_rope_gap_mm": -0.00029580385185512537,
+      "design_margin_deg": 7.542263861924368,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        24.000279962559038,
+        -0.3377084344589956,
+        -45.84877010919669
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.2706196799041365,
+      "minimum_rope_gap_mm": -0.00030332954354206354,
+      "design_margin_deg": 20.808145754574344,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        24.00031456080034,
+        -0.2555961109900959,
+        42.65663689619031
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 3.493803920506026,
+      "minimum_rope_gap_mm": -0.00029689636712126877,
+      "design_margin_deg": 7.685201374049773,
+      "samples": 510,
+      "worst_cad_xyz_mm": [
+        0.00035863385109941574,
+        27.662271577006976,
+        -45.8486445726275
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1250497407298026,
+      "minimum_rope_gap_mm": -0.0002959474419851338,
+      "design_margin_deg": 7.5502317537429064,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        -27.99971986497134,
+        -0.3376988334710812,
+        -45.84883018826055
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 16.81461395367845,
+      "minimum_rope_gap_mm": -0.0002935792732077225,
+      "design_margin_deg": 7.125334471104421,
+      "samples": 512,
+      "worst_cad_xyz_mm": [
+        8.083353606605421e-05,
+        -28.35654081703801,
+        -45.736765750142524
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.100982056058243,
+      "minimum_rope_gap_mm": -0.0002957928188964676,
+      "design_margin_deg": 7.54165040779476,
+      "samples": 511,
+      "worst_cad_xyz_mm": [
+        28.000279949290803,
+        -0.33770917366808884,
+        -45.848765483666746
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 3.493803920506026,
+      "minimum_rope_gap_mm": -0.0003108491253176471,
+      "design_margin_deg": 13.695213923934364,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0004563566063432219,
+        27.737203409549682,
+        42.71080488370311
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1250497407298026,
+      "minimum_rope_gap_mm": -0.0003102739208832306,
+      "design_margin_deg": 13.638574292904861,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -28.000457343013377,
+        -0.2629188248896679,
+        42.7086515181807
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 16.81461395367845,
+      "minimum_rope_gap_mm": -0.00031111638715020096,
+      "design_margin_deg": 13.551537322501472,
+      "samples": 504,
+      "worst_cad_xyz_mm": [
+        -0.0004582436729805543,
+        -28.26281776669885,
+        42.71043103979346
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.100982056058243,
+      "minimum_rope_gap_mm": -0.000310283989132909,
+      "design_margin_deg": 13.638812270324363,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        27.999542660971326,
+        -0.2629183100939202,
+        42.70866056570543
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 3.493803920506026,
+      "minimum_rope_gap_mm": -0.0016947126106149346,
+      "design_margin_deg": 21.115571405446172,
+      "samples": 562,
+      "worst_cad_xyz_mm": [
+        -0.00010554025053906651,
+        27.75045447190546,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 3.493803920506026,
+      "minimum_rope_gap_mm": -0.0017702400016643693,
+      "design_margin_deg": 12.986317015005454,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        -0.00017564207184032045,
+        27.750384187269493,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1250497407298026,
+      "minimum_rope_gap_mm": -0.001676936263142581,
+      "design_margin_deg": 20.809572511975105,
+      "samples": 563,
+      "worst_cad_xyz_mm": [
+        -28.000083464618854,
+        -0.24952941704385026,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1250497407298026,
+      "minimum_rope_gap_mm": -0.0017673541776631607,
+      "design_margin_deg": 13.032876370418132,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        -28.000146599761823,
+        -0.2496158470035269,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 16.81461395367845,
+      "minimum_rope_gap_mm": -0.0016768240924248667,
+      "design_margin_deg": 20.120358033749707,
+      "samples": 563,
+      "worst_cad_xyz_mm": [
+        -5.26414638281556e-05,
+        -28.249531068547064,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 16.81461395367845,
+      "minimum_rope_gap_mm": -0.001765610217489444,
+      "design_margin_deg": 13.110206948494753,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        -0.0001041034161700784,
+        -28.249615861744044,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.100982056058243,
+      "minimum_rope_gap_mm": -0.001676958372644255,
+      "design_margin_deg": 20.805893548741643,
+      "samples": 563,
+      "worst_cad_xyz_mm": [
+        27.999916463880048,
+        -0.24952943451438742,
+        47.74054628025972
+      ]
+    },
+    {
+      "step": 2819,
+      "event": "Pitch down",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.100982056058243,
+      "minimum_rope_gap_mm": -0.001767359129946966,
+      "design_margin_deg": 13.035419164277599,
+      "samples": 565,
+      "worst_cad_xyz_mm": [
+        27.99985332502062,
+        -0.24961584703660677,
+        -47.16311896062463
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.01588839630173,
+      "minimum_rope_gap_mm": 0.17550573664981273,
+      "design_margin_deg": 15.627007040102063,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.0004345610361748968,
+        23.91297181900283,
+        -46.5233743547191
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.01588839630173,
+      "minimum_rope_gap_mm": 0.12887125979501923,
+      "design_margin_deg": 27.67305433236967,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0008906260448390411,
+        24.118953417610474,
+        42.86452130855803
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.12354208883691,
+      "minimum_rope_gap_mm": 0.17525815648298937,
+      "design_margin_deg": 15.61725322633678,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -23.99975327373523,
+        -0.08726643375962684,
+        -46.523623627762674
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.12354208883691,
+      "minimum_rope_gap_mm": 0.1293658910694735,
+      "design_margin_deg": 27.678445809749682,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999286952833646,
+        0.11850802708403578,
+        42.862920830726004
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.476825906047841,
+      "minimum_rope_gap_mm": 0.17447366950102294,
+      "design_margin_deg": 15.586675053675751,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        1.1452885734606817e-05,
+        -24.088052327857525,
+        -46.52371012133203
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.476825906047841,
+      "minimum_rope_gap_mm": 0.13013892699048446,
+      "design_margin_deg": 27.686995549804735,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0005487306627566137,
+        -23.88228785776131,
+        42.86422033536808
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1707467452595735,
+      "minimum_rope_gap_mm": 0.17483835583129825,
+      "design_margin_deg": 15.60096922397153,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        24.000246730798867,
+        -0.08769941793739341,
+        -46.523423115178225
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1707467452595735,
+      "minimum_rope_gap_mm": 0.12970199606708777,
+      "design_margin_deg": 27.682165768300354,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.000713228082695,
+        0.11820638707281739,
+        42.86152671320018
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.021694018900508,
+      "minimum_rope_gap_mm": 0.17557445156458673,
+      "design_margin_deg": 15.629642620644539,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.00046238693252444104,
+        27.913012107566086,
+        -46.52289864677483
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.135911153721575,
+      "minimum_rope_gap_mm": 0.17529331943741133,
+      "design_margin_deg": 15.618609225698773,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -27.999753256978988,
+        -0.08723644198216976,
+        -46.523537797083264
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.6967054712226632,
+      "minimum_rope_gap_mm": 0.17436336569555722,
+      "design_margin_deg": 15.5823690346496,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -3.368035982579026e-05,
+        -28.088210883376295,
+        -46.52291948501653
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.108436067086507,
+      "minimum_rope_gap_mm": 0.17480315335999075,
+      "design_margin_deg": 15.599611222190141,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        28.000246714028652,
+        -0.08772943472884336,
+        -46.52350901744285
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.021694018900508,
+      "minimum_rope_gap_mm": -0.00031435987957362244,
+      "design_margin_deg": 14.565551865021606,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006356343735170582,
+        28.260678090370583,
+        42.74990254380063
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.135911153721575,
+      "minimum_rope_gap_mm": -0.0003153260540431635,
+      "design_margin_deg": 14.617673567020734,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -28.000650631797036,
+        0.2628447035375008,
+        42.709948866952836
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.6967054712226632,
+      "minimum_rope_gap_mm": -0.00031323866946120216,
+      "design_margin_deg": 14.655520397821714,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006529896540050096,
+        -27.739270590174144,
+        42.74891067658395
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.108436067086507,
+      "minimum_rope_gap_mm": -0.00031532559031310914,
+      "design_margin_deg": 14.618073157492491,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        27.999349331092517,
+        0.2628423331838877,
+        42.709990644785314
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.021694018900508,
+      "minimum_rope_gap_mm": 0.06477425023471128,
+      "design_margin_deg": 27.878831131305283,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0012295943763628281,
+        28.183022282132292,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.021694018900508,
+      "minimum_rope_gap_mm": 0.16940315834459896,
+      "design_margin_deg": 16.879045084473898,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.00036329084518987143,
+        28.07840360614036,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.135911153721575,
+      "minimum_rope_gap_mm": 0.06621756995831385,
+      "design_margin_deg": 27.870194570511767,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.99885930563254,
+        0.18158184049027615,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.135911153721575,
+      "minimum_rope_gap_mm": 0.1716560083421701,
+      "design_margin_deg": 16.870222146544357,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.999479902587247,
+        0.07613504508299634,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.6967054712226632,
+      "minimum_rope_gap_mm": 0.06787622862610032,
+      "design_margin_deg": 27.8673028523046,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0011410079005993584,
+        -27.820081017369787,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.6967054712226632,
+      "minimum_rope_gap_mm": 0.17362482235693655,
+      "design_margin_deg": 16.866746760086276,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0007624020756885443,
+        -27.925855057446327,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.108436067086507,
+      "minimum_rope_gap_mm": 0.06630680160407643,
+      "design_margin_deg": 27.875602425440942,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.001140486268028,
+        0.18149241747405498,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3098,
+      "event": "Down return",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.108436067086507,
+      "minimum_rope_gap_mm": 0.17124026205536325,
+      "design_margin_deg": 16.875640272722514,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        28.00051995842462,
+        0.0765518354968752,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.015875343086343,
+      "minimum_rope_gap_mm": 0.17550574497615856,
+      "design_margin_deg": 15.627007258391037,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        0.0004344221222394391,
+        23.912971824372203,
+        -46.523374361803704
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_up",
+      "route": "fixed end",
+      "tension_N": 16.015875343086343,
+      "minimum_rope_gap_mm": 0.12887129147289977,
+      "design_margin_deg": 27.673054523351542,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.000890374208910963,
+        24.11895340318804,
+        42.86452127316503
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.123534809088196,
+      "minimum_rope_gap_mm": 0.1752580706667779,
+      "design_margin_deg": 15.617249862538118,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -23.99975333005415,
+        -0.08726651364116209,
+        -46.523623750552225
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_right",
+      "route": "fixed end",
+      "tension_N": 3.123534809088196,
+      "minimum_rope_gap_mm": 0.12936590075279142,
+      "design_margin_deg": 27.678445746268086,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -23.999287226425857,
+        0.11850802197776263,
+        42.86292137025615
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4768131555826436,
+      "minimum_rope_gap_mm": 0.17447367335829878,
+      "design_margin_deg": 15.58667524702634,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        1.150009187403889e-05,
+        -24.088052323622424,
+        -46.523710108410974
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_down",
+      "route": "fixed end",
+      "tension_N": 3.4768131555826436,
+      "minimum_rope_gap_mm": 0.13013896112607948,
+      "design_margin_deg": 27.68699573231982,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.0005484372814131263,
+        -23.882287873275178,
+        42.86422035772348
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1707282625307918,
+      "minimum_rope_gap_mm": 0.1748384544351207,
+      "design_margin_deg": 15.600972988342862,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        24.000246674540364,
+        -0.08769932825351333,
+        -46.52342298869154
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "B_left",
+      "route": "fixed end",
+      "tension_N": 3.1707282625307918,
+      "minimum_rope_gap_mm": 0.12970205303283389,
+      "design_margin_deg": 27.68216620530743,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        24.000712954567888,
+        0.11820636217838687,
+        42.861526162483436
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.02168279197377,
+      "minimum_rope_gap_mm": 0.17557446018220224,
+      "design_margin_deg": 15.629642843065362,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        0.000462235794372572,
+        27.913012113011348,
+        -46.522898655170984
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1358992656204503,
+      "minimum_rope_gap_mm": 0.1752932182518323,
+      "design_margin_deg": 15.61860526856116,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -27.99975331330685,
+        -0.0872365359879283,
+        -46.523537940637055
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.696694144088859,
+      "minimum_rope_gap_mm": 0.17436337237409028,
+      "design_margin_deg": 15.582369229517198,
+      "samples": 501,
+      "worst_cad_xyz_mm": [
+        -3.3613270879024626e-05,
+        -28.088210879259833,
+        -46.52291946995392
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.108425437976237,
+      "minimum_rope_gap_mm": 0.17480326732997042,
+      "design_margin_deg": 15.599615581251529,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        28.000246657779094,
+        -0.08772933090896001,
+        -46.52350887017462
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "fixed end",
+      "tension_N": 16.02168279197377,
+      "minimum_rope_gap_mm": -0.00031435926768441647,
+      "design_margin_deg": 14.565551947815976,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006356065671674857,
+        28.26067809031896,
+        42.7499025461096
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "fixed end",
+      "tension_N": 3.1358992656204503,
+      "minimum_rope_gap_mm": -0.00031532543087731124,
+      "design_margin_deg": 14.61767365267753,
+      "samples": 502,
+      "worst_cad_xyz_mm": [
+        -28.00065060351644,
+        0.2628447030993859,
+        42.70994887590839
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "fixed end",
+      "tension_N": 3.696694144088859,
+      "minimum_rope_gap_mm": -0.0003132380524740741,
+      "design_margin_deg": 14.655520473512007,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        -0.0006529614109913114,
+        -27.739270590240206,
+        42.7489106792225
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "fixed end",
+      "tension_N": 3.108425437976237,
+      "minimum_rope_gap_mm": -0.0003153249668432778,
+      "design_margin_deg": 14.61807322886293,
+      "samples": 503,
+      "worst_cad_xyz_mm": [
+        27.99934935937558,
+        0.26284233283057135,
+        42.709990652247214
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.02168279197377,
+      "minimum_rope_gap_mm": 0.06477433424890289,
+      "design_margin_deg": 27.878831238579956,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.001228881336653072,
+        28.183022244663537,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_up",
+      "route": "free shared bore",
+      "tension_N": 16.02168279197377,
+      "minimum_rope_gap_mm": 0.16940322631483462,
+      "design_margin_deg": 16.879045189549835,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.00036269576389938365,
+        28.07840357749885,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1358992656204503,
+      "minimum_rope_gap_mm": 0.06621760712621261,
+      "design_margin_deg": 27.87019449430865,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        -27.998860086046424,
+        0.1815818543877199,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_right",
+      "route": "free shared bore",
+      "tension_N": 3.1358992656204503,
+      "minimum_rope_gap_mm": 0.1716560447115123,
+      "design_margin_deg": 16.870222070650385,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        -27.99948054209021,
+        0.07613505106589001,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.696694144088859,
+      "minimum_rope_gap_mm": 0.06787632076250527,
+      "design_margin_deg": 27.867302963405486,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        0.0011401683587555847,
+        -27.820081054687343,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_down",
+      "route": "free shared bore",
+      "tension_N": 3.696694144088859,
+      "minimum_rope_gap_mm": 0.17362489520458957,
+      "design_margin_deg": 16.866746865141643,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        0.0007617260004082005,
+        -27.925855085603757,
+        -47.78081687063978
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M5",
+      "end": "distal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.108425437976237,
+      "minimum_rope_gap_mm": 0.06630694190556019,
+      "design_margin_deg": 27.87560271807234,
+      "samples": 561,
+      "worst_cad_xyz_mm": [
+        28.001139706092907,
+        0.18149232798531695,
+        42.87219840068566
+      ]
+    },
+    {
+      "step": 3404,
+      "event": "Withdraw",
+      "module": "M6",
+      "end": "proximal",
+      "rope": "C_left",
+      "route": "free shared bore",
+      "tension_N": 3.108425437976237,
+      "minimum_rope_gap_mm": 0.17124036764326278,
+      "design_margin_deg": 16.87564056087622,
+      "samples": 564,
+      "worst_cad_xyz_mm": [
+        28.000519319062825,
+        0.07655177207972622,
+        -47.78081687063978
+      ]
+    }
+  ]
+}

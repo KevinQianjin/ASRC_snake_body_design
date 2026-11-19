@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASRC 500 g motion and rope tension</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f4f6f5;
+        color: #17292e;
+        font:
+          16px/1.4 "Inter",
+          "Segoe UI",
+          sans-serif;
+      }
+      main {
+        max-width: 1110px;
+        margin: auto;
+        padding: 28px 24px 20px;
+      }
+      header {
+        border-bottom: 2px solid #184552;
+        margin-bottom: 16px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(25px, 3vw, 37px);
+        letter-spacing: -0.035em;
+      }
+      p {
+        margin: 0 0 14px;
+      }
+      section {
+        background: white;
+        border: 1px solid #cfdad9;
+        border-radius: 7px;
+        padding: 15px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(280px, 1.65fr) minmax(260px, 1fr);
+        gap: 15px;
+      }
+      h2 {
+        margin: 0 0 9px;
+        font-size: 18px;
+      }
+      canvas {
+        width: 100%;
+        height: 340px;
+        background: #eff4f2;
+        border: 1px solid #c4d2cd;
+        touch-action: none;
+        cursor: grab;
+      }
+      #pose {
+        font-variant-numeric: tabular-nums;
+        margin: 6px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      th,
+      td {
+        padding: 9px 5px;
+        border-bottom: 1px solid #d8e1df;
+      }
+      th:first-child {
+        text-align: left;
+      }
+      thead {
+        color: #244953;
+        background: #edf3f1;
+      }
+      small {
+        color: #46595d;
+      }
+      .controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 14px 0 8px;
+      }
+      button,
+      select {
+        font: inherit;
+        padding: 6px 10px;
+        background: #fff;
+        color: #183c44;
+        border: 1px solid #819b9f;
+        border-radius: 4px;
+      }
+      button {
+        cursor: pointer;
+      }
+      input {
+        width: 100%;
+        accent-color: #126b73;
+      }
+      td button {
+        font: inherit;
+        font-variant-numeric: tabular-nums;
+        min-width: 3.65em;
+        padding: 3px;
+        border: 1px solid transparent;
+        background: transparent;
+      }
+      td button:hover,
+      td button:focus {
+        border-color: #197477;
+      }
+      td button[aria-pressed="true"] {
+        color: white;
+        background: #155c64;
+      }
+      #peak[aria-pressed="true"] {
+        box-shadow: inset 0 -2px #155c64;
+      }
+      .axis {
+        color: #a13e29;
+      }
+      .legend {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      .u {
+        color: #236789;
+      }
+      .m {
+        color: #16806e;
+      }
+      a {
+        color: #135f77;
+      }
+      footer {
+        margin-top: 14px;
+      }
+      #step {
+        font-variant-numeric: tabular-nums;
+      }
+      @media (max-width: 740px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        main {
+          padding: 15px 10px;
+        }
+        canvas {
+          height: 275px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>500 g motion and rope tension</h1>
+        <p>U4+M2 inspection front · twelve winch-controlled ropes</p>
+      </header>
+      <div class="layout">
+        <section>
+          <h2 id="phase">Motion</h2>
+          <canvas
+            id="scene"
+            aria-label="Rotatable rod and routed ropes with the selected rope tension"
+          ></canvas>
+          <div class="legend">
+            <b class="u">U modules</b><b class="m">M modules</b
+            ><b class="axis">Head direction</b>
+          </div>
+          <p id="pose"></p>
+          <small
+            >The drawing shows the rod centreline and ropes. Drag to rotate. The view follows the clamp. Rope paths are
+            simplified to 0.1 mm for display.</small
+          >
+        </section>
+        <section>
+          <h2>Rope tension (N)</h2>
+          <p><small>Select a value to highlight its rope in 3-D.</small></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Direction</th>
+                <th>A · U4</th>
+                <th>B · M5</th>
+                <th>C · M6</th>
+              </tr>
+            </thead>
+            <tbody id="values"></tbody>
+          </table>
+          <p style="margin-top: 12px">
+            <small
+              >Directions follow the rod frame. Each value is the uniform
+              tension in the frictionless closed-loop model. The dotted
+              operating limit in the report is 2.5 N.</small
+            >
+          </p>
+          <p id="gap"></p>
+          <button id="peak" aria-pressed="true">Follow highest tension</button>
+        </section>
+      </div>
+      <div class="controls">
+        <button id="play">Play</button><label for="jump">Jump to event</label
+        ><select id="jump"></select
+        ><button id="side">Side view</button><button id="three">3-D view</button
+        ><output id="step"></output>
+      </div>
+      <label for="scrub">Accepted motion step</label
+      ><input id="scrub" type="range" min="0" value="0" step="1" />
+      <footer>
+        <small
+          >The slider follows simulated equilibria. Playback speed is for
+          viewing only.
+          <a href="https://github.com/KevinQianjin/ASRC_snake_body_design/blob/codex/guide-validation/simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/rope_tensions_at_events.csv">Event data on GitHub</a> ·
+          <a href="https://github.com/KevinQianjin/ASRC_snake_body_design/blob/codex/guide-validation/simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/rope_tensions_every_step.csv.gz">All steps on GitHub</a></small
+        >
+      </footer>
+    </main>
+    <script id="data" type="application/json">
+      "__ASRC_SIMULATION_DATA__"
+    </script>
+    <script>
+      const D = JSON.parse(document.getElementById("data").textContent),
+        el = (id) => document.getElementById(id);
+      let yaw = -0.43,
+        tilt = 0.19,
+        drag = null,
+        timer = null,
+        locked = null;
+      const directions = ["Up", "Right", "Down", "Left"],
+        lanes = ["A", "B", "C"],
+        colours = ["#126d93", "#bd5512", "#17834e", "#804aa2"];
+      const ropeName = (k) =>
+        lanes[Math.floor(k / 4)] + " " + directions[k % 4];
+      const scene = el("scene"),
+        ctx = scene.getContext("2d"),
+        slider = el("scrub");
+      slider.max = D.points.length - 1;
+      for (const [name, i] of Object.entries(D.events)) {
+        const o = document.createElement("option");
+        o.textContent = name;
+        o.value = i;
+        el("jump").appendChild(o);
+      }
+      for (const [i, d] of ["Up", "Right", "Down", "Left"].entries()) {
+        const row = el("values").insertRow(),
+          h = document.createElement("th");
+        h.scope = "row";
+        h.textContent = d;
+        row.appendChild(h);
+        for (let g = 0; g < 3; g++) {
+          const k = g * 4 + i,
+            button = document.createElement("button");
+          button.type = "button";
+          button.id = "t" + k;
+          button.setAttribute("title", "Highlight " + ropeName(k));
+          button.onclick = () => {
+            locked = k;
+            draw();
+          };
+          row.insertCell().appendChild(button);
+        }
+      }
+      function draw() {
+        const i = Number(slider.value),
+          p = D.points[i],
+          e = D.angles[i],
+          scale = window.devicePixelRatio || 1,
+          w = scene.clientWidth,
+          h = scene.clientHeight;
+        scene.width = w * scale;
+        scene.height = h * scale;
+        ctx.scale(scale, scale);
+        ctx.clearRect(0, 0, w, h);
+        const chosen =
+          locked === null
+            ? D.loads[i].indexOf(Math.max(...D.loads[i]))
+            : locked;
+        function project(data, origin) {
+          const pts = [];
+          for (let k = 0; k < data.length; k += 3) {
+            const x = (data[k] - origin[0]) / 10,
+              y = (data[k + 1] - origin[1]) / 10,
+              z = (data[k + 2] - origin[2]) / 10;
+            const X = x * Math.cos(yaw) + z * Math.sin(yaw),
+              Z = -x * Math.sin(yaw) + z * Math.cos(yaw);
+            pts.push([X, y * Math.cos(tilt) + Z * Math.sin(tilt)]);
+          }
+          return pts;
+        }
+        const pos = project(p, p.slice(0, 3)),
+          cables = D.paths[D.shape[i]].map((route) =>
+            project(route, [0, 0, 0]),
+          );
+        const all = pos.concat(...cables),
+          xx = all.map((v) => v[0]),
+          yy = all.map((v) => v[1]);
+        const minx = Math.min(...xx),
+          maxx = Math.max(...xx),
+          miny = Math.min(...yy),
+          maxy = Math.max(...yy);
+        const s = Math.min(
+          (w - 56) / Math.max(120, maxx - minx),
+          (h - 52) / Math.max(160, maxy - miny),
+        );
+        const screen = (v) => [
+          (w - (maxx - minx) * s) / 2 + (v[0] - minx) * s,
+          (h + (maxy - miny) * s) / 2 - (v[1] - miny) * s,
+        ];
+        const xy = pos.map(screen);
+        function line(path, colour, width) {
+          ctx.strokeStyle = colour;
+          ctx.lineWidth = width;
+          ctx.beginPath();
+          ctx.moveTo(...path[0]);
+          for (let j = 1; j < path.length; j++) ctx.lineTo(...path[j]);
+          ctx.stroke();
+        }
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        for (let j = 1; j < xy.length; j++)
+          line(
+            [xy[j - 1], xy[j]],
+            j === xy.length - 1 ? "#a13e29" : j <= 33 ? "#236789" : "#16806e",
+            j === xy.length - 1 ? 3 : 4,
+          );
+        for (let j = 0; j < 12; j++) {
+          if (j !== chosen) {
+            ctx.globalAlpha = 0.36;
+            line(cables[j].map(screen), colours[j % 4], 1);
+          }
+        }
+        ctx.globalAlpha = 1;
+        const selected = cables[chosen].map(screen);
+        line(selected, colours[chosen % 4], 2.6);
+        const anchor = selected[selected.length - 1],
+          label =
+            ropeName(chosen) +
+            "  " +
+            (D.loads[i][chosen] / 1000).toFixed(2) +
+            " N";
+        ctx.fillStyle = colours[chosen % 4];
+        ctx.beginPath();
+        ctx.arc(...anchor, 4, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.font = "bold 13px sans-serif";
+        const bw = ctx.measureText(label).width + 14;
+        const lx = Math.max(3, Math.min(w - bw - 3, anchor[0] + 8)),
+          ly = Math.max(3, Math.min(h - 24, anchor[1] - 24));
+        ctx.fillStyle = "rgba(255,255,255,.95)";
+        ctx.fillRect(lx, ly, bw, 22);
+        ctx.strokeStyle = colours[chosen % 4];
+        ctx.lineWidth = 1;
+        ctx.strokeRect(lx, ly, bw, 22);
+        ctx.fillStyle = "#12383b";
+        ctx.fillText(label, lx + 7, ly + 15);
+        const last = xy.length - 1;
+        ctx.fillStyle = "#a13e29";
+        ctx.beginPath();
+        ctx.arc(...xy[last], 3.5, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = "#19363b";
+        ctx.beginPath();
+        ctx.arc(...xy[0], 4, 0, 2 * Math.PI);
+        ctx.fill();
+        el("phase").textContent = D.phases[D.group[i]];
+        el("step").textContent = "Step " + i + " / " + slider.max;
+        const vertical = Math.abs(e[1]) > 89.8;
+        el("pose").textContent =
+          "Elevation " +
+          e[1].toFixed(2) +
+          "° · " +
+          (vertical
+            ? "Near vertical; use the head axis"
+            : "Yaw " + e[0].toFixed(2) + "°");
+        el("gap").textContent =
+          "Tank clearance after allowance " + e[3].toFixed(2) + " mm";
+        el("gap").textContent += " · Clamp " + e[4].toFixed(1) + " mm";
+        el("peak").setAttribute("aria-pressed", String(locked === null));
+        D.loads[i].forEach((n, k) => {
+          const b = el("t" + k);
+          b.textContent = (n / 1000).toFixed(3);
+          b.setAttribute(
+            "aria-label",
+            ropeName(k) + " " + b.textContent + " N",
+          );
+          b.setAttribute("aria-pressed", String(k === chosen));
+        });
+      }
+      el("peak").onclick = () => {
+        locked = null;
+        draw();
+      };
+      function stop() {
+        if (timer !== null) clearInterval(timer);
+        timer = null;
+        el("play").textContent = "Play";
+      }
+      slider.oninput = () => {
+        stop();
+        draw();
+      };
+      el("jump").onchange = () => {
+        stop();
+        slider.value = el("jump").value;
+        draw();
+      };
+      el("play").onclick = () => {
+        if (timer !== null) {
+          stop();
+          return;
+        }
+        if (+slider.value >= +slider.max) slider.value = 0;
+        el("play").textContent = "Pause";
+        timer = setInterval(() => {
+          if (+slider.value >= +slider.max) {
+            stop();
+            return;
+          }
+          slider.value = +slider.value + 1;
+          draw();
+        }, 40);
+      };
+      el("side").onclick = () => {
+        yaw = 0;
+        tilt = 0;
+        draw();
+      };
+      el("three").onclick = () => {
+        yaw = -0.43;
+        tilt = 0.19;
+        draw();
+      };
+      scene.onpointerdown = (e) => {
+        drag = [e.clientX, e.clientY];
+        scene.setPointerCapture(e.pointerId);
+      };
+      scene.onpointermove = (e) => {
+        if (!drag) return;
+        yaw += (e.clientX - drag[0]) * 0.012;
+        tilt = Math.max(
+          -1.4,
+          Math.min(1.4, tilt + (e.clientY - drag[1]) * 0.011),
+        );
+        drag = [e.clientX, e.clientY];
+        draw();
+      };
+      scene.onpointerup = scene.onpointercancel = () => {
+        drag = null;
+      };
+      window.addEventListener("resize", draw);
+      draw();
+    </script>
+  </body>
+</html>

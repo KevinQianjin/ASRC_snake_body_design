@@ -1,0 +1,47 @@
+[
+  {
+    "comparison": "up_return_vs_left_return",
+    "reference_step": 2240,
+    "return_step": 2540,
+    "clamp_mm": 15.0,
+    "tip_position_change_mm": 0.04404147927287773,
+    "tip_displacement_xyz_mm": [
+      -0.014001179619754112,
+      0.041208247503163875,
+      -0.006745309742086647
+    ],
+    "pointing_change_deg": 2.1549996681058994e-05,
+    "max_rope_tension_change_N": 0.5289233239903064,
+    "max_command_change_mm": 0.07553147700156693
+  },
+  {
+    "comparison": "down_return_vs_left_return",
+    "reference_step": 2240,
+    "return_step": 3098,
+    "clamp_mm": 15.0,
+    "tip_position_change_mm": 0.0501842911060559,
+    "tip_displacement_xyz_mm": [
+      -0.0162715857168223,
+      0.04689807365815568,
+      -0.007366767217149572
+    ],
+    "pointing_change_deg": 0.00026705715132268384,
+    "max_rope_tension_change_N": 0.6050024450577052,
+    "max_command_change_mm": 0.0865683811777096
+  },
+  {
+    "comparison": "withdrawn_vs_straightened",
+    "reference_step": 165,
+    "return_step": 3404,
+    "clamp_mm": -750.0,
+    "tip_position_change_mm": 0.10103084625919086,
+    "tip_displacement_xyz_mm": [
+      -0.02384068528158423,
+      0.0912365772015562,
+      -0.036259351920534755
+    ],
+    "pointing_change_deg": 0.06418949750198781,
+    "max_rope_tension_change_N": 0.6054489319508036,
+    "max_command_change_mm": 0.13718887237823552
+  }
+]

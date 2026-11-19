@@ -1,0 +1,124 @@
+{
+  "case": "nominal",
+  "samples": 1200,
+  "completed": true,
+  "controller_uses_plant_parameters": false,
+  "settings": {
+    "tension_target_n": 3.0,
+    "settle_tension_n": 2.5,
+    "precomp_limit_mm": 0.5,
+    "rope_step_mm": 0.25,
+    "node_step_mm": 4.5,
+    "max_iterations": 16,
+    "mid_tol_deg": null,
+    "mid_max": 4,
+    "reference": "simulations/u4m2/lanes_20261113/guided_validation_20261114/candidate/reference",
+    "gains": "simulations/u4m2/lanes_20261113/guided_validation_20261114/candidate/closed_loop/nominal_gains.npz"
+  },
+  "settled": {
+    "states": 1200,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.901220780086281,
+    "peak_tension_n": 18.72034191155565,
+    "minimum_eigenvalue": 0.21858067126681946,
+    "minimum_clearance_mm": 9.57336045369135,
+    "maximum_node_move_mm": 0.0,
+    "maximum_yaw_error_deg": 0.19935223443360428,
+    "maximum_elevation_error_deg": 0.19975810494806723,
+    "maximum_offset_mm": 0.5455406619557515,
+    "samples_not_settled": 0
+  },
+  "trace": {
+    "states": 2546,
+    "failed_checks": 0,
+    "below_operating_tension": 0,
+    "unstable": 0,
+    "geometry_failures": 0,
+    "clearance_failures": 0,
+    "minimum_tension_n": 2.9500298546625547,
+    "peak_tension_n": 18.72034191155565,
+    "minimum_eigenvalue": 0.2185478429702176,
+    "minimum_clearance_mm": 9.556035712801027,
+    "maximum_node_move_mm": 2.5000017988796714
+  },
+  "trace_states_by_kind": {
+    "start": 1,
+    "feedforward": 2482,
+    "mid_correction": 0,
+    "mid_revert": 0,
+    "correction": 64
+  },
+  "pre_control_start": {
+    "minimum_tension_n": 2.901220780086281,
+    "minimum_eigenvalue": 0.8209265522402859
+  },
+  "expected_targets": 1200,
+  "head_g": 500.0,
+  "cells_per_module": 8,
+  "rope_diameter_mm": 2.0,
+  "cone_spacing_mm": 0.15,
+  "lanes_mm": [
+    21,
+    24,
+    28
+  ],
+  "rope_order": [
+    "a4_up",
+    "a4_right",
+    "a4_down",
+    "a4_left",
+    "a5_up",
+    "a5_right",
+    "a5_down",
+    "a5_left",
+    "a6_up",
+    "a6_right",
+    "a6_down",
+    "a6_left"
+  ],
+  "inputs_sha256": {
+    "simulations/u4m2/lanes_20261113/guided_validation_20261114/candidate/reference/nominal.json": "ccb218cbd0e85f46691595158c54bf6319587dda087bc1394af81c46a74d4127",
+    "simulations/u4m2/lanes_20261113/guided_validation_20261114/candidate/reference/nominal_states.npz": "40428e680511a451d25969af6380eba86b3c1755e1d6213a2a48d83e6af71daa",
+    "simulations/u4m2/lanes_20261113/guided_validation_20261114/candidate/closed_loop/nominal_gains.npz": "5e54079d5fc82d58940bf64942208c2d12a5c2729cc146a1b78106ade3b1f77e",
+    "simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/results/straight_relieved.json": "2e1126167c1057b99886845ebbc85505e9447ff6aa4e5ab3bb8b25c941370cfe",
+    "simulations/u4m2/lanes_20261113/morning_20261116/fixed_winch_holds/mass_model.json": "e57baadd2e4d8a9ff1853439c5e8600df33181520cc167f586830fe175214f44"
+  },
+  "mass": {
+    "previous_bare_module_g": [
+      40.615039,
+      40.615039,
+      40.615039,
+      41.806834,
+      40.68399737545746,
+      41.14983721627346
+    ],
+    "updated_bare_module_g": [
+      40.615039,
+      40.615039,
+      40.615039,
+      41.806834,
+      42.88116330644256,
+      41.14983721627346
+    ],
+    "original_inner_stations_g": {
+      "-12": 2.419238370589264,
+      "12": 2.419238347619139
+    },
+    "retained_inner_stations_g": {
+      "-12": 3.52773942885843,
+      "12": 3.5277394193461156
+    },
+    "web_machining_removed_g": 0.019836199011041243,
+    "M5_net_added_g": 2.1971659309851015,
+    "distribution": "Module masses distributed over the eight cells as in the archived plant. The other six guide stations retain their baseline CAD masses and all module stiffness values retain their archived homogenized values."
+  },
+  "plant": "Finite bellmouths, shared C-passage, frictionless conservative energy; retained M5 inner station CAD masses; prescribed quasi-static clamp travel.",
+  "stopped_reason": null,
+  "targets_executed": 1200,
+  "max_motion_residual": 3.2958694123165297e-07,
+  "motion_max_angle_error_deg": 0.38805993041112075
+}

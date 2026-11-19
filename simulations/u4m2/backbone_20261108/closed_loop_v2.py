@@ -55,14 +55,20 @@ def qp(A, C, T, err, offset, target, step_limit, angle_weight=1.):
 
 
 class Runner:
-    def __init__(self, case, args):
+    def __init__(self, case, args, rod=None):
         self.case, self.a = case, args
         variant, payload, ea, free = CASES[case]
-        self.r = spatial_rod(4, 2, [4, 5, 6], 20, 8, variant); self.r.payload = payload
+        self.r = spatial_rod(4, 2, [4, 5, 6], 20, 8, variant) if rod is None else rod
+        if rod is not None and abs(rod.payload - payload) > 1e-12:
+            raise ValueError("Plant payload differs from the selected controller case")
+        self.r.payload = payload
         self.d = FeedbackDrive(self.r, free, ea); self.free = free
         self.tank = FastTank()
         self.trace = []; self.last_points = None; self.max_move = 0.; self.n_mid = 0; self.n_mid_reverts = 0; self.offset_extra = np.zeros(12)
         self.trace_states = []; self.trace_rest = []
+
+    def measured_angles(self, z, phase):
+        return angles(self.r, z)
 
     def check(self, z, R, s, target, kind, index, phase):
         m, P = inspect(self.r, self.d, z, R, dict(clamp_s_mm=s), self.tank, target)
@@ -107,7 +113,7 @@ class Runner:
             if not mid:
                 continue
             for _ in range(self.a.mid_max):
-                err = error(tk, angles(self.r, z)); norm = float(np.max(np.abs(err)))
+                err = error(tk, self.measured_angles(z, phase)); norm = float(np.max(np.abs(err)))
                 if norm <= self.a.mid_tol:
                     break
                 T = self.d.force(z, R_cur).ravel()
@@ -116,7 +122,7 @@ class Runner:
                     break
                 Rn = R_cur + delta.reshape(3, 4) / 1000
                 zn = self.move(z, R_cur, s_cur, t_cur, Rn, s_cur, t_cur, 'mid_correction', index, phase)
-                if float(np.max(np.abs(error(tk, angles(self.r, zn))))) > norm:
+                if float(np.max(np.abs(error(tk, self.measured_angles(zn, phase))))) > norm:
                     # Measured error grew: the nominal gains do not fit this plant here. Return to the
                     # previous rope lengths and stop correcting during this move; the settle loop
                     # (with its damping rule) finishes the sample.
@@ -127,7 +133,8 @@ class Runner:
         self.offset_extra = extra
         return z
 
-    def run(self):
+    def run(self, on_settled=None, continuation=None):
+        """Optionally continue at a target boundary using the actual commands and feedback state."""
         a = self.a
         ref = Path(a.ref) if a.ref else REF
         rows = json.loads((ref / 'nominal.json').read_text()); refzs = np.load(ref / 'nominal_states.npz')['z']
@@ -139,7 +146,23 @@ class Runner:
         R_applied = data['R'][0] + self.free - 1.; s_prev = rows[0]['clamp_s_mm']
         records, Z = [], []; prevkey = None; t0 = time.time()
         first = True; t_prev = np.asarray(data['target'][0], float)
-        for i, q in enumerate(rows):
+        start_index = 0
+        if continuation is not None:
+            start_index = continuation["start_index"]
+            if not 1 <= start_index <= len(rows):
+                raise ValueError("A continuation needs a preceding target within this reference")
+            z = continuation["z"].copy()
+            offset = continuation["offset_mm"].copy()
+            damping = continuation["correction_scale"]
+            R_applied = continuation["rest_m"].copy()
+            s_prev = continuation["clamp_s_mm"]
+            t_prev = continuation["target"].copy()
+            prior_feed = data["R"][start_index - 1] + self.free - 1.
+            prevkey = np.r_[prior_feed.ravel(), t_prev].tobytes()
+            first = False
+            _, self.last_points = self.check(z, R_applied, s_prev, t_prev, "continuation", start_index - 1, continuation["phase"])
+        for i in range(start_index, len(rows)):
+            q = rows[i]
             R0 = data['R'][i] + self.free - 1.; target = data['target'][i]; B = data['B'][i]; A, C = B[:2], B[2:]
             key = np.r_[R0.ravel(), target].tobytes(); s = q['clamp_s_mm']
             iterations = 0; precomp = 0.
@@ -165,7 +188,7 @@ class Runner:
                 R_applied = R_new; s_prev = s; first = False
                 previous_error = None
                 for it in range(a.max_iter):
-                    err = error(target, angles(self.r, z)); T = self.d.force(z, R_applied).ravel()
+                    err = error(target, self.measured_angles(z, q["phase"])); T = self.d.force(z, R_applied).ravel()
                     norm = float(np.max(np.abs(err))); damping = adapt_scale(previous_error, norm, damping); previous_error = norm
                     if norm <= .2 and T.min() >= a.settle_tension:
                         break
@@ -179,8 +202,11 @@ class Runner:
             rec.update(target_yaw_deg=float(target[0]), target_elevation_deg=float(target[1]), iterations=iterations,
                        precompensation_mm=precomp, offset_mm=offset.tolist(), correction_scale=damping)
             records.append(rec); Z.append(z.copy()); prevkey = key; t_prev = np.asarray(target, float)
+            if on_settled is not None:
+                on_settled(i, rec, z, R_applied, self)
             if i % 50 == 0:
-                print(f"{self.case} {i} {q['phase']} err {max(abs(rec['yaw_error_deg']), abs(rec['elevation_error_deg'])):.3f} "
+                angular = rec.get('controlled_errors_deg', (rec['yaw_error_deg'], rec['elevation_error_deg']))
+                print(f"{self.case} {i} {q['phase']} err {max(abs(v) for v in angular):.3f} "
                       f"Tmin {rec['minimum_tension_n']:.2f} trace {len(self.trace)} maxmove {self.max_move:.2f} t {time.time() - t0:.0f}s", flush=True)
         return records, Z
 
