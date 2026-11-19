@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checks": {
+    "source_sha256": true,
+    "generated_CAD_sha256": true,
+    "six_shell_cases_at_both_resolutions": true,
+    "middle_common_guide_closure": true,
+    "fine_common_guide_closure": true,
+    "loaded_station_coverage": true,
+    "removing_hub_material_does_not_reduce_fixed_pose_gap": true,
+    "unintended_solid_intersection_count_zero": true,
+    "straight_assembly_pairs": true,
+    "calculated_coupon_states": true,
+    "fixture_nominal_sweeps": true,
+    "actual_gauge_from_four_ribs": true,
+    "program_phases": true,
+    "four_C_ropes_all_held_poses": true,
+    "frozen_rope_geometric_criteria": true,
+    "complete_model_replay_of_saved_winch_holds": true,
+    "full_saved_state_shapes": true,
+    "rebalanced_CAD_and_tank": true,
+    "simultaneous_load_table": true,
+    "joint_force_and_moment_verified": true,
+    "independent_fixed_winch_tangent": true,
+    "new_rod_boundary_146": true,
+    "unmeasured_hardware_makes_no_pass_claim": true
+  },
+  "scope": "Data integrity, numerical checks and nominal CAD within the documented models. Hardware fixtures, material strength, fatigue and dynamic control have separate acceptance tests."
+}

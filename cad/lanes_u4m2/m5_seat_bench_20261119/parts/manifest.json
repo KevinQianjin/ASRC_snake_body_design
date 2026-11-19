@@ -1,0 +1,53 @@
+{
+  "source": "retained_seat_20261118/parts/M5_machined_body.stl",
+  "source_sha256": "5989a1b69cc3fecbab948950639e34a1c82bd7c8fa610aafa1074ab8d5243527",
+  "coordinate_order": [
+    "along web (s)",
+    "across web in its plane (p)",
+    "normal to web (n)"
+  ],
+  "source_station_mm": 12,
+  "source_rib_deg": 67.5,
+  "free_length_mm": 5.4,
+  "clamp_dowels_mm": [
+    2,
+    6
+  ],
+  "tab_pin_bore_diameter_mm": 2.08,
+  "clamp_fasteners": "4 x M2 through screws and nuts",
+  "stage_mounting_through_holes_mm": 3.2,
+  "inspection": {
+    "source_free_gauge_mm3": 21.63359760721282,
+    "added_free_gauge_mm3": 1.0753139513674996e-17,
+    "lost_free_gauge_mm3": 0.0,
+    "stl_free_gauge_symmetric_difference_mm3": 2.048869550907333e-06,
+    "registered_gauge_difference_by_source_rib_mm3": {
+      "67.5": 2.048869550907333e-06,
+      "157.5": 2.443440504561637e-06,
+      "247.5": 2.47332821248674e-06,
+      "337.5": 2.4455950188027215e-06
+    }
+  },
+  "parts": {
+    "web_coupon": {
+      "volume_mm3": 173.47389033157927,
+      "triangles": 12026,
+      "closed": true
+    },
+    "coupon_carrier": {
+      "volume_mm3": 1116.7110921446658,
+      "triangles": 3168,
+      "closed": true
+    },
+    "tab_cover": {
+      "volume_mm3": 202.43000689555197,
+      "triangles": 792,
+      "closed": true
+    },
+    "pin_carriage": {
+      "volume_mm3": 789.1203533863101,
+      "triangles": 1634,
+      "closed": true
+    }
+  }
+}

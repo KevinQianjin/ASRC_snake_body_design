@@ -39,6 +39,10 @@ def drill_lines(arm):
 
 def test_static(args):
     parts = read_parts(args.parts)
+    replacement = getattr(args, "hub_parts", None)
+    if replacement is not None:
+        for name in ("hub_upper_sector", "hub_lower_sector"):
+            parts[name] = b.load(replacement / f"{name}.stl")
     body = b.load(args.parts / "M5_machined_body.stl")
     props = json.loads((args.parts / "parts.json").read_text())
     baseline = CAD.parent / "guides_v3"
@@ -141,6 +145,10 @@ def test_static(args):
         backbone_diameter_mm=1.8,
         unobstructed_hub_radius_mm=7.8,
     )
+    if replacement is not None:
+        result["inside_hub_chamfer_mm"] = json.loads(
+            (replacement / "manifest.json").read_text()
+        )["chamfer_radial_and_axial_mm"]
     args.out.mkdir(exist_ok=True, parents=True)
     (args.out / "straight.json").write_text(json.dumps(result, indent=2) + "\n")
 
@@ -148,5 +156,8 @@ def test_static(args):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--parts", type=Path, default=CAD / "parts")
+    ap.add_argument(
+        "--hub-parts", type=Path, help="Use both hub sectors from this dated candidate"
+    )
     ap.add_argument("--out", type=Path, required=True)
     test_static(ap.parse_args())

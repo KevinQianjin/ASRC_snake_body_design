@@ -1,0 +1,100 @@
+[
+  {
+    "cells_per_module": 8,
+    "hold": 64,
+    "minimum_eigenvalue": 0.28092391915214776,
+    "checks": [
+      {
+        "direction": "first_eigenvector",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 2.6007975198513792e-06,
+        "analytic_rayleigh": 0.2809239191521508,
+        "independent_rayleigh": 0.280923917894362
+      },
+      {
+        "direction": "first_eigenvector",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 2.605509095726766e-06,
+        "analytic_rayleigh": 0.2809239191521508,
+        "independent_rayleigh": 0.2809239140313271
+      },
+      {
+        "direction": "full_random",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 3.625163682187024e-07,
+        "analytic_rayleigh": 1.3537727275889135,
+        "independent_rayleigh": 1.3537726778697992
+      },
+      {
+        "direction": "full_random",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 3.618042869900114e-07,
+        "analytic_rayleigh": 1.3537727275889135,
+        "independent_rayleigh": 1.353772679222512
+      },
+      {
+        "direction": "shared_cells_only",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 2.834256243888084e-07,
+        "analytic_rayleigh": 3.3509265167605404,
+        "independent_rayleigh": 3.350925675399968
+      },
+      {
+        "direction": "shared_cells_only",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 2.826083198749322e-07,
+        "analytic_rayleigh": 3.3509265167605404,
+        "independent_rayleigh": 3.3509256808365895
+      }
+    ]
+  },
+  {
+    "cells_per_module": 16,
+    "hold": 64,
+    "minimum_eigenvalue": 0.2798047303613187,
+    "checks": [
+      {
+        "direction": "first_eigenvector",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 9.911573299257747e-07,
+        "analytic_rayleigh": 0.27980473036131415,
+        "independent_rayleigh": 0.27980472384198146
+      },
+      {
+        "direction": "first_eigenvector",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 9.915559461479784e-07,
+        "analytic_rayleigh": 0.27980473036131415,
+        "independent_rayleigh": 0.27980472023533093
+      },
+      {
+        "direction": "full_random",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 8.079126084675122e-08,
+        "analytic_rayleigh": 1.0763618272717617,
+        "independent_rayleigh": 1.0763618233870162
+      },
+      {
+        "direction": "full_random",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 8.010101405247043e-08,
+        "analytic_rayleigh": 1.0763618272717617,
+        "independent_rayleigh": 1.076361823608239
+      },
+      {
+        "direction": "shared_cells_only",
+        "step_scaled_dof": 0.0001,
+        "relative_tangent_vector_error": 1.075040925129827e-07,
+        "analytic_rayleigh": 1.7314221153511493,
+        "independent_rayleigh": 1.7314220658776236
+      },
+      {
+        "direction": "shared_cells_only",
+        "step_scaled_dof": 4e-05,
+        "relative_tangent_vector_error": 1.0768599638906907e-07,
+        "analytic_rayleigh": 1.7314221153511493,
+        "independent_rayleigh": 1.731422069053468
+      }
+    ]
+  }
+]

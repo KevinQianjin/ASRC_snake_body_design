@@ -1,0 +1,859 @@
+{
+  "case": "141",
+  "shell_area_mm2": 0.055,
+  "solid_mesh": "middle",
+  "angular_and_cut_face_boundary_coupled": true,
+  "maximum_reconstructed_force_error_N": 4.801541061612885e-06,
+  "reference_pin_reactions": "evening_20261118/pin_seat/pin_r0p30",
+  "criteria": {
+    "translation_mm": 0.001,
+    "moment_Nmm": 0.02
+  },
+  "status": "converged",
+  "history": [
+    {
+      "iteration": 0,
+      "shell_iterations": 0,
+      "shell_equilibrium_residual": 1.8196298604528094e-05,
+      "maximum_translation_mismatch_mm": 0.05591481329610641,
+      "maximum_moment_mismatch_Nmm": 0.33298145474811347
+    },
+    {
+      "iteration": 1,
+      "shell_iterations": 4,
+      "shell_equilibrium_residual": 1.9103953960430964e-08,
+      "maximum_translation_mismatch_mm": 0.03791349002696917,
+      "maximum_moment_mismatch_Nmm": 0.12417944046277449
+    },
+    {
+      "iteration": 2,
+      "shell_iterations": 3,
+      "shell_equilibrium_residual": 2.1477107862988287e-08,
+      "maximum_translation_mismatch_mm": 0.032609711956366555,
+      "maximum_moment_mismatch_Nmm": 0.2592613423530507
+    },
+    {
+      "iteration": 3,
+      "shell_iterations": 3,
+      "shell_equilibrium_residual": 1.9401844804367574e-08,
+      "maximum_translation_mismatch_mm": 0.012230211633438981,
+      "maximum_moment_mismatch_Nmm": 0.18526676105131704
+    },
+    {
+      "iteration": 4,
+      "shell_iterations": 2,
+      "shell_equilibrium_residual": 1.212491034208521e-06,
+      "maximum_translation_mismatch_mm": 0.008184332698109193,
+      "maximum_moment_mismatch_Nmm": 0.09355688738861051
+    },
+    {
+      "iteration": 5,
+      "shell_iterations": 2,
+      "shell_equilibrium_residual": 2.2901273634134967e-06,
+      "maximum_translation_mismatch_mm": 0.0061794890575009405,
+      "maximum_moment_mismatch_Nmm": 0.02606077957451795
+    },
+    {
+      "iteration": 6,
+      "shell_iterations": 2,
+      "shell_equilibrium_residual": 4.381456105706505e-07,
+      "maximum_translation_mismatch_mm": 0.0020378287359967004,
+      "maximum_moment_mismatch_Nmm": 0.01721559465287472
+    },
+    {
+      "iteration": 7,
+      "shell_iterations": 2,
+      "shell_equilibrium_residual": 4.0964648485852795e-08,
+      "maximum_translation_mismatch_mm": 0.0007141721720528927,
+      "maximum_moment_mismatch_Nmm": 0.015414777015634016
+    }
+  ],
+  "last_sites": [
+    {
+      "station": 12,
+      "rib_deg": 67.5,
+      "force_world_N": [
+        3.0093515442366803,
+        7.667781978428941,
+        -11.175096297996733
+      ],
+      "offset_guide_mm": [
+        -0.01593402395462978,
+        -0.049178956324782086,
+        0.01736222528555835
+      ],
+      "cut_frame_in_pin_mm": [
+        -0.04451672149240354,
+        0.19205943790210722,
+        0.018714148693545568
+      ],
+      "fit_rotation_xyzw": [
+        0.027873035760870312,
+        -0.001177985293048614,
+        0.02918042812766336,
+        0.9991847721229586
+      ],
+      "cut_face_nonrigid_max_mm": 0.09713282645783763,
+      "translation_residual_mm": 3.451193385503951e-05,
+      "moment_residual_Nmm": 0.0005847031207762018,
+      "shell_ring_moment_balance_Nmm": 9.516787672500294e-10,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 9.245523190084736,
+        "pin_nominal_bending_stress_MPa": 435.99132360673633,
+        "converged": true,
+        "normal_iterations": 14,
+        "station_mm": 12,
+        "rib_deg": 67.5,
+        "applied_force_spn_N": [
+          11.180382316368267,
+          -7.628110667891728,
+          -3.0894713711662245
+        ],
+        "tilt_deg": 3.1972806291922713,
+        "relative_translation_spn_mm": [
+          -0.04451461461142518,
+          0.19202513762989698,
+          0.018710966562614728
+        ],
+        "translation_mm": 0.19800329458241817,
+        "max_elastic_deflection_mm": 0.19094809877664187,
+        "minimum_gap_mm": -2.0826684821173558e-09,
+        "force_residual_N": 6.612110431312316e-05,
+        "contact_moment_about_pivot_spn_Nmm": [
+          -0.00031747621142194226,
+          0.0013811177639437404,
+          4.1138696545703477e-17
+        ],
+        "peak_nodal_pressure_MPa": 108.26637875553378,
+        "active_nodes": 23,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 14.47748345066594,
+            "resultant_spn_N": [
+              10.702863883495914,
+              -6.235994398108106,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 0.5300539047837465,
+            "resultant_spn_N": [
+              0.027339830226719458,
+              -0.040910168259965615,
+              0.5255216693580116
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 3.9224573071801543,
+            "resultant_spn_N": [
+              0.4501805024633542,
+              -1.351140072293936,
+              -3.6149901195739798
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.062166214567130625,
+        "p95_volume_tensile_principal_strain": 0.0289868480143145,
+        "most_compressive_principal_strain": -0.0784075785800458,
+        "peak_element_centre_spn_mm": [
+          0.4750169936711952,
+          -0.7426377484672597,
+          -1.1178654482885457
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": -12,
+      "rib_deg": 67.5,
+      "force_world_N": [
+        2.6007410483024698,
+        10.401243421519268,
+        -6.430263866042895
+      ],
+      "offset_guide_mm": [
+        -0.013026383557289876,
+        -0.04783838051671411,
+        -0.0166126306772375
+      ],
+      "cut_frame_in_pin_mm": [
+        0.03845426913892423,
+        0.17050144861772618,
+        0.009438402913399814
+      ],
+      "fit_rotation_xyzw": [
+        0.0062565032160627485,
+        -0.008244059206711656,
+        -0.01784059803656087,
+        0.9997872797335449
+      ],
+      "cut_face_nonrigid_max_mm": 0.08133838031324252,
+      "translation_residual_mm": 5.3558947187476115e-05,
+      "moment_residual_Nmm": 0.0020255369885984055,
+      "shell_ring_moment_balance_Nmm": 8.709209951484705e-09,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 8.412025669987441,
+        "pin_nominal_bending_stress_MPa": 396.686064235382,
+        "converged": true,
+        "normal_iterations": 13,
+        "station_mm": -12,
+        "rib_deg": 67.5,
+        "applied_force_spn_N": [
+          -9.902467117294215,
+          -7.015967746915196,
+          -3.0025578539159956
+        ],
+        "tilt_deg": 1.1859654438367833,
+        "relative_translation_spn_mm": [
+          0.038459291565703,
+          0.17044920854303738,
+          0.009449094529254878
+        ],
+        "translation_mm": 0.17498952879560078,
+        "max_elastic_deflection_mm": 0.16167589619698988,
+        "minimum_gap_mm": -1.9374275517236583e-09,
+        "force_residual_N": 6.0688786324482665e-05,
+        "contact_moment_about_pivot_spn_Nmm": [
+          -0.2560759231479558,
+          0.12840814008670282,
+          6.597370247019081e-17
+        ],
+        "peak_nodal_pressure_MPa": 96.02864299312529,
+        "active_nodes": 22,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 12.962758229971456,
+            "resultant_spn_N": [
+              -9.54543553083014,
+              -5.89933645689786,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 0.14897601311738798,
+            "resultant_spn_N": [
+              -0.022220520884250722,
+              -0.05550274990369737,
+              0.13635049040103503
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 3.3817754753554983,
+            "resultant_spn_N": [
+              -0.3348195867279247,
+              -1.0610684715054213,
+              -3.138906833976757
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.052493299965749494,
+        "p95_volume_tensile_principal_strain": 0.025668940599234365,
+        "most_compressive_principal_strain": -0.06568454497488468,
+        "peak_element_centre_spn_mm": [
+          -0.47501699363849026,
+          -0.7426377484671179,
+          -1.1178654482763506
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": 12,
+      "rib_deg": 157.5,
+      "force_world_N": [
+        0.22609430348218623,
+        6.035745305549231,
+        -6.777008719102749
+      ],
+      "offset_guide_mm": [
+        0.011098344026955566,
+        -0.03364395119130451,
+        -0.008195790148539406
+      ],
+      "cut_frame_in_pin_mm": [
+        -0.02476899291279969,
+        0.048555674681701834,
+        -0.03894129786503346
+      ],
+      "fit_rotation_xyzw": [
+        -0.031233311370461578,
+        -0.013559050666391813,
+        0.00533988248076038,
+        0.9994058825427002
+      ],
+      "cut_face_nonrigid_max_mm": 0.03575944504638105,
+      "translation_residual_mm": 5.0967041262174384e-05,
+      "moment_residual_Nmm": 0.0007660641288477684,
+      "shell_ring_moment_balance_Nmm": 1.272346348584338e-10,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 1.4025166540495895,
+        "pin_nominal_bending_stress_MPa": 66.1385061513179,
+        "converged": true,
+        "normal_iterations": 12,
+        "station_mm": 12,
+        "rib_deg": 157.5,
+        "applied_force_spn_N": [
+          3.6425965605041877,
+          -1.3183242202518675,
+          8.20991466179897
+        ],
+        "tilt_deg": 3.902538175699812,
+        "relative_translation_spn_mm": [
+          -0.024725730453223852,
+          0.04853462780987372,
+          -0.03892447442683789
+        ],
+        "translation_mm": 0.06694838722847628,
+        "max_elastic_deflection_mm": 0.05977285578830387,
+        "minimum_gap_mm": -1.4849910781283969e-09,
+        "force_residual_N": 0.00011280298088469009,
+        "contact_moment_about_pivot_spn_Nmm": [
+          0.12089251902801643,
+          0.06132333500838765,
+          -1.864150118594624e-17
+        ],
+        "peak_nodal_pressure_MPa": 67.18369865405153,
+        "active_nodes": 34,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 1.931922241461019,
+            "resultant_spn_N": [
+              1.8763855123033384,
+              0.05946582841291363,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 8.82741004412555,
+            "resultant_spn_N": [
+              1.7661418979635288,
+              -1.3777105313157478,
+              8.209954911789106
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 5.074054664464916e-09,
+            "resultant_spn_N": [
+              -1.347565997871658e-10,
+              3.35683505473733e-10,
+              -4.787249005116393e-09
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.02496127376744675,
+        "p95_volume_tensile_principal_strain": 0.009814776138686724,
+        "most_compressive_principal_strain": -0.030927516526166016,
+        "peak_element_centre_spn_mm": [
+          -0.4007632183833053,
+          0.6279311579508996,
+          -1.165089499159179
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": -12,
+      "rib_deg": 157.5,
+      "force_world_N": [
+        0.09362018931372967,
+        6.900404404369984,
+        -5.737787306079032
+      ],
+      "offset_guide_mm": [
+        0.009811862779313847,
+        -0.034129941654851594,
+        0.010351471398067259
+      ],
+      "cut_frame_in_pin_mm": [
+        0.02497517344296692,
+        0.04277419518303663,
+        -0.043929276356787
+      ],
+      "fit_rotation_xyzw": [
+        -0.04356025020295016,
+        0.007641797233786622,
+        -0.002732024288499007,
+        0.9990178394706378
+      ],
+      "cut_face_nonrigid_max_mm": 0.041738818279915615,
+      "translation_residual_mm": 0.00021149058779491688,
+      "moment_residual_Nmm": 0.015414777015634016,
+      "shell_ring_moment_balance_Nmm": 1.0014047168476064e-08,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 1.5334099545834248,
+        "pin_nominal_bending_stress_MPa": 72.31104416541358,
+        "converged": true,
+        "normal_iterations": 10,
+        "station_mm": -12,
+        "rib_deg": 157.5,
+        "applied_force_spn_N": [
+          -3.7556959560504315,
+          -1.1589575218903994,
+          8.068340238342554
+        ],
+        "tilt_deg": 5.069519389746337,
+        "relative_translation_spn_mm": [
+          0.024782821639254337,
+          0.04268662913171779,
+          -0.043937101891323535
+        ],
+        "translation_mm": 0.0660818089767559,
+        "max_elastic_deflection_mm": 0.060216815228856434,
+        "minimum_gap_mm": -1.4766365156191934e-09,
+        "force_residual_N": 2.1107525454184165e-05,
+        "contact_moment_about_pivot_spn_Nmm": [
+          0.13029225958548382,
+          -0.2156249268287578,
+          4.391025789173956e-18
+        ],
+        "peak_nodal_pressure_MPa": 88.31484081361906,
+        "active_nodes": 37,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 2.116649112336197,
+            "resultant_spn_N": [
+              -2.0391034480856463,
+              0.23689500368972413,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 8.65572842101823,
+            "resultant_spn_N": [
+              -1.7165831681597636,
+              -1.3958336066196948,
+              8.068340841062078
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 6.8356974349822674e-09,
+            "resultant_spn_N": [
+              -3.5049519826883526e-10,
+              5.18713485278168e-10,
+              -6.457109166502203e-09
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.025152486038098384,
+        "p95_volume_tensile_principal_strain": 0.009785512872874165,
+        "most_compressive_principal_strain": -0.033673548544261474,
+        "peak_element_centre_spn_mm": [
+          -0.47501699363849026,
+          -0.7426377484671179,
+          1.1178654482763506
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": 12,
+      "rib_deg": 247.5,
+      "force_world_N": [
+        -2.156762663450504,
+        -0.4741929704680595,
+        -0.32158429163212476
+      ],
+      "offset_guide_mm": [
+        0.023230883676972288,
+        0.007184787462418221,
+        0.012362028900164882
+      ],
+      "cut_frame_in_pin_mm": [
+        -0.005580879188399755,
+        0.0139059127080976,
+        -0.017102024397887484
+      ],
+      "fit_rotation_xyzw": [
+        -0.006335885914823687,
+        -0.009442368085455611,
+        0.04039922624149113,
+        0.9991189122190121
+      ],
+      "cut_face_nonrigid_max_mm": 0.01751089731684803,
+      "translation_residual_mm": 9.674281603332639e-05,
+      "moment_residual_Nmm": 0.001005625979515539,
+      "shell_ring_moment_balance_Nmm": 1.113853946613627e-09,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 0.49013054932759414,
+        "pin_nominal_bending_stress_MPa": 23.11309620320968,
+        "converged": true,
+        "normal_iterations": 8,
+        "station_mm": 12,
+        "rib_deg": 247.5,
+        "applied_force_spn_N": [
+          0.32208617412058854,
+          -1.1516718812163678,
+          1.8840947403928192
+        ],
+        "tilt_deg": 1.3030594042683155,
+        "relative_translation_spn_mm": [
+          -0.005564183664050349,
+          0.013986056402339022,
+          -0.017153574569507897
+        ],
+        "translation_mm": 0.02282137230861372,
+        "max_elastic_deflection_mm": 0.01751089731684803,
+        "minimum_gap_mm": -3.4380454039251163e-10,
+        "force_residual_N": 6.462623588234608e-06,
+        "contact_moment_about_pivot_spn_Nmm": [
+          0.03896139494980116,
+          0.022629003431434033,
+          -6.559852392549531e-18
+        ],
+        "peak_nodal_pressure_MPa": 23.522652144146075,
+        "active_nodes": 18,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 0.6603253473025318,
+            "resultant_spn_N": [
+              0.25925473554364326,
+              -0.6008741948176819,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 2.030222943150397,
+            "resultant_spn_N": [
+              0.06282816609840622,
+              -0.5507924425845846,
+              1.8840966272846589
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 4.088284401690117e-10,
+            "resultant_spn_N": [
+              5.970602298340605e-13,
+              -1.2483579347734729e-11,
+              -3.7749991011287505e-10
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.012619164085669644,
+        "p95_volume_tensile_principal_strain": 0.005634867767107805,
+        "most_compressive_principal_strain": -0.010467524776560178,
+        "peak_element_centre_spn_mm": [
+          0.47501699364939187,
+          0.7426377484671651,
+          -1.1178654482804158
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": -12,
+      "rib_deg": 247.5,
+      "force_world_N": [
+        -1.930111035768791,
+        0.5869523664427531,
+        0.10805534060686356
+      ],
+      "offset_guide_mm": [
+        0.024806932837039598,
+        0.005833105410092401,
+        -0.006661279372939822
+      ],
+      "cut_frame_in_pin_mm": [
+        0.007967006284924905,
+        0.006071714935575266,
+        -0.02217222108753904
+      ],
+      "fit_rotation_xyzw": [
+        -0.012038957217371348,
+        0.003323902242439283,
+        -0.041293555358882184,
+        0.9990689953495825
+      ],
+      "cut_face_nonrigid_max_mm": 0.01547171805118107,
+      "translation_residual_mm": 0.0007141721720528927,
+      "moment_residual_Nmm": 0.012659683140644433,
+      "shell_ring_moment_balance_Nmm": 1.281032886117676e-08,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 0.00014459809404439848,
+        "pin_nominal_bending_stress_MPa": 0.006818815238172674,
+        "converged": true,
+        "normal_iterations": 7,
+        "station_mm": -12,
+        "rib_deg": 247.5,
+        "applied_force_spn_N": [
+          -0.1918464538979616,
+          -0.5260654272737568,
+          1.941125382827432
+        ],
+        "tilt_deg": 1.4312156719473133,
+        "relative_translation_spn_mm": [
+          0.007764271613767508,
+          0.006748547926760653,
+          -0.022276325105177606
+        ],
+        "translation_mm": 0.02453694098708532,
+        "max_elastic_deflection_mm": 0.019623690323320522,
+        "minimum_gap_mm": -3.203026271523572e-10,
+        "force_residual_N": 1.2920212503677107e-05,
+        "contact_moment_about_pivot_spn_Nmm": [
+          0.04462861822838683,
+          0.017691143634391504,
+          -1.6916942063533166e-17
+        ],
+        "peak_nodal_pressure_MPa": 18.709118955386472,
+        "active_nodes": 19,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 0.00019288761822869484,
+            "resultant_spn_N": [
+              -9.869050956649213e-05,
+              -0.00016572637672284117,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 2.0925272254754104,
+            "resultant_spn_N": [
+              -0.19174280839226399,
+              -0.5259109229660541,
+              1.9411213284271904
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 8.835246200304972e-10,
+            "resultant_spn_N": [
+              -5.125107024898665e-11,
+              -3.507569130444859e-11,
+              -8.176365363077064e-10
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.012264855200398883,
+        "p95_volume_tensile_principal_strain": 0.005774415133668781,
+        "most_compressive_principal_strain": -0.008713754982260881,
+        "peak_element_centre_spn_mm": [
+          -0.4750169936602937,
+          0.7426377484672124,
+          1.1178654482844808
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": 12,
+      "rib_deg": 337.5,
+      "force_world_N": [
+        2.6461472286192502,
+        4.130018213960586,
+        -3.955457484199936
+      ],
+      "offset_guide_mm": [
+        -0.009617149783241881,
+        -0.025995261177307032,
+        -0.01471041252699429
+      ],
+      "cut_frame_in_pin_mm": [
+        -0.007256716608773575,
+        -0.019192500972465568,
+        0.03406625127757715
+      ],
+      "fit_rotation_xyzw": [
+        0.025856219846049102,
+        0.008996689184539176,
+        0.01391609097502735,
+        0.9995283177033877
+      ],
+      "cut_face_nonrigid_max_mm": 0.010626855422450827,
+      "translation_residual_mm": 0.00014844503789780835,
+      "moment_residual_Nmm": 0.0009414752595340498,
+      "shell_ring_moment_balance_Nmm": 6.433484906521632e-11,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 3.958367513710926e-09,
+        "pin_nominal_bending_stress_MPa": 1.8666481670562067e-07,
+        "converged": true,
+        "normal_iterations": 9,
+        "station_mm": 12,
+        "rib_deg": 337.5,
+        "applied_force_spn_N": [
+          0.6195311756481354,
+          1.1317487458545104,
+          -6.167666934193641
+        ],
+        "tilt_deg": 3.1375324514675826,
+        "relative_translation_spn_mm": [
+          -0.007200874243452345,
+          -0.019330041837292724,
+          0.03406598667521502
+        ],
+        "translation_mm": 0.03982454714692221,
+        "max_elastic_deflection_mm": 0.02112938430054973,
+        "minimum_gap_mm": -4.68758781896454e-10,
+        "force_residual_N": 1.068353603230286e-06,
+        "contact_moment_about_pivot_spn_Nmm": [
+          -0.011669872154441116,
+          -0.011083701746889264,
+          7.616520242146918e-18
+        ],
+        "peak_nodal_pressure_MPa": 17.423264103556317,
+        "active_nodes": 35,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 1.164859282697303e-08,
+            "resultant_spn_N": [
+              3.343322784691816e-09,
+              4.086165055014583e-09,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 3.025159375919702e-09,
+            "resultant_spn_N": [
+              -4.700553783381188e-11,
+              -1.1529256010664486e-10,
+              2.8185683692541723e-09
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 6.665092901079953,
+            "resultant_spn_N": [
+              0.6195311271730177,
+              1.1317476966125248,
+              -6.167667153221825
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.023120665044216004,
+        "p95_volume_tensile_principal_strain": 0.002988183949847688,
+        "most_compressive_principal_strain": -0.019217818877883642,
+        "peak_element_centre_spn_mm": [
+          -0.06361097846356642,
+          -0.562235820416438,
+          1.247543020777452
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    },
+    {
+      "station": -12,
+      "rib_deg": 337.5,
+      "force_world_N": [
+        2.7900498292172577,
+        4.451920072517032,
+        -3.3071838570435976
+      ],
+      "offset_guide_mm": [
+        -0.010599710345839978,
+        -0.02409709485026908,
+        0.004400639858678592
+      ],
+      "cut_frame_in_pin_mm": [
+        0.0029342036865099876,
+        -0.0037928130136466696,
+        0.029036529360099015
+      ],
+      "fit_rotation_xyzw": [
+        0.014355896686544094,
+        -0.017163000453209558,
+        -0.01776186254779485,
+        0.9995918446469046
+      ],
+      "cut_face_nonrigid_max_mm": 0.00697292936923062,
+      "translation_residual_mm": 0.00010123465659898268,
+      "moment_residual_Nmm": 0.0027445077730520575,
+      "shell_ring_moment_balance_Nmm": 2.0925228657343312e-09,
+      "contact": {
+        "pin_simple_support_span_mm": 3.0,
+        "pin_max_bending_moment_Nmm": 1.937108116798084e-09,
+        "pin_nominal_bending_stress_MPa": 9.134824654573264e-08,
+        "converged": true,
+        "normal_iterations": 9,
+        "station_mm": -12,
+        "rib_deg": 337.5,
+        "applied_force_spn_N": [
+          -0.2601730254063419,
+          0.1871504395291493,
+          -6.199896785892489
+        ],
+        "tilt_deg": 2.5642506535927008,
+        "relative_translation_spn_mm": [
+          0.0030104169019055764,
+          -0.0038569989129998753,
+          0.029054422705789514
+        ],
+        "translation_mm": 0.029463511829122786,
+        "max_elastic_deflection_mm": 0.008938568583705538,
+        "minimum_gap_mm": -3.1464956710241593e-10,
+        "force_residual_N": 2.6873964948055598e-06,
+        "contact_moment_about_pivot_spn_Nmm": [
+          -0.010287813927539738,
+          -0.0033152219056066055,
+          6.396792776467004e-18
+        ],
+        "peak_nodal_pressure_MPa": 13.55537353604932,
+        "active_nodes": 38,
+        "contact_components": {
+          "shaft": {
+            "normal_force_sum_N": 3.488042965148034e-08,
+            "resultant_spn_N": [
+              -2.358359945566402e-09,
+              -9.62699116539307e-10,
+              0.0
+            ]
+          },
+          "negative_thrust": {
+            "normal_force_sum_N": 1.6270702995164165e-08,
+            "resultant_spn_N": [
+              -1.1345760659258527e-09,
+              -1.638790699243563e-11,
+              1.50347844926028e-08
+            ]
+          },
+          "positive_thrust": {
+            "normal_force_sum_N": 6.66371855368802,
+            "resultant_spn_N": [
+              -0.26017228548962545,
+              0.18714848902745607,
+              -6.199895106376388
+            ]
+          }
+        },
+        "peak_tensile_principal_strain": 0.012455151741076758,
+        "p95_volume_tensile_principal_strain": 0.0023596544341276428,
+        "most_compressive_principal_strain": -0.011712559409476736,
+        "peak_element_centre_spn_mm": [
+          0.06361097845258559,
+          -0.5622358204194187,
+          1.247543020778045
+        ],
+        "mirror_plane_normal_translation_prescribed": false
+      }
+    }
+  ],
+  "iterations": 7,
+  "endpoint_constraint_residual": 0.0,
+  "guide_changes_from_ideal": {
+    "-12": {
+      "translation_world_mm": [
+        -0.002036372223355176,
+        0.016577268117751842,
+        -0.03556485889345229
+      ],
+      "rotation_deg": 0.02585834242171265,
+      "maximum_bore_shift_mm": 0.05011770532870745
+    },
+    "12": {
+      "translation_world_mm": [
+        -0.00018763713426395157,
+        0.03900960524114083,
+        -0.013899879545112626
+      ],
+      "rotation_deg": 0.016651648909212186,
+      "maximum_bore_shift_mm": 0.04573901251770223
+    }
+  },
+  "maximum_site_force_change_N": 1.9654120714685428,
+  "end_translation_change_mm": 0.0,
+  "baseline_fixture_couple_Nmm": 0.0,
+  "fixture_couple_Nmm": 0.0
+}

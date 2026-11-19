@@ -1,0 +1,1002 @@
+{
+  "covered_cases": 6,
+  "coupled_sites_per_mesh": 48,
+  "fixture_cases": [
+    {
+      "case": "bend67.5",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_7",
+            "part": "hub_0",
+            "kind": "hub_upper_sector",
+            "variant": "original",
+            "gap_mm": 0.04277923554950167,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              7.63795370383253,
+              -1.538748330631731,
+              -1.6198440432143144
+            ]
+          },
+          "relieved": {
+            "body": "rib_1",
+            "part": "fork_1",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.0747221122966005,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              8.704499041157263,
+              17.898351096524166,
+              0.669835038735896
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "rib_7",
+            "part": "hub_0",
+            "kind": "hub_upper_sector",
+            "variant": "relieved",
+            "gap_mm": 0.09873315964430733,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              7.768950724365688,
+              -1.591168029525638,
+              -1.6457994106559444
+            ]
+          },
+          "guide_bore_change_mm": 0.15664346071884697,
+          "old_single_fit_residual_mm": 0.07108833834745094,
+          "intended_overlap_mm3": 0.00036544983625068985,
+          "tighter_surface_nearest_mm": {
+            "original": 0.042779235549501415,
+            "relieved": 0.0747221122966005
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": -2.5673907444456745e-16,
+            "relieved": 0.0
+          },
+          "medium_to_fine_nearest_change_mm": {
+            "original": 0.004123708825418883,
+            "relieved": -0.003101623530104153
+          }
+        },
+        "12": {
+          "original": {
+            "body": "rib_7",
+            "part": "hub_0",
+            "kind": "hub_upper_sector",
+            "variant": "original",
+            "gap_mm": 0.04167781146253483,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              7.63815237945762,
+              -1.5388695948374895,
+              1.619339346395753
+            ]
+          },
+          "relieved": {
+            "body": "rib_5",
+            "part": "fork_3",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.0748326977070128,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -6.500979297951957,
+              -18.81104794582314,
+              -0.6697876639395546
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "rib_7",
+            "part": "hub_0",
+            "kind": "hub_upper_sector",
+            "variant": "relieved",
+            "gap_mm": 0.09752152403489017,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              7.768987451554409,
+              -1.591190446450221,
+              1.6451624028996121
+            ]
+          },
+          "guide_bore_change_mm": 0.22977282294081414,
+          "old_single_fit_residual_mm": 0.07113707456327706,
+          "intended_overlap_mm3": 0.0003657051171613982,
+          "tighter_surface_nearest_mm": {
+            "original": 0.04152045775116897,
+            "relieved": 0.0748326977070128
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": -0.00015735371136586102,
+            "relieved": 0.0
+          },
+          "medium_to_fine_nearest_change_mm": {
+            "original": 0.001790124405319414,
+            "relieved": -0.0015537581086440544
+          }
+        }
+      },
+      "interface_iterations_fine": 2,
+      "iterations_middle": 4,
+      "max_site_force_change_from_ideal_N": 13.916136205941813,
+      "peak_bore_shift_from_ideal_mm": 0.22977282294081414,
+      "maximum_bearing_force_N": 11.88963495958006,
+      "fine_local_force_balance_N": 9.856865328864617e-05,
+      "peak_strain": 0.045278701044477315,
+      "peak_nodal_pressure_MPa": 162.02096354359156,
+      "medium_to_fine_max_site_force_change_N": 0.4484754190556907,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.000714160769609451,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 1.305415457660858e-06,
+      "translation_mismatch_mm": 0.00012135655510790541,
+      "moment_mismatch_Nmm": 0.01049768483856341,
+      "peak_shell_ring_moment_balance_Nmm": 2.415290675669249e-08,
+      "ideal_pure_bend_couple_Nmm": 760.1433530046758,
+      "coupled_pure_bend_couple_Nmm": 755.2053161991994,
+      "end_position_change_at_same_bend_mm": 0.1024905649118261
+    },
+    {
+      "case": "bend0",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_7",
+            "part": "fork_0",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.06285787825245485,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              17.90508432490806,
+              -8.70223892964632,
+              0.6735572763364291
+            ]
+          },
+          "relieved": {
+            "body": "rib_7",
+            "part": "fork_0",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.06285787825245485,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              17.90508432490806,
+              -8.70223892964632,
+              0.6735572763364291
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "rib_5",
+            "part": "hub_5",
+            "kind": "hub_lower_sector",
+            "variant": "relieved",
+            "gap_mm": 0.17195032514800465,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -2.4974156090977555,
+              -7.510079243250457,
+              -1.6789302945250841
+            ]
+          },
+          "guide_bore_change_mm": 0.10604240945962824,
+          "old_single_fit_residual_mm": 0.06325559143504797,
+          "intended_overlap_mm3": 0.00023119429254843,
+          "tighter_surface_nearest_mm": {
+            "original": 0.06285787825245485,
+            "relieved": 0.06285787825245485
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": 0.0,
+            "relieved": 0.0
+          }
+        },
+        "12": {
+          "original": {
+            "body": "rib_7",
+            "part": "fork_0",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.06363854791599888,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              17.90496672248819,
+              -8.70231515264559,
+              -0.6731570641991118
+            ]
+          },
+          "relieved": {
+            "body": "rib_7",
+            "part": "fork_0",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.06363854791599888,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              17.90496672248819,
+              -8.70231515264559,
+              -0.6731570641991118
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "rib_5",
+            "part": "hub_6",
+            "kind": "hub_upper_sector",
+            "variant": "relieved",
+            "gap_mm": 0.17121096559603738,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -2.486194603957182,
+              -7.513704294647153,
+              1.6786189311818833
+            ]
+          },
+          "guide_bore_change_mm": 0.2726900795886335,
+          "old_single_fit_residual_mm": 0.06324862394277309,
+          "intended_overlap_mm3": 0.00022932206304471185,
+          "tighter_surface_nearest_mm": {
+            "original": 0.06363854791599888,
+            "relieved": 0.06363854791599888
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": 0.0,
+            "relieved": 0.0
+          }
+        }
+      },
+      "interface_iterations_fine": 2,
+      "iterations_middle": 4,
+      "max_site_force_change_from_ideal_N": 9.98800745724369,
+      "peak_bore_shift_from_ideal_mm": 0.2726900795886335,
+      "maximum_bearing_force_N": 8.77867578545844,
+      "fine_local_force_balance_N": 4.173472772626553e-05,
+      "peak_strain": 0.04270326335638913,
+      "peak_nodal_pressure_MPa": 124.6907799197184,
+      "medium_to_fine_max_site_force_change_N": 0.256590351303341,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.0036186192486303836,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 3.9089904692916524e-08,
+      "translation_mismatch_mm": 0.0003514825329708725,
+      "moment_mismatch_Nmm": 0.007919192185208089,
+      "peak_shell_ring_moment_balance_Nmm": 1.3329686897126034e-07,
+      "ideal_pure_bend_couple_Nmm": 756.4017116460288,
+      "coupled_pure_bend_couple_Nmm": 753.5654776247385,
+      "end_position_change_at_same_bend_mm": 0.36563782381939597
+    },
+    {
+      "case": "146",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.07450229100606967,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.782405397666423,
+              6.434696324165692,
+              0.7052161910236519
+            ]
+          },
+          "relieved": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.07450229100606967,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.782405397666423,
+              6.434696324165692,
+              0.7052161910236519
+            ]
+          },
+          "closest_remaining_hub": null,
+          "guide_bore_change_mm": 0.05240500228548561,
+          "old_single_fit_residual_mm": 0.049581965449656026,
+          "intended_overlap_mm3": 0.0004109838367812055,
+          "tighter_surface_nearest_mm": {
+            "original": 0.07450229100606967,
+            "relieved": 0.07450229100606967
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": 0.0,
+            "relieved": 0.0
+          },
+          "medium_to_fine_nearest_change_mm": {
+            "original": -0.0050995066267051775,
+            "relieved": -0.0050995066267051775
+          }
+        },
+        "12": {
+          "original": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10952543251917002,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.054816600962582,
+              17.88915250758816,
+              0.8357019438311116
+            ]
+          },
+          "relieved": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10952543251917002,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.054816600962582,
+              17.88915250758816,
+              0.8357019438311116
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "R3",
+            "part": "hub_7",
+            "kind": "hub_lower_sector",
+            "variant": "relieved",
+            "gap_mm": 0.44542344295851155,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              4.080702817522992,
+              -6.737676525361593,
+              1.8116861783814673
+            ]
+          },
+          "guide_bore_change_mm": 0.04674869289300213,
+          "old_single_fit_residual_mm": 0.05044392670393928,
+          "intended_overlap_mm3": 0.00042581520505821326,
+          "tighter_surface_nearest_mm": {
+            "original": 0.10952543251917002,
+            "relieved": 0.10952543251917002
+          },
+          "tighter_surface_change_mm_at_same_equilibrium": {
+            "original": 0.0,
+            "relieved": 0.0
+          },
+          "medium_to_fine_nearest_change_mm": {
+            "original": -0.0012316854070988092,
+            "relieved": -0.0012316854070988092
+          }
+        }
+      },
+      "interface_iterations_fine": 5,
+      "iterations_middle": 7,
+      "max_site_force_change_from_ideal_N": 2.412337475855368,
+      "peak_bore_shift_from_ideal_mm": 0.05240500228548561,
+      "maximum_bearing_force_N": 13.446108753943212,
+      "fine_local_force_balance_N": 6.534464430407692e-05,
+      "peak_strain": 0.07026589381941875,
+      "peak_nodal_pressure_MPa": 164.6492002745095,
+      "medium_to_fine_max_site_force_change_N": 0.31226743185304817,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.001069204081193563,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 1.3467483868585374e-09,
+      "translation_mismatch_mm": 0.0007211322137025445,
+      "moment_mismatch_Nmm": 0.017221787197009376,
+      "peak_shell_ring_moment_balance_Nmm": 4.375383159188554e-09
+    },
+    {
+      "case": "141",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.07744673454257252,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.781392995033634,
+              6.437597834321811,
+              0.7033168299354831
+            ]
+          },
+          "relieved": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.07744673454257252,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.781392995033634,
+              6.437597834321811,
+              0.7033168299354831
+            ]
+          },
+          "closest_remaining_hub": null,
+          "guide_bore_change_mm": 0.055143538781301356,
+          "old_single_fit_residual_mm": 0.04777640935172096,
+          "intended_overlap_mm3": 0.00038847587168233856
+        },
+        "12": {
+          "original": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10515164651171262,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.057140663102572,
+              17.886947227746663,
+              0.8375724238838194
+            ]
+          },
+          "relieved": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10515164651171262,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.057140663102572,
+              17.886947227746663,
+              0.8375724238838194
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "R3",
+            "part": "hub_7",
+            "kind": "hub_lower_sector",
+            "variant": "relieved",
+            "gap_mm": 0.32286807875462625,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              4.287221773786817,
+              -6.627672650597181,
+              1.7522881705891384
+            ]
+          },
+          "guide_bore_change_mm": 0.04708292725642014,
+          "old_single_fit_residual_mm": 0.048833192735789434,
+          "intended_overlap_mm3": 0.0004166425183085241
+        }
+      },
+      "interface_iterations_fine": 5,
+      "iterations_middle": 7,
+      "max_site_force_change_from_ideal_N": 2.002942983873762,
+      "peak_bore_shift_from_ideal_mm": 0.055143538781301356,
+      "maximum_bearing_force_N": 13.748368480779574,
+      "fine_local_force_balance_N": 7.779043332448813e-05,
+      "peak_strain": 0.07150203653679785,
+      "peak_nodal_pressure_MPa": 160.32356046762402,
+      "medium_to_fine_max_site_force_change_N": 0.211103261393215,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.005025833452593907,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 1.271980732416676e-09,
+      "translation_mismatch_mm": 0.0002547126354040011,
+      "moment_mismatch_Nmm": 0.002426435015269342,
+      "peak_shell_ring_moment_balance_Nmm": 3.692595596664226e-11
+    },
+    {
+      "case": "47",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_1",
+            "part": "fork_1",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.10325717101173001,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              8.759331928228018,
+              17.867200334944297,
+              0.6578855421722066
+            ]
+          },
+          "relieved": {
+            "body": "rib_1",
+            "part": "fork_1",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.10325717101173001,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              8.759331928228018,
+              17.867200334944297,
+              0.6578855421722066
+            ]
+          },
+          "closest_remaining_hub": null,
+          "guide_bore_change_mm": 0.04698860735101752,
+          "old_single_fit_residual_mm": 0.04023185898110374,
+          "intended_overlap_mm3": 0.0001036388191077462
+        },
+        "12": {
+          "original": {
+            "body": "rib_3",
+            "part": "gate_2",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.13419057888318442,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -16.708422562691585,
+              8.265385831804005,
+              0.6542709429487326
+            ]
+          },
+          "relieved": {
+            "body": "rib_3",
+            "part": "gate_2",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.13419057888318442,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -16.708422562691585,
+              8.265385831804005,
+              0.6542709429487326
+            ]
+          },
+          "closest_remaining_hub": null,
+          "guide_bore_change_mm": 0.029365631196127732,
+          "old_single_fit_residual_mm": 0.04180436869534916,
+          "intended_overlap_mm3": 0.000136501307216215
+        }
+      },
+      "interface_iterations_fine": 15,
+      "iterations_middle": 9,
+      "max_site_force_change_from_ideal_N": 2.614137033671289,
+      "peak_bore_shift_from_ideal_mm": 0.04698860735101752,
+      "maximum_bearing_force_N": 5.2995041683931,
+      "fine_local_force_balance_N": 0.004294319547511974,
+      "peak_strain": 0.024966041075584373,
+      "peak_nodal_pressure_MPa": 44.93313789785678,
+      "medium_to_fine_max_site_force_change_N": 0.27383425903824454,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.001075760249878488,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 2.8496209430335567e-09,
+      "translation_mismatch_mm": 4.627678127496358e-05,
+      "moment_mismatch_Nmm": 0.0008118958554354103,
+      "peak_shell_ring_moment_balance_Nmm": 1.314011552325235e-07
+    },
+    {
+      "case": "64",
+      "finer_shell_area_mm2": 0.025,
+      "stations": {
+        "-12": {
+          "original": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10059120150105355,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.069981434676043,
+              17.87912155905216,
+              -0.8387133339941024
+            ]
+          },
+          "relieved": {
+            "body": "rib_1",
+            "part": "gate_1",
+            "kind": "gate",
+            "variant": "both",
+            "gap_mm": 0.10059120150105355,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              6.069981434676043,
+              17.87912155905216,
+              -0.8387133339941024
+            ]
+          },
+          "closest_remaining_hub": null,
+          "guide_bore_change_mm": 0.04467122270707124,
+          "old_single_fit_residual_mm": 0.045584723718664025,
+          "intended_overlap_mm3": 0.00032921451313641724
+        },
+        "12": {
+          "original": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.08522282170212,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.777440920636145,
+              6.4427408581405246,
+              -0.6997595346983319
+            ]
+          },
+          "relieved": {
+            "body": "rib_3",
+            "part": "fork_2",
+            "kind": "fork",
+            "variant": "both",
+            "gap_mm": 0.08522282170212,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -18.777440920636145,
+              6.4427408581405246,
+              -0.6997595346983319
+            ]
+          },
+          "closest_remaining_hub": {
+            "body": "R3",
+            "part": "hub_5",
+            "kind": "hub_lower_sector",
+            "variant": "relieved",
+            "gap_mm": 0.35555403092255033,
+            "overlap_mm3": 0.0,
+            "nearest_xyz_mm": [
+              -4.250768109144998,
+              -6.647383626211104,
+              1.7687010620304815
+            ]
+          },
+          "guide_bore_change_mm": 0.05277258190138882,
+          "old_single_fit_residual_mm": 0.04630651256910507,
+          "intended_overlap_mm3": 0.00036119952961862
+        }
+      },
+      "interface_iterations_fine": 3,
+      "iterations_middle": 6,
+      "max_site_force_change_from_ideal_N": 1.4201323460485271,
+      "peak_bore_shift_from_ideal_mm": 0.05277258190138882,
+      "maximum_bearing_force_N": 13.107950258165541,
+      "fine_local_force_balance_N": 8.578133202030674e-05,
+      "peak_strain": 0.06531835919446355,
+      "peak_nodal_pressure_MPa": 203.31981506532813,
+      "medium_to_fine_max_site_force_change_N": 0.2220881003488944,
+      "medium_to_fine_absolute_bore_shift_difference_mm": 0.005698774164100889,
+      "maximum_ideal_source_reaction_reconstruction_error_N": 6.195242634524852e-06,
+      "translation_mismatch_mm": 0.0006456498726814082,
+      "moment_mismatch_Nmm": 0.017528772241036415,
+      "peak_shell_ring_moment_balance_Nmm": 4.360162490348424e-07
+    }
+  ],
+  "strain_mesh_5pct_passes": 2,
+  "pressure_mesh_5pct_passes": 0,
+  "simultaneous_contact_mesh_5pct_passes": 0,
+  "nominal_cad_interference_unintended": 0,
+  "maximum_intended_steel_web_mesh_overlap_mm3": 0.00042581520505821326,
+  "maximum_join_band_difference_mm": 0.0050514017829863585,
+  "minimum_station_to_station_envelope_gap_mm": 0.9817009188594259,
+  "unchanged_global_bend_hub_size_comparison": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "near_body_components": 7,
+      "hub_variants": {
+        "0.00": {
+          "gap_mm": 0.04528643569334285,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.6294601621491465,
+              -1.536637760965514,
+              -1.64208127951767
+            ],
+            [
+              7.6457570926253595,
+              -1.5404376603862469,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.15": {
+          "gap_mm": 0.10127377073800894,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.749926522661669,
+              -1.5865365636690085,
+              -1.6938728068456503
+            ],
+            [
+              7.786937400440455,
+              -1.5951662900065846,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.30": {
+          "gap_mm": 0.15753211815050383,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.870540947616811,
+              -1.6364966966757382,
+              -1.7460198494640904
+            ],
+            [
+              7.928111648585225,
+              -1.649920301416737,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.45": {
+          "gap_mm": 0.21545405306700946,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.987920544557278,
+              -1.6851169199795681,
+              -1.7985395970713463
+            ],
+            [
+              8.069415410711366,
+              -1.7041188576539636,
+              -1.600000023841858
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "near_body_components": 7,
+      "hub_variants": {
+        "0.00": {
+          "gap_mm": 0.044041774929577275,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.629922354111628,
+              -1.536829207211768,
+              1.6409380831739997
+            ],
+            [
+              7.645738587643107,
+              -1.540517024173506,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.15": {
+          "gap_mm": 0.10017414805166201,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.7501777828492395,
+              -1.5866406391067467,
+              1.6927949897170407
+            ],
+            [
+              7.7869273406330874,
+              -1.5952094341674066,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.30": {
+          "gap_mm": 0.15664847004332555,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.870640135923358,
+              -1.6365377818707842,
+              1.7451092133362707
+            ],
+            [
+              7.928107677335736,
+              -1.6499373331769247,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.45": {
+          "gap_mm": 0.21437296258340482,
+          "tag": "rib_7",
+          "sector": 0,
+          "nearest_pair_xyz_mm": [
+            [
+              7.988735210393644,
+              -1.685454365683792,
+              1.7977324939504127
+            ],
+            [
+              8.06938279362923,
+              -1.7042587446901423,
+              1.600000023841858
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "bend0",
+      "station": -12,
+      "near_body_components": 5,
+      "hub_variants": {
+        "0.00": {
+          "gap_mm": 0.11939431967552676,
+          "tag": "rib_6",
+          "sector": 7,
+          "nearest_pair_xyz_mm": [
+            [
+              2.4655552905055544,
+              -7.349554724526876,
+              -1.7097433920444192
+            ],
+            [
+              2.4792060960678315,
+              -7.394555304676913,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.15": {
+          "gap_mm": 0.17844274905070212,
+          "tag": "rib_6",
+          "sector": 7,
+          "nearest_pair_xyz_mm": [
+            [
+              2.4984267404019205,
+              -7.471945205129652,
+              -1.764018784722891
+            ],
+            [
+              2.5188287371705576,
+              -7.539201575056038,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.30": {
+          "gap_mm": 0.23775217028431894,
+          "tag": "rib_6",
+          "sector": 7,
+          "nearest_pair_xyz_mm": [
+            [
+              2.530944860870079,
+              -7.593107867937013,
+              -1.818026959321704
+            ],
+            [
+              2.558468915357391,
+              -7.683842515700424,
+              -1.600000023841858
+            ]
+          ]
+        },
+        "0.45": {
+          "gap_mm": 0.29754133312913716,
+          "tag": "rib_6",
+          "sector": 7,
+          "nearest_pair_xyz_mm": [
+            [
+              2.5636013350342584,
+              -7.714949966934468,
+              -1.8728556825858171
+            ],
+            [
+              2.5980470515780016,
+              -7.82850227656951,
+              -1.600000023841858
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "case": "bend0",
+      "station": 12,
+      "near_body_components": 5,
+      "hub_variants": {
+        "0.00": {
+          "gap_mm": 0.1169517312903866,
+          "tag": "rib_6",
+          "sector": 6,
+          "nearest_pair_xyz_mm": [
+            [
+              2.516184344636888,
+              -7.33336476736923,
+              1.707457597496732
+            ],
+            [
+              2.532443577784359,
+              -7.37656447400576,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.15": {
+          "gap_mm": 0.17612160788791242,
+          "tag": "rib_6",
+          "sector": 6,
+          "nearest_pair_xyz_mm": [
+            [
+              2.5496729118579142,
+              -7.455994982208791,
+              1.7618240560846428
+            ],
+            [
+              2.5741582263390512,
+              -7.521050902219729,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.30": {
+          "gap_mm": 0.23564292985407478,
+          "tag": "rib_6",
+          "sector": 6,
+          "nearest_pair_xyz_mm": [
+            [
+              2.582658141984466,
+              -7.576914460907585,
+              1.8158017317164972
+            ],
+            [
+              2.6159959866147653,
+              -7.665490989311036,
+              1.600000023841858
+            ]
+          ]
+        },
+        "0.45": {
+          "gap_mm": 0.29585599135937085,
+          "tag": "rib_6",
+          "sector": 6,
+          "nearest_pair_xyz_mm": [
+            [
+              2.615827833757237,
+              -7.698777094234128,
+              1.8709448311392143
+            ],
+            [
+              2.6576843879894807,
+              -7.809987291112102,
+              1.600000023841858
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "coupon_peak_comparison": {
+    "P1": {
+      "fine_travel_mm": 0.12599146379624956,
+      "fine_strain": 0.0544896829623593,
+      "fine_peak_pressure_MPa": 217.08742723469587,
+      "finer_travel_mm": 0.12430727891008282,
+      "relative_travel_mesh_change": 0.013367452329074991,
+      "finer_peak_strain": 0.05772654204917252,
+      "finer_peak_pressure_MPa": 217.57838994866154
+    },
+    "P2": {
+      "fine_travel_mm": 0.10856795726951256,
+      "fine_strain": 0.04320835497531473,
+      "fine_peak_pressure_MPa": 160.08229459844353,
+      "finer_travel_mm": 0.10860052698849235,
+      "relative_travel_mesh_change": 0.000299993845319646,
+      "finer_peak_strain": 0.04715744924964296,
+      "finer_peak_pressure_MPa": 176.16348149088117
+    },
+    "P3": {
+      "fine_travel_mm": 0.1101966620207711,
+      "fine_strain": 0.04056652628653997,
+      "fine_peak_pressure_MPa": 161.74150889940788,
+      "finer_travel_mm": 0.10754547347687042,
+      "relative_travel_mesh_change": 0.024058701010389427,
+      "finer_peak_strain": 0.03969759134763594,
+      "finer_peak_pressure_MPa": 162.12618828547193
+    }
+  }
+}
