@@ -1,0 +1,267 @@
+{
+ "hole_radius_mm": 0.3,
+ "seed": null,
+ "land_centre_r_mm": 19.229,
+ "mesh": {
+  "max_triangle_area_mm2": 0.18,
+  "cad_section_area_mm2": 656.510565130179,
+  "meshed_section_area_mm2": 656.4828039999996,
+  "boundary_simplification_mm": 0.003,
+  "intersection_grid_mm": 0.002,
+  "active_triangles_per_rib": 4641,
+  "active_nodes_per_rib": 2964,
+  "thickness_range_mm": [
+   2.999997354397492,
+   12.988706403508731
+  ]
+ },
+ "local_radius_mm": 2.0,
+ "cases": {
+  "bend67.5": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": -0.02834172249538161,
+    "station_mm": -12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": 1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.02834172249538161,
+    "station_mm": -12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": 1.0
+   },
+   "global_peak_abs_strain": 0.07840701108996946,
+   "applied_couple_Nmm": 858.5209621506356,
+   "tangent_EI_Nmm2": 46400.78584440442,
+   "max_land_force_N": 25.262629374336136,
+   "max_relative_rotation_deg": 11.558441570566035,
+   "minimum_oriented_area_ratio": 0.9384834480768444,
+   "distal_force_N": [
+    2.6258977647008064e-09,
+    -1.0658891387242443e-09,
+    -1.7455192793889152e-09
+   ],
+   "distal_moment_Nmm": [
+    328.5417485486101,
+    793.169945132598,
+    2.6520416543192924e-08
+   ]
+  },
+  "bend0": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": -0.025751834245957093,
+    "station_mm": -12,
+    "rib_deg": 157.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": -1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.025751834245957093,
+    "station_mm": -12,
+    "rib_deg": 157.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": -1.0
+   },
+   "global_peak_abs_strain": 0.07709421721793511,
+   "applied_couple_Nmm": 854.8233266085681,
+   "tangent_EI_Nmm2": 45958.02989208791,
+   "max_land_force_N": 18.5020321506979,
+   "max_relative_rotation_deg": 11.592649993055508,
+   "minimum_oriented_area_ratio": 0.9441968046281005,
+   "distal_force_N": [
+    1.302878542304883e-06,
+    -2.1534095697562177e-05,
+    2.6679356081949043e-06
+   ],
+   "distal_moment_Nmm": [
+    854.8233494596956,
+    1.0175328908961141e-06,
+    -4.150341876323945e-06
+   ]
+  },
+  "146": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": 0.03502399102715008,
+    "station_mm": 12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     19.741900708609354,
+     11.511377656110163
+    ],
+    "distance_from_land_centre_mm": 0.7083917926122352,
+    "face": -1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.027038639355315894,
+    "station_mm": 12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.88245289432425,
+     12.428308417990111
+    ],
+    "distance_from_land_centre_mm": 0.5509473635234416,
+    "face": 1.0
+   },
+   "global_peak_abs_strain": 0.09514944960885302,
+   "applied_couple_Nmm": null,
+   "tangent_EI_Nmm2": null,
+   "max_land_force_N": 15.295059381716454,
+   "max_relative_rotation_deg": 5.389632217829767,
+   "minimum_oriented_area_ratio": 0.9486942737105153,
+   "distal_force_N": [
+    -5.104390124186673,
+    -9.25656738239255,
+    29.753829291865564
+   ],
+   "distal_moment_Nmm": [
+    -1642.6424754047748,
+    409.243655398144,
+    -186.30853331109432
+   ]
+  },
+  "141": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": 0.03575240231241335,
+    "station_mm": 12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     19.741900708609354,
+     11.511377656110163
+    ],
+    "distance_from_land_centre_mm": 0.7083917926122352,
+    "face": -1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.027619517658960476,
+    "station_mm": 12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.88245289432425,
+     12.428308417990111
+    ],
+    "distance_from_land_centre_mm": 0.5509473635234416,
+    "face": 1.0
+   },
+   "global_peak_abs_strain": 0.09427579343602624,
+   "applied_couple_Nmm": null,
+   "tangent_EI_Nmm2": null,
+   "max_land_force_N": 15.333350439054882,
+   "max_relative_rotation_deg": 5.172274877583892,
+   "minimum_oriented_area_ratio": 0.9476740173478053,
+   "distal_force_N": [
+    -3.958878057555223,
+    -10.619637567155682,
+    30.280073598339907
+   ],
+   "distal_moment_Nmm": [
+    -1684.0929862639332,
+    287.0243575691453,
+    -145.2334153824639
+   ]
+  },
+  "47": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": -0.015179003205122285,
+    "station_mm": -12,
+    "rib_deg": 157.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": 1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.015179003205122285,
+    "station_mm": -12,
+    "rib_deg": 157.5,
+    "r_z_mm": [
+     18.974250234161293,
+     -11.823944600551973
+    ],
+    "distance_from_land_centre_mm": 0.30966586326180673,
+    "face": 1.0
+   },
+   "global_peak_abs_strain": 0.05407343123688019,
+   "applied_couple_Nmm": null,
+   "tangent_EI_Nmm2": null,
+   "max_land_force_N": 5.83432581101176,
+   "max_relative_rotation_deg": 4.676365015463284,
+   "minimum_oriented_area_ratio": 0.9710413697616744,
+   "distal_force_N": [
+    6.29801613107509,
+    -6.176237896935724,
+    10.992641105913679
+   ],
+   "distal_moment_Nmm": [
+    -585.9150417216775,
+    -726.2939268718201,
+    46.5585973257003
+   ]
+  },
+  "64": {
+   "completed": true,
+   "local_peak_strain": {
+    "strain": -0.03190246773732922,
+    "station_mm": -12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.882915861269968,
+     -12.631482114575471
+    ],
+    "distance_from_land_centre_mm": 0.7200999181427643,
+    "face": 1.0
+   },
+   "near_pivot_peak_strain": {
+    "strain": -0.02455941128851008,
+    "station_mm": 12,
+    "rib_deg": 67.5,
+    "r_z_mm": [
+     18.88245289432425,
+     12.428308417990111
+    ],
+    "distance_from_land_centre_mm": 0.5509473635234416,
+    "face": 1.0
+   },
+   "global_peak_abs_strain": 0.09032580388497255,
+   "applied_couple_Nmm": null,
+   "tangent_EI_Nmm2": null,
+   "max_land_force_N": 14.719853533196579,
+   "max_relative_rotation_deg": 5.224188916517214,
+   "minimum_oriented_area_ratio": 0.9442549036229139,
+   "distal_force_N": [
+    2.9359858908755343,
+    -10.21666627983229,
+    30.35871255391153
+   ],
+   "distal_moment_Nmm": [
+    -1694.7003535255487,
+    -218.52595137887207,
+    101.8843311920595
+   ]
+  }
+ }
+}
