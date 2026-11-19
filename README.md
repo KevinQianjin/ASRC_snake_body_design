@@ -51,6 +51,8 @@ The first bench build consists of the **M5 retained-seat coupon and P3 fixture**
 
 [First test parts](docs/installation_guide.md#first-test-parts) · [Full-front print list and STL files](docs/installation_guide.md#full-front-print-list) · [Purchasing list](docs/installation_guide.md#materials-and-hardware) · [Assembly sequence](docs/installation_guide.md#assembly) · [Commissioning checks](docs/installation_guide.md#commissioning)
 
+To see the U module with its two leaf-spring pairs fitted, open the [illustrated spring installation](docs/installation_guide.md#2-install-the-u-module-leaf-springs) or the [rotatable U1–U4 assembly view](cad/lanes_u4m2/guides_v2/U_spring_assembly.scad).
+
 <a id="next-steps"></a><a id="geometry-and-input-data"></a><a id="earlier-studies"></a>
 
 ## Project references
