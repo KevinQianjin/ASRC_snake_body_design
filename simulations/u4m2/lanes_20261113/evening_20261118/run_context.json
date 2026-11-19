@@ -1,0 +1,73 @@
+{
+ "edition": "Evening Report",
+ "run_start_et": "2026-11-18T20:02:32-05:00",
+ "run_start_utc": "2026-11-19T01:02:32Z",
+ "budget_deadline_et": "2026-11-18T22:02:32-05:00",
+ "budget_deadline_utc": "2026-11-19T03:02:32Z",
+ "reporting_interval_et": [
+  "2026-11-17T20:02:32-05:00",
+  "2026-11-18T20:02:32-05:00"
+ ],
+ "reporting_interval_utc": [
+  "2026-11-18T01:02:32Z",
+  "2026-11-19T01:02:32Z"
+ ],
+ "source_revision": "59ed561e9a1d04aba5d48811589f960e29b20ebf",
+ "main_revision": "4e1992e56460559967e102809668701e3d6942f9",
+ "python": "3.13.18",
+ "packages": {
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "shapely": "2.2.0",
+  "trimesh": "5.2.0",
+  "triangle": "20250106",
+  "numba": "0.68.1",
+  "matplotlib": "3.10.8",
+  "cvxopt": "1.3.3",
+  "rtree": "1.4.1",
+  "networkx": "3.7"
+ },
+ "environment": {
+  "cpus": 4,
+  "memory_GB": 15,
+  "OPENBLAS_NUM_THREADS": 1
+ },
+ "input_sha256": {
+  "../m5_large_rotation_20261118/shell.py": "0b0d6b3faf4edc396c6ca792f4733e826eedbe903e4a07aa68c895496728ca84",
+  "../m5_large_rotation_20261118/study.py": "c0b7a36314e828e32a426638d21b480e80fdcd85c33fb7370e30c8203ed9b2d0",
+  "../m5_large_rotation_20261118/continuation.py": "a12e7f40aa8388667dc8d46a39f8d2c9bc98131f5fbab66c5a18f202ea6f3543",
+  "../m5_large_rotation_20261118/refine.py": "788f9fddcdca5889d75ed5afc72e5cf2e4a3c478078f0e231471e615da69517c",
+  "../../../../cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+  "../morning_20261116/fixed_winch_holds/equilibria_states.npz": "855da889c69a917f5493781ccedb56c27e353701db551b33acfa0d985227a544",
+  "../morning_20261116/rigid_end_audit/guide_holes.csv": "262f35edc23b4f7703ff6515bf9189f4056d56e4c994aae7ec1121be35a42e00"
+ },
+ "cases": [
+  "bend67.5",
+  "bend0",
+  "146",
+  "141",
+  "47",
+  "64"
+ ],
+ "meshes_mm2": [
+  0.18,
+  0.055,
+  0.025
+ ],
+ "variants": {
+  "band_seat": "archived point variant (0.5 mm oblique rigid land band, ideal spherical pivot)",
+  "pin_r0p30": "pin_seat.py: Ø0.6 mm hole, rigid edge ring on the same ideal pivot"
+ },
+ "coverage": "Isolated M5 rib fixture, inner ±12 mm stations only; two pure bends to 96.19° and four saved 500 g holds at full load. Not a full-motion cycle.",
+ "checks": {
+  "coarse_rerun_matches_archive": "max land force/rotation identical; distal moment difference < 3e-8 N·mm (6 cases)",
+  "fine_rerun_matches_archive": "record 146 15.25 N / 5.03°, matches fine_0p025",
+  "all_runs_converged": true,
+  "minimum_oriented_area_ratio": 0.932,
+  "web_slope_fit": "minimised radial band width: slope 1.4706 (34.2° from radial), band width constant ±1.333 mm across z"
+ },
+ "rejected": [
+  "principal-axis web direction (biased by oblique window clipping; produced false 1.2 mm intrusions)",
+  "first along-web binned envelope (mixed web edges of different extent)"
+ ]
+}

@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026 (large-rotation M5 guide-joint test)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026, Evening Report (retained rotating-seat sizing)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,16 +13,25 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+<a id="18-november-2026--evening-report-retained-rotating-seat"></a>
+
+### 18 November 2026 — Evening Report: sizing a retained rotating seat for the M5 guides
+
+Start/cutoff **20:02:32 EST (19 November 01:02:32 UTC)**. This run is stage 1 of test 2 in the 500 g plan. It converts today's ideal rotating seat into cavity and retainer requirements on the real M5 ±12 mm webs. All results are simulations.
+
+- **The V3 socket shape cannot host a rotating seat.** The mounting web crosses the guide plate at 34.2°, so the flat V3 land holds web material up to about 1.1 mm from the pivot, and seat rotation swings it into the walls. With the 0.15 mm land gap all six cases interfere (−0.065 to −0.636 mm). The 0.25 mm variant fails record 47 and both 96° bends.
+- **A bow-tie seat clears every case.** With a 0.3 mm land along the web, 0.15 mm running clearance and flare slope 0.25, the minimum clearance is +0.032 to +0.057 mm on the 0.025 mm² mesh, with ≤ 0.004 mm middle-to-fine mesh change. A 0.10 mm clearance fails, because the 3 mm web tilts by 4.7–5.8° out of plane.
+- **The retainer must carry a reversing along-web force** of up to 12.3 N in the saved holds and 24.7 N in the 96° bend, while allowing about 10.4° in-plane rotation and about 5° tilt. A slot or a cylindrical pin cannot do this.
+- **Pinned seat.** A Ø0.6 mm pin through the web, modelled as a perfectly fitting rigid ring with a spherical release, gives a mesh-converged hole-edge strain of 2.4–2.7% in the saved holds and the pure bends (fine-mesh change ≤ 0.18 points). The rigid-band idealisation used so far has a non-converging 7.1% corner singularity. The pin changes the 96° holding couple by −1.2%, but raises seat rotation to 11.3° and tilt to 6.6°, so the pinned seat needs 0.20 mm running clearance at the land (margins +0.058 to +0.107 mm).
+- **Not yet done:** seat CAD, a contact model, PA12 strength at the hole, M6 and the ±24 mm stations, and hardware.
+
+[Full English Evening Report](reports/daily/Evening_Report_2026_11_18.md) · [Evidence and commands](simulations/u4m2/lanes_20261113/evening_20261118/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261118/HANDOFF.md) · [Clearance figure](simulations/u4m2/lanes_20261113/evening_20261118/seat_clearance.png)
+
 <a id="18-november-2026--validation-test-plan-for-the-500-g-front"></a>
 
-### 18 November 2026 — Large-rotation test of the M5 guide joint
+### 18 November 2026 — Large-rotation test of the M5 guide joint (test 1)
 
-Test 1 of the 500 g plan compared bare PA12 ribs, a bonded guide and a rotating seat. Six pure-bend sweeps used the actual M5 rib section. Eight mounted cases applied the saved end poses and simultaneous bore forces from records 146, 141, 47 and 64.
-
-- **Resistance to bending.** At 96.19° about the 67.5° axis, the bare body required 743.3 N·mm, the rotating seat 761.5 N·mm and the bond 808.2 N·mm on the same 0.015 mm² mesh. The rotating seat reduced the holding couple by 5.8% relative to the bond.
-- **Retainer load.** The full pure bend produces 24.78 N at one rotating land. The earlier linear extrapolation gave 5.30 N. An independent straight-state slope check reproduced the linear estimate within 3%.
-- **Guide movement under load.** Across the four prescribed poses, the rotating seat reached 5.03° of relative rotation, 0.330 mm of strut travel in the socket and 15.40 N at a single mounting land. The report gives separate values for each pose and joint.
-- **Design decision.** The ideal rotating joint still needs a physical retainer, clearance under load and measured strength for the vertically printed PA12 ribs. The comparison includes mesh and increment checks, strain locations and the rejected folded-element solutions.
+A geometrically nonlinear shell model of the actual M5 ribs compared bare ribs, a bonded guide and a rotating seat. At 96.19° the holding couples were 743.3, 761.5 and 808.2 N·mm (the seat is 5.8% below the bond). The seat land force of 24.78 N is 4.67× the linear estimate. The saved holds 146, 141, 47 and 64 give up to 15.40 N, 5.03° and 0.330 mm socket travel. The same day the five-test validation plan was added.
 
 [Full English test report](reports/daily/M5_Joint_Test_2026_11_18.md) · [Curves, reactions and reproduction commands](simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/README.md) · [Five-test validation plan](docs/500g_validation_plan.md) · [Current limitations](docs/limitations.md)
 
