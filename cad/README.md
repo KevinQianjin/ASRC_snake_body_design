@@ -2,6 +2,8 @@
 
 [Project home](../README.md) · [Current design](../docs/current_design.md)
 
+For the 500 g bench prototype, the installation guide identifies the current mesh, quantity and material for every printed component. [Print list](../docs/installation_guide.md#full-front-print-list) · [Materials and hardware](../docs/installation_guide.md#materials-and-hardware) · [Assembly sequence](../docs/installation_guide.md#assembly)
+
 - [U module STEP](modules/UniDirectional_96.step) and [M module STEP](modules/Medium_Stiffness_96.step): original 96 mm module geometry.
 - [Tank STEP](tank/tank-v2.step) and [reference images](tank/reference_images/): source geometry for tank screening.
 - [U4+M2 viewing package](previews/u4m2/README.md): SCAD assembly and its companion STL files. Keep those files together.

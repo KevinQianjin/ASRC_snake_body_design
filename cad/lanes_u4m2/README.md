@@ -1,10 +1,16 @@
-# Lane-routed U4+M2 front (newest design, 13 Nov 2026)
+# Lane-routed U4+M2 front
+
+For the **19 November 500 g prototype**, use the [current installation guide and parts list](../../docs/installation_guide.md). It identifies the 28 mm C-lane bodies, M5 retained seats, M6 bellmouth body and six fixed guides by file and station.
+
+<a id="lane-routed-u4m2-front-newest-design-13-nov-2026"></a>
+
+## Original lane design, 13 November 2026
 
 **14 November validation update:** the [V2 guide candidate](guides_v2/README.md) fixes unsupported inner clips at the ±12 mm stations, widens the B–C lane spacing and includes CAD-estimated masses in a new 500 g simulation. Its straight assembly passes, but rigid guide/web interference in bent poses prevents manufacturing release. See the [full validation report](../../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md). The build guide below describes the earlier geometry and is not a release approval for V2.
 
-**To build it, follow [`BUILD_GUIDE.md`](BUILD_GUIDE.md).** It covers printing, purchased parts, springs, backbone, joints, rope threading and anchoring, tensioning and the checks before first use.
+The [13 November build guide](BUILD_GUIDE.md) documents the original 27 mm C-lane configuration and its assembly assumptions.
 
-This folder has every part needed for the U4+M2 front:
+The files at this directory level describe the 13 November front:
 - continuous 96 mm modules U1–U4, M5, M6, with no pin joint and no gap;
 - three rope sets on their own radial lanes;
 - a 1.8 mm NiTi backbone through M5 and M6;

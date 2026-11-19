@@ -4,6 +4,10 @@
 
 ## Latest simulation report
 
+The 19 November 500 g cycle covers both ±175° yaw and ±90° pitch and records all twelve rope tensions. The earlier same-day report covers the M5 seat and shared-bore routing. [Full-cycle report](daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Seat and shared-bore report](daily/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Chronological summaries](../README.md#earlier-results)
+
+## Earlier simulation reports
+
 - [Evening Report — 17 November 2026](daily/Evening_Report_2026_11_17.md): rib-level (eight-rib plate) model of the ±12 mm guide joint, calibrated to the database EA/EI/GJ. A rigid bonded land carries about 8 N and 100 N·mm per land and stiffens M5 by 10–12%; a translation-only contact is the least intrusive idealisation tested. Start/cutoff: **20:02:11 EST (01:02:11 UTC, 18 November)**.
 - [Evening Report — 16 November 2026](daily/Evening_Report_2026_11_16.md): full-coverage guide/web compatibility (V3 contact in 59/217 holds) and a 0.25 mm bond-gap candidate clearing all 1736 checks. Start/cutoff: **20:02:13 EST (01:02:13 UTC, 17 November)**.
 - [Morning Report — 16 November 2026](daily/Morning_Report_2026_11_16.md): constrained bellmouth routing, 217 re-solved fixed-winch holds, finite-rope/tank checks and persistent refined guide contact. Start/cutoff: **07:19:33 EST (12:19:33 UTC)**.
