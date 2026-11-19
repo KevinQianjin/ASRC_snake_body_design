@@ -1,0 +1,671 @@
+{
+ "variant": "bare",
+ "case": "bend0",
+ "mesh": {
+  "max_triangle_area_mm2": 0.18,
+  "cad_section_area_mm2": 656.510565130179,
+  "meshed_section_area_mm2": 656.4828039999996,
+  "boundary_simplification_mm": 0.003,
+  "intersection_grid_mm": 0.002,
+  "active_triangles_per_rib": 4122,
+  "active_nodes_per_rib": 2647,
+  "thickness_range_mm": [
+   2.999997354397492,
+   12.988706403508731
+  ]
+ },
+ "max_fraction_step": 0.0625,
+ "inputs": null,
+ "completed": true,
+ "steps": [
+  {
+   "fraction": 0.0625,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 1.9584970090136267e-06,
+   "seconds": 7.161765223980183
+  },
+  {
+   "fraction": 0.125,
+   "accepted": true,
+   "iterations": 8,
+   "residual": 2.553403533056553e-08,
+   "seconds": 10.114076846977696
+  },
+  {
+   "fraction": 0.1875,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 1.230968109666719e-07,
+   "seconds": 6.760811676009325
+  },
+  {
+   "fraction": 0.25,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 2.1356834167818306e-07,
+   "seconds": 10.371896948025096
+  },
+  {
+   "fraction": 0.3125,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 3.5204942605560063e-07,
+   "seconds": 5.837231096986216
+  },
+  {
+   "fraction": 0.375,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 6.921491149114445e-07,
+   "seconds": 7.1853168359957635
+  },
+  {
+   "fraction": 0.4375,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 1.4735885542904725e-06,
+   "seconds": 7.455543262010906
+  },
+  {
+   "fraction": 0.5,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 3.459583126641519e-06,
+   "seconds": 7.997660506982356
+  },
+  {
+   "fraction": 0.5625,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 9.327640100309509e-06,
+   "seconds": 8.544645495014265
+  },
+  {
+   "fraction": 0.625,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 2.8998672405577963e-05,
+   "seconds": 8.62003195102443
+  },
+  {
+   "fraction": 0.6875,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 2.325270997971529e-08,
+   "seconds": 11.263123248005286
+  },
+  {
+   "fraction": 0.75,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 1.370199242956005e-08,
+   "seconds": 16.696749772003386
+  },
+  {
+   "fraction": 0.8125,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 2.599795576442433e-08,
+   "seconds": 15.99206538699218
+  },
+  {
+   "fraction": 0.875,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 7.124072226361022e-06,
+   "seconds": 17.24099705001572
+  },
+  {
+   "fraction": 0.9375,
+   "accepted": true,
+   "iterations": 6,
+   "residual": 8.331324238497473e-06,
+   "seconds": 19.79944713000441
+  },
+  {
+   "fraction": 1.0,
+   "accepted": true,
+   "iterations": 9,
+   "residual": 1.3419061133390642e-06,
+   "seconds": 31.198350250982912
+  }
+ ],
+ "samples": [
+  {
+   "elastic_potential_minus_load_work_Nmm": 8.445088903682827e-23,
+   "tip_displacement_mm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "distal_force_N": [
+    -2.8935661952580504e-11,
+    1.9341848083682245e-10,
+    -4.926129883144249e-11
+   ],
+   "distal_moment_Nmm": [
+    -5.123954713451161e-10,
+    3.869306863067654e-10,
+    -8.975399379872366e-11
+   ],
+   "proximal_force_N": [
+    -1.338019775460408e-11,
+    1.1730976080774541e-11,
+    -1.5187140200732677e-11
+   ],
+   "proximal_moment_Nmm": [
+    -1.5815509203278097e-10,
+    -2.3313278685759253e-11,
+    1.724322092399145e-10
+   ],
+   "free_residual_inf": 1.4122701049828947e-10,
+   "bend_angle_rad": 0.0,
+   "applied_couple_Nmm": 0.0,
+   "tangent_EI_Nmm2": 50198.15262655095,
+   "tangent_GJ_Nmm2": 44774.16062164307,
+   "orthogonal_moment_Nmm": 6.483211044410243e-10,
+   "max_abs_surface_strain": 3.6895589162826717e-13,
+   "signed_peak_strain": 3.6895589162826717e-13,
+   "peak_rib_deg": 157.5,
+   "peak_reference_r_z_through_mm": [
+    12.13532298235903,
+    -44.99773222322546,
+    1.499999976094738
+   ],
+   "minimum_oriented_area_ratio": 0.9999999999999997,
+   "lands": [],
+   "force_balance_N": 2.1915869353057183e-10,
+   "moment_balance_Nmm": 9.399722620120193e-09,
+   "fraction": 0.0,
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 3.6895589162826717e-13,
+     "rib_deg": 157.5,
+     "reference_r_z_through_mm": [
+      12.13532298235903,
+      -44.99773222322546,
+      1.499999976094738
+     ],
+     "direction_to_build_Z_deg": 57.19293294989432
+    },
+    "principal_compressive": {
+     "strain": -2.4888771731529537e-13,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      44.99880837083855,
+      1.5000000756461964
+     ],
+     "direction_to_build_Z_deg": 57.88399125320255
+    },
+    "build_Z_tensile": {
+     "strain": 3.208733516623996e-14,
+     "rib_deg": 202.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      -44.99880837083855,
+      -1.4999999367054495
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -3.275346898101505e-14,
+     "rib_deg": 202.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      -44.99880837083855,
+      1.4999999367054495
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   }
+  },
+  {
+   "elastic_potential_minus_load_work_Nmm": 46.0062756348954,
+   "tip_displacement_mm": [
+    6.178471011157981e-14,
+    -19.735678171458563,
+    -3.471168897265017
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     -1.8892275946022473e-16,
+     7.72756224573255e-16
+    ],
+    [
+     4.874203124763529e-16,
+     0.9132072140959686,
+     -0.4074955019666842
+    ],
+    [
+     -6.287013843186854e-16,
+     0.4074955019666842,
+     0.9132072140959686
+    ]
+   ],
+   "distal_force_N": [
+    3.5724178343169714e-10,
+    3.5863008563807862e-09,
+    1.7111598564424695e-08
+   ],
+   "distal_moment_Nmm": [
+    218.99294583120732,
+    1.727490137769888e-08,
+    6.676554138542817e-09
+   ],
+   "proximal_force_N": [
+    -5.2442494791193894e-12,
+    3.889756572394987e-12,
+    -7.418191338981472e-10
+   ],
+   "proximal_moment_Nmm": [
+    -218.99294572535305,
+    -1.6796216639747286e-09,
+    1.2015861916570003e-10
+   ],
+   "free_residual_inf": 7.375809176064812e-09,
+   "bend_angle_rad": 0.4197098487116806,
+   "applied_couple_Nmm": 218.99294571957887,
+   "tangent_EI_Nmm2": 49874.418403316995,
+   "tangent_GJ_Nmm2": 46260.77360034399,
+   "orthogonal_moment_Nmm": 1.131543633565849e-07,
+   "max_abs_surface_strain": 0.020531198977211153,
+   "signed_peak_strain": 0.020531198977211153,
+   "peak_rib_deg": 67.5,
+   "peak_reference_r_z_through_mm": [
+    11.951972437277709,
+    -5.198025760838217,
+    -1.4999999039186127
+   ],
+   "minimum_oriented_area_ratio": 0.985838420276855,
+   "lands": [],
+   "force_balance_N": 1.6762549015747452e-08,
+   "moment_balance_Nmm": 3.9289204768925367e-07,
+   "fraction": 0.25,
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.02053119897720987,
+     "rib_deg": 67.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      -1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 66.9552041232848
+    },
+    "principal_compressive": {
+     "strain": -0.02027010082954942,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      -1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 66.8125082500673
+    },
+    "build_Z_tensile": {
+     "strain": 0.016101839133097203,
+     "rib_deg": 67.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.01573223739314579,
+     "rib_deg": 292.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   }
+  },
+  {
+   "elastic_potential_minus_load_work_Nmm": 183.43245067597297,
+   "tip_displacement_mm": [
+    1.8861015386312403e-14,
+    -36.9348754039997,
+    -13.365824386310761
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     6.148899538888718e-16,
+     3.313842692825671e-16
+    ],
+    [
+     -1.6404720285434634e-16,
+     0.6678948317538401,
+     -0.7442556642152679
+    ],
+    [
+     -6.789651718292072e-16,
+     0.7442556642152679,
+     0.6678948317538401
+    ]
+   ],
+   "distal_force_N": [
+    -2.636831678292856e-10,
+    -9.685145381520032e-08,
+    3.106695455302801e-07
+   ],
+   "distal_moment_Nmm": [
+    435.1682151473919,
+    1.59723031300002e-10,
+    1.053347832852766e-10
+   ],
+   "proximal_force_N": [
+    3.722711028331105e-11,
+    2.914773977735763e-11,
+    5.376247225186148e-10
+   ],
+   "proximal_moment_Nmm": [
+    -435.1682130714234,
+    1.3991048319894617e-09,
+    -1.1664605392702754e-10
+   ],
+   "free_residual_inf": 1.3104360702228564e-07,
+   "bend_angle_rad": 0.8394196974233612,
+   "applied_couple_Nmm": 435.16821307317053,
+   "tangent_EI_Nmm2": 48911.90480353687,
+   "tangent_GJ_Nmm2": 51240.71902684899,
+   "orthogonal_moment_Nmm": 2.074221365275986e-06,
+   "max_abs_surface_strain": 0.041195420838303735,
+   "signed_peak_strain": 0.041195420838303735,
+   "peak_rib_deg": 112.5,
+   "peak_reference_r_z_through_mm": [
+    11.951972437277709,
+    -5.198025760838217,
+    1.4999999039186127
+   ],
+   "minimum_oriented_area_ratio": 0.9710823623552802,
+   "lands": [],
+   "force_balance_N": 3.259210227230875e-07,
+   "moment_balance_Nmm": 6.042818225128239e-06,
+   "fraction": 0.5,
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.04119542083830296,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 67.00178914829489
+    },
+    "principal_compressive": {
+     "strain": -0.040168946175777306,
+     "rib_deg": 292.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 66.7190830691917
+    },
+    "build_Z_tensile": {
+     "strain": 0.03251340373781323,
+     "rib_deg": 67.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.030988607923132242,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   }
+  },
+  {
+   "elastic_potential_minus_load_work_Nmm": 410.5153610213901,
+   "tip_displacement_mm": [
+    1.622593552732456e-13,
+    -49.483766870983615,
+    -28.219708058074275
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     3.070338093703054e-17,
+     2.0391020962789746e-15
+    ],
+    [
+     1.93145081305751e-15,
+     0.3066455431340714,
+     -0.9518237814196546
+    ],
+    [
+     -6.545057779651421e-16,
+     0.9518237814196546,
+     0.3066455431340714
+    ]
+   ],
+   "distal_force_N": [
+    2.573914447123397e-10,
+    -1.8859200338200098e-09,
+    5.974555212135951e-10
+   ],
+   "distal_moment_Nmm": [
+    645.7731914521563,
+    -1.6300101683646512e-10,
+    -9.504257615483983e-10
+   ],
+   "proximal_force_N": [
+    -1.890065881582359e-11,
+    -7.809308755213351e-13,
+    2.671435295198421e-11
+   ],
+   "proximal_moment_Nmm": [
+    -645.7731914620991,
+    -2.3010575667115063e-09,
+    4.09778211363232e-10
+   ],
+   "free_residual_inf": 1.5735750341638877e-09,
+   "bend_angle_rad": 1.2591295461350418,
+   "applied_couple_Nmm": 645.7731914626428,
+   "tangent_EI_Nmm2": 47329.29140066209,
+   "tangent_GJ_Nmm2": 61775.80334490254,
+   "orthogonal_moment_Nmm": 1.053071761823739e-08,
+   "max_abs_surface_strain": 0.061839163293881,
+   "signed_peak_strain": 0.061839163293881,
+   "peak_rib_deg": 112.5,
+   "peak_reference_r_z_through_mm": [
+    11.951972437277709,
+    -5.198025760838217,
+    1.4999999039186127
+   ],
+   "minimum_oriented_area_ratio": 0.9558731724819222,
+   "lands": [],
+   "force_balance_N": 2.0015260220532884e-09,
+   "moment_balance_Nmm": 1.2894042224448464e-08,
+   "fraction": 0.75,
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.06183916329388048,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 67.0316506212971
+    },
+    "principal_compressive": {
+     "strain": -0.059592042591977604,
+     "rib_deg": 292.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 66.61456059919912
+    },
+    "build_Z_tensile": {
+     "strain": 0.04920856513623355,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.045596359339783274,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   }
+  },
+  {
+   "elastic_potential_minus_load_work_Nmm": 724.3525879478328,
+   "tip_displacement_mm": [
+    -2.8364545932278575e-13,
+    -56.036980775689784,
+    -45.882085894488554
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     3.2130450121982845e-15,
+     -3.794935745224645e-15
+    ],
+    [
+     -3.426335320764345e-15,
+     -0.10783298743301925,
+     -0.9941690232657978
+    ],
+    [
+     -3.603529080010136e-15,
+     0.9941690232657978,
+     -0.10783298743301925
+    ]
+   ],
+   "distal_force_N": [
+    2.565839636338847e-10,
+    -3.73644633318445e-07,
+    4.557277944474501e-08
+   ],
+   "distal_moment_Nmm": [
+    848.1249615166321,
+    3.939481087089855e-09,
+    -5.820555836195698e-09
+   ],
+   "proximal_force_N": [
+    -6.57162102513098e-11,
+    6.472908320453996e-11,
+    2.006104171670131e-10
+   ],
+   "proximal_moment_Nmm": [
+    -848.1249630267145,
+    -2.461959969224381e-09,
+    2.8108615435229467e-10
+   ],
+   "free_residual_inf": 1.9184735241140855e-07,
+   "bend_angle_rad": 1.6788393948467224,
+   "applied_couple_Nmm": 848.1249630207295,
+   "tangent_EI_Nmm2": 45135.909480847586,
+   "tangent_GJ_Nmm2": 84109.3360434637,
+   "orthogonal_moment_Nmm": 1.5041138615553425e-06,
+   "max_abs_surface_strain": 0.08227567345054929,
+   "signed_peak_strain": 0.08227567345054929,
+   "peak_rib_deg": 112.5,
+   "peak_reference_r_z_through_mm": [
+    11.951972437277709,
+    -5.198025760838217,
+    1.4999999039186127
+   ],
+   "minimum_oriented_area_ratio": 0.9403820656967952,
+   "lands": [],
+   "force_balance_N": 3.763737298196585e-07,
+   "moment_balance_Nmm": 3.269405144327308e-06,
+   "fraction": 1.0,
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.08227567345054944,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 67.04550369759939
+    },
+    "principal_compressive": {
+     "strain": -0.07841961751881268,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.951972437277709,
+      -5.198025760838217,
+      -1.4999999039186127
+     ],
+     "direction_to_build_Z_deg": 66.50323939356386
+    },
+    "build_Z_tensile": {
+     "strain": 0.06618355847336337,
+     "rib_deg": 67.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.05928037892174658,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.648605009767932,
+      5.791098747558017,
+      -1.5000001998470789
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   }
+  }
+ ],
+ "elapsed_s": 201.75108942898805,
+ "accepted_state_orientation_audit": {
+  "states": 17,
+  "minimum_ratio": 0.9403820656967952
+ }
+}

@@ -1,0 +1,861 @@
+{
+ "variant": "bond",
+ "case": "146",
+ "mesh": {
+  "max_triangle_area_mm2": 0.025,
+  "cad_section_area_mm2": 656.510565130179,
+  "meshed_section_area_mm2": 656.4828039999996,
+  "boundary_simplification_mm": 0.003,
+  "intersection_grid_mm": 0.002,
+  "active_triangles_per_rib": 23381,
+  "active_nodes_per_rib": 12926,
+  "thickness_range_mm": [
+   2.999997354397492,
+   12.988706403508731
+  ]
+ },
+ "completed": true,
+ "boundary_extrapolation_nodes_per_rib": 206,
+ "inputs": {
+  "stations": [
+   {
+    "station_mm": -12,
+    "holes": 8,
+    "force_error_N": 3.972054645195637e-15,
+    "moment_error_Nmm": 2.1018137570293107e-14,
+    "per_hole_moment_error_Nmm": 4.4938668397781776e-14,
+    "force_N": [
+     5.043254653352262,
+     21.255432891769036,
+     -15.042626879432984
+    ],
+    "moment_Nmm": [
+     -17.34885264390425,
+     -24.526157356710023,
+     -8.059424972041214
+    ]
+   },
+   {
+    "station_mm": 12,
+    "holes": 8,
+    "force_error_N": 8.881784197001252e-16,
+    "moment_error_Nmm": 1.92808376785191e-14,
+    "per_hole_moment_error_Nmm": 4.7664655742347644e-14,
+    "force_N": [
+     5.072584346260526,
+     16.261397952585053,
+     -21.63580615129832
+    ],
+    "moment_Nmm": [
+     5.979458721963455,
+     -25.237203153145998,
+     0.9509925834333188
+    ]
+   }
+  ],
+  "target": [
+   11.638441203037752,
+   58.24235800146223,
+   -33.60699839271791,
+   -0.9807740574519302,
+   0.1504785604613107,
+   -0.11371631336226298
+  ]
+ },
+ "steps": [
+  {
+   "fraction": 0.9375,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 7.2451555865882256e-09
+  },
+  {
+   "fraction": 1.0,
+   "accepted": true,
+   "iterations": 3,
+   "residual": 1.0638606440238618e-08
+  },
+  {
+   "fraction": 0.96875,
+   "accepted": true,
+   "iterations": 5,
+   "residual": 5.186642226817639e-09
+  },
+  {
+   "fraction": 1.0,
+   "accepted": true,
+   "iterations": 4,
+   "residual": 2.1433549207396666e-05
+  }
+ ],
+ "samples": [
+  {
+   "elastic_potential_minus_load_work_Nmm": 4.569132813047052e-22,
+   "tip_displacement_mm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "tip_rotation": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "distal_force_N": [
+    -1.5982960443742932e-11,
+    -7.343146320882253e-11,
+    -7.526443040955848e-11
+   ],
+   "distal_moment_Nmm": [
+    -1.8902091917167462e-10,
+    1.9953726593388462e-10,
+    1.0596075736460802e-10
+   ],
+   "proximal_force_N": [
+    -4.0339847715054076e-12,
+    -9.202143787757738e-12,
+    -1.2597907697640397e-11
+   ],
+   "proximal_moment_Nmm": [
+    -8.503766966548174e-12,
+    3.374555353650643e-12,
+    1.7513331101761427e-10
+   ],
+   "free_residual_inf": 1.3631871018697924e-09,
+   "max_abs_surface_strain": 3.6895589162826717e-13,
+   "signed_peak_strain": 3.6895589162826717e-13,
+   "peak_rib_deg": 157.5,
+   "peak_reference_r_z_through_mm": [
+    12.13532298235903,
+    -44.99773222322546,
+    1.499999976094738
+   ],
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 3.6895589162826717e-13,
+     "rib_deg": 157.5,
+     "reference_r_z_through_mm": [
+      12.13532298235903,
+      -44.99773222322546,
+      1.499999976094738
+     ],
+     "direction_to_build_Z_deg": 57.19293294989432
+    },
+    "principal_compressive": {
+     "strain": -2.4888771731529537e-13,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      44.99880837083855,
+      1.5000000756461964
+     ],
+     "direction_to_build_Z_deg": 57.88399125320255
+    },
+    "build_Z_tensile": {
+     "strain": 3.208733516623996e-14,
+     "rib_deg": 202.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      -44.99880837083855,
+      -1.4999999367054495
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -3.275346898101505e-14,
+     "rib_deg": 202.5,
+     "reference_r_z_through_mm": [
+      12.132691002878659,
+      -44.99880837083855,
+      1.4999999367054495
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   },
+   "minimum_oriented_area_ratio": 0.9999999999999996,
+   "lands": [
+    {
+     "station_mm": 12,
+     "rib_deg": 67.5,
+     "force_N": [
+      -1.9053601022902886e-12,
+      1.11483584844085e-12,
+      -4.135021278041745e-12
+     ],
+     "land_moment_Nmm": [
+      5.709556746606816e-12,
+      -1.2564829775561262e-13,
+      -7.880556225951133e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 67.5,
+     "force_N": [
+      -1.963289279831758e-12,
+      -2.4676447920657214e-11,
+      9.674114856267324e-13
+     ],
+     "land_moment_Nmm": [
+      -2.8981714538724246e-12,
+      2.722926701153049e-12,
+      1.174106227085886e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 157.5,
+     "force_N": [
+      3.232508505782715e-13,
+      -6.9045340176502565e-12,
+      -4.105627076255441e-12
+     ],
+     "land_moment_Nmm": [
+      2.491159818573103e-12,
+      5.2196388429806236e-12,
+      -3.637077366461648e-14
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 157.5,
+     "force_N": [
+      2.5287951872832714e-11,
+      -8.099873905701712e-12,
+      1.8689785021192855e-12
+     ],
+     "land_moment_Nmm": [
+      -3.21276654110655e-12,
+      -1.512768723115693e-12,
+      6.581252018010548e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 247.5,
+     "force_N": [
+      -2.935195776793732e-12,
+      1.947089175727187e-11,
+      -2.1953250953704219e-13
+     ],
+     "land_moment_Nmm": [
+      1.2457114755922185e-11,
+      -2.486951036945401e-12,
+      1.0204150666137227e-11
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 247.5,
+     "force_N": [
+      2.3232540943405823e-12,
+      3.9665528103360645e-11,
+      -1.6850890881848348e-13
+     ],
+     "land_moment_Nmm": [
+      -8.142576571347349e-12,
+      5.03295182759446e-13,
+      7.862370237370969e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 337.5,
+     "force_N": [
+      -1.921384598411106e-11,
+      -5.044343022904002e-12,
+      -3.1048696304628684e-13
+     ],
+     "land_moment_Nmm": [
+      7.795130064288892e-12,
+      1.4011264460620753e-11,
+      5.427262891104353e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 337.5,
+     "force_N": [
+      -4.00859553190101e-11,
+      1.8506164502473476e-12,
+      1.1149109403667005e-12
+     ],
+     "land_moment_Nmm": [
+      -3.73215673635012e-12,
+      -9.286671638954595e-12,
+      4.393693032061352e-12
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.0,
+     "socket_travel_inplane_mm": 0.0,
+     "socket_travel_normal_mm": 0.0
+    }
+   ],
+   "force_balance_N": 1.2226520992776017e-10,
+   "moment_balance_Nmm": 2.9227379719242012e-09,
+   "fraction": 0.0
+  },
+  {
+   "elastic_potential_minus_load_work_Nmm": -358.5275281864431,
+   "tip_displacement_mm": [
+    11.638441203037752,
+    58.24235800146223,
+    -33.60699839271791
+   ],
+   "tip_rotation": [
+    [
+     0.9643801525270725,
+     -0.03391166407904949,
+     0.26233741717728754
+    ],
+    [
+     -0.26162974123673444,
+     0.023927316234334715,
+     0.9648716816438451
+    ],
+    [
+     -0.038997434688193194,
+     -0.9991383700855513,
+     0.01420272898172243
+    ]
+   ],
+   "distal_force_N": [
+    -4.872835716129655,
+    -10.12727349899397,
+    28.881333263595923
+   ],
+   "distal_moment_Nmm": [
+    -1540.9061761758092,
+    373.85545962092635,
+    -167.4356616031964
+   ],
+   "proximal_force_N": [
+    -5.243003283767516,
+    -27.389557346132328,
+    7.797099767308481
+   ],
+   "proximal_moment_Nmm": [
+    1505.321702032306,
+    -223.92330034586618,
+    93.89456949351363
+   ],
+   "free_residual_inf": 1.0638606440238618e-08,
+   "max_abs_surface_strain": 0.09602485163176458,
+   "signed_peak_strain": 0.09602485163176458,
+   "peak_rib_deg": 247.5,
+   "peak_reference_r_z_through_mm": [
+    9.604518080536343,
+    -20.288722879195486,
+    -1.4999998337831593
+   ],
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.09602485163176458,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      9.604518080536343,
+      -20.288722879195486,
+      -1.4999998337831593
+     ],
+     "direction_to_build_Z_deg": 55.737195454185624
+    },
+    "principal_compressive": {
+     "strain": -0.07745376406419846,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.75669394083897,
+      20.578110083308168,
+      1.4999999617556181
+     ],
+     "direction_to_build_Z_deg": 40.6236433074879
+    },
+    "build_Z_tensile": {
+     "strain": 0.06247921010351394,
+     "rib_deg": 292.5,
+     "reference_r_z_through_mm": [
+      29.78851908738511,
+      -20.482146778742177,
+      1.500000136237456
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.04385166190825377,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      29.76802093019779,
+      20.364941569775514,
+      1.5000001361741075
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   },
+   "minimum_oriented_area_ratio": 0.9494426856222459,
+   "lands": [
+    {
+     "station_mm": 12,
+     "rib_deg": 67.5,
+     "force_N": [
+      0.7043459083145582,
+      3.303921274900004,
+      -6.31688363242014
+     ],
+     "land_moment_Nmm": [
+      -30.372428424759008,
+      3.9794136405421305,
+      0.8734650509108133
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.23930394912425357,
+     "socket_travel_inplane_mm": 0.23930054667819034,
+     "socket_travel_normal_mm": 0.007052306871253972
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 67.5,
+     "force_N": [
+      0.2502000145419644,
+      6.5107489973498005,
+      -2.6406818619503216
+     ],
+     "land_moment_Nmm": [
+      10.737215220161794,
+      -20.644374660767443,
+      -2.2952410251236017
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.20330230591504936,
+     "socket_travel_inplane_mm": 0.20330212149791724,
+     "socket_travel_normal_mm": 0.01274115422981331
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 157.5,
+     "force_N": [
+      3.809642335585484,
+      4.875700636153804,
+      -7.865524419076419
+     ],
+     "land_moment_Nmm": [
+      14.964310207374368,
+      18.536836714143192,
+      24.766668586368514
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.05226456293744984,
+     "socket_travel_inplane_mm": 0.05225990326481011,
+     "socket_travel_normal_mm": 0.03981542285895736
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 157.5,
+     "force_N": [
+      3.7580491945888324,
+      6.944579411314908,
+      -4.794508446834844
+     ],
+     "land_moment_Nmm": [
+      5.612526981335177,
+      12.271810341179444,
+      16.54427331617051
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.050928041764534034,
+     "socket_travel_inplane_mm": 0.05089950911315925,
+     "socket_travel_normal_mm": 0.03487423779429368
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 247.5,
+     "force_N": [
+      -1.6228330364311834,
+      2.759194059929817,
+      -1.4525602177666168
+     ],
+     "land_moment_Nmm": [
+      62.636748439676545,
+      -1.152347848808089,
+      16.709799009085167
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.08808769466348526,
+     "socket_travel_inplane_mm": 0.08698042058319881,
+     "socket_travel_normal_mm": 0.013922944598656378
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 247.5,
+     "force_N": [
+      -1.4983904212927548,
+      0.8904226582441153,
+      -2.735557023423807
+     ],
+     "land_moment_Nmm": [
+      -52.376600842429475,
+      27.481838754655328,
+      -8.720543308958877
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.08934084512008479,
+     "socket_travel_inplane_mm": 0.08897055039157821,
+     "socket_travel_normal_mm": 0.00812574733736043
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 337.5,
+     "force_N": [
+      2.1814291385270126,
+      5.322581981092548,
+      -6.00083788252937
+     ],
+     "land_moment_Nmm": [
+      8.686767825060508,
+      -12.564262908222712,
+      -21.941883189956773
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.04132744026404925,
+     "socket_travel_inplane_mm": 0.027062772801391737,
+     "socket_travel_normal_mm": 0.03123401426456117
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 337.5,
+     "force_N": [
+      2.533395865335658,
+      6.909681824865603,
+      -4.871879547479254
+     ],
+     "land_moment_Nmm": [
+      -32.342442203450595,
+      -22.47741684791441,
+      -24.97126869389958
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.046621676176292176,
+     "socket_travel_inplane_mm": 0.027249219265795505,
+     "socket_travel_normal_mm": 0.037829363448142354
+    }
+   ],
+   "force_balance_N": 8.409210279406009e-10,
+   "moment_balance_Nmm": 3.922431140188012e-08,
+   "fraction": 1.0
+  }
+ ],
+ "split_last_step": {
+  "start_fraction": 0.9375,
+  "full_increment": 0.0625,
+  "half_increment": 0.03125,
+  "endpoint": {
+   "elastic_potential_minus_load_work_Nmm": -358.5275281864424,
+   "tip_displacement_mm": [
+    11.638441203037752,
+    58.24235800146223,
+    -33.60699839271791
+   ],
+   "tip_rotation": [
+    [
+     0.9643801525270725,
+     -0.03391166407904949,
+     0.26233741717728754
+    ],
+    [
+     -0.26162974123673444,
+     0.023927316234334715,
+     0.9648716816438451
+    ],
+    [
+     -0.038997434688193194,
+     -0.9991383700855513,
+     0.01420272898172243
+    ]
+   ],
+   "distal_force_N": [
+    -4.872819166988016,
+    -10.127246759067223,
+    28.881353133193297
+   ],
+   "distal_moment_Nmm": [
+    -1540.9062696443527,
+    373.85549695640645,
+    -167.4356439809365
+   ],
+   "proximal_force_N": [
+    -5.24300328369305,
+    -27.389557345733706,
+    7.797099768763653
+   ],
+   "proximal_moment_Nmm": [
+    1505.3217020001978,
+    -223.92330032906798,
+    93.89456949803552
+   ],
+   "free_residual_inf": 2.1433549207396666e-05,
+   "max_abs_surface_strain": 0.09602485163558505,
+   "signed_peak_strain": 0.09602485163558505,
+   "peak_rib_deg": 247.5,
+   "peak_reference_r_z_through_mm": [
+    9.604518080536343,
+    -20.288722879195486,
+    -1.4999998337831593
+   ],
+   "surface_extremes": {
+    "principal_tensile": {
+     "strain": 0.09602485163558505,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      9.604518080536343,
+      -20.288722879195486,
+      -1.4999998337831593
+     ],
+     "direction_to_build_Z_deg": 55.737195454239334
+    },
+    "principal_compressive": {
+     "strain": -0.07745376406346882,
+     "rib_deg": 247.5,
+     "reference_r_z_through_mm": [
+      11.75669394083897,
+      20.578110083308168,
+      1.4999999617556181
+     ],
+     "direction_to_build_Z_deg": 40.623643307544974
+    },
+    "build_Z_tensile": {
+     "strain": 0.0624792101032967,
+     "rib_deg": 292.5,
+     "reference_r_z_through_mm": [
+      29.78851908738511,
+      -20.482146778742177,
+      1.500000136237456
+     ],
+     "direction_to_build_Z_deg": 0.0
+    },
+    "build_Z_compressive": {
+     "strain": -0.04385166190790144,
+     "rib_deg": 112.5,
+     "reference_r_z_through_mm": [
+      29.76802093019779,
+      20.364941569775514,
+      1.5000001361741075
+     ],
+     "direction_to_build_Z_deg": 0.0
+    }
+   },
+   "minimum_oriented_area_ratio": 0.9494426856228964,
+   "lands": [
+    {
+     "station_mm": 12,
+     "rib_deg": 67.5,
+     "force_N": [
+      0.7043459083843526,
+      3.3039212748406737,
+      -6.316883632449697
+     ],
+     "land_moment_Nmm": [
+      -30.372428429020275,
+      3.9794136421674975,
+      0.8734650504254322
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.23930394913552544,
+     "socket_travel_inplane_mm": 0.23930054668946232,
+     "socket_travel_normal_mm": 0.007052306870961372
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 67.5,
+     "force_N": [
+      0.2502000145607408,
+      6.51074899709113,
+      -2.640681862489484
+     ],
+     "land_moment_Nmm": [
+      10.737215224769177,
+      -20.64437466219754,
+      -2.295241024238144
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.20330230592673684,
+     "socket_travel_inplane_mm": 0.2033021215096047,
+     "socket_travel_normal_mm": 0.012741154229759551
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 157.5,
+     "force_N": [
+      3.8096423355555307,
+      4.875700636291236,
+      -7.865524418763571
+     ],
+     "land_moment_Nmm": [
+      14.96431020511864,
+      18.53683671341259,
+      24.766668587276058
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.05226456294301456,
+     "socket_travel_inplane_mm": 0.05225990327035218,
+     "socket_travel_normal_mm": 0.039815422857938536
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 157.5,
+     "force_N": [
+      3.7580491944753325,
+      6.944579411205816,
+      -4.794508447100206
+     ],
+     "land_moment_Nmm": [
+      5.612526983762428,
+      12.271810342120856,
+      16.54427331479249
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.050928041770719405,
+     "socket_travel_inplane_mm": 0.050899509119303715,
+     "socket_travel_normal_mm": 0.03487423779345222
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 247.5,
+     "force_N": [
+      -1.6228330363303418,
+      2.7591940598268865,
+      -1.4525602181184434
+     ],
+     "land_moment_Nmm": [
+      62.63674843709614,
+      -1.1523478486776029,
+      16.709799008996388
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.08808769466117748,
+     "socket_travel_inplane_mm": 0.08698042058090265,
+     "socket_travel_normal_mm": 0.013922944598400235
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 247.5,
+     "force_N": [
+      -1.4983904212399812,
+      0.8904226582324384,
+      -2.735557023505811
+     ],
+     "land_moment_Nmm": [
+      -52.3766008396566,
+      27.48183875465248,
+      -8.720543308337387
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.08934084511785524,
+     "socket_travel_inplane_mm": 0.08897055038934522,
+     "socket_travel_normal_mm": 0.008125747337296523
+    },
+    {
+     "station_mm": 12,
+     "rib_deg": 337.5,
+     "force_N": [
+      2.1814291384414743,
+      5.322581980994151,
+      -6.000837882419615
+     ],
+     "land_moment_Nmm": [
+      8.686767823845626,
+      -12.564262907563378,
+      -21.94188318896083
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.041327440262816754,
+     "socket_travel_inplane_mm": 0.02706277280060061,
+     "socket_travel_normal_mm": 0.031234014263615863
+    },
+    {
+     "station_mm": -12,
+     "rib_deg": 337.5,
+     "force_N": [
+      2.533395865470883,
+      6.909681824620725,
+      -4.871879547554072
+     ],
+     "land_moment_Nmm": [
+      -32.34244220328781,
+      -22.477416847813092,
+      -24.971268693493275
+     ],
+     "relative_rotation_deg": 0.0,
+     "inplane_rotation_deg": 0.0,
+     "socket_travel_3d_mm": 0.04662167617547421,
+     "socket_travel_inplane_mm": 0.027249219265441698,
+     "socket_travel_normal_mm": 0.03782936344738913
+    }
+   ],
+   "force_balance_N": 3.719860821988269e-05,
+   "moment_balance_Nmm": 0.0009306799174698299,
+   "fraction": 1.0
+  }
+ },
+ "elapsed_s": 149.3186664560053
+}

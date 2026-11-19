@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026 (validation test plan)
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026 (large-rotation M5 guide-joint test)
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,15 +13,18 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
-### 18 November 2026 — Validation test plan for the 500 g front
+<a id="18-november-2026--validation-test-plan-for-the-500-g-front"></a>
 
-The next design decision is how to locate the rope guides while letting the M5 ribs rotate. The new plan gives the test cases, measurements and criteria for that decision. All numerical results cited in the plan come from the 14–17 November studies.
+### 18 November 2026 — Large-rotation test of the M5 guide joint
 
-- **Test the mount at three different extremes.** Record 146 supplies the largest M5 curvature. Record 141 gives the largest station force (28.45 N with 22.04 N·mm at M5 +12 mm). Record 47 gives the largest station moment (61.12 N·mm with 11.11 N at M5 -12 mm). Compare the bare body, rigid bond and rotating seat in pure bending, then apply each record's simultaneous rope loads to the mounted guides.
-- **Check geometry and physical behaviour.** Screen a retained seat first at the critical poses, then across 217 holds and eight guides. Check the full 2 mm rope at the shared bores. Measure printed clearances, joint stiffness and pull-through friction on one-module builds.
-- **Verify the complete motion.** Use the selected joint and measured properties in the 500 g round trip, including both steering reversals. Compare the simulation with a trial using the actual head and harness.
+Test 1 of the 500 g plan compared bare PA12 ribs, a bonded guide and a rotating seat. Six pure-bend sweeps used the actual M5 rib section. Eight mounted cases applied the saved end poses and simultaneous bore forces from records 146, 141, 47 and 64.
 
-[Full test plan and decision criteria](docs/500g_validation_plan.md) · [Current limitations](docs/limitations.md)
+- **Resistance to bending.** At 96.19° about the 67.5° axis, the bare body required 743.3 N·mm, the rotating seat 761.5 N·mm and the bond 808.2 N·mm on the same 0.015 mm² mesh. The rotating seat reduced the holding couple by 5.8% relative to the bond.
+- **Retainer load.** The full pure bend produces 24.78 N at one rotating land. The earlier linear extrapolation gave 5.30 N. An independent straight-state slope check reproduced the linear estimate within 3%.
+- **Guide movement under load.** Across the four prescribed poses, the rotating seat reached 5.03° of relative rotation, 0.330 mm of strut travel in the socket and 15.40 N at a single mounting land. The report gives separate values for each pose and joint.
+- **Design decision.** The ideal rotating joint still needs a physical retainer, clearance under load and measured strength for the vertically printed PA12 ribs. The comparison includes mesh and increment checks, strain locations and the rejected folded-element solutions.
+
+[Full English test report](reports/daily/M5_Joint_Test_2026_11_18.md) · [Curves, reactions and reproduction commands](simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/README.md) · [Five-test validation plan](docs/500g_validation_plan.md) · [Current limitations](docs/limitations.md)
 
 <a id="17-november-2026--evening-report-latest-rib-level-model-of-the-guide-joint"></a>
 
@@ -130,7 +133,7 @@ Established the earlier design and analysis baseline for the subsequent stiffnes
 
 ## Prototype
 
-The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) is the latest published mounting experiment and reuses V2 module bodies. It remains unqualified for manufacture. The 16 November Evening Report found body contact in 59/217 holds. Its [0.25 mm bond-gap variant](simulations/u4m2/lanes_20261113/evening_20261116/README.md) clears all checks kinematically, but the 17 November [rib-level joint model](simulations/u4m2/lanes_20261113/evening_20261117/README.md) shows that any rigid bonded land loads the ribs (about 8 N and 100 N·mm per land) and stiffens M5 by 10–12%. It is evidence CAD, not a replacement release.
+The [V3 guide candidate](cad/lanes_u4m2/guides_v3/README.md) uses the V2 module bodies. Its 0.15 mm bond gap produced unintended contact in 59/217 holds. A [0.25 mm bond gap](simulations/u4m2/lanes_20261113/evening_20261116/README.md) cleared the earlier beam-based screen with 0.0182 mm to spare. The [large-rotation M5 test](reports/daily/M5_Joint_Test_2026_11_18.md) now predicts 24.78 N at an individual rotating support in the reference pure bend. A physical retainer, as-printed clearance and material strength still need verification.
 
 **Ignore `archive/superseded_cad/full_length/` (marked 11 November 2026).** It uses 84 mm shells with 12 mm pin joints and two separate backbone rods with a free joint. The design and all simulations use continuous 96 mm modules with one Ø1.8 mm NiTi rod along the full length of each M module; see [model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md) and [why the folder is marked](archive/superseded_cad/full_length/NOT_THE_SIMULATED_DESIGN.md). The uploaded U/M STEP files have a STEP-derived OpenSCAD viewing package in [`cad/previews/u4m2/`](cad/previews/u4m2). **The newest modules (rope lanes, anchors, backbone bore, joints) are in [`cad/lanes_u4m2/`](cad/lanes_u4m2).**
 

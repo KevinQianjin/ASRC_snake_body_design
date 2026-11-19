@@ -1,6 +1,6 @@
 # Validation plan for the 500 g U4+M2 front
 
-**Proposed on 18 November 2026.** The first decision is whether a guide can locate its rope holes while allowing the four mounting ribs to rotate under load. Start with M5 at the two stations 12 mm either side of its centre. The figures below come from published simulations through `c458329`. The tests and decision criteria that follow are proposed work. [Reviewed revision](https://github.com/KevinQianjin/ASRC_snake_body_design/commit/c4583298a972e054d77cc4ee582e2121c5818cde)
+**Proposed on 18 November 2026.** The first decision is whether a guide can locate its rope holes while allowing the four mounting ribs to rotate under load. Start with M5 at the two stations 12 mm either side of its centre. The figures below come from published simulations through `c458329`. The numbered sections preserve the proposed test methods and decision criteria. Test 1 now has a separate execution report. [Reviewed revision](https://github.com/KevinQianjin/ASRC_snake_body_design/commit/c4583298a972e054d77cc4ee582e2121c5818cde)
 
 Use the 500 g head including its adapter, four U modules followed by two M modules, 96 mm per module, 21/24/28 mm rope lane radii, 2 mm ropes, and M guide stations at -24, -12, +12 and +24 mm. Use the published central 1.8 mm NiTi backbone arrangement without an end ferrule. [Guide CAD](../cad/lanes_u4m2/guides_v3/README.md) · [End and anchor CAD](../cad/lanes_u4m2/end_bellmouth_v1/README.md)
 
@@ -14,6 +14,8 @@ Use the 500 g head including its adapter, four U modules followed by two M modul
 | Will the complete assembly follow its commands? | The earlier ideal guided cycle reached all 1,200 settled targets. With the same reconstructed winch lengths, the later end routing shifted selected head poses by up to 3.479 mm and 1.147 degrees in yaw. | Repeat the complete cycle with the selected mount and routing. Actual head and harness clearance, actuator response and repeatability require physical measurements. [Cycle baseline](../simulations/u4m2/lanes_20261113/GUIDED_VALIDATION.md) · [Fixed-winch comparison](../simulations/u4m2/lanes_20261113/morning_20261116/path_comparison/summary.json) |
 
 ## 1. Measure the effect of large rotation in simulation
+
+The 18 November execution report gives the simulated moment-curvature response, individual land reactions, seat travel, strain locations and numerical refinement checks. The original protocol follows below. [Test 1 results](../reports/daily/M5_Joint_Test_2026_11_18.md) · [Case files, inputs and commands](../simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/README.md)
 
 Start with the archived M5 rib geometry and the same material, end restraints and loading axes as the linear model. Compare the bare PA12 body, the rigidly bonded guide and an ideal seat that locates the three translations and allows rotation. Apply pure bending incrementally to the record-146 curvature of 0.01749 rad/mm about the 0 and 67.5 degree axes. Sample the unloaded state and 25%, 50%, 75% and 100% of that curvature. Use a geometrically nonlinear formulation and recover the linear small-bend response first. [Linear model and inputs](../simulations/u4m2/lanes_20261113/evening_20261117/rib_joint_3d/rib_joint_3d_results.json)
 
