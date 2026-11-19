@@ -1,0 +1,848 @@
+{
+  "shell_mesh": "0p025",
+  "web_surface_edge_mm": 0.45,
+  "free_web_simplification_mm": 0.001,
+  "previous_tip_comparison": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.5960463515096457,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.6554303021973,
+        -12.253524568167359,
+        -1.6,
+        26.810988120784103,
+        -8.650349573604649,
+        -0.8008561789020907
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22377926631337836
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.566211721166931,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.69493524343507,
+        -12.25352456610244,
+        0.8166262945895405,
+        26.810988120229897,
+        -8.666713056903891,
+        1.6
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22801575906402857
+    }
+  ],
+  "rows": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_7",
+        0.04567764746972317
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_6",
+          "gap_mm": 1.2144510590436135,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            0.7806540783818453,
+            -7.280919865885254,
+            -1.980226093371345
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 0.5345993295178347,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.6008142658755595,
+            -7.217493712962219,
+            -1.83638140805567
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "lap_screw_6",
+          "gap_mm": 2.37338382441616,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.191069083196206,
+            -9.408803527366562,
+            3.059793927719491
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_0",
+          "gap_mm": 0.04567764746972317,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            7.637569226181573,
+            -1.5385136616537025,
+            -1.6212337034819277
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "fork_0",
+          "gap_mm": 0.22377926631337836,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            22.35291069300782,
+            -10.458293294941068,
+            -0.10570925112493665
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_1",
+          "gap_mm": 0.5345993062459667,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.942592123149062,
+            3.2644854722368177,
+            -1.8363813989947042
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "lap_screw_0",
+          "gap_mm": 2.3733838311068665,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.616562097577573,
+            3.6894958520408707,
+            3.059793934773688
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.4624263996606444,
+      "rigid_fit_max_error_mm": 7.57871773515427e-14
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_7",
+        0.04463593631610741
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_6",
+          "gap_mm": 1.2144891814098002,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            0.7781072504026133,
+            -7.2805010762753195,
+            1.9794253190115774
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 2.5989389993567884,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            5.213616567136952,
+            -9.605709345429194,
+            -2.899469523520253
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "fork_0",
+          "gap_mm": 0.22801575906402857,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            22.353813939432793,
+            -10.458567205524986,
+            0.10380873877776065
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 0.5336540233904962,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.5994120081059457,
+            -7.218122798288535,
+            1.8358969368432752
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_0",
+          "gap_mm": 0.04463593631610741,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            7.637740100497369,
+            -1.538617956995165,
+            1.6207487720443106
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_0",
+          "gap_mm": 2.598939000899249,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            10.47884596718148,
+            3.1056787279586753,
+            -2.899469524291483
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_0",
+          "gap_mm": 0.5336539818637746,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.942045361836858,
+            3.265921857139409,
+            1.8358969177890923
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.4624263996606466,
+      "rigid_fit_max_error_mm": 7.57871773515427e-14
+    },
+    {
+      "case": "bend0",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_6",
+        0.11996224865738882
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_7",
+          "gap_mm": 1.209739685367767,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.314817227762256,
+            -3.689180966742697,
+            -1.961271217051638
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "hub_5",
+          "gap_mm": 0.12030567681424391,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -2.439201388103356,
+            -7.381969132092884,
+            -1.6553056363976255
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "fork_3",
+          "gap_mm": 0.4787820905819263,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -10.022775702815427,
+            -19.59528692503804,
+            1.8116535505342661
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_7",
+          "gap_mm": 0.11996224865738882,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.4723162165032653,
+            -7.372026847295956,
+            -1.655161027351214
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "lap_screw_6",
+          "gap_mm": 2.1310970269983187,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.6752534002900448,
+            -9.542903408471485,
+            2.9441954754472803
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "lap_screw_7",
+          "gap_mm": 2.503943986325823,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.454659570780343,
+            -4.191324111218511,
+            3.121521890643272
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.1565971331189624,
+      "rigid_fit_max_error_mm": 3.2174255591641477e-14
+    },
+    {
+      "case": "bend0",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_6",
+        0.11755990253363142
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_7",
+          "gap_mm": 1.1980116791692288,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.391212934487071,
+            -3.5859169719553528,
+            1.9727630626303756
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "fork_3",
+          "gap_mm": 0.4796783303669249,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -10.023304381136953,
+            -19.595224828948986,
+            -1.8121300430125387
+          ]
+        },
+        {
+          "body": "rib_5",
+          "part": "hub_6",
+          "gap_mm": 0.12042593441097406,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -2.3896411987664865,
+            -7.396981652974498,
+            1.655362261948266
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 2.363411385976082,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.0318490887049627,
+            -10.805594399762553,
+            -2.781705716829899
+          ]
+        },
+        {
+          "body": "rib_7",
+          "part": "hub_7",
+          "gap_mm": 2.72369252263801,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.673263466294234,
+            -5.1728979104484925,
+            -2.961846285160863
+          ]
+        },
+        {
+          "body": "rib_6",
+          "part": "hub_6",
+          "gap_mm": 0.11755990253363142,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            2.5242262086907155,
+            -7.354892607412653,
+            1.6540175296740833
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 1.1565971331189666,
+      "rigid_fit_max_error_mm": 3.2174255591641477e-14
+    },
+    {
+      "case": "146",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R0",
+        1.0020227825387493
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_5",
+          "gap_mm": 1.0020227825387493,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -5.91376632745815,
+            -4.837018664514069,
+            -2.076155186190048
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 1.1292479672929319,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -6.55673279166988,
+            -3.846518784019893,
+            -2.129287324104075
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "lap_screw_2",
+          "gap_mm": 2.615507447325402,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.7754130482956523,
+            9.628135751184166,
+            3.1796144137941877
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 2.769440274117334,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.056910069267846,
+            -5.083706387680658,
+            -2.097172823052931
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "fork_1",
+          "gap_mm": 2.584890400888483,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            10.11927117714807,
+            19.8425721792187,
+            2.836416069833131
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.220856724144125,
+      "rigid_fit_max_error_mm": 3.6837996310961943e-14
+    },
+    {
+      "case": "146",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R3",
+        0.435020113350919
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_7",
+          "gap_mm": 0.435020113350919,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.9805517945011597,
+            -6.628082652639689,
+            1.8074954191994088
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_2",
+          "gap_mm": 2.8596432475017366,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.101468921413098,
+            10.864966915157213,
+            -3.0288219849397158
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 0.8865108707977788,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -6.478586426514333,
+            -4.084242748003504,
+            2.0214101771076907
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "fork_1",
+          "gap_mm": 2.631935307629395,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            9.996387513283846,
+            19.907186708838417,
+            -2.8468079119266534
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 1.8269859902026966,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.2684425307113036,
+            -6.087862126088321,
+            1.822125100079733
+          ]
+        },
+        {
+          "body": "rib_0",
+          "part": "hub_7",
+          "gap_mm": 1.382893680350703,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.300943560203386,
+            -7.385871818791934,
+            2.2914468640172094
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.220856724144124,
+      "rigid_fit_max_error_mm": 3.6837996310961943e-14
+    },
+    {
+      "case": "141",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R0",
+        0.9391356495601327
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_5",
+          "gap_mm": 0.9391356495601327,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -5.572107584015141,
+            -5.221549101397265,
+            -2.0416373366989737
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 1.1816560640943927,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -6.102461190660543,
+            -4.194047638113234,
+            -2.041595484293633
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "lap_screw_2",
+          "gap_mm": 2.6090837288404116,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.7897290293255406,
+            9.619457128440942,
+            3.177070806397997
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 2.256059071061643,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.5238462434903575,
+            -5.075766442757451,
+            -2.12437940721472
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "lap_screw_1",
+          "gap_mm": 2.638294760553677,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.9226932716348277,
+            9.607401038423717,
+            3.1895290412092088
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.379147602995866,
+      "rigid_fit_max_error_mm": 3.1035450138105864e-14
+    },
+    {
+      "case": "141",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R3",
+        0.3070119719702799
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_7",
+          "gap_mm": 0.3070119719702799,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.184055772173839,
+            -6.518361420848873,
+            1.7448033950228647
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_2",
+          "gap_mm": 2.850755787144347,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.077362323961851,
+            10.878283790789556,
+            -3.0241478932534145
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 0.6888715756584847,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -6.129577718831598,
+            -4.636133383645692,
+            1.9253817396004549
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "fork_1",
+          "gap_mm": 2.7282239822791756,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            10.019241644014045,
+            19.90060132650587,
+            -2.899468422060011
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 1.267969981646522,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.848579333672323,
+            -6.095428150634584,
+            1.838873328586225
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.379147602995864,
+      "rigid_fit_max_error_mm": 3.1035450138105864e-14
+    },
+    {
+      "case": "47",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_2",
+        1.1895499100161362
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_1",
+          "gap_mm": 2.279399323633004,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            4.953540860032614,
+            5.547103009505845,
+            -2.68101874541453
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 11.938044127431588,
+      "rigid_fit_max_error_mm": 3.370473271403933e-14
+    },
+    {
+      "case": "47",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "rib_2",
+        1.0034609945316975
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_5",
+          "gap_mm": 2.1806515527315695,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -5.408630848003229,
+            -5.098815791362361,
+            2.62821436363987
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 11.93804412743159,
+      "rigid_fit_max_error_mm": 3.370473271403933e-14
+    },
+    {
+      "case": "64",
+      "station": -12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R0",
+        0.9241206171435814
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R0",
+          "part": "hub_7",
+          "gap_mm": 0.9241206171435814,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            5.658801082419816,
+            -5.145935514845775,
+            -2.037734699523913
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 2.2867388452571635,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -4.343438023984355,
+            -5.21244746950721,
+            -2.1338275523353247
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "lap_screw_2",
+          "gap_mm": 2.5671831958767046,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.8647437768765065,
+            9.57738009192461,
+            3.1585686908101427
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 1.13091915053298,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.215734187008678,
+            -4.098947061414728,
+            -2.0418321915244384
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "lap_screw_1",
+          "gap_mm": 2.645970809137613,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            3.8320251611559275,
+            9.640211938835417,
+            3.192390211974219
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.209579213136776,
+      "rigid_fit_max_error_mm": 4.272729045829757e-14
+    },
+    {
+      "case": "64",
+      "station": 12,
+      "remaining_components": 42,
+      "closest_lower_bound": [
+        "R3",
+        0.34132780032463383
+      ],
+      "direct_surface_checks": [
+        {
+          "body": "R3",
+          "part": "hub_5",
+          "gap_mm": 0.34132780032463383,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -4.146133903695942,
+            -6.538492780257698,
+            1.7619350732017005
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_2",
+          "gap_mm": 2.791500521772307,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -2.9809779373024843,
+            10.919756496942393,
+            -2.993947816211187
+          ]
+        },
+        {
+          "body": "rib_2",
+          "part": "hub_5",
+          "gap_mm": 1.2942407884992633,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            -3.7963552413423542,
+            -6.116685375784094,
+            1.850217470738938
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "fork_1",
+          "gap_mm": 2.900354466727783,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            10.07341643793274,
+            19.87118672020776,
+            -2.996108730077085
+          ]
+        },
+        {
+          "body": "rib_1",
+          "part": "hub_7",
+          "gap_mm": 0.5923555805568906,
+          "intersection_mm3": 0.0,
+          "nearest_xyz_mm": [
+            6.159872086974321,
+            -4.648038331187596,
+            1.8847686270483441
+          ]
+        }
+      ],
+      "guide_envelope_distance_mm": 9.209579213136768,
+      "rigid_fit_max_error_mm": 4.272729045829757e-14
+    }
+  ]
+}

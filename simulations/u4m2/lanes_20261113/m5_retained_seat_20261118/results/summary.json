@@ -1,0 +1,703 @@
+{
+  "source_revision": "1c101887e4c6c84e66a660d2d2460594a741fd54",
+  "payload_g": 500,
+  "per_case": [
+    {
+      "case": "bend67.5",
+      "stage1_ideal_wall_margin_mm": 0.06568107571713794,
+      "nominal_local_gap_mm": 0.08454292081589654,
+      "corrected_local_gap_mm": 0.07881653827919935,
+      "other_body_gap_or_lower_bound_mm": 0.044041774929577275,
+      "local_peak_tensile_principal_strain": 0.06058380040362753,
+      "local_peak_nodal_pressure_MPa": 242.2227374326621,
+      "maximum_pivot_translation_mm": 0.06323621591700636,
+      "pin_nominal_bending_stress_MPa": 804.8255343825775,
+      "rigid_fit_bore_shift_mm": 0.01701676209305014
+    },
+    {
+      "case": "bend0",
+      "stage1_ideal_wall_margin_mm": 0.05828059279151135,
+      "nominal_local_gap_mm": 0.07555906070847736,
+      "corrected_local_gap_mm": 0.07320986682415066,
+      "other_body_gap_or_lower_bound_mm": 0.1169517312903866,
+      "local_peak_tensile_principal_strain": 0.051801236160557124,
+      "local_peak_nodal_pressure_MPa": 200.66520130600938,
+      "maximum_pivot_translation_mm": 0.05527992204856908,
+      "pin_nominal_bending_stress_MPa": 579.9152333631272,
+      "rigid_fit_bore_shift_mm": 0.014906762113173258
+    },
+    {
+      "case": "146",
+      "stage1_ideal_wall_margin_mm": 0.0682980475255413,
+      "nominal_local_gap_mm": 0.08749656391516637,
+      "corrected_local_gap_mm": 0.0796581792349128,
+      "other_body_gap_or_lower_bound_mm": 0.435020113350919,
+      "local_peak_tensile_principal_strain": 0.04953945033285034,
+      "local_peak_nodal_pressure_MPa": 167.68914593138138,
+      "maximum_pivot_translation_mm": 0.055170100962233175,
+      "pin_nominal_bending_stress_MPa": 471.25224096383914,
+      "rigid_fit_bore_shift_mm": 0.035745875990082866
+    },
+    {
+      "case": "141",
+      "stage1_ideal_wall_margin_mm": 0.06610501207741043,
+      "nominal_local_gap_mm": 0.08620884240134118,
+      "corrected_local_gap_mm": 0.08664890063195407,
+      "other_body_gap_or_lower_bound_mm": 0.3070119719702799,
+      "local_peak_tensile_principal_strain": 0.04836838800799001,
+      "local_peak_nodal_pressure_MPa": 160.3279828845225,
+      "maximum_pivot_translation_mm": 0.05517620401880237,
+      "pin_nominal_bending_stress_MPa": 463.3923923846808,
+      "rigid_fit_bore_shift_mm": 0.032982710786373236
+    },
+    {
+      "case": "47",
+      "stage1_ideal_wall_margin_mm": 0.10662921742759307,
+      "nominal_local_gap_mm": 0.11492159383165472,
+      "corrected_local_gap_mm": 0.11215330459859482,
+      "other_body_gap_or_lower_bound_mm": 1.0034609945316975,
+      "local_peak_tensile_principal_strain": 0.02655369472948918,
+      "local_peak_nodal_pressure_MPa": 93.06267265787906,
+      "maximum_pivot_translation_mm": 0.036297639347614236,
+      "pin_nominal_bending_stress_MPa": 164.0734096975074,
+      "rigid_fit_bore_shift_mm": 0.02498783775407092
+    },
+    {
+      "case": "64",
+      "stage1_ideal_wall_margin_mm": 0.06370762780734257,
+      "nominal_local_gap_mm": 0.08592975653734519,
+      "corrected_local_gap_mm": 0.08655572084613598,
+      "other_body_gap_or_lower_bound_mm": 0.34132780032463383,
+      "local_peak_tensile_principal_strain": 0.04178558100263214,
+      "local_peak_nodal_pressure_MPa": 138.68863651352686,
+      "maximum_pivot_translation_mm": 0.05309953949477229,
+      "pin_nominal_bending_stress_MPa": 406.96517881322586,
+      "rigid_fit_bore_shift_mm": 0.028778801159530402
+    }
+  ],
+  "bore_sizes": {
+    "maximum_tilt_deg": 6.564960459898591,
+    "unrelieved_extra_diameter_mm": 0.34921299258444416,
+    "crowns": [
+      {
+        "crown_radius_mm": 1.0,
+        "minimum_zero_load_radial_gap_at_tilt_mm": 0.011419482482505017,
+        "remaining_side_ligament_at_opening_mm": 0.1952167549670104
+      },
+      {
+        "crown_radius_mm": 2.0,
+        "minimum_zero_load_radial_gap_at_tilt_mm": 0.004819064668697137,
+        "remaining_side_ligament_at_opening_mm": 0.21022872295511474
+      }
+    ]
+  },
+  "mass": {
+    "previous_stations_g": [
+      2.419238370589264,
+      2.419238347619139
+    ],
+    "candidate_stations_g": [
+      3.530711705926102,
+      3.5307116964137877
+    ],
+    "removed_web_mass_g": 0.019836199011041243,
+    "net_change_g": 2.2031104851204457
+  },
+  "straight": {
+    "component_pair_checks": 1980,
+    "overlaps": 0,
+    "bore_centre_change_mm": 2.1437271430799322e-09,
+    "bore_diameter_change_mm": 2.144519672953038e-09
+  },
+  "motion": {
+    "component_placements": 88,
+    "linear_segments": 192,
+    "helical_segments": 40,
+    "samples": 15928,
+    "failed": [],
+    "unresolved_linear_segments": 16,
+    "unresolved_linear_interval_max_mm": 0.049218750000000006,
+    "shortest_shank_space_mm": 3.4508589431637677,
+    "shaft_access_rows": 48,
+    "side_drive": [
+      {
+        "driver": "wide",
+        "station": -12,
+        "verified": 0,
+        "minimum_verified_gap_mm": null
+      },
+      {
+        "driver": "wide",
+        "station": 12,
+        "verified": 0,
+        "minimum_verified_gap_mm": null
+      },
+      {
+        "driver": "slim",
+        "station": -12,
+        "verified": 8,
+        "minimum_verified_gap_mm": 0.028800937886204313
+      },
+      {
+        "driver": "slim",
+        "station": 12,
+        "verified": 8,
+        "minimum_verified_gap_mm": 0.24973835825393165
+      },
+      {
+        "driver": "low",
+        "station": -12,
+        "verified": 8,
+        "minimum_verified_gap_mm": 0.1342476569858403
+      },
+      {
+        "driver": "low",
+        "station": 12,
+        "verified": 8,
+        "minimum_verified_gap_mm": 0.28199997615814104
+      }
+    ]
+  },
+  "clearance_refinement": {
+    "shell_only_gap_mm": 0.0033551021836740053,
+    "surface_only_gap_mm": 0.0,
+    "independent_distance_agreement_mm": 0.0,
+    "other_body_refinement_mm": 0.0006081712432448177
+  },
+  "previous_tip_comparison": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.597994595052689,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.652364252344988,
+        -12.253524568199902,
+        -1.6,
+        26.810988120797102,
+        -8.649079577964487,
+        -0.7999325664428786
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22377926631338313
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 337.5,
+      "part": "fork_0",
+      "old_intersection_mm3": 0.5682398451023474,
+      "old_overlap_bounds_station_xyz_mm": [
+        23.69054623679167,
+        -12.253524566123684,
+        0.8151028003238333,
+        26.81098812024615,
+        -8.664895074855826,
+        1.6
+      ],
+      "revised_intersection_mm3": 0.0,
+      "revised_pair_gap_mm": 0.22801575906403299
+    }
+  ],
+  "local_contact_extremes": {
+    "translation_mm": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "translation_mm": 0.06323621591700636
+    },
+    "peak_tensile_principal_strain": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "peak_tensile_principal_strain": 0.06058380040362753
+    },
+    "peak_nodal_pressure_MPa": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "peak_nodal_pressure_MPa": 242.2227374326621
+    },
+    "p95_volume_tensile_principal_strain": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "p95_volume_tensile_principal_strain": 0.006038657742450824
+    },
+    "pin_nominal_bending_stress_MPa": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "pin_nominal_bending_stress_MPa": 804.8255343825775
+    },
+    "force_residual_N": {
+      "case": "146",
+      "station": 12,
+      "rib_deg": 337.5,
+      "force_residual_N": 0.0001300404603716712
+    },
+    "max_elastic_deflection_mm": {
+      "case": "bend67.5",
+      "station": 12,
+      "rib_deg": 157.5,
+      "max_elastic_deflection_mm": 0.043432126529911005
+    },
+    "worst_saved_hold_strain": {
+      "case": "146",
+      "station": 12,
+      "rib_deg": 67.5,
+      "peak_tensile_principal_strain": 0.04953945033285034
+    }
+  },
+  "force_balance_residual_N": 0.0001300404603716712,
+  "largest_contact_moment_Nmm": 2.130125612143215,
+  "compressive_thrust_sites": {
+    "negative_thrust": 26,
+    "positive_thrust": 26
+  },
+  "middle_to_fine_contact": {
+    "paired_sites": 48,
+    "both_within_five_pct": 0,
+    "largest_strain_change_pct": 46.66482112933012,
+    "largest_pressure_change_pct": 83.82371029054391,
+    "sites": [
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 10.736921901833382,
+        "pressure_change_pct_of_finer": 21.564088046556936
+      },
+      {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 14.884297886963333,
+        "pressure_change_pct_of_finer": 23.937320713974135
+      },
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 11.162034895199042,
+        "pressure_change_pct_of_finer": 23.003981171827128
+      },
+      {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 42.9527685002889,
+        "pressure_change_pct_of_finer": 22.595542410820077
+      },
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 19.483880880406026,
+        "pressure_change_pct_of_finer": 21.504097920911686
+      },
+      {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 6.314758827987724,
+        "pressure_change_pct_of_finer": 19.904483021950597
+      },
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 30.567232510758437,
+        "pressure_change_pct_of_finer": 83.82371029054391
+      },
+      {
+        "case": "141",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 32.03422088646586,
+        "pressure_change_pct_of_finer": 30.434699863039043
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 11.439601560474559,
+        "pressure_change_pct_of_finer": 22.2000697930753
+      },
+      {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 15.1234382570242,
+        "pressure_change_pct_of_finer": 25.097588748289063
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 13.821968666648521,
+        "pressure_change_pct_of_finer": 31.05730141148428
+      },
+      {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 46.66482112933012,
+        "pressure_change_pct_of_finer": 33.49744155330239
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 20.043277877959145,
+        "pressure_change_pct_of_finer": 22.65337461489922
+      },
+      {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 21.02126877504134,
+        "pressure_change_pct_of_finer": 26.548053013007305
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 36.4950145411117,
+        "pressure_change_pct_of_finer": 80.80325869438565
+      },
+      {
+        "case": "146",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 27.771481768566503,
+        "pressure_change_pct_of_finer": 29.882687512205408
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 18.795249319848892,
+        "pressure_change_pct_of_finer": 25.841437143697377
+      },
+      {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 39.97789536616038,
+        "pressure_change_pct_of_finer": 28.361995875297627
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 26.794063051328386,
+        "pressure_change_pct_of_finer": 37.229948681154
+      },
+      {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 27.80127779238241,
+        "pressure_change_pct_of_finer": 35.57193809440533
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 24.550230459822743,
+        "pressure_change_pct_of_finer": 40.76734673804179
+      },
+      {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 31.64554136695473,
+        "pressure_change_pct_of_finer": 42.530391950298466
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 7.5394661817942765,
+        "pressure_change_pct_of_finer": 32.64452176679007
+      },
+      {
+        "case": "47",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 22.419936836395372,
+        "pressure_change_pct_of_finer": 26.96548828767036
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 10.69612856512401,
+        "pressure_change_pct_of_finer": 18.702603708802258
+      },
+      {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 10.6692909773625,
+        "pressure_change_pct_of_finer": 21.662833880260646
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 20.001662171260715,
+        "pressure_change_pct_of_finer": 21.18883167227697
+      },
+      {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 24.95489226330505,
+        "pressure_change_pct_of_finer": 25.838288333733036
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 16.027353370705555,
+        "pressure_change_pct_of_finer": 25.275991778267482
+      },
+      {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 2.181033529291557,
+        "pressure_change_pct_of_finer": 13.308685233416112
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 22.01859663951177,
+        "pressure_change_pct_of_finer": 19.21776399085006
+      },
+      {
+        "case": "64",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 30.27285929989436,
+        "pressure_change_pct_of_finer": 41.8048212038895
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 6.843369040206839,
+        "pressure_change_pct_of_finer": 17.87020444744404
+      },
+      {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 6.960033939698042,
+        "pressure_change_pct_of_finer": 17.836125048706474
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 19.576489157279337,
+        "pressure_change_pct_of_finer": 16.8149454837809
+      },
+      {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 19.835796149423864,
+        "pressure_change_pct_of_finer": 17.147690934764853
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 11.649648606376573,
+        "pressure_change_pct_of_finer": 25.436769936805725
+      },
+      {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 12.35558677311401,
+        "pressure_change_pct_of_finer": 25.94733675392451
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 19.18977323871786,
+        "pressure_change_pct_of_finer": 22.01821118424456
+      },
+      {
+        "case": "bend0",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 18.40278609605079,
+        "pressure_change_pct_of_finer": 23.032980539201134
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 17.02447599193869,
+        "pressure_change_pct_of_finer": 27.50722235332382
+      },
+      {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 17.332342245659724,
+        "pressure_change_pct_of_finer": 27.89903161998627
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 11.02582938548146,
+        "pressure_change_pct_of_finer": 8.434410454030619
+      },
+      {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 10.549552407053213,
+        "pressure_change_pct_of_finer": 8.766235850506016
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 17.024475996727702,
+        "pressure_change_pct_of_finer": 27.50722235452511
+      },
+      {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 247.5,
+        "strain_change_pct_of_finer": 17.332342247138683,
+        "pressure_change_pct_of_finer": 27.8990316213104
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 3.4541758041307,
+        "pressure_change_pct_of_finer": 20.320500348028347
+      },
+      {
+        "case": "bend67.5",
+        "station": -12,
+        "rib_deg": 337.5,
+        "strain_change_pct_of_finer": 3.8343224965827236,
+        "pressure_change_pct_of_finer": 20.555719000065633
+      }
+    ]
+  },
+  "fine_to_finer_selected_contact": {
+    "paired_sites": 12,
+    "both_within_five_pct": 1,
+    "largest_strain_change_pct": 24.765096793845302,
+    "largest_pressure_change_pct": 29.199389720206497,
+    "sites": [
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 6.223613785572637,
+        "pressure_change_pct_of_finer": 2.184435756879471
+      },
+      {
+        "case": "141",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 5.515070495426409,
+        "pressure_change_pct_of_finer": 11.043163046996314
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 9.020275821363109,
+        "pressure_change_pct_of_finer": 0.07853118630593063
+      },
+      {
+        "case": "146",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 8.381180186381883,
+        "pressure_change_pct_of_finer": 9.650574895413346
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 14.088747025638172,
+        "pressure_change_pct_of_finer": 17.06871475131135
+      },
+      {
+        "case": "47",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 10.099896509286241,
+        "pressure_change_pct_of_finer": 15.237402836832183
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 0.435601736980843,
+        "pressure_change_pct_of_finer": 9.749946002846645
+      },
+      {
+        "case": "64",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 24.765096793845302,
+        "pressure_change_pct_of_finer": 29.199389720206497
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 7.395525230279305,
+        "pressure_change_pct_of_finer": 4.126705393123316
+      },
+      {
+        "case": "bend0",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 13.718381863474775,
+        "pressure_change_pct_of_finer": 20.520156143888464
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 67.5,
+        "strain_change_pct_of_finer": 11.110593318508098,
+        "pressure_change_pct_of_finer": 2.20456361993376
+      },
+      {
+        "case": "bend67.5",
+        "station": 12,
+        "rib_deg": 157.5,
+        "strain_change_pct_of_finer": 1.0983921237240244,
+        "pressure_change_pct_of_finer": 3.7710849967290625
+      }
+    ]
+  },
+  "correction": {
+    "max_material_projection_error_mm": 0.13908564876494767,
+    "max_rigid_fit_residual_mm": 0.07113707456327706,
+    "max_rigid_fit_bore_shift_mm": 0.035745875990082866,
+    "max_intended_metal_overlap_mm3": 0.0005302660353942643,
+    "unintended_overlap_pairs": 0
+  },
+  "manufacturing_status": "Open pending contact refinement, material and tolerance measurements, tool access and hardware validation."
+}

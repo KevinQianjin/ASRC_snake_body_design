@@ -1,0 +1,2563 @@
+{
+  "surface_edge_mm": 0.15,
+  "transfer_quality": [
+    {
+      "station": -12,
+      "rib_deg": 67.5,
+      "points": 16354,
+      "max_projection_error_mm": 0.13908564876429916,
+      "p99_projection_error_mm": 0.06751252292413602
+    },
+    {
+      "station": -12,
+      "rib_deg": 157.5,
+      "points": 16353,
+      "max_projection_error_mm": 0.13908564876429738,
+      "p99_projection_error_mm": 0.06188808737206665
+    },
+    {
+      "station": -12,
+      "rib_deg": 247.5,
+      "points": 16357,
+      "max_projection_error_mm": 0.1390856487643068,
+      "p99_projection_error_mm": 0.0635842348036469
+    },
+    {
+      "station": -12,
+      "rib_deg": 337.5,
+      "points": 16357,
+      "max_projection_error_mm": 0.13908564876430585,
+      "p99_projection_error_mm": 0.065713194042655
+    },
+    {
+      "station": 12,
+      "rib_deg": 67.5,
+      "points": 16083,
+      "max_projection_error_mm": 0.13908564876494078,
+      "p99_projection_error_mm": 0.06751266643656904
+    },
+    {
+      "station": 12,
+      "rib_deg": 157.5,
+      "points": 16109,
+      "max_projection_error_mm": 0.13908564876493854,
+      "p99_projection_error_mm": 0.067512985664595
+    },
+    {
+      "station": 12,
+      "rib_deg": 247.5,
+      "points": 16105,
+      "max_projection_error_mm": 0.13908564876494767,
+      "p99_projection_error_mm": 0.06781603581345912
+    },
+    {
+      "station": 12,
+      "rib_deg": 337.5,
+      "points": 16081,
+      "max_projection_error_mm": 0.13908564876494706,
+      "p99_projection_error_mm": 0.06757623820730817
+    }
+  ],
+  "stations": [
+    {
+      "case": "bend67.5",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          0.0059164743498228995,
+          -0.0024506839175335964,
+          -0.003482897110547224
+        ],
+        "rotation_xyz_rad": [
+          0.00018113033149504552,
+          0.00043728730290470936,
+          -1.2822642253551564e-14
+        ],
+        "maximum_incompatibility_mm": 0.07108833834745094,
+        "rms_incompatibility_mm": 0.05592867628083951,
+        "maximum_bore_shift_mm": 0.016980789505553213
+      },
+      "unintended": {
+        "rib_deg": 247.5,
+        "part": "fork_3",
+        "family": "fork",
+        "gap_mm": 0.07881653827919935,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          -6.493999891968592,
+          -18.812276574252614,
+          0.6684122562261715
+        ]
+      },
+      "intended": {
+        "rib_deg": 247.5,
+        "part": "shoulder_pin_3",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0005302660353942643,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.0788165862180503,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.710336761481352,
+            17.894239905103838,
+            0.6684121531808953
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.10956837255600468,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.042296881406909,
+            17.848145276216393,
+            -0.8066130925981831
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004064961782646669,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00012131192124212025,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.1791781699518831,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.104775655189933,
+            7.446178180212905,
+            0.8062239194853442
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.13780264726587682,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -17.896976796455743,
+            6.080997654515313,
+            -0.8320763141880879
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0005254455402506887,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.7117887060406763e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.07881653827919935,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.493999891968592,
+            -18.812276574252614,
+            0.6684122562261715
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.10956838979470833,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.347995481215484,
+            -16.893093676043293,
+            -0.806613101406563
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0005302660353942643,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0193820276352477,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.3025028025770435,
+            -18.80097930045688,
+            -0.3043592248633931
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.13582112277640113,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.879824090870954,
+            -8.734323403539332,
+            0.6384780659567967
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.1816331800930114,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.205581315667118,
+            -7.066555559562684,
+            -0.6278329381761514
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004644038753156001,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 4.697144946167912e-06,
+          "location_xyz_mm": null
+        }
+      ]
+    },
+    {
+      "case": "bend0",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          0.0018824875272826205,
+          -0.008335915942222142,
+          -0.0009578267127399306
+        ],
+        "rotation_xyz_rad": [
+          0.00038951763538505824,
+          -5.9003899933508584e-05,
+          5.6289974519502586e-05
+        ],
+        "maximum_incompatibility_mm": 0.06325559143504797,
+        "rms_incompatibility_mm": 0.04850344156607197,
+        "maximum_bore_shift_mm": 0.014906762113173258
+      },
+      "unintended": {
+        "rib_deg": 337.5,
+        "part": "fork_0",
+        "family": "fork",
+        "gap_mm": 0.07320986682415066,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          17.902078295640713,
+          -8.703362598065587,
+          0.6689427676331136
+        ]
+      },
+      "intended": {
+        "rib_deg": 247.5,
+        "part": "shoulder_pin_3",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.00048054416422551525,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.14836789771770148,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.642149010916368,
+            17.621714657550203,
+            0.8166336400983348
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.10944738342573708,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.077835650261376,
+            17.886468383921553,
+            -0.8411899843535655
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004285117673497629,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00018301760443915124,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.08457736389643973,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.575268658658757,
+            6.406936655134766,
+            0.8365870526628756
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.09981308905301768,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.93421427995286,
+            8.35764917103079,
+            -0.8410676279231489
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00033424777921892986,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.02391723805054917,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.758635250295356,
+            6.287101032809062,
+            -0.372705096722427
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.10205670052495908,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.4920588172036915,
+            -18.815318988078012,
+            0.654180730282069
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.14351791852815232,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.281273329477083,
+            -16.69517127514753,
+            -0.6457044406890313
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00048054416422551525,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.020525216748666156,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -5.8658714515735815,
+            -17.73791347995479,
+            0.22727375170676464
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.07320986682415066,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.902078295640713,
+            -8.703362598065587,
+            0.6689427676331136
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.10157586031572022,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.64651114516756,
+            -5.973980031229377,
+            -0.667162738341033
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0003017350611308613,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00014161836104249412,
+          "location_xyz_mm": null
+        }
+      ]
+    },
+    {
+      "case": "146",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.004150477075222575,
+          0.026879163898950148,
+          -0.0016862733111450631
+        ],
+        "rotation_xyz_rad": [
+          6.213687616578317e-05,
+          -0.0006159891063839339,
+          -0.0001126756188551438
+        ],
+        "maximum_incompatibility_mm": 0.049581965449656026,
+        "rms_incompatibility_mm": 0.029807549433803277,
+        "maximum_bore_shift_mm": 0.035745875990082866
+      },
+      "unintended": {
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "gap_mm": 0.0796581792349128,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          -18.712385328268,
+          6.39233771601145,
+          0.7571101223730835
+        ]
+      },
+      "intended": {
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.00048273903087397974,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.22607583372378326,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            7.467970979483792,
+            18.094441454211797,
+            0.7768906840858947
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.17331933600136537,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.253995335633746,
+            16.998304967525748,
+            -0.8097542469360033
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00048273903087397974,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.011510573054308883,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.846373500798186,
+            17.70939397861701,
+            -0.05117155579212253
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.0796581792349128,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.712385328268,
+            6.39233771601145,
+            0.7571101223730835
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.10443695788710115,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.884282145980652,
+            8.286317683775525,
+            -0.7881300578272117
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 2.23350373434407e-09,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00031459834777780083,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.164493758974801,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.311866151182551,
+            -18.587104090134183,
+            0.8057695776827489
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.15429707927307984,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.361222557308789,
+            -16.950986506948844,
+            -0.8196701892585274
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 8.865444624491678e-06,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 8.646600231886199e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.16344276490843182,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.605011155181202,
+            -8.691889167823497,
+            0.8037898293332938
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.17684914245559386,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.90304776120093,
+            -6.072068618465332,
+            -0.8082167182323037
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00019397527041704193,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.04020339754450752,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.73811641810761,
+            -6.285658922112116,
+            -0.38944888635781405
+          ]
+        }
+      ]
+    },
+    {
+      "case": "141",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.006149345416881023,
+          0.027512988083142127,
+          -0.0011833367116263144
+        ],
+        "rotation_xyz_rad": [
+          0.0001453488326904705,
+          -0.0004153914437203406,
+          -8.035899741183974e-05
+        ],
+        "maximum_incompatibility_mm": 0.04777640935172096,
+        "rms_incompatibility_mm": 0.029030017019098714,
+        "maximum_bore_shift_mm": 0.032982710786373236
+      },
+      "unintended": {
+        "rib_deg": 157.5,
+        "part": "fork_2",
+        "family": "fork",
+        "gap_mm": 0.08664890063195407,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          -18.709186084215585,
+          6.393322845376291,
+          0.7546367193538941
+        ]
+      },
+      "intended": {
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0004642720596896318,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.21001184434927272,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.687979729853975,
+            17.59262018426785,
+            0.7844181736295268
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.1568860018268403,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.057760840130645,
+            17.90340140119517,
+            -0.8168178558639301
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004642720596896318,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.012927910380467608,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.847621333029847,
+            17.70921983855778,
+            -0.0656426205726263
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.08664890063195407,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.709186084215585,
+            6.393322845376291,
+            0.7546367193538941
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.09486535184042995,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.917824647799826,
+            8.295902513236221,
+            -0.8174843167852412
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 2.1632085773315122e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0003161514297712309,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.16299357327915867,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.311870611458312,
+            -18.587924084309932,
+            0.8061232153741983
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.15464410848422214,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.360599544078699,
+            -16.951072330960987,
+            -0.819321091941248
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 6.801595265538137e-06,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 9.326837883527403e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.1530825443172604,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.609766021049317,
+            -8.688224026922846,
+            0.8080201849512414
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.16976913908063712,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.898910256010737,
+            -6.0768601188194715,
+            -0.8111471867932204
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00021129632609545492,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.04128259006971979,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.777304490142637,
+            -6.301249265756777,
+            -0.32467862158760363
+          ]
+        }
+      ]
+    },
+    {
+      "case": "47",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.010146497670000833,
+          0.016499863433083028,
+          0.0007395635049406629
+        ],
+        "rotation_xyz_rad": [
+          -0.0004659715674368292,
+          0.0003957034787140855,
+          0.00013785557516346122
+        ],
+        "maximum_incompatibility_mm": 0.04023185898110374,
+        "rms_incompatibility_mm": 0.024985644059208476,
+        "maximum_bore_shift_mm": 0.02498783775407092
+      },
+      "unintended": {
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "gap_mm": 0.11215330459859482,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          8.764975255677014,
+          17.862420976000116,
+          0.6540476645105864
+        ]
+      },
+      "intended": {
+        "rib_deg": 157.5,
+        "part": "threaded_cap_2",
+        "family": "threaded_cap",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0001684798874882032,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.11215330459859482,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.764975255677014,
+            17.862420976000116,
+            0.6540476645105864
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.13193310700649866,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.999043450179389,
+            17.647487296286755,
+            -0.6557941085051036
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00012814854262348436,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.04327859784587752,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.3109955796796395,
+            18.793347750513988,
+            0.30043217767156893
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.13560757183499855,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -17.872694323940852,
+            8.724456428123416,
+            0.6439743886679845
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.12199547289256135,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -17.663951233599008,
+            5.951775884919876,
+            -0.6598505782468107
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 8.072763357311072e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0001684798874882032,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.16327319233429266,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.638820199288762,
+            -17.626588708739085,
+            0.8041677869331245
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.1570475059118207,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.029801106189526,
+            -17.915277229766385,
+            -0.8169195413994818
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 3.025340116559335e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 3.933768927437996e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.15081289275526222,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.612293556550096,
+            -8.679200719910046,
+            0.8102768763094155
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.15292274489820468,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.894841507676666,
+            -6.078805991177726,
+            -0.8194140527079025
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 8.251399592122627e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.027108872691781506,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.765150326567017,
+            -5.877178964736597,
+            0.27295288440052556
+          ]
+        }
+      ]
+    },
+    {
+      "case": "64",
+      "station": -12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.009384167350391876,
+          0.026709269113735667,
+          -0.0008936344476273938
+        ],
+        "rotation_xyz_rad": [
+          0.00010526178601275452,
+          0.00011201287702727127,
+          7.01488909621642e-06
+        ],
+        "maximum_incompatibility_mm": 0.045584723718664025,
+        "rms_incompatibility_mm": 0.028246554878887258,
+        "maximum_bore_shift_mm": 0.028778801159530402
+      },
+      "unintended": {
+        "rib_deg": 67.5,
+        "part": "gate_1",
+        "family": "gate",
+        "gap_mm": 0.09364084258967662,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          6.094622005003208,
+          17.867189333636283,
+          -0.8418438397194359
+        ]
+      },
+      "intended": {
+        "rib_deg": 157.5,
+        "part": "threaded_cap_2",
+        "family": "threaded_cap",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0003918596736025271,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.133161766610859,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.658790192061732,
+            17.629556659706463,
+            0.8152496414770534
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.09364084258967662,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.094622005003208,
+            17.867189333636283,
+            -0.8418438397194359
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0003834383791088507,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.018452441602392244,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.855781344050062,
+            17.722328258673357,
+            0.14781107255911488
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.13988615223316606,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.717095341460414,
+            6.368534005858624,
+            0.7239287556509069
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.12537486481850688,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.947476118054258,
+            8.33575491974762,
+            -0.8280354813586512
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00010848461041548946,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0003918596736025271,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.1767487967552247,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.304490196287395,
+            -18.58631465239575,
+            0.8007644873330388
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.16001919829705077,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.366423620498246,
+            -16.950569093071458,
+            -0.8172900867721198
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.3116374281605762e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00013323423885296977,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.12545441598471133,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.622086520848853,
+            -8.679034816942254,
+            0.8193813851876739
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.15292576363012167,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.888580106695052,
+            -6.089761448391249,
+            -0.8182111099240419
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00024732984560608647,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.04217541071608303,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.756260820560257,
+            -6.295155989942402,
+            0.3651313941902441
+          ]
+        }
+      ]
+    },
+    {
+      "case": "bend67.5",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          0.005937723542752278,
+          -0.002459485620787197,
+          0.0034842175591440956
+        ],
+        "rotation_xyz_rad": [
+          -0.00018154678349593844,
+          -0.00043829270691518585,
+          6.332608049053334e-15
+        ],
+        "maximum_incompatibility_mm": 0.07113707456327706,
+        "rms_incompatibility_mm": 0.05593518054706417,
+        "maximum_bore_shift_mm": 0.01701676209305014
+      },
+      "unintended": {
+        "rib_deg": 67.5,
+        "part": "fork_1",
+        "family": "fork",
+        "gap_mm": 0.0790728566123569,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          8.710341453648212,
+          17.894196072273708,
+          -0.6682840501413185
+        ]
+      },
+      "intended": {
+        "rib_deg": 247.5,
+        "part": "shoulder_pin_3",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0005264751410165475,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.0790728566123569,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.710341453648212,
+            17.894196072273708,
+            -0.6682840501413185
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.10958466508729747,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.04226285493807,
+            17.848299864911695,
+            0.8066915050276187
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00040892360278705,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00012041854350005034,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.17924756332002229,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.10475342401292,
+            7.446168889799321,
+            -0.8061989493321104
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.1378889210116427,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.954766131248476,
+            8.35575867899876,
+            0.8320392599362911
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0005253845898980901,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.697391635939345e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.07907328630675795,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.493947114228185,
+            -18.812255364609015,
+            -0.6682845902764001
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.10958482268081551,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.348128497300038,
+            -16.893179224460646,
+            0.8066915238426298
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0005264751410165475,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.019463673437745597,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.3025129445503865,
+            -18.800908737279414,
+            0.3044338585993467
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.1357490769162612,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.88060827284616,
+            -8.732384991037755,
+            -0.6385242117234197
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.18167600069354742,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.155642241132824,
+            -7.187252544368499,
+            0.6278317417175039
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00046448333669264037,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 4.688774876846351e-06,
+          "location_xyz_mm": null
+        }
+      ]
+    },
+    {
+      "case": "bend0",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          0.0019006120900662419,
+          -0.008390468003978215,
+          0.0009014595831935199
+        ],
+        "rotation_xyz_rad": [
+          -0.0003799053574199398,
+          6.744082418163417e-05,
+          5.583432696933295e-05
+        ],
+        "maximum_incompatibility_mm": 0.06324862394277309,
+        "rms_incompatibility_mm": 0.0484563920216735,
+        "maximum_bore_shift_mm": 0.01468138926483247
+      },
+      "unintended": {
+        "rib_deg": 337.5,
+        "part": "fork_0",
+        "family": "fork",
+        "gap_mm": 0.07605817635609309,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          17.90094270867396,
+          -8.704328871704643,
+          -0.6676910604183579
+        ]
+      },
+      "intended": {
+        "rib_deg": 247.5,
+        "part": "shoulder_pin_3",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0004903687398144527,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.15026594914057717,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.642868834256472,
+            17.6206945042154,
+            -0.8159585064670787
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.11143065834394231,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.076902860325189,
+            17.88761138591188,
+            0.8404866259368322
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.000426791356157683,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0001814022565403812,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.08232021178435533,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.575311010800817,
+            6.4086382656808745,
+            -0.83747990562879
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.09778324561475586,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.934170928298542,
+            8.356116419628247,
+            0.8418661729738512
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0003324831509500321,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.02414040971432481,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.75948484375183,
+            6.287572780865336,
+            0.37131412924075724
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.09901445318073702,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.494145841735351,
+            -18.81497971407935,
+            -0.655626865056837
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.14046407486775878,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.279509720368031,
+            -16.69528231996447,
+            0.6471212917774452
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004903687398144527,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.020921590150604453,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -5.86645291440733,
+            -17.737727492059655,
+            -0.23100870642049778
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.07605817635609309,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.90094270867396,
+            -8.704328871704643,
+            -0.6676910604183579
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.10374065679348739,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.647658759509234,
+            -5.9725042606482255,
+            0.6661990332633262
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00030185828941384343,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00014127460302343069,
+          "location_xyz_mm": null
+        }
+      ]
+    },
+    {
+      "case": "146",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.005434332255854404,
+          0.026974557252711074,
+          0.0029039615271238867
+        ],
+        "rotation_xyz_rad": [
+          -0.0001254557466731722,
+          -0.00022569743460712973,
+          -7.324450692100873e-05
+        ],
+        "maximum_incompatibility_mm": 0.05044392670393928,
+        "rms_incompatibility_mm": 0.03138862058497204,
+        "maximum_bore_shift_mm": 0.0297266228788971
+      },
+      "unintended": {
+        "rib_deg": 67.5,
+        "part": "gate_1",
+        "family": "gate",
+        "gap_mm": 0.10408860851855296,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          6.081212016433726,
+          17.8771250816403,
+          0.8383386562601673
+        ]
+      },
+      "intended": {
+        "rib_deg": 157.5,
+        "part": "threaded_cap_2",
+        "family": "threaded_cap",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.0004262214620151005,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.15893204074389738,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.661263475183743,
+            17.6190286462497,
+            -0.8056836114164994
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.10408860851855296,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.081212016433726,
+            17.8771250816403,
+            0.8383386562601673
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004191834160143779,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.010071334045534763,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.8451170845135705,
+            17.70695398852635,
+            -0.028260604751360913
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.13647888565194108,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.689079082146243,
+            6.352377397092983,
+            -0.7477939359088871
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.13590606028570681,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.95028645770813,
+            8.33724018021514,
+            0.823820585866679
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 2.381181436889683e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0004262214620151005,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.19198628303932916,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.29915202243689,
+            -18.583137181371356,
+            -0.7949900402865533
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.16575407680592216,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.375262879511695,
+            -16.9490803531043,
+            0.8152237589785967
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.3238924244350212e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 6.823201670175813e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.10960185596433075,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.628681189270917,
+            -8.677749192219384,
+            -0.8251161152552724
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.15682535372576756,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.886767041077036,
+            -6.094010983980068,
+            0.8157739688176346
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00020719859490284312,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.03875769020641005,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.5653712181538,
+            -6.214413377262354,
+            -0.5496683125921666
+          ]
+        }
+      ]
+    },
+    {
+      "case": "141",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.006065869678120154,
+          0.027526376306309525,
+          0.002380700930812619
+        ],
+        "rotation_xyz_rad": [
+          -6.268578624132301e-05,
+          -0.0001637750274988652,
+          -6.0700635666110364e-05
+        ],
+        "maximum_incompatibility_mm": 0.048833192735789434,
+        "rms_incompatibility_mm": 0.03078399683731828,
+        "maximum_bore_shift_mm": 0.029930177591618236
+      },
+      "unintended": {
+        "rib_deg": 67.5,
+        "part": "gate_1",
+        "family": "gate",
+        "gap_mm": 0.09890588623975524,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          6.085779202658178,
+          17.873741560428726,
+          0.8405460158804341
+        ]
+      },
+      "intended": {
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.00041598561276360576,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.15344527171499475,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.660336303860808,
+            17.620859233543417,
+            -0.8081050125277484
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.09890588623975524,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.085779202658178,
+            17.873741560428726,
+            0.8405460158804341
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00041598561276360576,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.012078270516014464,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.847171010949745,
+            17.708081640205748,
+            -0.06511943820160818
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.12225489372068234,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.683846484933472,
+            6.360576921066502,
+            -0.7575480084690368
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.12183404734066519,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.9502994257985,
+            8.326877932884468,
+            0.8296409484077316
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 4.9807963053588e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00040036345343930915,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.18652696693466816,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.302109001863718,
+            -18.58415410370332,
+            -0.7968301253791772
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.1605417110476206,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.371282005259374,
+            -16.948645158070356,
+            0.817021217046755
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.0457412399720291e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 7.532868302846134e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.1139666191283076,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.626907934296764,
+            -8.678184483004806,
+            -0.8234839665892583
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.15503280470537273,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.886806695573775,
+            -6.0932764558555546,
+            0.8166992132702093
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0002231829936904139,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.03982400674778586,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.565397832544832,
+            -6.21493841274143,
+            -0.5492704975837105
+          ]
+        }
+      ]
+    },
+    {
+      "case": "47",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.008711756216626688,
+          0.018000137619629854,
+          -0.0022429735509084036
+        ],
+        "rotation_xyz_rad": [
+          -0.00010755276514547584,
+          -4.79342831868221e-06,
+          0.0001329100470904114
+        ],
+        "maximum_incompatibility_mm": 0.04180436869534916,
+        "rms_incompatibility_mm": 0.027300696799217202,
+        "maximum_bore_shift_mm": 0.02349830385604426
+      },
+      "unintended": {
+        "rib_deg": 157.5,
+        "part": "gate_2",
+        "family": "gate",
+        "gap_mm": 0.1364407821686644,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          -16.710602005655495,
+          8.262104435930041,
+          0.6534181647973403
+        ]
+      },
+      "intended": {
+        "rib_deg": 337.5,
+        "part": "shoulder_pin_0",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.00018448689177843333,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.20026142900810523,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.426235616240253,
+            18.803593192056518,
+            -0.6180697667069217
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.19349217112799558,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.169361042762755,
+            16.768176716022136,
+            0.6309077288276057
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00012858619964121798,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.03791403583975013,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.150792953704232,
+            18.413655660580766,
+            0.6111401971617647
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.1435714837287371,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.819619652351218,
+            6.433108941849014,
+            -0.6405377401431467
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.1364407821686644,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.710602005655495,
+            8.262104435930041,
+            0.6534181647973403
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 6.184079148963241e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 3.519139489796571e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.1607580761326569,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.309080728024675,
+            -18.593826129068198,
+            -0.8042351477591015
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.17995997508788047,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.373514824218638,
+            -16.949627226798057,
+            0.8062206444119402
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.8179389615427556e-06,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 9.003439861232858e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.19345085772797163,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.572889609600473,
+            -6.32431993180945,
+            -0.7939250295058637
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.18828320488032166,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            16.939023276563905,
+            -8.416036625999194,
+            0.8058516367235752
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00018448689177843333,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.026346630358483614,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.743744957708262,
+            -5.867940502163329,
+            -0.21801774012674868
+          ]
+        }
+      ]
+    },
+    {
+      "case": "64",
+      "station": 12,
+      "rigid_fit": {
+        "translation_xyz_mm": [
+          -0.007752934544042971,
+          0.026643191558629455,
+          0.0012995070530639552
+        ],
+        "rotation_xyz_rad": [
+          -9.482343012119393e-05,
+          0.0001432636744591506,
+          -7.744497469319711e-06
+        ],
+        "maximum_incompatibility_mm": 0.04630651256910507,
+        "rms_incompatibility_mm": 0.029723059237218425,
+        "maximum_bore_shift_mm": 0.028456548628063596
+      },
+      "unintended": {
+        "rib_deg": 157.5,
+        "part": "gate_2",
+        "family": "gate",
+        "gap_mm": 0.08655572084613598,
+        "intersection_mm3": 0.0,
+        "location_xyz_mm": [
+          -16.94942218849917,
+          8.302949349226864,
+          0.8441939277468433
+        ]
+      },
+      "intended": {
+        "rib_deg": 67.5,
+        "part": "shoulder_pin_1",
+        "family": "shoulder_pin",
+        "gap_mm": 0.0,
+        "intersection_mm3": 0.00041475637303878526,
+        "location_xyz_mm": null
+      },
+      "nearby_pairs": [
+        {
+          "rib_deg": 67.5,
+          "part": "fork_1",
+          "family": "fork",
+          "gap_mm": 0.1622063503561529,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            8.670753242984793,
+            17.61449090515476,
+            -0.8040686803819598
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "gate_1",
+          "family": "gate",
+          "gap_mm": 0.1146651533526326,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            6.082719354673653,
+            17.87967013361464,
+            0.8339240455716974
+          ]
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "shoulder_pin_1",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00041475637303878526,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 67.5,
+          "part": "threaded_cap_1",
+          "family": "threaded_cap",
+          "gap_mm": 0.018181139933539453,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            5.859699102825797,
+            17.728204515357618,
+            -0.18710421333058525
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "fork_2",
+          "family": "fork",
+          "gap_mm": 0.09250802626609268,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -18.667284590957593,
+            6.379085262260969,
+            -0.7811227712094722
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "gate_2",
+          "family": "gate",
+          "gap_mm": 0.08655572084613598,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -16.94942218849917,
+            8.302949349226864,
+            0.8441939277468433
+          ]
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "shoulder_pin_2",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00013882366986080725,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 157.5,
+          "part": "threaded_cap_2",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.0002962467883873598,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "fork_3",
+          "family": "fork",
+          "gap_mm": 0.16506724829429997,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -6.312215553616362,
+            -18.587457607779914,
+            -0.805037956891625
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "gate_3",
+          "family": "gate",
+          "gap_mm": 0.15040895373889185,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            -8.35958819597878,
+            -16.94982830498676,
+            0.8208056039886085
+          ]
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "shoulder_pin_3",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 1.2384956222675133e-05,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 247.5,
+          "part": "threaded_cap_3",
+          "family": "threaded_cap",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00010159844387351223,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "fork_0",
+          "family": "fork",
+          "gap_mm": 0.14589057013496556,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.61277551502223,
+            -8.685022538840801,
+            -0.8113394821235873
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "gate_0",
+          "family": "gate",
+          "gap_mm": 0.16182701509544023,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            17.895015247034237,
+            -6.0820420790462375,
+            0.8148873331133255
+          ]
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "shoulder_pin_0",
+          "family": "shoulder_pin",
+          "gap_mm": 0.0,
+          "intersection_mm3": 0.00027553276653415526,
+          "location_xyz_mm": null
+        },
+        {
+          "rib_deg": 337.5,
+          "part": "threaded_cap_0",
+          "family": "threaded_cap",
+          "gap_mm": 0.044028831134171255,
+          "intersection_mm3": 0.0,
+          "location_xyz_mm": [
+            18.179332536929873,
+            -6.056547520322349,
+            -0.6139186301290878
+          ]
+        }
+      ]
+    }
+  ]
+}
