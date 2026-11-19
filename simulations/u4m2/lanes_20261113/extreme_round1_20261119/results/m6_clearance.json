@@ -1,0 +1,2001 @@
+{
+  "step": 1710,
+  "station_mm": -12,
+  "aabb_pad_mm": 0.6,
+  "straight_gaps_mm": {
+    "guide": 0.08437601113394308,
+    "caps": 0.08437685296377857,
+    "wire_envelope": 0.20687741065104437
+  },
+  "resolution": [
+    {
+      "axial_mesh_span_mm": 0.5,
+      "full_body_triangles": 848820,
+      "retained_triangles": 7397,
+      "nominal_gaps_mm": {
+        "guide": 0.02046793734599136,
+        "caps": 0.036031836859022205,
+        "wire_envelope": 0.1367300652767893
+      },
+      "nominal_body_guide_witness_CAD_mm": [
+        [
+          6.677393904011176,
+          20.040272671209504,
+          -0.26814277448377705
+        ],
+        [
+          6.681019841103999,
+          20.04902645744342,
+          -0.25
+        ]
+      ],
+      "closure_direction_CAD": [
+        -0.17715205159807992,
+        -0.42768287228668717,
+        -0.8863997469354333
+      ],
+      "clear_to_contact_bracket_mm": [
+        0.02036793734599136,
+        0.02056793734599136
+      ],
+      "cases": [
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.07046793734599095,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.10431231852957847,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.04546793734599102,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.011046227249977919,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.12929792813862276,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.02046793734599136,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.036031836859022205,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1367300652767893,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.010467937345992566,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.04602608070263969,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.12673006527679065,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.000467937345991004,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.05602032454625817,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.11673006527678892,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02036793734599136,
+          "part": "guide",
+          "gap_mm": 0.00010000000000106763,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02036793734599136,
+          "part": "caps",
+          "gap_mm": 0.05638805010175898,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02036793734599136,
+          "part": "wire_envelope",
+          "gap_mm": 0.11636212793079846,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02056793734599136,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02056793734599136,
+          "part": "caps",
+          "gap_mm": 0.056587934978632785,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02056793734599136,
+          "part": "wire_envelope",
+          "gap_mm": 0.1161621279307971,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.061017446468066755,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.11173006527679026,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.07638962677104874,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.08673006527679009,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.011610334766085398,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.04443651774523101,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.12787245843014122,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.016039136056039065,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.040745781691738585,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.13230126185346447,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.02046793734599136,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.036031836859022205,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1367300652767893,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.022239457861971915,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.0341462589259354,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.13850158664611972,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.02401097837795404,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.032260680992850226,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.14027310801544862,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.02489673863594365,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.03131789202630754,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.1411588687001141,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.029325539925895847,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.02660394719359137,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.14485564854078,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.027430825617613175,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11534592342962775,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.009775865538824792,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.04194609371659803,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.1260379943532091,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.02046793734599136,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.036031836859022205,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1367300652767893,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.024744766068859683,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.03147964989341013,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14100689364622196,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.02902159479172385,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.026927462927800953,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.1451791637404302,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.031160009153158082,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.024651369444997052,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.14290307023862148,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.026685888346666665,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.013270902030967625,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.1315226027295779,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.07954108578622794,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.09241007793010063,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.05778646132262518,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.11457007160344578,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.02046793734599136,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.036031836859022205,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1367300652767893,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.02933193481534488,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.027329987073580413,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14558168796223314,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.03819593228470005,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.018628137288139612,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.13687983817680247,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.042627931019377535,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.014277212395419419,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.13252891328408714,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.06478792469276215,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11077428882050859,
+          "intersects": false
+        }
+      ]
+    },
+    {
+      "axial_mesh_span_mm": 0.25,
+      "full_body_triangles": 2490254,
+      "retained_triangles": 24948,
+      "nominal_gaps_mm": {
+        "guide": 0.020777639494554682,
+        "caps": 0.0354312791714942,
+        "wire_envelope": 0.1371553187171721
+      },
+      "nominal_body_guide_witness_CAD_mm": [
+        [
+          6.677331134436336,
+          20.040105431619228,
+          -0.26839888802154493
+        ],
+        [
+          6.681025392046538,
+          20.049024158167665,
+          -0.25
+        ]
+      ],
+      "closure_direction_CAD": [
+        -0.177799677926364,
+        -0.4292463805031526,
+        -0.8855138730444736
+      ],
+      "clear_to_contact_bracket_mm": [
+        0.020677639494554683,
+        0.020877639494554682
+      ],
+      "cases": [
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.07077763949455507,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.10359553334568233,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.045777639494554254,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.01044258945982791,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.12858422305735087,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020777639494554682,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.0354312791714942,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1371553187171721,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.010777639494554006,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.04542675505616047,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.127155318717172,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.0007776394945558854,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.055422230940828876,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.11715531871717162,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020677639494554683,
+          "part": "guide",
+          "gap_mm": 0.00010000000000189968,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020677639494554683,
+          "part": "caps",
+          "gap_mm": 0.05609956386345824,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020677639494554683,
+          "part": "wire_envelope",
+          "gap_mm": 0.11647767922261693,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020877639494554682,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020877639494554682,
+          "part": "caps",
+          "gap_mm": 0.05629947338115462,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020877639494554682,
+          "part": "wire_envelope",
+          "gap_mm": 0.11627767922261571,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.06041996888316228,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.112155318717172,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.07679972461114208,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.08715531871717083,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.011887655598235146,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.044826852168693754,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.12826533053856887,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.016332647546394914,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.04012906567009345,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.13271032462787052,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020777639494554682,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.0354312791714942,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1371553187171721,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.022555636273819592,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.0335521645720548,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.13893331635289105,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.02433363305308287,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.03167304997261412,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.14071131398861145,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.02522263144271455,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.0307334926728951,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.14160031280647248,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.02966762339087438,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.02603570617429447,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.1441773402287983,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.027958963043183915,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11569300146578233,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.010046479981975324,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.04252859541022628,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.1264241600914778,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020777639494554682,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.0354312791714942,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1371553187171721,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.025070103299587615,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.030894696070703925,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14144778216744938,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.029362567104620683,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.026358112969916497,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.14449974649169445,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.03150879900713577,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.024089821419522775,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.14223145492236416,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.02659945186158588,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.012748363667551665,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.13088999707571025,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.07898823673621871,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.0928796250649539,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.0572097579538572,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.11501747189106144,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020777639494554682,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.0354312791714942,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1371553187171721,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.029632778224999577,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.02671988765854987,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14486190071606145,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.03848791695544444,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.018008496145604142,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.13616943350858474,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.04291548632066611,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.01365280038912948,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.13182329134584939,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.06505333314677753,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11009258053216438,
+          "intersects": false
+        }
+      ]
+    },
+    {
+      "axial_mesh_span_mm": 0.125,
+      "full_body_triangles": 8134290,
+      "retained_triangles": 89165,
+      "nominal_gaps_mm": {
+        "guide": 0.020932436045520364,
+        "caps": 0.03537169433751423,
+        "wire_envelope": 0.1372688267145168
+      },
+      "nominal_body_guide_witness_CAD_mm": [
+        [
+          6.677299630415514,
+          20.04002148083737,
+          -0.2685266669716797
+        ],
+        [
+          6.681028182767212,
+          20.04902300221328,
+          -0.25
+        ]
+      ],
+      "closure_direction_CAD": [
+        -0.17812319328672976,
+        -0.4300274156496821,
+        -0.8850697993960668
+      ],
+      "clear_to_contact_bracket_mm": [
+        0.020832436045520365,
+        0.021032436045520363
+      ],
+      "cases": [
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.07093243604551816,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.10359104352550519,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.04593243604551875,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.010383015689705634,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.1285797221733129,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020932436045520364,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.03537169433751423,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1372688267145168,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.010932436045521214,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.045367165796637625,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.12726884496019425,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.0009324360455189524,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.05536263725576066,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.11726886320586903,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020832436045520365,
+          "part": "guide",
+          "gap_mm": 9.999999999785072e-05,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020832436045520365,
+          "part": "caps",
+          "gap_mm": 0.05619469632921651,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.020832436045520365,
+          "part": "wire_envelope",
+          "gap_mm": 0.1164364286791848,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.021032436045520363,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.021032436045520363,
+          "part": "caps",
+          "gap_mm": 0.05639460575839762,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.021032436045520363,
+          "part": "wire_envelope",
+          "gap_mm": 0.11623642904410042,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.060360372985320807,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.11226887232870841,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.07690724382992248,
+          "intersects": false
+        },
+        {
+          "axis": "toward_web",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.08726891794289887,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.012026276381182225,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.0447834252935668,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.1283950295987731,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.016479356213350452,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.040077559815539725,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.1328319281566441,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020932436045520364,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.03537169433751423,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1372688267145168,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.02271366797838682,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.03348934814630335,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.13904358613766574,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.024494899911253275,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.03160700195509234,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.14081834556081457,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.025385515877688787,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.030665828859486897,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.14170572527239086,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.02982267878561514,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.02595996338145986,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_x",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.14415667032283103,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.02811974107322785,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11584559812339505,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.010181750654279205,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.04270590194556521,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.12655721241895732,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020932436045520364,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.03537169433751423,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1372688267145168,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.025232710202017176,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.0308273094855061,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14155347243274338,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.029518178089021584,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.026282924633500796,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.14447963104122835,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.031660501125179895,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.024010732207498116,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.14220743859625415,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.02655621225246451,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.012649770077477999,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_y",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.1308464763713877,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "caps",
+          "gap_mm": 0.07890482514994343,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.09297095993200714,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "guide",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "caps",
+          "gap_mm": 0.057138259743728034,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": -0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.11511989332326202,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "guide",
+          "gap_mm": 0.020932436045520364,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "caps",
+          "gap_mm": 0.03537169433751423,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.0,
+          "part": "wire_envelope",
+          "gap_mm": 0.1372688267145168,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "guide",
+          "gap_mm": 0.029783134039479627,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "caps",
+          "gap_mm": 0.026665068175028457,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.01,
+          "part": "wire_envelope",
+          "gap_mm": 0.14486190071606145,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "guide",
+          "gap_mm": 0.03863383203344151,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "caps",
+          "gap_mm": 0.01795844201254307,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.02,
+          "part": "wire_envelope",
+          "gap_mm": 0.1361648003386319,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "guide",
+          "gap_mm": 0.04305918103042336,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "caps",
+          "gap_mm": 0.013605128931298664,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.025,
+          "part": "wire_envelope",
+          "gap_mm": 0.13181626405761968,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "guide",
+          "gap_mm": 0.06518592601532448,
+          "intersects": false
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "caps",
+          "gap_mm": 0.0,
+          "intersects": true
+        },
+        {
+          "axis": "CAD_z",
+          "translation_mm": 0.05,
+          "part": "wire_envelope",
+          "gap_mm": 0.11007358265256316,
+          "intersects": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2035 @@
+{
+  "trial_E_MPa": 40000.0,
+  "trial_nu": 0.33,
+  "end_z_mm": 44.9999,
+  "solutions": [
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.4971105388981265e-14,
+        1.7579503081463315e-14,
+        4.109850594592938e-14,
+        2.1344075467906666e-14,
+        8.379752207100772e-15,
+        3.672797038666119e-14,
+        1.8695757202457332e-14,
+        5.0817115724609314e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.152865252822727e-08,
+      "rest_material_length_mm": 90.33907907896375,
+      "imposed_chord_mm": 89.59138801207484,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.0018376464133882703,
+        -0.01548583605989906,
+        -34.31627122518179
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.83567479349762,
+        98.50113971282224,
+        -0.7623061609093059
+      ],
+      "distal_internal_moment_Nmm": [
+        61.552442424434005,
+        98.42899691125625,
+        -0.7635204291083102
+      ],
+      "peak_tension_strain": 0.0026725073972105333,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.002957387025925274,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.041445948342009e-14,
+        2.0051465852159977e-14,
+        2.579610837174552e-14,
+        1.6552715035898908e-14,
+        2.6620235067708528e-14,
+        2.941968733209541e-14,
+        3.416898531412666e-14,
+        1.5624482128670198e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 7.924996844255687e-09,
+      "rest_material_length_mm": 90.33907907896375,
+      "imposed_chord_mm": 90.10220126287552,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -1.4818659517015704,
+        10.658229735909211,
+        24.354527934383338
+      ],
+      "proximal_internal_moment_Nmm": [
+        -449.8566967456529,
+        -77.83384723869733,
+        -27.144560644938654
+      ],
+      "distal_internal_moment_Nmm": [
+        478.0125350851548,
+        -11.55776387542737,
+        0.30791560920608063
+      ],
+      "peak_tension_strain": 0.003903816652257237,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.00370271066582923,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        6.043950572907321e-14,
+        2.2973742365297564e-14,
+        1.8725859389932258e-14,
+        2.165361795235929e-14,
+        2.1180302917870287e-14,
+        3.311279199851057e-14,
+        1.528557280088119e-14,
+        1.3050270678372315e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 6.386084935387149e-07,
+      "rest_material_length_mm": 90.33907907896375,
+      "imposed_chord_mm": 90.35279855475267,
+      "geometric_extension_lower_bound": 0.00015186645612064176,
+      "force_in_proximal_CAD_N": [
+        -3.916431942735668,
+        13.216075124675118,
+        213.2225374118009
+      ],
+      "proximal_internal_moment_Nmm": [
+        -495.80745196651,
+        -210.20810348592036,
+        -25.454945325174922
+      ],
+      "distal_internal_moment_Nmm": [
+        456.71608789694477,
+        -84.05473547439115,
+        -15.778476533918816
+      ],
+      "peak_tension_strain": 0.008187598141138175,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.006420348170815496,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.7776520204457946e-15,
+        1.606544302455546e-14,
+        1.9004250691370198e-15,
+        1.0502033992430792e-14,
+        9.255635236435605e-15,
+        2.0760020321209243e-14,
+        3.030334517074525e-14,
+        1.7676908450096657e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.8694586172113773e-07,
+      "rest_material_length_mm": 90.3390790292565,
+      "imposed_chord_mm": 90.31701271788992,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.00508429681284062,
+        -1.4909912684029067,
+        171.56983133801535
+      ],
+      "proximal_internal_moment_Nmm": [
+        133.9540521555349,
+        -156.62898872305246,
+        -1.5787268133616492
+      ],
+      "distal_internal_moment_Nmm": [
+        109.62268353307387,
+        -156.6688230103007,
+        -1.5797940200668228
+      ],
+      "peak_tension_strain": 0.0051844765232300135,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037601711034471203,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.3224848947318293e-14,
+        5.087808313159777e-15,
+        8.392703091793922e-15,
+        3.626379152614745e-14,
+        1.3124615095794312e-14,
+        3.814160462831817e-14,
+        5.433397785752024e-14,
+        2.017703273464755e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 4.247779878421435e-06,
+      "rest_material_length_mm": 90.3390790292565,
+      "imposed_chord_mm": 90.51555066754166,
+      "geometric_extension_lower_bound": 0.001953436322148283,
+      "force_in_proximal_CAD_N": [
+        39.0432069782663,
+        19.143478821368497,
+        581.1794993618008
+      ],
+      "proximal_internal_moment_Nmm": [
+        -531.630270901541,
+        -65.75434247078141,
+        -1.1617753119609282
+      ],
+      "distal_internal_moment_Nmm": [
+        795.3563596575887,
+        -521.3810402294221,
+        -75.29985775057852
+      ],
+      "peak_tension_strain": 0.015855882135292303,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.011038930296171541,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        4.372017053806785e-14,
+        1.0240557213339685e-14,
+        4.356275946465431e-15,
+        4.677542385856826e-14,
+        3.2079862907049744e-14,
+        1.127472630433868e-14,
+        4.3092555729995716e-14,
+        4.945896375779086e-14,
+        6.403886899073956e-14
+      ],
+      "rejected_continuation": [
+        {
+          "fraction": 1.0,
+          "residual_mm": 0.21686744942268757
+        }
+      ],
+      "orthogonality_error": 2.1869164021128068e-06,
+      "rest_material_length_mm": 90.3390790292565,
+      "imposed_chord_mm": 90.4731096255319,
+      "geometric_extension_lower_bound": 0.0014836391705077556,
+      "force_in_proximal_CAD_N": [
+        30.78410711098248,
+        15.112656459279288,
+        464.9159987570027
+      ],
+      "proximal_internal_moment_Nmm": [
+        -460.726305142712,
+        -61.783198611346776,
+        1.3626021295981918
+      ],
+      "distal_internal_moment_Nmm": [
+        556.4289736237953,
+        -382.1836525975471,
+        -55.57266172522552
+      ],
+      "peak_tension_strain": 0.01222113912460484,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.008360399730723712,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.0156831968421805e-14,
+        3.2764290473460363e-14,
+        2.0565968538675472e-14,
+        4.2105734353646616e-14,
+        3.6787582916502595e-14,
+        5.2286585228315664e-14,
+        1.691543371289113e-14,
+        1.4522195523359547e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.144639940088074e-08,
+      "rest_material_length_mm": 90.33907907924791,
+      "imposed_chord_mm": 89.59257147544275,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.0002688118840046768,
+        -0.015401348695975306,
+        -34.2857795981271
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.86130633132531,
+        -98.35571606050527,
+        0.7675851924638407
+      ],
+      "distal_internal_moment_Nmm": [
+        61.60723848580919,
+        -98.28738959543101,
+        0.7673721802591394
+      ],
+      "peak_tension_strain": 0.0026691059220712585,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0029537339446016973,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.174047043996116e-14,
+        8.377171055176634e-15,
+        6.668089626637777e-14,
+        3.346835986667417e-14,
+        1.8157021233175903e-14,
+        1.70335093048758e-14,
+        2.7376276820249388e-14,
+        1.242446019966936e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 3.340412765599746e-08,
+      "rest_material_length_mm": 90.33907907924791,
+      "imposed_chord_mm": 89.54331008897341,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.7608318239393781,
+        -6.810943677429645,
+        -26.303301273603772
+      ],
+      "proximal_internal_moment_Nmm": [
+        335.1192216745327,
+        -137.16912380951132,
+        5.845945731272153
+      ],
+      "distal_internal_moment_Nmm": [
+        -315.84734165710245,
+        9.491248160622575,
+        -13.300679639350257
+      ],
+      "peak_tension_strain": 0.004713471274096267,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004931278965972896,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.3191375770192877e-14,
+        2.9673425255816746e-14,
+        3.290282584129029e-14,
+        1.858426371211695e-14,
+        4.71291828544159e-14,
+        1.8594203897917887e-14,
+        1.84737860206353e-14,
+        1.9191722666972253e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.6381648073963785e-08,
+      "rest_material_length_mm": 90.33907907924791,
+      "imposed_chord_mm": 89.50310661850169,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.8139050036680124,
+        -5.459948226927156,
+        -27.10418194103257
+      ],
+      "proximal_internal_moment_Nmm": [
+        251.17097869717205,
+        -121.20990110417168,
+        1.172386122065861
+      ],
+      "distal_internal_moment_Nmm": [
+        -268.6799567836184,
+        -15.175388600175523,
+        -4.577046615988954
+      ],
+      "peak_tension_strain": 0.003961034205411148,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004185451958118441,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        8.398167454030588e-15,
+        1.4870904186463477e-14,
+        1.6443891358490017e-14,
+        4.7336555773374876e-14,
+        1.1012054830715899e-14,
+        4.050711262154709e-15,
+        6.830942753157644e-14,
+        3.020346986179915e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.923759302418661e-07,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 90.31819618193163,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.006138731345292021,
+        -1.501691593386902,
+        173.17444381832607
+      ],
+      "proximal_internal_moment_Nmm": [
+        134.1145593247395,
+        157.3343128653182,
+        1.591128024918837
+      ],
+      "distal_internal_moment_Nmm": [
+        109.83634576847733,
+        157.38504329145883,
+        1.590707316328731
+      ],
+      "peak_tension_strain": 0.0052094451163511,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037718106173128237,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.3463734111861593e-14,
+        2.228299029441998e-14,
+        2.253684648584403e-14,
+        3.105405233007534e-14,
+        1.9417748635196606e-14,
+        1.773822326593306e-14,
+        2.2070378104923015e-14,
+        5.837474636203836e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.7402309143121697e-09,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 89.95655744792259,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        1.4007764703570629,
+        -10.650580517585697,
+        12.995549366268285
+      ],
+      "proximal_internal_moment_Nmm": [
+        552.5714023428415,
+        68.01482677528132,
+        -33.11384618039244
+      ],
+      "distal_internal_moment_Nmm": [
+        -375.1803951254326,
+        7.955886882257531,
+        17.665870359058125
+      ],
+      "peak_tension_strain": 0.004035402920963736,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.003928536068912952,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 2.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.895784660619066e-14,
+        1.574172345579865e-14,
+        1.975821915899288e-14,
+        1.8180084014942173e-14,
+        1.3211631542188561e-14,
+        4.398275574961202e-14,
+        2.119296732480093e-14,
+        3.559833121099865e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.1805635599960197e-08,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 89.62343057333523,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.6352120662861973,
+        -6.12035593468819,
+        -20.380022268852706
+      ],
+      "proximal_internal_moment_Nmm": [
+        316.4625697444146,
+        -20.87626300426091,
+        -18.597519590813747
+      ],
+      "distal_internal_moment_Nmm": [
+        -262.414600202017,
+        -68.67461567841274,
+        13.799535034304299
+      ],
+      "peak_tension_strain": 0.0034596889064802743,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.0036279485819725723,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.0414232762630226e-14,
+        8.985566100016362e-15,
+        2.517887899706588e-14,
+        2.5926254378745562e-14,
+        1.5976587543718713e-14,
+        3.1282828543382e-14,
+        6.51242087521346e-14,
+        3.1670383078444296e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.2941964026796688e-09,
+      "rest_material_length_mm": 90.33907907896415,
+      "imposed_chord_mm": 89.59138801207484,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.0018375055723417186,
+        -0.015486037496602156,
+        -34.31622532584602
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.83567252364912,
+        98.50101033421774,
+        -0.7623064246416236
+      ],
+      "distal_internal_moment_Nmm": [
+        61.55245139461968,
+        98.4288800267672,
+        -0.7635206035183852
+      ],
+      "peak_tension_strain": 0.0026725044006928153,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0029573836516240885,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        7.120465298601486e-15,
+        7.290580366106464e-14,
+        1.6317630008246093e-14,
+        3.0451196301271203e-14,
+        1.6392268812172126e-14,
+        9.066325128651968e-15,
+        5.693799703822975e-14,
+        2.4939862354566735e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 4.6558522032172807e-10,
+      "rest_material_length_mm": 90.33907907896415,
+      "imposed_chord_mm": 90.10220126287552,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -1.4818682608192457,
+        10.658232988849448,
+        24.354586955980157
+      ],
+      "proximal_internal_moment_Nmm": [
+        -449.8568143959155,
+        -77.8339502736558,
+        -27.14456695249379
+      ],
+      "distal_internal_moment_Nmm": [
+        478.012633033809,
+        -11.557821747172966,
+        0.30791524744122256
+      ],
+      "peak_tension_strain": 0.0039038200230469933,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037027135461549098,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.4276614301758533e-14,
+        2.4879194145542635e-14,
+        2.2025341340190123e-14,
+        1.8182963057167987e-14,
+        4.350546011076101e-14,
+        2.1349876864892927e-14,
+        2.2363801252413044e-14,
+        1.9410248676166883e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 3.726503628973373e-08,
+      "rest_material_length_mm": 90.33907907896415,
+      "imposed_chord_mm": 90.35279855475267,
+      "geometric_extension_lower_bound": 0.00015186645611620087,
+      "force_in_proximal_CAD_N": [
+        -3.916674493775735,
+        13.216375297686122,
+        213.23883003622606
+      ],
+      "proximal_internal_moment_Nmm": [
+        -495.81226999242614,
+        -210.21646427131427,
+        -25.455305404226298
+      ],
+      "distal_internal_moment_Nmm": [
+        456.71994095200256,
+        -84.05857975307688,
+        -15.778790736610933
+      ],
+      "peak_tension_strain": 0.008187894717447014,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0064205096484689006,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.596860284716462e-14,
+        3.202775881856783e-14,
+        5.1880637839661485e-14,
+        2.1391844705401223e-14,
+        7.51870384121426e-15,
+        4.928613423791877e-15,
+        1.9661433415959245e-14,
+        1.7182169360799337e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.6793598775214733e-08,
+      "rest_material_length_mm": 90.33907902925648,
+      "imposed_chord_mm": 90.31701271788992,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.005083565077562488,
+        -1.4910455036475136,
+        171.57766048116324
+      ],
+      "proximal_internal_moment_Nmm": [
+        133.95490124036715,
+        -156.63316327817753,
+        -1.578744503066888
+      ],
+      "distal_internal_moment_Nmm": [
+        109.62366886692334,
+        -156.6730864234274,
+        -1.5798123380571205
+      ],
+      "peak_tension_strain": 0.00518461711102826,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.00376024666550052,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.812923503805667e-15,
+        3.326057302722865e-14,
+        1.637886532052795e-14,
+        4.125621772840371e-14,
+        4.438552268490199e-14,
+        2.494701908262567e-14,
+        3.370695440698726e-14,
+        1.8685887130207618e-13
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.988108411877024e-07,
+      "rest_material_length_mm": 90.33907902925648,
+      "imposed_chord_mm": 90.51555066754166,
+      "geometric_extension_lower_bound": 0.001953436322148283,
+      "force_in_proximal_CAD_N": [
+        39.04714704741875,
+        19.14421986370043,
+        581.2433930535218
+      ],
+      "proximal_internal_moment_Nmm": [
+        -531.6370434681176,
+        -65.76030973513926,
+        -1.161972758738091
+      ],
+      "distal_internal_moment_Nmm": [
+        795.3722648552571,
+        -521.4052683729423,
+        -75.301241854016
+      ],
+      "peak_tension_strain": 0.015856773290607983,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.011039285160166747,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        4.5528808162945565e-14,
+        1.640996577310014e-14,
+        2.6261364995288226e-14,
+        8.398684360705031e-15,
+        2.1544828273132635e-14,
+        1.322646933956238e-14,
+        1.1100408808234206e-14,
+        6.101651501312488e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.5221737286132106e-07,
+      "rest_material_length_mm": 90.33907902925648,
+      "imposed_chord_mm": 90.4731096255319,
+      "geometric_extension_lower_bound": 0.0014836391705079777,
+      "force_in_proximal_CAD_N": [
+        30.786590882119377,
+        15.113128176032054,
+        464.9564653900688
+      ],
+      "proximal_internal_moment_Nmm": [
+        -460.73141637621893,
+        -61.78754580110903,
+        1.3625500900112617
+      ],
+      "distal_internal_moment_Nmm": [
+        556.4361974272415,
+        -382.1982129696394,
+        -55.57335181343657
+      ],
+      "peak_tension_strain": 0.012221686872355378,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.00836060863326326,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.260671246880332e-14,
+        1.627403630656403e-14,
+        2.6238615649423127e-14,
+        1.978655818891933e-14,
+        3.212996734805865e-14,
+        4.4303860916848195e-14,
+        1.909652432342339e-14,
+        3.363287321227258e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.2892443043626495e-09,
+      "rest_material_length_mm": 90.33907907924831,
+      "imposed_chord_mm": 89.59257147544275,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.00026893916535188946,
+        -0.015401541317595949,
+        -34.28573376494086
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.86130370319529,
+        -98.35558740926356,
+        0.7675854836195589
+      ],
+      "distal_internal_moment_Nmm": [
+        61.60724784212836,
+        -98.28727247089613,
+        0.7673723896904546
+      ],
+      "peak_tension_strain": 0.0026691031175199564,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.002953730765836244,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.2798385482949535e-14,
+        3.055988545573524e-14,
+        7.155291992650928e-14,
+        3.656386080483398e-14,
+        2.5114430673571485e-14,
+        1.0979287463980122e-14,
+        4.333834011512137e-14,
+        1.9124814176031852e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.9912093890927307e-09,
+      "rest_material_length_mm": 90.33907907924831,
+      "imposed_chord_mm": 89.54331008897341,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.760831982162815,
+        -6.810942588800852,
+        -26.303279806045477
+      ],
+      "proximal_internal_moment_Nmm": [
+        335.11916878892396,
+        -137.16904687141442,
+        5.845942716025432
+      ],
+      "distal_internal_moment_Nmm": [
+        -315.8472632406673,
+        9.49127512183486,
+        -13.300679152506268
+      ],
+      "peak_tension_strain": 0.0047134695550833175,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004931277103502926,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.5932664200414582e-14,
+        6.421184154838719e-14,
+        2.8042713988411315e-14,
+        4.630188099826011e-14,
+        3.9158489411152185e-14,
+        5.199304015161623e-14,
+        3.567103390170884e-14,
+        1.724561156338957e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.5817410770690115e-09,
+      "rest_material_length_mm": 90.33907907924831,
+      "imposed_chord_mm": 89.50310661850169,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.8139049870277166,
+        -5.4599478519784395,
+        -27.10415656381351
+      ],
+      "proximal_internal_moment_Nmm": [
+        251.17095867009678,
+        -121.20981644216006,
+        1.1723867264563002
+      ],
+      "distal_internal_moment_Nmm": [
+        -268.67991399404013,
+        -15.175336512229293,
+        -4.577045571506316
+      ],
+      "peak_tension_strain": 0.003961032400475383,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004185449971066734,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.637437608589863e-14,
+        2.0506591219022233e-14,
+        3.2773812935371154e-14,
+        7.569962739294725e-15,
+        1.650609159729747e-14,
+        2.156604444890498e-14,
+        3.298820765248145e-14,
+        1.714146558403746e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.7107706040092606e-08,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 90.31819618193163,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.006139984700193833,
+        -1.5017471915312122,
+        173.1824682838005
+      ],
+      "proximal_internal_moment_Nmm": [
+        134.11542740227347,
+        157.33856297601292,
+        1.5911461676732652
+      ],
+      "distal_internal_moment_Nmm": [
+        109.83735205339862,
+        157.38938326010248,
+        1.5907261032579185
+      ],
+      "peak_tension_strain": 0.005209588388822505,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037718872568294807,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.6065886958093478e-14,
+        2.952309713621119e-14,
+        1.498034591345119e-14,
+        1.0856253568735336e-14,
+        1.1124765982847492e-14,
+        2.6441711398194824e-14,
+        5.204913266732214e-14,
+        4.79916087755442e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 9.723961735082133e-11,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 89.95655744792259,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        1.4007772844570996,
+        -10.65058163136675,
+        12.995560933783345
+      ],
+      "proximal_internal_moment_Nmm": [
+        552.5714486615619,
+        68.01485588068745,
+        -33.11384922446151
+      ],
+      "distal_internal_moment_Nmm": [
+        -375.18042340916804,
+        7.955901383927966,
+        17.66587115924588
+      ],
+      "peak_tension_strain": 0.004035403950926214,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0039285370023153365,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 1.0,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        4.144690651345868e-14,
+        5.2596576970696117e-14,
+        4.081189255655757e-14,
+        2.0980543178560177e-14,
+        3.251876566510757e-14,
+        2.1965446006000035e-14,
+        1.6009753504822325e-14,
+        5.665560731920213e-15
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 7.614633288558216e-10,
+      "rest_material_length_mm": 90.33907902918556,
+      "imposed_chord_mm": 89.62343057333523,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.6352108446435695,
+        -6.1203565927889825,
+        -20.379999399026115
+      ],
+      "proximal_internal_moment_Nmm": [
+        316.4625850042863,
+        -20.876199639053073,
+        -18.59751808685127
+      ],
+      "distal_internal_moment_Nmm": [
+        -262.4146086587823,
+        -68.6745441966426,
+        13.79953803870536
+      ],
+      "peak_tension_strain": 0.003459687420416721,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.0036279469076214545,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        4.397209673339469e-14,
+        4.9782603497311965e-14,
+        2.667241492570269e-14,
+        2.3081327836377587e-14,
+        8.317938715518516e-15,
+        2.0533378134333312e-14,
+        2.6050436671933128e-14,
+        3.295942368043632e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 7.927112452353209e-11,
+      "rest_material_length_mm": 90.33907907896514,
+      "imposed_chord_mm": 89.59138801207484,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.0018374986328713416,
+        -0.015486050428524727,
+        -34.316222476871296
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.83567236972709,
+        98.50100233961652,
+        -0.7623064265869686
+      ],
+      "distal_internal_moment_Nmm": [
+        61.55245189995743,
+        98.42887264618832,
+        -0.7635206010707802
+      ],
+      "peak_tension_strain": 0.0026725042400257944,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0029573834688659817,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.1659081748508216e-14,
+        7.945845867103392e-14,
+        4.3816416897503294e-14,
+        2.1443533423821305e-14,
+        1.202205422819963e-13,
+        2.044897819268917e-14,
+        2.8032724053287677e-14,
+        2.2347893155010087e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.8138749424564984e-11,
+      "rest_material_length_mm": 90.33907907896514,
+      "imposed_chord_mm": 90.10220126287552,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -1.4818683985599024,
+        10.658233193346955,
+        24.35459052264522
+      ],
+      "proximal_internal_moment_Nmm": [
+        -449.85682172146306,
+        -77.83395646682627,
+        -27.144567261683882
+      ],
+      "distal_internal_moment_Nmm": [
+        478.01263945032616,
+        -11.557825373132829,
+        0.3079153217614774
+      ],
+      "peak_tension_strain": 0.0039038202548330753,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037027137473645234,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        6.209259430682986e-14,
+        3.2039260480102074e-14,
+        7.999739959945958e-15,
+        3.719050915024983e-15,
+        1.67353313244476e-14,
+        3.705451323033648e-14,
+        3.6226645030843526e-14,
+        4.501973852468726e-15
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 2.248549653218499e-09,
+      "rest_material_length_mm": 90.33907907896514,
+      "imposed_chord_mm": 90.35279855475267,
+      "geometric_extension_lower_bound": 0.00015186645610509864,
+      "force_in_proximal_CAD_N": [
+        -3.9166886226922544,
+        13.216392872667306,
+        213.23978013787294
+      ],
+      "proximal_internal_moment_Nmm": [
+        -495.8125540646533,
+        -210.21695317814417,
+        -25.455326166809435
+      ],
+      "distal_internal_moment_Nmm": [
+        456.72016889614696,
+        -84.05880667239222,
+        -15.778808731268226
+      ],
+      "peak_tension_strain": 0.00818791212363035,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.006420519167911734,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        5.236200091620373e-14,
+        3.189571171776613e-14,
+        4.7684564586221563e-14,
+        2.797196472669882e-14,
+        1.8009360886869403e-14,
+        8.384483327191356e-15,
+        1.5744431647993388e-13,
+        1.5803083367990034e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.0152058022660803e-09,
+      "rest_material_length_mm": 90.33907902925668,
+      "imposed_chord_mm": 90.31701271788992,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.005083545919335327,
+        -1.4910487227434293,
+        171.5781249876271
+      ],
+      "proximal_internal_moment_Nmm": [
+        133.9549517330197,
+        -156.63341243933905,
+        -1.578745567474392
+      ],
+      "distal_internal_moment_Nmm": [
+        109.62372732630524,
+        -156.67333866590423,
+        -1.5798134241471606
+      ],
+      "peak_tension_strain": 0.0051846255759244834,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037602512589157175,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.477914190582998e-14,
+        2.2971871805043673e-14,
+        3.43748180055912e-14,
+        4.652947673537604e-14,
+        2.7232584953040587e-14,
+        2.6429808890583125e-14,
+        2.871338145742241e-14,
+        6.944228772179695e-14,
+        5.604833098608432e-14
+      ],
+      "rejected_continuation": [
+        {
+          "fraction": 1.0,
+          "residual_mm": 0.28298790929283396
+        }
+      ],
+      "orthogonality_error": 1.976564826589811e-08,
+      "rest_material_length_mm": 90.33907902925668,
+      "imposed_chord_mm": 90.51555066754166,
+      "geometric_extension_lower_bound": 0.0019534363221460627,
+      "force_in_proximal_CAD_N": [
+        39.04739189667055,
+        19.144265926647236,
+        581.247364903702
+      ],
+      "proximal_internal_moment_Nmm": [
+        -531.6374656150406,
+        -65.76068173278405,
+        -1.1619852308062426
+      ],
+      "distal_internal_moment_Nmm": [
+        795.373252184768,
+        -521.4067683991428,
+        -75.30132813272847
+      ],
+      "peak_tension_strain": 0.015856828719524797,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.011039307172877792,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": -1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.2608792331539504e-14,
+        7.208647266243328e-15,
+        8.59921550845908e-15,
+        2.1111966301611536e-14,
+        2.0532143766212083e-15,
+        3.979591078184928e-14,
+        2.4926292549597884e-14,
+        1.578309502124584e-13
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.0016727487901617e-08,
+      "rest_material_length_mm": 90.33907902925668,
+      "imposed_chord_mm": 90.4731096255319,
+      "geometric_extension_lower_bound": 0.0014836391705057572,
+      "force_in_proximal_CAD_N": [
+        30.78674598756073,
+        15.113157636119482,
+        464.95899345986345
+      ],
+      "proximal_internal_moment_Nmm": [
+        -460.7317361293488,
+        -61.78781900184858,
+        1.36254675722711
+      ],
+      "distal_internal_moment_Nmm": [
+        556.4366474269182,
+        -382.19911852276334,
+        -55.57339500417527
+      ],
+      "peak_tension_strain": 0.01222172110404602,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.008360621657646637,
+      "peak_compression_z_mm": 44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        3.448530717007697e-14,
+        3.3594333211845316e-14,
+        4.2899936021449486e-14,
+        3.940204609421082e-15,
+        4.5848025593293455e-14,
+        1.768962061076799e-14,
+        3.281753622333123e-14,
+        8.46179337587703e-15
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 7.896798680650964e-11,
+      "rest_material_length_mm": 90.33907907924927,
+      "imposed_chord_mm": 89.59257147544275,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        0.00026894055513085986,
+        -0.015401550343959855,
+        -34.28573091829105
+      ],
+      "proximal_internal_moment_Nmm": [
+        84.86130338004064,
+        -98.35557966632382,
+        0.7675855005386011
+      ],
+      "distal_internal_moment_Nmm": [
+        61.60724852645575,
+        -98.28726486013956,
+        0.7673724056984922
+      ],
+      "peak_tension_strain": 0.0026691032341046566,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0029537308619957915,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        4.3870055786434877e-14,
+        1.446778723266683e-14,
+        8.971044540803999e-14,
+        2.497828973727761e-14,
+        3.166645899105498e-14,
+        1.321903535761695e-13,
+        7.849779620877764e-15,
+        3.009497881178771e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.2110185060727723e-10,
+      "rest_material_length_mm": 90.33907907924927,
+      "imposed_chord_mm": 89.54331008897341,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.7608319989138169,
+        -6.810942533378028,
+        -26.303278438805773
+      ],
+      "proximal_internal_moment_Nmm": [
+        335.1191660362429,
+        -137.16904222113166,
+        5.845942621420117
+      ],
+      "distal_internal_moment_Nmm": [
+        -315.8472588756011,
+        9.491277186340852,
+        -13.300679055089333
+      ],
+      "peak_tension_strain": 0.004713469842786223,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004931277442637902,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": -1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        2.502332517128169e-14,
+        4.626505265813771e-14,
+        4.564790053921355e-14,
+        1.5348055831511972e-14,
+        1.1180208309564391e-14,
+        1.9266564600815186e-14,
+        1.992328877181053e-14,
+        2.0606856106394224e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 9.646523739797023e-11,
+      "rest_material_length_mm": 90.33907907924927,
+      "imposed_chord_mm": 89.50310661850169,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.8139049915150277,
+        -5.459947835848247,
+        -27.10415496455556
+      ],
+      "proximal_internal_moment_Nmm": [
+        251.17095768322693,
+        -121.20981131033562,
+        1.1723868198688534
+      ],
+      "distal_internal_moment_Nmm": [
+        -268.6799116932932,
+        -15.17533293780474,
+        -4.577045453161121
+      ],
+      "peak_tension_strain": 0.003961032628165323,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.004185450235388301,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "stiff",
+      "step": 2819,
+      "cell": 1,
+      "signed_curvature_rad_per_current_mm": -0.0001561445607819638,
+      "phase": "pitch_down",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        -0.0029884605686870515,
+        -0.6817428587040848,
+        -0.0475715897079283
+      ],
+      "disk_rotation_deg": [
+        0.7872598252838928,
+        -0.0035696163909026035,
+        0.000207546447093792
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        1.4673572084314333e-14,
+        5.230001728434142e-14,
+        3.179145413486621e-14,
+        2.0573203266310618e-14,
+        8.87445535467342e-15,
+        2.080636132013596e-14,
+        1.3997862136163642e-13,
+        2.1064199843021535e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 1.0340813282142576e-09,
+      "rest_material_length_mm": 90.33907902918573,
+      "imposed_chord_mm": 90.31819618193163,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.006140033641097187,
+        -1.5017504911814978,
+        173.1829443173467
+      ],
+      "proximal_internal_moment_Nmm": [
+        134.11547902258906,
+        157.33881665409083,
+        1.5911472587856939
+      ],
+      "distal_internal_moment_Nmm": [
+        109.83741174483725,
+        157.3896399737329,
+        1.5907272162412214
+      ],
+      "peak_tension_strain": 0.0052095969712731465,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.0037718918795470466,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U1",
+      "direction": "compliant",
+      "step": 1510,
+      "cell": 8,
+      "signed_curvature_rad_per_current_mm": -0.00038269423373103685,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        1.2358160882062583,
+        -0.4738697271377666,
+        -0.08224080699346814
+      ],
+      "disk_rotation_deg": [
+        0.46510888177154963,
+        1.6933814228716924,
+        -8.755862922638716
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        5.153477416129828e-14,
+        3.2070718019872605e-14,
+        4.147350756339581e-14,
+        1.9224274250228774e-14,
+        5.566466290398778e-14,
+        4.5684672176415387e-14,
+        7.122881278387397e-14,
+        1.7133457259539467e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 5.7219209005895266e-12,
+      "rest_material_length_mm": 90.33907902918573,
+      "imposed_chord_mm": 89.95655744792259,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        1.4007773346360204,
+        -10.650581698414104,
+        12.995561649718702
+      ],
+      "proximal_internal_moment_Nmm": [
+        552.5714514445593,
+        68.0148576678159,
+        -33.11384942171045
+      ],
+      "distal_internal_moment_Nmm": [
+        -375.18042507405903,
+        7.955902285813735,
+        17.665871190840306
+      ],
+      "peak_tension_strain": 0.0040354040413256645,
+      "peak_tension_z_mm": -44.9999,
+      "peak_compression_strain": -0.003928537086255606,
+      "peak_compression_z_mm": -44.9999
+    },
+    {
+      "module": "U3",
+      "direction": "compliant",
+      "step": 1498,
+      "cell": 4,
+      "signed_curvature_rad_per_current_mm": -0.00048158856608541235,
+      "phase": "left_out",
+      "gauge_spacing_mm": 0.5,
+      "blade_x_sign": 1,
+      "blade_y_sign": 1,
+      "disk_translation_mm": [
+        2.1668033394744732,
+        -0.21742058585628263,
+        -0.10158914630690674
+      ],
+      "disk_rotation_deg": [
+        0.12890506332514506,
+        2.5694132576837205,
+        -6.914952612229744
+      ],
+      "converged": true,
+      "endpoint_residual_mm": [
+        6.744174943698342e-14,
+        2.0428500329911643e-14,
+        5.3322405130780304e-14,
+        1.0908949914551851e-14,
+        3.528797032892213e-14,
+        1.4546729120129374e-14,
+        6.561580106253758e-14,
+        1.9794807370560963e-14
+      ],
+      "rejected_continuation": [],
+      "orthogonality_error": 4.8196346200537774e-11,
+      "rest_material_length_mm": 90.33907902918573,
+      "imposed_chord_mm": 89.62343057333523,
+      "geometric_extension_lower_bound": 0.0,
+      "force_in_proximal_CAD_N": [
+        -0.6352107706434929,
+        -6.120356632411366,
+        -20.37999798552706
+      ],
+      "proximal_internal_moment_Nmm": [
+        316.4625858493932,
+        -20.876195748916636,
+        -18.59751800805161
+      ],
+      "distal_internal_moment_Nmm": [
+        -262.4146091853632,
+        -68.67453967019918,
+        13.799538207152771
+      ],
+      "peak_tension_strain": 0.0034596873682121877,
+      "peak_tension_z_mm": 44.9999,
+      "peak_compression_strain": -0.003627946844956993,
+      "peak_compression_z_mm": 44.9999
+    }
+  ]
+}

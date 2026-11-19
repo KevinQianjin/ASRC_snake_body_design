@@ -1,0 +1,50 @@
+{
+  "steps": 3405,
+  "rope_readings": 40860,
+  "compared_station_rows": 27240,
+  "ranked_fixed_station_samples": 20430,
+  "cell_curvatures": 163440,
+  "adverse_bound_by_mu": {
+    "0.0": {
+      "steps_with_any_below_floor": 0,
+      "first_step": null,
+      "channel_steps_below_floor": 0,
+      "minimum_N": 2.901220780086281,
+      "step": 0,
+      "rope": "C_down"
+    },
+    "0.05": {
+      "steps_with_any_below_floor": 0,
+      "first_step": null,
+      "channel_steps_below_floor": 0,
+      "minimum_N": 2.6515392440924037,
+      "step": 1779,
+      "rope": "C_down"
+    },
+    "0.15": {
+      "steps_with_any_below_floor": 1212,
+      "first_step": 0,
+      "channel_steps_below_floor": 1600,
+      "minimum_N": 2.0715775281079507,
+      "step": 1779,
+      "rope": "C_down"
+    },
+    "0.3": {
+      "steps_with_any_below_floor": 2256,
+      "first_step": 0,
+      "channel_steps_below_floor": 6552,
+      "minimum_N": 1.4305593798001608,
+      "step": 1779,
+      "rope": "C_down"
+    }
+  },
+  "nominal_witness_steps": [
+    1710,
+    1843,
+    2059,
+    2348,
+    2432
+  ],
+  "operating_tension_floor_N": 2.5,
+  "head_mass_kg": 0.5
+}

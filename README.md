@@ -2,9 +2,13 @@
 
 ASRC is a fuel-tank inspection robot with a tendon-driven front on a supported telescopic rear. The current U4+M2 front uses four U modules, two M modules and twelve Ø2 mm ropes. The six 96 mm modules span 576 mm and are about 63 mm across. The camera and induction-thermography head has a **500 g total mass budget including its adapter**.
 
-[Prototype installation guide](docs/installation_guide.md) · [Full-cycle engineering report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Repository map](docs/repository_map.md)
+[Prototype installation guide](docs/installation_guide.md) · [Full-cycle engineering report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Next steps](nextstep/README.md) · [Repository map](docs/repository_map.md)
 
 ## Daily updates
+
+### 19 November 2026 — first extreme tests at 500 g
+
+At the M6 left-turn witness the guide/web gap fell from **0.08438 mm straight to 0.02093 mm bent**. A 0.025 mm rigid shift toward the web produced contact. On the +69° pitch return, B-down crossed the 2.5 N operating floor between assumed friction coefficients **0.16 and 0.17**. Four-blade U1 analysis located the largest trial tensile strain at the distal tab. The unknown compliance of this bond affects the predicted force. [First-round results, critical sites and twelve-rope figures](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
 
 ### 19 November 2026 — 500 g full cycle with +90° and −90° pitch
 
@@ -53,7 +57,13 @@ The first bench build consists of the **M5 retained-seat coupon and P3 fixture**
 
 To see the U module with its two leaf-spring pairs fitted, open the [illustrated spring installation](docs/installation_guide.md#2-install-the-u-module-leaf-springs) or the [rotatable U1–U4 assembly view](cad/lanes_u4m2/guides_v2/U_spring_assembly.scad).
 
-<a id="next-steps"></a><a id="geometry-and-input-data"></a><a id="earlier-studies"></a>
+## Next steps
+
+The extreme-test programme keeps the head and adapter at 500 g. It covers usable motion and recovery, component damage and rupture, single faults, fatigue life and safety factors. The first round uses the full-cycle loads to test M6 clearance, M5 seat reactions, U spring end loads and force transmission at the two +69° pitch crossings.
+
+[Extreme-test plan](nextstep/README.md) · [Complete plan (PDF)](nextstep/U4M2_Extreme_Test_Plan_2026_11_19.pdf) · [First-round results and reproduction](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
+
+<a id="geometry-and-input-data"></a><a id="earlier-studies"></a>
 
 ## Project references
 

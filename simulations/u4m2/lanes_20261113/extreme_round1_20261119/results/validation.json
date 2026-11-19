@@ -1,0 +1,244 @@
+{
+  "baseline_commit": "89b32a97c40b39ec5a988f716d2a5e70a262dc21",
+  "source_sha256": {
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/controller_states.npz": "a3513f670b3dfadce14fe59064688e480c589b1bba40f2f98bf8168094448739",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/rope_tensions_every_step.csv.gz": "c1a3b0d9864d1f83c907b7fba1635b59528b67316bdbe3f9cfd46aeaba52865b",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/guide_station_loads.csv.gz": "0fc2654015dfa16d1aa93762ed22f5539f0c4486201f79cfb1c84064d57ebf3e",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/guide_hole_loads.npz": "2ba429cf5235070084666ef9dac7dfabf248044def31ab1bf10a894f34181a65",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/transmission_motion.npz": "18daf759267e7b98c70380354d104bfa133a209778f0be3f80e5ab587e36a6ed",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/station_motion.csv.gz": "992dd7f736e90f851766a6f048f95c66c3ff778e7de866b67dbcdcd087b5bfea",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/solid_motion_0p5.json": "876a036059dbfa76b0f49ecb50d6a827318c98cd9fce423411fbb035db139db5",
+    "cad/lanes_u4m2/guides_v2/U_leaf_springs.stl": "3dcfb079544e1fe05ddf76fefd76b4df5895e4c8c92ca4c868b4a83c16a0518b",
+    "cad/lanes_u4m2/guides_v2/spring_strip.json": "bc3fd26e3b88a8e79267f85e91b3a6cf4d277865b60fd4e52d86e3cecd2275ff",
+    "cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5",
+    "cad/lanes_u4m2/end_bellmouth_v1/M5_lane_anchorB.stl": "3ad103c44e27891cfffd62bbab70fcd8d6e1b07ea3433fc593df817a9bea5fc3",
+    "cad/lanes_u4m2/retained_seat_20261118/parts/M5_machined_body.stl": "5989a1b69cc3fecbab948950639e34a1c82bd7c8fa610aafa1074ab8d5243527",
+    "cad/lanes_u4m2/guides_v3/M6_z-12_guide.stl": "c57d733bf41332953440ca0892c56f1182addb5d832d61202a560b2263a2d46e",
+    "cad/lanes_u4m2/guides_v3/M6_z-12_caps.stl": "963bb6b4bcf25c1b35509559002da0872bad499d64041aa9a32cc404ee7e59b3",
+    "cad/lanes_u4m2/guides_v3/M6_z-12_wire_envelope.stl": "24a956957eb86c291121b0283f7a91327f0c055bfa03242dd3c5d3216ee75414",
+    "simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/study.py": "c0b7a36314e828e32a426638d21b480e80fdcd85c33fb7370e30c8203ed9b2d0",
+    "simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/shell.py": "0b0d6b3faf4edc396c6ca792f4733e826eedbe903e4a07aa68c895496728ca84",
+    "simulations/u4m2/lanes_20261113/evening_20261118/pin_seat.py": "78af3269c456f322860b86b6328252d9f598e198cbefbb423ec8e2a1ac94d3de",
+    "simulations/u4m2/lanes_20261113/guide_web_compatibility.py": "66da3b03edda8adacee1b5ce844373435cb85305b183c38dbeffa2e732637d02",
+    "simulations/u4m2/lanes_20261113/cad_surface_refinement.py": "6b49182ddc078541fbf6d9c2eff9e5e7ff55b56db5cbb8731d1758ca7380f850",
+    "simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/results/straight_relieved.json": "2e1126167c1057b99886845ebbc85505e9447ff6aa4e5ab3bb8b25c941370cfe",
+    "simulations/u4m2/lanes_20261113/p3_pin_fixture_20261119/witness_measurements.csv": "ccf5e70788571b0e1422739339e20c62f61f29625d5191e38f0c41a957786314",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/replay.py": "345f73c5def56d9d05dce863aa917017865ab8beb0a25d7360d0cbffbd9f1764",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/sliding.py": "e051d59fca9f3759c2d7a4a84cdbfb04710c4cee0e17fdd3a5e6c61f42effd7c",
+    "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/adapter.py": "7a77ac955accc37b5cd3ce2c555bdd1f1f52bd79cc544ce3d6022fd9a2c4247e"
+  },
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.68.1",
+    "trimesh": "5.2.0",
+    "vtk": "9.3.1",
+    "shapely": "2.2.0",
+    "matplotlib": "3.10.8",
+    "python-fcl": "0.7.0.10",
+    "cvxopt": "1.3.3",
+    "triangle": "20250106",
+    "manifold3d": "3.5.5"
+  },
+  "head_kg": 0.5,
+  "physical_P3_specimen_rows": 0,
+  "rank_rows": 96,
+  "fixed_geometry_gap_change_um": [
+    0.30970214856332334,
+    0.1547965509656815
+  ],
+  "m5_mesh_comparison": [
+    {
+      "step": 1843,
+      "pivot_F_N_coarse_fine": [
+        14.653394680753623,
+        14.506405831971101
+      ],
+      "peak_location_agrees": true,
+      "fine_pivot": {
+        "station_mm": 12,
+        "rib_deg": 67.5,
+        "force_N": [
+          2.871671322603702,
+          8.556537637014028,
+          -11.356715090339419
+        ],
+        "land_moment_Nmm": [
+          -2.8041513555621123e-11,
+          7.935624379840078e-12,
+          -1.4944934179084157e-11
+        ],
+        "relative_rotation_deg": 3.925391048255008,
+        "inplane_rotation_deg": 2.3118353883892513,
+        "socket_travel_3d_mm": 0.5270803634870442,
+        "socket_travel_inplane_mm": 0.5268041320779535,
+        "socket_travel_normal_mm": 0.05520144445192921
+      },
+      "peak_force_change_percent": 1.0132685551824894,
+      "peak_tensile_strain_coarse_fine": [
+        0.0884246693020997,
+        0.08551906215764095
+      ],
+      "peak_compressive_strain_coarse_fine": [
+        -0.07068900465499828,
+        -0.07298377256019399
+      ]
+    },
+    {
+      "step": 2059,
+      "pivot_F_N_coarse_fine": [
+        6.651913029539801,
+        6.476328823697551
+      ],
+      "peak_location_agrees": true,
+      "fine_pivot": {
+        "station_mm": -12,
+        "rib_deg": 67.5,
+        "force_N": [
+          4.541944748920858,
+          2.723702419255397,
+          -3.7276021866272484
+        ],
+        "land_moment_Nmm": [
+          1.867112020548234e-11,
+          -2.841171742318238e-12,
+          -7.656250633480965e-12
+        ],
+        "relative_rotation_deg": 4.996190960824024,
+        "inplane_rotation_deg": 2.8876690419061126,
+        "socket_travel_3d_mm": 0.232553215152808,
+        "socket_travel_inplane_mm": 0.23249444256006055,
+        "socket_travel_normal_mm": 0.088479003694745
+      },
+      "peak_force_change_percent": 2.7111687905618576,
+      "peak_tensile_strain_coarse_fine": [
+        0.04809725429934205,
+        0.04835245361996945
+      ],
+      "peak_compressive_strain_coarse_fine": [
+        -0.0447294305766877,
+        -0.043269166285943114
+      ]
+    }
+  ],
+  "coupled_pitch_solutions": 24,
+  "pitch_floor_brackets": [
+    {
+      "step": 2348,
+      "last_passing": {
+        "step": 2348,
+        "phase": "pitch_up",
+        "mu": 0.275,
+        "converged": true,
+        "residual": 1.1691305865902192e-11,
+        "min_distal_N": 2.5079597151774076,
+        "weakest": "C_left",
+        "below_floor": [],
+        "pointing_error_deg": 0.5457905941599756,
+        "change_in_tip_mm": 2.6730591920711313,
+        "geometry_pass": true
+      },
+      "first_below_floor": {
+        "step": 2348,
+        "phase": "pitch_up",
+        "mu": 0.3,
+        "converged": true,
+        "residual": 1.785511563061248e-11,
+        "min_distal_N": 2.4623998460811256,
+        "weakest": "C_left",
+        "below_floor": [
+          "C_right",
+          "C_left"
+        ],
+        "pointing_error_deg": 0.58809316477045,
+        "change_in_tip_mm": 2.8949313245385273,
+        "geometry_pass": true
+      }
+    },
+    {
+      "step": 2432,
+      "last_passing": {
+        "step": 2432,
+        "phase": "pitch_up_return",
+        "mu": 0.16,
+        "converged": true,
+        "residual": 1.0587143324916612e-11,
+        "min_distal_N": 2.5325151324694453,
+        "weakest": "B_down",
+        "below_floor": [],
+        "pointing_error_deg": 0.24637182109538774,
+        "change_in_tip_mm": 1.709181262145763,
+        "geometry_pass": true
+      },
+      "first_below_floor": {
+        "step": 2432,
+        "phase": "pitch_up_return",
+        "mu": 0.17,
+        "converged": true,
+        "residual": 7.61532702651316e-12,
+        "min_distal_N": 2.4739010150480056,
+        "weakest": "B_down",
+        "below_floor": [
+          "B_down"
+        ],
+        "pointing_error_deg": 0.26524244007082093,
+        "change_in_tip_mm": 1.8186253193076074,
+        "geometry_pass": true
+      }
+    }
+  ],
+  "u_solutions_attempted": 36,
+  "u_solutions_converged": 36,
+  "u_rejected_continuation_steps": 2,
+  "u_cases": [
+    {
+      "step": 2819,
+      "module": "U1",
+      "max_tensile_strain": 0.0052095969712731465,
+      "min_compressive_strain": -0.0037718918795470466,
+      "peak_tensile_site_CAD": {
+        "x_sign": 1,
+        "y_sign": 1,
+        "z_mm": -44.9999
+      },
+      "max_geometric_extension_bound": 0.0,
+      "maximum_single_strip_end_force_N": 173.18945549502425,
+      "total_four_strip_axial_force_trial_N": 276.17459258054265,
+      "whole_U_last_cell_axial_constitutive_N": -59.1436464176868,
+      "largest_1_to_0p5mm_tensile_change_percentage_points": 8.582450641662909e-07
+    },
+    {
+      "step": 1510,
+      "module": "U1",
+      "max_tensile_strain": 0.015856828719524797,
+      "min_compressive_strain": -0.011039307172877792,
+      "peak_tensile_site_CAD": {
+        "x_sign": -1,
+        "y_sign": 1,
+        "z_mm": 44.9999
+      },
+      "max_geometric_extension_bound": 0.0019534363221460627,
+      "maximum_single_strip_end_force_N": 582.8719421444985,
+      "total_four_strip_axial_force_trial_N": 592.9899627213573,
+      "whole_U_last_cell_axial_constitutive_N": -92.32576896972546,
+      "largest_1_to_0p5mm_tensile_change_percentage_points": 5.5428916814065365e-06
+    },
+    {
+      "step": 1498,
+      "module": "U3",
+      "max_tensile_strain": 0.01222172110404602,
+      "min_compressive_strain": -0.008360621657646637,
+      "peak_tensile_site_CAD": {
+        "x_sign": -1,
+        "y_sign": 1,
+        "z_mm": 44.9999
+      },
+      "max_geometric_extension_bound": 0.0014836391705057572,
+      "maximum_single_strip_end_force_N": 466.22215397967324,
+      "total_four_strip_axial_force_trial_N": 631.1302624443165,
+      "whole_U_last_cell_axial_constitutive_N": -91.52065773013588,
+      "largest_1_to_0p5mm_tensile_change_percentage_points": 3.423169064181719e-06
+    }
+  ]
+}
