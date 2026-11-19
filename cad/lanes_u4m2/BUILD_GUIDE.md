@@ -1,4 +1,8 @@
-# Build guide — U4+M2 front with separate rope lanes
+# Historical build guide — 13 November 2026
+
+<a id="build-guide--u4m2-front-with-separate-rope-lanes"></a>
+
+For the **19 November 500 g prototype**, use the [current installation guide](../../docs/installation_guide.md). The historical instructions below describe a 27 mm C lane and a continuous-rod option. The full-cycle configuration uses a 28 mm C lane, separate 96 mm M5 and M6 rods, and station-specific guides.
 
 This guide takes you from the files in this folder to an assembled, tensioned U4+M2 front: six 96 mm modules, a 20 mm base interface and a head adapter. It covers printing, purchased parts, finishing, the NiTi leaf springs and backbone, joining the modules, threading and anchoring the 12 ropes, and the checks before first use.
 
