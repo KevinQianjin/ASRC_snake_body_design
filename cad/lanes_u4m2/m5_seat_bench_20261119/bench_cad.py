@@ -95,11 +95,11 @@ def carrier_parts(corner_relief=True):
     return base, lid
 
 
-def pin_carriage():
+def pin_carriage(pilot_radius=0.75):
     # The positive-n face seats the head; the negative-n face seats the production cap.
     positive = b.box((-1.40, -7.95, 2.12), (1.40, 1.35, j.CHEEK))
     negative = b.box((-1.40, -7.95, -j.GATE_TOP), (1.40, 1.35, -2.12))
-    hole_tool = b.cyl(0.75, -6, 6)
+    hole_tool = b.cyl(pilot_radius, -6, 6)
     stem = b.box((-1.40, -9.0, -j.GATE_TOP), (1.40, -6.90, j.CHEEK))
     flange = b.box((-6.60, -17.50, -3.2), (6.60, -8.25, 3.2))
     for x in (-3.7, 3.7):

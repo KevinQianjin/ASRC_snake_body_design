@@ -1,0 +1,633 @@
+{
+  "cad_frame": "s, p, n; head on positive n",
+  "P3_transverse_unit_sp": [
+    0.8426409418415516,
+    -0.5384758519491686
+  ],
+  "source_sha256": {
+    "original_carriage": "3222e6c3eeefb36b17ccb158053d7b58058089ed3a8376522637b787e82a235d",
+    "head": "aa80a1fe18d8cdd8481eba8b1449506dd2c39aca57c81a3e65d50cace218ac95",
+    "cap": "38019fa176df3c43f0584990013d5feea45386073eaa8aa5bc9db58d3bc154a9"
+  },
+  "candidate": {
+    "filename": "pin_carriage_bore_1p46.stl",
+    "sha256": "ec9033e8156e2e2ffc93ca0cffe1a1512651381358652a26a2c105713e36b5d2",
+    "volume_mm3": 789.458599456227,
+    "triangles": 1646,
+    "closed": true
+  },
+  "default_rebuild_difference_mm3": 5.340381306249064e-05,
+  "candidate_removed_material_mm3": 0.0,
+  "candidate_added_material_mm3": 0.33824606991684925,
+  "difference_outside_pilot_zone_mm3": 0.0,
+  "alternatives": {
+    "1.50": {
+      "sections": [
+        {
+          "name": "head",
+          "n_mm": 2.121,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815621424468586
+        },
+        {
+          "name": "head",
+          "n_mm": 2.528,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620639573326
+        },
+        {
+          "name": "head",
+          "n_mm": 2.935,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        },
+        {
+          "name": "head",
+          "n_mm": 3.342,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        },
+        {
+          "name": "head",
+          "n_mm": 3.749,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        },
+        {
+          "name": "cap",
+          "n_mm": -4.129,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.02981562172864638
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.627,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.125,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.6229999999999998,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620992505676
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.121,
+          "bore_outer_radius_mm": 0.750000018673095,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.029815620565331935
+        }
+      ],
+      "P3_axis_limits_mm": [
+        -0.029818875275867334,
+        0.0298186936393691
+      ],
+      "on_axis_full_reversal_mm": 0.05963756891523643,
+      "full_projected_width_mm": 0.059652734427586285,
+      "centred_minimum_normal_gap_mm": 0.029815620565331935,
+      "boolean_offsets": [
+        {
+          "pose": "negative_limit",
+          "offset_along_P3_mm": -0.029818875275867334,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 2.710505431213761e-20
+          }
+        },
+        {
+          "pose": "positive_limit",
+          "offset_along_P3_mm": 0.0298186936393691,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 4.336808689942018e-19
+          }
+        },
+        {
+          "pose": "negative_plus_5um",
+          "offset_along_P3_mm": -0.034818875275867335,
+          "overlap_by_part_mm3": {
+            "head": 0.004089893702440256,
+            "cap": 0.00504336607413483
+          }
+        },
+        {
+          "pose": "positive_plus_5um",
+          "offset_along_P3_mm": 0.0348186936393691,
+          "overlap_by_part_mm3": {
+            "head": 0.004089895438006607,
+            "cap": 0.005043368214312
+          }
+        }
+      ],
+      "parallel_bore_offset_sensitivity": [
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.0,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.059652734427586285
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.005,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.05465273442722154
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.01,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.04965273442722153
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.015,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.04465273442722154
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.02,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.03965273442722153
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.025,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.03465273442681407
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.03,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.029652734426814074
+        }
+      ]
+    },
+    "1.48": {
+      "sections": [
+        {
+          "name": "head",
+          "n_mm": 2.121,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "head",
+          "n_mm": 2.528,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "head",
+          "n_mm": 2.935,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820982029844836
+        },
+        {
+          "name": "head",
+          "n_mm": 3.342,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "head",
+          "n_mm": 3.749,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0198209821170392
+        },
+        {
+          "name": "cap",
+          "n_mm": -4.129,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.627,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.125,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820982029844836
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.6229999999999998,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981931790604
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.121,
+          "bore_outer_radius_mm": 0.7400000046156473,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.019820981986117037
+        }
+      ],
+      "P3_axis_limits_mm": [
+        -0.01982349013382685,
+        0.019823308497324044
+      ],
+      "on_axis_full_reversal_mm": 0.03964679863115089,
+      "full_projected_width_mm": 0.03965692993417291,
+      "centred_minimum_normal_gap_mm": 0.019820981931790604,
+      "boolean_offsets": [
+        {
+          "pose": "negative_limit",
+          "offset_along_P3_mm": -0.01982349013382685,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 0.0
+          }
+        },
+        {
+          "pose": "positive_limit",
+          "offset_along_P3_mm": 0.019823308497324044,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 0.0
+          }
+        },
+        {
+          "pose": "negative_plus_5um",
+          "offset_along_P3_mm": -0.024823490133826853,
+          "overlap_by_part_mm3": {
+            "head": 0.004830461340644883,
+            "cap": 0.005956581162390144
+          }
+        },
+        {
+          "pose": "positive_plus_5um",
+          "offset_along_P3_mm": 0.024823308497324045,
+          "overlap_by_part_mm3": {
+            "head": 0.004830463235719839,
+            "cap": 0.005956583499262002
+          }
+        }
+      ],
+      "parallel_bore_offset_sensitivity": [
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.0,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.03965692993417291
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.005,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.034656930044740054
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.01,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.029656930044740053
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.015,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.024656930044740052
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.02,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.01965693004474005
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.025,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.014656930044740045
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.03,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.00965693004474005
+        }
+      ]
+    },
+    "1.46": {
+      "sections": [
+        {
+          "name": "head",
+          "n_mm": 2.121,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "head",
+          "n_mm": 2.528,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "head",
+          "n_mm": 2.935,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "head",
+          "n_mm": 3.342,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826329291296454
+        },
+        {
+          "name": "head",
+          "n_mm": 3.749,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826329358800567
+        },
+        {
+          "name": "cap",
+          "n_mm": -4.129,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.627,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826330136187389
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.125,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.6229999999999998,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826328967581177
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.121,
+          "bore_outer_radius_mm": 0.7300000284941536,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.009826329246853116
+        }
+      ],
+      "P3_axis_limits_mm": [
+        -0.00982811328860391,
+        0.009827931652096564
+      ],
+      "on_axis_full_reversal_mm": 0.019656044940700473,
+      "full_projected_width_mm": 0.019661141630773878,
+      "centred_minimum_normal_gap_mm": 0.009826328967581177,
+      "boolean_offsets": [
+        {
+          "pose": "negative_limit",
+          "offset_along_P3_mm": -0.00982811328860391,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 0.0
+          }
+        },
+        {
+          "pose": "positive_limit",
+          "offset_along_P3_mm": 0.009827931652096564,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 0.0
+          }
+        },
+        {
+          "pose": "negative_plus_5um",
+          "offset_along_P3_mm": -0.014828113288603909,
+          "overlap_by_part_mm3": {
+            "head": 0.006252395709535453,
+            "cap": 0.0077100097698684054
+          }
+        },
+        {
+          "pose": "positive_plus_5um",
+          "offset_along_P3_mm": 0.014827931652096563,
+          "overlap_by_part_mm3": {
+            "head": 0.006252398099194709,
+            "cap": 0.007710012716626184
+          }
+        }
+      ],
+      "parallel_bore_offset_sensitivity": [
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.0,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.019661141630773878
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.005,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.014661141630773877
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.01,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.009661141630773877
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.015,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.004661141630773878
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.02,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.025,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.03,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        }
+      ]
+    },
+    "1.45": {
+      "sections": [
+        {
+          "name": "head",
+          "n_mm": 2.121,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0048290090758738025
+        },
+        {
+          "name": "head",
+          "n_mm": 2.528,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0048290090758738025
+        },
+        {
+          "name": "head",
+          "n_mm": 2.935,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.00482900916840201
+        },
+        {
+          "name": "head",
+          "n_mm": 3.342,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0048290091479308295
+        },
+        {
+          "name": "head",
+          "n_mm": 3.749,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.004829009230273851
+        },
+        {
+          "name": "cap",
+          "n_mm": -4.129,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.004829012594482651
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.627,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0048290090758738025
+        },
+        {
+          "name": "cap",
+          "n_mm": -3.125,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.00482900916840201
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.6229999999999998,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.004829009454671129
+        },
+        {
+          "name": "cap",
+          "n_mm": -2.121,
+          "bore_outer_radius_mm": 0.7250000044508929,
+          "collar_outer_radius_mm": 0.7200006634786011,
+          "minimum_centred_normal_gap_mm": 0.0048290090758738025
+        }
+      ],
+      "P3_axis_limits_mm": [
+        -0.0048303889183036195,
+        0.004830207281800764
+      ],
+      "on_axis_full_reversal_mm": 0.009660596200104383,
+      "full_projected_width_mm": 0.009663189580169564,
+      "centred_minimum_normal_gap_mm": 0.0048290090758738025,
+      "boolean_offsets": [
+        {
+          "pose": "negative_limit",
+          "offset_along_P3_mm": -0.0048303889183036195,
+          "overlap_by_part_mm3": {
+            "head": 0.0,
+            "cap": 0.0
+          }
+        },
+        {
+          "pose": "positive_limit",
+          "offset_along_P3_mm": 0.004830207281800764,
+          "overlap_by_part_mm3": {
+            "head": 8.372679892356768e-17,
+            "cap": 1.6255797408716038e-16
+          }
+        },
+        {
+          "pose": "negative_plus_5um",
+          "offset_along_P3_mm": -0.00983038891830362,
+          "overlap_by_part_mm3": {
+            "head": 0.007724016956053718,
+            "cap": 0.00952470802556326
+          }
+        },
+        {
+          "pose": "positive_plus_5um",
+          "offset_along_P3_mm": 0.009830207281800764,
+          "overlap_by_part_mm3": {
+            "head": 0.007724019832780695,
+            "cap": 0.009524711572938094
+          }
+        }
+      ],
+      "parallel_bore_offset_sensitivity": [
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.0,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.009663189580169564
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.005,
+          "parallel_assembly_fits": true,
+          "projected_free_width_mm": 0.004663189580169565
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.01,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.015,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.02,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.025,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        },
+        {
+          "cap_side_bore_offset_along_P3_mm": 0.03,
+          "parallel_assembly_fits": false,
+          "projected_free_width_mm": null
+        }
+      ]
+    }
+  }
+}

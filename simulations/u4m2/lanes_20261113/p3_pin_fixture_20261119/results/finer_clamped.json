@@ -1,0 +1,157 @@
+{
+  "mesh": "finer",
+  "web_elements": 12672,
+  "web_nodes": 14720,
+  "beam_free_dofs": 239,
+  "spacing_mm": 0.15,
+  "facets": 24,
+  "support": "clamped",
+  "steel_modulus_MPa": 200000.0,
+  "thread_tie_end_n_mm": -2.57,
+  "web_modulus_MPa": 1530.0,
+  "web_poisson": 0.4,
+  "rotation_coupon_to_pin": [
+    [
+      0.9988310021821435,
+      -0.04811078667921999,
+      -0.00468842030125954
+    ],
+    [
+      0.047793497357191045,
+      0.9974354630441125,
+      -0.05327549786107098
+    ],
+    [
+      0.007239522786955454,
+      0.05298914291704852,
+      0.998568845920367
+    ]
+  ],
+  "source_force_spn_N": [
+    12.342024610460008,
+    -7.88696808675211,
+    -2.4048182335432116
+  ],
+  "states": [
+    {
+      "factor": 1.0,
+      "converged": true,
+      "iterations": 11,
+      "last_step_mm_or_rad": 1.4628278544941728e-06,
+      "coupon_carriage_spn_mm": [
+        -0.04300400335651801,
+        0.036538514211693164,
+        0.011909291160708912
+      ],
+      "pin_on_web_spn_N": [
+        12.342024610460008,
+        -7.88696808675211,
+        -2.4048182335432116
+      ],
+      "contact_force_residual_N": 2.5426106637769016e-05,
+      "free_steel_force_or_moment_residual_max": 1.802958339836014e-05,
+      "minimum_web_contact_gap_mm": -7.285412828572646e-10,
+      "minimum_polygonal_counterbore_gap_mm": 0.013388682886208269,
+      "summed_counterbore_normal_load_N": 0.0,
+      "peak_nodal_pressure_MPa": 161.82081326670365,
+      "steel_strain_energy_Nmm": 0.030138282128252338,
+      "shaft_centre_sp_mm": [
+        -0.0036426753283033708,
+        0.002301397319356713
+      ],
+      "maximum_clear_shaft_bending_MPa": 400.31731456619065,
+      "peak_shaft_bending_z_mm": 1.4901006577402707,
+      "maximum_clear_shaft_deflection_mm": 0.004534444430329228,
+      "maximum_clear_shaft_rotation_deg": 0.17604126056523767,
+      "minimum_dense_cap_counterbore_gap_mm": 0.013522984254817516,
+      "peak_tensile_principal_strain": 0.03957955855707712,
+      "p95_volume_tensile_principal_strain": 0.004400154381506517,
+      "most_compressive_principal_strain": -0.07266288799599878,
+      "peak_element_centre_spn_mm": [
+        0.37179850035558853,
+        -0.1427200725712101,
+        -0.0655879891724141
+      ]
+    },
+    {
+      "factor": -1.0,
+      "converged": true,
+      "iterations": 11,
+      "last_step_mm_or_rad": 1.504259044435236e-06,
+      "coupon_carriage_spn_mm": [
+        0.04299644217862467,
+        -0.03626337808831201,
+        -0.011973326763166103
+      ],
+      "pin_on_web_spn_N": [
+        -12.342024610460008,
+        7.88696808675211,
+        2.4048182335432116
+      ],
+      "contact_force_residual_N": 2.6679760130042165e-05,
+      "free_steel_force_or_moment_residual_max": 1.9049474046295423e-05,
+      "minimum_web_contact_gap_mm": -7.305520077771632e-10,
+      "minimum_polygonal_counterbore_gap_mm": 0.0135099492374959,
+      "summed_counterbore_normal_load_N": 0.0,
+      "peak_nodal_pressure_MPa": 161.57767693965712,
+      "steel_strain_energy_Nmm": 0.02869868643110737,
+      "shaft_centre_sp_mm": [
+        0.003578707211953406,
+        -0.0022052167369458102
+      ],
+      "maximum_clear_shaft_bending_MPa": 401.81817146042266,
+      "peak_shaft_bending_z_mm": 1.4901006577402707,
+      "maximum_clear_shaft_deflection_mm": 0.004381419801618462,
+      "maximum_clear_shaft_rotation_deg": 0.17263489690105685,
+      "minimum_dense_cap_counterbore_gap_mm": 0.013646284458316057,
+      "peak_tensile_principal_strain": 0.03972434438755691,
+      "p95_volume_tensile_principal_strain": 0.0044015445570105135,
+      "most_compressive_principal_strain": -0.07327007591629812,
+      "peak_element_centre_spn_mm": [
+        -0.37179850035413187,
+        0.14272007257500496,
+        0.0655879891724141
+      ]
+    },
+    {
+      "factor": 0.06737207909664979,
+      "converged": true,
+      "iterations": 7,
+      "last_step_mm_or_rad": 1.4167459052648794e-06,
+      "coupon_carriage_spn_mm": [
+        -0.02018757720551154,
+        0.013353628904915931,
+        0.012469695181947104
+      ],
+      "pin_on_web_spn_N": [
+        0.83150785826871,
+        -0.5313614377734158,
+        -0.16201760424333886
+      ],
+      "contact_force_residual_N": 2.198547769852075e-06,
+      "free_steel_force_or_moment_residual_max": 1.6754054650847117e-06,
+      "minimum_web_contact_gap_mm": -1.268670724030585e-10,
+      "minimum_polygonal_counterbore_gap_mm": 0.015702718208967417,
+      "summed_counterbore_normal_load_N": 0.0,
+      "peak_nodal_pressure_MPa": 34.2092347207502,
+      "steel_strain_energy_Nmm": 0.00013140564071132012,
+      "shaft_centre_sp_mm": [
+        -0.00024009959049571365,
+        0.0001532802577646855
+      ],
+      "maximum_clear_shaft_bending_MPa": 26.544671366313413,
+      "peak_shaft_bending_z_mm": 1.4901006577402707,
+      "maximum_clear_shaft_deflection_mm": 0.00029636918600996567,
+      "maximum_clear_shaft_rotation_deg": 0.011589941054528896,
+      "minimum_dense_cap_counterbore_gap_mm": 0.015839439205151594,
+      "peak_tensile_principal_strain": 0.00744153794314123,
+      "p95_volume_tensile_principal_strain": 0.0002988931131292811,
+      "most_compressive_principal_strain": -0.01512245606984319,
+      "peak_element_centre_spn_mm": [
+        0.3871648400201222,
+        -0.09482497848809912,
+        -0.0655879891724141
+      ]
+    }
+  ]
+}

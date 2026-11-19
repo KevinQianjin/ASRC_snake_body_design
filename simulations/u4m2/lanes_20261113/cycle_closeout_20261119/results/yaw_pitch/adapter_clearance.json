@@ -1,0 +1,33 @@
+{
+  "adapter": "cad/lanes_u4m2/guides_v2/head_adapter.stl",
+  "adapter_sha256": "7344492582357dacf36262d64d3962e27ef96c3ebd48a9f526998583794174f9",
+  "tank_step_sha256": "cd91afaaf497b0c4182aa5d4d4d9e5e57e843bfa8016fc048ac88b26c089581d",
+  "tank_triangulation_deflection_mm": 0.5,
+  "adapter_triangles": 1796,
+  "tank_triangles": 461524,
+  "motion_states": 3405,
+  "minimum_sample": {
+    "step": 813,
+    "phase": "right_out",
+    "adapter_triangle_gap_mm": 10.129682976116271,
+    "interpolated_segment_lower_bound_mm": 8.957688472988798,
+    "mounting_face_centre_to_wall_mm": 38.742023781553144
+  },
+  "minimum_between_pose_bound": {
+    "step": 814,
+    "phase": "right_out",
+    "adapter_triangle_gap_mm": 10.154284709645948,
+    "interpolated_segment_lower_bound_mm": 8.946235246122438,
+    "mounting_face_centre_to_wall_mm": 38.574653893995375
+  },
+  "minimum_distance_from_mounting_face_centre": {
+    "step": 815,
+    "phase": "right_out",
+    "adapter_triangle_gap_mm": 10.270274134755125,
+    "interpolated_segment_lower_bound_mm": 8.95959401036879,
+    "mounting_face_centre_to_wall_mm": 38.50415629255358
+  },
+  "threshold_after_standard_1p5_mm_allowance_mm": 5.0,
+  "failed_interpolated_bounds": 0,
+  "scope": "Actual rigid M6 adapter plate only. The sweep bound assumes linear position and shortest-arc rotation between successive simulated poses, on the stated tank mesh. The inspection-head housing, harness and rear support require their measured shapes."
+}

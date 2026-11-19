@@ -1,0 +1,458 @@
+{
+  "rigid_carriage_nominal_only": true,
+  "installation": [
+    {
+      "part": "shoulder_pin",
+      "from_n_mm": 9.0,
+      "to_n_mm": 0.0,
+      "from_spin_deg": 0.0,
+      "to_spin_deg": 0.0,
+      "method": "distance-bounded translation",
+      "samples": 377,
+      "surface_travel_mm": 9.0,
+      "min_sampled_gap_mm": 0.0,
+      "closest": "pin_carriage",
+      "unresolved_interval_max_surface_travel_mm": 0.017578125,
+      "intersection": null
+    },
+    {
+      "part": "threaded_cap",
+      "from_n_mm": -8.4,
+      "to_n_mm": -1.5,
+      "from_spin_deg": 0.0,
+      "to_spin_deg": 0.0,
+      "method": "distance-bounded translation",
+      "samples": 191,
+      "surface_travel_mm": 6.9,
+      "min_sampled_gap_mm": 0.00982633146820563,
+      "closest": "pin_carriage",
+      "unresolved_interval_max_surface_travel_mm": 0.0,
+      "intersection": null
+    },
+    {
+      "part": "threaded_cap",
+      "from_n_mm": -1.5,
+      "to_n_mm": 0.0,
+      "from_spin_deg": -3600.0,
+      "to_spin_deg": 0.0,
+      "method": "sampled helix",
+      "samples": 161,
+      "surface_travel_mm": 93.90894273168239,
+      "min_sampled_gap_mm": 0.0,
+      "closest": "pin_carriage",
+      "unresolved_interval_max_surface_travel_mm": 0.586930892073015,
+      "intersection": null
+    }
+  ],
+  "carrier_corner_comparison": {
+    "square": {
+      "gap_mm": 0.03250801860511454,
+      "part": "carrier",
+      "target": "P1",
+      "load_multiplier": -1.0
+    },
+    "chamfered": {
+      "gap_mm": 0.7904417225763949,
+      "part": "carrier",
+      "target": "P1",
+      "load_multiplier": -1.0
+    }
+  },
+  "unloaded_internal_positive_overlaps": [],
+  "static_internal_pairs": 94,
+  "unloaded_driver_probe_radius_mm": 0.5,
+  "unloaded_driver_probe_length_mm": 30,
+  "driver_clearance_mm": {
+    "positive": [
+      0.49643061582568865,
+      "pin_carriage"
+    ],
+    "negative": [
+      0.5322060188177163,
+      "pin_carriage"
+    ]
+  },
+  "straight_nearest": [
+    0.6199994087219238,
+    "web_coupon",
+    "pin_carriage"
+  ],
+  "solved_nonzero_poses": [
+    {
+      "target": "P1",
+      "factor": 0.041587520927576636,
+      "gap_mm": 0.6199994043570478,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": 0.25,
+      "gap_mm": 0.619999389431281,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": 0.5,
+      "gap_mm": 0.6199967436288532,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": 0.75,
+      "gap_mm": 0.6199994087166649,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": 1.0,
+      "gap_mm": 0.6199994087216449,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": -0.25,
+      "gap_mm": 0.6199993970299489,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": -0.5,
+      "gap_mm": 0.6199991775403606,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": -0.75,
+      "gap_mm": 0.6199994087207372,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P1",
+      "factor": -1.0,
+      "gap_mm": 0.6199994087216583,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": 0.048563243600026285,
+      "gap_mm": 0.4369615823510742,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": 0.25,
+      "gap_mm": 0.43397188421136207,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": 0.5,
+      "gap_mm": 0.4309203904684305,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": 0.75,
+      "gap_mm": 0.42803453019974924,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": 1.0,
+      "gap_mm": 0.42547476913569177,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": -0.25,
+      "gap_mm": 0.43395454733920213,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": -0.5,
+      "gap_mm": 0.43090305172763604,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": -0.75,
+      "gap_mm": 0.42801713965091903,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P2",
+      "factor": -1.0,
+      "gap_mm": 0.4254574271538949,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": 0.06737207909664979,
+      "gap_mm": 0.5580910115436372,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": 0.25,
+      "gap_mm": 0.5582280140208687,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": 0.5,
+      "gap_mm": 0.5583667292099861,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": 0.75,
+      "gap_mm": 0.5580878272546087,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": 1.0,
+      "gap_mm": 0.5577742689539801,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": -0.25,
+      "gap_mm": 0.5582385520308134,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": -0.5,
+      "gap_mm": 0.5583773251675983,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": -0.75,
+      "gap_mm": 0.5580979113694594,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    },
+    {
+      "target": "P3",
+      "factor": -1.0,
+      "gap_mm": 0.557784845790722,
+      "moving": "web_coupon",
+      "fixed": "pin_carriage"
+    }
+  ],
+  "rigid_bearing_diagnostic": [
+    {
+      "target": "P1",
+      "factor": 0.041587520927576636,
+      "shoulder_pin_rigid_overlap_mm3": 7.814178862992949e-05,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P1",
+      "factor": 0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0012709324048931518,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P1",
+      "factor": 0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.0034765010753348407,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P1",
+      "factor": 0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.0054991010174021875,
+      "threaded_cap_rigid_overlap_mm3": 2.883482090246379e-05
+    },
+    {
+      "target": "P1",
+      "factor": 1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.0077170053496148075,
+      "threaded_cap_rigid_overlap_mm3": 0.00010066899062420306
+    },
+    {
+      "target": "P1",
+      "factor": -0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0012709047089669297,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P1",
+      "factor": -0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.003476353071992177,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P1",
+      "factor": -0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.005499012191803383,
+      "threaded_cap_rigid_overlap_mm3": 2.8830801078995483e-05
+    },
+    {
+      "target": "P1",
+      "factor": -1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.007716917468769743,
+      "threaded_cap_rigid_overlap_mm3": 0.00010066445391947949
+    },
+    {
+      "target": "P2",
+      "factor": 0.048563243600026285,
+      "shoulder_pin_rigid_overlap_mm3": 0.0002000734192384087,
+      "threaded_cap_rigid_overlap_mm3": 2.8613202015120878e-05
+    },
+    {
+      "target": "P2",
+      "factor": 0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0008794701134074252,
+      "threaded_cap_rigid_overlap_mm3": 0.00026392645749693605
+    },
+    {
+      "target": "P2",
+      "factor": 0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.0020783729485304102,
+      "threaded_cap_rigid_overlap_mm3": 0.0006338490112638854
+    },
+    {
+      "target": "P2",
+      "factor": 0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.0036102446768880446,
+      "threaded_cap_rigid_overlap_mm3": 0.001035518004408434
+    },
+    {
+      "target": "P2",
+      "factor": 1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.005315314280017337,
+      "threaded_cap_rigid_overlap_mm3": 0.0014412458418024301
+    },
+    {
+      "target": "P2",
+      "factor": -0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0011434268836330117,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P2",
+      "factor": -0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.0027122951732760515,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P2",
+      "factor": -0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.004645943891988911,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P2",
+      "factor": -1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.006756861899766742,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": 0.06737207909664979,
+      "shoulder_pin_rigid_overlap_mm3": 0.00019424546303049687,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": 0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0010630222695543947,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": 0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.0027216365832776254,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": 0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.004501695625740532,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": 1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.006498532321886469,
+      "threaded_cap_rigid_overlap_mm3": 0.0
+    },
+    {
+      "target": "P3",
+      "factor": -0.25,
+      "shoulder_pin_rigid_overlap_mm3": 0.0007351324769554964,
+      "threaded_cap_rigid_overlap_mm3": 0.00032784829574699904
+    },
+    {
+      "target": "P3",
+      "factor": -0.5,
+      "shoulder_pin_rigid_overlap_mm3": 0.002059818304294903,
+      "threaded_cap_rigid_overlap_mm3": 0.0006617542561683928
+    },
+    {
+      "target": "P3",
+      "factor": -0.75,
+      "shoulder_pin_rigid_overlap_mm3": 0.003512480458411518,
+      "threaded_cap_rigid_overlap_mm3": 0.0009891906777867712
+    },
+    {
+      "target": "P3",
+      "factor": -1.0,
+      "shoulder_pin_rigid_overlap_mm3": 0.005188753777174678,
+      "threaded_cap_rigid_overlap_mm3": 0.0013096887200978451
+    }
+  ],
+  "unique_sampled_poses": 37,
+  "cross_group_pairs_per_pose": 40,
+  "nearest_sample": {
+    "gap_mm": 0.4254574271538949,
+    "moving": "web_coupon",
+    "fixed": "pin_carriage",
+    "rotation_xyzw": [
+      0.04399889874403397,
+      -0.03664234950688351,
+      -0.005609091104217428,
+      0.9983436148085049
+    ],
+    "translation_spn_mm": [
+      -0.04824528685212474,
+      0.007054417996999977,
+      0.0238616393391199
+    ]
+  },
+  "interpolated_segments": 69,
+  "lower_bound_on_interpolated_clearance_mm": 0.032776081822789294,
+  "uncertified_subintervals": 0,
+  "unintended_contact_pairs": [],
+  "limitations": "Bounds apply to the specified rigid carriage paths. The two steel-to-coupon bearing interfaces are evaluated by the separate elastic model. Stage outside the M3 mounting faces, camera, load cell, real grip slip and unique zero-load carriage motion are not characterized."
+}

@@ -15,7 +15,7 @@ from clearance import collider
 from assembly import Part, Survey
 
 
-def fixture():
+def fixture(pin_carriage_path=None):
     parts = CAD / "parts"
     moving = {
         n: b.load(parts / f"{n}.stl")
@@ -30,7 +30,7 @@ def fixture():
             nut = b.cyl(4 / np.sqrt(3), -7.1, -5.5, 6) - b.cyl(1.015, -7.2, -5.4)
             moving[f"M2_bolt_{i}_{k}"] = bolt.translate((x, y, 0))
             moving[f"M2_nut_{i}_{k}"] = nut.translate((x, y, 0))
-    fixed = {"pin_carriage": b.load(parts / "pin_carriage.stl")}
+    fixed = {"pin_carriage": b.load(pin_carriage_path or parts / "pin_carriage.stl")}
     for n in ("shoulder_pin", "threaded_cap"):
         fixed[n] = on_pin_frame(b.load(RETAINED / f"parts/{n}.stl"))
     return moving, fixed
@@ -184,8 +184,8 @@ def corner_comparison(prediction, fixed, moving):
     return result
 
 
-def run(prediction):
-    moving, fixed = fixture()
+def run(prediction, pin_carriage_path=None):
+    moving, fixed = fixture(pin_carriage_path)
     study = MotionCheck(moving, fixed)
     static = []
     for group, solids in (("moving", moving), ("fixed", fixed)):
@@ -283,8 +283,9 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--prediction", type=Path, default=HERE / "results/coupon_fine.json")
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--pin-carriage", type=Path, help="Substitute a bench pin-carriage STL in the same coordinates")
     a = p.parse_args()
-    d = run(json.loads(a.prediction.read_text()))
+    d = run(json.loads(a.prediction.read_text()), a.pin_carriage)
     a.out.write_text(json.dumps(d, indent=2) + "\n")
     print(
         {

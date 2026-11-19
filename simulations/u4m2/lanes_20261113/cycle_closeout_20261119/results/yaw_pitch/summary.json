@@ -1,0 +1,120 @@
+{
+  "requested_pitch_deg": [
+    90,
+    -90
+  ],
+  "base_working_pitch_deg": 20.0,
+  "input_control": "Yaw/elevation in yaw phases; out-of-plane angle and signed forward/up pitch for pitch phases. Direction-vector error also scores both vertical poles.",
+  "requested_cycle_pass": true,
+  "reference_completed": true,
+  "expected_executed_reference_count": 1380,
+  "settled_targets": 1380,
+  "accepted_motion_states_including_start": 3405,
+  "pitch_preflight": [
+    {
+      "requested_target_deg": 90.0,
+      "terminal_qualified_reference_deg": 90.0,
+      "first_rejected_preflight": null,
+      "preflight_reached_target": true
+    },
+    {
+      "requested_target_deg": -90.0,
+      "terminal_qualified_reference_deg": -90.0,
+      "first_rejected_preflight": null,
+      "preflight_reached_target": true
+    }
+  ],
+  "turning_points": [
+    {
+      "phase": "pitch_up",
+      "requested_deg": 90.0,
+      "actual_terminal_signed_pitch_deg": 89.94578567303621,
+      "terminal_reference_deg": 90.0,
+      "error_to_requested_direction_deg": 0.08090047659380599,
+      "index": 975,
+      "tensions_N": [
+        3.0400883499415268,
+        3.0909791882104822,
+        3.0467003600406826,
+        3.007205378470045,
+        14.433845278522304,
+        3.2235918890078907,
+        3.4927167284179217,
+        3.262410539949856,
+        21.199302205080535,
+        3.1236155093598055,
+        3.599961883325483,
+        3.088353883198755
+      ],
+      "terminal_after_allowance_mm": 21.145624078165923,
+      "endpoint_reached": true
+    },
+    {
+      "phase": "pitch_down",
+      "requested_deg": -90.0,
+      "actual_terminal_signed_pitch_deg": -90.07215916263722,
+      "terminal_reference_deg": -90.0,
+      "error_to_requested_direction_deg": 0.0791375926384486,
+      "index": 1065,
+      "tensions_N": [
+        3.0021481374271555,
+        3.0899074829701934,
+        3.0951617449869424,
+        3.0047295966491387,
+        3.643229595830136,
+        3.2099582779418387,
+        7.943802355062189,
+        3.2706196799041365,
+        3.493803920506026,
+        3.1250497407298026,
+        16.81461395367845,
+        3.100982056058243
+      ],
+      "terminal_after_allowance_mm": 35.12915527587731,
+      "endpoint_reached": true
+    }
+  ],
+  "failed_motion_checks": [],
+  "unsettled_or_failed_targets": [],
+  "minimum_motion_tension_N": 2.9500298546625547,
+  "peak_motion_tension_N": 21.553808667686177,
+  "minimum_motion_tank_after_allowance_mm": 8.056035712801027,
+  "peak_motion_angle_coordinate_error_deg": 0.38805993041112075,
+  "maximum_node_step_mm": 2.50000045879561,
+  "peak_pitch_direction_error_deg": 0.08090047659380599,
+  "minimum_fixed_winch_eigenvalue": 0.2185478429702176,
+  "peak_motion_equilibrium_residual": 3.2853583259730945e-10,
+  "prefix_settled_targets": 941,
+  "prefix_motion_samples": 2241,
+  "reference_input_archive_sha256": "379984d9dce45c813d499d0adfffac74497b5a910b4c26996cf7d19e14c4ae29",
+  "continuation_solver_failure": null,
+  "mass": {
+    "previous_bare_module_g": [
+      40.615039,
+      40.615039,
+      40.615039,
+      41.806834,
+      40.68399737545746,
+      41.14983721627346
+    ],
+    "updated_bare_module_g": [
+      40.615039,
+      40.615039,
+      40.615039,
+      41.806834,
+      42.88116330644256,
+      41.14983721627346
+    ],
+    "original_inner_stations_g": {
+      "-12": 2.419238370589264,
+      "12": 2.419238347619139
+    },
+    "retained_inner_stations_g": {
+      "-12": 3.52773942885843,
+      "12": 3.5277394193461156
+    },
+    "web_machining_removed_g": 0.019836199011041243,
+    "M5_net_added_g": 2.1971659309851015,
+    "distribution": "Module masses distributed uniformly over the cells of the corresponding module. The other six guide stations retain their baseline CAD masses and all module stiffness values retain their archived homogenized values."
+  }
+}

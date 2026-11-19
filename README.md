@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 19 November 2026, M5 seat bench fixture and shared C-rope routing
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 19 November 2026, full yaw and vertical-pitch cycle with twelve-rope tension
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,15 +13,20 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+### 19 November 2026 — 500 g full cycle with +90° and −90° pitch
+
+The 500 g U4+M2 simulation executed **1,380 targets and 3,405 motion states** through loaded straightening, insertion, +175°/−175° yaw, **+90°/−90° pitch**, neutral returns and withdrawal. The upward and downward endpoint pointing errors were **0.081° and 0.079°**. The eight-cell operating assessment passed, with 0 failed motion substeps and 0 unsettled or failed targets.
+
+- The trace contains all **40,860 rope tensions**, corresponding winch lengths, head pose and clearance. The ideal force range was **2.901–21.554 N**, and adjusted body clearance stayed at or above **8.056 mm**. Select any of the twelve ropes in the 3-D viewer to see its path and load.
+- At +90° the C-up rope carried 21.20 N. At −90° the C-down rope carried 16.81 N. In a separate steady-sliding comparison at assumed μ = 0.15, the weakest distal rope across the four turning commands reached 1.15 N. The measured coefficient and force through reversal are still needed. [Winch-side and distal forces](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/sliding_turn_tensions.csv)
+- At unchanged actual commands, refining to sixteen cells changed the up/down pointing directions by 0.00017/0.00051°. Finite rope/end CAD, six guide stations, the actual adapter and directional friction have separate checks. As-built friction, guide stiffness and the sensor housing still limit hardware validation.
+- The P3 coupon fixture reduces locating-pilot free reversal from 0.05964 to 0.01966 mm. The measurement log is still empty. [Fixture CAD and test evidence](simulations/u4m2/lanes_20261113/p3_pin_fixture_20261119/README.md)
+
+[Full engineering report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Both vertical poses and loads](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/pitch_poles.svg) · [Twelve-rope event table and curves](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/ROPE_TENSIONS.md) · [3-D rope viewer](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/motion_viewer.html) · [Data and commands](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/README.md)
+
 ### 19 November 2026 — M5 seat bench fixture, coupled guide and shared rope bore
 
-The 500 g U4+M2 front now has a bench package for the M5 retained seat and a two-ended routing check for the C ropes that cross from M5 to M6.
-
-- **How to test the seat.** A PA12 coupon preserves the 5.4 mm working section of the actual web. It uses the production pin and cap in a separate fixture. The 66-command program pairs load and orientation, reverses the force and returns to the same +1 N bias to check permanent shift. Three paired loads range from 14.84 to 24.05 N. The finest elastic mesh predicts 0.108–0.124 mm of loaded reversal travel. The bench record is awaiting measurements. [Fixture drawing and parts](cad/lanes_u4m2/m5_seat_bench_20261119/README.md) · [Bench procedure and measurement forms](simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/README.md)
-- **What changed at the hub.** The four seats at each ±12 mm station now share a moving guide. In the 96.19° bend about 67.5°, a 0.15 mm inside-edge chamfer increases the +12 mm station’s nearest nominal gap from 0.0415 to 0.0748 mm on the refined CAD surface. A rib and fork become the closest pair at this station. Across all six endpoints the minimum is 0.0629 mm at the −12 mm fork when bending about the 0° axis. [Candidate hub CAD](cad/lanes_u4m2/m5_hub_relief_20261119/README.md) · [Coupled clearance results](simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/results/summary.json)
-- **Where the C rope goes.** The actual common bore allows lateral movement up to 0.250 mm in the checked poses. All four C ropes were checked in 217 saved holds against both rigid ends. The smallest sampled clearance is −0.00230 mm, inside the 0.005 mm CAD mesh allowance. All 217 same-winch equilibria converged. The maximum change in head position was 0.329 mm, and the minimum tank clearance after the 1.5 mm allowance was 7.737 mm. A two-load-cell pull-through test is ready to measure friction on reversal. [Routing diagram, commands and data](simulations/u4m2/lanes_20261113/shared_bore_20261119/README.md)
-
-[Detailed engineering report and next physical tests](reports/daily/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Validation plan](docs/500g_validation_plan.md)
+The paired-load fixture and coupon established the bench procedure. A 0.15 mm hub-edge chamfer left at least 0.0629 mm in six selected M5 bent endpoints. All 217 fixed-winch holds converged after the four C ropes gained lateral freedom at the M5/M6 interface. The predicted minimum tank gap after allowance was 7.737 mm. [Detailed report](reports/daily/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Fixture and forms](simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/README.md) · [Hub CAD](cad/lanes_u4m2/m5_hub_relief_20261119/README.md) · [Shared-bore routing](simulations/u4m2/lanes_20261113/shared_bore_20261119/README.md)
 
 ### 18 November 2026 — M5 retained-seat CAD and loaded contact checks
 

@@ -1,0 +1,31 @@
+{
+  "steps": 3405,
+  "targets": 1380,
+  "rope_values": 40860,
+  "matching_length_witnesses": 21,
+  "maximum_length_reconstruction_error_mm": 3.410605131648481e-13,
+  "global_min": {
+    "rope": "C_down",
+    "step": 0,
+    "N": 2.901220780086281,
+    "phase": "straighten"
+  },
+  "global_max": {
+    "rope": "C_up",
+    "step": 2432,
+    "N": 21.553808667686177,
+    "phase": "pitch_up_return"
+  },
+  "phases_at_global_peak_within_1e_6_N": [
+    {
+      "phase": "pitch_up",
+      "step": 2348,
+      "N": 21.553808667683203
+    },
+    {
+      "phase": "pitch_up_return",
+      "step": 2432,
+      "N": 21.553808667686177
+    }
+  ]
+}

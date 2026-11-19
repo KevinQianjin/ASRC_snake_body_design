@@ -1,0 +1,81 @@
+{
+  "states": 217,
+  "unique_geometries": 199,
+  "rope_records": 2604,
+  "phase_counts": {
+    "startup": 29,
+    "inverse": 36,
+    "entry": 4,
+    "exit": 4,
+    "left_out": 36,
+    "left_return": 34,
+    "right_out": 34,
+    "right_return": 34,
+    "straighten": 6
+  },
+  "maximum_piece_endpoint_error_mm": 1.1479169203741087e-13,
+  "maximum_reconstructed_rope_length_error_mm": 1.1181634874901647e-05,
+  "minimum_mu_to_reach_2p5_N": {
+    "mu": 0.09194454370617965,
+    "state": 52,
+    "rope": "a6_down",
+    "phase": "inverse",
+    "nominal_winch_N": 2.9733039183070185,
+    "wrap_deg": 108.04464988106615
+  },
+  "conditions": [
+    {
+      "mu": 0.0,
+      "minimum_distal_if_winch_tight_N": 2.895163269909156,
+      "min_state": 6,
+      "min_phase": "startup",
+      "min_rope": "a6_down",
+      "maximum_distal_if_winch_pays_N": 18.763792142557527,
+      "max_state": 137,
+      "max_rope": "a5_up",
+      "records_with_possible_sub_2p5_N": 0,
+      "rope_records_with_possible_sub_2p5_N": 0,
+      "rope_records_with_possible_above_250_N": 0
+    },
+    {
+      "mu": 0.05,
+      "minimum_distal_if_winch_tight_N": 2.7037977101260786,
+      "min_state": 51,
+      "min_phase": "inverse",
+      "min_rope": "a6_down",
+      "maximum_distal_if_winch_pays_N": 20.32961795675579,
+      "max_state": 137,
+      "max_rope": "a6_up",
+      "records_with_possible_sub_2p5_N": 0,
+      "rope_records_with_possible_sub_2p5_N": 0,
+      "rope_records_with_possible_above_250_N": 0
+    },
+    {
+      "mu": 0.15,
+      "minimum_distal_if_winch_tight_N": 2.2178644371156784,
+      "min_state": 63,
+      "min_phase": "inverse",
+      "min_rope": "a6_down",
+      "maximum_distal_if_winch_pays_N": 25.871843215397824,
+      "max_state": 137,
+      "max_rope": "a6_up",
+      "records_with_possible_sub_2p5_N": 114,
+      "rope_records_with_possible_sub_2p5_N": 148,
+      "rope_records_with_possible_above_250_N": 0
+    },
+    {
+      "mu": 0.3,
+      "minimum_distal_if_winch_tight_N": 1.5314712951593965,
+      "min_state": 63,
+      "min_phase": "inverse",
+      "min_rope": "a6_down",
+      "maximum_distal_if_winch_pays_N": 37.142796674223185,
+      "max_state": 137,
+      "max_rope": "a6_up",
+      "records_with_possible_sub_2p5_N": 176,
+      "rope_records_with_possible_sub_2p5_N": 528,
+      "rope_records_with_possible_above_250_N": 0
+    }
+  ],
+  "scope": "Frozen geometries and winch-side nominal tensions. Local turns from U-module chords, M guide chords and finite end profiles. Both fully sliding directions are evaluated independently. Actual sticking, friction distribution, internal torsional bending, material wear and closed-loop redistribution are unmeasured."
+}

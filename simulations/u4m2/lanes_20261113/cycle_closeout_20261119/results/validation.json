@@ -1,0 +1,53 @@
+{
+  "data_checks": {
+    "motion_alignment": true,
+    "force_columns": true,
+    "rest_columns": true,
+    "no_rope_command_step_exceeds_quarter_mm": true,
+    "all_reference_targets_are_recorded_in_sequence": true,
+    "per_rope_full_cycle_extrema_match_solver_arrays": true,
+    "independent_checked_winch_forces": true,
+    "independent_checked_equilibria": true,
+    "independent_direction_and_full_frame": true,
+    "old_prefix_states_and_commands_exact": true,
+    "real_withdrawal_and_neutral_return": true,
+    "event_table_matches_twelve_step_tensions": true,
+    "holds_capstan_count_and_min": true,
+    "holds_rope_geometric_length_closure": true,
+    "motion_capstan_count_and_min": true,
+    "motion_rope_geometric_length_closure": true,
+    "friction_envelopes_match_the_motion_rope_and_wrap": true,
+    "each_reported_distal_limit_matches_the_capstan_law": true,
+    "six_guide_stations_every_motion_step": true,
+    "complete_mesh_witness_at_each_screened_station": true,
+    "adapter_poses_match_full_trace": true,
+    "all_selected_ends_have_finite_radius_checks": true,
+    "same_actual_commands_in_16_cell_vertical_checks": true,
+    "all_eight_signed_guide_wrenches_match_holes_at_all_steps": true,
+    "all_viewer_tensions_match_actual_substep_to_display_precision": true,
+    "viewer_rope_anchors_match_physical_nodes": true,
+    "three_neutral_comparisons_at_same_clamp": true,
+    "steady_sliding_balance_and_material_virtual_work": true,
+    "four_turn_sliding_cases_and_saved_force_balances": true,
+    "separate_winch_and_distal_tensions_at_the_four_turns": true
+  },
+  "all_data_checks_pass": true,
+  "independent_state_witnesses": 27,
+  "maximum_witness_force_difference_N": 0.0,
+  "maximum_observed_rope_command_increment_mm": 0.24962082330870494,
+  "maximum_viewer_anchor_component_error_mm": 0.04996823289732122,
+  "maximum_guide_wrench_component_error": 0.0,
+  "maximum_witness_residual": 3.2958694123165297e-07,
+  "maximum_witness_pose_difference_deg": 0.0,
+  "requested_cycle_operating_pass": true,
+  "pitch_endpoints": {
+    "pitch_up": {
+      "reached": true,
+      "terminal_error_deg": 0.08090047659380599
+    },
+    "pitch_down": {
+      "reached": true,
+      "terminal_error_deg": 0.0791375926384486
+    }
+  }
+}
