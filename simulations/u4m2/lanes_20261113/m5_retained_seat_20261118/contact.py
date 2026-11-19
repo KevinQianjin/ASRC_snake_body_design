@@ -135,12 +135,20 @@ def strain_matrix(xe, loc):
 
 
 class Patch:
-    def __init__(self, level, length, crown=j.CROWN_RADIUS, fit_relief=False):
+    def __init__(
+        self,
+        level,
+        length,
+        crown=j.CROWN_RADIUS,
+        fit_relief=False,
+        prescribed_ends=False,
+    ):
         self.x, self.hex, self.ids, self.bore, self.shoulder, self.area = make_mesh(
             level, length, crown, fit_relief
         )
         fixed = np.isclose(np.abs(self.x[:, 0]), length, atol=1e-8)
         self.free = np.flatnonzero(np.repeat(~fixed, 3))
+        self.fixed_nodes = np.flatnonzero(fixed)
         mp = np.full(3 * len(self.x), -1, int)
         mp[self.free] = np.arange(len(self.free))
         self.fdof = mp[3 * self.ids[:, None] + np.arange(3)].ravel()
@@ -167,9 +175,21 @@ class Patch:
             shape=(len(mp), len(mp)),
         ).tocsc()
         self.lu = splu(K[self.free, :][:, self.free].tocsc())
+        if prescribed_ends:
+            fixed_dofs = (3 * self.fixed_nodes[:, None] + np.arange(3)).ravel()
+            self.end_coupling = K[self.free, :][:, fixed_dofs].tocsr()
         self.comp = np.zeros((len(self.fdof), len(self.fdof)))
         self.ready = np.zeros(len(self.ids), bool)
         self.level = level
+
+    def lift_ends(self, displacement):
+        """Static elastic extension of two prescribed end-face displacement fields."""
+        out = np.zeros_like(self.x)
+        out[self.fixed_nodes] = displacement
+        out.ravel()[self.free] = self.lu.solve(
+            -self.end_coupling @ displacement.ravel()
+        )
+        return out
 
     def ensure(self, nodes):
         new = np.unique(nodes[~self.ready[nodes]])
@@ -283,7 +303,7 @@ def constraints(patch, R, u, t):
     return inds, g, ng, ng @ R, code
 
 
-def linear_contact(patch, idx, g0, n, local, force, seed):
+def linear_contact(patch, idx, g0, n, local, force, seed, normal_translation=None):
     # Dual bound-constrained elastic energy. Introduce omitted inequalities whenever they penetrate.
     cos = np.arctan2(n[:, 1], n[:, 0])
     bins = (
@@ -305,18 +325,26 @@ def linear_contact(patch, idx, g0, n, local, force, seed):
         # A tiny compliance only regularises duplicated normals; its resulting permitted gap is reported below.
         C = (C + C.T) / 2 + 1e-9 * np.eye(len(s))
         G = spmatrix(-1.0, list(range(len(s))), list(range(len(s))))
+        controlled = slice(None) if normal_translation is None else slice(0, 2)
+        linear = (
+            g0[s]
+            if normal_translation is None
+            else g0[s] + n[s, 2] * normal_translation
+        )
         result = solvers.qp(
             matrix(C),
-            matrix(g0[s]),
+            matrix(linear),
             G,
             matrix(0.0, (len(s), 1)),
-            matrix(n[s].T),
-            matrix(force),
+            matrix(n[s, controlled].T),
+            matrix(force[controlled]),
         )
         if result["status"] != "optimal":
             raise ValueError("Local contact QP " + result["status"])
         lam = np.maximum(0, np.asarray(result["x"]).ravel())
         t = np.asarray(result["y"]).ravel()
+        if normal_translation is not None:
+            t = np.r_[t, normal_translation]
         loads = np.zeros(len(patch.fdof))
         np.add.at(loads, d, local[s] * lam[:, None])
         ub = (patch.comp[:, d.ravel()] @ (local[s] * lam[:, None]).ravel()).reshape(
@@ -338,8 +366,17 @@ def relative_rotation(row):
     return Rotation.from_rotvec(rv).as_matrix()
 
 
-def evaluate(patch, row, field_out=None):
-    R = relative_rotation(row)
+def evaluate(
+    patch,
+    row,
+    field_out=None,
+    *,
+    relative_matrix=None,
+    background=None,
+    recover_strain=True,
+    normal_translation=None,
+):
+    R = relative_rotation(row) if relative_matrix is None else relative_matrix
     F = np.array(
         [
             row[k]
@@ -351,13 +388,16 @@ def evaluate(patch, row, field_out=None):
         ]
     )
     ub = np.zeros((len(patch.ids), 3))
+    base = 0.0 if background is None else background[patch.ids]
     t = np.zeros(3)
     seed = []
     converged = False
     for it in range(34):
-        idx, g, n, loc, code = constraints(patch, R, ub, t)
+        idx, g, n, loc, code = constraints(patch, R, ub + base, t)
         g0 = g - np.einsum("ij,ij->i", loc, ub[idx]) - n @ t
-        cand, tn, s, lam, ld = linear_contact(patch, idx, g0, n, loc, F, seed)
+        cand, tn, s, lam, ld = linear_contact(
+            patch, idx, g0, n, loc, F, seed, normal_translation
+        )
         seed = s[lam > 2e-4].tolist()
         step = max(np.linalg.norm(cand - ub, axis=1).max(), np.linalg.norm(tn - t))
         if step < 3e-6:
@@ -373,6 +413,8 @@ def evaluate(patch, row, field_out=None):
     full = np.zeros(patch.x.size)
     full[patch.free] = patch.lu.solve(rhs)
     u = full.reshape(-1, 3)
+    if background is not None:
+        u += background
     t = tn
     if field_out is not None:
         np.savez_compressed(field_out, u=u, translation=t, R=R)
@@ -415,7 +457,7 @@ def evaluate(patch, row, field_out=None):
             )
             for k, name in enumerate(("shaft", "negative_thrust", "positive_thrust"))
         },
-        **patch.stress(u),
+        **(patch.stress(u) if recover_strain else {}),
     )
 
 

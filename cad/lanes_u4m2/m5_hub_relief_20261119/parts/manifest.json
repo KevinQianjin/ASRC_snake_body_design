@@ -1,0 +1,37 @@
+{
+  "chamfer_radial_and_axial_mm": 0.15,
+  "base_inner_radius_mm": 7.8,
+  "remaining_unrelieved_axial_height_mm": 2.9000000000000004,
+  "distance_axial_from_chamfer_start_to_socket_face_mm": 0.8550000000000002,
+  "parts": {
+    "hub_upper_sector": {
+      "volume_mm3": 71.48143575962133,
+      "triangles": 9056,
+      "closed": true,
+      "source_sha256": "6b56716a6ef1fca24d5826009e6729ba2134f76b95aae5f19925cd54ebd3956d",
+      "outside_source_mm3": 6.111984304874431e-07,
+      "removed_mm3": 0.13760530447378017,
+      "socket_core_volume_loss_mm3": 1.1970419663233574e-07,
+      "lower_bounds_to_thread_envelopes_mm": {
+        "lap": 1.229,
+        "arm": 1.1900000000000004,
+        "fork": 1.5675991170855488
+      }
+    },
+    "hub_lower_sector": {
+      "volume_mm3": 72.83033917256648,
+      "triangles": 36208,
+      "closed": true,
+      "source_sha256": "f4b36963aa06de0b01762091e63320f9a7a763823b625973d437a4a49167ee59",
+      "outside_source_mm3": 4.215599103934355e-07,
+      "removed_mm3": 0.13760553512545926,
+      "socket_core_volume_loss_mm3": 1.2155240972987985e-07,
+      "lower_bounds_to_thread_envelopes_mm": {
+        "lap": 1.229,
+        "arm": 1.1900000000000004,
+        "fork": 1.5675991170855488
+      }
+    }
+  },
+  "manufacturing_status": "Geometric option only. Strength, manufacturing tolerance and resulting module equilibrium require validation."
+}

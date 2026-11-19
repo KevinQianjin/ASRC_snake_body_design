@@ -1,6 +1,6 @@
 # ASRC Project Index
 
-[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 18 November 2026, M5 retained-seat CAD and loaded contact checks
+[GitHub repository](https://github.com/KevinQianjin/ASRC_snake_body_design) · Updated 19 November 2026, M5 seat bench fixture and shared C-rope routing
 
 Times in reports, updates and scheduled handoffs use **US Eastern Time
 (America/New_York)** and include the equivalent **UTC** timestamp. Use EST
@@ -13,13 +13,19 @@ Fuel tank inspection robot: an externally supported telescopic rear with a 63 mm
 
 The latest update is detailed below. Earlier dates have short summaries and links to the full reports and research history. All results described here are simulations unless explicitly stated otherwise.
 
+### 19 November 2026 — M5 seat bench fixture, coupled guide and shared rope bore
+
+The 500 g U4+M2 front now has a bench package for the M5 retained seat and a two-ended routing check for the C ropes that cross from M5 to M6.
+
+- **How to test the seat.** A PA12 coupon preserves the 5.4 mm working section of the actual web. It uses the production pin and cap in a separate fixture. The 66-command program pairs load and orientation, reverses the force and returns to the same +1 N bias to check permanent shift. Three paired loads range from 14.84 to 24.05 N. The finest elastic mesh predicts 0.108–0.124 mm of loaded reversal travel. The bench record is awaiting measurements. [Fixture drawing and parts](cad/lanes_u4m2/m5_seat_bench_20261119/README.md) · [Bench procedure and measurement forms](simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/README.md)
+- **What changed at the hub.** The four seats at each ±12 mm station now share a moving guide. In the 96.19° bend about 67.5°, a 0.15 mm inside-edge chamfer increases the +12 mm station’s nearest nominal gap from 0.0415 to 0.0748 mm on the refined CAD surface. A rib and fork become the closest pair at this station. Across all six endpoints the minimum is 0.0629 mm at the −12 mm fork when bending about the 0° axis. [Candidate hub CAD](cad/lanes_u4m2/m5_hub_relief_20261119/README.md) · [Coupled clearance results](simulations/u4m2/lanes_20261113/m5_seat_bench_20261119/results/summary.json)
+- **Where the C rope goes.** The actual common bore allows lateral movement up to 0.250 mm in the checked poses. All four C ropes were checked in 217 saved holds against both rigid ends. The smallest sampled clearance is −0.00230 mm, inside the 0.005 mm CAD mesh allowance. All 217 same-winch equilibria converged. The maximum change in head position was 0.329 mm, and the minimum tank clearance after the 1.5 mm allowance was 7.737 mm. A two-load-cell pull-through test is ready to measure friction on reversal. [Routing diagram, commands and data](simulations/u4m2/lanes_20261113/shared_bore_20261119/README.md)
+
+[Detailed engineering report and next physical tests](reports/daily/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Validation plan](docs/500g_validation_plan.md)
+
 ### 18 November 2026 — M5 retained-seat CAD and loaded contact checks
 
-The 500 g validation programme now has a physical guide design for the two M5 stations at −12 and +12 mm. Each station has four pinned web seats, removable gates, screw-on thrust caps and a segmented hub that fits through the cage. The original B/C rope centres and the independent NiTi backbone are retained.
-
-- **A full-body check changed the fork.** In the 96.19° bend about 67.5°, the returning leg of a rib intersected the outboard fork tip at both stations. Trimming the tip to a 24.6 mm radius left 0.224 and 0.228 mm between those parts. The closest remaining pair is a rib and the hub at +12 mm, with only 0.044 mm nominal clearance. [Loaded CAD sections](simulations/u4m2/lanes_20261113/m5_retained_seat_20261118/results/loaded_clearance.svg)
-- **Contact remains the strength limit.** The six endpoints supply 48 paired force/rotation inputs. The fine local model predicts up to 6.06% incremental tensile strain and 242 MPa peak nodal pressure. None of the 48 sites met the 5% joint mesh-change criterion on the first refinement. A web coupon is needed to measure strength, backlash and permanent set.
-- **Assembly and mass.** The straight assemblies passed 1,980 pair checks. Across 88 component placements, none of the 15,928 sampled poses showed solid interference. The two stations add 2.20 g in total after machining. The tightest hub lap screw has 3.45 mm of coaxial tool space. A 1.15 mm high side-drive envelope cleared the full tightening stroke at all 16 hub screws with at least 0.134 mm nominal clearance. A physical driver must still supply the torque.
+Created the retained M5 seat, trimmed the fork after uncovering a returning-web collision and identified a 0.044 mm nominal rib-to-hub gap. A low side-drive exterior cleared the 16 hub screws in CAD. The 19 November work adds a coupon, a shared-guide model and a hub edge change.
 
 [Full English test report](reports/daily/M5_Retained_Seat_2026_11_18.md) · [CAD, exploded view and sections](cad/lanes_u4m2/retained_seat_20261118/README.md) · [Results and reproduction](simulations/u4m2/lanes_20261113/m5_retained_seat_20261118/README.md)
 

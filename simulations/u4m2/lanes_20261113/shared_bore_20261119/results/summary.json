@@ -1,0 +1,200 @@
+{
+  "frozen_shared_bore": {
+    "held_poses": 217,
+    "route_checks": 868,
+    "two_end_CAD_checks": 1736,
+    "unique_guide_to_guide_geometries": 796,
+    "interface_radius_mm": {
+      "minimum": 0.006993174121370785,
+      "min_hold_ray": [
+        27,
+        "down"
+      ],
+      "maximum": 0.24957610401897595,
+      "max_hold_ray": [
+        121,
+        "down"
+      ]
+    },
+    "free_minus_old_mm": {
+      "minimum": -0.02934732944716245,
+      "min_hold_ray": [
+        176,
+        "left"
+      ],
+      "maximum": -2.057870609917245e-06,
+      "max_hold_ray": [
+        27,
+        "down"
+      ]
+    },
+    "total_absolute_wrap_deg": {
+      "minimum": 0.00022310240552354335,
+      "min_hold_ray": [
+        30,
+        "right"
+      ],
+      "maximum": 25.85358014769717,
+      "max_hold_ray": [
+        62,
+        "up"
+      ]
+    },
+    "assumed_mu015_ratio": {
+      "minimum": 1.0000005840809023,
+      "min_hold_ray": [
+        30,
+        "right"
+      ],
+      "maximum": 1.0700276770603572,
+      "max_hold_ray": [
+        62,
+        "up"
+      ]
+    },
+    "assumed_mu030_ratio": {
+      "minimum": 1.000001168162146,
+      "min_hold_ray": [
+        30,
+        "right"
+      ],
+      "maximum": 1.1449592296751838,
+      "max_hold_ray": [
+        62,
+        "up"
+      ]
+    },
+    "min_design_margin_deg": {
+      "minimum": 9.10181883090207,
+      "min_hold_ray": [
+        176,
+        "left"
+      ],
+      "maximum": 17.96611485442736,
+      "max_hold_ray": [
+        212,
+        "down"
+      ]
+    },
+    "cad_min_mm": {
+      "minimum": -0.0022931940757525693,
+      "min_hold_ray": [
+        187,
+        "down"
+      ],
+      "maximum": 0.1785043358679408,
+      "max_hold_ray": [
+        26,
+        "up"
+      ]
+    },
+    "cad_failures_outside_minus_0005_mm": 0,
+    "sampled_negative_clearance_end_checks": 1427,
+    "less_than_one_degree_margin": 0,
+    "max_force_balance_N": 0.0016540937840377513,
+    "max_cone_violation_mm": 8.981267951568839e-10
+  },
+  "finer_spacing_comparison": {
+    "length_change_mm": 0.00017860419030313324,
+    "interface_shift_mm": 0.0003549710243767552,
+    "wrap_change_deg": 0.013061033012566298,
+    "clearance_change_mm": 0.0005398891793001459
+  },
+  "fixed_winch_8": [
+    {
+      "hold": 0,
+      "status": "converged",
+      "head_change_mm": 0.008712909672158048,
+      "yaw_change_deg": 9.709634979845502e-14,
+      "elevation_change_deg": -0.0004225028400455244,
+      "max_tension_change_N": 0.11193747079304472,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.8213301386555489,
+      "residual": 1.7881045614154592e-12,
+      "min_CAD_gap_mm": -0.0017587670610890171,
+      "minimum_design_margin_deg": 15.008599462099733
+    },
+    {
+      "hold": 141,
+      "status": "converged",
+      "head_change_mm": 0.2968569588388979,
+      "yaw_change_deg": 0.10016716104081524,
+      "elevation_change_deg": -0.030611530700252132,
+      "max_tension_change_N": 0.1630160945875243,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.32745504639399137,
+      "residual": 4.635978059851634e-10,
+      "min_CAD_gap_mm": -0.002283330448979215,
+      "minimum_design_margin_deg": 9.567859306440644
+    },
+    {
+      "hold": 146,
+      "status": "converged",
+      "head_change_mm": 0.32562982410736807,
+      "yaw_change_deg": 0.10925673361847998,
+      "elevation_change_deg": -0.0375685614818444,
+      "max_tension_change_N": 0.15638917769041427,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.38018707961334613,
+      "residual": 7.664443154216846e-11,
+      "min_CAD_gap_mm": -0.002282738159225084,
+      "minimum_design_margin_deg": 9.096301081770838
+    },
+    {
+      "hold": 47,
+      "status": "converged",
+      "head_change_mm": 0.14477027406000198,
+      "yaw_change_deg": -0.0010553040567060634,
+      "elevation_change_deg": -0.08313647392671797,
+      "max_tension_change_N": 0.09905368709659967,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.820200134885424,
+      "residual": 2.87884936923418e-11,
+      "min_CAD_gap_mm": -0.0022917942664688606,
+      "minimum_design_margin_deg": 13.810067488573079
+    },
+    {
+      "hold": 48,
+      "status": "converged",
+      "head_change_mm": 0.15822442220637717,
+      "yaw_change_deg": -0.0095575579476872,
+      "elevation_change_deg": -0.08825787385713824,
+      "max_tension_change_N": 0.10470788340485981,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.8154558723956673,
+      "residual": 1.9453350908734246e-11,
+      "min_CAD_gap_mm": -0.002264614326827452,
+      "minimum_design_margin_deg": 13.213727376646926
+    },
+    {
+      "hold": 64,
+      "status": "converged",
+      "head_change_mm": 0.2685762859723046,
+      "yaw_change_deg": -0.09208278517129997,
+      "elevation_change_deg": -0.01577277491956508,
+      "max_tension_change_N": 0.16726767447736357,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.28092391915215,
+      "residual": 6.78967547078401e-10,
+      "min_CAD_gap_mm": -0.0022719239883540743,
+      "minimum_design_margin_deg": 9.498604445919042
+    }
+  ],
+  "fixed_winch_16": [
+    {
+      "hold": 64,
+      "status": "converged",
+      "head_change_mm": 0.5471015949546025,
+      "yaw_change_deg": -0.1777635954946959,
+      "elevation_change_deg": -0.02980472497174702,
+      "max_tension_change_N": 0.23269146663663243,
+      "minimum_fixed_winch_tangent_eigenvalue": 0.27980473036131714,
+      "residual": 2.604818212977496e-10,
+      "min_CAD_gap_mm": -0.002268570830094019,
+      "minimum_design_margin_deg": 9.475057387345334
+    }
+  ],
+  "same_command_8_to_16_record_64": {
+    "head_mm": 0.2825827483060133,
+    "angles_deg": [
+      -0.08568081032339592,
+      0.012049472341146839,
+      -0.01403195005218194
+    ],
+    "max_tension_change_N": 0.0687686460886674
+  }
+}

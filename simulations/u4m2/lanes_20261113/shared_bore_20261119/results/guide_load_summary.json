@@ -1,0 +1,79 @@
+{
+  "holds": 217,
+  "simultaneous_stations": 1736,
+  "hole_records": 10416,
+  "axes": "Local to the deformed station or shared joint, in CAD x,y,z. Force on the hardware in N, moment about its centre in N mm.",
+  "maximum_wall_force_normal_check_error_N": 0.001559265233352199,
+  "joint_virtual_work_at_hold_64_C_up": {
+    "analytic_rod_axes": [
+      [
+        0.7138222869352598,
+        7.629948404097254,
+        -0.03573910786025021
+      ],
+      [
+        -1.0006977310068048,
+        -1.9732653178915454,
+        -48.77874291639307
+      ]
+    ],
+    "finite_difference_rod_axes": [
+      [
+        0.7138227700570764,
+        7.629953187269111,
+        -0.03573779513055897
+      ],
+      [
+        -1.0006582342660495,
+        -1.9732754272173991,
+        -48.77875390864659
+      ]
+    ],
+    "force_error_N": 4.983512711303157e-06,
+    "moment_error_Nmm": 4.222582902672722e-05
+  },
+  "peak_individual_hole_force_N": 5.727156837299184,
+  "peak_simultaneous_joint_wall_force_N": 17.64116864045459,
+  "maximum_station_force": {
+    "hold": 141,
+    "phase": "left_out",
+    "module": "M5",
+    "station_mm": 12,
+    "force_norm_N": 28.282834580907704
+  },
+  "maximum_station_moment": {
+    "hold": 47,
+    "phase": "inverse",
+    "module": "M5",
+    "station_mm": -12,
+    "moment_norm_Nmm": 61.2132914073665
+  },
+  "maximum_station_force_change": {
+    "hold": 212,
+    "phase": "left_return",
+    "module": "M6",
+    "station_mm": -24,
+    "force_change_from_archive_N": 0.3097208560733682
+  },
+  "maximum_station_moment_change": {
+    "hold": 41,
+    "phase": "inverse",
+    "module": "M6",
+    "station_mm": -24,
+    "moment_change_from_archive_Nmm": 2.952447379091241
+  },
+  "maximum_M5_inner_station_force_change": {
+    "hold": 84,
+    "phase": "left_return",
+    "module": "M5",
+    "station_mm": 12,
+    "force_change_from_archive_N": 0.1882755939875472
+  },
+  "maximum_M5_inner_station_moment_change": {
+    "hold": 55,
+    "phase": "inverse",
+    "module": "M5",
+    "station_mm": -12,
+    "moment_change_from_archive_Nmm": 0.21609101902174424
+  }
+}
