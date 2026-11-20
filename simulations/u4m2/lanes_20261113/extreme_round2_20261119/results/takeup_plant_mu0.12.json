@@ -1,0 +1,79 @@
+{
+  "assumed_mu": 0.12,
+  "plant_mu_static": 0.15,
+  "plant_mu_kinetic": 0.15,
+  "plant_play_mm": 0.1,
+  "expected_substeps": 10102,
+  "expected_archive_steps": 3405,
+  "stopped_at": null,
+  "all_substeps": {
+    "states": 10102,
+    "minimum_distal_N": [
+      2.62186498477852,
+      898,
+      2492,
+      "C_down"
+    ],
+    "maximum_proximal_N": [
+      25.12562564127976,
+      2390,
+      7358,
+      "C_up"
+    ],
+    "below_tension_floor": 0,
+    "maximum_pointing_error_deg": [
+      0.8187322640232978,
+      1784,
+      5400
+    ],
+    "above_pointing_allowance": 0,
+    "minimum_tank_gap_mm": [
+      8.056722456290963,
+      1014,
+      2964
+    ],
+    "below_gap_allowance": 0,
+    "maximum_residual": 4.7035494005198686e-07,
+    "m5_maxima": {
+      "M5_zminus12_force_N": 26.782272487926438,
+      "M5_zminus12_moment_Nmm": 61.59752004037361,
+      "M5_zplus12_force_N": 27.87257012041793,
+      "M5_zplus12_moment_Nmm": 56.8744053212013
+    }
+  },
+  "original_endpoints": {
+    "states": 3405,
+    "minimum_distal_N": [
+      2.6218649847794615,
+      897,
+      2491,
+      "C_down"
+    ],
+    "maximum_proximal_N": [
+      25.12562564127976,
+      2390,
+      7358,
+      "C_up"
+    ],
+    "below_tension_floor": 0,
+    "maximum_pointing_error_deg": [
+      0.8187322640232978,
+      1783,
+      5396
+    ],
+    "above_pointing_allowance": 0,
+    "minimum_tank_gap_mm": [
+      8.068719877036017,
+      1014,
+      2965
+    ],
+    "below_gap_allowance": 0,
+    "maximum_residual": 4.7035494005198686e-07,
+    "m5_maxima": {
+      "M5_zminus12_force_N": 26.78079919320081,
+      "M5_zminus12_moment_Nmm": 61.59752004037361,
+      "M5_zplus12_force_N": 27.869400552061613,
+      "M5_zplus12_moment_Nmm": 56.8744053212013
+    }
+  }
+}

@@ -2,38 +2,31 @@
 
 ASRC is a fuel-tank inspection robot with a tendon-driven front on a supported telescopic rear. The current U4+M2 front uses four U modules, two M modules and twelve Ø2 mm ropes. The six 96 mm modules span 576 mm and are about 63 mm across. The camera and induction-thermography head has a **500 g total mass budget including its adapter**.
 
-[Prototype installation guide](docs/installation_guide.md) · [Full-cycle engineering report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Next steps](nextstep/README.md) · [Repository map](docs/repository_map.md)
+[Second-round extreme-test report](reports/daily/Extreme_Simulation_Round_2_2026_11_19.md) · [Prototype installation guide](docs/installation_guide.md) · [Full-cycle engineering report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Next steps](nextstep/README.md) · [Repository map](docs/repository_map.md)
 
 ## Daily updates
 
+### 19 November 2026 — second extreme-test round at 500 g
+
+The 0.25 mm M6 guide candidate clears the actual body triangles at both stations in all **3,405** mission states. The minimum guide gaps are **0.0667 mm at −12 mm** and **0.0824 mm at +12 mm**. An elastic support calculation at the critical yaw poses moves the C-rope bores **2.07–2.18 mm** relative to their ideal positions. Re-equilibrating with the original winch lengths gives **1.51°–1.56°** pointing error. Bounded feedback recovers **0.028°–0.197°** across the six tested holds.
+
+- **Rope reversal.** With assumed friction 0.15 and 0.10 mm drum play, the original commands reach a minimum distal force of **1.444 N**. Holding the pose while the drum takes up the friction reversal gives **2.901 N** over 7,084 freely equilibrated substeps with matched model parameters. With estimated friction 0.12 against a 0.15 plant, the minimum is **2.622 N** and the largest pointing error is **0.819°** (0 substeps over 1°). The archive includes both ends of all twelve ropes. [Tension figure](simulations/u4m2/lanes_20261113/extreme_round2_20261119/results/twelve_rope_forces.png) · [Free-rod replay](simulations/u4m2/lanes_20261113/extreme_round2_20261119/results/takeup_plant_mu0.12.json)
+- **Structural limits.** The U cage and four movable blade tabs balance the critical U1 axial load under the stated stiffness assumptions. The M5 local pin reaches **372.6 MPa** bending stress at the more severe service event and **739.2 MPa** at twice that event's pin load. The steel grade, printed PA12 resistance and installed bond strength still require measurement. [U assembly](simulations/u4m2/lanes_20261113/extreme_round2_20261119/results/u_assembly.json) · [M5 proof loads](simulations/u4m2/lanes_20261113/extreme_round2_20261119/results/proof_loads.json)
+- **Usable motion and life.** The installed map follows 22 combined yaw/pitch branches at three clamp coordinates, including the return and withdrawal connection. The service spectrum records 46 signed channels from one mission. Physical lifetime and safety factors require measured resistance and fatigue curves. [Motion map](simulations/u4m2/lanes_20261113/extreme_round2_20261119/results/combined_motion.png) · [Life and resistance requirements](reports/daily/Extreme_Simulation_Round_2_2026_11_19.md#fatigue-wear-and-safety-factors)
+
+[Full engineering report](reports/daily/Extreme_Simulation_Round_2_2026_11_19.md) · [Simulations, data and reproduction](simulations/u4m2/lanes_20261113/extreme_round2_20261119/README.md) · [Next decisions](nextstep/README.md)
+
 ### 19 November 2026 — Evening Report: wider M6 guide bond gap
 
-The tightest guide/body gap in the 500 g mission was at the M6 z = −12 mm guide: **0.020932 mm**. Widening the bonded land gap of the four M6 outer-web sockets from **0.15 to 0.25 mm** raises it to **0.06733 mm** (3.2×), and the z = +12 mm gap from 0.03431 to **0.08284 mm**. The rope bores, stations, webs and land length are unchanged, and the mass changes by −0.0016 g per station. The exact triangle check found no contact for four bond gaps over 406 screened station-steps covering all 11 mission phases. A second screen checked every step whose archived bound is below 0.040 mm, giving **787 and 430 steps** checked exactly. The candidate's minimum gap is 0.0667 and 0.0824 mm, with no contact.
-
-- **Tilt sets the tolerance.** A rigid guide tilt of 0.1° makes V3 touch. The 0.25 mm candidate stays clear to ±0.2° about every axis. Bonded-guide tilt is now the quantity to measure on the bench.
-- **Rejected:** a 0.3 mm land (the lockwire groove splits the caps) and a steeper flare (no gain). **Cost:** the thicker bond has about 0.6× the shear stiffness and still sees 22% nominal shear. Adhesive, printed gap and strength are unmeasured, so the candidate is not a manufacturing release.
-
-[Evening Report](reports/daily/Evening_Report_2026_11_19.md) · [Study, data and commands](simulations/u4m2/lanes_20261113/evening_20261119/README.md) · [Candidate M6 parts](cad/lanes_u4m2/m6_bond_gap_20261119/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261119/HANDOFF.md)
+The 0.25 mm M6 sockets improved rigid-location margin over the 0.15 mm land. Tilt became the controlling assembly tolerance in the sampled configurations. [Evening Report](reports/daily/Evening_Report_2026_11_19.md) · [Candidate M6 parts](cad/lanes_u4m2/m6_bond_gap_20261119/README.md)
 
 ### 19 November 2026 — first extreme tests at 500 g
 
-At the M6 left-turn witness the guide/web gap fell from **0.08438 mm straight to 0.02093 mm bent**. A 0.025 mm rigid shift toward the web produced contact. On the +69° pitch return, B-down crossed the 2.5 N operating floor between assumed friction coefficients **0.16 and 0.17**. Four-blade U1 analysis located the largest trial tensile strain at the distal tab. The unknown compliance of this bond affects the predicted force. [First-round results, critical sites and twelve-rope figures](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
+The first round identified the critical M6 gap, M5 pin and remote web hotspots, U1 distal tab and the weak B-down return at +69° pitch. [First-round results](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
 
 ### 19 November 2026 — 500 g full cycle with +90° and −90° pitch
 
-The nominal quasi-static closed-loop simulation completed **1,380 of 1,380 targets**, from loaded straightening and insertion through two yaw turns, two pitch turns, each return to neutral and final withdrawal. It recorded **3,405 states and 40,860 individual rope tensions**, with zero failed operating substeps. Neutral is 0° yaw and +20° elevation. Pitch is measured from horizontal.
-
-| Turn | Command | Achieved | 3-D pointing error | Highest endpoint rope tension | Body-to-tank gap after allowance |
-|---|---|---|---:|---|---:|
-| Right | +175° yaw at +20° elevation | +175.002° yaw, +20.001° elevation | 0.002° | B-up, 17.61 N | 11.581 mm |
-| Left | −175° yaw at +20° elevation | −175.172° yaw, +19.940° elevation | 0.173° | B-up, 17.70 N | 24.522 mm |
-| Up | +90° elevation | +89.919° elevation | 0.081° | C-up, 21.20 N | 21.146 mm |
-| Down | −90° elevation | −89.921° elevation | 0.079° | C-down, 16.81 N | 35.129 mm |
-
-- **Across the whole cycle, including loaded startup**, ideal rope tension ranged from **2.901 to 21.554 N**. C-up reached the peak near +69° pitch on both the outward and return moves. The smallest body-to-tank gap was **8.056 mm** after the 1.5 mm allowance. Refining from eight to sixteen cells per module changed the up/down endpoint directions by 0.00017°/0.00051° at the same winch commands.
-- **What still needs a bench test.** At the four turning commands, a separate steady-sliding calculation with assumed friction coefficient μ = 0.15 put the weakest distal rope at **1.152 N**, below the 2.5 N operating floor. The closest selected full-mesh guide/web gap was **0.02047 mm** at M6, z = −12 mm. The P3 coupon fixture reduces calculated reversal play from 0.05964 to 0.01966 mm. Its specimen log is empty. Friction on reversal, as-built fit and the actual head and harness envelope remain open.
-
-[Full report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [All twelve forces at each turn](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/ROPE_TENSIONS.md) · [Step-by-step data](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/rope_tensions_every_step.csv.gz) · [Interactive 3-D replay — download the HTML and open it locally](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/motion_viewer.html) · [Simulation and reproduction commands](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/README.md)
+The nominal quasi-static controller completed 1,380 targets through loaded straightening, insertion, ±175° yaw, ±90° pitch and withdrawal. The archive contains 40,860 individual rope tensions. [Full-cycle report](reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Twelve-rope results](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/ROPE_TENSIONS.md) · [Interactive 3-D replay](simulations/u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/motion_viewer.html)
 
 ### Earlier results
 
@@ -68,9 +61,9 @@ To see the U module with its two leaf-spring pairs fitted, open the [illustrated
 
 ## Next steps
 
-The extreme-test programme keeps the head and adapter at 500 g. It covers usable motion and recovery, component damage and rupture, single faults, fatigue life and safety factors. The first round uses the full-cycle loads to test M6 clearance, M5 seat reactions, U spring end loads and force transmission at the two +69° pitch crossings.
+Measure the M6 bore motion and bonded tilt, identify rope friction and drum play on reversal, then measure U tab stiffness and M5 pin/web response under the recovered loads. Matched material tests will turn the published service spectrum into a first-damage, rupture and fatigue-life rating.
 
-[Extreme-test plan](nextstep/README.md) · [Complete plan (PDF)](nextstep/U4M2_Extreme_Test_Plan_2026_11_19.pdf) · [First-round results and reproduction](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
+[Extreme-test programme and next decisions](nextstep/README.md) · [Complete plan (PDF)](nextstep/U4M2_Extreme_Test_Plan_2026_11_19.pdf) · [Second-round evidence](reports/daily/Extreme_Simulation_Round_2_2026_11_19.md)
 
 <a id="geometry-and-input-data"></a><a id="earlier-studies"></a>
 

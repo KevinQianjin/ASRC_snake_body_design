@@ -4,6 +4,16 @@ The extreme-test programme asks four separate questions. What motion can the ins
 
 [Complete six-page test plan (PDF)](U4M2_Extreme_Test_Plan_2026_11_19.pdf) · [First-round results, datasets and reproduction commands](../simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md) · [Full-cycle baseline](../reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Prototype and materials](../docs/installation_guide.md)
 
+## Second-round disposition
+
+The [second-round engineering report](../reports/daily/Extreme_Simulation_Round_2_2026_11_19.md) records the six numerical work packages. The [study and reproduction commands](../simulations/u4m2/lanes_20261113/extreme_round2_20261119/README.md) include the complete two-station M6 CAD check, finite bond and moving-bore trials, three twelve-rope mission replays, two additional free-rod checks of the alternative reversal sequence, U cage and tab load sharing, M5 proof loads, combined motion and the duty spectrum.
+
+| Next decision | Measurement or calculation that resolves it |
+|---|---|
+| Set the M6 routing datum under load | At steps 1,709, 1,710 and 1,885, measure both guide centres, both web displacements and post-cure tilt. The small guide/web gap change coexists with a much larger predicted motion of the bores relative to the original routing. Use the measured positions to update the complete trajectory. |
+| Select the rope reversal sequence | Instrument the proximal and distal ends, identify directional friction and play, then run the hold-and-take-up sequence through both pitch crossings and both yaw reversals. Compare all twelve forces, pointing, travel, time and guide loads. |
+| Set component resistance and service life | Test U cage and tab stiffness together, measure the M5 pin and remote PA12 hotspot under their own load vectors, and test conditioned rope/crimp and adhesive specimens. Use the published rainflow means, ranges and travel with the measured service blocks. Record first damage, rupture and surviving specimens separately. |
+
 ## Configuration and test basis
 
 Keep the head and adapter at **500 g total**. Use the four 96 mm U modules with four installed NiTi blades in each, two M modules with independent Ø1.8 mm NiTi backbones, the eight installed guide stations and the twelve Ø2 mm ropes in the 21/24/28 mm lanes. Keep the current rope anchors, sleeve bonds and shared C-rope passage. Use the retained M5 guide seats and the actual CAD parts. Record the revision, as-built dimensions, head centre of mass, harness route, material batch and fixture orientation with each result.

@@ -96,8 +96,8 @@ def projection6(theta_deg, r0, z0, zc):
 VARIANTS = dict(rigid_bond=(0, 1, 2, 3, 4, 5), hinge_t=(0, 1, 3, 4, 5), ball=(0, 1, 3), none=())
 
 
-def setup(max_area, E, nu):
-    body = trimesh.load(R.BODY)
+def setup(max_area, E, nu, body_path=None):
+    body = trimesh.load(R.BODY if body_path is None else body_path)
     poly, e_r, e_z, n = R.rib_polygon(body, 22.5)
     X, T = R.mesh_polygon(poly, max_area)
     t = R.thickness(body, X[T].mean(axis=1), e_r, e_z, n)

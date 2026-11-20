@@ -1,0 +1,62 @@
+[
+  {
+    "step": 1843,
+    "station_mm": 12,
+    "material_scenario": "ss304_annealed",
+    "catalog_yield_MPa": 205.0,
+    "installed_pin_grade": null,
+    "status": "refined",
+    "probe_solutions": [
+      {
+        "load_factor": 0.5405530865023636,
+        "converged": true,
+        "bending_MPa": 202.1552167604205,
+        "force_residual_N": 1.6484386488246012e-05,
+        "error": null
+      },
+      {
+        "load_factor": 0.5565530865023636,
+        "converged": true,
+        "bending_MPa": 208.1396263003581,
+        "force_residual_N": 1.729947916657604e-05,
+        "error": null
+      }
+    ],
+    "lower_scale": 0.5405530865023636,
+    "upper_scale": 0.5565530865023636,
+    "lower_force_N": 7.841482446527865,
+    "upper_force_N": 8.073584939839403,
+    "lower_bending_MPa": 202.1552167604205,
+    "upper_bending_MPa": 208.1396263003581
+  },
+  {
+    "step": 2059,
+    "station_mm": -12,
+    "material_scenario": "ss304_annealed",
+    "catalog_yield_MPa": 205.0,
+    "installed_pin_grade": null,
+    "status": "refined",
+    "probe_solutions": [
+      {
+        "load_factor": 1.371694694855805,
+        "converged": true,
+        "bending_MPa": 203.73859673548776,
+        "force_residual_N": 4.112440603912241e-05,
+        "error": null
+      },
+      {
+        "load_factor": 1.387694694855805,
+        "converged": true,
+        "bending_MPa": 206.16913248517918,
+        "force_residual_N": 4.239264867590752e-05,
+        "error": null
+      }
+    ],
+    "lower_scale": 1.371694694855805,
+    "upper_scale": 1.387694694855805,
+    "lower_force_N": 8.883545889607666,
+    "upper_force_N": 8.987167150786826,
+    "lower_bending_MPa": 203.73859673548776,
+    "upper_bending_MPa": 206.16913248517918
+  }
+]

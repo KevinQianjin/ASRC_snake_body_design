@@ -106,7 +106,8 @@ def disk_motion(rod, z, module):
     return R, d
 
 
-def solve_blade(profile, R, d):
+def solve_blade(profile, R, d, warm=None, return_seed=False):
+    """Continue from the stress-free blade or a converged tip at the same end orientation."""
     p, ds, tangent, ea, compliance, basis, stiffness, width, thick = profile
     chord = p[-1] - p[0]
     tip = chord + d + (R - np.eye(3)) @ (p[-1] - [0, 0, 48.0])
@@ -115,6 +116,9 @@ def solve_blade(profile, R, d):
     # Multiple shooting bounds the sensitivity of long slender spans under axial tension.
     cuts = np.linspace(0, len(ds), 5, dtype=int)
     coords = np.zeros(6 + 6 * (len(cuts) - 2))
+    start_tip = chord if warm is None else np.asarray(warm[0])
+    if warm is not None:
+        coords = np.array(warm[1], copy=True)
     older = coords.copy()
     length_scale = length / (len(cuts) - 1)
     cases = []
@@ -152,26 +156,31 @@ def solve_blade(profile, R, d):
                 fields.append(arc if b == 0 else arc[1:])
         return np.vstack(fields) if get_field else np.concatenate(matches)
 
-    fraction, increment, previous_increment = 0.0, 0.125, 0.125
+    max_increment = 0.125 if warm is None else 1.0
+    fraction, increment, previous_increment = 0.0, max_increment, max_increment
     rejected = []
     while fraction < 1.0:
         increment = min(increment, 1.0 - fraction)
         trial = fraction + increment
-        wanted = chord + trial * (tip - chord)
-        end_rotation = Rotation.from_rotvec(trial * rv).as_matrix()
+        wanted = start_tip + trial * (tip - start_tip)
+        end_rotation = Rotation.from_rotvec(trial * rv).as_matrix() if warm is None else R
         predictor = coords + (coords - older) * increment / previous_increment
-        sol = least_squares(
-            shoot,
-            predictor,
-            args=(wanted, end_rotation),
-            method="lm",
-            x_scale="jac",
-            max_nfev=250,
-            xtol=1e-10,
-            ftol=1e-10,
-            gtol=1e-10,
-        )
-        error = float(np.linalg.norm(sol.fun))
+        try:
+            sol = least_squares(
+                shoot,
+                predictor,
+                args=(wanted, end_rotation),
+                method="lm",
+                x_scale="jac",
+                max_nfev=250,
+                xtol=1e-10,
+                ftol=1e-10,
+                gtol=1e-10,
+            )
+            error = float(np.linalg.norm(sol.fun))
+        except (np.linalg.LinAlgError, ValueError):
+            # A trial with an invalid director can still converge at a smaller load increment.
+            error = np.inf
         if not np.isfinite(error) or error > 2e-5:
             rejected.append(
                 dict(fraction=trial, residual_mm=error if np.isfinite(error) else None)
@@ -187,7 +196,7 @@ def solve_blade(profile, R, d):
             continue
         cases.append(error)
         fraction, previous_increment = trial, increment
-        increment = min(0.125, 2 * increment)
+        increment = min(max_increment, 2 * increment)
         older, coords = coords, sol.x
     wrench = coords[:6]
     history = shoot(coords, tip, R, True)
@@ -212,6 +221,7 @@ def solve_blade(profile, R, d):
     a, b = field[:, 0].argmin(), field[:, 1].argmax()
     return dict(
         converged=True,
+        **({"shooting_seed": (tip.copy(), coords.copy())} if return_seed else {}),
         endpoint_residual_mm=cases,
         rejected_continuation=rejected,
         orthogonality_error=max_orth,

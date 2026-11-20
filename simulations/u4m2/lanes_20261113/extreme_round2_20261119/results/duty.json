@@ -1,0 +1,206 @@
+{
+  "mission_steps": 3405,
+  "channels": 46,
+  "sites": {
+    "M5_backbone_strain": {
+      "cell": 1,
+      "fibre_deg": 180
+    },
+    "M6_backbone_strain": {
+      "cell": 1,
+      "fibre_deg": 195
+    },
+    "M5_build_Z_kinematic_strain": {
+      "reference_CAD_mm": [
+        10.015906699339173,
+        -28.100227044142795,
+        20.601686775069393
+      ],
+      "gauge_mm": 0.5,
+      "archived_shell_build_Z_strain": 0.06430095956617111
+    },
+    "M6_bond_normal_MPa": {
+      "station_mm": -12,
+      "rib_deg": 67.5,
+      "quadrature_point": 14,
+      "G_MPa": 500,
+      "bond_mm": 0.25,
+      "positive_direction": [
+        -0.9238795325112867,
+        0.38268343236508984,
+        0.0
+      ]
+    },
+    "M6_bond_axial_shear_MPa": {
+      "station_mm": -12,
+      "rib_deg": 67.5,
+      "quadrature_point": 7,
+      "G_MPa": 500,
+      "bond_mm": 0.25,
+      "positive_direction": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "M6_bond_cross_shear_MPa": {
+      "station_mm": -12,
+      "rib_deg": 67.5,
+      "quadrature_point": 6,
+      "G_MPa": 500,
+      "bond_mm": 0.25,
+      "positive_direction": [
+        0.9238795325112867,
+        -0.38268343236508984,
+        0.0
+      ]
+    },
+    "U1_linear_blade_strain": {
+      "module": 1,
+      "blade": 2,
+      "corner": [
+        -1,
+        1
+      ],
+      "reference_z_mm": -44.49990111111111,
+      "trial_tab_N_mm": 250.0,
+      "trial_cage_N_mm": 130.37848426734735
+    },
+    "U2_linear_blade_strain": {
+      "module": 2,
+      "blade": 2,
+      "corner": [
+        -1,
+        1
+      ],
+      "reference_z_mm": -44.49990111111111,
+      "trial_tab_N_mm": 250.0,
+      "trial_cage_N_mm": 130.37848426734735
+    },
+    "U3_linear_blade_strain": {
+      "module": 3,
+      "blade": 3,
+      "corner": [
+        1,
+        1
+      ],
+      "reference_z_mm": 44.49990111111111,
+      "trial_tab_N_mm": 250.0,
+      "trial_cage_N_mm": 130.37848426734735
+    },
+    "U4_linear_blade_strain": {
+      "module": 4,
+      "blade": 3,
+      "corner": [
+        1,
+        1
+      ],
+      "reference_z_mm": 44.49990111111111,
+      "trial_tab_N_mm": 250.0,
+      "trial_cage_N_mm": 130.37848426734735
+    }
+  },
+  "counts": 5377,
+  "four_holds_distal_N_hours": {
+    "1": {
+      "A_up": 0.5174267984630762,
+      "A_right": 0.2839639661054007,
+      "A_down": 0.20593313585122067,
+      "A_left": 0.2843054753133069,
+      "B_up": 0.8907117918285888,
+      "B_right": 0.49640583831313567,
+      "B_down": 0.2982955843121185,
+      "B_left": 0.4992178505978043,
+      "C_up": 0.9826025722908158,
+      "C_right": 0.47338000438994404,
+      "C_down": 0.44586419288916534,
+      "C_left": 0.4727903187485287
+    },
+    "10": {
+      "A_up": 5.174267984630762,
+      "A_right": 2.839639661054007,
+      "A_down": 2.0593313585122064,
+      "A_left": 2.843054753133069,
+      "B_up": 8.907117918285888,
+      "B_right": 4.9640583831313565,
+      "B_down": 2.982955843121185,
+      "B_left": 4.9921785059780435,
+      "C_up": 9.826025722908158,
+      "C_right": 4.73380004389944,
+      "C_down": 4.4586419288916534,
+      "C_left": 4.727903187485287
+    },
+    "60": {
+      "A_up": 31.04560790778457,
+      "A_right": 17.03783796632404,
+      "A_down": 12.35598815107324,
+      "A_left": 17.058328518798415,
+      "B_up": 53.44270750971533,
+      "B_right": 29.78435029878814,
+      "B_down": 17.89773505872711,
+      "B_left": 29.95307103586826,
+      "C_up": 58.95615433744895,
+      "C_right": 28.40280026339664,
+      "C_down": 26.75185157334992,
+      "C_left": 28.367419124911724
+    }
+  },
+  "rope_travel": {
+    "A_up": {
+      "material_transfer_travel_mm": 5.610477902044774,
+      "actual_drum_travel_mm": 9.901924824521075
+    },
+    "A_right": {
+      "material_transfer_travel_mm": 34.0544647554043,
+      "actual_drum_travel_mm": 35.21949272477195
+    },
+    "A_down": {
+      "material_transfer_travel_mm": 3.2524148599035185,
+      "actual_drum_travel_mm": 3.1906576915118876
+    },
+    "A_left": {
+      "material_transfer_travel_mm": 34.06863740112015,
+      "actual_drum_travel_mm": 35.2334402639176
+    },
+    "B_up": {
+      "material_transfer_travel_mm": 276.1446688364817,
+      "actual_drum_travel_mm": 292.40401491882244
+    },
+    "B_right": {
+      "material_transfer_travel_mm": 219.92685740761522,
+      "actual_drum_travel_mm": 240.9472954157477
+    },
+    "B_down": {
+      "material_transfer_travel_mm": 270.7176889834111,
+      "actual_drum_travel_mm": 279.6428590425355
+    },
+    "B_left": {
+      "material_transfer_travel_mm": 220.19457109913623,
+      "actual_drum_travel_mm": 241.44409866621572
+    },
+    "C_up": {
+      "material_transfer_travel_mm": 489.4667458731335,
+      "actual_drum_travel_mm": 519.1440071943532
+    },
+    "C_right": {
+      "material_transfer_travel_mm": 168.41875484999258,
+      "actual_drum_travel_mm": 180.27200643054766
+    },
+    "C_down": {
+      "material_transfer_travel_mm": 482.087806253582,
+      "actual_drum_travel_mm": 494.3856535619366
+    },
+    "C_left": {
+      "material_transfer_travel_mm": 168.63778060542268,
+      "actual_drum_travel_mm": 180.47791978415376
+    }
+  },
+  "turn_steps": [
+    913,
+    1796,
+    2390,
+    2819
+  ],
+  "actual_duration_s": null,
+  "physical_life_missions": null
+}
