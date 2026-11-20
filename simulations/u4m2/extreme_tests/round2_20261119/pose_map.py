@@ -46,12 +46,12 @@ def tangent(rod, drive, z, R):
     return A, C, float(eigvalsh(H, subset_by_index=(0, 0))[0])
 
 
-def correct(rod, drive, z, R, target):
+def correct(rod, drive, z, R, target, tol_deg=0.13):
     A, C, e = tangent(rod, drive, z, R)
     for i in range(18):
         actual = pointing(rod, z)
         T = drive.force(z, R).ravel()
-        if angle_between(actual, target) < 0.13 and min(T) > 2.68:
+        if angle_between(actual, target) < tol_deg and min(T) > 2.68:
             return z, R, None
         if i and i % 4 == 0:
             A, C, e = tangent(rod, drive, z, R)

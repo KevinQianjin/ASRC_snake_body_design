@@ -4,6 +4,14 @@ The extreme-test programme asks four separate questions. What motion can the ins
 
 [Complete six-page test plan (PDF)](U4M2_Extreme_Test_Plan_2026_11_19.pdf) · [First-round results, datasets and reproduction commands](../simulations/u4m2/extreme_tests/round1_20261119/README.md) · [Full-cycle baseline](../reports/projects/motion_control/Yaw_Pitch_Closeout_2026_11_19.md) · [Prototype and materials](../docs/installation_guide.md)
 
+## Free-space and repeated-duty follow-up
+
+Use the [angle and service-life report](../reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md) to set the bench conditions. Keep the 500 g payload and the production rope, crimp, guide and pin geometry.
+
+1. Start inside the reported steering brackets. Record the 3-D head axis, simultaneous drum and distal rope forces, installed bore centre and rope tangent at the governing M6 exit. Measure the winch stroke and torque margin before moving farther. Compare both approach and return on a held-out repetition.
+2. Test the identified pin grade and matched printed webs separately. On the assembled M5 coupon use the recorded moving-frame force and tilt, unload to measure permanent set, inspect for the first crack, then record the load-loss or pullout event. Those three observations establish different thresholds.
+3. Repeat the duty block including the withdrawn reset. Count floor violations, fraying, crimp motion, residual set and stiffness change separately. Measure a force-life curve for the finished rope at the recorded mean loads and bend radii, strain-life curves for the installed NiTi parts and the relevant PA12 and bond endurance. Use independent assemblies and record right-censored runouts. Log time at load before converting missions to service hours.
+
 ## Second-round disposition
 
 The [second-round engineering report](../reports/projects/extreme_tests/Extreme_Simulation_Round_2_2026_11_19.md) records the six numerical work packages. The [study and reproduction commands](../simulations/u4m2/extreme_tests/round2_20261119/README.md) include the complete two-station M6 CAD check, finite bond and moving-bore trials, three twelve-rope mission replays, two additional free-rod checks of the alternative reversal sequence, U cage and tab load sharing, M5 proof loads, combined motion and the duty spectrum.

@@ -1,0 +1,63 @@
+{
+  "cells_per_module": 16,
+  "axial_surface_spacing_mm": 0.25,
+  "candidate_M6_mass_change_g": -0.0031183956569817133,
+  "maximum_extension_from_coarse_deg": 12,
+  "extra_checked_rows": 4,
+  "paths": {
+    "right": {
+      "last_pass_deg": 297.0,
+      "first_failure_deg": 298.0,
+      "limiting_check": "M6_distal_C_left_wrap_margin_deg",
+      "status": "adjacent fine-grid witnesses"
+    },
+    "left": {
+      "last_pass_deg": -297.0,
+      "first_failure_deg": -298.0,
+      "limiting_check": "M6_distal_C_right_wrap_margin_deg",
+      "status": "adjacent fine-grid witnesses"
+    },
+    "up": {
+      "last_pass_deg": 215.0,
+      "first_failure_deg": 216.0,
+      "limiting_check": "M5_distal_C_up_wrap_margin_deg",
+      "status": "coarse bracket confirmed on fine mesh"
+    },
+    "down": {
+      "last_pass_deg": -149.0,
+      "first_failure_deg": -150.0,
+      "limiting_check": "M5_proximal_C_down_wrap_margin_deg",
+      "status": "coarse bracket confirmed on fine mesh"
+    },
+    "right_up": {
+      "last_pass_deg": 112.0,
+      "first_failure_deg": 113.0,
+      "limiting_check": "M5_proximal_C_up_wrap_margin_deg",
+      "status": "adjacent fine-grid witnesses"
+    },
+    "right_down": {
+      "last_pass_deg": -7.0,
+      "first_failure_deg": -8.0,
+      "limiting_check": "M5_proximal_C_left_wrap_margin_deg",
+      "status": "coarse bracket confirmed on fine mesh"
+    },
+    "left_up": {
+      "last_pass_deg": 114.0,
+      "first_failure_deg": 115.0,
+      "limiting_check": "M5_proximal_C_up_wrap_margin_deg",
+      "status": "adjacent fine-grid witnesses"
+    },
+    "left_down": {
+      "last_pass_deg": -7.0,
+      "first_failure_deg": -8.0,
+      "limiting_check": "M5_proximal_C_right_wrap_margin_deg",
+      "status": "coarse bracket confirmed on fine mesh"
+    },
+    "antipode": {
+      "last_pass_deg": -19.0,
+      "first_failure_deg": -20.0,
+      "limiting_check": "M5_distal_C_up_wrap_margin_deg",
+      "status": "coarse bracket confirmed on fine mesh"
+    }
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "cells_per_module": 16,
+  "axial_surface_spacing_mm": 0.25,
+  "face_counts": {
+    "M5": 3451720,
+    "M6": 2490254
+  },
+  "unresolved": [],
+  "samples": [
+    {
+      "path": "right",
+      "kind": "last screened",
+      "command_deg": 296.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.03333157926932189,
+      "base_axis_separation_deg": 59.7153928978614
+    },
+    {
+      "path": "right",
+      "kind": "first geometry rejection",
+      "command_deg": 297.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.019844697311400435,
+      "base_axis_separation_deg": 58.79134042860017
+    },
+    {
+      "path": "right",
+      "kind": "inward check",
+      "command_deg": 292.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.034885777747947995,
+      "base_axis_separation_deg": 63.38413830945678
+    },
+    {
+      "path": "right",
+      "kind": "one-degree witness",
+      "command_deg": 293.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.020211510098382984,
+      "base_axis_separation_deg": 62.46458106673809
+    },
+    {
+      "path": "right",
+      "kind": "one-degree witness",
+      "command_deg": 294.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.020859082847502274,
+      "base_axis_separation_deg": 61.54872891807169
+    },
+    {
+      "path": "right",
+      "kind": "one-degree witness",
+      "command_deg": 295.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.02466313491605259,
+      "base_axis_separation_deg": 60.63212355829745
+    },
+    {
+      "path": "left",
+      "kind": "last screened",
+      "command_deg": -296.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.031930614009326834,
+      "base_axis_separation_deg": 59.71518209800995
+    },
+    {
+      "path": "left",
+      "kind": "first geometry rejection",
+      "command_deg": -297.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.020137300259674466,
+      "base_axis_separation_deg": 58.79097537707646
+    },
+    {
+      "path": "left",
+      "kind": "inward check",
+      "command_deg": -292.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.033394082659345264,
+      "base_axis_separation_deg": 63.38404467491196
+    },
+    {
+      "path": "left",
+      "kind": "one-degree witness",
+      "command_deg": -293.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.020192542838349824,
+      "base_axis_separation_deg": 62.46426350603198
+    },
+    {
+      "path": "left",
+      "kind": "one-degree witness",
+      "command_deg": -294.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.020552263195291687,
+      "base_axis_separation_deg": 61.54843074830761
+    },
+    {
+      "path": "left",
+      "kind": "one-degree witness",
+      "command_deg": -295.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.023832961153537526,
+      "base_axis_separation_deg": 60.63186868049732
+    },
+    {
+      "path": "up",
+      "kind": "last screened",
+      "command_deg": 215.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.011941707439931682,
+      "base_axis_separation_deg": 165.01194170743906
+    },
+    {
+      "path": "up",
+      "kind": "first geometry rejection",
+      "command_deg": 216.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_distal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.018883558848573567,
+      "base_axis_separation_deg": 164.01888355884793
+    },
+    {
+      "path": "up",
+      "kind": "inward check",
+      "command_deg": 208.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.0160470559930882,
+      "base_axis_separation_deg": 172.01604705598012
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 209.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.010364834034503511,
+      "base_axis_separation_deg": 171.01036483403422
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 210.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.013938682313549642,
+      "base_axis_separation_deg": 170.01393868231352
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 211.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.011718643805610218,
+      "base_axis_separation_deg": 169.0117186438055
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 212.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.01742895398740741,
+      "base_axis_separation_deg": 168.0174289539874
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 213.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.011757476243843478,
+      "base_axis_separation_deg": 167.01175747624376
+    },
+    {
+      "path": "up",
+      "kind": "one-degree witness",
+      "command_deg": 214.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.01533711832661342,
+      "base_axis_separation_deg": 166.01533711832633
+    },
+    {
+      "path": "down",
+      "kind": "last screened",
+      "command_deg": -149.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.005566069268225903,
+      "base_axis_separation_deg": 168.99443393073176
+    },
+    {
+      "path": "down",
+      "kind": "first geometry rejection",
+      "command_deg": -150.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_down_wrap_margin_deg",
+      "pointing_error_deg": 0.009784467422495493,
+      "base_axis_separation_deg": 169.9902155325775
+    },
+    {
+      "path": "down",
+      "kind": "inward check",
+      "command_deg": -142.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.009235118304056506,
+      "base_axis_separation_deg": 161.99076488169592
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -143.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.005149773063722652,
+      "base_axis_separation_deg": 162.9948502269363
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -144.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.011127466927017247,
+      "base_axis_separation_deg": 163.98887253307296
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -145.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.005287234143628733,
+      "base_axis_separation_deg": 164.9947127658564
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -146.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.009478784026162864,
+      "base_axis_separation_deg": 165.99052121597384
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -147.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.005490418068706527,
+      "base_axis_separation_deg": 166.99450958193128
+    },
+    {
+      "path": "down",
+      "kind": "one-degree witness",
+      "command_deg": -148.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.010867635453827136,
+      "base_axis_separation_deg": 167.98913236454618
+    },
+    {
+      "path": "right_up",
+      "kind": "last screened",
+      "command_deg": 113.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.03240767954515663,
+      "base_axis_separation_deg": 47.09371205622291
+    },
+    {
+      "path": "right_up",
+      "kind": "first geometry rejection",
+      "command_deg": 114.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.020556325409714277,
+      "base_axis_separation_deg": 46.111724181579525
+    },
+    {
+      "path": "right_up",
+      "kind": "inward check",
+      "command_deg": 108.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.023434325827261557,
+      "base_axis_separation_deg": 52.08534804780901
+    },
+    {
+      "path": "right_down",
+      "kind": "last screened",
+      "command_deg": -7.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.07674510823701525,
+      "base_axis_separation_deg": 166.13474613685273
+    },
+    {
+      "path": "right_down",
+      "kind": "first geometry rejection",
+      "command_deg": -8.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_left_wrap_margin_deg",
+      "pointing_error_deg": 0.09395399552651548,
+      "base_axis_separation_deg": 167.06192936796631
+    },
+    {
+      "path": "right_down",
+      "kind": "inward check",
+      "command_deg": 0.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.03145294876124025,
+      "base_axis_separation_deg": 159.4275146705489
+    },
+    {
+      "path": "left_up",
+      "kind": "last screened",
+      "command_deg": 115.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.030456875657690802,
+      "base_axis_separation_deg": 45.10687635252507
+    },
+    {
+      "path": "left_up",
+      "kind": "first geometry rejection",
+      "command_deg": 116.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.01791534722718704,
+      "base_axis_separation_deg": 44.137347314037534
+    },
+    {
+      "path": "left_up",
+      "kind": "inward check",
+      "command_deg": 108.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.02269739317749885,
+      "base_axis_separation_deg": 52.08648616284453
+    },
+    {
+      "path": "left_down",
+      "kind": "last screened",
+      "command_deg": -7.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.07697167362949636,
+      "base_axis_separation_deg": 166.13482069421084
+    },
+    {
+      "path": "left_down",
+      "kind": "first geometry rejection",
+      "command_deg": -8.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_proximal_C_right_wrap_margin_deg",
+      "pointing_error_deg": 0.09434638657164639,
+      "base_axis_separation_deg": 167.06196903836297
+    },
+    {
+      "path": "left_down",
+      "kind": "inward check",
+      "command_deg": 0.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.03207497999852943,
+      "base_axis_separation_deg": 159.42757599716134
+    },
+    {
+      "path": "antipode",
+      "kind": "last screened",
+      "command_deg": -19.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.04587348180142558,
+      "base_axis_separation_deg": 179.01511040445854
+    },
+    {
+      "path": "antipode",
+      "kind": "first geometry rejection",
+      "command_deg": -20.0,
+      "all_pass": false,
+      "first_failed_geometry": "M5_distal_C_up_wrap_margin_deg",
+      "pointing_error_deg": 0.045814710538748554,
+      "base_axis_separation_deg": 179.95418528946124
+    },
+    {
+      "path": "antipode",
+      "kind": "inward check",
+      "command_deg": -12.0,
+      "all_pass": true,
+      "first_failed_geometry": "",
+      "pointing_error_deg": 0.0364598543912079,
+      "base_axis_separation_deg": 172.00649356055067
+    }
+  ]
+}

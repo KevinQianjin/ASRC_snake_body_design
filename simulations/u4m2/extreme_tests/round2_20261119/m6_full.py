@@ -20,12 +20,12 @@ from m6_socket_screen import (
 GRID = np.linspace(-48, 48, 193)
 
 
-def coefficients(heights, st, rod, detail):
+def coefficients(heights, st, rod, detail, module=5):
     # The existing constant-strain CAD map is affine in x and y at each fixed z.
     n = len(heights)
     base = np.column_stack((np.zeros((n, 2)), heights))
     points = np.concatenate((base, base + [1, 0, 0], base + [0, 1, 0]))
-    origin, x, y = np.split(to_station(points, 5, st, rod, detail), 3)
+    origin, x, y = np.split(to_station(points, module, st, rod, detail), 3)
     return np.stack((origin, x - origin, y - origin), axis=1)
 
 
@@ -39,16 +39,16 @@ def leaves(triangles, n=32):
     return leaves(triangles[idx[:half]], n) + leaves(triangles[idx[half:]], n)
 
 
-def swept_crop(mesh, parts, st, rod, details):
+def swept_crop(mesh, parts, st, rod, details, module=5):
     """Exclude only faces whose swept boxes cannot reach any solid within WINDOW."""
     mins = np.full((len(GRID), 3, 3), np.inf)
     maxs = -mins.copy()
     stretch = curvature = 0.0
     for d in details:
-        a = coefficients(GRID, st, rod, d)
+        a = coefficients(GRID, st, rod, d, module)
         mins = np.minimum(mins, a)
         maxs = np.maximum(maxs, a)
-        q = d["q"][-8:]
+        q = d["q"][module * rod.sub : (module + 1) * rod.sub]
         stretch = max(stretch, np.max(np.abs(1 + q[:, 3])))
         curvature = max(
             curvature, np.max(np.linalg.norm(q[:, :3], axis=1)) / (rod.l * 1000)

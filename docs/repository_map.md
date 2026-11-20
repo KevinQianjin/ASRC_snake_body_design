@@ -9,7 +9,7 @@
 | [cad/lanes_u4m2](../cad/README.md) | Routed bodies, M5/M6 guide revisions, A/B/C end geometry, the U spring assembly and bench fixtures. Open the [print list](installation_guide.md#full-front-print-list) for station-specific selections. |
 | [cad/modules](../cad/modules/) and [cad/tank](../cad/tank/) | Original U/M STEP files, tank geometry and reference images |
 | [cad/previews](../cad/previews/u4m2/README.md) and [cad/simulation_reference](../cad/simulation_reference/u4m2_500g/README.md) | STEP-based previews and the annotated 500 g simulation reference |
-| [simulations/u4m2/extreme_tests](../simulations/u4m2/extreme_tests/README.md) | First and second extreme-test rounds. Within Round 2 each component or test family has its own results folder. |
+| [simulations/u4m2/extreme_tests](../simulations/u4m2/extreme_tests/README.md) | The first two extreme-test rounds and the [free-space and repeated-duty study](../simulations/u4m2/extreme_tests/free_space_20261120/README.md). Results are grouped by component and test. |
 | [simulations/u4m2/lanes_20261113](../simulations/u4m2/lanes_20261113/README.md) | Source lane solvers and dated guide, seat, bore and full-motion studies, with their local evidence and handoffs |
 | [Other U4+M2 simulations](../simulations/README.md) and [shared models](../simulations/shared/README.md) | Backbone, tank, rear deployment, earlier controllers, common kernels and model dependencies |
 | [data/materials](../data/materials/README.md) | Material properties, current stiffness database and historical inputs |
