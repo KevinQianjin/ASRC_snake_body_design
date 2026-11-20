@@ -52,6 +52,13 @@ summ = json.loads((HERE / "results/coverage_summary.json").read_text())
 check("coverage_all_eleven_phases", len(summ["phases"]) == 11, summ["phases"])
 check("coverage_candidate_no_contact", all(summ[s]["variants"]["g025"]["contacts"] == 0 for s in ("z-12", "z+12")))
 
+clos = json.loads((HERE / "results/closure_summary.json").read_text())
+check("closure_candidate_no_contact", all(clos[s]["candidate_contacts"] == 0 for s in ("z-12", "z+12")),
+      {s: clos[s]["candidate_min_gap_mm"] for s in ("z-12", "z+12")})
+check("closure_covers_all_bounds_below_0p040",
+      all(clos[s]["min_archived_sampled_lower_bound_unchecked_mm"] >= 0.040 for s in ("z-12", "z+12")),
+      {s: clos[s]["min_archived_sampled_lower_bound_unchecked_mm"] for s in ("z-12", "z+12")})
+
 broken = []
 for doc in [HERE / "README.md", HERE / "HANDOFF.md", CAND / "README.md",
             ROOT / "reports/daily/Evening_Report_2026_11_19.md", ROOT / "README.md"]:

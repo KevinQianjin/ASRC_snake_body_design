@@ -57,9 +57,11 @@ Round 1 checked only rigid translations. `m6_tilt.py` rotates the guide, caps an
 
 **Tilt about the plate axes, not translation, uses up most of the gap.** The witness is about 21 mm from the axis, so 0.1° of tilt moves it by roughly 0.037 mm. That exceeds the whole V3 margin at z = −12 mm. With the candidate, a tilt of up to 0.2° remains clear. Whether a bonded PA12 guide can be assembled and held within 0.2° of its nominal plane is a **measurement question**. These are rigid-body sensitivities. They exclude bond deformation, guide bending and as-printed form error.
 
-### Coverage limit
+### Coverage closure and limit
 
-3,201 (z = −12 mm) and 3,203 (z = +12 mm) steps were not checked with exact triangles. In those steps the archived sampled lower bound is at least 0.02116 mm and 0.03340 mm. In the screened steps it differed from the exact 0.5 mm triangle gap by up to 0.0034 mm in either direction, so it is an estimate, not a strict bound. Together with the smallest increase of 0.0463 mm, this suggests the candidate gap in unscreened steps is about 0.064 mm or more. **That is an estimate. A full exact screen was not run**: it would take about 10 CPU-hours at the 0.5 mm span.
+A second run (`results/closure/`) checked V3 and the committed candidate at every remaining step whose archived sampled lower bound is below 0.040 mm: 583 steps at z = −12 mm and 228 at z = +12 mm. In total **787 and 430 steps** were checked exactly. All 11 phases are included. The candidate minimum is **0.06674 mm** (z = −12 mm, step 1,709) and **0.08239 mm** (z = +12 mm, step 1,709) on the 0.5 mm span, with no contact. Per-phase minima for both variants: [closure_summary.json](results/closure_summary.json).
+
+The 2,618 and 2,975 remaining steps have archived sampled bounds of at least 0.0400 mm. In the checked steps that bound differed from the exact 0.5 mm triangle gap by up to 0.0034 mm in either direction, so it is an estimate, not a strict bound. The candidate added at least 0.0463 mm in every checked step. These remaining steps are therefore **estimated** at about 0.083 mm or more for the candidate, **not certified**.
 
 ## Mounting stiffness, bond and solver inputs
 
@@ -82,7 +84,8 @@ python m6_socket_screen.py --out results/fine_governing_plus12.json  --variant V
 python m6_tilt.py --out results/tilt_minus12_step1710.json --variant V3=$V3 bond_gap_0p25=$C --station -12 --step 1710 --angles 0.05 0.1 0.15 0.2 0.25 0.3
 python m6_tilt.py --out results/tilt_plus12_step1709.json  --variant V3=$V3 bond_gap_0p25=$C --station 12 --step 1709 --angles 0.05 0.1 0.15 0.2 0.25 0.3
 python summarize.py   # coverage_screen.csv, coverage_summary.json, m6_socket_gap.png
+python closure_summary.py   # after the closure screen, step lists in results/closure/*.json
 python validate.py    # results/validation.json
 ```
 
-Results: [per-step gaps for all variants](results/coverage_screen.csv) · [coverage summary](results/coverage_summary.json) · [raw screens with step lists](results/screen/) · [fine governing checks](results/fine_governing_minus12.json) ([+12 mm](results/fine_governing_plus12.json)) · [tilt sensitivities](results/tilt_minus12_step1710.json) ([+12 mm](results/tilt_plus12_step1709.json))
+Results: [per-step gaps for all variants](results/coverage_screen.csv) · [coverage summary](results/coverage_summary.json) · [raw screens with step lists](results/screen/) · [fine governing checks](results/fine_governing_minus12.json) ([+12 mm](results/fine_governing_plus12.json)) · [tilt sensitivities](results/tilt_minus12_step1710.json) ([+12 mm](results/tilt_plus12_step1709.json)) · [closure screen](results/closure/) and [per-phase summary](results/closure_summary.json)
