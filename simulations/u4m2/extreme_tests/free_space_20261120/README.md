@@ -8,6 +8,7 @@ This manual study uses four U modules, two M modules and a 500 g head including 
 
 | Result group | Contents |
 |---|---|
+| [Offline 3D replay](results/replay/ASRC-500g-3D-Replay.html) · [Download ZIP](results/replay/ASRC-500g-3D-Replay.zip?raw=true) | Nine 8-cell round trips with 642 playback samples, all twelve ideal rope tensions and a separate first failed sample for each route. The 16-cell values are local fixed-command checks. Extract the HTML and open it in a browser. |
 | [Angles](results/angles/) | An outward search and fixed-winch reverse replay for each direction. Each CSV row gives the actual head axis, all twelve forces, commanded and internal rope lengths, signed twist, bend and minimum radius for each module, body separation and simultaneous guide wrenches. The state arrays have the same row order. |
 | [CAD and rope exits](results/geometry/) | Working CAD at six bonded stations, the remote adapter envelope and 24 finite end routes for each stored state. Additional midpoint rows resolve a sampled transition to at most one degree. |
 | [Return before a geometric obstruction](results/return/) | A second replay starts at the screened endpoint, reverses the accepted commands and rejoins the published neutral-return motion. |

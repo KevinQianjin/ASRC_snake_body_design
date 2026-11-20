@@ -4,6 +4,8 @@ Manual engineering study, 20 November 2026. Started at 09:40 EST (14:40 UTC). Re
 
 The 8-cell steering model with sampled CAD screening reached +296° and -296° in heading and +215° and -149° in pitch. Neutral elevation is +20°. These are direction- and controller-specific results for a 500 g payload. The moving-pivot analysis ties elastic steel demand to head angle. The repeated mission exposes a tension-floor failure during a simple reset and tests a direction-aware alternative. Installed fracture angle and service life remain unmeasured.
 
+To explore the nine steering routes, extract `ASRC-500g-3D-Replay.html` from the ZIP and open it in Chrome or Edge. Select a tension to trace that rope through the CAD model, or select **First failed sample** to inspect the exit that limits the chosen route. The pin, printed-web and fatigue plots use the material assumptions described below. The replay works offline. [Download the 3D replay (ZIP)](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/replay/ASRC-500g-3D-Replay.zip?raw=true) · [Standalone HTML file](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/replay/ASRC-500g-3D-Replay.html)
+
 ![Steering travel, angle-resolved pin bending and cyclic rope travel](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/free_space_and_duty.png)
 
 ## Free-space steering envelope
