@@ -9,7 +9,6 @@ several CAD folders. It reads the published mission and never writes into it.
 """
 
 import argparse
-import json
 import sys
 import time
 from pathlib import Path
@@ -19,7 +18,7 @@ import numpy as np
 import trimesh
 
 HERE = Path(__file__).resolve().parent
-ROUND1 = HERE.parent / "extreme_round1_20261119"
+ROUND1 = HERE.parents[1] / "extreme_tests/round1_20261119"
 sys.path.insert(0, str(ROUND1))
 from study_inputs import CAD, load_motion, save  # noqa: E402
 from adapter import mesh_model  # noqa: E402

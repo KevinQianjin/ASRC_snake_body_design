@@ -1,30 +1,41 @@
 # Repository map
 
-[Project home](../README.md) · [Simulation index](../simulations/README.md) · [Reports](../reports/README.md)
-
-The root README details the latest daily results, summarises earlier dates with links to full reports and research history, and gives Prototype its own top-level section. Daily updates are ordered newest first; file links and path references point to the relocated files. This page describes the new physical layout.
+[Project home and daily timeline](../README.md) · [Find a component or study](project_index.md) · [Report catalogue](../reports/README.md)
 
 ## Folder layout
 
-| Location | Contents |
+| Location | What belongs here |
 |---|---|
-| [simulations/u4m2](../simulations/u4m2/) | Active U4+M2 studies, baseline models, saved numerical results and closed-loop animations |
-| [simulations/shared](../simulations/shared/README.md) | Shared H8U12 kernel and legacy rod models, with their configurations, input snapshots and reference runs |
-| [cad/modules](../cad/modules/) | Original U/M STEP source files |
-| [cad/tank](../cad/tank/) | Tank STEP and reference images |
-| [cad/previews/u4m2](../cad/previews/u4m2/) | STEP-derived SCAD/STL preview; keep each assembly with its mesh files |
-| [data/materials](../data/materials/README.md) | Shared material catalogue, SQLite databases and prior stiffness snapshot |
-| [reports/daily](../reports/daily/) | Daily PDF and Word reports |
-| [reports/weekly](../reports/weekly/) | Presentations |
-| [reports/builders](../reports/builders/README.md) | PDF/PPTX generators and their figure/chart inputs |
-| [archive/legacy_studies](../archive/README.md) | Earlier four-rope, front-count and reach-extension studies |
-| [archive/superseded_cad](../archive/superseded_cad/) | Superseded prototype geometry, its warnings and cleanup review |
-| [archive/utilities](../archive/utilities/) | Historical upload helper scripts; retained as references |
-| [docs](.) | Design notes, limitations, roadmap, history and migration documentation |
+| [cad/lanes_u4m2](../cad/README.md) | Routed bodies, M5/M6 guide revisions, A/B/C end geometry, the U spring assembly and bench fixtures. Open the [print list](installation_guide.md#full-front-print-list) for station-specific selections. |
+| [cad/modules](../cad/modules/) and [cad/tank](../cad/tank/) | Original U/M STEP files, tank geometry and reference images |
+| [cad/previews](../cad/previews/u4m2/README.md) and [cad/simulation_reference](../cad/simulation_reference/u4m2_500g/README.md) | STEP-based previews and the annotated 500 g simulation reference |
+| [simulations/u4m2/extreme_tests](../simulations/u4m2/extreme_tests/README.md) | First and second extreme-test rounds. Within Round 2 each component or test family has its own results folder. |
+| [simulations/u4m2/lanes_20261113](../simulations/u4m2/lanes_20261113/README.md) | Source lane solvers and dated guide, seat, bore and full-motion studies, with their local evidence and handoffs |
+| [Other U4+M2 simulations](../simulations/README.md) and [shared models](../simulations/shared/README.md) | Backbone, tank, rear deployment, earlier controllers, common kernels and model dependencies |
+| [data/materials](../data/materials/README.md) | Material properties, current stiffness database and historical inputs |
+| [reports/projects](../reports/projects/) | Technical reports grouped by [M5 structure](../reports/projects/m5_structure/), [rope routing](../reports/projects/rope_routing/), [motion control](../reports/projects/motion_control/) and [extreme tests](../reports/projects/extreme_tests/) |
+| [reports/daily](../reports/daily/), [weekly](../reports/weekly/) and [builders](../reports/builders/README.md) | Dated morning and evening editions, earlier PDF and Word reports, weekly presentations and their generators |
+| [nextstep](../nextstep/README.md) | Current test programme, priorities and measurement criteria |
+| [docs](.) | Project index, installation guide, design status, limitations, history and time conventions |
+| [scripts](../scripts/) and [workflows](../.github/workflows/) | Repository-level configuration, publication and automated checks |
+| [archive](../archive/README.md) | Earlier design alternatives, superseded prototype geometry and historical utilities |
 
-Study-local results remain beside their source. In particular, the [closed-loop report](../simulations/u4m2/backbone_20261108/closed_loop_results/REPORT.md), CSV/JSON/NPZ data and animations have one canonical location. Frozen input snapshots and recorded provenance retain their historical contents; paths recorded inside old JSON/logs describe the original execution environment.
+When adding a report, reuse the existing date heading on the [home page](../README.md#daily-updates) or add one level-two heading for a new date in descending order. Keep morning, evening and project work from the same day together. Link each new technical report from the [report catalogue](../reports/README.md) and the relevant [project entry](project_index.md).
 
-## Path changes
+## Extreme studies and project report moves
+
+| Previous location | Current location |
+|---|---|
+| `simulations/u4m2/lanes_20261113/extreme_round1_20261119/` | [extreme_tests/round1_20261119](../simulations/u4m2/extreme_tests/round1_20261119/README.md) |
+| `simulations/u4m2/lanes_20261113/extreme_round2_20261119/` | [extreme_tests/round2_20261119](../simulations/u4m2/extreme_tests/round2_20261119/README.md). Use the [result folder table](../simulations/u4m2/extreme_tests/README.md#round-2-result-folders) to locate the original filename. |
+| `reports/daily/M5_Joint_Test_*` and `M5_Retained_Seat_*` | [reports/projects/m5_structure](../reports/projects/m5_structure/) |
+| `reports/daily/M5_Seat_and_Shared_Bore_*` | [reports/projects/rope_routing](../reports/projects/rope_routing/) |
+| `reports/daily/Yaw_Pitch_Closeout_*` | [reports/projects/motion_control](../reports/projects/motion_control/) |
+| `reports/daily/Extreme_Simulation_Round_2_*` | [reports/projects/extreme_tests](../reports/projects/extreme_tests/) |
+
+Paths recorded in archived data identify inputs at the stated source revision. The two rounds retain their original data files, hashes and CAD inputs.
+
+## Earlier path changes
 
 | Previous location | Current location |
 |---|---|
@@ -43,7 +54,7 @@ Study-local results remain beside their source. In particular, the [closed-loop 
 | Shared material files and `stiffness_update/` | `data/materials/`, with the previous database under `history/` |
 | Root `Report_*.pdf` and `Weekly_report_*.pptx` | `reports/daily/` and `reports/weekly/` |
 
-The [complete file-by-file path map](path_migration.csv) covers the moved files, including the earlier report relocation. This organisation changes paths and navigation, not scientific conclusions. Source paths are updated where needed for execution; historical simulation data, CAD and published report bytes are preserved.
+The [earlier file-by-file path map](path_migration.csv) covers this first migration, including the original report relocation.
 
 ## Execution and provenance
 

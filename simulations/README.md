@@ -1,15 +1,26 @@
 # Simulation index
 
-[Project home](../README.md) · [Current design](../docs/current_design.md) · [Repository map](../docs/repository_map.md)
+Use the [engineering project index](../docs/project_index.md) for links across CAD, code, results and reports. Each study keeps the solver and data needed to interpret its saved run.
 
-Active U4+M2 studies are in `u4m2/`; shared dependencies and their reference runs are in `shared/`. Superseded studies are in `../archive/legacy_studies/`. Study-local inputs and results remain beside their source. Dates identify research provenance, not whether a module is still required.
+## Current 500 g studies
 
-## Active studies
+| Study | What to open |
+|---|---|
+| Extreme tests | [Both rounds and result folders](u4m2/extreme_tests/README.md) · [Round 1 critical poses](u4m2/extreme_tests/round1_20261119/README.md) · [Round 2 validation and reproduction](u4m2/extreme_tests/round2_20261119/README.md#reproduction) |
+| Controlled yaw, pitch, return and withdrawal | [Full mission](u4m2/lanes_20261113/cycle_closeout_20261119/README.md) · [Twelve-rope tensions](u4m2/lanes_20261113/cycle_closeout_20261119/results/yaw_pitch/ROPE_TENSIONS.md) · [Installed motion map](u4m2/extreme_tests/round2_20261119/results/motion_limits/combined_motion.png) |
+| M5 seats, hub, pin and coupon | [Large-rotation shell](u4m2/lanes_20261113/m5_large_rotation_20261118/README.md) · [Retained seats](u4m2/lanes_20261113/m5_retained_seat_20261118/README.md) · [Coupon test](u4m2/lanes_20261113/m5_seat_bench_20261119/README.md) · [P3 fixture and forms](u4m2/lanes_20261113/p3_pin_fixture_20261119/README.md) |
+| M6 fixed guides | [Bond-gap comparison](u4m2/lanes_20261113/evening_20261119/README.md) · [Full-mission CAD gaps and support motion](u4m2/extreme_tests/round2_20261119/results/m6_guides/) |
+| Rope routing and drive | [Bellmouth holds](u4m2/lanes_20261113/morning_20261116/README.md) · [Shared bore](u4m2/lanes_20261113/shared_bore_20261119/README.md) · [Twelve-rope reversal histories](u4m2/extreme_tests/round2_20261119/results/rope_control/) |
+| U structure and fatigue | [Four blades and cage](u4m2/extreme_tests/round2_20261119/results/u_structure/) · [Mission spectrum and material requirements](u4m2/extreme_tests/round2_20261119/results/fatigue_and_strength/) |
+
+The current 21/24/28 mm rope radii and eight guide stations are documented in the [installation guide](../docs/installation_guide.md#build-configuration). For the staged transition from the original lane geometry, see the [14 November validation](u4m2/lanes_20261113/GUIDED_VALIDATION.md) and [15 November saddle refinement](u4m2/lanes_20261113/guided_refinement_20261115/README.md).
+
+## Earlier controller and lane studies
 
 | Study | Source and results | Purpose |
 |---|---|---|
-| U4+M2 NiTi backbone | [Backbone study](u4m2/backbone_20261108/README.md) | Active front model, steering, tank screening and winch control |
-| Separate rope lanes (13 Nov) | [Lane study](u4m2/lanes_20261113/README.md) · [3D modules](../cad/lanes_u4m2/README.md) | A/B/C on 21/24/27 mm lanes: full pipeline re-run, closed loop, rope-chord limit in M5; latest numerical study |
+| U4+M2 NiTi backbone | [Backbone study](u4m2/backbone_20261108/README.md) | NiTi-backed front model and early winch-control studies |
+| Separate rope lanes (13 Nov) | [Lane study](u4m2/lanes_20261113/README.md) · [3D modules](../cad/lanes_u4m2/README.md) | 13 November baseline with 21/24/27 mm lanes and M5 rope-chord checks |
 | Closed-loop round trip v3 | [Study section 13](u4m2/backbone_20261108/README.md#13-exact-20-reference-and-correction-during-moves-closed-loop-v3-2026-11-12) · [Results](u4m2/backbone_20261108/closed_loop_v3_results/) | Exact 20° reference; four of five cases pass every check |
 | Closed-loop round trip v2 | [Study section 12](u4m2/backbone_20261108/README.md#12-closed-loop-round-trip-v2-operating-pretension-and-refined-path-closed_loop_v2py-2026-11-12) · [Controller](u4m2/backbone_20261108/closed_loop_v2.py) | 3 N operating tension enforced, tension-aware arrival, refined path |
 | Closed-loop round trip | [English report](u4m2/backbone_20261108/closed_loop_results/REPORT.md) · [Controller](u4m2/backbone_20261108/closed_loop_cycle.py) | Head-angle and tendon-tension feedback (v1) |

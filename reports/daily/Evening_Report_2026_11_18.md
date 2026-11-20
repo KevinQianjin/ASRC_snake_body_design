@@ -5,7 +5,7 @@
 **Reporting interval:** 2026-11-17 20:02:32 EST (2026-11-18 01:02:32 UTC) to the run start above, the cutoff for repository updates. Results produced during this run are reported separately below.
 **Working branch:** `claude/great-goodall-1wf2yh`, fast-forwarded to `59ed561` (codex/guide-validation, which contains `main` at `4e1992e`). Execution model: see the completion message.
 
-[Evidence and commands](../../simulations/u4m2/lanes_20261113/evening_20261118/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/evening_20261118/HANDOFF.md) · [500 g validation plan](../../docs/500g_validation_plan.md) · [Same-day M5 joint test (test 1)](M5_Joint_Test_2026_11_18.md)
+[Evidence and commands](../../simulations/u4m2/lanes_20261113/evening_20261118/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/evening_20261118/HANDOFF.md) · [500 g validation plan](../../docs/500g_validation_plan.md) · [Same-day M5 joint test (test 1)](../projects/m5_structure/M5_Joint_Test_2026_11_18.md)
 
 ## 1. Summary
 
@@ -24,7 +24,7 @@ Previously completed work, counted once even where it appears on several branche
 |---|---|---|---|
 | 2026-11-17 20:32:27 EST / 2026-11-18 01:32:27 UTC | `f53a346` | claude/great-goodall-1wf2yh, merged by PR #30 (`c458329`, 22:25:19 EST / 03:25:19 UTC) | 17 November Evening Report: linear rib-level model of the M5 ±12 mm guide joint. The rigid bond adds +10.4% EI and +11.8% GJ, and an ideal rotating seat would need about 12.5° of rotation. |
 | 2026-11-18 10:26:23 EST / 15:26:23 UTC | `f6db2c2` | codex/guide-validation, merged by PR #31 (`4e1992e`, 10:28:41 EST / 15:28:41 UTC) | Five-test [validation plan](../../docs/500g_validation_plan.md) for the 500 g front, plus updates to the limitations and roadmap. |
-| 2026-11-18 11:56:37 EST / 16:56:37 UTC | `59ed561` | codex/guide-validation (not yet in `main`) | [Test 1: large-rotation M5 joint](M5_Joint_Test_2026_11_18.md). Geometrically nonlinear shell model at the 96.19° pure bend. Holding couple: bare 743.3 N·mm, rotating seat 761.5 N·mm (−5.8% vs bond), bond 808.2 N·mm. Seat land force 24.78 N, 4.67× the linear estimate. Saved holds 146, 141, 47 and 64 give up to 15.40 N, 5.03° and 0.330 mm socket travel. 45 discretization runs with refinement checks. |
+| 2026-11-18 11:56:37 EST / 16:56:37 UTC | `59ed561` | codex/guide-validation (not yet in `main`) | [Test 1: large-rotation M5 joint](../projects/m5_structure/M5_Joint_Test_2026_11_18.md). Geometrically nonlinear shell model at the 96.19° pure bend. Holding couple: bare 743.3 N·mm, rotating seat 761.5 N·mm (−5.8% vs bond), bond 808.2 N·mm. Seat land force 24.78 N, 4.67× the linear estimate. Saved holds 146, 141, 47 and 64 give up to 15.40 N, 5.03° and 0.330 mm socket travel. 45 discretization runs with refinement checks. |
 
 No other branch had engineering commits in the interval. `codex/kevin`, `codex/reach-extension-study`, `codex/internal-rope-guides` and `copilot/review-outdated-prototype-files` were last changed 6–14 November. This run fast-forwarded the working branch to `59ed561`, so today's test-1 study is now on `claude/great-goodall-1wf2yh` as well. Nothing was merged into `main`.
 

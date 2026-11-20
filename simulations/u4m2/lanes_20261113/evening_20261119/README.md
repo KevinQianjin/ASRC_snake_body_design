@@ -4,7 +4,7 @@
 
 **Answer (simulation only).** Widening the radial/tangential gap of the bonded 0.5 mm land in the four M6 outer-web sockets from **0.15 to 0.25 mm** raises the smallest exact triangle gap to **0.06733 mm at z = −12 mm** and **0.08284 mm at z = +12 mm** (fine surface, governing steps). That is 3.2× and 2.4× the V3 values. The candidate stays clear for a rigid guide tilt of **±0.2° about every axis** at both stations. V3 touches at **−0.1°** about CAD x at z = −12 mm. The rope bores, land length, flare, wall thickness and station positions are unchanged. The candidate is in [cad/lanes_u4m2/m6_bond_gap_20261119](../../../../cad/lanes_u4m2/m6_bond_gap_20261119/README.md).
 
-[Evening Report](../../../../reports/daily/Evening_Report_2026_11_19.md) · [Next-run handoff](HANDOFF.md) · [Round-1 M6 check](../extreme_round1_20261119/README.md#m6-guide-to-web-clearance) · [Validation record](results/validation.json)
+[Evening Report](../../../../reports/daily/Evening_Report_2026_11_19.md) · [Next-run handoff](HANDOFF.md) · [Round-1 M6 check](../../extreme_tests/round1_20261119/README.md#m6-guide-to-web-clearance) · [Validation record](results/validation.json)
 
 ![Exact M6 guide gap over the screened mission steps for four bond gaps, and rigid-tilt sensitivity of V3 and the 0.25 mm candidate](results/m6_socket_gap.png)
 

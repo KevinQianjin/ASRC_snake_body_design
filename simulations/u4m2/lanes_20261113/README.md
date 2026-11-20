@@ -1,5 +1,7 @@
 # Separate rope lanes (radial spread) for U4+M2 — 13 November 2026
 
+For current work use the [500 g yaw and pitch mission](cycle_closeout_20261119/README.md), [M6 socket comparison](evening_20261119/README.md), [two extreme-test rounds](../extreme_tests/README.md) and [engineering project index](../../../docs/project_index.md). The 13 November study at this directory level used a 27 mm C lane. The current front uses a 28 mm C lane.
+
 **17 November Evening Report:** [Rib-level joint model](evening_20261117/README.md) adds `rib_joint_3d.py`, a membrane plus Mindlin plate model of the actual eight-rib M body, calibrated to the database EA/EI/GJ (E = 1530 MPa ± 1%). A rigid bonded ±12 mm land carries about 8.3 N axial and up to 100 N·mm per land, and stiffens M5 by 10–12%. A translation-only contact is the least intrusive idealisation tested.
 
 **16 November Evening Report:** [Full-coverage guide/web compatibility](evening_20261116/README.md) adds `guide_web_compatibility.py`, which screens all 217 holds × 8 guides and is calibrated against the Boolean audit. V3 contacts the body in 59/217 records; a 0.25 mm land bond-gap variant clears all checks.

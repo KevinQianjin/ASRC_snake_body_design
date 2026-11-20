@@ -12,7 +12,7 @@ import trimesh
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 CAND = ROOT / "cad/lanes_u4m2/m6_bond_gap_20261119"
-R1 = HERE.parent / "extreme_round1_20261119/results/m6_clearance.json"
+R1 = HERE.parents[1] / "extreme_tests/round1_20261119/results/m6_clearance.json"
 checks = {}
 
 

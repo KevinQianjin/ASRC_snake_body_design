@@ -2,7 +2,7 @@
 
 [Report index](../README.md) · [Project home](../../README.md)
 
-The four `build_report_2026_11_*.py` scripts read saved results from `simulations/u4m2/` and write daily PDFs to `reports/daily/`. They require Python, ReportLab and the Carlito font family. Set `ASRC_REPORT_FONT_DIR` when the four Carlito TTF files are outside `/usr/share/fonts/truetype/crosextra`.
+The six `build_report_2026_11_*.py` scripts read saved results from `simulations/u4m2/` and write daily PDFs to `reports/daily/`. They require Python, ReportLab and the Carlito font family. Set `ASRC_REPORT_FONT_DIR` when the four Carlito TTF files are outside `/usr/share/fonts/truetype/crosextra`.
 
 From the repository root:
 

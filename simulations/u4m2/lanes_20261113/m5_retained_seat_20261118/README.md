@@ -2,7 +2,7 @@
 
 Test 2, stage 2 of the [500 g validation plan](../../../../docs/500g_validation_plan.md). The source is commit `1c101887e4c6c84e66a660d2d2460594a741fd54`. The [preceding evening study](../evening_20261118/README.md) used an ideal, freely rotating pinned land. The present work adds explicit hardware, an assembly path, unilateral contact and loaded checks against the other portions of M5.
 
-[English test report](../../../../reports/daily/M5_Retained_Seat_2026_11_18.md) · [CAD and assembly drawings](../../../../cad/lanes_u4m2/retained_seat_20261118/README.md) · [Numerical results](results/) · [Coupon and fixture handoff](../../../../reports/daily/M5_Retained_Seat_2026_11_18.md#next-tests)
+[English test report](../../../../reports/projects/m5_structure/M5_Retained_Seat_2026_11_18.md) · [CAD and assembly drawings](../../../../cad/lanes_u4m2/retained_seat_20261118/README.md) · [Numerical results](results/) · [Coupon and fixture handoff](../../../../reports/projects/m5_structure/M5_Retained_Seat_2026_11_18.md#next-tests)
 
 ## Coverage and coordinates
 

@@ -1,6 +1,6 @@
 # M5 seat validation on a common guide and a matching bench coupon
 
-This study covers the two ±12 mm M5 stations. Four bearing sites share one rigid guide pose at each station in a nonlinear rib-shell model. A separate bench fixture holds one piece of the real M5 web, with the production pin and cap, under prescribed rotations and signed force ramps. The 500 g head, 21/24/28 mm lanes, 2 mm ropes and independent Ø1.8 mm NiTi backbone are retained. The other guide stations and M6 have their own geometry. [Engineering report](../../../../reports/daily/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Coupon CAD and assembly](../../../../cad/lanes_u4m2/m5_seat_bench_20261119/README.md) · [Candidate hub](../../../../cad/lanes_u4m2/m5_hub_relief_20261119/README.md)
+This study covers the two ±12 mm M5 stations. Four bearing sites share one rigid guide pose at each station in a nonlinear rib-shell model. A separate bench fixture holds one piece of the real M5 web, with the production pin and cap, under prescribed rotations and signed force ramps. The 500 g head, 21/24/28 mm lanes, 2 mm ropes and independent Ø1.8 mm NiTi backbone are retained. The other guide stations and M6 have their own geometry. [Engineering report](../../../../reports/projects/rope_routing/M5_Seat_and_Shared_Bore_2026_11_19.md) · [Coupon CAD and assembly](../../../../cad/lanes_u4m2/m5_seat_bench_20261119/README.md) · [Candidate hub](../../../../cad/lanes_u4m2/m5_hub_relief_20261119/README.md)
 
 ## Run the physical coupon test
 

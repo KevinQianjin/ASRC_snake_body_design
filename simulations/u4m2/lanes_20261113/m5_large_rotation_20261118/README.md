@@ -1,6 +1,6 @@
 # M5 guide joint under large rotation
 
-This study executes test 1 of the 500 g U4+M2 validation plan. It compares the PA12 M5 rib body, a rigidly bonded guide and a guide with an ideal rotating seat at its four mounting lands. Each mounted case has two guides, 12 mm either side of the module centre. The case files contain simulated equilibria, disk reactions, eight individual land reactions and surface strain locations. [Engineering report](../../../../reports/daily/M5_Joint_Test_2026_11_18.md) · [Test plan](../../../../docs/500g_validation_plan.md) · [Numerical checks and input hashes](summary.json)
+This study executes test 1 of the 500 g U4+M2 validation plan. It compares the PA12 M5 rib body, a rigidly bonded guide and a guide with an ideal rotating seat at its four mounting lands. Each mounted case has two guides, 12 mm either side of the module centre. The case files contain simulated equilibria, disk reactions, eight individual land reactions and surface strain locations. [Engineering report](../../../../reports/projects/m5_structure/M5_Joint_Test_2026_11_18.md) · [Test plan](../../../../docs/500g_validation_plan.md) · [Numerical checks and input hashes](summary.json)
 
 ## Geometry and joint model
 

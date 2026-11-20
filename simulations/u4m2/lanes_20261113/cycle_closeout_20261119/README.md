@@ -2,7 +2,7 @@
 
 The prescribed sequence is loaded startup and straightening, insertion, right turn to +175° and return, left turn to −175° and return, pitch to +90° and return, pitch to −90° and return, and withdrawal. Pitch is measured from laboratory horizontal. The return pose points 20° upward at zero yaw. The clamp is 15 mm inside the opening during steering. A pull on one rope changes the loads in all three anchor groups.
 
-[Engineering report](../../../../reports/daily/Yaw_Pitch_Closeout_2026_11_19.md) · [Both vertical poses with labelled loads](results/yaw_pitch/pitch_poles.svg) · [Twelve-rope event table and plot](results/yaw_pitch/ROPE_TENSIONS.md) · [Interactive 3-D rope viewer](results/yaw_pitch/motion_viewer.html) · [Every accepted motion step](results/yaw_pitch/rope_tensions_every_step.csv.gz)
+[Engineering report](../../../../reports/projects/motion_control/Yaw_Pitch_Closeout_2026_11_19.md) · [Both vertical poses with labelled loads](results/yaw_pitch/pitch_poles.svg) · [Twelve-rope event table and plot](results/yaw_pitch/ROPE_TENSIONS.md) · [Interactive 3-D rope viewer](results/yaw_pitch/motion_viewer.html) · [Every accepted motion step](results/yaw_pitch/rope_tensions_every_step.csv.gz)
 
 ## Read the tension at a specific pose
 

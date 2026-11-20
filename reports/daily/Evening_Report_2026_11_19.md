@@ -5,7 +5,7 @@
 **Reporting interval:** 2026-11-18 20:01:53 EST (2026-11-19 01:01:53 UTC) to the run start above, the cutoff for repository updates. Results produced during this run are reported separately in section 3.
 **Working branch:** `claude/great-goodall-1wf2yh`. It was already contained in `main` and was fast-forwarded to `main` at `e285061`. Execution model: see the completion message.
 
-[Evidence and commands](../../simulations/u4m2/lanes_20261113/evening_20261119/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/evening_20261119/HANDOFF.md) · [Candidate CAD](../../cad/lanes_u4m2/m6_bond_gap_20261119/README.md) · [Extreme-test round 1](../../simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
+[Evidence and commands](../../simulations/u4m2/lanes_20261113/evening_20261119/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/evening_20261119/HANDOFF.md) · [Candidate CAD](../../cad/lanes_u4m2/m6_bond_gap_20261119/README.md) · [Extreme-test round 1](../../simulations/u4m2/extreme_tests/round1_20261119/README.md)
 
 ## 1. Summary
 
@@ -25,11 +25,11 @@ The table lists previously completed work. Each change is counted once, even whe
 |---|---|---|
 | 2026-11-18 20:36:58 EST / 2026-11-19 01:36:58 UTC | `ff8494d` (merged by PR #33, `1c10188`, 21:51 EST) | [18 Nov Evening Report](Evening_Report_2026_11_18.md): bow-tie rotating-seat sizing and Ø0.6 mm pin for the M5 guides. |
 | 2026-11-18 23:28:56 EST / 2026-11-19 04:28:56 UTC | `e950339` (PR #34) | Retained rotating guide validated on the machined M5 webs. |
-| 2026-11-19 01:00:53 EST / 06:00:53 UTC | `a147217` (PR #35) | [M5 seat coupon, hub relief and the re-equilibrated shared C-rope bore](M5_Seat_and_Shared_Bore_2026_11_19.md). |
-| 2026-11-19 02:44:16 EST / 07:44:16 UTC | `00fa1ba` (PR #36) | [Full 500 g yaw and ±90° pitch cycle](Yaw_Pitch_Closeout_2026_11_19.md): 1,380/1,380 targets, 3,405 states, tension 2.901–21.554 N, minimum tank gap 8.056 mm. The closest full-mesh guide/web gap was 0.02047 mm at M6 z = −12 mm. |
+| 2026-11-19 01:00:53 EST / 06:00:53 UTC | `a147217` (PR #35) | [M5 seat coupon, hub relief and the re-equilibrated shared C-rope bore](../projects/rope_routing/M5_Seat_and_Shared_Bore_2026_11_19.md). |
+| 2026-11-19 02:44:16 EST / 07:44:16 UTC | `00fa1ba` (PR #36) | [Full 500 g yaw and ±90° pitch cycle](../projects/motion_control/Yaw_Pitch_Closeout_2026_11_19.md): 1,380/1,380 targets, 3,405 states, tension 2.901–21.554 N, minimum tank gap 8.056 mm. The closest full-mesh guide/web gap was 0.02047 mm at M6 z = −12 mm. |
 | 2026-11-19 03:21:38 EST / 08:21:38 UTC | `215831f` (PR #37) | README streamlined, and the 500 g front assembly documented. |
 | 2026-11-19 04:41:13 EST / 09:41:13 UTC | `24490d1` (merged `89b32a9`) | U-module leaf-spring pairs shown in the installation guide. |
-| 2026-11-19 10:45:24 EST / 15:45:24 UTC | `e285061` | [Extreme-test plan](../../nextstep/README.md) and [round-1 results](../../simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md). M6 gap 0.08438 mm straight → 0.020932 mm bent at step 1,710. Pitch-return sliding floor lost between μ = 0.16 and 0.17. Trial U1 blade strain peak 1.586%. |
+| 2026-11-19 10:45:24 EST / 15:45:24 UTC | `e285061` | [Extreme-test plan](../../nextstep/README.md) and [round-1 results](../../simulations/u4m2/extreme_tests/round1_20261119/README.md). M6 gap 0.08438 mm straight → 0.020932 mm bent at step 1,710. Pitch-return sliding floor lost between μ = 0.16 and 0.17. Trial U1 blade strain peak 1.586%. |
 
 No Morning Report file exists for 19 November. The Codex work above is today's same-day engineering update.
 
