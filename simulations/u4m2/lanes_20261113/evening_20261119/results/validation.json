@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "M6_z-12_guide_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 1,
+        "volume_mm3": 2538.4440812066155
+      }
+    },
+    "M6_z-12_caps_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 4,
+        "volume_mm3": 55.4679823035687
+      }
+    },
+    "M6_z-12_wire_envelope_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 4,
+        "volume_mm3": 9.044240416988009
+      }
+    },
+    "M6_z-12_straight_overlap_zero": {
+      "passed": true,
+      "detail": 0.0
+    },
+    "M6_z-12_rope_bores_unchanged": {
+      "passed": true,
+      "detail": {
+        "sections": 17,
+        "identical": 17
+      }
+    },
+    "M6_z+12_guide_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 1,
+        "volume_mm3": 2538.444022717675
+      }
+    },
+    "M6_z+12_caps_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 4,
+        "volume_mm3": 55.46797800221491
+      }
+    },
+    "M6_z+12_wire_envelope_hash_watertight_components": {
+      "passed": true,
+      "detail": {
+        "components": 4,
+        "volume_mm3": 9.044240416988009
+      }
+    },
+    "M6_z+12_straight_overlap_zero": {
+      "passed": true,
+      "detail": 0.0
+    },
+    "M6_z+12_rope_bores_unchanged": {
+      "passed": true,
+      "detail": {
+        "sections": 17,
+        "identical": 17
+      }
+    },
+    "v3_step1710_fine_reproduces_round1": {
+      "passed": true,
+      "detail": {
+        "this_run": 0.020932436045520364,
+        "round1": 0.020932436045520364
+      }
+    },
+    "v3_straight_reproduces_round1": {
+      "passed": true,
+      "detail": {
+        "this_run": 0.08437601113394308,
+        "round1": 0.08437601113394308
+      }
+    },
+    "candidate_fine_no_contact": {
+      "passed": true,
+      "detail": {
+        "minus12": 0.0673251474743282,
+        "plus12": 0.08283891808117866
+      }
+    },
+    "coverage_all_eleven_phases": {
+      "passed": true,
+      "detail": [
+        "entry",
+        "exit",
+        "left_out",
+        "left_return",
+        "pitch_down",
+        "pitch_down_return",
+        "pitch_up",
+        "pitch_up_return",
+        "right_out",
+        "right_return",
+        "straighten"
+      ]
+    },
+    "coverage_candidate_no_contact": {
+      "passed": true,
+      "detail": null
+    },
+    "relative_links_resolve": {
+      "passed": true,
+      "detail": []
+    }
+  },
+  "all_passed": true,
+  "python": "3.11.18",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "trimesh": "5.2.0",
+    "python-fcl": "0.7.0.10",
+    "manifold3d": "3.5.5",
+    "shapely": "2.2.0",
+    "matplotlib": "3.10.8",
+    "clarabel": "0.11.1"
+  }
+}

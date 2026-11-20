@@ -1,0 +1,90 @@
+{
+  "station_steps": 406,
+  "variant_rows": 1648,
+  "phases": [
+    "entry",
+    "exit",
+    "left_out",
+    "left_return",
+    "pitch_down",
+    "pitch_down_return",
+    "pitch_up",
+    "pitch_up_return",
+    "right_out",
+    "right_return",
+    "straighten"
+  ],
+  "z-12": {
+    "screened_steps": 204,
+    "unscreened_steps": 3201,
+    "min_archived_sampled_lower_bound_unscreened_mm": 0.021164640891625223,
+    "max_land_axial_movement_all_steps_mm": 0.054534234742221965,
+    "variants": {
+      "v3": {
+        "min_guide_gap_mm": 0.0204679,
+        "min_any_part_gap_mm": 0.0204679,
+        "worst_step": 1710,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.0
+      },
+      "g020": {
+        "min_guide_gap_mm": 0.0436134,
+        "min_any_part_gap_mm": 0.0436134,
+        "worst_step": 1710,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.0231454
+      },
+      "g025": {
+        "min_guide_gap_mm": 0.0667596,
+        "min_any_part_gap_mm": 0.0667596,
+        "worst_step": 1710,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.0462915
+      },
+      "g030": {
+        "min_guide_gap_mm": 0.0899058,
+        "min_any_part_gap_mm": 0.0899058,
+        "worst_step": 1710,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.0694377
+      }
+    }
+  },
+  "z+12": {
+    "screened_steps": 202,
+    "unscreened_steps": 3203,
+    "min_archived_sampled_lower_bound_unscreened_mm": 0.03339980529174138,
+    "max_land_axial_movement_all_steps_mm": 0.04667626857808538,
+    "variants": {
+      "v3": {
+        "min_guide_gap_mm": 0.0339558,
+        "min_any_part_gap_mm": 0.0339558,
+        "worst_step": 1709,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.0
+      },
+      "g020": {
+        "min_guide_gap_mm": 0.058174,
+        "min_any_part_gap_mm": 0.058174,
+        "worst_step": 1709,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.024218199999999995
+      },
+      "g025": {
+        "min_guide_gap_mm": 0.0823931,
+        "min_any_part_gap_mm": 0.0823931,
+        "worst_step": 1709,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.048437299999999996
+      },
+      "g030": {
+        "min_guide_gap_mm": 0.1066122,
+        "min_any_part_gap_mm": 0.1066122,
+        "worst_step": 1709,
+        "contacts": 0,
+        "min_increase_over_v3_mm": 0.07265640000000001
+      }
+    }
+  },
+  "max_exact_below_archived_sampled_bound_mm": 0.0033768720167462393
+}
