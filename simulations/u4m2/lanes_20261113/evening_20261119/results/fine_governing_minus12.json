@@ -1,0 +1,123 @@
+{
+  "script": "m6_socket_screen.py",
+  "window_mm": 0.6,
+  "variants": {
+    "V3": "cad/lanes_u4m2/guides_v3",
+    "bond_gap_0p25": "cad/lanes_u4m2/m6_bond_gap_20261119"
+  },
+  "straight": [
+    {
+      "variant": "V3",
+      "station_mm": -12,
+      "guide_gap_mm": 0.08437601113394308,
+      "caps_gap_mm": 0.08437685296377857,
+      "wire_envelope_gap_mm": 0.20687741065104437
+    },
+    {
+      "variant": "bond_gap_0p25",
+      "station_mm": -12,
+      "guide_gap_mm": 0.140626328140835,
+      "caps_gap_mm": 0.1406280896537996,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    }
+  ],
+  "rows": [
+    {
+      "step": 1710,
+      "station_mm": -12,
+      "variant": "V3",
+      "axial_span_mm": 0.125,
+      "body_triangles": 8134290,
+      "kept_triangles": 89165,
+      "guide_gap_mm": 0.020932436045520364,
+      "guide_contact": false,
+      "guide_witness_CAD_mm": [
+        6.681,
+        20.049,
+        -0.25
+      ],
+      "closure_dir_CAD": [
+        -0.1781,
+        -0.43,
+        -0.8851
+      ],
+      "caps_gap_mm": 0.03537169433751423,
+      "caps_contact": false,
+      "wire_envelope_gap_mm": 0.1372688267145168,
+      "wire_envelope_contact": false
+    },
+    {
+      "step": 1710,
+      "station_mm": -12,
+      "variant": "bond_gap_0p25",
+      "axial_span_mm": 0.125,
+      "body_triangles": 8134290,
+      "kept_triangles": 89165,
+      "guide_gap_mm": 0.0673251474743282,
+      "guide_contact": false,
+      "guide_witness_CAD_mm": [
+        6.7193,
+        20.1414,
+        -0.25
+      ],
+      "closure_dir_CAD": [
+        -0.1775,
+        -0.4285,
+        -0.886
+      ],
+      "caps_gap_mm": 0.0846098315120031,
+      "caps_contact": false,
+      "wire_envelope_gap_mm": 0.18364523390625703,
+      "wire_envelope_contact": false
+    },
+    {
+      "step": 1885,
+      "station_mm": -12,
+      "variant": "V3",
+      "axial_span_mm": 0.125,
+      "body_triangles": 8134290,
+      "kept_triangles": 89167,
+      "guide_gap_mm": 0.020933033739218437,
+      "guide_contact": false,
+      "guide_witness_CAD_mm": [
+        6.681,
+        20.049,
+        -0.25
+      ],
+      "closure_dir_CAD": [
+        -0.1781,
+        -0.43,
+        -0.8851
+      ],
+      "caps_gap_mm": 0.035363504115385816,
+      "caps_contact": false,
+      "wire_envelope_gap_mm": 0.13726939339681796,
+      "wire_envelope_contact": false
+    },
+    {
+      "step": 1885,
+      "station_mm": -12,
+      "variant": "bond_gap_0p25",
+      "axial_span_mm": 0.125,
+      "body_triangles": 8134290,
+      "kept_triangles": 89167,
+      "guide_gap_mm": 0.06732569983674679,
+      "guide_contact": false,
+      "guide_witness_CAD_mm": [
+        6.7192,
+        20.1414,
+        -0.25
+      ],
+      "closure_dir_CAD": [
+        -0.1775,
+        -0.4285,
+        -0.886
+      ],
+      "caps_gap_mm": 0.08460056960183515,
+      "caps_contact": false,
+      "wire_envelope_gap_mm": 0.1836457554547992,
+      "wire_envelope_contact": false
+    }
+  ],
+  "elapsed_s": 116.25986504554749
+}

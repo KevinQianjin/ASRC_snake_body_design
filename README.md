@@ -6,6 +6,15 @@ ASRC is a fuel-tank inspection robot with a tendon-driven front on a supported t
 
 ## Daily updates
 
+### 19 November 2026 — Evening Report: wider M6 guide bond gap
+
+The tightest guide/body gap in the 500 g mission was at the M6 z = −12 mm guide: **0.020932 mm**. Widening the bonded land gap of the four M6 outer-web sockets from **0.15 to 0.25 mm** raises it to **0.06733 mm** (3.2×), and the z = +12 mm gap from 0.03431 to **0.08284 mm**. The rope bores, stations, webs and land length are unchanged, and the mass changes by −0.0016 g per station. The exact triangle check found no contact for four bond gaps over 406 screened station-steps covering all 11 mission phases. A second screen checked every step whose archived bound is below 0.040 mm, giving **787 and 430 steps** checked exactly. The candidate's minimum gap is 0.0667 and 0.0824 mm, with no contact.
+
+- **Tilt sets the tolerance.** A rigid guide tilt of 0.1° makes V3 touch. The 0.25 mm candidate stays clear to ±0.2° about every axis. Bonded-guide tilt is now the quantity to measure on the bench.
+- **Rejected:** a 0.3 mm land (the lockwire groove splits the caps) and a steeper flare (no gain). **Cost:** the thicker bond has about 0.6× the shear stiffness and still sees 22% nominal shear. Adhesive, printed gap and strength are unmeasured, so the candidate is not a manufacturing release.
+
+[Evening Report](reports/daily/Evening_Report_2026_11_19.md) · [Study, data and commands](simulations/u4m2/lanes_20261113/evening_20261119/README.md) · [Candidate M6 parts](cad/lanes_u4m2/m6_bond_gap_20261119/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261119/HANDOFF.md)
+
 ### 19 November 2026 — first extreme tests at 500 g
 
 At the M6 left-turn witness the guide/web gap fell from **0.08438 mm straight to 0.02093 mm bent**. A 0.025 mm rigid shift toward the web produced contact. On the +69° pitch return, B-down crossed the 2.5 N operating floor between assumed friction coefficients **0.16 and 0.17**. Four-blade U1 analysis located the largest trial tensile strain at the distal tab. The unknown compliance of this bond affects the predicted force. [First-round results, critical sites and twelve-rope figures](simulations/u4m2/lanes_20261113/extreme_round1_20261119/README.md)
@@ -51,7 +60,7 @@ The nominal quasi-static closed-loop simulation completed **1,380 of 1,380 targe
 
 ## Prototype
 
-The first bench build consists of the **M5 retained-seat coupon and P3 fixture** and an **M6 guide fit at −12 mm**. The installation guide also gives the complete six-module parts list, supplier geometry, rope routes and assembly order. Use these trials to measure fit and force transmission before ordering the full front.
+The first bench build consists of the **M5 retained-seat coupon and P3 fixture** and an **M6 guide fit at −12 mm**. For that fit, the [0.25 mm bond-gap M6 parts](cad/lanes_u4m2/m6_bond_gap_20261119/README.md) are the current candidate. Measure the bonded plate tilt: the modelled margin is used up at about 0.2°. The installation guide also gives the complete six-module parts list, supplier geometry, rope routes and assembly order. Use these trials to measure fit and force transmission before ordering the full front.
 
 [First test parts](docs/installation_guide.md#first-test-parts) · [Full-front print list and STL files](docs/installation_guide.md#full-front-print-list) · [Purchasing list](docs/installation_guide.md#materials-and-hardware) · [Assembly sequence](docs/installation_guide.md#assembly) · [Commissioning checks](docs/installation_guide.md#commissioning)
 

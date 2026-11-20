@@ -1,0 +1,234 @@
+{
+  "status": "M6 outer-socket bond-gap candidate; not released for manufacture",
+  "bond_gap_mm": 0.25,
+  "v3_bond_gap_mm": 0.15,
+  "builder": "guides_v3/build.py --bond-gap 0.25",
+  "builder_sha256": "34508a02d0d9b6f88de64e9ac52f9370ff73a23c800783daab5761cdaad21b09",
+  "unchanged": {
+    "land_axial_mm": 0.5,
+    "flare_slope": 1.5,
+    "socket_wall_mm": 0.85,
+    "lane_radii_mm": {
+      "A": 21.0,
+      "B": 24.0,
+      "C": 28.0
+    },
+    "rope_bore_mm": 2.6
+  },
+  "parts": {
+    "M6_z-12": {
+      "body_overlap_mm3": 0.0,
+      "pass_geometry": true,
+      "mounts": [
+        {
+          "angle_deg": -112.5,
+          "web_center_radius_mm": 19.22882121527828,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": -12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": 67.5,
+          "web_center_radius_mm": 19.228821215278284,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": -12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": -22.5,
+          "web_center_radius_mm": 19.22882121527828,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": -12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": 157.5,
+          "web_center_radius_mm": 19.228821215278284,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": -12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        }
+      ],
+      "export_checks": {
+        "guide": {
+          "watertight": true,
+          "components": 1,
+          "volume_mm3": 2538.4440812066155
+        },
+        "caps": {
+          "watertight": true,
+          "components": 4,
+          "volume_mm3": 55.4679823035687
+        },
+        "wire_envelope": {
+          "watertight": true,
+          "components": 4,
+          "volume_mm3": 9.044240416988009
+        }
+      },
+      "sha256": {
+        "guide": "c92ffa430f5ec5be68020b39cfdcd783a656838312125a430c724b4d3e583e1a",
+        "caps": "d9f6c115b6f5dd8f779755e3df3db36fd25ed0cec06bed06c07463a272d7c62c",
+        "wire_envelope": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd"
+      }
+    },
+    "M6_z+12": {
+      "body_overlap_mm3": 0.0,
+      "pass_geometry": true,
+      "mounts": [
+        {
+          "angle_deg": -112.5,
+          "web_center_radius_mm": 19.2288212507902,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": 12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": 67.5,
+          "web_center_radius_mm": 19.2288212507902,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": 12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": -22.5,
+          "web_center_radius_mm": 19.228821250790205,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": 12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        },
+        {
+          "angle_deg": 157.5,
+          "web_center_radius_mm": 19.2288212507902,
+          "bond_gap_mm": 0.25,
+          "maximum_socket_gap_mm": 2.305,
+          "section_bounds_radial_tangential_mm": [
+            17.8955,
+            -1.5,
+            20.56214,
+            1.5
+          ],
+          "station_z_mm": 12,
+          "web_section_count": 11,
+          "bond_area_estimate_mm2": 5.666640000000002,
+          "full_depth_reference_bond_area_mm2": 36.26649600000001,
+          "proposed_bond_land_axial_mm": 0.5
+        }
+      ],
+      "export_checks": {
+        "guide": {
+          "watertight": true,
+          "components": 1,
+          "volume_mm3": 2538.444022717675
+        },
+        "caps": {
+          "watertight": true,
+          "components": 4,
+          "volume_mm3": 55.46797800221491
+        },
+        "wire_envelope": {
+          "watertight": true,
+          "components": 4,
+          "volume_mm3": 9.044240416988009
+        }
+      },
+      "sha256": {
+        "guide": "f6036355606b2a3b5379fc842ccc0d977e26588e1e58a75178867b6c28adc10a",
+        "caps": "407aed0ecf04fcc74c8470287f1efbce500d9df73eb27167b6710dd9ef5d0802",
+        "wire_envelope": "f6d6a0457f15826f8b4e0eeb3b806c6c79cf8eea692e266dacc7f6e24a0ad6cd"
+      }
+    }
+  },
+  "rope_bore_sections": {
+    "M6_z-12": {
+      "sections": 17,
+      "identical": 17
+    },
+    "M6_z+12": {
+      "sections": 17,
+      "identical": 17
+    }
+  },
+  "mass_delta_g": {
+    "M6_z-12": {
+      "guide": -0.006586282169177335,
+      "caps": 0.0019303488839584114,
+      "wire_envelope": 0.003096753169152579
+    },
+    "M6_z+12": {
+      "guide": -0.006586312152250139,
+      "caps": 0.0019303434421821916,
+      "wire_envelope": 0.003096753169152579
+    }
+  }
+}
