@@ -3,7 +3,7 @@
 import unittest
 import numpy as np
 
-from active_reset_pin_inputs import capture_active_reset_inputs
+from active_reset_pin_inputs import active_m5_candidates, capture_active_reset_inputs
 
 
 def fixture():
@@ -38,6 +38,21 @@ class ActiveResetPinInputs(unittest.TestCase):
             self.assertEqual(int(ids.sum()), 8)
             np.testing.assert_array_equal(arrays["hole_wrench_CAD"][:, ids, 0, 0].sum(axis=1), [8, 8])
 
+    def test_candidates_include_force_moment_and_single_hole_peaks(self):
+        rows, states, distal, tags, wrench = fixture()
+        rows.append(dict(substep=2, step=1844, phase="mission", kind="ramp", fraction=0.5))
+        states = np.vstack((states, np.full(6, 2.0)))
+        distal = np.concatenate((distal, np.full((1, 3, 4), 3.0)))
+        wrench = np.concatenate((wrench, wrench[:1].copy()))
+        wrench[1, 8, 0, 0] = 8.0
+        wrench[2, 0, 1, 1] = 15.0
+        arrays = capture_active_reset_inputs(rows, states, distal, tags, wrench)
+        candidates = active_m5_candidates(arrays)
+        reasons = {row["index"]: {v["reason"] for v in row["criteria"]} for row in candidates}
+        self.assertIn("station_force_peak", reasons[1])
+        self.assertIn("individual_hole_force_peak", reasons[1])
+        self.assertIn("station_moment_peak", reasons[2])
+        self.assertIn("station_force_peak", reasons[0])
     def test_rejects_missing_hole_ray_or_station_data(self):
         rows, states, distal, tags, wrench = fixture()
         with self.assertRaisesRegex(ValueError, "M5 station"):
@@ -51,4 +66,5 @@ class ActiveResetPinInputs(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 
