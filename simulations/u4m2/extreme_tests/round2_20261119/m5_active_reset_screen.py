@@ -9,7 +9,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 
 from common import LANES, OUT, ROOT, input_file, load_motion, read, read_csv, save
-from active_reset_pin_inputs import active_m5_candidates
+from active_reset_pin_inputs import active_m5_candidates, validate_complete_replay
 from m5_seats import conditions, pin_seat, shell, study
 
 sys.path.insert(0, str(LANES / "m5_retained_seat_20261118"))
