@@ -3,7 +3,7 @@
 import unittest
 import numpy as np
 
-from active_reset_pin_inputs import active_m5_candidates, capture_active_reset_inputs
+from active_reset_pin_inputs import active_m5_candidates, capture_active_reset_inputs, validate_complete_replay
 
 
 def fixture():
