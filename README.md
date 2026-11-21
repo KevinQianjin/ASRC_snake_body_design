@@ -2,6 +2,21 @@
 
 ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U modules, two M modules and twelve Ø2 mm ropes. Its six 96 mm modules span 576 mm. The mass budget for the inspection head **including its adapter is 500 g**.
 
+## Interactive design handover
+
+**[Open the 500 g design handover in your browser](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site)**. Anyone with the link can view the 21 November 2026 edition. In **Mission replay**, press **Play** or enter a step number to inspect one pose.
+
+| What to inspect | Where to look |
+|---|---|
+| Rotate the CAD assembly and compare commanded and achieved head angles across 3,405 recorded states. The 11 phases cover loaded straightening, insertion, ±175° yaw, ±90° pitch, returns and withdrawal. | [Mission replay](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#mission) |
+| At the same step, read the tension, commanded length and internal path length for each of the 12 ropes, plus the loads at eight guide stations. | [Ropes & loads](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#loads) |
+| Check body and adapter clearance. The crowned M6 guide gaps are reported only at steps evaluated in CAD. | [Clearance](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#clearance) |
+| Explore nine free-space steering routes, reference yield thresholds and fatigue estimates. Actual service life still requires hardware tests. | [Motion limits](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#limits) · [Strength & life](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#life) |
+| Find the print list, purchased parts, rope routing and assembly sequence. | [Design & build](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#build) |
+| Search 3,719 indexed source files, inspect available data tables and follow links to the exact GitHub revision. | [Evidence register](https://asrc-500g-design-handover.kevinqjchen.chatgpt.site/#evidence) |
+
+[Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
+
 [Latest engineering results](#20-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
