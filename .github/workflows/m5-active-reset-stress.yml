@@ -1,0 +1,52 @@
+name: Active-reset M5 stress screen
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/m5-active-reset-stress.yml"
+      - "simulations/u4m2/extreme_tests/round1_20261119/m5_seats.py"
+      - "simulations/u4m2/extreme_tests/round2_20261119/takeup_plant.py"
+      - "simulations/u4m2/extreme_tests/round2_20261119/active_reset_pin_inputs.py"
+      - "simulations/u4m2/extreme_tests/round2_20261119/m5_active_reset_screen.py"
+      - "simulations/u4m2/extreme_tests/round2_20261119/test_active_reset_pin_inputs.py"
+      - "simulations/u4m2/lanes_20261113/m5_large_rotation_20261118/**"
+      - "simulations/u4m2/lanes_20261113/m5_retained_seat_20261118/**"
+      - "simulations/u4m2/lanes_20261113/p3_pin_fixture_20261119/**"
+      - "simulations/u4m2/lanes_20261113/cycle_closeout_20261119/**"
+      - "simulations/u4m2/lanes_20261113/shared_bore_20261119/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  active-reset-pin-screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install numerical and contact dependencies
+        run: python -m pip install --upgrade numpy scipy numba trimesh rtree shapely networkx manifold3d vtk mapbox-earcut "cadquery-ocp==7.8.1.1" cvxopt triangle python-fcl
+      - name: Replay active-reset mission and export per-hole loads
+        working-directory: simulations/u4m2/extreme_tests/round2_20261119
+        run: python takeup_plant.py --estimate 0.15
+      - name: Transfer screened loads into the M5 pin and PA12 contact model
+        working-directory: simulations/u4m2/extreme_tests/round2_20261119
+        run: python m5_active_reset_screen.py --estimate 0.15
+      - name: Upload active-reset M5 screen results
+        uses: actions/upload-artifact@v4
+        with:
+          name: active-reset-m5-pin-screen
+          path: |
+            simulations/u4m2/extreme_tests/round2_20261119/results/rope_control/takeup_plant_mu0.15.csv.gz
+            simulations/u4m2/extreme_tests/round2_20261119/results/rope_control/takeup_plant_mu0.15.json
+            simulations/u4m2/extreme_tests/round2_20261119/results/rope_control/takeup_plant_mu0.15_pin_inputs.npz
+            simulations/u4m2/extreme_tests/round2_20261119/results/m5_structure/m5_active_reset_shell_candidates.json
+            simulations/u4m2/extreme_tests/round2_20261119/results/m5_structure/m5_active_reset_pin_safety.json
+          if-no-files-found: error
