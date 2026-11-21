@@ -81,7 +81,7 @@ def _run_shell_candidates(data, candidates, output_dir):
                 result = study.run_case(
                     model,
                     {index: loads},
-                    f"active_{candidate['substep']}",
+                    str(index),
                     0.25,
                     Path(temp) / "solver.json",
                 )
@@ -255,6 +255,7 @@ if __name__ == "__main__":
     parser.add_argument("--estimate", type=float, choices=(0.12, 0.15), default=0.15)
     args = parser.parse_args()
     run(args.out, args.estimate)
+
 
 
 
