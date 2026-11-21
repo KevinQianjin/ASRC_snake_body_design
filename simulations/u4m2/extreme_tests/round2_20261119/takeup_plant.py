@@ -18,6 +18,7 @@ from common import (
     write_table,
 )
 from guide_loads import record as guide_record
+from active_reset_pin_inputs import save_active_reset_inputs
 from length_cycle import FastTank
 from pitch_reference import angle_between, pointing
 from pose_map import axis, centreline, clearance
@@ -48,6 +49,10 @@ def run(out, estimate):
     )
     z = previous_reference = states[0]
     rows = []
+    active_states = []
+    active_distal_tensions = []
+    active_hole_wrenches = []
+    active_hole_tags = None
     tangent = None
     failure = None
     for substep, command in enumerate(plan):
@@ -121,6 +126,10 @@ def run(out, estimate):
         tags, fields, _, _, _ = guide_record(
             rod.base, rod.profiles, z, dist.reshape(3, 4), True
         )
+        if active_hole_tags is None:
+            active_hole_tags = tags
+        elif tags != active_hole_tags:
+            raise ValueError("Guide-hole labels or order changed during active-reset replay")
         for st, suffix in ((-12, "minus"), (12, "plus")):
             idx = [k for k, v in enumerate(tags) if v[:2] == ("M5", st)]
             force, moment = fields[idx].sum(0)
@@ -132,6 +141,9 @@ def run(out, estimate):
             row[n + "_drum_mm"] = drum[k] * 1000
             row[n + "_slip_mm"] = transfer[k]
         rows.append(row)
+        active_states.append(z.copy())
+        active_distal_tensions.append(dist.reshape(3, 4).copy())
+        active_hole_wrenches.append(fields.copy())
         if substep % 1000 == 0:
             print(tag, substep, "/", len(plan), "archive", i, flush=True)
     if not rows:
@@ -169,7 +181,17 @@ def run(out, estimate):
         )
 
     write_table(out / "rope_control" / (tag + ".csv.gz"), rows)
+    pin_inputs_path = out / "rope_control" / (tag + "_pin_inputs.npz")
+    save_active_reset_inputs(
+        pin_inputs_path,
+        rows,
+        active_states,
+        active_distal_tensions,
+        active_hole_tags,
+        active_hole_wrenches,
+    )
     summary = dict(
+        pin_inputs_file=pin_inputs_path.name,
         assumed_mu=estimate,
         plant_mu_static=0.15,
         plant_mu_kinetic=0.15,
