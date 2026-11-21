@@ -6,6 +6,8 @@
 
 **17 November Evening Report follow-up:** a [rib-level joint model](../../../simulations/u4m2/lanes_20261113/evening_20261117/README.md), calibrated to the database EA/EI/GJ, shows that the bonded land carries about 8.3 N axial, 7.5 N radial and tangential, and up to 100 N·mm per land at the worst hold. It also stiffens M5 by about 10% (EI) and 12% (GJ). This applies to the `--bond-gap 0.25` variant as well. A translation-only contact is the least intrusive idealisation tested, but it needs about 0.22 rad of rotation freedom that this socket does not provide.
 
+**20 November Evening Report follow-up:** `build.py` also accepts `--crown` (default 0, which reproduces this V3 and the `--bond-gap 0.25` candidate exactly). The crown adds `crown·(z/half-land)²` to the outer-socket land gap. With `--bond-gap 0.25 --crown 0.06` the smallest first-contact rigid tilt at the governing M6 steps (in-plane axes every 15°) rises from 0.207° to 0.289° (z = −12 mm). See the [crowned-land study](../../../simulations/u4m2/lanes_20261113/evening_20261120/README.md) and the [exported parts](../m6_crowned_land_20261120/README.md).
+
 **Engineering candidate; not released for manufacture.** This revision relieves
 the mouths of the four outer-web saddles at each local z = ±12 mm station. It
 addresses the guide/body interference identified by the refined CAD screen.

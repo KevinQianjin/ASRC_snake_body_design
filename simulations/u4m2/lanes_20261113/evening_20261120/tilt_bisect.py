@@ -4,6 +4,7 @@ Extends the 19 Nov `m6_tilt.py` grid (0.05 deg steps) with a bisection of the
 first-contact rigid tilt about each CAD axis and sign, to `--tol` degrees, at one
 archived 500 g mission step. Guide, caps and wire envelope rotate together about the
 station origin relative to the deformed M6 body (actual STL, axially refined).
+Optional `--inplane` axes lie in the plate (CAD x-y) plane between the CAD axes.
 Also reports the exact gap (= remaining rigid translation allowance along the
 witness direction) at the +/-0.2 deg reference tilt. Rigid-body sensitivity only:
 no bond compliance, guide bending or as-printed form error.
@@ -23,6 +24,12 @@ import trimesh  # noqa: E402
 
 from m6_socket_screen import CAD, deformed_body, gap, load_motion, load_variant, mesh_model, save  # noqa: E402
 from m6_tilt import rotation  # noqa: E402
+
+
+def inplane(theta_deg, deg):
+    """Rotation by `deg` about the in-plane axis at `theta_deg` from CAD x toward CAD y."""
+    t = np.radians(theta_deg)
+    return trimesh.transformations.rotation_matrix(np.radians(deg), [np.cos(t), np.sin(t), 0.0])[:3, :3]
 
 
 def min_gap(body, objs, R):
@@ -48,21 +55,23 @@ def run(a):
     for k, parts in meshes.items():
         objs = {p: fcl.CollisionObject(mesh_model(m.vertices, m.faces)) for p, m in parts.items()}
         g0, _ = min_gap(body, objs, np.eye(3))
-        for axis in range(3):
+        axes = [("CAD_" + "xyz"[i], (lambda i: lambda d: rotation(i, d))(i)) for i in range(3)]
+        axes += [(f"inplane_{t:g}deg", (lambda t: lambda d: inplane(t, d))(t)) for t in a.inplane]
+        for name, rot in axes:
             for sign in (-1, 1):
-                ref, ref_parts = min_gap(body, objs, rotation(axis, sign * 0.2))
+                ref, ref_parts = min_gap(body, objs, rot(sign * 0.2))
                 lo, hi = 0.0, a.max_angle
-                if min_gap(body, objs, rotation(axis, sign * hi))[0] > 0:
+                if min_gap(body, objs, rot(sign * hi))[0] > 0:
                     first = None  # clear over the whole bracket
                 else:
                     while hi - lo > a.tol:
                         mid = 0.5 * (lo + hi)
-                        if min_gap(body, objs, rotation(axis, sign * mid))[0] > 0:
+                        if min_gap(body, objs, rot(sign * mid))[0] > 0:
                             lo = mid
                         else:
                             hi = mid
                     first = sign * hi
-                rows.append(dict(variant=k, axis="CAD_" + "xyz"[axis], sign=sign, gap_at_0deg_mm=g0,
+                rows.append(dict(variant=k, axis=name, sign=sign, gap_at_0deg_mm=g0,
                                  last_clear_deg=sign * lo if first is not None else sign * a.max_angle,
                                  first_contact_deg=first, gap_at_0p2deg_mm=ref,
                                  part_gaps_at_0p2deg_mm=ref_parts))
@@ -82,4 +91,6 @@ if __name__ == "__main__":
     p.add_argument("--spacing", type=float, default=0.25)
     p.add_argument("--tol", type=float, default=0.005)
     p.add_argument("--max-angle", type=float, default=1.0)
+    p.add_argument("--inplane", nargs="*", type=float, default=[],
+                   help="extra tilt axes in the plate plane, degrees from CAD x toward CAD y")
     run(p.parse_args())

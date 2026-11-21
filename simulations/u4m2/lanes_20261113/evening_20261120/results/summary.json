@@ -1,0 +1,479 @@
+{
+  "study": "M6 crowned bond land, evening 20 Nov 2026",
+  "straight": [
+    {
+      "variant": "g025",
+      "station_mm": -12,
+      "guide_gap_mm": 0.140626328140835,
+      "caps_gap_mm": 0.1406280896537996,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    },
+    {
+      "variant": "crown040",
+      "station_mm": -12,
+      "guide_gap_mm": 0.14062660172615943,
+      "caps_gap_mm": 0.14062838945500303,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    },
+    {
+      "variant": "crown060",
+      "station_mm": -12,
+      "guide_gap_mm": 0.14062660172615943,
+      "caps_gap_mm": 0.14062838945500303,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    },
+    {
+      "variant": "g025",
+      "station_mm": 12,
+      "guide_gap_mm": 0.140626328140835,
+      "caps_gap_mm": 0.14062805315748078,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    },
+    {
+      "variant": "crown040",
+      "station_mm": 12,
+      "guide_gap_mm": 0.14062660172615943,
+      "caps_gap_mm": 0.14062840100079296,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    },
+    {
+      "variant": "crown060",
+      "station_mm": 12,
+      "guide_gap_mm": 0.14062660172615943,
+      "caps_gap_mm": 0.14062840100079296,
+      "wire_envelope_gap_mm": 0.26312804918179705
+    }
+  ],
+  "screen": {
+    "z-12": {
+      "g025": {
+        "steps": 787,
+        "contacts": 0,
+        "min_gap_mm": 0.06673535679524444,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.0,
+        "max_gain_vs_g025_mm": 0.0,
+        "min_caps_gap_mm": 0.0852960662445191,
+        "governing_part": "guide"
+      },
+      "crown040": {
+        "steps": 787,
+        "contacts": 0,
+        "min_gap_mm": 0.0852510870263191,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.0016151286932472309,
+        "max_gain_vs_g025_mm": 0.019840205983968656,
+        "min_caps_gap_mm": 0.10500414407194966,
+        "governing_part": "guide"
+      },
+      "crown060": {
+        "steps": 787,
+        "contacts": 0,
+        "min_gap_mm": 0.09450855451579404,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.0016151286932472309,
+        "max_gain_vs_g025_mm": 0.02805949152352462,
+        "min_caps_gap_mm": 0.11093413214289882,
+        "governing_part": "guide"
+      }
+    },
+    "z+12": {
+      "g025": {
+        "steps": 430,
+        "contacts": 0,
+        "min_gap_mm": 0.08239307056223194,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.0,
+        "max_gain_vs_g025_mm": 0.0,
+        "min_caps_gap_mm": 0.08919965567587562,
+        "governing_part": "guide"
+      },
+      "crown040": {
+        "steps": 430,
+        "contacts": 0,
+        "min_gap_mm": 0.10176847767877364,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.001210193139873833,
+        "max_gain_vs_g025_mm": 0.019841021920611324,
+        "min_caps_gap_mm": 0.1090035573585103,
+        "governing_part": "guide"
+      },
+      "crown060": {
+        "steps": 430,
+        "contacts": 0,
+        "min_gap_mm": 0.10891942899533678,
+        "min_step": 1709,
+        "min_gain_vs_g025_mm": 0.001210193139873833,
+        "max_gain_vs_g025_mm": 0.026526358433104844,
+        "min_caps_gap_mm": 0.11391607438056765,
+        "governing_part": "guide"
+      }
+    }
+  },
+  "tilt": {
+    "z-12_step1710": {
+      "g025": {
+        "CAD_x-": {
+          "first_contact_deg": -0.21484375,
+          "gap_at_0p2deg_mm": 0.004554643396270778
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.34375,
+          "gap_at_0p2deg_mm": 0.03490415360343295
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.46875,
+          "gap_at_0p2deg_mm": 0.06136289216640862
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.46484375,
+          "gap_at_0p2deg_mm": 0.03863423307683849
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.68359375,
+          "gap_at_0p2deg_mm": 0.06573868170550774
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.68359375,
+          "gap_at_0p2deg_mm": 0.06486572455368435
+        },
+        "governing_first_contact_abs_deg": 0.21484375,
+        "min_gap_within_0p2deg_mm": 0.004554643396270778,
+        "gap_at_0deg_mm": 0.0672385187993041
+      },
+      "crown020": {
+        "CAD_x-": {
+          "first_contact_deg": -0.24609375,
+          "gap_at_0p2deg_mm": 0.013789536954354125
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.3828125,
+          "gap_at_0p2deg_mm": 0.044847750449535484
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.07129553101511812
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.04792627312926208
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.07505444872800465
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.07415783557052673
+        },
+        "governing_first_contact_abs_deg": 0.24609375,
+        "min_gap_within_0p2deg_mm": 0.013789536954354125,
+        "gap_at_0deg_mm": 0.07653058065488962
+      },
+      "crown040": {
+        "CAD_x-": {
+          "first_contact_deg": -0.2734375,
+          "gap_at_0p2deg_mm": 0.02302511672908045
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.421875,
+          "gap_at_0p2deg_mm": 0.0546836085558225
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.08118789208350387
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.057218526109737926
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.08437044116629011
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.08345062523697029
+        },
+        "governing_first_contact_abs_deg": 0.2734375,
+        "min_gap_within_0p2deg_mm": 0.02302511672908045,
+        "gap_at_0deg_mm": 0.08582333291158259
+      },
+      "crown060": {
+        "CAD_x-": {
+          "first_contact_deg": -0.3046875,
+          "gap_at_0p2deg_mm": 0.032259956776826165
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.44140625,
+          "gap_at_0p2deg_mm": 0.06005964671104945
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.0826512323793484
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.06650997073409683
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.09368562480465
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.0927426689933116
+        },
+        "governing_first_contact_abs_deg": 0.3046875,
+        "min_gap_within_0p2deg_mm": 0.032259956776826165,
+        "gap_at_0deg_mm": 0.09511534085103054
+      }
+    },
+    "z+12_step1709": {
+      "g025": {
+        "CAD_x-": {
+          "first_contact_deg": -0.359375,
+          "gap_at_0p2deg_mm": 0.03928206316441412
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.26953125,
+          "gap_at_0p2deg_mm": 0.020859089056150353
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.48046875,
+          "gap_at_0p2deg_mm": 0.05427030600174824
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4765625,
+          "gap_at_0p2deg_mm": 0.06556028107922357
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.68359375,
+          "gap_at_0p2deg_mm": 0.08090400334455596
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.68359375,
+          "gap_at_0p2deg_mm": 0.08028115185579807
+        },
+        "governing_first_contact_abs_deg": 0.26953125,
+        "min_gap_within_0p2deg_mm": 0.020859089056150353,
+        "gap_at_0deg_mm": 0.08276180006964963
+      },
+      "crown020": {
+        "CAD_x-": {
+          "first_contact_deg": -0.40234375,
+          "gap_at_0p2deg_mm": 0.049299264954314366
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.30078125,
+          "gap_at_0p2deg_mm": 0.030516446562265015
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.06397749017040473
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.07556359496991033
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.09063461385807986
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.08999499463405371
+        },
+        "governing_first_contact_abs_deg": 0.30078125,
+        "min_gap_within_0p2deg_mm": 0.030516446562265015,
+        "gap_at_0deg_mm": 0.09247559596722328
+      },
+      "crown040": {
+        "CAD_x-": {
+          "first_contact_deg": -0.4375,
+          "gap_at_0p2deg_mm": 0.05862940323830021
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.33203125,
+          "gap_at_0p2deg_mm": 0.04017452169448182
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.07368489678690177
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.08334050314169442
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.10036545983373134
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.0997095468821463
+        },
+        "governing_first_contact_abs_deg": 0.33203125,
+        "min_gap_within_0p2deg_mm": 0.04017452169448182,
+        "gap_at_0deg_mm": 0.1021901136144966
+      },
+      "crown060": {
+        "CAD_x-": {
+          "first_contact_deg": -0.453125,
+          "gap_at_0p2deg_mm": 0.06295537052948953
+        },
+        "CAD_x+": {
+          "first_contact_deg": 0.35546875,
+          "gap_at_0p2deg_mm": 0.04752436826833842
+        },
+        "CAD_y-": {
+          "first_contact_deg": -0.4921875,
+          "gap_at_0p2deg_mm": 0.08070544338469837
+        },
+        "CAD_y+": {
+          "first_contact_deg": 0.4921875,
+          "gap_at_0p2deg_mm": 0.08334050314169442
+        },
+        "CAD_z-": {
+          "first_contact_deg": -0.69921875,
+          "gap_at_0p2deg_mm": 0.10723033843823149
+        },
+        "CAD_z+": {
+          "first_contact_deg": 0.69921875,
+          "gap_at_0p2deg_mm": 0.10668458969290917
+        },
+        "governing_first_contact_abs_deg": 0.35546875,
+        "min_gap_within_0p2deg_mm": 0.04752436826833842,
+        "gap_at_0deg_mm": 0.10916543553622979
+      }
+    }
+  },
+  "tilt_inplane": {
+    "z-12_step1710": {
+      "crown060": {
+        "axes_sampled": [
+          "CAD_x",
+          "CAD_y",
+          "inplane_105deg",
+          "inplane_120deg",
+          "inplane_135deg",
+          "inplane_150deg",
+          "inplane_15deg",
+          "inplane_165deg",
+          "inplane_30deg",
+          "inplane_45deg",
+          "inplane_60deg",
+          "inplane_75deg"
+        ],
+        "min_first_contact_deg": 0.2890625,
+        "min_axis": "inplane_165deg",
+        "min_gap_at_0p2deg_mm": 0.028959460151424827,
+        "min_gap_axis": "inplane_165deg",
+        "min_gap_sign": 1
+      },
+      "g025": {
+        "axes_sampled": [
+          "CAD_x",
+          "CAD_y",
+          "inplane_105deg",
+          "inplane_120deg",
+          "inplane_135deg",
+          "inplane_150deg",
+          "inplane_15deg",
+          "inplane_165deg",
+          "inplane_30deg",
+          "inplane_45deg",
+          "inplane_60deg",
+          "inplane_75deg"
+        ],
+        "min_first_contact_deg": 0.20703125,
+        "min_axis": "inplane_150deg",
+        "min_gap_at_0p2deg_mm": 0.0012666822023394894,
+        "min_gap_axis": "inplane_165deg",
+        "min_gap_sign": 1
+      }
+    },
+    "z+12_step1709": {
+      "crown060": {
+        "axes_sampled": [
+          "CAD_x",
+          "CAD_y",
+          "inplane_105deg",
+          "inplane_120deg",
+          "inplane_135deg",
+          "inplane_150deg",
+          "inplane_15deg",
+          "inplane_165deg",
+          "inplane_30deg",
+          "inplane_45deg",
+          "inplane_60deg",
+          "inplane_75deg"
+        ],
+        "min_first_contact_deg": -0.33984375,
+        "min_axis": "inplane_150deg",
+        "min_gap_at_0p2deg_mm": 0.04429586131680546,
+        "min_gap_axis": "inplane_165deg",
+        "min_gap_sign": -1
+      },
+      "g025": {
+        "axes_sampled": [
+          "CAD_x",
+          "CAD_y",
+          "inplane_105deg",
+          "inplane_120deg",
+          "inplane_135deg",
+          "inplane_150deg",
+          "inplane_15deg",
+          "inplane_165deg",
+          "inplane_30deg",
+          "inplane_45deg",
+          "inplane_60deg",
+          "inplane_75deg"
+        ],
+        "min_first_contact_deg": -0.2578125,
+        "min_axis": "inplane_150deg",
+        "min_gap_at_0p2deg_mm": 0.017611495635701947,
+        "min_gap_axis": "inplane_165deg",
+        "min_gap_sign": -1
+      }
+    }
+  },
+  "bond_layer": {
+    "g025": {
+      "crown_mm": 0.0,
+      "mid_land_gap_mm": 0.25,
+      "land_edge_gap_mm": 0.25,
+      "mean_gap_mm": 0.25,
+      "shear_stiffness_ratio_vs_uncrowned": 1.0,
+      "nominal_shear_strain_at_0p0545mm_mid": 0.218,
+      "nominal_shear_strain_at_0p0545mm_edge": 0.218
+    },
+    "crown020": {
+      "crown_mm": 0.02,
+      "mid_land_gap_mm": 0.25,
+      "land_edge_gap_mm": 0.27,
+      "mean_gap_mm": 0.2566673333333333,
+      "shear_stiffness_ratio_vs_uncrowned": 0.9745444624410042,
+      "nominal_shear_strain_at_0p0545mm_mid": 0.218,
+      "nominal_shear_strain_at_0p0545mm_edge": 0.20185185185185184
+    },
+    "crown040": {
+      "crown_mm": 0.04,
+      "mid_land_gap_mm": 0.25,
+      "land_edge_gap_mm": 0.29,
+      "mean_gap_mm": 0.2633346666666667,
+      "shear_stiffness_ratio_vs_uncrowned": 0.9512659425827354,
+      "nominal_shear_strain_at_0p0545mm_mid": 0.218,
+      "nominal_shear_strain_at_0p0545mm_edge": 0.18793103448275864
+    },
+    "crown060": {
+      "crown_mm": 0.06,
+      "mid_land_gap_mm": 0.25,
+      "land_edge_gap_mm": 0.31,
+      "mean_gap_mm": 0.270002,
+      "shear_stiffness_ratio_vs_uncrowned": 0.9298535709182567,
+      "nominal_shear_strain_at_0p0545mm_mid": 0.218,
+      "nominal_shear_strain_at_0p0545mm_edge": 0.17580645161290323
+    }
+  }
+}
