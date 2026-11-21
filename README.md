@@ -22,6 +22,18 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 ## 20 November 2026
 
+<a id="20-november-2026--evening-report-crowned-m6-bond-land"></a>
+
+**Evening Report — crowned M6 bond land.** The 0.25 mm M6 outer-socket candidate cleared the body over the whole mission, but plate tilt still governed its margin. The bonded land edge sits about 21 mm from the axis, and Round 2 found contact when a 0.025 mm offset was combined with 0.2° tilt. This run kept the 0.25 mm bond datum at mid-land and crowned the 0.5 mm land quadratically to 0.31 mm at its edges. The rope bores, stations, webs, masses (−0.0021 g per station) and solver inputs are unchanged. [Evening Report](reports/daily/Evening_Report_2026_11_20.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261120/README.md) · [Crowned-land CAD](cad/lanes_u4m2/m6_crowned_land_20261120/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261120/HANDOFF.md)
+
+| Rigid CAD check at the governing left-yaw steps | 0.25 mm candidate | 0.06 mm crown |
+|---|---:|---:|
+| Smallest first-contact tilt, in-plane axes every 15°, z = −12 / +12 mm | 0.207° / 0.258° | **0.289° / 0.340°** |
+| Smallest translation allowance at 0.2° tilt, z = −12 / +12 mm | 0.0013 / 0.0176 mm | **0.0290 / 0.0443 mm** |
+| Mission screen, 787 + 430 low-margin steps, all 11 phases | 0.0667 / 0.0824 mm, 0 contacts | **0.0945 / 0.1089 mm, 0 contacts** |
+
+These are rigid-body results. Bond deformation, as-printed form and bonded tilt are unmeasured, and a 0.06 mm crown is below typical PA12 print resolution.
+
 The [free-space steering, fracture and service-life study](reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md) extends the 500 g U4+M2 front beyond its original ±175° yaw and ±90° pitch mission. It keeps the actual guide geometry and the twelve Ø2 mm rope routes. Only the external tank constraint was removed.
 
 | Engineering question | Latest result | Evidence |
@@ -122,7 +134,7 @@ The initial uploads included the rope-driven model, material inputs and the 500 
 
 ## Prototype
 
-Start with the **M5 retained-seat coupon and P3 fixture** and an **M6 guide fit at −12 mm**. The 0.25 mm M6 socket is the current fit-test candidate. The model uses up its local clearance with about 0.2° adverse tilt under the studied assembly offset. The installation guide identifies each print, purchased part and rope termination, including both pairs of NiTi leaf springs in every U module. [First test parts](docs/installation_guide.md#first-test-parts) · [Illustrated assembly guide](docs/installation_guide.md) · [Rotatable U-module assembly](cad/lanes_u4m2/guides_v2/U_spring_assembly.scad)
+Start with the **M5 retained-seat coupon and P3 fixture** and an **M6 guide fit at −12 mm**. The 0.25 mm M6 socket is the current fit-test candidate. The model uses up its local clearance with about 0.2° adverse tilt under the studied assembly offset. A [crowned-land variant](cad/lanes_u4m2/m6_crowned_land_20261120/README.md) raises the rigid tilt to first contact to about 0.29°; print both and measure the land profile and bonded tilt. The installation guide identifies each print, purchased part and rope termination, including both pairs of NiTi leaf springs in every U module. [First test parts](docs/installation_guide.md#first-test-parts) · [Illustrated assembly guide](docs/installation_guide.md) · [Rotatable U-module assembly](cad/lanes_u4m2/guides_v2/U_spring_assembly.scad)
 
 <a id="geometry-and-input-data"></a><a id="earlier-studies"></a>
 

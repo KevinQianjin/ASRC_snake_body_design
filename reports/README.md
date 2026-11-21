@@ -17,6 +17,7 @@ Scheduled morning and evening editions share a row for each reporting date. Thes
 
 | Date in 2026 | Subject | Read |
 |---|---|---|
+| 20 November | Crowned M6 bond land and tilt tolerance | [Evening Report](daily/Evening_Report_2026_11_20.md) |
 | 19 November | Wider M6 bonded sockets and assembly tilt | [Evening Report](daily/Evening_Report_2026_11_19.md) |
 | 18 November | Rotating guide seats and real web contact | [Evening Report](daily/Evening_Report_2026_11_18.md) |
 | 17 November | Rib-level guide joint and stiffness | [Evening Report](daily/Evening_Report_2026_11_17.md) |

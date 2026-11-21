@@ -1,0 +1,71 @@
+{
+  "all_pass": true,
+  "checks": {
+    "zero_crown_reproduces_0p25_candidate": true,
+    "parts_closed": true,
+    "component_counts": true,
+    "straight_overlap_zero": true,
+    "rope_bores_identical": true,
+    "screen_no_contact": true,
+    "screen_complete_787_430": true,
+    "crown_never_reduces_gap": true,
+    "relative_links": {
+      "simulations/u4m2/lanes_20261113/evening_20261120/README.md": [],
+      "simulations/u4m2/lanes_20261113/evening_20261120/HANDOFF.md": [],
+      "cad/lanes_u4m2/m6_crowned_land_20261120/README.md": [],
+      "README.md": [],
+      "reports/daily/Evening_Report_2026_11_20.md": []
+    }
+  },
+  "parts": {
+    "M6_z-12_guide": {
+      "watertight": true,
+      "components": 1,
+      "volume_mm3": 2535.1044898406803,
+      "sha256": "9206fe0c05d22b999c2c758c5ab1b6d383cc98c560d0bc07e856bf8b363fed2d"
+    },
+    "M6_z-12_caps": {
+      "watertight": true,
+      "components": 4,
+      "volume_mm3": 56.582907982014724,
+      "sha256": "63a4f92f8b092b9edda2d095a11e71e07567e98acb4eb8b61c037af22b370fc0"
+    },
+    "M6_z-12_wire_envelope": {
+      "watertight": true,
+      "components": 4,
+      "volume_mm3": 9.044240416988023,
+      "sha256": "5db36f3a9b9e9b4fcc8846789a8de8d05a32cb0e8211df8ef455a553291a885c"
+    },
+    "M6_z+12_guide": {
+      "watertight": true,
+      "components": 1,
+      "volume_mm3": 2535.10447878786,
+      "sha256": "38d25e5470bcd8bd217b3e962714e8d762c25195f969503f92a457e104061a8a"
+    },
+    "M6_z+12_caps": {
+      "watertight": true,
+      "components": 4,
+      "volume_mm3": 56.58290713057507,
+      "sha256": "31bf2116cddc35a7dec8261272d2054db915fb971012d9943018b3f53a3c67a3"
+    },
+    "M6_z+12_wire_envelope": {
+      "watertight": true,
+      "components": 4,
+      "volume_mm3": 9.044240416988023,
+      "sha256": "5db36f3a9b9e9b4fcc8846789a8de8d05a32cb0e8211df8ef455a553291a885c"
+    }
+  },
+  "versions": {
+    "python": "3.11.18",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "trimesh": "5.2.0",
+    "python-fcl": "0.7.0.10",
+    "manifold3d": "3.5.5",
+    "shapely": "2.2.0",
+    "matplotlib": "3.10.8",
+    "numba": "0.68.1",
+    "vtk": "9.7.2"
+  },
+  "source_revision": "8ec2092057fc1bc6e89f6685feebe2757c2aa78c"
+}

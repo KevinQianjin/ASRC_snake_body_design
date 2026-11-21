@@ -1,0 +1,428 @@
+{
+  "script": "plateau_probe.py",
+  "source": "bisect_zm12_step1710.json",
+  "step": 1710,
+  "station_mm": -12,
+  "rows": [
+    {
+      "variant": "g025",
+      "axis": "CAD_x",
+      "angle_deg": -0.20484375,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0030352400137506202,
+          "witness_part_CAD_mm": [
+            6.719,
+            20.141,
+            -0.322
+          ],
+          "witness_radius_mm": 21.23170621107559
+        },
+        "caps": {
+          "gap_mm": 0.07196231219792046,
+          "witness_part_CAD_mm": [
+            -5.508,
+            -17.217,
+            -0.188
+          ],
+          "witness_radius_mm": 18.07603201534212
+        },
+        "wire_envelope": {
+          "gap_mm": 0.1192018655703057,
+          "witness_part_CAD_mm": [
+            6.76,
+            20.24,
+            -0.247
+          ],
+          "witness_radius_mm": 21.33923491831244
+        }
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_x",
+      "angle_deg": 0.33375,
+      "governing_part": "caps",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.03212802023545839,
+          "witness_part_CAD_mm": [
+            -6.438,
+            -19.463,
+            0.137
+          ],
+          "witness_radius_mm": 20.500674041676515
+        },
+        "caps": {
+          "gap_mm": 0.0016996171877242847,
+          "witness_part_CAD_mm": [
+            5.225,
+            16.535,
+            0.346
+          ],
+          "witness_radius_mm": 17.34143923613498
+        },
+        "wire_envelope": {
+          "gap_mm": 0.12036172083388494,
+          "witness_part_CAD_mm": [
+            5.184,
+            16.437,
+            0.271
+          ],
+          "witness_radius_mm": 17.23473099467508
+        }
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_y",
+      "angle_deg": -0.45875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0018890561510260023,
+          "witness_part_CAD_mm": [
+            -18.997,
+            9.476,
+            -0.402
+          ],
+          "witness_radius_mm": 21.229184481724868
+        },
+        "caps": {
+          "gap_mm": 0.025985727130246314,
+          "witness_part_CAD_mm": [
+            17.217,
+            -5.508,
+            -0.112
+          ],
+          "witness_radius_mm": 18.07665138968182
+        },
+        "wire_envelope": {
+          "gap_mm": 0.12326703044313572,
+          "witness_part_CAD_mm": [
+            -19.092,
+            9.529,
+            -0.328
+          ],
+          "witness_radius_mm": 21.33789824347979
+        }
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_y",
+      "angle_deg": 0.45484375,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0010328121974154335,
+          "witness_part_CAD_mm": [
+            9.491,
+            18.993,
+            -0.325
+          ],
+          "witness_radius_mm": 21.231781994844653
+        },
+        "caps": {
+          "gap_mm": 0.026861686883840327,
+          "witness_part_CAD_mm": [
+            -17.217,
+            5.508,
+            -0.113
+          ],
+          "witness_radius_mm": 18.076632688468614
+        },
+        "wire_envelope": {
+          "gap_mm": 0.11729206879545308,
+          "witness_part_CAD_mm": [
+            9.533,
+            19.092,
+            -0.251
+          ],
+          "witness_radius_mm": 21.3393346911378
+        }
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_z",
+      "angle_deg": -0.67359375,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0028469558877286887,
+          "witness_part_CAD_mm": [
+            6.661,
+            20.009,
+            -0.25
+          ],
+          "witness_radius_mm": 21.088650137477856
+        },
+        "caps": {
+          "gap_mm": 0.07532316005257782,
+          "witness_part_CAD_mm": [
+            5.233,
+            16.554,
+            0.25
+          ],
+          "witness_radius_mm": 17.361839141399763
+        },
+        "wire_envelope": {
+          "gap_mm": 0.17704363209991722,
+          "witness_part_CAD_mm": [
+            9.527,
+            19.077,
+            -0.175
+          ],
+          "witness_radius_mm": 21.323858169356384
+        }
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_z",
+      "angle_deg": 0.67359375,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0027983533354189456,
+          "witness_part_CAD_mm": [
+            9.438,
+            18.857,
+            -0.25
+          ],
+          "witness_radius_mm": 21.08712952157275
+        },
+        "caps": {
+          "gap_mm": 0.07610890532631281,
+          "witness_part_CAD_mm": [
+            8.005,
+            15.406,
+            0.25
+          ],
+          "witness_radius_mm": 17.361823459200345
+        },
+        "wire_envelope": {
+          "gap_mm": 0.17610379536011514,
+          "witness_part_CAD_mm": [
+            6.753,
+            20.226,
+            -0.175
+          ],
+          "witness_radius_mm": 21.323853128640867
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_x",
+      "angle_deg": -0.2946875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.002429841276856984,
+          "witness_part_CAD_mm": [
+            6.742,
+            20.196,
+            -0.354
+          ],
+          "witness_radius_mm": 21.291068075310072
+        },
+        "caps": {
+          "gap_mm": 0.07936722242252833,
+          "witness_part_CAD_mm": [
+            -5.431,
+            -17.033,
+            -0.037
+          ],
+          "witness_radius_mm": 17.877664110775594
+        },
+        "wire_envelope": {
+          "gap_mm": 0.09086541703256579,
+          "witness_part_CAD_mm": [
+            6.76,
+            20.24,
+            -0.279
+          ],
+          "witness_radius_mm": 21.33885557712016
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_x",
+      "angle_deg": 0.43140625,
+      "governing_part": "caps",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.03439763445904308,
+          "witness_part_CAD_mm": [
+            -6.514,
+            -19.646,
+            -0.023
+          ],
+          "witness_radius_mm": 20.698193339307377
+        },
+        "caps": {
+          "gap_mm": 0.0017283522769777756,
+          "witness_part_CAD_mm": [
+            5.29,
+            16.692,
+            0.251
+          ],
+          "witness_radius_mm": 17.509836681310723
+        },
+        "wire_envelope": {
+          "gap_mm": 0.09623209584955049,
+          "witness_part_CAD_mm": [
+            5.184,
+            16.436,
+            0.299
+          ],
+          "witness_radius_mm": 17.23428527152963
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_y",
+      "angle_deg": -0.4821875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0021871724576514773,
+          "witness_part_CAD_mm": [
+            -19.801,
+            6.579,
+            -0.167
+          ],
+          "witness_radius_mm": 20.865461946906873
+        },
+        "caps": {
+          "gap_mm": 0.023293056840033566,
+          "witness_part_CAD_mm": [
+            16.876,
+            -5.366,
+            0.142
+          ],
+          "witness_radius_mm": 17.708608229318344
+        },
+        "wire_envelope": {
+          "gap_mm": 0.11667196626074929,
+          "witness_part_CAD_mm": [
+            -19.091,
+            9.53,
+            -0.336
+          ],
+          "witness_radius_mm": 21.33785012549262
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_y",
+      "angle_deg": 0.4821875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.002650348362828823,
+          "witness_part_CAD_mm": [
+            19.801,
+            -6.578,
+            -0.167
+          ],
+          "witness_radius_mm": 20.865490896011607
+        },
+        "caps": {
+          "gap_mm": 0.023616117704208062,
+          "witness_part_CAD_mm": [
+            -16.874,
+            5.371,
+            0.142
+          ],
+          "witness_radius_mm": 17.70816686288378
+        },
+        "wire_envelope": {
+          "gap_mm": 0.11323632748658952,
+          "witness_part_CAD_mm": [
+            9.533,
+            19.092,
+            -0.255
+          ],
+          "witness_radius_mm": 21.339289857334478
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_z",
+      "angle_deg": -0.68921875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.002737635636317553,
+          "witness_part_CAD_mm": [
+            19.572,
+            -6.48,
+            0.0
+          ],
+          "witness_radius_mm": 20.61705715562984
+        },
+        "caps": {
+          "gap_mm": 0.10096373702412287,
+          "witness_part_CAD_mm": [
+            5.255,
+            16.609,
+            0.188
+          ],
+          "witness_radius_mm": 17.42022492862734
+        },
+        "wire_envelope": {
+          "gap_mm": 0.17688510424257878,
+          "witness_part_CAD_mm": [
+            9.527,
+            19.077,
+            -0.175
+          ],
+          "witness_radius_mm": 21.32351992829649
+        }
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_z",
+      "angle_deg": 0.68921875,
+      "governing_part": "guide",
+      "parts": {
+        "guide": {
+          "gap_mm": 0.0027312508436532993,
+          "witness_part_CAD_mm": [
+            -18.422,
+            9.257,
+            0.0
+          ],
+          "witness_radius_mm": 20.617181179041243
+        },
+        "caps": {
+          "gap_mm": 0.10162518550561576,
+          "witness_part_CAD_mm": [
+            8.07,
+            15.562,
+            0.125
+          ],
+          "witness_radius_mm": 17.530422816605927
+        },
+        "wire_envelope": {
+          "gap_mm": 0.17594567779146417,
+          "witness_part_CAD_mm": [
+            6.753,
+            20.226,
+            -0.175
+          ],
+          "witness_radius_mm": 21.323514900728107
+        }
+      }
+    }
+  ]
+}
