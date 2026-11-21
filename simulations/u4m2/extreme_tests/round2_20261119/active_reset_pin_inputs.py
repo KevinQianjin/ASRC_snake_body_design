@@ -116,6 +116,24 @@ def active_m5_candidates(data):
     ]
 
 
+def validate_complete_replay(summary, csv_row_count, input_state_count):
+    """Reject a stress screen based on a truncated or misaligned mission replay."""
+    expected = int(summary.get("expected_substeps", -1))
+    accepted = int(summary.get("all_substeps", {}).get("states", -1))
+    stopped_at = summary.get("stopped_at")
+    if stopped_at is not None:
+        raise RuntimeError(f"Mission replay stopped early: {stopped_at}")
+    if expected <= 0 or accepted != expected:
+        raise RuntimeError(
+            f"Mission replay is incomplete: accepted {accepted} of {expected} planned substeps"
+        )
+    if csv_row_count != expected or input_state_count != expected:
+        raise RuntimeError(
+            "Replay outputs are misaligned: "
+            f"planned={expected}, csv={csv_row_count}, pin_inputs={input_state_count}"
+        )
+
+
 def save_active_reset_inputs(path, rows, states, distal_tensions_N, hole_tags, hole_wrenches_CAD):
     """Write a compressed NPZ that can be loaded with ``allow_pickle=False``."""
     arrays = capture_active_reset_inputs(
