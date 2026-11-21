@@ -169,6 +169,12 @@ def run(out=OUT, estimate=0.15):
     with np.load(input_path, allow_pickle=False) as archive:
         data = {name: archive[name] for name in archive.files}
     replay_rows = read_csv(replay_path)
+    replay_summary = read(out / "rope_control" / (tag + ".json"))
+    validate_complete_replay(
+        replay_summary,
+        csv_row_count=len(replay_rows),
+        input_state_count=len(data["substep"]),
+    )
     verify_station_totals(data, replay_rows)
     materials = read(ROOT / "data/materials/rope_materials.json")["materials"]
     pin_material = next(m for m in materials if m["id"] == PIN_MATERIAL_ID)
