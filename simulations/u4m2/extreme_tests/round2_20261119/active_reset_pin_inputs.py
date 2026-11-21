@@ -71,6 +71,51 @@ def capture_active_reset_inputs(rows, states, distal_tensions_N, hole_tags, hole
     return result
 
 
+
+
+def active_m5_candidates(data):
+    """Choose replay indices at station-force, station-moment and single-hole peaks."""
+    tags = (
+        data["hole_module"],
+        data["hole_station_mm"],
+        data["hole_family"],
+        data["hole_ray"],
+    )
+    picked = {}
+
+    def note(index, reason, value, station):
+        index = int(index)
+        picked.setdefault(index, []).append(
+            dict(reason=reason, station_mm=int(station), magnitude=float(value))
+        )
+
+    for station in M5_INNER_STATIONS_MM:
+        ids = np.flatnonzero((tags[0] == "M5") & (tags[1] == station))
+        if len(ids) != 8:
+            raise ValueError(f"Expected eight M5 guide holes at station {station:+d}")
+        wrench = data["hole_wrench_CAD"][:, ids]
+        resultant = wrench.sum(axis=1)
+        force = np.linalg.norm(resultant[:, 0], axis=1)
+        moment = np.linalg.norm(resultant[:, 1], axis=1)
+        hole_force = np.linalg.norm(wrench[:, :, 0], axis=-1).max(axis=1)
+        note(np.argmax(force), "station_force_peak", force.max(), station)
+        note(np.argmax(moment), "station_moment_peak", moment.max(), station)
+        note(np.argmax(hole_force), "individual_hole_force_peak", hole_force.max(), station)
+
+    return [
+        dict(
+            index=index,
+            substep=int(data["substep"][index]),
+            archive_step=int(data["archive_step"][index]),
+            phase=str(data["phase"][index]),
+            kind=str(data["kind"][index]),
+            fraction=float(data["fraction"][index]),
+            criteria=reasons,
+        )
+        for index, reasons in sorted(picked.items())
+    ]
+
+
 def save_active_reset_inputs(path, rows, states, distal_tensions_N, hole_tags, hole_wrenches_CAD):
     """Write a compressed NPZ that can be loaded with ``allow_pickle=False``."""
     arrays = capture_active_reset_inputs(
@@ -80,4 +125,5 @@ def save_active_reset_inputs(path, rows, states, distal_tensions_N, hole_tags, h
     path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(path, **arrays)
     return path
+
 
