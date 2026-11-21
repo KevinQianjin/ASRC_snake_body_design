@@ -72,7 +72,7 @@ class ActiveResetPinInputs(unittest.TestCase):
         validate_complete_replay(complete, csv_row_count=2, input_state_count=2)
         with self.assertRaisesRegex(RuntimeError, "stopped early"):
             validate_complete_replay(
-                dict(**complete, stopped_at=dict(substep=1)),
+                dict(complete, stopped_at=dict(substep=1)),
                 csv_row_count=1,
                 input_state_count=1,
             )
