@@ -1,0 +1,25 @@
+{
+  "edition": "Evening Report",
+  "report_date_et": "2026-11-20",
+  "run_start_et": "2026-11-20T20:01:45-05:00",
+  "run_start_utc": "2026-11-21T01:01:45Z",
+  "deadline_et": "2026-11-20T22:01:45-05:00",
+  "deadline_utc": "2026-11-21T03:01:45Z",
+  "expensive_work_stop_et": "2026-11-20T21:36:45-05:00",
+  "expensive_work_stop_utc": "2026-11-21T02:36:45Z",
+  "reporting_interval_et": ["2026-11-19T20:01:45-05:00", "2026-11-20T20:01:45-05:00"],
+  "reporting_interval_utc": ["2026-11-20T01:01:45Z", "2026-11-21T01:01:45Z"],
+  "base_revisions": {
+    "origin_main": "ef7e9fb",
+    "origin_codex_guide_validation": "0d914ab (main + offline 3D replay; fast-forwarded into this branch)",
+    "previous_claude_great_goodall_1wf2yh": "af4883a (contained in origin/main via PR #38 merge d0938c3)"
+  },
+  "branch": "claude/great-goodall-1wf2yh",
+  "branch_reconciliation": "fast-forwarded origin/claude/great-goodall-1wf2yh (af4883a) to origin/main ef7e9fb, then to origin/codex/guide-validation 0d914ab; no merge commit needed",
+  "requested_model": "Claude Opus 5.5",
+  "model_verification": "Session configuration names claude-opus-5-5; the get_session metadata tool was not available in this run, so the serving model is not independently verified.",
+  "python": "3.11.18 (venv)",
+  "cores": 4,
+  "memory_gb": 15,
+  "concurrency": "4 screen shards + 2 tilt processes; peak resident memory well under 2 GB per process (free memory stayed above 13 GB)"
+}

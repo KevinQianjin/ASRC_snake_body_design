@@ -6,6 +6,7 @@ with --tree HEAD before pushing. Read the Git blobs, not potentially different
 working-tree copies. Numerical STL/NPZ payloads are parsed as their formats;
 unknown binary formats fail closed. SVG/PNG visual text requires an explicitly
 recorded rendered review as well as a machine-readable text/metadata check.
+Standalone HTML downloads packaged in ZIP files are inspected after decompression.
 """
 import argparse
 import ast
@@ -88,6 +89,18 @@ def inspect_blob(name,data,reviewed):
                     for v in array.ravel():inspect_text(v.decode('utf-8') if isinstance(v,bytes) else str(v))
                 elif array.dtype.kind not in 'biufc':raise ValueError('Unsupported NPZ data type: '+str(array.dtype))
         return 'NPZ member names and string arrays; numerical arrays parsed without pickle'
+    if suffix == '.zip':
+        with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            member_name = Path(name).with_suffix('.html').name
+            if archive.namelist() != [member_name]:
+                raise ValueError('ZIP audit supports a single matching standalone HTML file')
+            member = archive.getinfo(member_name)
+            inspect_text(archive.comment.decode('utf-8'))
+            inspect_text(member.comment.decode('utf-8'))
+            if member.extra:
+                raise ValueError('Unsupported ZIP member metadata requires inspection')
+            method = inspect_blob(member_name, archive.read(member), reviewed)
+        return 'ZIP comments, member name and decompressed HTML; ' + method
     if suffix=='.gz':
         return 'gzip: '+inspect_blob(name[:-3],gzip.decompress(data),reviewed)
     if suffix=='.png':
@@ -142,6 +155,18 @@ def self_test():
     try:inspect_blob('unknown.bin',b'\0\1',set())
     except ValueError:pass
     else:raise AssertionError('Unknown binary silently accepted')
+    for contents in ('English replay', chr(0x4E2D)):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w', zipfile.ZIP_DEFLATED) as archive:
+            archive.writestr('replay.html', contents)
+        try:
+            inspect_blob('replay.zip', buffer.getvalue(), set())
+        except ValueError:
+            if contents.isascii():
+                raise
+        else:
+            if not contents.isascii():
+                raise AssertionError('Missed Han text inside a zipped HTML replay')
 
 
 if __name__=='__main__':
