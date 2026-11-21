@@ -63,6 +63,28 @@ class ActiveResetPinInputs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "one first-axis entry"):
             capture_active_reset_inputs(rows, states[:1], distal, tags, wrench)
 
+    def test_requires_complete_replay_before_screening(self):
+        complete = dict(
+            expected_substeps=2,
+            stopped_at=None,
+            all_substeps=dict(states=2),
+        )
+        validate_complete_replay(complete, csv_row_count=2, input_state_count=2)
+        with self.assertRaisesRegex(RuntimeError, "stopped early"):
+            validate_complete_replay(
+                dict(**complete, stopped_at=dict(substep=1)),
+                csv_row_count=1,
+                input_state_count=1,
+            )
+        with self.assertRaisesRegex(RuntimeError, "incomplete"):
+            validate_complete_replay(
+                dict(expected_substeps=2, stopped_at=None, all_substeps=dict(states=1)),
+                csv_row_count=1,
+                input_state_count=1,
+            )
+        with self.assertRaisesRegex(RuntimeError, "misaligned"):
+            validate_complete_replay(complete, csv_row_count=2, input_state_count=1)
+
 
 if __name__ == "__main__":
     unittest.main()
