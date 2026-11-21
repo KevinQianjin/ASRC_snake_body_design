@@ -1,0 +1,355 @@
+{
+  "script": "tilt_bisect.py",
+  "step": 1709,
+  "station_mm": 12,
+  "spacing_mm": 0.25,
+  "tol_deg": 0.005,
+  "max_angle_deg": 1.0,
+  "crop_extra_mm": 0.7558191493785559,
+  "kept_triangles": 29893,
+  "variants": {
+    "g025": "/tmp/claude-0/-home-user-ASRC-snake-body-design/5d0f0030-ea35-57c3-b0e0-fbaeb2bddb56/scratchpad/c0",
+    "crown020": "/tmp/claude-0/-home-user-ASRC-snake-body-design/5d0f0030-ea35-57c3-b0e0-fbaeb2bddb56/scratchpad/c0.02",
+    "crown040": "/tmp/claude-0/-home-user-ASRC-snake-body-design/5d0f0030-ea35-57c3-b0e0-fbaeb2bddb56/scratchpad/c0.04",
+    "crown060": "/tmp/claude-0/-home-user-ASRC-snake-body-design/5d0f0030-ea35-57c3-b0e0-fbaeb2bddb56/scratchpad/c0.06"
+  },
+  "rows": [
+    {
+      "variant": "g025",
+      "axis": "CAD_x",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": -0.35546875,
+      "first_contact_deg": -0.359375,
+      "gap_at_0p2deg_mm": 0.03928206316441412,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.06797524816034003,
+        "caps": 0.03928206316441412,
+        "wire_envelope": 0.15806051591086134
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_x",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": 0.265625,
+      "first_contact_deg": 0.26953125,
+      "gap_at_0p2deg_mm": 0.020859089056150353,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.020859089056150353,
+        "caps": 0.07663676100931516,
+        "wire_envelope": 0.13846417087628748
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_y",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": -0.4765625,
+      "first_contact_deg": -0.48046875,
+      "gap_at_0p2deg_mm": 0.05427030600174824,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.05427030600174824,
+        "caps": 0.08837143691755833,
+        "wire_envelope": 0.1720395139611098
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_y",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": 0.47265625,
+      "first_contact_deg": 0.4765625,
+      "gap_at_0p2deg_mm": 0.06556028107922357,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.07692032115250234,
+        "caps": 0.06556028107922357,
+        "wire_envelope": 0.18429253027175682
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_z",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": -0.6796875,
+      "first_contact_deg": -0.68359375,
+      "gap_at_0p2deg_mm": 0.08090400334455596,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08090400334455596,
+        "caps": 0.08622665758067065,
+        "wire_envelope": 0.1987503405573687
+      }
+    },
+    {
+      "variant": "g025",
+      "axis": "CAD_z",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.08276180006964963,
+      "last_clear_deg": 0.6796875,
+      "first_contact_deg": 0.68359375,
+      "gap_at_0p2deg_mm": 0.08028115185579807,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08028115185579807,
+        "caps": 0.08691352264887423,
+        "wire_envelope": 0.19807269808482875
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_x",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": -0.3984375,
+      "first_contact_deg": -0.40234375,
+      "gap_at_0p2deg_mm": 0.049299264954314366,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08048316080056708,
+        "caps": 0.049299264954314366,
+        "wire_envelope": 0.15806051591086134
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_x",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": 0.296875,
+      "first_contact_deg": 0.30078125,
+      "gap_at_0p2deg_mm": 0.030516446562265015,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.030516446562265015,
+        "caps": 0.08905399310819159,
+        "wire_envelope": 0.13846417087628748
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_y",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": -0.48828125,
+      "first_contact_deg": -0.4921875,
+      "gap_at_0p2deg_mm": 0.06397749017040473,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.06397749017040473,
+        "caps": 0.09202971167885397,
+        "wire_envelope": 0.1720395139611098
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_y",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": 0.48828125,
+      "first_contact_deg": 0.4921875,
+      "gap_at_0p2deg_mm": 0.07556359496991033,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.0827700761381318,
+        "caps": 0.07556359496991033,
+        "wire_envelope": 0.18429253027175682
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_z",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": -0.6953125,
+      "first_contact_deg": -0.69921875,
+      "gap_at_0p2deg_mm": 0.09063461385807986,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.09063461385807986,
+        "caps": 0.09618802400401975,
+        "wire_envelope": 0.1987503405573687
+      }
+    },
+    {
+      "variant": "crown020",
+      "axis": "CAD_z",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.09247559596722328,
+      "last_clear_deg": 0.6953125,
+      "first_contact_deg": 0.69921875,
+      "gap_at_0p2deg_mm": 0.08999499463405371,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08999499463405371,
+        "caps": 0.09689378907717289,
+        "wire_envelope": 0.19807269808482875
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_x",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": -0.43359375,
+      "first_contact_deg": -0.4375,
+      "gap_at_0p2deg_mm": 0.05862940323830021,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.09072100812487402,
+        "caps": 0.05862940323830021,
+        "wire_envelope": 0.15806051591086134
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_x",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": 0.328125,
+      "first_contact_deg": 0.33203125,
+      "gap_at_0p2deg_mm": 0.04017452169448182,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.04017452169448182,
+        "caps": 0.09864230494381061,
+        "wire_envelope": 0.13846417087628748
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_y",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": -0.48828125,
+      "first_contact_deg": -0.4921875,
+      "gap_at_0p2deg_mm": 0.07368489678690177,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.07368489678690177,
+        "caps": 0.09215449952841251,
+        "wire_envelope": 0.1720395139611098
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_y",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": 0.48828125,
+      "first_contact_deg": 0.4921875,
+      "gap_at_0p2deg_mm": 0.08334050314169442,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08334050314169442,
+        "caps": 0.08498461936594269,
+        "wire_envelope": 0.18429253027175682
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_z",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": -0.6953125,
+      "first_contact_deg": -0.69921875,
+      "gap_at_0p2deg_mm": 0.10036545983373134,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.10036545983373134,
+        "caps": 0.10586821196620114,
+        "wire_envelope": 0.1987503405573687
+      }
+    },
+    {
+      "variant": "crown040",
+      "axis": "CAD_z",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.1021901136144966,
+      "last_clear_deg": 0.6953125,
+      "first_contact_deg": 0.69921875,
+      "gap_at_0p2deg_mm": 0.0997095468821463,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.0997095468821463,
+        "caps": 0.10645941094967783,
+        "wire_envelope": 0.19807269808482875
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_x",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": -0.44921875,
+      "first_contact_deg": -0.453125,
+      "gap_at_0p2deg_mm": 0.06295537052948953,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.09471176815596646,
+        "caps": 0.06295537052948953,
+        "wire_envelope": 0.15806051591086134
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_x",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": 0.3515625,
+      "first_contact_deg": 0.35546875,
+      "gap_at_0p2deg_mm": 0.04752436826833842,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.04752436826833842,
+        "caps": 0.10202875469031827,
+        "wire_envelope": 0.13846417087628748
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_y",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": -0.48828125,
+      "first_contact_deg": -0.4921875,
+      "gap_at_0p2deg_mm": 0.08070544338469837,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08070544338469837,
+        "caps": 0.09215449952841251,
+        "wire_envelope": 0.1720395139611098
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_y",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": 0.48828125,
+      "first_contact_deg": 0.4921875,
+      "gap_at_0p2deg_mm": 0.08334050314169442,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.08334050314169442,
+        "caps": 0.08941846404618473,
+        "wire_envelope": 0.18429253027175682
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_z",
+      "sign": -1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": -0.6953125,
+      "first_contact_deg": -0.69921875,
+      "gap_at_0p2deg_mm": 0.10723033843823149,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.10723033843823149,
+        "caps": 0.11064668634648196,
+        "wire_envelope": 0.1987503405573687
+      }
+    },
+    {
+      "variant": "crown060",
+      "axis": "CAD_z",
+      "sign": 1,
+      "gap_at_0deg_mm": 0.10916543553622979,
+      "last_clear_deg": 0.6953125,
+      "first_contact_deg": 0.69921875,
+      "gap_at_0p2deg_mm": 0.10668458969290917,
+      "part_gaps_at_0p2deg_mm": {
+        "guide": 0.10668458969290917,
+        "caps": 0.11111615396598647,
+        "wire_envelope": 0.19807269808482875
+      }
+    }
+  ],
+  "elapsed_s": 20.735475063323975
+}

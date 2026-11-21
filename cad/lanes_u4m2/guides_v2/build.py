@@ -48,6 +48,10 @@ def profiles(station):
     if abs(station)==12 and D.get('socket_flare_slope',0)>0 and D.get('socket_explicit_land_breakpoints',False):
         land=D['socket_land_axial_mm']/2
         zs=np.unique(np.r_[zs,-land,land])
+        if D.get('socket_land_crown_mm',0)>0:
+            # Crowned land: extra sections resolve the quadratic relief inside the land.
+            q=land*np.array([.25,.5,.75])
+            zs=np.unique(np.r_[zs,-q,0.,q])
     reference=sections(body,station)
     stack=[sections(body,station+z) for z in zs]
     out=[]
@@ -89,6 +93,13 @@ def guide(kind,station):
         # relieved rather than assumed to be bonded over the full socket depth.
         if selected and abs(station)==12 and D.get('socket_flare_slope',0):
             gap=gap+D['socket_flare_slope']*np.maximum(abs(p['zs'])-D['socket_land_axial_mm']/2,0)
+            # Optional crown (evening 20 Nov 2026): the land gap grows quadratically from the
+            # bond datum at mid-land to datum+crown at each land edge; the flare continues from
+            # there. Zero crown (default) reproduces V3 and the 0.25 mm candidate exactly.
+            crown=D.get('socket_land_crown_mm',0)
+            if crown:
+                half=D['socket_land_axial_mm']/2
+                gap=gap+crown*(np.minimum(abs(p['zs']),half)/half)**2
         inner=expand(p['bounds'],gap)
         bore=place(loft(inner,p['zs']),angle);cuts.append(bore)
         if not selected:continue

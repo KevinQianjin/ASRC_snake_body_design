@@ -19,7 +19,7 @@ spec = importlib.util.spec_from_file_location('guide_v2_builder', SOURCE / 'buil
 V = importlib.util.module_from_spec(spec); spec.loader.exec_module(V)
 
 
-def build(out, slope, explicit_land=True, land=.5, bond_gap=None):
+def build(out, slope, explicit_land=True, land=.5, bond_gap=None, crown=0.):
     out.mkdir(parents=True, exist_ok=True)
     V.D = {**json.loads((SOURCE/'design.json').read_text()),
         'status': 'socket-relief engineering candidate; not released for manufacture',
@@ -31,6 +31,9 @@ def build(out, slope, explicit_land=True, land=.5, bond_gap=None):
     if bond_gap is not None:
         # Experimental variants only; the published V3 default keeps the V2 0.15 mm datum gap.
         V.D['bond_gap_mm'] = bond_gap
+    if crown:
+        # Experimental crowned-land variants only (evening 20 Nov 2026).
+        V.D['socket_land_crown_mm'] = crown
     V.profiles.cache_clear()
     report = dict(design=V.D, parts={}, all_straight_positions_clear=True,
         source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in
@@ -79,9 +82,11 @@ if __name__=='__main__':
     p.add_argument('--slope',type=float,default=1.5)
     p.add_argument('--land',type=float,default=.5,help='Outer-socket central land, mm (default reproduces V3)')
     p.add_argument('--bond-gap',type=float,help='Outer-socket land gap, mm (default: V2 design value 0.15)')
+    p.add_argument('--crown',type=float,default=0.,help='Outer-socket land crown at each land edge, mm (default 0 reproduces V3)')
     p.add_argument('--legacy-nine-sections',action='store_true',help='Reproduce rejected early variants without explicit land breakpoints')
     a=p.parse_args()
     if not 0<=a.slope<=2: raise ValueError('slope must be between 0 and 2')
     if not 0<a.land<=3.2: raise ValueError('land must be within the plate thickness')
     if a.bond_gap is not None and not 0.05<=a.bond_gap<=0.5: raise ValueError('bond gap must be 0.05-0.5 mm')
-    build(a.out,a.slope,not a.legacy_nine_sections,a.land,a.bond_gap)
+    if not 0<=a.crown<=0.1: raise ValueError('crown must be 0-0.1 mm')
+    build(a.out,a.slope,not a.legacy_nine_sections,a.land,a.bond_gap,a.crown)
