@@ -1,5 +1,6 @@
 """Summarise the 21 November evening M6 full-mission certification (nominal and 0.2 deg tilt)."""
 
+import gzip
 import json
 from pathlib import Path
 
@@ -51,10 +52,10 @@ def nominal():
 def tilt(name):
     out, tables = {}, {}
     for st in (-12, 12):
-        files = sorted((RES / "tilt").glob(f"{name}_z{st}_shard*.json"))
+        files = sorted((RES / "tilt").glob(f"{name}_z{st}_shard*.json*"))
         if not files:
             continue
-        docs = [json.load(open(f)) for f in files]
+        docs = [json.load(gzip.open(f, "rt") if f.suffix == ".gz" else open(f)) for f in files]
         nsh = docs[0]["nshards"]
         rows = [r for d in docs for r in d["rows"]]
         inv = np.asarray(next(d["step_to_shape"] for d in docs if d["step_to_shape"]))

@@ -24,7 +24,21 @@ The uncrowned rerun reproduces the archived Round 2 all-step table **exactly** (
 
 ## Larger tilts (crowned candidate)
 
-LARGER_TILT_PLACEHOLDER
+The same 26-tilt check was repeated for the crowned candidate at 0.25° and 0.30°, again over all 3,405 steps at both stations. It brackets the first-contact tilt across the mission, not only at the governing step.
+
+| Tilt | z = −12 mm: minimum gap (step, axis) | steps < 0.025 mm | contacts | z = +12 mm: minimum gap (step, axis) | steps < 0.025 mm | contacts |
+|---:|---|---:|---:|---|---:|---:|
+| 0.20° | 0.02829 mm (1,709, 165° +) | 0 | 0 | 0.04400 mm (1,709, 165° −) | 0 | 0 |
+| 0.25° | 0.01171 mm (1,709, 165° +) | 463 | 0 | 0.02775 mm (1,709, 165° −) | 0 | 0 |
+| 0.30° | **0** (1,674, 150° +) | 816 | **138** (left yaw out and return, steps 1,674–1,921) | 0.01149 mm (1,709, 165° −) | 804 | 0 |
+
+At z = −12 mm, the 0.30° contacts all occur in the left-yaw excursion and its return, about in-plane axes 150° (124 steps) and 165° (14 steps). This agrees with the 20 November bisection at step 1,710 (first contact 0.289°, axis 165°). Within this rigid model, the mission-wide crowned tolerance is therefore:
+
+- **≤ 0.2° tilt with ≤ 0.028 mm offset at both stations.** This clears the Round 2 0.025 mm + 0.2° probe at every step.
+- **0.25° tilt only with an offset ≤ 0.0117 mm at z = −12 mm.**
+- **First contact between 0.25° and 0.30° at z = −12 mm**, during left yaw.
+
+z = +12 mm stays contact-free at 0.30°. Axes were sampled every 15°; a finer axis spacing could lower these minima slightly ([handoff](HANDOFF.md) item 3).
 
 ## Method
 
@@ -63,6 +77,7 @@ for s in -12 12; do
 done
 python tilt_mission.py --candidate $C/m6_crowned_land_20261120 --name crown060 --station -12 \
     --steps 1709 1710 --out results/tilt/check_crown060_zm12.json
+gzip -9 results/tilt/*_shard*.json   # shards are archived compressed
 python summarize.py && python validate.py
 ```
 

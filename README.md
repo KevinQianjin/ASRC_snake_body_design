@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#20-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#21-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -35,29 +35,37 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="daily-updates"></a>
 
+## 21 November 2026
+
+<a id="21-november-2026--evening-report-full-mission-crowned-m6-certification"></a>
+
+**Evening Report — full-mission certification of the crowned M6 land, nominal and tilted.** The 0.06 mm crowned M6 outer-socket land (20 November) had been screened only on 1,217 low-margin steps, and its tilt tolerance had been checked only at the governing left-yaw steps. This run reused the Round 2 all-step method unchanged: actual M6 body, certified swept crop, exact FCL distances. It checked every archived step of the 500 g mission at both stations (3,405 steps, 11 phases). It also applied 26 rigid ±0.2° tilts about 12 in-plane axes and CAD z at every step. The uncrowned rerun reproduces Round 2 exactly. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_21.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261121/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261121/HANDOFF.md)
+
+| Rigid CAD check over all 3,405 steps, z = −12 / +12 mm | 0.25 mm uncrowned | 0.06 mm crown |
+|---|---:|---:|
+| Nominal minimum gap, contacts | 0.0667 / 0.0824 mm, 0 | **0.0945 / 0.1089 mm, 0** |
+| Minimum gap at 0.2° tilt, worst of 26 tilts | 0.0007 / 0.0172 mm | **0.0283 / 0.0440 mm** |
+| Steps below the 0.025 mm offset probe at 0.2° | 665 / 317 (yaw excursions) | **0 / 0** |
+| Crown at 0.25° / 0.30° tilt (z = −12 mm) | — | 0.0117 mm / **contact at 138 left-yaw steps** |
+
+The crowned land is the only candidate that satisfies the Round 2 assembly probe (0.025 mm offset with 0.2° tilt) over the whole mission. Its first contact lies between 0.25° and 0.30°. These are rigid-body results. Bond compliance, the printed crown and the bonded tilt are unmeasured, so this is not a manufacturing release.
+
+On 21 November the offline [500 g design handover](reports/ASRC-500g-Design-Handover.html) was also published (PR #41). Codex work on an M5 active-reset pin stress screen is on `codex/m5-active-reset-load-export`, not yet merged and without committed results.
+
 ## 20 November 2026
 
 <a id="20-november-2026--evening-report-crowned-m6-bond-land"></a>
 
-**Evening Report — crowned M6 bond land.** The 0.25 mm M6 outer-socket candidate cleared the body over the whole mission, but plate tilt still governed its margin. The bonded land edge sits about 21 mm from the axis, and Round 2 found contact when a 0.025 mm offset was combined with 0.2° tilt. This run kept the 0.25 mm bond datum at mid-land and crowned the 0.5 mm land quadratically to 0.31 mm at its edges. The rope bores, stations, webs, masses (−0.0021 g per station) and solver inputs are unchanged. [Evening Report](reports/daily/Evening_Report_2026_11_20.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261120/README.md) · [Crowned-land CAD](cad/lanes_u4m2/m6_crowned_land_20261120/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261120/HANDOFF.md)
+**Evening Report — crowned M6 bond land.** A 0.06 mm crown on the 0.25 mm M6 outer-socket land raised the smallest first-contact rigid tilt at the governing left-yaw steps from 0.207° to 0.289° (z = −12 mm) and from 0.258° to 0.340° (z = +12 mm). It had zero contacts on 787 + 430 low-margin steps. [Evening Report](reports/daily/Evening_Report_2026_11_20.md) · [Study](simulations/u4m2/lanes_20261113/evening_20261120/README.md) · [Crowned-land CAD](cad/lanes_u4m2/m6_crowned_land_20261120/README.md) · [Handoff](simulations/u4m2/lanes_20261113/evening_20261120/HANDOFF.md)
 
-| Rigid CAD check at the governing left-yaw steps | 0.25 mm candidate | 0.06 mm crown |
-|---|---:|---:|
-| Smallest first-contact tilt, in-plane axes every 15°, z = −12 / +12 mm | 0.207° / 0.258° | **0.289° / 0.340°** |
-| Smallest translation allowance at 0.2° tilt, z = −12 / +12 mm | 0.0013 / 0.0176 mm | **0.0290 / 0.0443 mm** |
-| Mission screen, 787 + 430 low-margin steps, all 11 phases | 0.0667 / 0.0824 mm, 0 contacts | **0.0945 / 0.1089 mm, 0 contacts** |
+The [free-space steering, fracture and service-life study](reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md) found the following on the 8-cell rod:
 
-These are rigid-body results. Bond deformation, as-printed form and bonded tilt are unmeasured, and a 0.06 mm crown is below typical PA12 print resolution.
+- yaw reached ±296° and pitch +215°/−149°;
+- the M5 +12 mm pin crossed a 205 MPa reference yield near −110° of left-out motion;
+- active reset gave 0 tension-floor violations;
+- the reference fatigue amplitude is 5.722 N at one million cycles.
 
-The [free-space steering, fracture and service-life study](reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md) extends the 500 g U4+M2 front beyond its original ±175° yaw and ±90° pitch mission. It keeps the actual guide geometry and the twelve Ø2 mm rope routes. Only the external tank constraint was removed.
-
-| Engineering question | Latest result | Evidence |
-|---|---|---|
-| How far can the head steer and return? | On the 8-cell rod with sampled guide and rope CAD, right/left yaw reached **+296° / -296°** at +20° elevation. The zero-yaw pitch endpoints were **+215° / -149°**, referenced to horizontal. The 16-cell, 0.25 mm fixed-command checks reached +297° / -297° in yaw and +215° / -149° in pitch. | [Directional boundaries](simulations/u4m2/extreme_tests/free_space_20261120/results/strength/limits.json) · [All twelve forces and commands](simulations/u4m2/extreme_tests/free_space_20261120/results/angles/) · [Fine-grid limits](simulations/u4m2/extreme_tests/free_space_20261120/results/mesh/refined_transitions.json) |
-| When can a structural part fail? | The M5 +12 mm pin at the 67.5° rib crossed a 205 MPa reference yield between -109.688° and -110.625° on left-out motion. The installed pin grade and fracture strain remain unmeasured. Trial installed rope capacities and printed-web strain thresholds are mapped to their first sampled crossings. | [Pin and web response](simulations/u4m2/extreme_tests/free_space_20261120/results/strength/pin_area_0.1_fine.json) · [Rope capacity lookup](simulations/u4m2/extreme_tests/free_space_20261120/results/strength/pull_capacity_lookup.csv.gz) |
-| Does normal duty repeat, and how much fatigue resistance is required? | Simply reversing the matched startup gave a second-block minimum of **2.305 N**. Active friction take-up during reset gave **2.901 N** and **0** tension-floor violations. For a design duty of 10,000 blocks, the slope-5 axial-force model requires **5.722 N** alternating amplitude at one million cycles on C_up at the winch end. Actual working life requires matched endurance and wear tests. | [Repeated duty and endurance](simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/life.json) · [Phase loads and sliding travel](simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/phase_exposure.csv.gz) |
-
-Earlier on 20 November, Round 2 verified the 0.25 mm M6 guide candidate over the archived mission, analysed M5 proof loads and U-module load sharing, and compared reversal commands. [Earlier Round 2 report](reports/projects/extreme_tests/Extreme_Simulation_Round_2_2026_11_19.md) · [Methods and grouped evidence](simulations/u4m2/extreme_tests/round2_20261119/README.md)
+[Directional limits](simulations/u4m2/extreme_tests/free_space_20261120/results/strength/limits.json) · [Repeated duty](simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/life.json). Earlier that day, Round 2 verified the uncrowned 0.25 mm M6 candidate over the whole mission. [Round 2 report](reports/projects/extreme_tests/Extreme_Simulation_Round_2_2026_11_19.md)
 
 <a id="next-steps"></a>
 
