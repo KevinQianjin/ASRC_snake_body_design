@@ -62,6 +62,8 @@ def tilt(name):
         complete = len(files) == nsh and len(shapes) == docs[0]["unique_shapes_total"]
         steps = shapes.reindex(inv).reset_index(drop=True)
         steps.insert(0, "step", np.arange(len(inv)))
+        phase = pd.read_csv(RES / f"full/crown060_all_steps_{st:+d}.csv.gz").phase.values
+        steps.insert(1, "phase", phase)
         tables[st] = steps
         tcols = [c for c in shapes.columns if c.startswith(("inplane_", "CAD_z"))]
         worst = steps.loc[steps.min_tilted_gap_mm.idxmin()]
@@ -81,6 +83,7 @@ def tilt(name):
             steps_below_probe_list=below.step.tolist()[:200],
             per_tilt_min_mm={c: float(shapes[c].min()) for c in tcols},
             limiting_part_counts=steps.min_part.value_counts().to_dict(),
+            phase_minima_mm=steps.groupby("phase").min_tilted_gap_mm.min().round(5).to_dict(),
         )
     return out, tables
 
@@ -111,14 +114,15 @@ def figure(nom, tilts):
 def main():
     nsum, ntab = nominal()
     tsum, ttab = {}, {}
-    for name in ("crown060", "g025"):
+    for name in ("crown060", "g025", "crown060_a025", "crown060_a030"):
         s, t = tilt(name)
         if s:
             tsum[name], ttab[name] = s, t
             pd.concat([v.assign(station_mm=k) for k, v in t.items()]).to_csv(
                 RES / f"tilt_steps_{name}.csv.gz", index=False, float_format="%.6g")
     figure(ntab, ttab)
-    summary = dict(nominal=nsum, tilt_0p2deg=tsum, probe_offset_mm=PROBE)
+    summary = dict(nominal=nsum, tilt_0p2deg={k: v for k, v in tsum.items() if "_a0" not in k},
+                   tilt_larger_angles={k: v for k, v in tsum.items() if "_a0" in k}, probe_offset_mm=PROBE)
     (RES / "summary.json").write_text(json.dumps(summary, indent=1, default=str))
     print(json.dumps(summary, indent=1, default=str)[:4000])
 
