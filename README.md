@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#21-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#22-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -35,22 +35,26 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="daily-updates"></a>
 
+## 22 November 2026
+
+<a id="22-november-2026--evening-report-crowned-m6-bond-layer"></a>
+
+**Evening Report — crowned M6 bond layer: tractions, witness motion and bond motion with 0.2° tilt.** The 0.06 mm crowned M6 land (0.25 mm at mid-land, 0.31 mm at the edges) was modelled with a per-point bond thickness in the Round 2 bonded-land structure, at assumed adhesive moduli of 500 and 1,500 MPa. The guide motion relative to its witness web was then combined with 26 rigid ±0.2° tilts in an exact CAD clearance check at the governing steps 1,709, 1,710 and 1,885. The uncrowned two-point case reproduces Round 2 exactly. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_22.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261122/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261122/HANDOFF.md)
+
+| Result (z = −12 / +12 mm) | 0.25 mm uncrowned | 0.06 mm crown |
+|---|---:|---:|
+| Exact gap, ideal position + 0.2° tilt (21 Nov) | 0.0007 / 0.0172 mm | 0.0283 / 0.0440 mm |
+| Exact gap, **bond motion + 0.2° tilt**, worst of 3 models × 2 moduli × 3 steps | 0.0007 / 0.0155 mm | **0.0284 / 0.0424 mm** |
+| Guide motion relative to witness web; guide-to-web rotation | 0.0013–0.0028 mm; ≤ 0.063° | 0.0013–0.0029 mm; ≤ 0.067° |
+| Mission peak axial-shear traction, G = 500 MPa: Round 2 rod map (8-point) / load-driven `rigidland` | 103.6 / 3.4 MPa | 84.9 / 3.7 MPa |
+
+The modelled bond motion does not consume the crowned land's 0.2° tilt allowance. The archived Round 2 bond traction (63.96 MPa) turned out to be about 97% imposed kinematics: the rod map forces about 18% strain into the solid PA12 land, and the 2-point sample is not converged. Transmitted load alone gives 2–4 MPa. Which web strain is physical now decides the bond demand, and the next step is a local solid rib model plus an adhesive coupon. These are linear-trial and rigid-CAD results, and the adhesive is unmeasured.
+
 ## 21 November 2026
 
 <a id="21-november-2026--evening-report-full-mission-crowned-m6-certification"></a>
 
-**Evening Report — full-mission certification of the crowned M6 land, nominal and tilted.** The 0.06 mm crowned M6 outer-socket land (20 November) had been screened only on 1,217 low-margin steps, and its tilt tolerance had been checked only at the governing left-yaw steps. This run reused the Round 2 all-step method unchanged: actual M6 body, certified swept crop, exact FCL distances. It checked every archived step of the 500 g mission at both stations (3,405 steps, 11 phases). It also applied 26 rigid ±0.2° tilts about 12 in-plane axes and CAD z at every step. The uncrowned rerun reproduces Round 2 exactly. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_21.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261121/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261121/HANDOFF.md)
-
-| Rigid CAD check over all 3,405 steps, z = −12 / +12 mm | 0.25 mm uncrowned | 0.06 mm crown |
-|---|---:|---:|
-| Nominal minimum gap, contacts | 0.0667 / 0.0824 mm, 0 | **0.0945 / 0.1089 mm, 0** |
-| Minimum gap at 0.2° tilt, worst of 26 tilts | 0.0007 / 0.0172 mm | **0.0283 / 0.0440 mm** |
-| Steps below the 0.025 mm offset probe at 0.2° | 665 / 317 (yaw excursions) | **0 / 0** |
-| Crown at 0.25° / 0.30° tilt (z = −12 mm) | — | 0.0117 mm / **contact at 138 left-yaw steps** |
-
-The crowned land is the only candidate that satisfies the Round 2 assembly probe (0.025 mm offset with 0.2° tilt) over the whole mission. Its first contact lies between 0.25° and 0.30°. These are rigid-body results. Bond compliance, the printed crown and the bonded tilt are unmeasured, so this is not a manufacturing release.
-
-On 21 November the offline [500 g design handover](reports/ASRC-500g-Design-Handover.html) was also published (PR #41). Codex work on an M5 active-reset pin stress screen is on `codex/m5-active-reset-load-export`, not yet merged and without committed results.
+**Evening Report — full-mission certification of the crowned M6 land.** Over all 3,405 steps, the crowned land had no contacts (minimum gaps 0.0945 / 0.1089 mm). It kept 0.0283 / 0.0440 mm at the worst of 26 rigid 0.2° tilts, with no step below the 0.025 mm probe offset. The uncrowned land fell below the offset at 665 / 317 yaw steps, and the crowned land contacts at 0.30°. The offline [500 g design handover](reports/ASRC-500g-Design-Handover.html) was also published (PR #41). [Evening Report](reports/daily/Evening_Report_2026_11_21.md) · [Study](simulations/u4m2/lanes_20261113/evening_20261121/README.md) · [Handoff](simulations/u4m2/lanes_20261113/evening_20261121/HANDOFF.md)
 
 ## 20 November 2026
 
