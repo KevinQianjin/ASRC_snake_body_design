@@ -1,0 +1,57 @@
+{
+ "all_ok": true,
+ "checks": {
+  "round2_reproduced_nh2_uncrowned_rod": {
+   "ok": true,
+   "detail": "max abs difference 3.75e-13"
+  },
+  "case_coverage": {
+   "ok": true,
+   "detail": "216 rows = 3 steps x 2 stations x nh(2,4,8) x crown(0,0.06) x G(500,1500) x mismatch(rod,midplane,rigidland)"
+  },
+  "land_wrench_closure": {
+   "ok": true,
+   "detail": "max 2.80e-09"
+  },
+  "crowned_mean_layer": {
+   "ok": true,
+   "detail": "area-mean layer 0.27 mm = 0.25 + 0.06/3 for nh >= 4"
+  },
+  "probe_z-12_ideal_matches_21nov_tilt": {
+   "ok": true,
+   "detail": "2 reference points, max diff 2.7065047828560285e-06"
+  },
+  "probe_z-12_coverage": {
+   "ok": true,
+   "detail": "42 rows (2 variants x 3 steps x (ideal + 3 models x 2 G))"
+  },
+  "probe_z+12_ideal_matches_21nov_tilt": {
+   "ok": true,
+   "detail": "2 reference points, max diff 3.2453261462755956e-06"
+  },
+  "probe_z+12_coverage": {
+   "ok": true,
+   "detail": "42 rows (2 variants x 3 steps x (ideal + 3 models x 2 G))"
+  },
+  "duty_rigidland_complete": {
+   "ok": true,
+   "detail": "8 runs"
+  },
+  "duty_complete": {
+   "ok": true,
+   "detail": "16 runs"
+  },
+  "duty_round2_axial_peak": {
+   "ok": true,
+   "detail": "63.958695 vs archived 63.958695"
+  },
+  "crowned_cad_unchanged_since_20nov": {
+   "ok": true,
+   "detail": "unmatched: []"
+  },
+  "relative_links": {
+   "ok": true,
+   "detail": "0 broken: []"
+  }
+ }
+}
