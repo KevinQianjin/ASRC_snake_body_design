@@ -30,7 +30,8 @@ It is simulation only. No CAD, guide position, rope bore, station, mass or solve
    - The strut is an exact prism (a convex 10-vertex section translated along its axis), so a structured graded mesher ([`prism_mesh`](coupled_land.py)) extrudes a Triangle section mesh through axial layers that are 0.05–0.1 mm thick in the land band.
 4. **[`cell_moment.py`](cell_moment.py): a boundary-condition consistency check.** It drives all eight struts of a station the same way and compares the bending moment they carry with the rod model's own cell moment.
 5. **[`socket_distortion.py`](socket_distortion.py): the rod map's non-rigid distortion of the arm walls inside the guide socket** (|z − station| ≤ 1.62 mm), measured relative to the land's rigid motion.
-6. **[`validate.py`](validate.py)** writes [`results/validation.json`](results/validation.json).
+6. **[`rigid_arm_probe.py`](rigid_arm_probe.py): the opposite clearance bracket.** It uses an undeformed body around the guide, the same three parts, the same 26 tilts of ±0.2°, the same 0.5 mm axial refinement and exact FCL distance as the archived probes.
+7. **[`validate.py`](validate.py)** writes [`results/validation.json`](results/validation.json).
 
 ## Checks
 
@@ -99,6 +100,23 @@ Deviation of the rod-mapped arm walls from the land's least-squares rigid motion
 - The non-rigid distortion that the rod map writes into that arm is about 2× the margin inside the land and about 10× at the socket ends.
 - A solid PA12 arm cannot strain 23% over 1.6 mm. The clearance margin is therefore model-dependent at its own scale. The sign of the error is not known until the rib lattice is solved.
 
+### 5. Clearance bracket: undeformed body against rod-mapped body ([`rigid_arm_probe.json`](results/rigid_arm_probe.json))
+
+Worst of 26 rigid tilts of ±0.2° about the station origin, exact CAD gap:
+
+| Station | Land | Undeformed body around the guide (tonight) | Rod-mapped body, steps 1,709–1,885 (21/22 Nov, ideal position) |
+|---|---|---:|---:|
+| z = −12 mm | 0.25 mm uncrowned | 0.0789 mm (75° −) | 0.0007 mm (165° +) |
+| | 0.06 mm crown | 0.0804 mm (75° −) | 0.0283 mm (165° +) |
+| z = +12 mm | 0.25 mm uncrowned | 0.0789 mm (75° −) | 0.0172 mm (165° −) |
+| | 0.06 mm crown | 0.0804 mm (75° −) | 0.0440 mm (165° −) |
+
+- With no tilt, the undeformed gap is 0.1406 mm at both stations, governed by the guide (caps 0.1406 mm, wire envelope 0.263 mm).
+- With an undeformed body, both lands keep about 0.08 mm at 0.2°, and the crown changes that by only 0.0015 mm.
+- With the rod-mapped body, the uncrowned land nearly touches, and the crown recovers 0.027 mm.
+- **The crown's benefit, and the failure of the uncrowned land, come from the rod map's distortion of the arms, not from the as-designed geometry.**
+- The real arm deformation is not known. It need not lie between these two cases. Only a solid rib-lattice solution (or a bench measurement) can place it.
+
 ## Interpretation
 
 - **The 22 November bracket is not resolved.** The bond demand is still between the load-driven `rigidland` value (2–4 MPa) and the kinematic values (tens to hundreds of MPa).
@@ -108,7 +126,7 @@ Deviation of the rod-mapped arm walls from the land's least-squares rigid motion
     - D0/D1: z ≤ −45 / ≥ 45 mm, plus the core r < 3.3 mm beyond |z| > 30 mm;
     - hub rings: r < 8.6 mm at z ∈ [−20, −16.95], [−6.5, −3.45], [3.45, 6.5] and [16.95, 20] mm.
   - That model must be validated against the plate-model body EI before its tractions are used.
-- **New risk.** The crowned-land clearance certification depends on the rod map's distortion of the arm, at a scale larger than the margin. Until a solid rib solution exists, the 0.0284 / 0.0424 mm margins are not model-independent.
+- **New risk.** The crowned-land clearance certification depends on the rod map's distortion of the arm, at a scale larger than the margin. With an undeformed body both lands keep about 0.08 mm at 0.2° tilt; with the rod map they keep 0.0007–0.044 mm. Until a solid rib solution exists, the 0.0284 / 0.0424 mm margins are not model-independent.
 
 ## Limits
 
@@ -126,6 +144,7 @@ python solid_bond.py convergence --h 0.8 0.6 0.45      # free-strut field, 3 mes
 python solid_bond.py cases --h 0.6 --nh 8              # pad model with rod / rigidland / solid, ~2 min
 python cell_moment.py                                  # BC consistency, ~1 min
 python socket_distortion.py                            # rod-map distortion of the arm, ~1 min
+python rigid_arm_probe.py                              # undeformed-body clearance bracket, ~1 min
 python coupled_land.py --mesh 0.5:0.1 --stations -12 --steps 1709 --crown 0.06 --G 500 \
        --out results/overconstrained_rigid_ring        # one coupled case, ~6 min (archived file renamed)
 python validate.py

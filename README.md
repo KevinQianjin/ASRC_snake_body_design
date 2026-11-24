@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#22-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#23-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -35,20 +35,30 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="daily-updates"></a>
 
+## 23 November 2026
+
+<a id="23-november-2026--evening-report-solid-m6-strut-model"></a>
+
+**Evening Report — local solid model of the bonded M6 struts: built, verified and shown to be over-constrained.** A quadratic-tetrahedron solver was built for the actual CAD struts that carry the crowned M6 lands. It includes a structured graded mesher and a coupled station model: four solid struts, a distributed crowned adhesive layer on the real inclined walls, and one rigid guide carrying the station wrench. The aim was to decide whether the bond demand is load-driven (`rigidland`, 2–4 MPa) or kinematic (`rod`, about 85–300 MPa). No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_23.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261123/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261123/HANDOFF.md)
+
+| Check or result | Value |
+|---|---:|
+| Patch test (prism / TetGen mesh); regression against 22 Nov `rod`/`rigidland` (48 rows) | 3·10⁻¹² / 3·10⁻⁸; 0.0 MPa difference |
+| Free-strut field, h 0.6 → 0.45 mm; coupled-station wrench closure | 0.14% change; 1.2·10⁻¹¹ |
+| **Moment carried by rod-map-driven solid struts ÷ rod model cell moment** | **30–35 (consistency check failed)** |
+| Coupled station, crowned, G = 500 MPa, step 1,709 (over-constrained, not a design value) | 126 MPa peak / 44 MPa mean axial shear |
+| Rod-map distortion of the arm walls about the land's rigid motion: in the land / at the socket ends | 0.05 mm / 0.30–0.37 mm |
+| Worst gap at 0.2° tilt, uncrowned / crowned: undeformed body (new) against rod-mapped body (21/22 Nov), z = −12 mm | 0.079 / 0.080 mm vs 0.0007 / 0.028 mm |
+
+The bonded struts are arms of a compliant zig-zag rib. They run from the hub disk to a knee at r ≈ 30.6 mm and into further members. Driving their cut faces with the rod map therefore over-constrains them, and their tractions are not physical. The 2–300 MPa bond bracket stays open. It is now settled, though, that the `rod` field is not a physical upper bound. The crowned land's certified 0.028 / 0.042 mm clearance margins were computed against a rod-mapped arm that the map itself distorts by more than the margin. With an undeformed body, both lands keep about 0.08 mm at 0.2° tilt, so the crown's benefit is a rod-map effect. The next step is a whole-rib solid model between the Round 2 masters, validated against the plate-model body EI before its tractions are used. These are linear simulation results only, and the adhesive is unmeasured.
+
 ## 22 November 2026
 
 <a id="22-november-2026--evening-report-crowned-m6-bond-layer"></a>
 
 **Evening Report — crowned M6 bond layer: tractions, witness motion and bond motion with 0.2° tilt.** The 0.06 mm crowned M6 land (0.25 mm at mid-land, 0.31 mm at the edges) was modelled with a per-point bond thickness in the Round 2 bonded-land structure, at assumed adhesive moduli of 500 and 1,500 MPa. The guide motion relative to its witness web was then combined with 26 rigid ±0.2° tilts in an exact CAD clearance check at the governing steps 1,709, 1,710 and 1,885. The uncrowned two-point case reproduces Round 2 exactly. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_22.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261122/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261122/HANDOFF.md)
 
-| Result (z = −12 / +12 mm) | 0.25 mm uncrowned | 0.06 mm crown |
-|---|---:|---:|
-| Exact gap, ideal position + 0.2° tilt (21 Nov) | 0.0007 / 0.0172 mm | 0.0283 / 0.0440 mm |
-| Exact gap, **bond motion + 0.2° tilt**, worst of 3 models × 2 moduli × 3 steps | 0.0007 / 0.0155 mm | **0.0284 / 0.0424 mm** |
-| Guide motion relative to witness web; guide-to-web rotation | 0.0013–0.0028 mm; ≤ 0.063° | 0.0013–0.0029 mm; ≤ 0.067° |
-| Mission peak axial-shear traction, G = 500 MPa: Round 2 rod map (8-point) / load-driven `rigidland` | 103.6 / 3.4 MPa | 84.9 / 3.7 MPa |
-
-The modelled bond motion does not consume the crowned land's 0.2° tilt allowance. The archived Round 2 bond traction (63.96 MPa) turned out to be about 97% imposed kinematics: the rod map forces about 18% strain into the solid PA12 land, and the 2-point sample is not converged. Transmitted load alone gives 2–4 MPa. Which web strain is physical now decides the bond demand, and the next step is a local solid rib model plus an adhesive coupon. These are linear-trial and rigid-CAD results, and the adhesive is unmeasured.
+Bond motion plus 0.2° tilt left the crowned land 0.0284 / 0.0424 mm (z = −12 / +12 mm). The archived 63.96 MPa Round 2 traction turned out to be about 97% imposed rod kinematics; transmitted load alone gives 2–4 MPa.
 
 ## 21 November 2026
 
