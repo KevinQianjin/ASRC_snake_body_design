@@ -1,0 +1,34 @@
+{
+ "patch_test": {
+  "prism_rel_err": 2.8799258303033044e-12,
+  "tetgen_rel_err": 3.409172954227774e-08,
+  "passed": true
+ },
+ "regression_22nov": {
+  "rows": 48,
+  "max_abs_diff_MPa": 0.0,
+  "passed": true
+ },
+ "free_strut_convergence": {
+  "max_rel_change_h06_vs_h045": 0.0013623076426178774,
+  "max_rel_change_short_cut": 0.026148125667233242,
+  "passed": true
+ },
+ "coupled_wrench_closure": {
+  "max": 1.1685643123191618e-11,
+  "passed": true
+ },
+ "bc_consistency_cell_moment": {
+  "solid_over_rod_moment": [
+   33.5758054629808,
+   35.383152261849524,
+   30.402029304968178,
+   31.150613452467166,
+   30.39670990460661,
+   31.15665944789291
+  ],
+  "min_ratio": 30.39670990460661,
+  "passed": false,
+  "note": "Expected to fail: rigid-ring rod-map driving over-constrains the struts."
+ }
+}
