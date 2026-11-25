@@ -18,6 +18,12 @@ Wire EDM is the most direct geometry route because the solid is a constant-width
 
 Do not call generic WEDM output “post-CAM” for the target machine and do not run it on the machine. A safe deliverable that can be produced without machine-specific data is the checked DXF + geometry audit + CAM setup sheet/process plan. The file currently needed to finish actual post-CAM is the Robofil-specific process/post definition from that exact installation (including required technology and M-code conventions), followed by simulation and a supervised dry-run.
 
+## Target software identified
+
+Camtek's official PEPS Wire EDM product page explicitly lists AC Robofil and AC Millennium technology databases/post support, plus profile simulation, offsetting, automatic wire threading/start-hole generation, slug handling, and setup-sheet/NC output. Its training outline covers the required workflow from DXF/STEP import through billet/technology/strategy/post/simulation. PEPS is the most relevant software route discovered for making the actual machine file. [Camtek PEPS Wire EDM](https://www.camtek.de/en/wire-edm) · [PEPS Wire EDM training outline](https://www.camtek.de/assets/template/Medien/Dateien/PEPS/Schulungen/PEPS_Schulung_Wire_EDM.pdf)
+
+The official trial is 90 days, but requires a contact-form request and hardware-context/license activation; the published system requirements specify Windows 10 64-bit minimum and recommend Windows 11. This cloud environment is Linux, has no Wine or PEPS installation, and cannot run the vendor software. Trial request/activation details are on the [official trial page](https://www.camtek.de/en/peps/peps-testversion.html); system requirements are on the [official specifications page](https://www.camtek.de/en/peps/peps-technical-specifications.html). No user contact data or hardware license request was transmitted.
+
 ## Separate drawing mismatch
 
 The STEP profile has 5 mm maximum profile dimension; project `spring_strip.json` reports end sections around 6.33 mm. The DXF follows the STEP. Resolve whether these represent the same model revision and axis convention before stock purchase or any CAM setup.
