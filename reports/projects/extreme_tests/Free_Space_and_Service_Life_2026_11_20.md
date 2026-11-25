@@ -165,6 +165,27 @@ At the governing C_up winch measurement point the full two-block force history s
 
 The structural channels use the reference rod geometry with a retraced reset. The M5 kinematic gauge across a hole has no coupon-equivalent fatigue amplitude. Real material curves at the recorded means, dwell and operating frequency are unavailable. Calendar hours and a rated replacement interval therefore remain open. [Full rainflow ranges and signed means](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/force_spectra.csv.gz) · [Endurance demand, all channels](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/endurance_channels.csv.gz) · [Phase allocation of range exposure](../../../simulations/u4m2/extreme_tests/free_space_20261120/results/fatigue/phase_range_dose.csv.gz)
 
+## Component demand and threshold sensitivity sweep (25 November 2026)
+
+The reproducible [`design_limit_sweep.py`](../../../simulations/u4m2/extreme_tests/design_limit_sweep.py) combines saved demands from the Round 2 and free-space studies. Its component table retains eight demand channels across four first-order load factors. The following values show the nominal sampled demand and the resistance or strain level that would be needed for simple 1.5× and 2× demand ratios:
+
+| Component/channel | Nominal sampled demand | 1.5× target | 2× target |
+|---|---:|---:|---:|
+| Installed rope plus termination | 25.93 N | 38.89 N | 51.85 N |
+| M6 adhesive land axial load | 3.04 N | 4.56 N | 6.07 N |
+| U blade tab load | 213.62 N | 320.42 N | 427.23 N |
+| U NiTi blade strain | 0.981% | 1.472% | 1.962% |
+| M5 supported pin / relieved PA12 coupon strain | 0.416% | 0.624% | 0.832% |
+| M5 supported pin elastic bending stress | 372.61 MPa | 558.91 MPa | 745.22 MPa |
+| M5 remote PA12 web strain | 8.552% | 12.828% | 17.104% |
+| M6 adhesive pad elastic stress | 63.96 MPa | 95.94 MPa | 127.92 MPa |
+
+These are demand targets and first-order sensitivity values, not measured component resistance. Scaling is especially limited for local contact, yielding, PA12 damage, adhesive debond, buckling and any NiTi transformation or fatigue response. The M5 372.61 MPa value is the Round 2 normal-duty demand channel. The fine-mesh free-space local pin calculation is a separate model; it reaches 382.14 MPa at −175° on the left-out branch. The latter has a sampled 205 MPa trial-yield crossing between −109.688° and −110.625°, but neither value predicts fracture or installed pin life.
+
+The PA12 web thresholds are exploratory strain criteria on the eight-rib shell. The fine local model first reaches the trial 2% criterion between 0° and −30° yaw, 4% between −60° and −90°, 6% between −112.5° and −120°, and 8% between −120° and −150°. The hotspot moves between ribs; print direction, conditioning and fracture law are uncalibrated. Rope-capacity lookup angles likewise assume trial installed rupture/pullout capacities, not measured capacities. The fatigue table has 46 channels and no calibrated endurance curve. The conditional 3, 5 and 8 N examples in the generated life-sensitivity table are one-channel Basquin illustrations and must not be read as device service life.
+
+Download the generated [`component demand table`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/component_stress_sweep.csv), [`pin-yield sensitivity`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/pin_yield_sensitivity.csv), [`web-strain sensitivity`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/web_strain_sensitivity.csv), [`rope capacity sensitivity`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/rope_capacity_sensitivity.csv), [`fatigue demand table`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/fatigue_demand.csv), and [`conditional life sensitivity`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/conditional_life_sensitivity.csv). The [`summary JSON`](../../../simulations/u4m2/extreme_tests/design_limit_sweep_20261122/summary.json) records model coverage gaps and the explicit absence of measured resistance/life data.
+
 ## Measurements that would settle the design limits
 
 1. Measure the installed distal C exit and guide motion at the last passing and first rejected steering commands. Log head orientation, all twelve winch strokes and simultaneous proximal and distal forces on the affected routes. Repeat after changing direction. The guide samples assume nominal alignment and the real sensor envelope still needs registration.
