@@ -1,0 +1,6 @@
+parsing switches
+success
+mesh a=0.3: 327949 tets, 1792176 dofs, checks {'rigid_mode_force_rel': 1.135462198419035e-14, 'uniform_strain_energy_rel_err': 3.031624777813563e-16, 'mesh_volume_mm3': 10487.163728039159, 'cad_volume_mm3': np.float64(10487.160367025253), 'volume_rel_err': np.float64(3.204884628133775e-07)}
+  solid_rings        EIxx     40367 EIyy     40368 GJ     39853 EA       151 EI/plate 0.864 EI/rod 0.624 GJ/plate 0.920 solve 21s resid 1.5e-09
+  rigid_rings        EIxx     43485 EIyy     43481 GJ     45368 EA       167 EI/plate 0.931 EI/rod 0.672 GJ/plate 1.048 solve 18s resid 3.5e-08
+  rigid_rings_lands  EIxx     44107 EIyy     44098 GJ     46450 EA       167 EI/plate 0.944 EI/rod 0.681 GJ/plate 1.073 solve 18s resid 1.5e-08
