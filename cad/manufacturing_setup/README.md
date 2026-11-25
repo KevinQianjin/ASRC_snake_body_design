@@ -23,3 +23,5 @@ After removing the spring's 45° diagonal orientation, three sections across the
 ## Important limits
 
 No file specifies NiTi grade, transformation state, stock lot, cut allowance, tolerances, surface finish, datum, workholding, wire/cutter compensation, entry strategy, machine CAM setup, or postprocessor. The DXF is a sampled polyline approximation of the STEP section (147 vertices; +0.055286 mm² area difference, about +0.0501%). The STEP remains the exact geometry master. The provided files are not machine-ready code and do not validate manufacturability, superelastic response, or fatigue life.
+
+For the candidate Robofil wire-EDM route, the most directly matched CAM product found is Camtek PEPS Wire EDM, which lists AC Robofil/AC Millennium technology and post support. Its 90-day trial requires vendor registration and a hardware-context license activation, and the current product requires Windows 10/11; this cloud workspace is Linux. See `robofil_profile_cam_job_sheet.md` for the source links and setup sequence. PEPS does not supply qualified NiTi process settings by itself; those and the STEP-vs-section-table mismatch remain unresolved.
