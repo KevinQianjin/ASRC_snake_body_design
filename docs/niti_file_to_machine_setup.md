@@ -12,7 +12,7 @@ This is a self-service file-preparation guide for the U-module NiTi leaves. It p
 
 The STEP is the source of truth for the geometry. A new section check shows leaf 01 is a constant-width profile: after a 45° reorientation, three cross-sections across the width match at 6.000 mm width, 94 × 5 mm profile envelope, and 110.343785 mm² area. The STEP solid volume divided by width matches that area. The previous blanket warning that a 2D profile cannot describe the ends was incorrect for this leaf orientation. The extracted [`leaf 01 DXF`](../cad/manufacturing_setup/U_leaf_spring_01_profile.dxf) captures the variable profile through the 6 mm blank width, with orientation and approximation limits described in [`DXF notes`](../cad/manufacturing_setup/profile_dxf_notes.md). This geometric fact does not establish that a specific process can safely cut the material.
 
-There is a project-data mismatch to resolve: this STEP has a 5 mm maximum section, while `spring_strip.json` reports about 6.33 mm at the ends. This DXF follows the STEP. Do not machine until you have established that the STEP is the intended design revision.
+Clarify the section-table axes before using the table as a stock specification. The oriented STEP end section is 6 × 5 mm with 30 mm² area. `spring_strip.json` lists 7.05 × 6.33 mm end extents but also area 30 mm², so those extents cannot be interpreted as a rectangular section width/thickness pair. This is not evidence of a different revision. The DXF follows the STEP geometry.
 
 ## The pre-CAM handoff is already prepared
 
@@ -42,7 +42,7 @@ Use the isolated native STEP, drawing, stock dimensions, datum/orientation sketc
 
 ## Before making a real part
 
-- Resolve what the 6.33 mm ends represent and whether the spring is cut from formed stock, machined from thicker stock, or made by another approved route. Confirm the section dimensions in the native solid; the listed sections are sparse samples, not a complete thickness map.
+- Confirm the axis definitions behind the `spring_strip.json` end extents. They are sparse projected dimensions, not a complete stock/thickness specification. The STEP section and its area check are internally consistent in the oriented profile frame.
 - Make a representative coupon with the same material lot, thickness, process, surface finish and transitions. Record measured dimensions and inspect edge defects under magnification.
 - Test spring force/recovery and cycling in a guarded fixture before making all 16 leaves. File preparation and CAD checks cannot establish fatigue life or material condition.
 - Keep source STEP, DXF, PDF drawing, CAM project, posted file, setup sheet, and coupon results together under one revision. Label the NC file with the exact machine/controller and postprocessor version.
@@ -59,4 +59,4 @@ Use the isolated native STEP, drawing, stock dimensions, datum/orientation sketc
 | Posted NC/controller file | Machine code | Only after selecting and validating the exact controller/postprocessor |
 | Coupon inspection/cycle record | Evidence of process suitability | After a test specimen is made |
 
-The concrete geometry preparation is done: isolated leaf STEP exports, the checked candidate DXF, geometry audit, and Robofil setup sheet are ready. The remaining CAM needs a Windows PEPS installation/license, the exact PolyU Robofil control/post configuration, a qualified NiTi technology table for the actual wire/stock, a resolved STEP revision, and a complete datum/fixture/start-hole/cut sequence. Those are concrete missing CAM inputs; a generic G-code file would be an unsafe substitute.
+The concrete geometry preparation is done: isolated leaf STEP exports, the checked candidate DXF, geometry audit, and Robofil setup sheet are ready. The remaining CAM needs a Windows PEPS installation/license, the exact PolyU Robofil control/post configuration, a qualified NiTi technology table for the actual wire/stock, clarified section-table axes, and a complete datum/fixture/start-hole/cut sequence. Those are concrete missing CAM inputs; a generic G-code file would be an unsafe substitute.
