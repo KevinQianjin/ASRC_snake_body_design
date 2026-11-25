@@ -30,6 +30,8 @@ The STEP and DXF do not contain these requirements.
 
 ## 4. Convert the DXF into the machine's required input
 
+Use `robofil_profile_cam_job_sheet.md` as the geometry-specific setup record for the candidate Robofil wire-EDM route. It records the derived profile-plane axes, 94 × 5 mm contour bounds, 6 mm orthogonal stock width, zero nominal taper, and the CAM values that still require machine/material data.
+
 1. Open `U_leaf_spring_01_profile.dxf` in the CAD/CAM software for the selected process. Confirm drawing units are millimetres and the measured bounding box is 94 × 5 mm.
 2. If using wire EDM, create a process CAM job for the exact machine/controller. Define blank thickness/width as 6 mm along the documented width direction, workholding, profile datum, start hole or entry method, lead-ins, rough/trim passes, wire compensation, and cut sequence. These must come from the machine documentation and the chosen material/process limits; they are not encoded in DXF.
 3. Simulate the full cut and inspect the resulting profile, side compensation, entry/exit, scrap behavior, stock retention, and machine travel. Post only with the exact supported postprocessor.
