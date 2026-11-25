@@ -24,9 +24,9 @@ Camtek's official PEPS Wire EDM product page explicitly lists AC Robofil and AC 
 
 The official trial is 90 days, but requires a contact-form request and hardware-context/license activation; the published system requirements specify Windows 10 64-bit minimum and recommend Windows 11. This cloud environment is Linux, has no Wine or PEPS installation, and cannot run the vendor software. Trial request/activation details are on the [official trial page](https://www.camtek.de/en/peps/peps-testversion.html); system requirements are on the [official specifications page](https://www.camtek.de/en/peps/peps-technical-specifications.html). No user contact data or hardware license request was transmitted.
 
-## Separate drawing mismatch
+## Section-table axis interpretation
 
-The STEP profile has 5 mm maximum profile dimension; project `spring_strip.json` reports end sections around 6.33 mm. The DXF follows the STEP. Resolve whether these represent the same model revision and axis convention before stock purchase or any CAM setup.
+In the oriented STEP frame, the end section is 6 × 5 mm with 30 mm² area. `spring_strip.json` lists 7.05 × 6.33 mm end extents but also reports area 30 mm². The extents cannot both be orthogonal rectangular section dimensions; this is an axis/projection or extent-interpretation issue, not evidence of a different model revision. Use the STEP and its section-area check as geometry, but do not interpret the JSON extents as stock width/thickness until their axes are understood.
 
 ## References
 
