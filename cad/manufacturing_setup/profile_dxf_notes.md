@@ -7,7 +7,7 @@
 - DXF X = oriented leaf length coordinate + 47 mm.
 - DXF Y = oriented section thickness coordinate + 10 mm.
 - The stock width direction is orthogonal to the profile plane and measures 6.000000 mm in this solid.
-- Thus the DXF coordinates are translated to start at (0,0); no scale factor is applied. The extracted STEP profile has a 5 mm maximum section dimension, while the separate `spring_strip.json` project sample reports end sections around 6.33 mm. Resolve that revision/axis discrepancy before ordering stock; the DXF traces the STEP, not the JSON table.
+- Thus the DXF coordinates are translated to start at (0,0); no scale factor is applied. The STEP end section in the intended oriented frame is 6 × 5 mm with area 30 mm². `spring_strip.json` lists end extents 7.05 × 6.33 mm but also area 30 mm²; those two listed extents are not a rectangular material section because their product is larger than the section area. Treat them as coordinate-frame/projected extents until their axis definition is verified. This is not evidence of a different revision. The DXF traces the STEP in the stated oriented frame.
 
 The STEP profile section is one closed wire. Three sections across the width have matching area/perimeter within the CAD kernel's precision. The section area is 110.343785 mm² and solid volume is 662.062712 mm³; volume divided by the 6 mm width is 110.343785 mm². The DXF polyline is a tessellated approximation of the STEP section: 147 vertices and polygon area 110.399071 mm², a +0.055286 mm² (+0.0501%) difference from the exact section. Curved details are approximated, so do not silently substitute it where exact arc/radius control is required; use STEP or a drawing with defined radii in that case.
 
