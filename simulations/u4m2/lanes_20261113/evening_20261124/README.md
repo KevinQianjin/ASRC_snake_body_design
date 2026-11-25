@@ -13,7 +13,7 @@ Simulation only. No CAD, guide position, rope bore, station, mass or solver inpu
 3. **Bond demand is load-level, not kinematic.** With the rod's ~47° end-to-end rotation at step 1,709/1,885 imposed only on the end masters and both guides bonded through the distributed crowned layer on the real land walls, the area-mean axial shear on any land is **1.0–3.5 MPa** and the land-edge peak is **3.6–16.8 MPa** (G = 500–1,500 MPa). This is the `rigidland`/`midplane` regime of 22 November (3.4–4.6 MPa peaks at nh = 8), and 6–40× below the `rod` model's 103–306 MPa. Peak normal tractions are 7–36 MPa and are edge-concentrated (mesh-sensitive by ±15%).
 4. **The rod map overstated the arm distortion.** The solid arm walls deform non-rigidly by **0.001–0.006 mm inside the land** and **0.016–0.064 mm at the ±1.62 mm socket ends** (rod map: 0.05 mm / 0.30–0.37 mm). The guide rotates 0.01–0.06° relative to its land.
 5. **Crowned and uncrowned lands both clear 0.2° tilt against the solid arm.** Minimum gaps over the 26 ±0.2° tilts: **0.0742–0.0763 mm (uncrowned)** and **0.0785–0.0794 mm (crowned)**, against 0.0789 / 0.0804 mm for an undeformed body and 0.0007–0.044 mm for the rod-mapped body. The crown's benefit is about 0.003–0.004 mm here; it is no longer needed for the 0.025 mm probe offset at these steps.
-6. **Validity limit (FAIL, kept visible).** The linear model imposes up to 0.85 rad of linearised rotation, and the peak body strain is 3.7% in the hub/arm region (2.4% of elements above 2%); the land bands stay below 0.7%. A geometric-nonlinearity check of the end-rotation case is in [§ 6](#6-geometric-nonlinearity-check).
+6. **Validity limit (FAIL, kept visible).** The linear model imposes up to 0.85 rad of linearised rotation, and the peak body strain is 3.7% in the hub/arm region (2.4% of elements above 2%); the land bands stay below 0.7%. The total-Lagrangian check ([§ 6](#6-geometric-nonlinearity-check)) changes the end moment by 0.9% and the peak strain by 1.1%. The linear results therefore stand kinematically, and the 3–4% hub strain is a real material-level question.
 
 ## What was built
 
@@ -89,11 +89,27 @@ The land bands are within small-strain range. The hub/arm junctions are not (FAI
 
 ## 6. Geometric-nonlinearity check
 
-See [`results/nonlinear_check.json`](results/nonlinear_check.json) and the Evening Report for the outcome of this run's check.
+[`nonlinear_check.py`](nonlinear_check.py) repeats the end-rotation case (no guides, no wrench) with a total-Lagrangian St Venant–Kirchhoff P2 model:
+
+- the exact finite rotation (47.2°) is applied on D1, with D1 translation free;
+- the load goes in 8 increments with full Newton, the consistent tangent (verified against finite differences to 2·10⁻¹¹) and a linear predictor;
+- it uses the q10 mesh (437 k DOF): 40 Newton iterations, 25 min, final residual ≤ 4·10⁻⁹ at every increment.
+
+| Quantity (same 47.2° rotation) | Nonlinear | Linear | Ratio |
+|---|---:|---:|---:|
+| End moment | 350.2 N·mm | 353.4 N·mm | 0.991 |
+| Peak principal strain (Green / linear) | 3.22% | 3.25% | 0.989 |
+| 99th-percentile strain | 2.49% | 2.51% | 0.99 |
+| Peak strain in the land bands | 0.45% | 0.45% | 1.01 |
+| Arm socket non-rigid deformation (exact rigid fit) | 0.040–0.057 mm | — | — |
+
+Geometric nonlinearity changes the end moment and strains by about 1%. The large linearised rotations therefore do not invalidate the linear bond and arm-distortion results, and the nonlinear arm distortion (0.040–0.057 mm) agrees with the linear small-rotation value (0.016–0.064 mm). The 3–4% hub/arm strain is a real strain level, not a linearisation artefact. It is now a material question: PA12 is modelled as linear elastic here, and no PA12 yield or fatigue limit at that strain is established by this run. The check excludes the guides, the wrench and the backbone, and it used the coarsest mesh.
+
+Data: [`results/nonlinear_check.json`](results/nonlinear_check.json), log [`results/logs/nonlinear.log`](results/logs/nonlinear.log). The log also contains the two stalled attempts (no predictor), which were stopped by hand.
 
 ## Checks ([`results/validation.json`](results/validation.json))
 
-All checks pass except the deliberate small-strain validity check (§ 5). Highlights: rigid modes give zero force (≤ 1.6·10⁻¹⁴), uniform strain energy is exact (≤ 8·10⁻¹⁵), mesh volume equals the CAD lattice volume (≤ 3·10⁻⁷), EI converges to 0.18%, linear residuals ≤ 1.7·10⁻¹², station-wrench force closure ≤ 6.4·10⁻⁹ N.
+All checks pass except the deliberate small-strain validity check (§ 5). The nonlinear checks (§ 6) pass. Highlights: rigid modes give zero force (≤ 1.6·10⁻¹⁴), uniform strain energy is exact (≤ 8·10⁻¹⁵), mesh volume equals the CAD lattice volume (≤ 3·10⁻⁷), EI converges to 0.18%, linear residuals ≤ 1.7·10⁻¹², station-wrench force closure ≤ 6.4·10⁻⁹ N.
 
 ## Reproduce
 

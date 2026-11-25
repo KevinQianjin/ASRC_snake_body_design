@@ -80,6 +80,14 @@ def main():
         add("peak body principal strain (linear small-strain validity)", s["peak_abs_principal_strain"], s["peak_abs_principal_strain"] < 0.02,
             "FAIL means the linear model is outside its validity in the hub/arm region; land bands peak "
             f"{s['peak_in_land_bands']:.4f}; max linearised rotation {s['max_linearised_rotation_rad']:.2f} rad")
+    if (RES / "nonlinear_check.json").exists():
+        n = load("nonlinear_check.json")
+        add("total-Lagrangian end-rotation case converged to full load", n["load_reached"], n["converged"])
+        add("end moment, nonlinear / linear (same rotation)", n["moment_ratio_nl_over_lin"], abs(n["moment_ratio_nl_over_lin"] - 1) < 0.10,
+            "geometric nonlinearity changes the end moment by less than 10%")
+        ps = n["peak_strain"]
+        add("peak strain, nonlinear Green / linear", ps["nonlinear_green"] / ps["linear"], abs(ps["nonlinear_green"] / ps["linear"] - 1) < 0.15,
+            f"land bands {ps['land_bands_nonlinear']:.4f} / {ps['land_bands_linear']:.4f}")
     (RES / "validation.json").write_text(json.dumps(dict(checks=checks, all_passed=all(c["passed"] for c in checks)), indent=1, default=float))
     for c in checks:
         print("PASS" if c["passed"] else "FAIL", c["check"], c["value"], c["note"])

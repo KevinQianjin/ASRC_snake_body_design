@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#23-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#24-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -35,22 +35,29 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="daily-updates"></a>
 
+## 24 November 2026
+
+<a id="24-november-2026--evening-report-whole-body-solid-m6-model"></a>
+
+**Evening Report — whole-body solid M6 model: stiffness validated, bond demand settled at the load level, crowned and uncrowned lands both clear 0.2° tilt against the solid arm.** The entire CAD lattice of the M6 module (10,487 mm³) was modelled with quadratic tetrahedra (up to 1.79 M DOF, MKL PARDISO). Its bending stiffness was validated before the guides were bonded to it. The rod map was applied only to the rigid end masters (the rod's ~47° end-to-end rotation at the governing steps 1,709 / 1,885), together with the archived station wrenches. This removes the 23 November over-constraint. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_24.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261124/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261124/HANDOFF.md)
+
+| Check or result | Value |
+|---|---:|
+| Bare EI, elastic / rigid hub rings (mesh-converged to 0.18%) | 40,368 / 43,483–44,102 N·mm² |
+| … against the plate model (46,708) and the database PA12 body (44,118 N·mm², EA 166.694 N) | 0.86–0.94× · EI within 1.4%, EA within 0.1% |
+| Rod M-cell EI 64,730 N·mm² | = PA12 body + Ø1.8 mm NiTi backbone (20,612) |
+| **Bond, area-mean / land-edge peak axial shear, G = 500–1,500 MPa** | **1.0–3.5 / 3.6–16.8 MPa** (`rod` model: 103–306 MPa) |
+| Arm non-rigid distortion, in land / at socket ends | 0.001–0.006 / 0.016–0.064 mm (rod map: 0.05 / 0.30–0.37 mm) |
+| **Worst gap at 0.2° tilt against the solid arm, uncrowned / crowned** | **0.0742–0.0763 / 0.0785–0.0794 mm** (rod-mapped: 0.0007–0.044 mm) |
+| Peak body strain; total-Lagrangian check (end moment, peak strain vs linear) | 3.7% at the hub/arm junction (small-strain check **fails**; land bands < 0.7%); 0.991×, 0.989× |
+
+The bond demand matches the `rigidland` model, not the kinematic `rod` model. Against the solid arm, the crown adds only about 0.003–0.004 mm of clearance, so the 21 November failure of the uncrowned land was a rod-map artefact at these steps. This was shown at two steps only, not over the mission. A geometrically nonlinear check changed the results by about 1%, so the hub's 3–4% strain is real. Whether PA12 tolerates it is the open material question. The adhesive, the bond strength and the as-printed land remain unmeasured.
+
 ## 23 November 2026
 
 <a id="23-november-2026--evening-report-solid-m6-strut-model"></a>
 
-**Evening Report — local solid model of the bonded M6 struts: built, verified and shown to be over-constrained.** A quadratic-tetrahedron solver was built for the actual CAD struts that carry the crowned M6 lands. It includes a structured graded mesher and a coupled station model: four solid struts, a distributed crowned adhesive layer on the real inclined walls, and one rigid guide carrying the station wrench. The aim was to decide whether the bond demand is load-driven (`rigidland`, 2–4 MPa) or kinematic (`rod`, about 85–300 MPa). No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_23.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261123/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261123/HANDOFF.md)
-
-| Check or result | Value |
-|---|---:|
-| Patch test (prism / TetGen mesh); regression against 22 Nov `rod`/`rigidland` (48 rows) | 3·10⁻¹² / 3·10⁻⁸; 0.0 MPa difference |
-| Free-strut field, h 0.6 → 0.45 mm; coupled-station wrench closure | 0.14% change; 1.2·10⁻¹¹ |
-| **Moment carried by rod-map-driven solid struts ÷ rod model cell moment** | **30–35 (consistency check failed)** |
-| Coupled station, crowned, G = 500 MPa, step 1,709 (over-constrained, not a design value) | 126 MPa peak / 44 MPa mean axial shear |
-| Rod-map distortion of the arm walls about the land's rigid motion: in the land / at the socket ends | 0.05 mm / 0.30–0.37 mm |
-| Worst gap at 0.2° tilt, uncrowned / crowned: undeformed body (new) against rod-mapped body (21/22 Nov), z = −12 mm | 0.079 / 0.080 mm vs 0.0007 / 0.028 mm |
-
-The bonded struts are arms of a compliant zig-zag rib. They run from the hub disk to a knee at r ≈ 30.6 mm and into further members. Driving their cut faces with the rod map therefore over-constrains them, and their tractions are not physical. The 2–300 MPa bond bracket stays open. It is now settled, though, that the `rod` field is not a physical upper bound. The crowned land's certified 0.028 / 0.042 mm clearance margins were computed against a rod-mapped arm that the map itself distorts by more than the margin. With an undeformed body, both lands keep about 0.08 mm at 0.2° tilt, so the crown's benefit is a rod-map effect. The next step is a whole-rib solid model between the Round 2 masters, validated against the plate-model body EI before its tractions are used. These are linear simulation results only, and the adhesive is unmeasured.
+**Evening Report — local solid model of the bonded M6 struts.** A verified quadratic-tetrahedron solver for the actual CAD struts showed that driving a strut's cut faces with the rod map is over-constrained. The struts carry 30–35× the rod model's cell moment, so the 126 MPa coupled-station traction is not physical. The rod map distorts the arm walls around the guide by more than the crowned land's clearance margin, and an undeformed body keeps about 0.08 mm at 0.2° tilt. [Evening Report](reports/daily/Evening_Report_2026_11_23.md) · [Study](simulations/u4m2/lanes_20261113/evening_20261123/README.md) · [Handoff](simulations/u4m2/lanes_20261113/evening_20261123/HANDOFF.md)
 
 ## 22 November 2026
 

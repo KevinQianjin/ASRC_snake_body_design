@@ -197,6 +197,24 @@
    "value": 0.03736035984802363,
    "passed": false,
    "note": "FAIL means the linear model is outside its validity in the hub/arm region; land bands peak 0.0067; max linearised rotation 0.85 rad"
+  },
+  {
+   "check": "total-Lagrangian end-rotation case converged to full load",
+   "value": 1.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "end moment, nonlinear / linear (same rotation)",
+   "value": 0.990996262866416,
+   "passed": true,
+   "note": "geometric nonlinearity changes the end moment by less than 10%"
+  },
+  {
+   "check": "peak strain, nonlinear Green / linear",
+   "value": 0.9886362942392057,
+   "passed": true,
+   "note": "land bands 0.0045 / 0.0045"
   }
  ],
  "all_passed": false
