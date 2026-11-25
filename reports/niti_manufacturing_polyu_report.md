@@ -6,8 +6,8 @@
 
 The project needs two different NiTi components:
 
-- **16 U-module leaf springs**: four per U module, each about 94 mm long. The current CAD section notes show about 6 mm width and 1.03–1.18 mm thickness through the flexible span, with enlarged formed ends around 7.05 × 6.33 mm. Confirm this section interpretation against the native STEP/CAD and with the adviser before ordering stock. [Spring section data](cad/lanes_u4m2/guides_v2/spring_strip.json)
-- **Two M-module backbone rods**: straight superelastic NiTi round stock, Ø1.80 × 96 mm each, one per M module. [Model data](simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md)
+- **16 U-module leaf springs**: four per U module, each about 94 mm long. The current CAD section notes show about 6 mm width and 1.03–1.18 mm thickness through the flexible span, with enlarged formed ends around 7.05 × 6.33 mm. Confirm this section interpretation against the native STEP/CAD and with the adviser before ordering stock. [Spring section data](../cad/lanes_u4m2/guides_v2/spring_strip.json)
+- **Two M-module backbone rods**: straight superelastic NiTi round stock, Ø1.80 × 96 mm each, one per M module. [Model data](../simulations/u4m2/backbone_20261108/model_data/MODEL_DATA.md)
 
 The PolyU IC public facilities pages list a metal laser cutter (0.7–2 mm for named materials including titanium), 4-axis wire EDM, abrasive waterjet machines, and a 5-axis CNC mill. The metallic laser is geometrically interesting for the leaf thickness, but the published compatible-material list does **not** name NiTi. Therefore no one should assume a machine is approved for NiTi until IC staff check the alloy, stock condition, machine, process, and safety requirements.
 
@@ -29,7 +29,7 @@ PolyU says students should consult technical staff if unsure which process to us
 
 ### A. U-module leaf springs
 
-1. **Confirm the source geometry.** Open the U spring solids (solids 2–5) in `cad/modules/UniDirectional_96.step` and compare against [`U_leaf_springs.stl`](cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and [section JSON](cad/lanes_u4m2/guides_v2/spring_strip.json). The STL is for viewing/mesh reference; it is not a dimensioned 2D toolpath drawing. Ask the adviser to verify whether 1.03–1.18 mm is the material thickness and how the enlarged ends are formed.
+1. **Confirm the source geometry.** Open the U spring solids (solids 2–5) in `cad/modules/UniDirectional_96.step` and compare against [`U_leaf_springs.stl`](../cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and [section JSON](../cad/lanes_u4m2/guides_v2/spring_strip.json). The STL is for viewing/mesh reference; it is not a dimensioned 2D toolpath drawing. Ask the adviser to verify whether 1.03–1.18 mm is the material thickness and how the enlarged ends are formed.
 2. **Do not start from a bulk block.** The spring is a slender profile. If it is intended to be constant-thickness strip with enlarged formed ends, buy strip/flat stock close to the flexible-section thickness and use a near-net-shape cutting method; machining from a thick block wastes material and makes the spring’s microstructure/surface history less predictable.
 3. **Ask IC to rank approved routes for a small coupon first.** Candidate order: (a) metallic laser if IC explicitly approves NiTi and a trial cut shows acceptable edge integrity; (b) wire EDM with finish/trim pass and documented edge finishing; (c) abrasive waterjet if the technician confirms thin-stock support, kerf/tolerance, and a clean edge. CNC milling is a staff-guided fallback if profile cutting is unsuitable.
 4. **Control the cut edge and forming history.** NiTi is sensitive to processing. Laser and EDM are thermal processes; papers report cut-zone HAZ/recast and fatigue effects that vary with machine and settings. One NiTi WEDM fatigue study found finish trim cuts improved fatigue life relative to the main cut for its tested material/conditions; this is a reason to ask about finish passes, not a transferable life multiplier. [WEDM fatigue study](https://doi.org/10.1177/09544054211028844) · [Laser microcutting surface integrity study](https://doi.org/10.1007/s00170-025-16528-1)
@@ -59,7 +59,7 @@ There is **no single “CNC software”** that will program every IC machine. Po
 
 ## Files prepared for a self-managed CAD/CAM workflow
 
-The pre-CAM spring package is now in [`cad/manufacturing_setup/`](cad/manufacturing_setup/README.md). Download [`U_leaf_preCAM_handoff.zip`](cad/manufacturing_setup/U_leaf_preCAM_handoff.zip) to get the four isolated, validated STEP leaves, geometry audit, handoff PDF, and preparation checklist. The STEP leaves preserve the source assembly placements and each re-imports as a single solid with volume matching the source to numerical precision. The [PDF](cad/manufacturing_setup/U_leaf_spring_geometry_handoff.pdf) is useful as a quick dimension/process handoff; the native [assembly STEP](cad/modules/UniDirectional_96.step) remains the overall context.
+A pre-CAM spring package was prepared separately in the project workspace; it contains four isolated, validated STEP leaves, a geometry audit, a handoff PDF, and a preparation checklist. The STEP leaves preserve the source assembly placements and each re-imports as a single solid with volume matching the source to numerical precision. The native [assembly STEP](../cad/modules/UniDirectional_96.step) remains the overall context. The separate ZIP and PDF are not attached to this Markdown report.
 
 The ZIP is **pre-CAM**, not a machine-ready NC program. No controller-specific code was fabricated because the exact machine and postprocessor are unknown; the STEP geometry also contains a substantial variable thickness (about 6.33 mm at ends and 1.03–1.18 mm through the flexible section), which a 2D outline alone cannot create. Use the included checklist to identify process, stock/condition, tolerance, datum, fixture, CAM/controller and machine post before making any coupon.
 
@@ -77,8 +77,8 @@ The ZIP is **pre-CAM**, not a machine-ready NC program. No controller-specific c
 
 ## Documents to bring
 
-- This report and the existing [NiTi supplier report](niti_supplier_report.md).
-- Native U-module CAD: [`UniDirectional_96.step`](cad/modules/UniDirectional_96.step), plus the U spring mesh [`U_leaf_springs.stl`](cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and dimensions [`spring_strip.json`](cad/lanes_u4m2/guides_v2/spring_strip.json).
+- This report and the existing [NiTi supplier report](../niti_supplier_report.md).
+- Native U-module CAD: [`UniDirectional_96.step`](../cad/modules/UniDirectional_96.step), plus the U spring mesh [`U_leaf_springs.stl`](../cad/lanes_u4m2/guides_v2/U_leaf_springs.stl) and dimensions [`spring_strip.json`](../cad/lanes_u4m2/guides_v2/spring_strip.json).
 - A one-page drawing showing overall profile, flexible-section dimensions, end geometry, datum, quantity, target tolerance, material lot/condition, and whether the shape is cut flat or requires forming.
 - One sample NiTi strip/rod or the supplier datasheet/certificate, if available.
 
