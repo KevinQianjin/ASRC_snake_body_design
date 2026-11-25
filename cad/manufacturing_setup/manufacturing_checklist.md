@@ -8,7 +8,7 @@
 
 The DXF is **not** machine code, a CAM project, proof of process suitability, or a released drawing. The confirmed contour orientation is X-DXF = leaf length (94 mm), Y-DXF = profile thickness (0–5 mm); stock width is along the leaf's local width direction (6 mm). Review the notes and drawing before use.
 
-**Resolve a design-data mismatch:** the extracted STEP profile has 5 mm maximum section dimension, while the separate `spring_strip.json` samples report roughly 6.33 mm at the ends. Confirm these data represent the same revision and establish which is authoritative before ordering stock or machining. The DXF traces the STEP exactly (within the recorded polyline approximation), not the sample table.
+**Clarify the section-table axes:** in the intended oriented STEP frame, the end section is 6 × 5 mm with area 30 mm². `spring_strip.json` lists 7.05 × 6.33 mm end extents but also area 30 mm², so those extents are not a rectangular stock-section width/thickness pair. This does not establish a revision mismatch. The DXF traces the STEP within the recorded polyline approximation; resolve the table's coordinate convention before using those extent values in a stock drawing.
 
 ## 2. Choose the process yourself
 
