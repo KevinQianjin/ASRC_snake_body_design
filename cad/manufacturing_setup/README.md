@@ -12,6 +12,7 @@ This folder contains exact neutral geometry and a candidate profile-cut contour.
 - `manufacturing_checklist.md`: self-guided file-to-machine-input workflow and release checks.
 - `robofil_profile_cam_job_sheet.md`: geometry-specific wire-EDM CAM setup sheet with the values already derived from CAD and unresolved machine-control fields.
 - `cam_post_feasibility_review.md`: installed-post review and reason no target-machine code was emitted.
+- `../../docs/niti_file_to_machine_setup.md`: self-service explanation of the geometry mismatch and the PEPS-to-Robofil route.
 - `source_files.txt`: provenance and geometry interpretation.
 
 The full U module source is `../../modules/UniDirectional_96.step`. The combined spring STL is visual reference only and is not a CAM master.
