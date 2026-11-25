@@ -56,6 +56,8 @@ There is **no single “CNC software”** that will program every IC machine. Po
 
 **Recommended starting software:** use SOLIDWORKS (available in PolyU’s IC computer rooms) or your existing CAD to inspect the STEP, then create a clean 2D drawing/DXF only after staff confirms the process. For the OMAX waterjet, ask if they use IntelliMAX. For CNC/EDM, ask the operator which CAM and postprocessor they require. Do not buy or install commercial CAM software before they answer.
 
+**Specific wire-EDM software route now identified:** Camtek PEPS Wire EDM officially lists AC Robofil and AC Millennium post/technology support, and its workflow includes DXF/STEP import, billet definition, material/wire technology, start-hole/threading setup, offsets, simulation, and NC output. Camtek offers a 90-day trial through a vendor request and hardware-based license activation; its current system requirements are Windows 10 64-bit minimum / Windows 11 recommended. The cloud work computer is Linux and cannot run it. See the [PEPS Wire EDM page](https://www.camtek.de/en/wire-edm), [trial details](https://www.camtek.de/en/peps/peps-testversion.html), [system requirements](https://www.camtek.de/en/peps/peps-technical-specifications.html), and [official training outline](https://www.camtek.de/assets/template/Medien/Dateien/PEPS/Schulungen/PEPS_Schulung_Wire_EDM.pdf). Even with PEPS, the machine-specific post, exact control revision, qualified NiTi technology data, and resolved 5 mm vs ~6.33 mm profile mismatch are needed before a valid NC program can be posted.
+
 
 ## Files prepared for a self-managed CAD/CAM workflow
 
