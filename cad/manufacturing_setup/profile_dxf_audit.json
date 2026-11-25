@@ -1,0 +1,44 @@
+{
+  "source_step": "U_leaf_spring_01.step",
+  "coordinate_mapping": "DXF X = reoriented leaf length Y + 47 mm; DXF Y = reoriented section Z + 10 mm; width is orthogonal stock direction",
+  "rotation_deg_about_Y": 45,
+  "units": "mm",
+  "closed_lwpolyline": true,
+  "vertices": 147,
+  "bounding_box_mm": [
+    0.0,
+    0.0,
+    94.0,
+    4.999999999904882
+  ],
+  "dxf_polygon_area_mm2": 110.39907137507538,
+  "cad_section_area_mm2": 110.34378535077364,
+  "area_difference_mm2": 0.05528602430173635,
+  "solid_volume_mm3": 662.06271208139,
+  "width_mm": 6.000000000538421,
+  "volume_divided_by_width_mm2": 110.34378533699643,
+  "cross_width_sections": [
+    {
+      "x_mm": 23.455234457274717,
+      "area_mm2": 110.34378535077364,
+      "perimeter_mm": 206.67104304698796,
+      "closed": true,
+      "wire_count": 1
+    },
+    {
+      "x_mm": 26.405234457543926,
+      "area_mm2": 110.34378535077364,
+      "perimeter_mm": 206.67104304698796,
+      "closed": true,
+      "wire_count": 1
+    },
+    {
+      "x_mm": 29.355234457813136,
+      "area_mm2": 110.3437853507735,
+      "perimeter_mm": 206.67104304698796,
+      "closed": true,
+      "wire_count": 1
+    }
+  ],
+  "interpretation": "Cross-sections demonstrate constant width and validate the contour geometrically within the CAD kernel. DXF is a sampled contour, not a CAM job or NC program."
+}
