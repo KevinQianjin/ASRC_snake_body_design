@@ -16,7 +16,7 @@ Wire EDM is the best geometric fit among the researched candidate processes: the
 | Contour compensation | not defined | Must come from selected wire, material, generator/technology table, and trim strategy; do not treat DXF polyline as compensated wire-center path |
 | Start/entry | not defined | Requires actual thread/start-hole and lead-in plan in stock/fixture |
 | Rough/trim strategy | not defined | NiTi edge integrity and fatigue behavior require a qualified test coupon |
-| Stock/model discrepancy | unresolved | STEP maximum profile dimension is 5 mm; `spring_strip.json` reports about 6.33 mm at the ends |
+| Section-table interpretation | needs axis clarification | Oriented STEP section is 6 × 5 mm, area 30 mm². `spring_strip.json` lists 7.05 × 6.33 mm extents but area 30 mm², so those extents are not a rectangular stock-section width/thickness pair |
 
 ## CAM construction sequence
 
@@ -32,7 +32,7 @@ Wire EDM is the best geometric fit among the researched candidate processes: the
 
 Camtek's PEPS Wire EDM is the most directly matched software route found for this geometry. Camtek says PEPS has an AC Robofil post/database option, technology databases, wire offsetting/simulation, automatic threading/start-position and start-hole output, slug handling, and setup-sheet output. The official trial offer is 90 days free, but it is requested through a vendor contact form and license activation process. PEPS 2022–2026 requires Windows 10 64-bit (Windows 11 recommended); this cloud computer runs Linux and has no Wine/PEPS install, so it cannot run the trial here. [PEPS Wire EDM capabilities](https://www.camtek.de/en/wire-edm) · [Trial request and activation](https://www.camtek.de/en/peps/peps-testversion.html) · [PEPS system requirements](https://www.camtek.de/en/peps/peps-technical-specifications.html) · [Official PEPS Wire EDM training outline](https://www.camtek.de/assets/template/Medien/Dateien/PEPS/Schulungen/PEPS_Schulung_Wire_EDM.pdf)
 
-The training outline follows the right sequence for this job: import DXF/STEP, define billet, select material/wire technology, define contour/start position, choose machining strategy and offsets/tags, simulate, configure the post, and generate NC. That sequence is documented here so the file setup is ready to continue in PEPS. PEPS's Robofil support does not itself supply qualified NiTi settings: the actual NiTi grade/condition, wire and machine technology table, and the mismatch between the current STEP (5 mm profile maximum) and `spring_strip.json` (~6.33 mm ends) still need resolution before NC generation.
+The training outline follows the right sequence for this job: import DXF/STEP, define billet, select material/wire technology, define contour/start position, choose machining strategy and offsets/tags, simulate, configure the post, and generate NC. That sequence is documented here so the file setup is ready to continue in PEPS. PEPS's Robofil support does not itself supply qualified NiTi settings: the actual NiTi grade/condition, wire and machine technology table still need identification. The end-section figures in `spring_strip.json` also need their coordinate/extent definitions clarified before treating them as a stock specification; the listed extents and area show they are not a simple rectangular 7.05 × 6.33 mm section.
 
 ## Why there is no posted machine program here
 
