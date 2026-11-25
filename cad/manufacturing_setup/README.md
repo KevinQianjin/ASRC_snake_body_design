@@ -12,7 +12,7 @@ This folder contains exact neutral geometry and a candidate profile-cut contour.
 - `manufacturing_checklist.md`: self-guided file-to-machine-input workflow and release checks.
 - `robofil_profile_cam_job_sheet.md`: geometry-specific wire-EDM CAM setup sheet with the values already derived from CAD and unresolved machine-control fields.
 - `cam_post_feasibility_review.md`: installed-post review and reason no target-machine code was emitted.
-- `../../docs/niti_file_to_machine_setup.md`: self-service explanation of the geometry mismatch and the PEPS-to-Robofil route.
+- `../../docs/niti_file_to_machine_setup.md`: self-service explanation of the section-table axes and the PEPS-to-Robofil route.
 - `source_files.txt`: provenance and geometry interpretation.
 
 The full U module source is `../../modules/UniDirectional_96.step`. The combined spring STL is visual reference only and is not a CAM master.
@@ -25,4 +25,4 @@ After removing the spring's 45° diagonal orientation, three sections across the
 
 No file specifies NiTi grade, transformation state, stock lot, cut allowance, tolerances, surface finish, datum, workholding, wire/cutter compensation, entry strategy, machine CAM setup, or postprocessor. The DXF is a sampled polyline approximation of the STEP section (147 vertices; +0.055286 mm² area difference, about +0.0501%). The STEP remains the exact geometry master. The provided files are not machine-ready code and do not validate manufacturability, superelastic response, or fatigue life.
 
-For the candidate Robofil wire-EDM route, the most directly matched CAM product found is Camtek PEPS Wire EDM, which lists AC Robofil/AC Millennium technology and post support. Its 90-day trial requires vendor registration and a hardware-context license activation, and the current product requires Windows 10/11; this cloud workspace is Linux. See `robofil_profile_cam_job_sheet.md` for the source links and setup sequence. PEPS does not supply qualified NiTi process settings by itself; those and the STEP-vs-section-table mismatch remain unresolved.
+For the candidate Robofil wire-EDM route, the most directly matched CAM product found is Camtek PEPS Wire EDM, which lists AC Robofil/AC Millennium technology and post support. Its 90-day trial requires vendor registration and a hardware-context license activation, and the current product requires Windows 10/11; this cloud workspace is Linux. See `robofil_profile_cam_job_sheet.md` for the source links and setup sequence. PEPS does not supply qualified NiTi process settings by itself. The `spring_strip.json` end extents need coordinate-axis clarification before treating them as physical stock dimensions; its listed section area is consistent with the oriented STEP section.
