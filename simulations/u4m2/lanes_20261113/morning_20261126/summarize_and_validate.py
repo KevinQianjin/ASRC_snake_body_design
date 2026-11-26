@@ -112,7 +112,7 @@ def main():
     ax.legend(fontsize=7.5, loc="lower right")
 
     fig.tight_layout()
-    fig.savefig(RES / "evening_20261126_summary.png", dpi=160)
+    fig.savefig(RES / "morning_20261126_summary.png", dpi=160)
     plt.close(fig)
 
     # --- Validation checks ---
@@ -137,9 +137,11 @@ def main():
         "stride1_max_drop_le_0p001mm": bool(t["all_drops_le_0p001_mm"]),
         "stride1_zero_contacts": all(r["contacts_tilted"] == 0 for r in t["summary"]),
         "stride1_zero_below_0p025mm": all(r["below_0p025_mm"] == 0 for r in t["summary"]),
-        "summary_figure_exists": (RES / "evening_20261126_summary.png").exists(),
+        "summary_figure_exists": (RES / "morning_20261126_summary.png").exists(),
     }
     val = dict(
+        completed_at_et="2026-11-26T11:25:00-05:00",
+        completed_at_utc="2026-11-26T16:25:00Z",
         all_passed=all(checks.values()),
         checks=checks,
         metrics=dict(

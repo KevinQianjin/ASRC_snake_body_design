@@ -1,6 +1,8 @@
-# Next-run handoff — from the 26 November 2026 Study
+# Next-run handoff — from the 26 November 2026 Morning Report
 
-[Evening Report](../../../../reports/daily/Evening_Report_2026_11_26.md) · [Study and commands](README.md) · [Previous handoff (25 Nov evening)](../evening_20261125/HANDOFF.md)
+Prepared at **2026-11-26 11:25:00 EST (2026-11-26 16:25:00 UTC)** (run started **2026-11-26 10:19:41 EST / 2026-11-26 15:19:41 UTC**).
+
+[Morning Report](../../../../reports/daily/Morning_Report_2026_11_26.md) · [Study and commands](README.md) · [Previous handoff (25 Nov evening)](../evening_20261125/HANDOFF.md)
 
 ## Closed out in this run (linear solid FE + exact FCL; no hardware)
 

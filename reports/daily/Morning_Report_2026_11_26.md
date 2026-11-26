@@ -1,10 +1,14 @@
-# Evening Engineering Report — 2026-11-26
+# Morning Engineering Report — 2026-11-26
+
+**Run:** ad-hoc morning engineering run. Started **2026-11-26 10:19:41 EST (2026-11-26 15:19:41 UTC)**; completed **2026-11-26 11:25:00 EST (2026-11-26 16:25:00 UTC)**.
+**Reporting interval:** from the 25 November evening cutoff **2026-11-25 20:02:23 EST (2026-11-26 01:02:23 UTC)** to **2026-11-26 11:25:00 EST (2026-11-26 16:25:00 UTC)**.
+**Branch:** `m6-backbone-strain-and-stride1-tilt` (branched from `main` at `78a4a288`, PR #47 merged **2026-11-26 00:13:14 EST (2026-11-26 05:13:14 UTC)**).
 
 **Scope:** Execution of both simulation priorities from [`evening_20261125/HANDOFF.md`](../../simulations/u4m2/lanes_20261113/evening_20261125/HANDOFF.md):
 1. **Priority 1:** M6 whole-body solid model with the central Ø1.8 mm NiTi backbone (`E = 40 GPa`), CAD bore check, kinematic vs load-controlled justification, mesh convergence (`q5 → q3 → q2.5/a0.25`), full 3,405-state strain envelope, land-traction verification, and cited PA12 (MJF/SLS) comparison.
 2. **Priority 2:** Stride-1 exact FCL tilt closeout (±10 states around all 44 per-phase minima of the 25 Nov sweep).
 
-[Study and commands](../../simulations/u4m2/lanes_20261113/evening_20261126/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/evening_20261126/HANDOFF.md) · [Previous Evening Report](Evening_Report_2026_11_25.md) · [Summary figure](../../simulations/u4m2/lanes_20261113/evening_20261126/results/evening_20261126_summary.png)
+[Study and commands](../../simulations/u4m2/lanes_20261113/morning_20261126/README.md) · [Next-run handoff](../../simulations/u4m2/lanes_20261113/morning_20261126/HANDOFF.md) · [Previous Evening Report](Evening_Report_2026_11_25.md) · [Summary figure](../../simulations/u4m2/lanes_20261113/morning_20261126/results/morning_20261126_summary.png)
 
 ## 1. Summary
 
@@ -24,5 +28,5 @@
 
 ## 2. Validation and remaining limits
 
-- All 8 automated checks in [`validation.json`](../../simulations/u4m2/lanes_20261113/evening_20261126/results/validation.json) pass (parallel `EI` addition error `0.14%`, PARDISO residuals ≤ `3.3 × 10⁻¹¹`, `q3 → q2.5` convergence `2.55–2.59%`, stride-1 drop `0.000097 mm`).
+- All 8 automated checks in [`validation.json`](../../simulations/u4m2/lanes_20261113/morning_20261126/results/validation.json) pass (parallel `EI` addition error `0.14%`, PARDISO residuals ≤ `3.3 × 10⁻¹¹`, `q3 → q2.5` convergence `2.55–2.59%`, stride-1 drop `0.000097 mm`).
 - **Remaining limits:** Linear small-strain FE; unmeasured PA12 process-specific strain/fatigue limits, adhesive modulus/strength, and as-printed geometry; backbone-to-`ring_0` contact is not modelled; hardware bench verification remains gating.

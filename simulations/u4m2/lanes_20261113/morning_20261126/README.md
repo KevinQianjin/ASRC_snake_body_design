@@ -1,6 +1,8 @@
-# M6 NiTi-backbone hub-strain convergence and stride-1 tilt closeout — 26 November 2026
+# M6 NiTi-backbone hub-strain convergence and stride-1 tilt closeout — morning, 26 November 2026
 
-[Evening Report](../../../../reports/daily/Evening_Report_2026_11_26.md) · [Next-run handoff](HANDOFF.md) · [Previous study (25 Nov evening)](../evening_20261125/README.md) · [Summary figure](results/evening_20261126_summary.png)
+**Run time:** started **2026-11-26 10:19:41 EST (2026-11-26 15:19:41 UTC)**; completed **2026-11-26 11:25:00 EST (2026-11-26 16:25:00 UTC)**.
+
+[Morning Report](../../../../reports/daily/Morning_Report_2026_11_26.md) · [Next-run handoff](HANDOFF.md) · [Previous study (25 Nov evening)](../evening_20261125/README.md) · [Summary figure](results/morning_20261126_summary.png)
 
 This study executes both simulation priorities from the [25 November 2026 handoff](../evening_20261125/HANDOFF.md):
 1. **Priority 1 — Hub-junction strain with the central Ø1.8 mm NiTi backbone** (`backbone_strain.py`): checks the CAD central bore diameter, adds the 40 GPa linear beam backbone between the D0 and D1 masters, evaluates kinematic vs load-controlled end conditions, refines the tetrahedral mesh across three levels (`q5` → `q3` → `q2.5/a0.25`, up to 1.34M reduced DOFs), re-runs the full 3,405-state strain envelope by superposition, checks land tractions, and compares against cited PA12 (MJF/SLS) datasheets and peer-reviewed fatigue endurance limits.
