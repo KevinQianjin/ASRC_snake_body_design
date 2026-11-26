@@ -13,7 +13,7 @@ The 24 November run built and validated a whole-body solid model of the M6 rib l
 
 - **Bond demand is closed out over all 3,405 mission states.** The mission maxima (finer q3 mesh) exceed the two-step values by at most **4.4% (area-mean axial shear)**, **4.3% (land-edge peak axial shear)** and **0% (peak normal traction)**: area-mean axial **2.48 / 3.60 MPa**, land-edge peak axial **9.0 / 16.8 MPa** uncrowned and **7.8 / 14.5 MPa** crowned, peak normal **21.2 / 36.4 MPa** at assumed G = 500 / 1,500 MPa. Steps 1,709 / 1,885 were representative.
 - **The governing land depends on the yaw direction.** During right yaw the off-plane lands (157.5° / 337.5°) at z = −12 mm carry about twice their step-1,709 peak, but remain inside the envelope set by the bending-plane lands during left yaw.
-- **Tilt clearance against the solid arm over the mission.** SWEEP_SUMMARY
+- **Tilt clearance against the solid arm over the mission.** An exact FCL sweep of 689 states (every 5th plus 13 targeted; untilted + 26 rigid ±0.2° tilts; both stations, both land variants) finds **no state below the 0.025 mm probe offset and no tilted contact**. The sampled minima are **0.0737 mm uncrowned** (z = +12 mm, step 805, right yaw) and **0.0783 mm crowned** (z = +12 mm, step 1,681). Over the mission the worst tilted gap varies by only about 0.005 mm, so the 21 Nov uncrowned failure was a rod-map artefact across the sampled mission, not only at the two 24 Nov steps.
 - **Hub strain is mission-wide (FAIL, kept visible).** The linear peak body strain reaches **3.81% at step 1,869** (left return), 2% above step 1,709, at the same hub/arm element (r = 8.47 mm, z = −17.9 mm). **615 of 3,405 states exceed 3%** and 1,124 exceed 2%. The pitch excursions reach 2.3–2.5%. The land bands stay at or below 0.68%. Whether PA12 tolerates this is not established; the model has no NiTi backbone yet.
 - **Exactness checks passed.** Superposition reproduces the archived 24 Nov direct solves (all eight lands, all traction/slip/rotation/socket metrics) to < 10⁻⁵ relative on both meshes, and the archived probe gaps and strain peak exactly.
 - **No design change.** No CAD, guide position, rope bore, station, mass or solver input changed. The 500 g head payload and U4+M2 are kept; no backbone end ferrule was added.
@@ -68,7 +68,18 @@ q3 mesh (188,766 P2 tets, 1.08 M DOF); maximum over the eight lands.
 
 ### 3.3 Tilt clearance against the solid arm
 
-SWEEP_SECTION
+G = 500 MPa, q5 unit fields. The targeted probe ([`mission_probe.json`](../../simulations/u4m2/lanes_20261113/evening_20261125/results/mission_probe.json)) covered the 24 Nov baselines (1,709 / 1,885), the 20 Nov low-margin steps (787 at −12 mm, 430 at +12 mm) and the steps with the largest body motion near the guide or the largest guide − land rotation. The sweep ([`probe_sweep.py`](../../simulations/u4m2/lanes_20261113/evening_20261125/probe_sweep.py)) then covered every 5th state plus those targets: 689 states × 2 stations × 2 variants = 2,756 exact FCL evaluations of 27 poses each.
+
+| Land, station | Worst gap of 26 tilts: sampled minimum (step, phase) | 24 Nov (steps 1,709/1,885) | 21 Nov rod-mapped body | States < 0.025 mm |
+|---|---|---:|---:|---:|
+| Uncrowned, −12 mm | **0.0752 mm** (1,950, left return) | 0.0762 | 0.0007 | 0 |
+| Uncrowned, +12 mm | **0.0737 mm** (805, right out) | 0.0742 | 0.0172 | 0 |
+| Crowned, −12 mm | **0.0789 mm** (1,950, left return) | 0.0794 | 0.0283 | 0 |
+| Crowned, +12 mm | **0.0783 mm** (1,681, left out) | 0.0785 | 0.0440 | 0 |
+
+- No tilted contact in any sampled state. The worst tilted gap varies over the mission by about 0.005 mm (uncrowned 0.0737–0.0787 mm, crowned 0.0783–0.0804 mm): the clearance is set by the guide/socket geometry, not by body deformation.
+- The crown's benefit is 0.004–0.005 mm throughout.
+- Stride 5 is a sample. The minima are bracketed, not certified (handoff item 2).
 
 ### 3.4 Body strain over the mission
 
@@ -86,7 +97,14 @@ SWEEP_SECTION
 
 ### 3.5 Validation
 
-VALIDATION_SECTION
+[`validation.json`](../../simulations/u4m2/lanes_20261113/evening_20261125/results/validation.json): 17 / 17 checks pass.
+
+- Superposition vs the archived direct solves at steps 1,709 / 1,885: all lands, all metrics, ≤ 5.9·10⁻⁹ relative (q5) and 3.2·10⁻⁹ (q3).
+- Rod rotations equal to the archive; solve residuals ≤ 1.2·10⁻¹²; phase coverage complete in the required order.
+- Probe: archived 24 Nov gaps reproduced to 6·10⁻¹² mm; sweep reproduces the targeted probe exactly.
+- Strain: archived step-1,709 peak reproduced to 1.1·10⁻¹¹.
+- All relative links in the new documents and the top-level README resolve.
+- The merged `main` design-limit sweep tests pass (3 / 3).
 
 ## 4. Failed checks, unsuccessful variants and incomplete work
 

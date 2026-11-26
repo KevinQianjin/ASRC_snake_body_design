@@ -84,7 +84,7 @@ else:
 for md in [HERE / "README.md", HERE / "HANDOFF.md", HERE.parents[3] / "reports/daily/Evening_Report_2026_11_25.md", HERE.parents[3] / "README.md"]:
     if not md.exists():
         check(f"{md.name} exists", False); continue
-    bad = [l for l in re.findall(r"\]\(([^)#\s]+)", md.read_text()) if not l.startswith("http") and not (md.parent / l).exists()]
+    bad = [l for l in re.findall(r"\]\(([^)#\s]+)", md.read_text()) if not l.startswith("http") and not (md.parent / l.split("?")[0]).exists()]
     check(f"relative links resolve in {md.relative_to(HERE.parents[3])}", not bad, broken=bad)
 
 (RES / "validation.json").write_text(json.dumps(dict(checks=checks, all_passed=all(c["passed"] for c in checks)), indent=1))

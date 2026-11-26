@@ -35,6 +35,25 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="daily-updates"></a>
 
+## 25 November 2026
+
+<a id="25-november-2026--evening-report-whole-mission-envelope"></a>
+
+**Evening Report — whole-mission envelope of the bonded solid M6 model: bond demand closed out, no sampled 0.2° tilt failure, hub strain confirmed mission-wide.** The 24 November whole-body solid model was linear but had been evaluated at only two steps. This run factorised it once per adhesive case, solved 15 unit load cases and superposed them over **all 3,405 states** of the archived 500 g yaw/pitch mission (straighten → entry → right yaw and return → left yaw and return → pitch up/down and return → exit). The superposed fields reproduce the archived direct solves to < 10⁻⁸. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_25.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261125/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261125/HANDOFF.md)
+
+| Check or result (G = 500 / 1,500 MPa assumed) | Mission envelope | Steps 1,709/1,885 (24 Nov) |
+|---|---:|---:|
+| **Area-mean axial bond shear** (q3, 1.08 M DOF) | **2.48 / 3.60 MPa** | 2.45 / 3.45 MPa |
+| Land-edge peak axial shear, uncrowned / crowned | 9.0 / 16.8 · 7.8 / 14.5 MPa | 8.7 / 16.8 · 7.4 / 14.3 MPa |
+| Peak normal traction, uncrowned | 21.2 / 36.4 MPa (at 1,709 / 1,885) | same |
+| Mesh change q5 → q3 of the mission maxima | −3.9% to +4.7% | |
+| **Worst gap at 26 rigid ±0.2° tilts, 689 sampled states**, uncrowned / crowned | **0.0737 / 0.0783 mm**; 0 states < 0.025 mm; 0 contacts | 0.0742 / 0.0785 mm |
+| **Peak body strain** (no backbone; small-strain check fails) | **3.81% at step 1,869**; > 3% on 615 states | 3.74% |
+
+Steps 1,709 / 1,885 were representative of the bond demand to within 5%. During right yaw the off-plane lands carry twice their step-1,709 load, but stay inside the envelope. Against the solid arm, the tilt clearance changes by only about 0.005 mm over the mission, so the 21 November uncrowned failure was a rod-map artefact across the sampled mission. The hub/arm strain above 3% is now a mission-wide finding and the top next-run item, with the NiTi backbone added. The adhesive, the bond strength, the as-printed land and the PA12 strain limit remain unmeasured, and the tilt sweep is sampled at every 5th state.
+
+**Other repository updates (on `main`, 25 Nov):** a [NiTi manufacturing plan for PolyU IC](reports/niti_manufacturing_polyu_report.md); an [isolated U-leaf-spring geometry and wire-EDM CAM handoff](cad/manufacturing_setup/README.md) (STEP solids, audited profile DXF, Robofil job sheet; no machine code released); and a [U4+M2 component-demand and threshold sensitivity sweep](reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md#component-demand-and-threshold-sensitivity-sweep-25-november-2026). These are summarised in the Evening Report.
+
 ## 24 November 2026
 
 <a id="24-november-2026--evening-report-whole-body-solid-m6-model"></a>

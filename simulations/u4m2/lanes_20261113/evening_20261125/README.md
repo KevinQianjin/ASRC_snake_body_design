@@ -8,13 +8,13 @@ Simulation only. No CAD, guide position, rope bore, station, mass or solver inpu
 
 ## Outcome
 
-1. **Bond demand over the whole mission.** Over all 3,405 states (straighten → entry → right yaw out/return → left yaw out/return → pitch up/return → pitch down/return → exit), the mission maxima exceed the step-1,709 values by **at most 7% (land-edge peak axial shear), 4.7% (area-mean axial shear) and 0% (peak normal traction)**. On the finer q3 mesh:
+1. **Bond demand over the whole mission.** Over all 3,405 states (straighten → entry → right yaw out/return → left yaw out/return → pitch up/return → pitch down/return → exit), the mission maxima exceed the step-1,709 values by **at most 4.3% (land-edge peak axial shear), 4.4% (area-mean axial shear) and 0% (peak normal traction)** on the finer q3 mesh (q5: up to 7.1%, 4.4% and 0%). On q3:
    - area-mean axial shear: **2.48 MPa (G 500) / 3.60 MPa (G 1,500)**, uncrowned;
    - land-edge peak axial shear: **9.0 / 16.8 MPa** uncrowned, **7.8 / 14.5 MPa** crowned;
    - peak normal traction: **21.2 / 36.4 MPa** uncrowned (at steps 1,709 / 1,885 — already the governing steps).
 2. **The governing land changes with yaw direction.** During right yaw (steps ≈ 800–1,050) the off-plane 157.5° / 337.5° lands at z = −12 mm carry about **twice** their step-1,709 peak (8.1–9.0 MPa vs 4.2–4.6 MPa, G 500), but stay inside the overall envelope set by the bending-plane lands during left yaw.
 3. **Mesh check.** q5 → q3 (774 k → 1.08 M DOF) changes the mission maxima by −3.9% to +4.7%, the same band as the 24 November two-step check.
-4. **Tilt clearance against the solid arm (G = 500 MPa).** Targeted exact FCL probes at the steps with the largest body motion near the guide lower the 24 November minimum only slightly: **uncrowned 0.0737 mm** (z = +12 mm, step 797, right yaw out) vs 0.0742 mm at step 1,709; **crowned 0.0785 mm** (unchanged, step 1,709). The strided whole-mission sweep is in [§ 3](#3-sampled-whole-mission-tilt-sweep).
+4. **Tilt clearance against the solid arm (G = 500 MPa).** Targeted exact FCL probes at the steps with the largest body motion near the guide lower the 24 November minimum only slightly: **uncrowned 0.0737 mm** (z = +12 mm, step 797, right yaw out) vs 0.0742 mm at step 1,709; **crowned 0.0785 mm** (unchanged, step 1,709). The strided sweep (689 states, [§ 3](#3-sampled-whole-mission-tilt-sweep)) finds **no state below 0.025 mm and no tilted contact**; the sampled minima are **0.0737 mm uncrowned** and **0.0783 mm crowned**.
 5. **Hub strain is a mission-wide issue, not a two-step one (FAIL kept visible).** The linear peak principal strain reaches **3.81% at step 1,869** (left return), vs 3.74% at step 1,709, always at the same hub/arm element (r ≈ 8.5 mm, z ≈ −17.9 mm). **615 of 3,405 states exceed 3%** and 1,124 exceed 2%; the pitch phases reach 2.3–2.5%. The land bands stay below 0.68% over the whole mission.
 
 ## Method
@@ -89,7 +89,30 @@ All 26 targeted rows reproduce the archived 24 Nov gaps at steps 1,709 / 1,885 e
 
 ## 3. Sampled whole-mission tilt sweep
 
-SWEEP_PLACEHOLDER
+[`probe_sweep.py`](probe_sweep.py) → [`results/probe_sweep.json`](results/probe_sweep.json): exact FCL distance, untilted plus the 26 rigid ±0.2° tilts, on **every 5th mission state plus the 13 targeted states (689 states)**, both stations, both land variants, G = 500 MPa, q5 unit fields (2,756 probes, 35 min on 3 workers).
+
+| Land, station | Worst gap of 26 tilts: minimum (step, phase, tilt) | Untilted minimum | States < 0.025 mm | Tilted contacts |
+|---|---|---:|---:|---:|
+| Uncrowned, z = −12 mm | **0.0752 mm** (1,950, left return, in-plane 75°+) | 0.1323 mm | 0 | 0 |
+| Uncrowned, z = +12 mm | **0.0737 mm** (805, right out, in-plane 60°+) | 0.1335 mm | 0 | 0 |
+| Crowned 0.06 mm, z = −12 mm | **0.0789 mm** (1,950, left return, in-plane 75°+) | 0.1385 mm | 0 | 0 |
+| Crowned 0.06 mm, z = +12 mm | **0.0783 mm** (1,681, left out, in-plane 75°−) | 0.1385 mm | 0 | 0 |
+
+Per-phase minimum of the worst tilted gap (mm):
+
+| Phase | Uncrowned −12 | Uncrowned +12 | Crowned −12 | Crowned +12 |
+|---|---:|---:|---:|---:|
+| straighten | 0.0765 | 0.0769 | 0.0795 | 0.0796 |
+| entry | 0.0787 | 0.0769 | 0.0804 | 0.0796 |
+| right out / return | 0.0762 / 0.0762 | **0.0737** / 0.0737 | 0.0792 / 0.0792 | 0.0784 / 0.0784 |
+| left out / return | 0.0752 / **0.0752** | 0.0742 / 0.0742 | 0.0789 / **0.0789** | **0.0783** / 0.0783 |
+| pitch up / return | 0.0769 / 0.0769 | 0.0740 / 0.0741 | 0.0796 / 0.0796 | 0.0785 / 0.0786 |
+| pitch down / return | 0.0760 / 0.0760 | 0.0748 / 0.0747 | 0.0792 / 0.0792 | 0.0788 / 0.0788 |
+| exit | 0.0787 | 0.0769 | 0.0804 | 0.0797 |
+
+- Over the sampled mission the worst tilted gap varies by only **0.0737–0.0787 mm (uncrowned)** and **0.0783–0.0804 mm (crowned)**. Against the solid arm, the tilt clearance is set by the guide/socket geometry; body deformation changes it by at most about 0.005 mm.
+- The 24 Nov two-step values (0.0742 / 0.0785 mm) are within 0.0005 mm of the sampled mission minima. The 21 Nov rod-map result (uncrowned below the 0.025 mm offset at 665 / 317 steps) is not reproduced with the solid arm; it was a rod-map artefact.
+- Sampled at stride 5: unsampled steps are bracketed, not certified (handoff item 2).
 
 ## 4. Body strain over the mission ([`results/strain_envelope.json`](results/strain_envelope.json))
 
@@ -108,7 +131,14 @@ SWEEP_PLACEHOLDER
 
 ## 5. Validation ([`results/validation.json`](results/validation.json))
 
-VALIDATION_PLACEHOLDER
+All 17 checks pass ([`validate.py`](validate.py)):
+
+- rod rotations at steps 1,709 / 1,885 equal the 24 Nov archive (difference 0.0°); all 3,405 states finite;
+- superposition reproduces the archived 24 Nov direct solves at steps 1,709 / 1,885, for all eight lands and all traction, slip, rotation and socket metrics, to 5.9·10⁻⁹ (q5) and 3.2·10⁻⁹ (q3) relative;
+- solve residuals ≤ 1.2·10⁻¹²; phase coverage 0–3,404 in the required order;
+- the targeted probe reproduces the archived 24 Nov solid-arm gaps to 6·10⁻¹² mm, and the sweep (from saved unit fields) reproduces the targeted probe exactly;
+- the strain envelope reproduces the archived step-1,709 peak and land-band strain to 1.1·10⁻¹¹;
+- all relative links in this README, the handoff, the Evening Report and the top-level README resolve.
 
 ## Limits
 

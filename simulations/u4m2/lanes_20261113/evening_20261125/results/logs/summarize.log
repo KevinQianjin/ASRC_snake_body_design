@@ -1,0 +1,40 @@
+
+### q5: mesh 130278 tets, 774219 DOF
+
+| G, crown | Peak axial: mission max (step, phase) / step 1,709 | Area-mean axial: max / 1,709 | Peak normal: max / 1,709 | Area-mean normal: max | Max slip | Guide−land rotation | Socket non-rigid, ends |
+|---|---|---|---|---:|---:|---:|---:|
+| 500 MPa, 0.0 mm | **9.13** (1000, right_return, +12@67.5) / 8.67 | **2.43** (1875, -12@67.5) / 2.40 | 22.0 (1885) / 22.0 | 2.74 | 5.96 µm | 0.057° | 0.063 mm |
+| 500 MPa, 0.06 mm | **7.84** (1001, right_return, +12@67.5) / 7.32 | **2.37** (1875, -12@67.5) / 2.36 | 19.0 (1885) / 19.0 | 2.68 | 6.26 µm | 0.061° | 0.064 mm |
+| 1500 MPa, 0.0 mm | **16.72** (1701, left_out, -12@247.5) / 16.67 | **3.44** (1866, -12@247.5) / 3.30 | 37.5 (1885) / 37.5 | 3.74 | 3.62 µm | 0.024° | 0.058 mm |
+| 1500 MPa, 0.06 mm | **14.28** (1701, left_out, -12@247.5) / 14.24 | **3.35** (1866, -12@247.5) / 3.21 | 32.8 (1885) / 32.8 | 3.63 | 3.84 µm | 0.025° | 0.059 mm |
+- G 500, crown 0.0: mission/1,709 ratio peak axial 1.053, mean axial 1.009, peak normal 1.000
+- G 500, crown 0.06: mission/1,709 ratio peak axial 1.071, mean axial 1.005, peak normal 1.000
+- G 1500, crown 0.0: mission/1,709 ratio peak axial 1.003, mean axial 1.044, peak normal 1.000
+- G 1500, crown 0.06: mission/1,709 ratio peak axial 1.003, mean axial 1.041, peak normal 1.000
+
+### q3: mesh 188766 tets, 1075065 DOF
+
+| G, crown | Peak axial: mission max (step, phase) / step 1,709 | Area-mean axial: max / 1,709 | Peak normal: max / 1,709 | Area-mean normal: max | Max slip | Guide−land rotation | Socket non-rigid, ends |
+|---|---|---|---|---:|---:|---:|---:|
+| 500 MPa, 0.0 mm | **9.04** (1010, right_return, +12@337.5) / 8.71 | **2.48** (1869, -12@247.5) / 2.45 | 21.2 (1709) / 21.2 | 2.68 | 5.78 µm | 0.058° | 0.064 mm |
+| 500 MPa, 0.06 mm | **7.76** (1010, right_return, +12@337.5) / 7.43 | **2.42** (1875, -12@247.5) / 2.40 | 18.3 (1709) / 18.3 | 2.62 | 6.07 µm | 0.062° | 0.064 mm |
+| 1500 MPa, 0.0 mm | **16.83** (809, right_out, -12@337.5) / 16.82 | **3.60** (1866, -12@247.5) / 3.45 | 36.4 (1885) / 36.4 | 3.58 | 3.61 µm | 0.024° | 0.060 mm |
+| 1500 MPa, 0.06 mm | **14.49** (809, right_out, -12@337.5) / 14.32 | **3.50** (1866, -12@247.5) / 3.36 | 31.7 (1885) / 31.7 | 3.50 | 3.81 µm | 0.026° | 0.060 mm |
+- G 500, crown 0.0: mission/1,709 ratio peak axial 1.038, mean axial 1.013, peak normal 1.000
+- G 500, crown 0.06: mission/1,709 ratio peak axial 1.043, mean axial 1.008, peak normal 1.000
+- G 1500, crown 0.0: mission/1,709 ratio peak axial 1.000, mean axial 1.044, peak normal 1.000
+- G 1500, crown 0.06: mission/1,709 ratio peak axial 1.012, mean axial 1.042, peak normal 1.000
+
+q5 -> q3 change of mission maxima (per land, max over lands):
+  G 500 crown 0.0 peak_axial_MPa: 9.13 -> 9.04 (-1.0%)
+  G 500 crown 0.0 mean_axial_MPa: 2.43 -> 2.48 (+2.4%)
+  G 500 crown 0.0 peak_normal_MPa: 22.01 -> 21.15 (-3.9%)
+  G 500 crown 0.06 peak_axial_MPa: 7.84 -> 7.76 (-1.0%)
+  G 500 crown 0.06 mean_axial_MPa: 2.37 -> 2.42 (+2.1%)
+  G 500 crown 0.06 peak_normal_MPa: 19.03 -> 18.32 (-3.7%)
+  G 1500 crown 0.0 peak_axial_MPa: 16.72 -> 16.83 (+0.7%)
+  G 1500 crown 0.0 mean_axial_MPa: 3.44 -> 3.60 (+4.6%)
+  G 1500 crown 0.0 peak_normal_MPa: 37.52 -> 36.41 (-2.9%)
+  G 1500 crown 0.06 peak_axial_MPa: 14.28 -> 14.49 (+1.4%)
+  G 1500 crown 0.06 mean_axial_MPa: 3.35 -> 3.50 (+4.7%)
+  G 1500 crown 0.06 peak_normal_MPa: 32.80 -> 31.72 (-3.3%)

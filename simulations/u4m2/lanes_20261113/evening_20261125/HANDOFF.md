@@ -10,7 +10,7 @@ Prepared at about **2026-11-25 20:55 EST (2026-11-26 01:55 UTC)** by the evening
 
 - **Bond demand is closed out over the mission.** Mission maxima (q3) are within **+4.4% (area-mean axial)**, **+4.3% (land-edge peak axial)** and **0% (peak normal)** of the step-1,709/1,885 values: area-mean axial 2.48 / 3.60 MPa, peak axial 9.0 / 16.8 MPa uncrowned (7.8 / 14.5 crowned), peak normal 21.2 / 36.4 MPa at G 500 / 1,500. Mesh q5 → q3 changes them by −3.9% to +4.7%.
 - **Off-plane lands double during right yaw** (157.5° / 337.5° at z = −12 mm: 8–9 MPa peak at G 500 vs 4.2–4.6 MPa at step 1,709) but stay inside the overall envelope.
-- **Tilt clearance**: see the sampled sweep in [README § 3](README.md#3-sampled-whole-mission-tilt-sweep). Targeted probes: uncrowned minimum 0.0737 mm (z = +12 mm, step 797), crowned 0.0785 mm (step 1,709).
+- **Tilt clearance over the mission (sampled, stride 5 + targets, 689 states):** no state below 0.025 mm and no tilted contact; minima **0.0737 mm uncrowned** (+12 mm, step 805) and **0.0783 mm crowned** (+12 mm, step 1,681). The worst tilted gap varies by only about 0.005 mm over the mission ([README § 3](README.md#3-sampled-whole-mission-tilt-sweep)).
 - **Hub strain over the mission** (q5, G 500, crowned, no backbone): peak **3.81% at step 1,869**, same element (r = 8.47 mm, z = −17.9 mm) at every yaw maximum; **615 states > 3%**, 1,124 > 2%; pitch phases 2.3–2.5%; land bands ≤ 0.68%.
 - Superposition is exact: per-land tractions, slip, rotations and socket motion reproduce the archived 24 Nov direct solves at steps 1,709 / 1,885 to < 10⁻⁵ relative, and the probe and strain values to < 10⁻⁶ mm / 10⁻⁹.
 
