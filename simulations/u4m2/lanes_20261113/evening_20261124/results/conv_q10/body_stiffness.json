@@ -1,0 +1,343 @@
+{
+ "scope": "Whole-body solid (P2 tetrahedral) stiffness of the M6 module lattice \u2014 evening, 24 November 2026.\n\nStage 1 of handoff item 1 from the 23 November 2026 evening run: before any bond traction from\na solid rib model is trusted, its bare-body stiffness must reproduce the Round 2 plate/membrane\nrib model (``rib_joint_3d.setup`` on ``M6_lane_anchorC.stl``: bare EI 46,708 N mm^2,\nGJ 43,299 N mm^2) and be compared with the rod cell stiffness (EI ~ 64,700 N mm^2).\n\nGeometry: the actual CAD ``cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl`` cropped with\ncapped planes at z = -44.9 mm (0.1 mm above the proximal disk face, z = -45 mm) and\nz = +40.9 mm (0.1 mm below the distal anchor block, which starts at z ~ +41 mm). The crop splits\ninto three watertight bodies: the lattice (one connected body) and two central posts\n(r < 3 mm, |z| > 33 mm) that touch only the end disks. The posts belong to the rigid D0/D1\nmasters of the plate model and are dropped. Nothing else is simplified.\n\nBoundary conditions (the plate model's masters, transferred to 3D):\n  D0  all lattice nodes on the z = -44.9 mm cut face: clamped;\n  D1  all lattice nodes on the z = +40.9 mm cut face: one rigid body (6 DOF), loaded by a unit\n      wrench; EI = 96 mm / rotation per unit moment, GJ likewise, EA = 96 mm / axial stretch\n      (the plate model's 96 mm module-length convention; translations of D1 are free).\nVariants:\n  solid_rings      every other node is free (the CAD hub rings are elastic solid);\n  rigid_rings      nodes with r < 8.6 mm inside the four plate-model ring bands\n                   z in [-20,-16.95], [-6.5,-3.45], [3.45,6.5], [16.95,20] mm are tied to one\n                   free rigid body per band (exactly the plate model's R0..R3 masters);\n  rigid_rings_lands  additionally ties each rib's guide-land patch (|z -/+ 12| <= 0.25 mm,\n                   15 < r < 24 mm, grouped by the nearest of the 8 rib angles) to its own free\n                   rigid body, as the plate model's bare body does.\n\nLinear elasticity, PA12 E = 1,530 MPa, nu = 0.4 (the Round 2 values). P2 (10-node) tetrahedra\nfrom ``../evening_20261123/strut_fe.py``; direct solve with MKL PARDISO (pypardiso).\nOutputs go only under ``results/`` of this folder.\n",
+ "body": "simulations/u4m2/lanes_20261113/evening_20261124/../../../../cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl",
+ "body_sha256": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5",
+ "crop": {
+  "crop_bodies": 3,
+  "crop_volumes_mm3": [
+   10487.160367025253,
+   303.7221574933315,
+   201.63067589432546
+  ],
+  "lattice_watertight": true,
+  "lattice_body_count": 1,
+  "lattice_volume_mm3": 10487.160367025253,
+  "lattice_faces": 12998,
+  "dropped_bounds_mm": [
+   [
+    [
+     -3.0,
+     -3.0,
+     -44.9
+    ],
+    [
+     3.0,
+     3.0,
+     -33.0
+    ]
+   ],
+   [
+    [
+     -3.0,
+     -3.0,
+     33.0
+    ],
+    [
+     3.0,
+     3.0,
+     40.9
+    ]
+   ]
+  ]
+ },
+ "parameters": {
+  "quality": 10.0,
+  "max_vol": [
+   2.0
+  ],
+  "variants": [
+   "solid_rings",
+   "rigid_rings",
+   "rigid_rings_lands"
+  ],
+  "out": "results/conv_q10",
+  "save_field": false,
+  "E_MPa": 1530.0,
+  "nu": 0.4,
+  "z_lo": -44.9,
+  "z_hi": 40.9,
+  "module_length_mm": 96.0,
+  "ring_bands_mm": [
+   [
+    -20.0,
+    -16.95
+   ],
+   [
+    -6.5,
+    -3.45
+   ],
+   [
+    3.45,
+    6.5
+   ],
+   [
+    16.95,
+    20.0
+   ]
+  ]
+ },
+ "comparators": {
+  "plate_bare_EI_Nmm2": 46708.2520297896,
+  "plate_bare_GJ_Nmm2": 43299.163436836294,
+  "rod_EI_Nmm2": 64728.0,
+  "plate_source": "simulations/u4m2/extreme_tests/round2_20261119/results/m6_guides/m6_support.json"
+ },
+ "meshes": [
+  {
+   "max_tet_volume_mm3": 2.0,
+   "quality": 10.0,
+   "vertices": 25620,
+   "tets": 70571,
+   "p2_nodes": 145802,
+   "dofs": 437406,
+   "mesh_assemble_s": 17.71394305299998,
+   "checks": {
+    "rigid_mode_force_rel": 1.557121926546276e-14,
+    "uniform_strain_energy_rel_err": 3.7895311700901925e-15,
+    "mesh_volume_mm3": 10487.163180582336,
+    "cad_volume_mm3": 10487.160367025253,
+    "volume_rel_err": 2.682858833447444e-07
+   },
+   "variants": [
+    {
+     "variant": "solid_rings",
+     "reduced_dofs": 429372,
+     "rigid_groups": 1,
+     "group_node_counts": [
+      168
+     ],
+     "clamped_nodes": 2512,
+     "solve_s": 4.269934795999973,
+     "max_residual": 2.1124971771868672e-09,
+     "compliance_D1": [
+      [
+       5.342703007539786,
+       -0.0014792376612125422,
+       -8.280852672441846e-05,
+       2.8120076237427126e-05,
+       0.0952317185625394,
+       9.601620177072613e-06
+      ],
+      [
+       -0.0014792373289154424,
+       5.344873507696732,
+       -0.00026668178124989106,
+       -0.09526017906184181,
+       -1.5252930727584988e-05,
+       -3.1049483887209948e-06
+      ],
+      [
+       -8.280812616170682e-05,
+       -0.00026668155070362236,
+       0.6266234300053808,
+       5.134885747375622e-06,
+       1.1199021814590292e-06,
+       -9.312388933992925e-06
+      ],
+      [
+       2.8120112593176192e-05,
+       -0.09526017892214013,
+       5.134885592046501e-06,
+       0.0023295079738077534,
+       3.1443139440624226e-07,
+       3.97121019975956e-08
+      ],
+      [
+       0.09523171869872074,
+       -1.5252906217076856e-05,
+       1.119891587294503e-06,
+       3.1443015412009923e-07,
+       0.0023290929468121916,
+       3.064897807717808e-08
+      ],
+      [
+       9.601580231793285e-06,
+       -3.1049524327629825e-06,
+       -9.312390260317797e-06,
+       3.9711140314354456e-08,
+       3.064859290193399e-08,
+       0.002291658211080468
+      ]
+     ],
+     "EIxx_Nmm2": 41210.419144039624,
+     "EIyy_Nmm2": 41217.7625334336,
+     "GJ_Nmm2": 41891.06365679987,
+     "EA_N": 153.20205948758675,
+     "symmetry_error": 7.494334731365946e-11,
+     "EI_mean_Nmm2": 41214.09083873661,
+     "EI_over_plate": 0.8823727938363242,
+     "GJ_over_plate": 0.96747974629832,
+     "EI_over_rod": 0.6367273952344674,
+     "unit_Mx_max_disp_mm": 0.09829524192010919
+    },
+    {
+     "variant": "rigid_rings",
+     "reduced_dofs": 356844,
+     "rigid_groups": 5,
+     "group_node_counts": [
+      168,
+      5585,
+      5793,
+      6850,
+      5956
+     ],
+     "clamped_nodes": 2512,
+     "solve_s": 3.3281172340000467,
+     "max_residual": 1.3362861039922791e-08,
+     "compliance_D1": [
+      [
+       4.968039483617139,
+       -0.0014753127415200733,
+       -0.00016692651914847987,
+       2.612093523911982e-05,
+       0.0886065134679234,
+       -2.5080894237785658e-05
+      ],
+      [
+       -0.001475311580146644,
+       4.968676084047032,
+       -0.0005339005012966588,
+       -0.08861251599706643,
+       -1.8856056763741003e-05,
+       -2.6896588541971436e-05
+      ],
+      [
+       -0.0001669258279222381,
+       -0.0005339008778074965,
+       0.567555466713633,
+       1.0514883828749368e-05,
+       -1.1533251023592079e-06,
+       -3.298310612683816e-06
+      ],
+      [
+       2.6120941510860334e-05,
+       -0.08861251607509947,
+       1.0514885835066798e-05,
+       0.002167876775563618,
+       3.1224202122507785e-07,
+       4.2623870952715584e-07
+      ],
+      [
+       0.0886065132572033,
+       -1.8855995445097254e-05,
+       -1.1533186576710005e-06,
+       3.122406569100165e-07,
+       0.002167877695262771,
+       -7.249384684677193e-07
+      ],
+      [
+       -2.5080918837118347e-05,
+       -2.689665915885523e-05,
+       -3.2983081424436178e-06,
+       4.2623881118023793e-07,
+       -7.249383696050261e-07,
+       0.0020266470765116906
+      ]
+     ],
+     "EIxx_Nmm2": 44282.95975219409,
+     "EIyy_Nmm2": 44282.9409656174,
+     "GJ_Nmm2": 47368.87892944701,
+     "EA_N": 169.14646343885533,
+     "symmetry_error": 2.3373901007803213e-10,
+     "EI_mean_Nmm2": 44282.95035890574,
+     "EI_over_plate": 0.9480755205881598,
+     "GJ_over_plate": 1.093990626367355,
+     "EI_over_rod": 0.6841390180278356,
+     "unit_Mx_max_disp_mm": 0.09144061026844183
+    },
+    {
+     "variant": "rigid_rings_lands",
+     "reduced_dofs": 356343,
+     "rigid_groups": 21,
+     "group_node_counts": [
+      168,
+      5585,
+      5793,
+      6850,
+      5956,
+      10,
+      13,
+      10,
+      11,
+      13,
+      17,
+      12,
+      16,
+      16,
+      9,
+      10,
+      14,
+      10,
+      13,
+      12,
+      13
+     ],
+     "clamped_nodes": 2512,
+     "solve_s": 3.051900456999988,
+     "max_residual": 6.456046364178292e-09,
+     "compliance_D1": [
+      [
+       4.906696376180965,
+       -0.0017316571517033005,
+       -2.887293386252284e-05,
+       3.096973710046148e-05,
+       0.08735907651196186,
+       -0.00013756500569107256
+      ],
+      [
+       -0.0017316620223795619,
+       4.9076027174874906,
+       -0.0004170197817642155,
+       -0.08736444104817272,
+       -2.1697263432208772e-05,
+       2.655363515682865e-05
+      ],
+      [
+       -2.8873017592040864e-05,
+       -0.0004170202338421572,
+       0.5672714973040675,
+       7.716118409599136e-06,
+       1.0016103652698817e-06,
+       -5.875516570509811e-06
+      ],
+      [
+       3.096973649345333e-05,
+       -0.0873644409598823,
+       7.71611140226644e-06,
+       0.0021366538706164666,
+       4.32307622244408e-07,
+       -1.0735119449362625e-06
+      ],
+      [
+       0.08735907680761966,
+       -2.169726204653805e-05,
+       1.0015926038252371e-06,
+       4.323088774215098e-07,
+       0.0021365188391550024,
+       -2.8201956940378064e-06
+      ],
+      [
+       -0.0001375649779725973,
+       2.65536265610595e-05,
+       -5.875514726379015e-06,
+       -1.073512008398929e-06,
+       -2.8201948378889856e-06,
+       0.001980372781774522
+      ]
+     ],
+     "EIxx_Nmm2": 44930.06626866621,
+     "EIyy_Nmm2": 44932.90592184443,
+     "GJ_Nmm2": 48475.72178505643,
+     "EA_N": 169.23113616008513,
+     "symmetry_error": 9.924756631272208e-10,
+     "EI_mean_Nmm2": 44931.48609525532,
+     "EI_over_plate": 0.9619603419669592,
+     "GJ_over_plate": 1.1195533109033748,
+     "EI_over_rod": 0.6941584182309869,
+     "unit_Mx_max_disp_mm": 0.09015149798831801
+    }
+   ],
+   "elapsed_s": 36.224494532999984
+  }
+ ]
+}

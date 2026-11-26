@@ -1,0 +1,221 @@
+{
+ "checks": [
+  {
+   "check": "conv_q10: rigid-body modes give zero force",
+   "value": 1.557121926546276e-14,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q10: uniform-strain energy exact",
+   "value": 3.7895311700901925e-15,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q10: mesh volume = CAD lattice volume",
+   "value": 2.682858833447444e-07,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q5: rigid-body modes give zero force",
+   "value": 9.960933000867771e-15,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q5: uniform-strain energy exact",
+   "value": 7.579062410712263e-15,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q5: mesh volume = CAD lattice volume",
+   "value": 2.5897973260451893e-07,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q3: rigid-body modes give zero force",
+   "value": 9.890267883829289e-15,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q3: uniform-strain energy exact",
+   "value": 2.122137371173358e-15,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q3: mesh volume = CAD lattice volume",
+   "value": 3.0790498315867624e-07,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q2: rigid-body modes give zero force",
+   "value": 1.135462198419035e-14,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q2: uniform-strain energy exact",
+   "value": 3.031624777813563e-16,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "conv_q2: mesh volume = CAD lattice volume",
+   "value": 3.204884628133775e-07,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "EI mesh convergence (last two levels, solid rings)",
+   "value": 0.001772128574706879,
+   "passed": true,
+   "note": "conv_q3 40439 -> conv_q2 40368 N mm^2"
+  },
+  {
+   "check": "EI within 30% of plate bare body (solid_rings, conv_q2)",
+   "value": 0.864250150442517,
+   "passed": true,
+   "note": "handoff acceptance"
+  },
+  {
+   "check": "EI within 30% of plate bare body (rigid_rings, conv_q2)",
+   "value": 0.9309424622986423,
+   "passed": true,
+   "note": "handoff acceptance"
+  },
+  {
+   "check": "EI within 30% of plate bare body (rigid_rings_lands, conv_q2)",
+   "value": 0.9442110918842896,
+   "passed": true,
+   "note": "handoff acceptance"
+  },
+  {
+   "check": "EI vs user database PA12 body EI 44,118 N mm^2 (solid rings)",
+   "value": 0.9149960751363998,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "EI vs rod M-cell EI 64,730 N mm^2 (includes \u00d81.8 mm NiTi backbone)",
+   "value": 0.6236327020936212,
+   "passed": true,
+   "note": "not a pass/fail: rod = PA12 body 44118 + backbone 20612 N mm^2 (backbone_20261108, niti18_E40)"
+  },
+  {
+   "check": "bond_q5: max linear-solve residual",
+   "value": 1.1181819678734153e-12,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "bond_q5: station wrench force closure (N)",
+   "value": 3.880558416894474e-09,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "bond_q3: max linear-solve residual",
+   "value": 1.6539624350503088e-12,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "bond_q3: station wrench force closure (N)",
+   "value": 6.3912516312767204e-09,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "area-mean axial shear convergence bond_q5 -> bond_q3",
+   "value": 0.044541143515239995,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "peak axial shear convergence bond_q5 -> bond_q3 (edge peak; reported, not converged to <5%)",
+   "value": 0.13177681553645326,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1709, z -12, crown 0.0 (mm)",
+   "value": 0.07624620718428814,
+   "passed": true,
+   "note": "undeformed bracket 0.0789; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1709, z +12, crown 0.0 (mm)",
+   "value": 0.07419374048023816,
+   "passed": true,
+   "note": "undeformed bracket 0.0789; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1885, z -12, crown 0.0 (mm)",
+   "value": 0.07633349484335454,
+   "passed": true,
+   "note": "undeformed bracket 0.0789; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1885, z +12, crown 0.0 (mm)",
+   "value": 0.07423949603755974,
+   "passed": true,
+   "note": "undeformed bracket 0.0789; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1709, z -12, crown 0.06 (mm)",
+   "value": 0.07935548339275438,
+   "passed": true,
+   "note": "undeformed bracket 0.0804; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1709, z +12, crown 0.06 (mm)",
+   "value": 0.07845768782097574,
+   "passed": true,
+   "note": "undeformed bracket 0.0804; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1885, z -12, crown 0.06 (mm)",
+   "value": 0.07939536871328322,
+   "passed": true,
+   "note": "undeformed bracket 0.0804; 0.025 mm probe offset"
+  },
+  {
+   "check": "solid-arm min gap at 0.2 deg tilt, step 1885, z +12, crown 0.06 (mm)",
+   "value": 0.07847624535968471,
+   "passed": true,
+   "note": "undeformed bracket 0.0804; 0.025 mm probe offset"
+  },
+  {
+   "check": "peak body principal strain (linear small-strain validity)",
+   "value": 0.03736035984802363,
+   "passed": false,
+   "note": "FAIL means the linear model is outside its validity in the hub/arm region; land bands peak 0.0067; max linearised rotation 0.85 rad"
+  },
+  {
+   "check": "total-Lagrangian end-rotation case converged to full load",
+   "value": 1.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "check": "end moment, nonlinear / linear (same rotation)",
+   "value": 0.990996262866416,
+   "passed": true,
+   "note": "geometric nonlinearity changes the end moment by less than 10%"
+  },
+  {
+   "check": "peak strain, nonlinear Green / linear",
+   "value": 0.9886362942392057,
+   "passed": true,
+   "note": "land bands 0.0045 / 0.0045"
+  }
+ ],
+ "all_passed": false
+}

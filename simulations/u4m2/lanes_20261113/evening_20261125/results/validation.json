@@ -1,0 +1,190 @@
+{
+ "checks": [
+  {
+   "name": "rod_steps covers all 3,405 states, finite",
+   "passed": true
+  },
+  {
+   "name": "rod rotations at step 1709 reproduce the 24 Nov archive",
+   "passed": true,
+   "max_diff_deg": 0.0
+  },
+  {
+   "name": "rod rotations at step 1885 reproduce the 24 Nov archive",
+   "passed": true,
+   "max_diff_deg": 0.0
+  },
+  {
+   "name": "q5 superposition reproduces the archived direct solves (steps 1,709/1,885, all lands, all metrics)",
+   "passed": true,
+   "max_relative_difference": 5.916664509278274e-09
+  },
+  {
+   "name": "q5 solve residuals < 1e-9",
+   "passed": true,
+   "residuals": [
+    2.778710085370151e-13,
+    3.4733789484951934e-13,
+    5.557420170740302e-13,
+    1.20410501650723e-12
+   ]
+  },
+  {
+   "name": "q5 phase coverage: straighten -> entry -> right out/return -> left out/return -> pitch -> exit, 3,405 states",
+   "passed": true,
+   "ranges": {
+    "straighten": [
+     0,
+     165
+    ],
+    "entry": [
+     166,
+     472
+    ],
+    "right_out": [
+     473,
+     913
+    ],
+    "right_return": [
+     914,
+     1355
+    ],
+    "left_out": [
+     1356,
+     1796
+    ],
+    "left_return": [
+     1797,
+     2240
+    ],
+    "pitch_up": [
+     2241,
+     2390
+    ],
+    "pitch_up_return": [
+     2391,
+     2540
+    ],
+    "pitch_down": [
+     2541,
+     2819
+    ],
+    "pitch_down_return": [
+     2820,
+     3098
+    ],
+    "exit": [
+     3099,
+     3404
+    ]
+   }
+  },
+  {
+   "name": "q3 superposition reproduces the archived direct solves (steps 1,709/1,885, all lands, all metrics)",
+   "passed": true,
+   "max_relative_difference": 3.2308855753072377e-09
+  },
+  {
+   "name": "q3 solve residuals < 1e-9",
+   "passed": true,
+   "residuals": [
+    2.2164683615140753e-13,
+    4.029950984909181e-13,
+    1.0477886152461368e-12,
+    1.0477873671339846e-12
+   ]
+  },
+  {
+   "name": "q3 phase coverage: straighten -> entry -> right out/return -> left out/return -> pitch -> exit, 3,405 states",
+   "passed": true,
+   "ranges": {
+    "straighten": [
+     0,
+     165
+    ],
+    "entry": [
+     166,
+     472
+    ],
+    "right_out": [
+     473,
+     913
+    ],
+    "right_return": [
+     914,
+     1355
+    ],
+    "left_out": [
+     1356,
+     1796
+    ],
+    "left_return": [
+     1797,
+     2240
+    ],
+    "pitch_up": [
+     2241,
+     2390
+    ],
+    "pitch_up_return": [
+     2391,
+     2540
+    ],
+    "pitch_down": [
+     2541,
+     2819
+    ],
+    "pitch_down_return": [
+     2820,
+     3098
+    ],
+    "exit": [
+     3099,
+     3404
+    ]
+   }
+  },
+  {
+   "name": "targeted probe reproduces the archived 24 Nov solid-arm gaps at steps 1,709/1,885",
+   "passed": true,
+   "max_abs_diff_mm": 6.0527832745904675e-12
+  },
+  {
+   "name": "probe sweep complete and finite",
+   "passed": true,
+   "rows": 2756,
+   "jobs": 2756
+  },
+  {
+   "name": "probe sweep (saved unit fields) reproduces the targeted probe",
+   "passed": true,
+   "max_abs_diff_mm": 0.0
+  },
+  {
+   "name": "strain envelope reproduces the archived 24 Nov step-1,709 peak and land-band strain",
+   "passed": true,
+   "max_abs_diff": 1.0933719207795178e-11
+  },
+  {
+   "name": "relative links resolve in simulations/u4m2/lanes_20261113/evening_20261125/README.md",
+   "passed": true,
+   "broken": []
+  },
+  {
+   "name": "relative links resolve in simulations/u4m2/lanes_20261113/evening_20261125/HANDOFF.md",
+   "passed": true,
+   "broken": []
+  },
+  {
+   "name": "relative links resolve in reports/daily/Evening_Report_2026_11_25.md",
+   "passed": true,
+   "broken": []
+  },
+  {
+   "name": "relative links resolve in README.md",
+   "passed": true,
+   "broken": []
+  }
+ ],
+ "all_passed": true
+}

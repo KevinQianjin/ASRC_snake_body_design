@@ -17,6 +17,11 @@ Scheduled morning and evening editions share a row for each reporting date. Thes
 
 | Date in 2026 | Subject | Read |
 |---|---|---|
+| 25 November | Whole-mission envelope of the bonded solid M6 model: bond demand, 0.2° tilt sweep and hub strain over all 3,405 states | [Evening Report](daily/Evening_Report_2026_11_25.md) |
+| 24 November | Whole-body solid M6 model: stiffness validated, bond demand 1–3.5 MPa mean, solid-arm clearance at 0.2° tilt | [Evening Report](daily/Evening_Report_2026_11_24.md) |
+| 23 November | Local solid M6 strut model; rod-map boundary conditions shown over-constrained | [Evening Report](daily/Evening_Report_2026_11_23.md) |
+| 22 November | Crowned M6 bond-layer tractions and bond motion with 0.2° tilt | [Evening Report](daily/Evening_Report_2026_11_22.md) |
+| 21 November | Full-mission crowned M6 certification, nominal and 0.2° tilt | [Evening Report](daily/Evening_Report_2026_11_21.md) |
 | 20 November | Crowned M6 bond land and tilt tolerance | [Evening Report](daily/Evening_Report_2026_11_20.md) |
 | 19 November | Wider M6 bonded sockets and assembly tilt | [Evening Report](daily/Evening_Report_2026_11_19.md) |
 | 18 November | Rotating guide seats and real web contact | [Evening Report](daily/Evening_Report_2026_11_18.md) |

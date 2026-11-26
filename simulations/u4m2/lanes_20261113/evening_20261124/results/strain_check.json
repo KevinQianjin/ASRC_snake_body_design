@@ -1,0 +1,83 @@
+{
+ "scope": "Peak strain of the whole-body solid field (body_bond, q5 mesh, G = 500 MPa, crowned, step 1,709,\n\"local\" moment scaling + station wrenches) - a validity check of the linear small-strain model.\nWrites results/strain_check.json.",
+ "step": 1709,
+ "mesh": {
+  "quality": 5.0,
+  "max_tet_volume_mm3": 0.4,
+  "tets": 130278,
+  "p2_nodes": 258073,
+  "dofs": 774219,
+  "reduced_dofs": 762645,
+  "layer_points": 91448,
+  "layer_max_edge_mm": 0.08,
+  "min_bary": -1.0427024544389902e-07,
+  "land_area_mm2": [
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.99991262699769,
+   7.9999126269976895,
+   7.9999126269976895,
+   7.9999126269976895
+  ],
+  "socket_nodes": [
+   262,
+   230,
+   285,
+   290,
+   287,
+   296,
+   284,
+   299
+  ],
+  "build_s": 39.722932179000054
+ },
+ "cases": {
+  "end_moment_only": {
+   "peak_abs_principal_strain": 0.0364552958947306,
+   "p99_9": 0.03320000880232831,
+   "p99": 0.02471123263177341,
+   "median": 0.0026757570167063385,
+   "peak_location_mm": [
+    -4.789729614651293,
+    -11.004357943086754,
+    -5.180684886713563
+   ],
+   "peak_r_mm": 12.001558378854146,
+   "volume_fraction_above_2pct": 0.027333855294063465,
+   "max_linearised_rotation_rad": 0.8511324484049271,
+   "peak_in_land_bands": 0.0073729854114662
+  },
+  "wrench_only": {
+   "peak_abs_principal_strain": 0.017914258782109227,
+   "p99_9": 0.014614217794701763,
+   "p99": 0.009862879547207498,
+   "median": 0.0010979994717518979,
+   "peak_location_mm": [
+    -8.89197073974514,
+    -20.880692466167922,
+    -33.9110721697247
+   ],
+   "peak_r_mm": 22.695163835124998,
+   "volume_fraction_above_2pct": 0.0,
+   "max_linearised_rotation_rad": 0.39750391985768735,
+   "peak_in_land_bands": 0.007199344400622417
+  },
+  "end_moment_plus_wrench": {
+   "peak_abs_principal_strain": 0.03736035984802363,
+   "p99_9": 0.03154786271828217,
+   "p99": 0.024091492051377592,
+   "median": 0.0026666493362368818,
+   "peak_location_mm": [
+    -4.818190609877828,
+    -6.971912242953753,
+    -17.924627196745323
+   ],
+   "peak_r_mm": 8.474816875694914,
+   "volume_fraction_above_2pct": 0.023503584642073104,
+   "max_linearised_rotation_rad": 0.8538908799085085,
+   "peak_in_land_bands": 0.006662710940395987
+  }
+ }
+}
