@@ -1,0 +1,2230 @@
+{
+ "scope": "Whole-mission bond-demand and relative-motion envelope of the bonded whole-body solid M6 model by\nlinear superposition \u2014 evening, 25 November 2026 (handoff item 1 of the 24 November evening run).\n\nThe 24 November model (``evening_20261124/body_bond.py``) is linear in its two step inputs: the\nrotation prescribed on the D1 end master and the two guide wrenches. One factorisation per\n(G, crown) case is solved for 15 unit right-hand sides (three unit D1 rotations, six unit wrench\ncomponents per guide). Every recovered quantity used here (layer tractions, layer slip, guide-\nminus-land rotation, non-rigid socket-wall motion and the body-relative-to-guide motion of the\nclearance patch) is a linear map of the solution, so each is stored as a (quantity x 15) matrix and\ncombined per step with that step's coefficients\n\n    c_st(step) = [ s_st(step) * omega(step) (3) | W_-12(step) (6) | W_+12(step) (6) ],\n\nomega = rod relative D0->D1 end rotation, s_st = rod local-to-mean moment ratio at the station\n(\"local\" scaling of the 24 Nov run), W = archived Round 2 station wrenches. This is exactly the\n24 November \"total_local\" field, evaluated at all 3,405 states of the archived 500 g yaw/pitch\nmission instead of two. The step-1,709/1,885 values are re-derived and compared with the archived\ndirect solves as a consistency check.\n\nThen the exact FCL tilt probe (26 tilts of +/-0.2 deg, the 24 Nov ``solid_arm_probe.py`` method) is\nrun on selected steps: the archived baselines, the 20 Nov low-margin steps (787 at -12 mm, 430 at\n+12 mm) and the steps with the largest body-relative-to-guide motion NEAR THE GUIDE.\n\nScope limits unchanged: linear small-strain FE (linearised rotations to ~0.85 rad, checked to ~1%\nby the 24 Nov total-Lagrangian run for end rotation only), assumed adhesive G, PA12 E = 1,530 MPa,\nno NiTi backbone in the body, no rope contact, no adhesive failure, rigid-CAD clearance only.\n",
+ "mesh": {
+  "quality": 3.0,
+  "max_tet_volume_mm3": 0.3,
+  "tets": 188766,
+  "p2_nodes": 358355,
+  "dofs": 1075065,
+  "reduced_dofs": 1058496,
+  "layer_points": 91448,
+  "layer_max_edge_mm": 0.08,
+  "min_bary": -9.904219213346361e-08,
+  "land_area_mm2": [
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.99991262699769,
+   7.9999126269976895,
+   7.9999126269976895,
+   7.9999126269976895
+  ],
+  "socket_nodes": [
+   358,
+   310,
+   303,
+   292,
+   326,
+   276,
+   311,
+   330
+  ],
+  "build_s": 60.23379218000002
+ },
+ "parameters": {
+  "quality": 3.0,
+  "max_vol": 0.3,
+  "max_edge": 0.08,
+  "G": [
+   500.0,
+   1500.0
+  ],
+  "crown": [
+   0.0,
+   0.06
+  ],
+  "probe_G": 500.0,
+  "probe_top": 3,
+  "angle": 0.2,
+  "near_r": 12.0,
+  "near_z": 3.0,
+  "out": "results/q3",
+  "no_probe": true,
+  "save_patch": false
+ },
+ "n_steps": 3405,
+ "phases": [
+  "straighten",
+  "entry",
+  "right_out",
+  "right_return",
+  "left_out",
+  "left_return",
+  "pitch_up",
+  "pitch_up_return",
+  "pitch_down",
+  "pitch_down_return",
+  "exit"
+ ],
+ "phase_step_ranges": {
+  "straighten": [
+   0,
+   165
+  ],
+  "entry": [
+   166,
+   472
+  ],
+  "right_out": [
+   473,
+   913
+  ],
+  "right_return": [
+   914,
+   1355
+  ],
+  "left_out": [
+   1356,
+   1796
+  ],
+  "left_return": [
+   1797,
+   2240
+  ],
+  "pitch_up": [
+   2241,
+   2390
+  ],
+  "pitch_up_return": [
+   2391,
+   2540
+  ],
+  "pitch_down": [
+   2541,
+   2819
+  ],
+  "pitch_down_return": [
+   2820,
+   3098
+  ],
+  "exit": [
+   3099,
+   3404
+  ]
+ },
+ "cases": [
+  {
+   "G_MPa": 500.0,
+   "crown_mm": 0.0,
+   "solve_residual": 2.2164683615140753e-13,
+   "envelope": {
+    "-12@67.5": {
+     "peak_normal_MPa": {
+      "max": 20.612905745682326,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 20.61189288269044
+     },
+     "peak_axial_MPa": {
+      "max": 8.67522869306964,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 8.604418806824143
+     },
+     "peak_cross_MPa": {
+      "max": 5.099641784835808,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 4.447533943600496
+     },
+     "mean_normal_MPa": {
+      "max": 2.6844442021059396,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.5786678772539977
+     },
+     "mean_axial_MPa": {
+      "max": 2.399397174410047,
+      "step": 1869,
+      "phase": "left_return",
+      "at_1709": 2.369218588663023
+     },
+     "mean_cross_MPa": {
+      "max": 0.7963313362902718,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 0.7599161637016778
+     },
+     "slip": {
+      "max": 0.005770555774286849,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.005770555774286849
+     },
+     "rel_rot_deg": {
+      "max": 0.05010293880404125,
+      "step": 1693,
+      "phase": "left_out",
+      "at_1709": 0.049371458889413876
+     },
+     "sock_in": {
+      "max": 0.005081683009423819,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.005039118436910388
+     },
+     "sock_end": {
+      "max": 0.06183920359824194,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.06181156252091857
+     }
+    },
+    "-12@157.5": {
+     "peak_normal_MPa": {
+      "max": 14.77767128780136,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 8.2974804048826
+     },
+     "peak_axial_MPa": {
+      "max": 8.057919418834594,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 4.1539409590315
+     },
+     "peak_cross_MPa": {
+      "max": 5.606995319945691,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 3.6387306692155788
+     },
+     "mean_normal_MPa": {
+      "max": 1.958013261724236,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.8253534144483693
+     },
+     "mean_axial_MPa": {
+      "max": 1.834016632451839,
+      "step": 805,
+      "phase": "right_out",
+      "at_1709": 1.0212352522197372
+     },
+     "mean_cross_MPa": {
+      "max": 0.7583749781678402,
+      "step": 1696,
+      "phase": "left_out",
+      "at_1709": 0.7486760623583673
+     },
+     "slip": {
+      "max": 0.005097321456195409,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.002654176457474501
+     },
+     "rel_rot_deg": {
+      "max": 0.042258605324804986,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.03168527954374575
+     },
+     "sock_in": {
+      "max": 0.003327646354029808,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0012377220227928136
+     },
+     "sock_end": {
+      "max": 0.04128854894316309,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.016553885395436507
+     }
+    },
+    "-12@247.5": {
+     "peak_normal_MPa": {
+      "max": 21.153680102326703,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 21.153680102326703
+     },
+     "peak_axial_MPa": {
+      "max": 8.898457252635295,
+      "step": 842,
+      "phase": "right_out",
+      "at_1709": 8.710688296936413
+     },
+     "peak_cross_MPa": {
+      "max": 5.91807681378897,
+      "step": 833,
+      "phase": "right_out",
+      "at_1709": 5.421214316901948
+     },
+     "mean_normal_MPa": {
+      "max": 2.612165782886501,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.503834892467614
+     },
+     "mean_axial_MPa": {
+      "max": 2.484748701336344,
+      "step": 1869,
+      "phase": "left_return",
+      "at_1709": 2.4535257518173252
+     },
+     "mean_cross_MPa": {
+      "max": 0.8286096145095672,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 0.7830350915234537
+     },
+     "slip": {
+      "max": 0.005778831140484826,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.005778831140484826
+     },
+     "rel_rot_deg": {
+      "max": 0.044471140660742446,
+      "step": 1690,
+      "phase": "left_out",
+      "at_1709": 0.043302614675732674
+     },
+     "sock_in": {
+      "max": 0.00417603105513447,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.004147666136912592
+     },
+     "sock_end": {
+      "max": 0.06361235739551488,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.06356562481897765
+     }
+    },
+    "-12@337.5": {
+     "peak_normal_MPa": {
+      "max": 15.309026309542688,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 9.16245943343157
+     },
+     "peak_axial_MPa": {
+      "max": 9.001714428515157,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 4.640025107161956
+     },
+     "peak_cross_MPa": {
+      "max": 5.866450439362578,
+      "step": 815,
+      "phase": "right_out",
+      "at_1709": 4.146590462980575
+     },
+     "mean_normal_MPa": {
+      "max": 1.9610286297772106,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.860522289299655
+     },
+     "mean_axial_MPa": {
+      "max": 1.8459583697463082,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.0459809282130084
+     },
+     "mean_cross_MPa": {
+      "max": 0.8125008819103943,
+      "step": 1680,
+      "phase": "left_out",
+      "at_1709": 0.7662009727881482
+     },
+     "slip": {
+      "max": 0.005447566592140618,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.002927950087840154
+     },
+     "rel_rot_deg": {
+      "max": 0.03839835227022273,
+      "step": 1938,
+      "phase": "left_return",
+      "at_1709": 0.031048090280369756
+     },
+     "sock_in": {
+      "max": 0.0034487233271158855,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0013838353273238778
+     },
+     "sock_end": {
+      "max": 0.047379100144300586,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.01817214592829958
+     }
+    },
+    "+12@67.5": {
+     "peak_normal_MPa": {
+      "max": 17.025301131159225,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 17.025301131159225
+     },
+     "peak_axial_MPa": {
+      "max": 8.63117989278547,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 8.129019512295383
+     },
+     "peak_cross_MPa": {
+      "max": 5.323720062286838,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 3.857937521517692
+     },
+     "mean_normal_MPa": {
+      "max": 2.461753694215947,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.4562360475163487
+     },
+     "mean_axial_MPa": {
+      "max": 2.2668621421670148,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.2625877055761903
+     },
+     "mean_cross_MPa": {
+      "max": 0.7810472720464321,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.6716089111090204
+     },
+     "slip": {
+      "max": 0.00528060942486799,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 0.005130666365606447
+     },
+     "rel_rot_deg": {
+      "max": 0.04794970702072628,
+      "step": 812,
+      "phase": "right_out",
+      "at_1709": 0.04251765545818761
+     },
+     "sock_in": {
+      "max": 0.0037096731697094996,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.0037072943301002647
+     },
+     "sock_end": {
+      "max": 0.05180215290617179,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.051795983385733074
+     }
+    },
+    "+12@157.5": {
+     "peak_normal_MPa": {
+      "max": 13.712383240533061,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 12.595856454931338
+     },
+     "peak_axial_MPa": {
+      "max": 8.273287399237539,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 6.637609220339128
+     },
+     "peak_cross_MPa": {
+      "max": 5.237973982517047,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 4.426564771717854
+     },
+     "mean_normal_MPa": {
+      "max": 2.093224550863891,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.3987741202542783
+     },
+     "mean_axial_MPa": {
+      "max": 1.8951567860277632,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.8012167159765422
+     },
+     "mean_cross_MPa": {
+      "max": 1.0447450644929772,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 1.0444047489615373
+     },
+     "slip": {
+      "max": 0.005088172638297294,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 0.0035291589069446163
+     },
+     "rel_rot_deg": {
+      "max": 0.05753438105947815,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.056481657011728796
+     },
+     "sock_in": {
+      "max": 0.002318244491934844,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.0021181907442690117
+     },
+     "sock_end": {
+      "max": 0.03950973974405332,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.02329081679254741
+     }
+    },
+    "+12@247.5": {
+     "peak_normal_MPa": {
+      "max": 18.855272073847047,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 18.85363844441577
+     },
+     "peak_axial_MPa": {
+      "max": 8.919294369671688,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 7.698873637570642
+     },
+     "peak_cross_MPa": {
+      "max": 5.351529240169399,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 3.9617918456969994
+     },
+     "mean_normal_MPa": {
+      "max": 2.54824721011098,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.5438083314307214
+     },
+     "mean_axial_MPa": {
+      "max": 2.2825154183287935,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.2788440625114617
+     },
+     "mean_cross_MPa": {
+      "max": 0.7823349507526106,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.6745203197373508
+     },
+     "slip": {
+      "max": 0.005486057978463399,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.005155114844152564
+     },
+     "rel_rot_deg": {
+      "max": 0.04805035246403394,
+      "step": 813,
+      "phase": "right_out",
+      "at_1709": 0.04055614502983074
+     },
+     "sock_in": {
+      "max": 0.0028146722425285565,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.00275004176857026
+     },
+     "sock_end": {
+      "max": 0.05318505139220392,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.053176432267138404
+     }
+    },
+    "+12@337.5": {
+     "peak_normal_MPa": {
+      "max": 14.375962775352187,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 12.653650990328984
+     },
+     "peak_axial_MPa": {
+      "max": 9.03859363926715,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 6.69315531136236
+     },
+     "peak_cross_MPa": {
+      "max": 5.807581703608211,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 4.723739365749393
+     },
+     "mean_normal_MPa": {
+      "max": 2.0891393699625587,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.385091533748046
+     },
+     "mean_axial_MPa": {
+      "max": 1.9093655513998191,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 1.808123349234675
+     },
+     "mean_cross_MPa": {
+      "max": 1.0339974557364116,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 1.0339974557364116
+     },
+     "slip": {
+      "max": 0.005479461018879202,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0036548293167414795
+     },
+     "rel_rot_deg": {
+      "max": 0.057596004043208894,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 0.05745086405602254
+     },
+     "sock_in": {
+      "max": 0.002765021334508976,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0021410241315652817
+     },
+     "sock_end": {
+      "max": 0.03915671020929387,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.023555748428750245
+     }
+    },
+    "patch-12": {
+     "near": {
+      "max": 0.46046366457702526,
+      "step": 1775,
+      "phase": "left_out"
+     },
+     "all": {
+      "max": 7.210235792416329,
+      "step": 1866,
+      "phase": "left_return"
+     }
+    },
+    "patch+12": {
+     "near": {
+      "max": 0.4108549823091031,
+      "step": 797,
+      "phase": "right_out"
+     },
+     "all": {
+      "max": 1.6231781461422576,
+      "step": 809,
+      "phase": "right_out"
+     }
+    }
+   },
+   "seconds": 89.81710754900007
+  },
+  {
+   "G_MPa": 500.0,
+   "crown_mm": 0.06,
+   "solve_residual": 4.029950984909181e-13,
+   "envelope": {
+    "-12@67.5": {
+     "peak_normal_MPa": {
+      "max": 17.91175466480381,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 17.91175466480381
+     },
+     "peak_axial_MPa": {
+      "max": 7.320197011368592,
+      "step": 1700,
+      "phase": "left_out",
+      "at_1709": 7.258406746463465
+     },
+     "peak_cross_MPa": {
+      "max": 4.345418238466693,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 3.8022440167253926
+     },
+     "mean_normal_MPa": {
+      "max": 2.6182606038709517,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.522314726559198
+     },
+     "mean_axial_MPa": {
+      "max": 2.336751734982258,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 2.318204618597956
+     },
+     "mean_cross_MPa": {
+      "max": 0.7708048175976465,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 0.7362575587015792
+     },
+     "slip": {
+      "max": 0.006059817054081952,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.006059817054081952
+     },
+     "rel_rot_deg": {
+      "max": 0.054170052995296036,
+      "step": 1693,
+      "phase": "left_out",
+      "at_1709": 0.05332819012767432
+     },
+     "sock_in": {
+      "max": 0.005304183278711462,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.005259249319904779
+     },
+     "sock_end": {
+      "max": 0.062337134163383254,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.06230604113021584
+     }
+    },
+    "-12@157.5": {
+     "peak_normal_MPa": {
+      "max": 12.809805802416722,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 7.255593288529981
+     },
+     "peak_axial_MPa": {
+      "max": 6.917641362199202,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 3.5790338359961598
+     },
+     "peak_cross_MPa": {
+      "max": 4.812104928036839,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 3.1416344161283463
+     },
+     "mean_normal_MPa": {
+      "max": 1.923505094053029,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.8163228094323324
+     },
+     "mean_axial_MPa": {
+      "max": 1.7983066818541766,
+      "step": 802,
+      "phase": "right_out",
+      "at_1709": 1.0152051371424853
+     },
+     "mean_cross_MPa": {
+      "max": 0.7480501603521835,
+      "step": 1696,
+      "phase": "left_out",
+      "at_1709": 0.7385650024618852
+     },
+     "slip": {
+      "max": 0.005350197535487657,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.0028043276097149917
+     },
+     "rel_rot_deg": {
+      "max": 0.04572040099171147,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.03399957799864514
+     },
+     "sock_in": {
+      "max": 0.0034607688131737618,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0013136341778824613
+     },
+     "sock_end": {
+      "max": 0.041601999536844264,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.016673412346029662
+     }
+    },
+    "-12@247.5": {
+     "peak_normal_MPa": {
+      "max": 18.320853950131227,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 18.320853950131227
+     },
+     "peak_axial_MPa": {
+      "max": 7.609278187253722,
+      "step": 840,
+      "phase": "right_out",
+      "at_1709": 7.434514390798668
+     },
+     "peak_cross_MPa": {
+      "max": 5.0743930876777705,
+      "step": 833,
+      "phase": "right_out",
+      "at_1709": 4.6094576878885425
+     },
+     "mean_normal_MPa": {
+      "max": 2.5569299334675417,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.4575562575052468
+     },
+     "mean_axial_MPa": {
+      "max": 2.4204606597838674,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 2.401030642454218
+     },
+     "mean_cross_MPa": {
+      "max": 0.8028485536732333,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 0.7592737811446594
+     },
+     "slip": {
+      "max": 0.006069395792132574,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.006069395792132574
+     },
+     "rel_rot_deg": {
+      "max": 0.048218442270341715,
+      "step": 1689,
+      "phase": "left_out",
+      "at_1709": 0.04689276349873104
+     },
+     "sock_in": {
+      "max": 0.004332381404108938,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.004302107631914252
+     },
+     "sock_end": {
+      "max": 0.06411428830009576,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.06406266272275299
+     }
+    },
+    "-12@337.5": {
+     "peak_normal_MPa": {
+      "max": 13.308007989674826,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 7.96097189381628
+     },
+     "peak_axial_MPa": {
+      "max": 7.669144625510053,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 3.976503967317977
+     },
+     "peak_cross_MPa": {
+      "max": 5.031266645340472,
+      "step": 815,
+      "phase": "right_out",
+      "at_1709": 3.5545740092060703
+     },
+     "mean_normal_MPa": {
+      "max": 1.9171185078420838,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.8480496447943896
+     },
+     "mean_axial_MPa": {
+      "max": 1.8099115313518075,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.0399567957417406
+     },
+     "mean_cross_MPa": {
+      "max": 0.8005332176487744,
+      "step": 1679,
+      "phase": "left_out",
+      "at_1709": 0.7542760279759528
+     },
+     "slip": {
+      "max": 0.005685255123749805,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.003076062321013755
+     },
+     "rel_rot_deg": {
+      "max": 0.04124764639677459,
+      "step": 1938,
+      "phase": "left_return",
+      "at_1709": 0.03339126511071237
+     },
+     "sock_in": {
+      "max": 0.003571031044714481,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.001449908976340767
+     },
+     "sock_end": {
+      "max": 0.04775426506006653,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.018305764251060317
+     }
+    },
+    "+12@67.5": {
+     "peak_normal_MPa": {
+      "max": 14.77991115350894,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 14.77991115350894
+     },
+     "peak_axial_MPa": {
+      "max": 7.435943078107217,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 6.890474916100495
+     },
+     "peak_cross_MPa": {
+      "max": 4.5977008183690105,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 3.3039920252055546
+     },
+     "mean_normal_MPa": {
+      "max": 2.4383330430871824,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.432418125356619
+     },
+     "mean_axial_MPa": {
+      "max": 2.2411750220203417,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.236738515794674
+     },
+     "mean_cross_MPa": {
+      "max": 0.7710471043239148,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.6612950258389297
+     },
+     "slip": {
+      "max": 0.005563231373179251,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 0.005413253440285655
+     },
+     "rel_rot_deg": {
+      "max": 0.052126253082181995,
+      "step": 816,
+      "phase": "right_out",
+      "at_1709": 0.046776917668804374
+     },
+     "sock_in": {
+      "max": 0.003871254466020162,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.0038685050053265248
+     },
+     "sock_end": {
+      "max": 0.05214199035445646,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.052134260248028357
+     }
+    },
+    "+12@157.5": {
+     "peak_normal_MPa": {
+      "max": 11.825100235655297,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 10.998263694347662
+     },
+     "peak_axial_MPa": {
+      "max": 7.0891943584720085,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 5.842645712003992
+     },
+     "peak_cross_MPa": {
+      "max": 4.512584515117905,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 3.8063613231502567
+     },
+     "mean_normal_MPa": {
+      "max": 2.0711461326357217,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.3869306814948912
+     },
+     "mean_axial_MPa": {
+      "max": 1.8778029043171918,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.791256552053862
+     },
+     "mean_cross_MPa": {
+      "max": 1.0309043717821234,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 1.0305970888576033
+     },
+     "slip": {
+      "max": 0.005334402051785039,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 0.003741839237294516
+     },
+     "rel_rot_deg": {
+      "max": 0.061915412025214216,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.06060517918494484
+     },
+     "sock_in": {
+      "max": 0.002414270998040327,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.0022346260218620738
+     },
+     "sock_end": {
+      "max": 0.03977589065458724,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.023402726750530674
+     }
+    },
+    "+12@247.5": {
+     "peak_normal_MPa": {
+      "max": 16.26228607469946,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 16.261132265410925
+     },
+     "peak_axial_MPa": {
+      "max": 7.6750255497188915,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 6.507056298488353
+     },
+     "peak_cross_MPa": {
+      "max": 4.633541057494354,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 3.400350374706143
+     },
+     "mean_normal_MPa": {
+      "max": 2.517174187018259,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.512166005838695
+     },
+     "mean_axial_MPa": {
+      "max": 2.258216798776661,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.2542643022061277
+     },
+     "mean_cross_MPa": {
+      "max": 0.7723542465713997,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.6662698594128437
+     },
+     "slip": {
+      "max": 0.005774895211088881,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.00542077539771454
+     },
+     "rel_rot_deg": {
+      "max": 0.05200807482565499,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.04464998517098949
+     },
+     "sock_in": {
+      "max": 0.002968588914298845,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.0028765775355736674
+     },
+     "sock_end": {
+      "max": 0.05354804309638647,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.05353808078671254
+     }
+    },
+    "+12@337.5": {
+     "peak_normal_MPa": {
+      "max": 12.40221395837463,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 11.149241447084673
+     },
+     "peak_axial_MPa": {
+      "max": 7.756352387571473,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 5.897734939964681
+     },
+     "peak_cross_MPa": {
+      "max": 4.961629030644329,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 4.0726402178290835
+     },
+     "mean_normal_MPa": {
+      "max": 2.064634668977143,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.3741721558124906
+     },
+     "mean_axial_MPa": {
+      "max": 1.8935747780324534,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 1.7990525758678715
+     },
+     "mean_cross_MPa": {
+      "max": 1.0207792271920653,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 1.0207792271920653
+     },
+     "slip": {
+      "max": 0.005752277296310459,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0038504557986302605
+     },
+     "rel_rot_deg": {
+      "max": 0.0619376697670333,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 0.06177710585695324
+     },
+     "sock_in": {
+      "max": 0.002897277594657021,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0022704161169136558
+     },
+     "sock_end": {
+      "max": 0.03945899017991729,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.02367404259103637
+     }
+    },
+    "patch-12": {
+     "near": {
+      "max": 0.4612897877214724,
+      "step": 1775,
+      "phase": "left_out"
+     },
+     "all": {
+      "max": 7.210336022016025,
+      "step": 1866,
+      "phase": "left_return"
+     }
+    },
+    "patch+12": {
+     "near": {
+      "max": 0.4103943566042003,
+      "step": 797,
+      "phase": "right_out"
+     },
+     "all": {
+      "max": 1.6225336626802664,
+      "step": 809,
+      "phase": "right_out"
+     }
+    }
+   },
+   "seconds": 87.14412259999995
+  },
+  {
+   "G_MPa": 1500.0,
+   "crown_mm": 0.0,
+   "solve_residual": 1.0477886152461368e-12,
+   "envelope": {
+    "-12@67.5": {
+     "peak_normal_MPa": {
+      "max": 34.963157190179295,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 34.94991474914214
+     },
+     "peak_axial_MPa": {
+      "max": 16.5379446096679,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 16.489672303259933
+     },
+     "peak_cross_MPa": {
+      "max": 9.179703262668648,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 8.160959413980539
+     },
+     "mean_normal_MPa": {
+      "max": 3.582801395540309,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.395114131858887
+     },
+     "mean_axial_MPa": {
+      "max": 3.4912946488759062,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.3475211453252824
+     },
+     "mean_cross_MPa": {
+      "max": 1.2050706304571124,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 1.14197404845333
+     },
+     "slip": {
+      "max": 0.0034754965657491674,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 0.0034725977435613566
+     },
+     "rel_rot_deg": {
+      "max": 0.01997229060860105,
+      "step": 1699,
+      "phase": "left_out",
+      "at_1709": 0.019853221268751844
+     },
+     "sock_in": {
+      "max": 0.003237855764363929,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.0032098965631357475
+     },
+     "sock_end": {
+      "max": 0.05757841966521954,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.05757794774917211
+     }
+    },
+    "-12@157.5": {
+     "peak_normal_MPa": {
+      "max": 28.024777148874154,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 14.452165629733932
+     },
+     "peak_axial_MPa": {
+      "max": 14.693154411834985,
+      "step": 811,
+      "phase": "right_out",
+      "at_1709": 7.209116425140157
+     },
+     "peak_cross_MPa": {
+      "max": 11.224327017424892,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 6.327994690585776
+     },
+     "mean_normal_MPa": {
+      "max": 2.479730082730726,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 1.01444074299702
+     },
+     "mean_axial_MPa": {
+      "max": 2.4464622912622453,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 1.1057642577434037
+     },
+     "mean_cross_MPa": {
+      "max": 0.9817759773375724,
+      "step": 1693,
+      "phase": "left_out",
+      "at_1709": 0.9677532244739804
+     },
+     "slip": {
+      "max": 0.00316803352121865,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.0015554493893495066
+     },
+     "rel_rot_deg": {
+      "max": 0.01551390174706548,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.013026746237123972
+     },
+     "sock_in": {
+      "max": 0.002185621456488288,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0007271626290740864
+     },
+     "sock_end": {
+      "max": 0.0386465756729274,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.015622523024012345
+     }
+    },
+    "-12@247.5": {
+     "peak_normal_MPa": {
+      "max": 36.41484874249687,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 36.40814525613892
+     },
+     "peak_axial_MPa": {
+      "max": 16.8215352614682,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 16.8215352614682
+     },
+     "peak_cross_MPa": {
+      "max": 11.818990262350553,
+      "step": 842,
+      "phase": "right_out",
+      "at_1709": 11.383754541290894
+     },
+     "mean_normal_MPa": {
+      "max": 3.1393354748130378,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.968100803059863
+     },
+     "mean_axial_MPa": {
+      "max": 3.6020925097406806,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.4497278978592534
+     },
+     "mean_cross_MPa": {
+      "max": 1.1991908698417053,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 1.1260271788645215
+     },
+     "slip": {
+      "max": 0.003613905035919223,
+      "step": 1726,
+      "phase": "left_out",
+      "at_1709": 0.003583461830346487
+     },
+     "rel_rot_deg": {
+      "max": 0.017198004692907685,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.01647924925148771
+     },
+     "sock_in": {
+      "max": 0.0028586749723067493,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 0.0028004629290124855
+     },
+     "sock_end": {
+      "max": 0.05954598057871366,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.05953450997915255
+     }
+    },
+    "-12@337.5": {
+     "peak_normal_MPa": {
+      "max": 26.304555893085567,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 15.557668516502336
+     },
+     "peak_axial_MPa": {
+      "max": 16.82790339227596,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 8.14802499443487
+     },
+     "peak_cross_MPa": {
+      "max": 11.24608494691784,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 7.3524340148189
+     },
+     "mean_normal_MPa": {
+      "max": 2.57658691778772,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 1.06109107368045
+     },
+     "mean_axial_MPa": {
+      "max": 2.53876255976197,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 1.149331593883645
+     },
+     "mean_cross_MPa": {
+      "max": 1.1029274018453046,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 1.0198598801583942
+     },
+     "slip": {
+      "max": 0.0033592731806759758,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0017049413510713532
+     },
+     "rel_rot_deg": {
+      "max": 0.015693869252647676,
+      "step": 1938,
+      "phase": "left_return",
+      "at_1709": 0.0125352117223095
+     },
+     "sock_in": {
+      "max": 0.002267787784846474,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0007995354460061141
+     },
+     "sock_end": {
+      "max": 0.04416462894936068,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.017097538765738052
+     }
+    },
+    "+12@67.5": {
+     "peak_normal_MPa": {
+      "max": 28.409918143869085,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 28.40612429111715
+     },
+     "peak_axial_MPa": {
+      "max": 14.883033829258112,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 14.833652273251897
+     },
+     "peak_cross_MPa": {
+      "max": 9.115826253208105,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 7.012684504170552
+     },
+     "mean_normal_MPa": {
+      "max": 3.087580441876477,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 3.0766131205345215
+     },
+     "mean_axial_MPa": {
+      "max": 2.720352908329354,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.716596873685506
+     },
+     "mean_cross_MPa": {
+      "max": 0.993227025305631,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.8712888309145507
+     },
+     "slip": {
+      "max": 0.0030845449954850783,
+      "step": 986,
+      "phase": "right_return",
+      "at_1709": 0.0030198349329161917
+     },
+     "rel_rot_deg": {
+      "max": 0.01734826568599821,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.013371342698113783
+     },
+     "sock_in": {
+      "max": 0.0022792612354070067,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.002278220368976706
+     },
+     "sock_end": {
+      "max": 0.048824497053666885,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.048824497053666885
+     }
+    },
+    "+12@157.5": {
+     "peak_normal_MPa": {
+      "max": 24.89730370062584,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 20.041253189574324
+     },
+     "peak_axial_MPa": {
+      "max": 14.653303554832373,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 10.206101899942473
+     },
+     "peak_cross_MPa": {
+      "max": 9.642276845598882,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 7.588754062205224
+     },
+     "mean_normal_MPa": {
+      "max": 2.693294749749714,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.6317108712237829
+     },
+     "mean_axial_MPa": {
+      "max": 2.168845235781532,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.93961392909263
+     },
+     "mean_cross_MPa": {
+      "max": 1.3457507321151367,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 1.3455022088343478
+     },
+     "slip": {
+      "max": 0.0030315261908660843,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 0.0019925796117023094
+     },
+     "rel_rot_deg": {
+      "max": 0.02443391020326283,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.023255946551745493
+     },
+     "sock_in": {
+      "max": 0.001492547970050862,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.001272426406809485
+     },
+     "sock_end": {
+      "max": 0.03726274755091911,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.022359732032577646
+     }
+    },
+    "+12@247.5": {
+     "peak_normal_MPa": {
+      "max": 32.68175936119759,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 32.673875912480334
+     },
+     "peak_axial_MPa": {
+      "max": 15.30425654106439,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 14.376827780944954
+     },
+     "peak_cross_MPa": {
+      "max": 9.545188748660966,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 7.374345501936436
+     },
+     "mean_normal_MPa": {
+      "max": 3.4380151422061433,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 3.427168584208194
+     },
+     "mean_axial_MPa": {
+      "max": 2.6790943983997986,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.67541414139241
+     },
+     "mean_cross_MPa": {
+      "max": 1.029436918036184,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.874424720869387
+     },
+     "slip": {
+      "max": 0.0031708593071263056,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.003031237677394778
+     },
+     "rel_rot_deg": {
+      "max": 0.019097063375638938,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.012920049691275514
+     },
+     "sock_in": {
+      "max": 0.0014884839527351615,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.0014844085324226867
+     },
+     "sock_end": {
+      "max": 0.04997773510336731,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.04997773510336731
+     }
+    },
+    "+12@337.5": {
+     "peak_normal_MPa": {
+      "max": 25.840746234634246,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 18.96400178207249
+     },
+     "peak_axial_MPa": {
+      "max": 15.746406044521402,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 10.123935583247558
+     },
+     "peak_cross_MPa": {
+      "max": 10.112381475602211,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 8.010445597563542
+     },
+     "mean_normal_MPa": {
+      "max": 2.6891060016990154,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.5956832793639726
+     },
+     "mean_axial_MPa": {
+      "max": 2.191624021037227,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.935258093256241
+     },
+     "mean_cross_MPa": {
+      "max": 1.3320343922268605,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 1.3320343922268605
+     },
+     "slip": {
+      "max": 0.003212063997638625,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.002082502134431325
+     },
+     "rel_rot_deg": {
+      "max": 0.023171065855372423,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 0.023155744509554023
+     },
+     "sock_in": {
+      "max": 0.0016429268606901462,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.001253717823245958
+     },
+     "sock_end": {
+      "max": 0.036623411023925787,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.02266411517915569
+     }
+    },
+    "patch-12": {
+     "near": {
+      "max": 0.45361456757366475,
+      "step": 1775,
+      "phase": "left_out"
+     },
+     "all": {
+      "max": 7.208861231381131,
+      "step": 1866,
+      "phase": "left_return"
+     }
+    },
+    "patch+12": {
+     "near": {
+      "max": 0.4147742721838837,
+      "step": 797,
+      "phase": "right_out"
+     },
+     "all": {
+      "max": 1.6281842677427785,
+      "step": 809,
+      "phase": "right_out"
+     }
+    }
+   },
+   "seconds": 96.4414143460001
+  },
+  {
+   "G_MPa": 1500.0,
+   "crown_mm": 0.06,
+   "solve_residual": 1.0477873671339846e-12,
+   "envelope": {
+    "-12@67.5": {
+     "peak_normal_MPa": {
+      "max": 30.418642482689442,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 30.406890078964334
+     },
+     "peak_axial_MPa": {
+      "max": 14.144407114368072,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 14.070644338611254
+     },
+     "peak_cross_MPa": {
+      "max": 7.941027429527592,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 7.062246979484157
+     },
+     "mean_normal_MPa": {
+      "max": 3.502574920877112,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.3220528267398555
+     },
+     "mean_axial_MPa": {
+      "max": 3.3924180715244265,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.2593822402457358
+     },
+     "mean_cross_MPa": {
+      "max": 1.1789120713262597,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 1.117601414611337
+     },
+     "slip": {
+      "max": 0.0036849466184006715,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.0036849466184006715
+     },
+     "rel_rot_deg": {
+      "max": 0.021916773705154602,
+      "step": 1698,
+      "phase": "left_out",
+      "at_1709": 0.021765102773258733
+     },
+     "sock_in": {
+      "max": 0.0034286084549362637,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.003399764696047826
+     },
+     "sock_end": {
+      "max": 0.058054565459203414,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.05805196996160303
+     }
+    },
+    "-12@157.5": {
+     "peak_normal_MPa": {
+      "max": 24.264432333466544,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 12.679944510123235
+     },
+     "peak_axial_MPa": {
+      "max": 12.713940114362396,
+      "step": 811,
+      "phase": "right_out",
+      "at_1709": 6.267331249078964
+     },
+     "peak_cross_MPa": {
+      "max": 9.684906580554545,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 5.527980725671405
+     },
+     "mean_normal_MPa": {
+      "max": 2.4388589898599125,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.9934719241117227
+     },
+     "mean_axial_MPa": {
+      "max": 2.3942949931052464,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 1.1010079450856662
+     },
+     "mean_cross_MPa": {
+      "max": 0.9624989012591487,
+      "step": 1693,
+      "phase": "left_out",
+      "at_1709": 0.948977207587854
+     },
+     "slip": {
+      "max": 0.003344332439274853,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.0016550309486202727
+     },
+     "rel_rot_deg": {
+      "max": 0.017051403282420198,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.014008095047393245
+     },
+     "sock_in": {
+      "max": 0.002303505131604004,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0007766349731338069
+     },
+     "sock_end": {
+      "max": 0.03894379797905182,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.015746366020611597
+     }
+    },
+    "-12@247.5": {
+     "peak_normal_MPa": {
+      "max": 31.71881263841442,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 31.712646064380085
+     },
+     "peak_axial_MPa": {
+      "max": 14.465282742589604,
+      "step": 1726,
+      "phase": "left_out",
+      "at_1709": 14.315921326716971
+     },
+     "peak_cross_MPa": {
+      "max": 10.20397601717559,
+      "step": 842,
+      "phase": "right_out",
+      "at_1709": 9.7771964285021
+     },
+     "mean_normal_MPa": {
+      "max": 3.075176237752377,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 2.909075894075338
+     },
+     "mean_axial_MPa": {
+      "max": 3.5038785331313957,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 3.3639429822724365
+     },
+     "mean_cross_MPa": {
+      "max": 1.1783365095880287,
+      "step": 1866,
+      "phase": "left_return",
+      "at_1709": 1.1066430372668266
+     },
+     "slip": {
+      "max": 0.0038087905327335767,
+      "step": 1726,
+      "phase": "left_out",
+      "at_1709": 0.0037766348696183175
+     },
+     "rel_rot_deg": {
+      "max": 0.0187018213937077,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.018095992195271374
+     },
+     "sock_in": {
+      "max": 0.0029542176149404777,
+      "step": 1875,
+      "phase": "left_return",
+      "at_1709": 0.0029338002939926075
+     },
+     "sock_end": {
+      "max": 0.060005152538158975,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 0.05999125666176649
+     }
+    },
+    "-12@337.5": {
+     "peak_normal_MPa": {
+      "max": 22.80885917516034,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 13.611878578140411
+     },
+     "peak_axial_MPa": {
+      "max": 14.487445013672305,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 7.047152519251698
+     },
+     "peak_cross_MPa": {
+      "max": 9.760387753276675,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 6.372472576933628
+     },
+     "mean_normal_MPa": {
+      "max": 2.5181623613686455,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 1.0388352191948922
+     },
+     "mean_axial_MPa": {
+      "max": 2.47635852368597,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 1.1423971407874294
+     },
+     "mean_cross_MPa": {
+      "max": 1.0747793215355566,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 0.9952309170277468
+     },
+     "slip": {
+      "max": 0.0035371277229836713,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.001806363516523034
+     },
+     "rel_rot_deg": {
+      "max": 0.016902797301300003,
+      "step": 1938,
+      "phase": "left_return",
+      "at_1709": 0.013513292621612731
+     },
+     "sock_in": {
+      "max": 0.0023907121343805546,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0008579503438033149
+     },
+     "sock_end": {
+      "max": 0.04453572771142631,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.017240501413175895
+     }
+    },
+    "+12@67.5": {
+     "peak_normal_MPa": {
+      "max": 24.68003516677659,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 24.676542894040217
+     },
+     "peak_axial_MPa": {
+      "max": 12.789842361991377,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 12.737094204378627
+     },
+     "peak_cross_MPa": {
+      "max": 7.919573774829698,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 6.067923343327223
+     },
+     "mean_normal_MPa": {
+      "max": 3.029632299752213,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 3.0194623405306165
+     },
+     "mean_axial_MPa": {
+      "max": 2.6846439022211155,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.680913560134442
+     },
+     "mean_cross_MPa": {
+      "max": 0.9741961255389082,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.8558438519035191
+     },
+     "slip": {
+      "max": 0.003264056659706107,
+      "step": 986,
+      "phase": "right_return",
+      "at_1709": 0.0031954669173527694
+     },
+     "rel_rot_deg": {
+      "max": 0.019053366438972565,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.015121562961582026
+     },
+     "sock_in": {
+      "max": 0.0024245584187466964,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.0024234344231155508
+     },
+     "sock_end": {
+      "max": 0.04918000326044611,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.04918000326044611
+     }
+    },
+    "+12@157.5": {
+     "peak_normal_MPa": {
+      "max": 21.57353774826265,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 17.64264014819712
+     },
+     "peak_axial_MPa": {
+      "max": 12.622877917939515,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 9.008917097137388
+     },
+     "peak_cross_MPa": {
+      "max": 8.34171629760233,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 6.571037894383338
+     },
+     "mean_normal_MPa": {
+      "max": 2.615463509446621,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.6001643519403213
+     },
+     "mean_axial_MPa": {
+      "max": 2.1524452100126705,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.9342381562440605
+     },
+     "mean_cross_MPa": {
+      "max": 1.3174293938624149,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 1.3169926742694715
+     },
+     "slip": {
+      "max": 0.003191929258448191,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 0.0021033821394267067
+     },
+     "rel_rot_deg": {
+      "max": 0.026377146609694823,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.02500939070074742
+     },
+     "sock_in": {
+      "max": 0.0015807088478699393,
+      "step": 785,
+      "phase": "right_out",
+      "at_1709": 0.0013576761538307922
+     },
+     "sock_end": {
+      "max": 0.037538145075128836,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.022471880358728474
+     }
+    },
+    "+12@247.5": {
+     "peak_normal_MPa": {
+      "max": 28.34675163699237,
+      "step": 1885,
+      "phase": "left_return",
+      "at_1709": 28.339839112901792
+     },
+     "peak_axial_MPa": {
+      "max": 13.2896160670356,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 12.238153933106137
+     },
+     "peak_cross_MPa": {
+      "max": 8.280887785606753,
+      "step": 992,
+      "phase": "right_return",
+      "at_1709": 6.375197118146504
+     },
+     "mean_normal_MPa": {
+      "max": 3.341181285136367,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 3.3303830703363038
+     },
+     "mean_axial_MPa": {
+      "max": 2.6556937470586055,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 2.6520248512860363
+     },
+     "mean_cross_MPa": {
+      "max": 1.0049715767889755,
+      "step": 817,
+      "phase": "right_out",
+      "at_1709": 0.8585328002300858
+     },
+     "slip": {
+      "max": 0.0033625585263599264,
+      "step": 1812,
+      "phase": "left_return",
+      "at_1709": 0.0032096241802315557
+     },
+     "rel_rot_deg": {
+      "max": 0.020655246593700875,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 0.01453294116867343
+     },
+     "sock_in": {
+      "max": 0.0015929761840145678,
+      "step": 1884,
+      "phase": "left_return",
+      "at_1709": 0.0015887419573979624
+     },
+     "sock_end": {
+      "max": 0.05035780260519999,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 0.05035780260519999
+     }
+    },
+    "+12@337.5": {
+     "peak_normal_MPa": {
+      "max": 22.396898675428005,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 16.6279811318166
+     },
+     "peak_axial_MPa": {
+      "max": 13.615809732843084,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 8.988585291257504
+     },
+     "peak_cross_MPa": {
+      "max": 8.738894297740785,
+      "step": 1001,
+      "phase": "right_return",
+      "at_1709": 6.967339059701686
+     },
+     "mean_normal_MPa": {
+      "max": 2.6218508145866717,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.5706394681729234
+     },
+     "mean_axial_MPa": {
+      "max": 2.171410176058913,
+      "step": 809,
+      "phase": "right_out",
+      "at_1709": 1.9295678422001648
+     },
+     "mean_cross_MPa": {
+      "max": 1.3029428868362831,
+      "step": 1709,
+      "phase": "left_out",
+      "at_1709": 1.3029428868362831
+     },
+     "slip": {
+      "max": 0.0033920275113702623,
+      "step": 1010,
+      "phase": "right_return",
+      "at_1709": 0.0022060205152919393
+     },
+     "rel_rot_deg": {
+      "max": 0.02504771801470723,
+      "step": 1701,
+      "phase": "left_out",
+      "at_1709": 0.02502517674402819
+     },
+     "sock_in": {
+      "max": 0.0017355340283895673,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.0013553834256785705
+     },
+     "sock_end": {
+      "max": 0.03691829552407361,
+      "step": 1018,
+      "phase": "right_return",
+      "at_1709": 0.022782149972746104
+     }
+    },
+    "patch-12": {
+     "near": {
+      "max": 0.45429500290663166,
+      "step": 1775,
+      "phase": "left_out"
+     },
+     "all": {
+      "max": 7.209056953853219,
+      "step": 1866,
+      "phase": "left_return"
+     }
+    },
+    "patch+12": {
+     "near": {
+      "max": 0.4143832509595985,
+      "step": 797,
+      "phase": "right_out"
+     },
+     "all": {
+      "max": 1.6277218175016641,
+      "step": 809,
+      "phase": "right_out"
+     }
+    }
+   },
+   "seconds": 88.832957459
+  }
+ ]
+}

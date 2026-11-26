@@ -39,19 +39,7 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="24-november-2026--evening-report-whole-body-solid-m6-model"></a>
 
-**Evening Report — whole-body solid M6 model: stiffness validated, bond demand settled at the load level, crowned and uncrowned lands both clear 0.2° tilt against the solid arm.** The entire CAD lattice of the M6 module (10,487 mm³) was modelled with quadratic tetrahedra (up to 1.79 M DOF, MKL PARDISO). Its bending stiffness was validated before the guides were bonded to it. The rod map was applied only to the rigid end masters (the rod's ~47° end-to-end rotation at the governing steps 1,709 / 1,885), together with the archived station wrenches. This removes the 23 November over-constraint. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_24.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261124/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261124/HANDOFF.md)
-
-| Check or result | Value |
-|---|---:|
-| Bare EI, elastic / rigid hub rings (mesh-converged to 0.18%) | 40,368 / 43,483–44,102 N·mm² |
-| … against the plate model (46,708) and the database PA12 body (44,118 N·mm², EA 166.694 N) | 0.86–0.94× · EI within 1.4%, EA within 0.1% |
-| Rod M-cell EI 64,730 N·mm² | = PA12 body + Ø1.8 mm NiTi backbone (20,612) |
-| **Bond, area-mean / land-edge peak axial shear, G = 500–1,500 MPa** | **1.0–3.5 / 3.6–16.8 MPa** (`rod` model: 103–306 MPa) |
-| Arm non-rigid distortion, in land / at socket ends | 0.001–0.006 / 0.016–0.064 mm (rod map: 0.05 / 0.30–0.37 mm) |
-| **Worst gap at 0.2° tilt against the solid arm, uncrowned / crowned** | **0.0742–0.0763 / 0.0785–0.0794 mm** (rod-mapped: 0.0007–0.044 mm) |
-| Peak body strain; total-Lagrangian check (end moment, peak strain vs linear) | 3.7% at the hub/arm junction (small-strain check **fails**; land bands < 0.7%); 0.991×, 0.989× |
-
-The bond demand matches the `rigidland` model, not the kinematic `rod` model. Against the solid arm, the crown adds only about 0.003–0.004 mm of clearance, so the 21 November failure of the uncrowned land was a rod-map artefact at these steps. This was shown at two steps only, not over the mission. A geometrically nonlinear check changed the results by about 1%, so the hub's 3–4% strain is real. Whether PA12 tolerates it is the open material question. The adhesive, the bond strength and the as-printed land remain unmeasured.
+**Evening Report — whole-body solid M6 model.** The whole CAD lattice was meshed with quadratic tetrahedra and validated (bare EI 40,368–44,102 N·mm², within 1.4% of the database PA12 body). Both guides were bonded through the distributed crowned layer, and the rod's ~47° end rotation was applied only at the end masters. At steps 1,709 / 1,885 the bond demand is 1.0–3.5 MPa area-mean and 3.6–16.8 MPa land-edge peak (the `rod` model's 103–306 MPa ruled out), and both lands clear 0.2° tilt against the solid arm (0.074–0.079 mm). Peak hub strain is 3.7% (small-strain check fails; geometric nonlinearity about 1%). [Evening Report](reports/daily/Evening_Report_2026_11_24.md) · [Study](simulations/u4m2/lanes_20261113/evening_20261124/README.md) · [Handoff](simulations/u4m2/lanes_20261113/evening_20261124/HANDOFF.md)
 
 ## 23 November 2026
 

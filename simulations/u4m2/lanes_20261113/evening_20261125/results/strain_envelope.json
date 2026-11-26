@@ -1,0 +1,112 @@
+{
+ "scope": "Mission envelope of the peak body strain of the linear bonded solid model (validity limit of the\n24 Nov run, extended from step 1,709 to all 3,405 mission states by superposition).\n\nSame case as ``evening_20261124/strain_check.py`` (q5 mesh, G = 500 MPa, crowned 0.06 mm land,\nend rotation + both station wrenches, no \"local\" scaling). The element-centroid small-strain tensor\nis linear in the 15 unit solutions; per step the exact peak |principal strain| is found by\nevaluating eigenvalues only on elements whose Frobenius norm can still exceed the running maximum\n(|lambda|max <= ||eps||_F). Linear small strain; the 24 Nov total-Lagrangian check put the\ngeometric-nonlinearity effect on the peak at ~1% for step 1,709. Writes results/strain_envelope.json.\n",
+ "mesh": {
+  "quality": 5.0,
+  "max_tet_volume_mm3": 0.4,
+  "tets": 130278,
+  "p2_nodes": 258073,
+  "dofs": 774219,
+  "reduced_dofs": 762645,
+  "layer_points": 91448,
+  "layer_max_edge_mm": 0.08,
+  "min_bary": -1.0427024544389902e-07,
+  "land_area_mm2": [
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.999912594388527,
+   7.99991262699769,
+   7.9999126269976895,
+   7.9999126269976895,
+   7.9999126269976895
+  ],
+  "socket_nodes": [
+   262,
+   230,
+   285,
+   290,
+   287,
+   296,
+   284,
+   299
+  ],
+  "build_s": 47.6446048119999
+ },
+ "solve_residual": 3.4733789484951934e-13,
+ "n_steps": 3405,
+ "at_1709": {
+  "peak": 0.03736035985895735,
+  "location_mm": [
+   -4.818190609877828,
+   -6.971912242953753,
+   -17.924627196745323
+  ],
+  "land_band_peak": 0.006662710940023763
+ },
+ "mission_max": {
+  "peak": 0.03811654249231999,
+  "step": 1869,
+  "phase": "left_return",
+  "location_mm": [
+   -4.818190609877828,
+   -6.971912242953753,
+   -17.924627196745323
+  ],
+  "r_mm": 8.474816875694914,
+  "end_rotation_deg": 46.91072249271721
+ },
+ "land_band_mission_max": {
+  "peak": 0.006753662577426389,
+  "step": 809
+ },
+ "steps_above_3pct": 615,
+ "steps_above_2pct": 1124,
+ "by_phase": {
+  "straighten": {
+   "max": 0.009477879309404764,
+   "step": 0
+  },
+  "entry": {
+   "max": 0.005913943345082469,
+   "step": 166
+  },
+  "right_out": {
+   "max": 0.0370073989441668,
+   "step": 900
+  },
+  "right_return": {
+   "max": 0.03705220572958129,
+   "step": 930
+  },
+  "left_out": {
+   "max": 0.03796262120681052,
+   "step": 1726
+  },
+  "left_return": {
+   "max": 0.03811654249231999,
+   "step": 1869
+  },
+  "pitch_up": {
+   "max": 0.024910824829996514,
+   "step": 2390
+  },
+  "pitch_up_return": {
+   "max": 0.0248238834627348,
+   "step": 2391
+  },
+  "pitch_down": {
+   "max": 0.022844281514428327,
+   "step": 2819
+  },
+  "pitch_down_return": {
+   "max": 0.022687930362545954,
+   "step": 2820
+  },
+  "exit": {
+   "max": 0.005870194034059221,
+   "step": 3099
+  }
+ },
+ "eigen_evaluations": 421926,
+ "elapsed_s": 128.60900472599997
+}
