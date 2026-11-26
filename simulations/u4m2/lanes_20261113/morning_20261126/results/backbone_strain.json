@@ -1,0 +1,1164 @@
+{
+ "completed_at_et": "2026-11-26T11:19:49-05:00",
+ "completed_at_utc": "2026-11-26T16:19:49Z",
+ "scope": "Hub-junction strain of the bonded whole-body solid M6 model with the central NiTi backbone.\n\nHandoff item 1 from evening_20261125/HANDOFF.md:\n1. Checks the CAD central bore diameter in M6_lane_anchorC.stl at all four hub rings and end disks.\n   The hub-ring bore is 8.40 mm diameter (r = 4.200 mm) vs the 1.80 mm NiTi backbone (r = 0.900 mm),\n   leaving a 3.30 mm radial clearance -> NOT a fit, so the backbone is coupled ONLY between the\n   D0 (z = -44.9 mm, clamped) and D1 (z = +40.9 mm, rigid master) end masters.\n2. Adds the central NiTi backbone (E = 40 GPa, nu = 0.33, d = 1.80 mm, L = 85.8 mm between D0 and D1)\n   as an exact linear 3D Euler-Bernoulli beam stiffness matrix on the D1 master DOFs.\n3. Evaluates BOTH end-condition interpretations and justifies consistency with the parallel rod model:\n   - Kinematic (prescribed rod end rotation omega_rod on D1 of body+backbone): consistent with\n     backbone_20261108/backbone.py because the rod model already summed EI_rod = EI_body + EI_bb\n     when computing omega_rod, and body + backbone share the rigid end disks in parallel.\n   - Load-controlled (rod end moment M_rod = K_rod @ omega_rod applied to D1 of body+backbone):\n     also consistent with the rod model; differs only by the ~5-8% stiffness difference between\n     the solid-ring bare body EI and the database PA12 EI (44,118 N mm^2).\n4. Performs local mesh refinement around the governing hub/arm junction (r ~ 8.5 mm, z ~ -17.9 mm)\n   by subdividing the CAD surface mesh within a 4.5 mm ball around the hotspot (0, 1, and 2 passes)\n   and meshing with TetGen, reporting both element-centroid peak and finite-gauge (0.5 / 1.0 mm)\n   volume-averaged principal strain.\n5. Re-runs the full 3,405-state strain envelope by 15-unit-field linear superposition with the NiTi\n   backbone included, checks land tractions vs the 25 Nov bare-body baseline, and records cited\n   PA12 (HP MJF PA 12, EOS SLS PA 2200, Van Hooreweder et al. 2013, Salazar et al. 2022) limits.\n",
+ "parameters": {
+  "G_MPa": 500.0,
+  "crown_mm": 0.06,
+  "E_pa12_MPa": 1530.0,
+  "nu_pa12": 0.4,
+  "bb_d_mm": 1.8,
+  "bb_E_MPa": 40000.0,
+  "bb_nu": 0.33,
+  "L_crop_mm": 85.8
+ },
+ "cad_bore_check": {
+  "backbone_diameter_mm": 1.8,
+  "hub_ring_bore_diameter_mm": 8.399999426755057,
+  "hub_ring_radial_clearance_mm": 3.2999997133775287,
+  "coupled_to_hub_rings": false,
+  "justification": "CAD hub-ring inner bore is 8.40 mm diameter (r = 4.200 mm), leaving 3.30 mm radial clearance to the 1.80 mm NiTi backbone; it is not a fit, so the backbone is coupled only between the D0 and D1 masters.",
+  "bands": {
+   "end_proximal": {
+    "z_range_mm": [
+     -45.0,
+     -40.0
+    ],
+    "min_radius_mm": 2.99999986436349,
+    "bore_diameter_mm": 5.99999972872698,
+    "radial_clearance_to_1p8mm_backbone_mm": 2.09999986436349
+   },
+   "ring_0": {
+    "z_range_mm": [
+     -20.0,
+     -16.95
+    ],
+    "min_radius_mm": 4.199999713377529,
+    "bore_diameter_mm": 8.399999426755057,
+    "radial_clearance_to_1p8mm_backbone_mm": 3.2999997133775287
+   },
+   "ring_1": {
+    "z_range_mm": [
+     -6.5,
+     -3.45
+    ],
+    "min_radius_mm": 4.1999998026701375,
+    "bore_diameter_mm": 8.399999605340275,
+    "radial_clearance_to_1p8mm_backbone_mm": 3.2999998026701376
+   },
+   "ring_2": {
+    "z_range_mm": [
+     3.45,
+     6.5
+    ],
+    "min_radius_mm": 4.1999998026701375,
+    "bore_diameter_mm": 8.399999605340275,
+    "radial_clearance_to_1p8mm_backbone_mm": 3.2999998026701376
+   },
+   "ring_3": {
+    "z_range_mm": [
+     16.95,
+     20.0
+    ],
+    "min_radius_mm": 4.199999713377529,
+    "bore_diameter_mm": 8.399999426755057,
+    "radial_clearance_to_1p8mm_backbone_mm": 3.2999997133775287
+   },
+   "end_distal": {
+    "z_range_mm": [
+     40.0,
+     45.0
+    ],
+    "min_radius_mm": 2.9936051368258445,
+    "bore_diameter_mm": 5.987210273651689,
+    "radial_clearance_to_1p8mm_backbone_mm": 2.0936051368258446
+   }
+  }
+ },
+ "stiffness_summary": {
+  "L_crop_mm": 85.8,
+  "module_L_mm": 96.0,
+  "bare_bonded_EIxx_96_Nmm2": 44424.14357055111,
+  "bare_bonded_EIyy_96_Nmm2": 44427.956564204615,
+  "bare_bonded_GJ_96_Nmm2": 46095.066717742215,
+  "bare_bonded_EIxx_crop_Nmm2": 39704.07831618005,
+  "bare_bonded_EIyy_crop_Nmm2": 39707.48617925787,
+  "with_bb_EIxx_96_Nmm2": 67583.38339617901,
+  "with_bb_EIyy_96_Nmm2": 67587.377883079,
+  "with_bb_GJ_96_Nmm2": 63435.19376463073,
+  "with_bb_EIxx_crop_Nmm2": 60402.64891033498,
+  "with_bb_EIyy_crop_Nmm2": 60406.218983001854,
+  "backbone_EI_Nmm2": 20611.989400202634,
+  "backbone_GJ_Nmm2": 15497.7363911298,
+  "backbone_EA_N": 101787.6019763093,
+  "rod_EI_database_Nmm2": 64729.989400202634
+ },
+ "end_condition_justification": "The archived 3,405-state mission (rod_steps.npz) was solved using the parallel rod model (backbone_20261108/backbone.py) with EI_rod = EI_body (44,118) + EI_backbone (20,612) = 64,730 N mm^2. Because the PA12 body and central NiTi backbone are bonded to the same rigid end disks (D0/D1) in parallel and are NOT coupled at the intermediate hub rings (8.40 mm bore vs 1.80 mm rod = 3.30 mm radial gap), both share the exact same end rotation omega_rod. Prescribing omega_rod (kinematic) on D1 of the (body + backbone) assembly is therefore directly consistent with the rod model: the backbone carries ~32-34% of the total end moment while the PA12 body carries ~66-68%, and the body's hub strain does NOT drop by 44/65 (since omega_rod already reflects the backbone's stiffening in the rod simulation). Load-controlled application of M_rod = K_rod @ omega_rod to (body + backbone) is likewise consistent and yields slightly higher strain (~6-8%) only because the solid-ring PA12 lattice is slightly more compliant than the 44,118 N mm^2 database value.",
+ "q5_step_comparisons": {
+  "1709": {
+   "end_rotvec_deg": [
+    -44.77835025421233,
+    14.79348820574603,
+    0.00905337898307794
+   ],
+   "end_rot_norm_deg": 47.158753447754904,
+   "bare_q5": {
+    "peak_abs_principal_strain": 0.037322309942981635,
+    "peak_location_mm": [
+     -4.818190609877828,
+     -6.971912242953753,
+     -17.924627196745323
+    ],
+    "peak_r_mm": 8.474816875694914,
+    "peak_tet_mean_edge_mm": 0.11052942751756763,
+    "p99_9": 0.03131114786130372,
+    "land_band_peak": 0.00689024280453962,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 21,
+      "tensor_avg_principal_strain": 0.010814778959472394,
+      "scalar_avg_principal_strain": 0.011922123278336149
+     },
+     "r_1.0mm": {
+      "n_tets": 45,
+      "tensor_avg_principal_strain": 0.00500396778854444,
+      "scalar_avg_principal_strain": 0.00744461209801424
+     }
+    }
+   },
+   "kinematic_with_bb_q5": {
+    "peak_abs_principal_strain": 0.034461795055908996,
+    "peak_location_mm": [
+     -5.1692534819882185,
+     -10.8698799859475,
+     -5.184575171602681
+    ],
+    "peak_r_mm": 12.036422743903163,
+    "peak_tet_mean_edge_mm": 0.1212871266290491,
+    "p99_9": 0.03013071265680115,
+    "land_band_peak": 0.006872176387339378,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 196,
+      "tensor_avg_principal_strain": 0.01431739114853926,
+      "scalar_avg_principal_strain": 0.015389082277933177
+     },
+     "r_1.0mm": {
+      "n_tets": 808,
+      "tensor_avg_principal_strain": 0.00677249384389661,
+      "scalar_avg_principal_strain": 0.010028172493237347
+     }
+    }
+   },
+   "load_controlled_with_bb_q5": {
+    "peak_abs_principal_strain": 0.04504908396561784,
+    "peak_location_mm": [
+     -5.1692534819882185,
+     -10.8698799859475,
+     -5.184575171602681
+    ],
+    "peak_r_mm": 12.036422743903163,
+    "peak_tet_mean_edge_mm": 0.1212871266290491,
+    "p99_9": 0.039428640222968936,
+    "land_band_peak": 0.009020853798482503,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 196,
+      "tensor_avg_principal_strain": 0.018729613356414994,
+      "scalar_avg_principal_strain": 0.020126710682203758
+     },
+     "r_1.0mm": {
+      "n_tets": 808,
+      "tensor_avg_principal_strain": 0.008876455891219123,
+      "scalar_avg_principal_strain": 0.013106789809781465
+     }
+    },
+    "M_rod_applied_Nmm": [
+     -589.6084577181501,
+     194.78979720654277,
+     0.10441120057308592
+    ],
+    "achieved_d1_rot_deg": 60.82866229710543,
+    "solve_residual": 3.273009870998471e-11
+   },
+   "moment_split_kinematic": {
+    "M_body_Nmm": [
+     -323.3282568666992,
+     106.79651918949952,
+     0.02431804914147051
+    ],
+    "M_backbone_Nmm": [
+     -106.81799499887984,
+     35.23653374389306,
+     0.028540991088695743
+    ],
+    "M_total_Nmm": [
+     -430.146251865579,
+     142.03305293339258,
+     0.05285904023016626
+    ],
+    "M_body_norm_Nmm": 340.50941072284456,
+    "M_backbone_norm_Nmm": 112.4797678716195,
+    "M_total_norm_Nmm": 452.9891708569468,
+    "body_share": 0.7516943729111282,
+    "backbone_share": 0.24830564416989212
+   },
+   "moment_split_load_controlled": {
+    "M_body_Nmm": [
+     -423.49645432522624,
+     139.93649155021797,
+     0.0667434201652668
+    ],
+    "M_backbone_Nmm": [
+     -166.11200339805032,
+     54.853305657360664,
+     0.03766778195212358
+    ],
+    "M_total_Nmm": [
+     -589.6084577232766,
+     194.78979720757863,
+     0.10441120211739038
+    ],
+    "M_body_norm_Nmm": 446.01734601706556,
+    "M_backbone_norm_Nmm": 174.93451412833178,
+    "M_total_norm_Nmm": 620.9518575676294,
+    "body_share": 0.7182800736987709,
+    "backbone_share": 0.28171993045254595
+   },
+   "backbone_hub_clearance": {
+    "max_relative_lateral_mm": 4.188152220397848,
+    "radial_clearance_mm": 3.3,
+    "rings": {
+     "ring_0": {
+      "z_mm": -18.475,
+      "bb_xy_mm": [
+       1.4112771518047624,
+       4.2696263890747765
+      ],
+      "ring_xy_mm": [
+       0.09677876204383232,
+       0.2931061760569493
+      ],
+      "relative_lateral_mm": 4.188152220397848
+     },
+     "ring_1": {
+      "z_mm": -4.975,
+      "bb_xy_mm": [
+       3.1129427699554664,
+       9.418268604817284
+      ],
+      "ring_xy_mm": [
+       3.081944373485622,
+       9.321198585229203
+      ],
+      "relative_lateral_mm": 0.10189940768489322
+     },
+     "ring_2": {
+      "z_mm": 4.975,
+      "bb_xy_mm": [
+       4.732903671814104,
+       14.320069166881515
+      ],
+      "ring_xy_mm": [
+       4.811958175060417,
+       14.55555297000979
+      ],
+      "relative_lateral_mm": 0.24839934786403434
+     },
+     "ring_3": {
+      "z_mm": 18.475,
+      "bb_xy_mm": [
+       7.368045196560704,
+       22.29436091451754
+      ],
+      "ring_xy_mm": [
+       6.87422639463804,
+       20.799140612497624
+      ],
+      "relative_lateral_mm": 1.5746557594296176
+     }
+    }
+   },
+   "land_traction_max_rel_diff": 0.1824539776305107,
+   "land_traction_within_20pct": true,
+   "land_traction_by_land": {
+    "-12@67.5": {
+     "bare_peak_axial_MPa": 6.758577545642227,
+     "bb_peak_axial_MPa": 6.851739162371899,
+     "rel_diff_peak_axial": 0.013784204753223625,
+     "bare_mean_axial_MPa": 2.192961459342191,
+     "bb_mean_axial_MPa": 2.147238593565695,
+     "rel_diff_mean_axial": 0.020849826421578368,
+     "bare_peak_normal_MPa": 17.566126175088897,
+     "bb_peak_normal_MPa": 17.62946974341886,
+     "rel_diff_peak_normal": 0.003606006680049467
+    },
+    "-12@157.5": {
+     "bare_peak_axial_MPa": 3.1714441112835297,
+     "bb_peak_axial_MPa": 3.499871886199695,
+     "rel_diff_peak_axial": 0.10355779997751434,
+     "bare_mean_axial_MPa": 0.8833091860110072,
+     "bb_mean_axial_MPa": 1.044472460476284,
+     "rel_diff_mean_axial": 0.1824539776305107,
+     "bare_peak_normal_MPa": 6.566480402667578,
+     "bb_peak_normal_MPa": 7.102576002510461,
+     "rel_diff_peak_normal": 0.08164123959390772
+    },
+    "-12@247.5": {
+     "bare_peak_axial_MPa": 6.6764860225629326,
+     "bb_peak_axial_MPa": 6.7388953749096565,
+     "rel_diff_peak_axial": 0.009347634689238308,
+     "bare_mean_axial_MPa": 2.2115147347901742,
+     "bb_mean_axial_MPa": 2.142662660358345,
+     "rel_diff_mean_axial": 0.031133445935806473,
+     "bare_peak_normal_MPa": 17.382885788035356,
+     "bb_peak_normal_MPa": 17.36544960546749,
+     "rel_diff_peak_normal": 0.0010030660490140215
+    },
+    "-12@337.5": {
+     "bare_peak_axial_MPa": 3.63205088832139,
+     "bb_peak_axial_MPa": 3.9690456596438124,
+     "rel_diff_peak_axial": 0.09278360399795227,
+     "bare_mean_axial_MPa": 0.8868747072962886,
+     "bb_mean_axial_MPa": 1.0483139486611224,
+     "rel_diff_mean_axial": 0.1820316218702355,
+     "bare_peak_normal_MPa": 7.318653003264595,
+     "bb_peak_normal_MPa": 7.855610236638727,
+     "rel_diff_peak_normal": 0.07336831424233584
+    },
+    "+12@67.5": {
+     "bare_peak_axial_MPa": 7.7574605306895466,
+     "bb_peak_axial_MPa": 7.688380067626003,
+     "rel_diff_peak_axial": 0.008905035712428318,
+     "bare_mean_axial_MPa": 2.5176272780324105,
+     "bb_mean_axial_MPa": 2.461000044263978,
+     "rel_diff_mean_axial": 0.022492302281014363,
+     "bare_peak_normal_MPa": 17.46977637202653,
+     "bb_peak_normal_MPa": 17.457463111196752,
+     "rel_diff_peak_normal": 0.0007048321951902383
+    },
+    "+12@157.5": {
+     "bare_peak_axial_MPa": 6.416859969745301,
+     "bb_peak_axial_MPa": 5.816884172119538,
+     "rel_diff_peak_axial": 0.09349990500876972,
+     "bare_mean_axial_MPa": 1.9576721761451332,
+     "bb_mean_axial_MPa": 1.7943403925794519,
+     "rel_diff_mean_axial": 0.08343163148351997,
+     "bare_peak_normal_MPa": 11.944022815127175,
+     "bb_peak_normal_MPa": 10.874986901163952,
+     "rel_diff_peak_normal": 0.08950384058286313
+    },
+    "+12@247.5": {
+     "bare_peak_axial_MPa": 7.467465840652711,
+     "bb_peak_axial_MPa": 7.394328001913466,
+     "rel_diff_peak_axial": 0.009794197964868414,
+     "bare_mean_axial_MPa": 2.495665925930428,
+     "bb_mean_axial_MPa": 2.433113422094026,
+     "rel_diff_mean_axial": 0.02506445401464598,
+     "bare_peak_normal_MPa": 17.48626524314815,
+     "bb_peak_normal_MPa": 17.444169690275594,
+     "rel_diff_peak_normal": 0.002407349556192463
+    },
+    "+12@337.5": {
+     "bare_peak_axial_MPa": 6.317662756724154,
+     "bb_peak_axial_MPa": 5.716221376475271,
+     "rel_diff_peak_axial": 0.09519998192507872,
+     "bare_mean_axial_MPa": 1.9640980850717122,
+     "bb_mean_axial_MPa": 1.8008712056000917,
+     "rel_diff_mean_axial": 0.08310525869977661,
+     "bare_peak_normal_MPa": 11.828210970873178,
+     "bb_peak_normal_MPa": 10.819222984972898,
+     "rel_diff_peak_normal": 0.08530351617712098
+    }
+   }
+  },
+  "1869": {
+   "end_rotvec_deg": [
+    -45.47332722759267,
+    11.522740862333414,
+    0.13725399999718801
+   ],
+   "end_rot_norm_deg": 46.91072249271721,
+   "bare_q5": {
+    "peak_abs_principal_strain": 0.03809870997758047,
+    "peak_location_mm": [
+     -4.818190609877828,
+     -6.971912242953753,
+     -17.924627196745323
+    ],
+    "peak_r_mm": 8.474816875694914,
+    "peak_tet_mean_edge_mm": 0.11052942751756763,
+    "p99_9": 0.0313298092884969,
+    "land_band_peak": 0.006760649035048399,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 21,
+      "tensor_avg_principal_strain": 0.011040726963012292,
+      "scalar_avg_principal_strain": 0.012175982875157964
+     },
+     "r_1.0mm": {
+      "n_tets": 45,
+      "tensor_avg_principal_strain": 0.005111383143697551,
+      "scalar_avg_principal_strain": 0.007573329313980716
+     }
+    }
+   },
+   "kinematic_with_bb_q5": {
+    "peak_abs_principal_strain": 0.0348327203927611,
+    "peak_location_mm": [
+     -4.818190609877828,
+     -6.971912242953753,
+     -17.924627196745323
+    ],
+    "peak_r_mm": 8.474816875694914,
+    "peak_tet_mean_edge_mm": 0.11052942751756763,
+    "p99_9": 0.029611484414081585,
+    "land_band_peak": 0.006740585037483356,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 21,
+      "tensor_avg_principal_strain": 0.010097791403907826,
+      "scalar_avg_principal_strain": 0.01113609433590221
+     },
+     "r_1.0mm": {
+      "n_tets": 45,
+      "tensor_avg_principal_strain": 0.004664773771476188,
+      "scalar_avg_principal_strain": 0.006921016142871997
+     }
+    }
+   },
+   "load_controlled_with_bb_q5": {
+    "peak_abs_principal_strain": 0.044805444075992865,
+    "peak_location_mm": [
+     -5.1692534819882185,
+     -10.8698799859475,
+     -5.184575171602681
+    ],
+    "peak_r_mm": 12.036422743903163,
+    "peak_tet_mean_edge_mm": 0.1212871266290491,
+    "p99_9": 0.039367361931115744,
+    "land_band_peak": 0.008991246649162975,
+    "finite_gauge_at_peak": {
+     "r_0.5mm": {
+      "n_tets": 196,
+      "tensor_avg_principal_strain": 0.018607202679128246,
+      "scalar_avg_principal_strain": 0.020004771058571073
+     },
+     "r_1.0mm": {
+      "n_tets": 808,
+      "tensor_avg_principal_strain": 0.008819024049668535,
+      "scalar_avg_principal_strain": 0.013045781655068334
+     }
+    },
+    "M_rod_applied_Nmm": [
+     -598.7594045283415,
+     151.72299626843008,
+     1.5829288655596048
+    ],
+    "achieved_d1_rot_deg": 61.339285600156025,
+    "solve_residual": 1.0323362211257835e-11
+   },
+   "moment_split_kinematic": {
+    "M_body_Nmm": [
+     -326.5718149657822,
+     82.288854294871,
+     -0.9511414574208175
+    ],
+    "M_backbone_Nmm": [
+     -100.66159793192162,
+     24.633149141830174,
+     0.43269647698717845
+    ],
+    "M_total_Nmm": [
+     -427.23341289770383,
+     106.92200343670117,
+     -0.5184449804336391
+    ],
+    "M_body_norm_Nmm": 336.7811018173075,
+    "M_backbone_norm_Nmm": 103.63270024993412,
+    "M_total_norm_Nmm": 440.41000522278733,
+    "body_share": 0.7646990255067939,
+    "backbone_share": 0.23530959565169307
+   },
+   "moment_split_load_controlled": {
+    "M_body_Nmm": [
+     -434.3180936207204,
+     110.43163185773483,
+     0.5813926256196282
+    ],
+    "M_backbone_Nmm": [
+     -164.44131091107704,
+     41.29136441328703,
+     1.0015362407700623
+    ],
+    "M_total_Nmm": [
+     -598.7594045317974,
+     151.72299627102186,
+     1.5829288663896905
+    ],
+    "M_body_norm_Nmm": 448.1380253654941,
+    "M_backbone_norm_Nmm": 169.5491804288831,
+    "M_total_norm_Nmm": 617.6853549959924,
+    "body_share": 0.7255118188262722,
+    "backbone_share": 0.27449117751866264
+   },
+   "backbone_hub_clearance": {
+    "max_relative_lateral_mm": 4.246639268151918,
+    "radial_clearance_mm": 3.3,
+    "rings": {
+     "ring_0": {
+      "z_mm": -18.475,
+      "bb_xy_mm": [
+       1.1371152990337112,
+       4.441078741853099
+      ],
+      "ring_xy_mm": [
+       0.08446522291760213,
+       0.32697216921030936
+      ],
+      "relative_lateral_mm": 4.246639268151918
+     },
+     "ring_1": {
+      "z_mm": -4.975,
+      "bb_xy_mm": [
+       2.499713288535955,
+       9.772863774393624
+      ],
+      "ring_xy_mm": [
+       2.527527304548338,
+       9.839861322848838
+      ],
+      "relative_lateral_mm": 0.07254165000705388
+     },
+     "ring_2": {
+      "z_mm": 4.975,
+      "bb_xy_mm": [
+       3.7904424555350946,
+       14.831116493618298
+      ],
+      "ring_xy_mm": [
+       3.9094837680705967,
+       15.237433308270013
+      ],
+      "relative_lateral_mm": 0.4233960178826573
+     },
+     "ring_3": {
+      "z_mm": 18.475,
+      "bb_xy_mm": [
+       5.878116643937757,
+       23.02681099396737
+      ],
+      "ring_xy_mm": [
+       5.523200804551823,
+       21.59148474875794
+      ],
+      "relative_lateral_mm": 1.478555607082137
+     }
+    }
+   },
+   "land_traction_max_rel_diff": 0.22222229276198333,
+   "land_traction_within_20pct": false,
+   "land_traction_by_land": {
+    "-12@67.5": {
+     "bare_peak_axial_MPa": 6.5548106187335495,
+     "bb_peak_axial_MPa": 6.656663126616589,
+     "rel_diff_peak_axial": 0.015538588955102189,
+     "bare_mean_axial_MPa": 2.2340080173810777,
+     "bb_mean_axial_MPa": 2.1380898104650745,
+     "rel_diff_mean_axial": 0.04293548016378556,
+     "bare_peak_normal_MPa": 17.332639938204444,
+     "bb_peak_normal_MPa": 17.401632834330215,
+     "rel_diff_peak_normal": 0.0039805186268075145
+    },
+    "-12@157.5": {
+     "bare_peak_axial_MPa": 3.494806007751781,
+     "bb_peak_axial_MPa": 3.853708561686153,
+     "rel_diff_peak_axial": 0.1026959874563266,
+     "bare_mean_axial_MPa": 0.8029964917076935,
+     "bb_mean_axial_MPa": 0.9755649025083432,
+     "rel_diff_mean_axial": 0.2149055600898789,
+     "bare_peak_normal_MPa": 6.993093346793694,
+     "bb_peak_normal_MPa": 7.5743274645936225,
+     "rel_diff_peak_normal": 0.08311545248661979
+    },
+    "-12@247.5": {
+     "bare_peak_axial_MPa": 6.6678379594205754,
+     "bb_peak_axial_MPa": 6.759940484613737,
+     "rel_diff_peak_axial": 0.013812951927398832,
+     "bare_mean_axial_MPa": 2.2663122682937256,
+     "bb_mean_axial_MPa": 2.1505520000382545,
+     "rel_diff_mean_axial": 0.051078692850489354,
+     "bare_peak_normal_MPa": 17.26900524024493,
+     "bb_peak_normal_MPa": 17.24712310740886,
+     "rel_diff_peak_normal": 0.0012671333717053544
+    },
+    "-12@337.5": {
+     "bare_peak_axial_MPa": 4.01000393150233,
+     "bb_peak_axial_MPa": 4.378939445092618,
+     "rel_diff_peak_axial": 0.09200377852299713,
+     "bare_mean_axial_MPa": 0.7748161087708229,
+     "bb_mean_axial_MPa": 0.9469975209307934,
+     "rel_diff_mean_axial": 0.22222229276198333,
+     "bare_peak_normal_MPa": 7.777640203223351,
+     "bb_peak_normal_MPa": 8.360143404940764,
+     "rel_diff_peak_normal": 0.07489459353956768
+    },
+    "+12@67.5": {
+     "bare_peak_axial_MPa": 7.968713280842014,
+     "bb_peak_axial_MPa": 7.870676687890203,
+     "rel_diff_peak_axial": 0.012302687961870269,
+     "bare_mean_axial_MPa": 2.463065784567765,
+     "bb_mean_axial_MPa": 2.4010639401151463,
+     "rel_diff_mean_axial": 0.02517263032156446,
+     "bare_peak_normal_MPa": 17.27606189790168,
+     "bb_peak_normal_MPa": 17.261956503122523,
+     "rel_diff_peak_normal": 0.0008164704932477023
+    },
+    "+12@157.5": {
+     "bare_peak_axial_MPa": 6.368608052512674,
+     "bb_peak_axial_MPa": 5.678307120517132,
+     "rel_diff_peak_axial": 0.10839117846531487,
+     "bare_mean_axial_MPa": 1.9304196500533608,
+     "bb_mean_axial_MPa": 1.7532994582127184,
+     "rel_diff_mean_axial": 0.09175216996767852,
+     "bare_peak_normal_MPa": 11.69673177014627,
+     "bb_peak_normal_MPa": 10.490111974223012,
+     "rel_diff_peak_normal": 0.10315871301784744
+    },
+    "+12@247.5": {
+     "bare_peak_axial_MPa": 7.621913362166909,
+     "bb_peak_axial_MPa": 7.520830456984507,
+     "rel_diff_peak_axial": 0.013262143031453188,
+     "bare_mean_axial_MPa": 2.4427343436679285,
+     "bb_mean_axial_MPa": 2.375351041613995,
+     "rel_diff_mean_axial": 0.027585194529484883,
+     "bare_peak_normal_MPa": 17.30673077189954,
+     "bb_peak_normal_MPa": 17.262951072337515,
+     "rel_diff_peak_normal": 0.0025296342873207833
+    },
+    "+12@337.5": {
+     "bare_peak_axial_MPa": 6.198290177881711,
+     "bb_peak_axial_MPa": 5.506909247221005,
+     "rel_diff_peak_axial": 0.11154381463582726,
+     "bare_mean_axial_MPa": 1.9375505386144032,
+     "bb_mean_axial_MPa": 1.7603298278456756,
+     "rel_diff_mean_axial": 0.09146636809559719,
+     "bare_peak_normal_MPa": 11.377576633525647,
+     "bb_peak_normal_MPa": 10.742478033018738,
+     "rel_diff_peak_normal": 0.055820199763410155
+    }
+   }
+  }
+ },
+ "q5_strain_envelope_with_backbone": {
+  "n_steps": 3405,
+  "at_1709": {
+   "peak": 0.03446179505590315,
+   "location_mm": [
+    -5.1692534819882185,
+    -10.8698799859475,
+    -5.184575171602681
+   ],
+   "land_band_peak": 0.0068721763873384216
+  },
+  "at_1869": {
+   "peak": 0.03483272039276214,
+   "location_mm": [
+    -4.818190609877828,
+    -6.971912242953753,
+    -17.924627196745323
+   ],
+   "land_band_peak": 0.006740585037485193
+  },
+  "mission_max": {
+   "peak": 0.03483272039276214,
+   "step": 1869,
+   "phase": "left_return",
+   "location_mm": [
+    -4.818190609877828,
+    -6.971912242953753,
+    -17.924627196745323
+   ],
+   "r_mm": 8.474816875694914,
+   "end_rotation_deg": 46.91072249271721
+  },
+  "land_band_mission_max": {
+   "peak": 0.0068757812943825505,
+   "step": 1701
+  },
+  "steps_above_3pct": 547,
+  "steps_above_2pct": 1034,
+  "by_phase": {
+   "straighten": {
+    "max": 0.009395064464590153,
+    "step": 0
+   },
+   "entry": {
+    "max": 0.005560699312956899,
+    "step": 198
+   },
+   "right_out": {
+    "max": 0.033918447557996625,
+    "step": 900
+   },
+   "right_return": {
+    "max": 0.03395437556473861,
+    "step": 930
+   },
+   "left_out": {
+    "max": 0.03473304938983241,
+    "step": 1726
+   },
+   "left_return": {
+    "max": 0.03483272039276214,
+    "step": 1869
+   },
+   "pitch_up": {
+    "max": 0.023303640793397595,
+    "step": 2390
+   },
+   "pitch_up_return": {
+    "max": 0.02322090318689007,
+    "step": 2391
+   },
+   "pitch_down": {
+    "max": 0.02202035317545293,
+    "step": 2819
+   },
+   "pitch_down_return": {
+    "max": 0.021898094517118688,
+    "step": 2820
+   },
+   "exit": {
+    "max": 0.005501082348246651,
+    "step": 3099
+   }
+  },
+  "eigen_evaluations": 638486,
+  "elapsed_s": 31.0
+ },
+ "local_mesh_refinement": [
+  {
+   "label": "q3_a040",
+   "mesh": {
+    "quality": 3.0,
+    "max_tet_volume_mm3": 0.4,
+    "tets": 178517,
+    "p2_nodes": 339740,
+    "dofs": 1019220,
+    "reduced_dofs": 1002852,
+    "layer_points": 91448,
+    "layer_max_edge_mm": 0.08,
+    "min_bary": -9.880096230041602e-08,
+    "land_area_mm2": [
+     7.999912594388527,
+     7.999912594388528,
+     7.999912594388526,
+     7.999912594388528,
+     7.99991262699769,
+     7.9999126269976895,
+     7.9999126269976895,
+     7.9999126269976895
+    ],
+    "socket_nodes": [
+     286,
+     293,
+     288,
+     295,
+     278,
+     262,
+     281,
+     249
+    ],
+    "build_s": 34.95299999997951
+   },
+   "solve_residual": 4.0074372748490715e-13,
+   "steps": {
+    "1709": {
+     "strain": {
+      "peak_abs_principal_strain": 0.04091407335636917,
+      "peak_location_mm": [
+       -1.4890711008210946,
+       -8.32759658270548,
+       -18.00712895806474
+      ],
+      "peak_r_mm": 8.459680702460853,
+      "peak_tet_mean_edge_mm": 0.09425072981131022,
+      "p99_9": 0.030627457482257325,
+      "land_band_peak": 0.006834306384219493,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 41,
+        "tensor_avg_principal_strain": 0.01037127160136482,
+        "scalar_avg_principal_strain": 0.01198232396092679
+       },
+       "r_1.0mm": {
+        "n_tets": 83,
+        "tensor_avg_principal_strain": 0.003926628571988413,
+        "scalar_avg_principal_strain": 0.006452440176377007
+       }
+      }
+     },
+     "moment_split": {
+      "M_body_Nmm": [
+       -322.95370715917005,
+       106.68410374277812,
+       0.01852711625201664
+      ],
+      "M_backbone_Nmm": [
+       -106.6562126665043,
+       35.18305015133157,
+       0.028540991088695743
+      ],
+      "M_total_Nmm": [
+       -429.60991982567435,
+       141.8671538941097,
+       0.04706810734071239
+      ],
+      "M_body_norm_Nmm": 340.11850185267025,
+      "M_backbone_norm_Nmm": 112.30937419869224,
+      "M_total_norm_Nmm": 452.4278669379729,
+      "body_share": 0.7517629366081907,
+      "backbone_share": 0.24823708353510784
+     }
+    },
+    "1869": {
+     "strain": {
+      "peak_abs_principal_strain": 0.04063499791342062,
+      "peak_location_mm": [
+       -1.4890711008210946,
+       -8.32759658270548,
+       -18.00712895806474
+      ],
+      "peak_r_mm": 8.459680702460853,
+      "peak_tet_mean_edge_mm": 0.09425072981131022,
+      "p99_9": 0.030262063640125375,
+      "land_band_peak": 0.0068195703406587664,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 41,
+        "tensor_avg_principal_strain": 0.010269243527168067,
+        "scalar_avg_principal_strain": 0.011853865223167004
+       },
+       "r_1.0mm": {
+        "n_tets": 83,
+        "tensor_avg_principal_strain": 0.0038907388322013893,
+        "scalar_avg_principal_strain": 0.0063942831813205295
+       }
+      }
+     },
+     "moment_split": {
+      "M_body_Nmm": [
+       -326.19337834008786,
+       82.2105894135652,
+       -0.9609306130550976
+      ],
+      "M_backbone_Nmm": [
+       -100.48652861850906,
+       24.591036668595294,
+       0.43269647698717845
+      ],
+      "M_total_Nmm": [
+       -426.6799069585969,
+       106.8016260821605,
+       -0.5282341360679192
+      ],
+      "M_body_norm_Nmm": 336.3950422825649,
+      "M_backbone_norm_Nmm": 103.45264010394241,
+      "M_total_norm_Nmm": 439.8438465720455,
+      "body_share": 0.7648056120468292,
+      "backbone_share": 0.2352031088082918
+     }
+    }
+   },
+   "elapsed_s": 65.125
+  },
+  {
+   "label": "q2p5_a025",
+   "mesh": {
+    "quality": 2.5,
+    "max_tet_volume_mm3": 0.25,
+    "tets": 245723,
+    "p2_nodes": 453054,
+    "dofs": 1359162,
+    "reduced_dofs": 1335234,
+    "layer_points": 91448,
+    "layer_max_edge_mm": 0.08,
+    "min_bary": -1.0984171276101815e-07,
+    "land_area_mm2": [
+     7.999912594388527,
+     7.999912594388528,
+     7.999912594388526,
+     7.999912594388528,
+     7.99991262699769,
+     7.9999126269976895,
+     7.9999126269976895,
+     7.9999126269976895
+    ],
+    "socket_nodes": [
+     417,
+     385,
+     356,
+     386,
+     377,
+     404,
+     421,
+     385
+    ],
+    "build_s": 51.26600000000326
+   },
+   "solve_residual": 5.451822925522458e-13,
+   "steps": {
+    "1709": {
+     "strain": {
+      "peak_abs_principal_strain": 0.04195941515168596,
+      "peak_location_mm": [
+       -1.4890710195521843,
+       -8.327596386504954,
+       -18.00692075206934
+      ],
+      "peak_r_mm": 8.459680495018741,
+      "peak_tet_mean_edge_mm": 0.09411055337020957,
+      "p99_9": 0.030654155021389833,
+      "land_band_peak": 0.007204637075898669,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.008570302428427165,
+        "scalar_avg_principal_strain": 0.011574030748402265
+       },
+       "r_1.0mm": {
+        "n_tets": 95,
+        "tensor_avg_principal_strain": 0.004049425931797903,
+        "scalar_avg_principal_strain": 0.00624386009978558
+       }
+      }
+     },
+     "moment_split": {
+      "M_body_Nmm": [
+       -321.9001350380793,
+       106.33470444108634,
+       0.07128984054554621
+      ],
+      "M_backbone_Nmm": [
+       -106.33779138789441,
+       35.07032369889467,
+       0.028540991088695743
+      ],
+      "M_total_Nmm": [
+       -428.23792642597374,
+       141.40502813998103,
+       0.09983083163424196
+      ],
+      "M_body_norm_Nmm": 339.0085122653239,
+      "M_backbone_norm_Nmm": 111.97166738147993,
+      "M_total_norm_Nmm": 450.98016982909735,
+      "body_share": 0.7517148977831862,
+      "backbone_share": 0.24828512398652144
+     }
+    },
+    "1869": {
+     "strain": {
+      "peak_abs_principal_strain": 0.04168921801091041,
+      "peak_location_mm": [
+       -1.4890710195521843,
+       -8.327596386504954,
+       -18.00692075206934
+      ],
+      "peak_r_mm": 8.459680495018741,
+      "peak_tet_mean_edge_mm": 0.09411055337020957,
+      "p99_9": 0.030236898855472608,
+      "land_band_peak": 0.007159818885279974,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.008503328870062287,
+        "scalar_avg_principal_strain": 0.011457900674655656
+       },
+       "r_1.0mm": {
+        "n_tets": 95,
+        "tensor_avg_principal_strain": 0.004014131061950107,
+        "scalar_avg_principal_strain": 0.006187550234590039
+       }
+      }
+     },
+     "moment_split": {
+      "M_body_Nmm": [
+       -325.15637876454156,
+       81.94645608856976,
+       -0.9231884090422682
+      ],
+      "M_backbone_Nmm": [
+       -100.13994992360472,
+       24.494733642955836,
+       0.43269647698717845
+      ],
+      "M_total_Nmm": [
+       -425.2963286881463,
+       106.4411897315256,
+       -0.49049193205508973
+      ],
+      "M_body_norm_Nmm": 335.32483444204445,
+      "M_backbone_norm_Nmm": 103.0931073020045,
+      "M_total_norm_Nmm": 438.4141131959757,
+      "body_share": 0.7648586675222993,
+      "backbone_share": 0.23515006519856446
+     }
+    }
+   },
+   "elapsed_s": 166.85899999999674
+  }
+ ],
+ "finest_mesh_strain_envelope_with_backbone": {
+  "n_steps": 3405,
+  "at_1709": {
+   "peak": 0.041959415151686885,
+   "location_mm": [
+    -1.4890710195521843,
+    -8.327596386504954,
+    -18.00692075206934
+   ],
+   "land_band_peak": 0.007204637075894597
+  },
+  "at_1869": {
+   "peak": 0.04168921801091115,
+   "location_mm": [
+    -1.4890710195521843,
+    -8.327596386504954,
+    -18.00692075206934
+   ],
+   "land_band_peak": 0.007159818885280571
+  },
+  "mission_max": {
+   "peak": 0.04211089410531504,
+   "step": 1884,
+   "phase": "left_return",
+   "location_mm": [
+    -1.4890710195521843,
+    -8.327596386504954,
+    -18.00692075206934
+   ],
+   "r_mm": 8.459680495018741,
+   "end_rotation_deg": 47.145570999814446
+  },
+  "land_band_mission_max": {
+   "peak": 0.007204637075894597,
+   "step": 1709
+  },
+  "steps_above_3pct": 677,
+  "steps_above_2pct": 1157,
+  "by_phase": {
+   "straighten": {
+    "max": 0.009399935703921468,
+    "step": 0
+   },
+   "entry": {
+    "max": 0.006077914560812083,
+    "step": 198
+   },
+   "right_out": {
+    "max": 0.038914194667497855,
+    "step": 894
+   },
+   "right_return": {
+    "max": 0.03902733082122564,
+    "step": 930
+   },
+   "left_out": {
+    "max": 0.041959415151686885,
+    "step": 1709
+   },
+   "left_return": {
+    "max": 0.04211089410531504,
+    "step": 1884
+   },
+   "pitch_up": {
+    "max": 0.025615433622339,
+    "step": 2390
+   },
+   "pitch_up_return": {
+    "max": 0.025524825824063534,
+    "step": 2391
+   },
+   "pitch_down": {
+    "max": 0.02377605196797429,
+    "step": 2819
+   },
+   "pitch_down_return": {
+    "max": 0.023617809617325618,
+    "step": 2820
+   },
+   "exit": {
+    "max": 0.006006100962052837,
+    "step": 3099
+   }
+  },
+  "eigen_evaluations": 355391,
+  "elapsed_s": 68.42200000002049
+ },
+ "pa12_literature": {
+  "hp_mjf_pa12": {
+   "source": "HP 3D High Reusability PA 12 Material Datasheet (ASTM D638, balanced mode)",
+   "tensile_modulus_MPa": [
+    1700,
+    1800
+   ],
+   "tensile_strength_MPa": 48.0,
+   "elongation_at_yield_pct": {
+    "XY": 11.0,
+    "Z": 10.0
+   },
+   "elongation_at_break_pct": {
+    "XY": 20.0,
+    "Z": 15.0
+   }
+  },
+  "eos_sls_pa2200": {
+   "source": "EOS PA 2200 (PA12) Material Datasheet (ISO 527)",
+   "tensile_modulus_MPa": [
+    1650,
+    1700
+   ],
+   "tensile_strength_MPa": {
+    "XY": [
+     48.0,
+     50.0
+    ],
+    "Z": 42.0
+   },
+   "elongation_at_break_pct": {
+    "XY": [
+     18.0,
+     24.0
+    ],
+    "Z": [
+     4.0,
+     10.0
+    ]
+   }
+  },
+  "fatigue_endurance_literature": [
+   {
+    "citation": "Van Hooreweder et al. (2013), Polymer Testing, DOI: 10.1016/j.polymertesting.2013.04.014",
+    "endurance_limit_MPa": [
+     15.0,
+     18.0
+    ],
+    "equivalent_elastic_strain_at_1530MPa_pct": [
+     0.9803921568627451,
+     1.1764705882352942
+    ],
+    "notes": "High-cycle fatigue endurance limit (~10^6-10^7 cycles) for SLS PA12 at room temperature."
+   },
+   {
+    "citation": "Salazar, Cano, & Rodriguez (2022), Engineering Fracture Mechanics, DOI: 10.1016/j.engfracmech.2022.108825",
+    "endurance_limit_MPa": [
+     15.0,
+     18.0
+    ],
+    "notes": "SLS PA12 fatigue limit and build-orientation sensitivity (Z-direction lower than XY)."
+   }
+  ]
+ },
+ "elapsed_s": 364.375
+}

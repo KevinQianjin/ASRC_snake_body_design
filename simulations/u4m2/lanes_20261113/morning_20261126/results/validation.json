@@ -1,0 +1,22 @@
+{
+ "completed_at_et": "2026-11-26T11:25:00-05:00",
+ "completed_at_utc": "2026-11-26T16:25:00Z",
+ "all_passed": true,
+ "checks": {
+  "cad_hub_bore_measured_8p40mm": true,
+  "backbone_EI_parallel_addition_lt_1pct": true,
+  "all_pardiso_residuals_le_1e-10": true,
+  "mesh_q3_to_q2p5_peak_change_lt_5pct": true,
+  "stride1_max_drop_le_0p001mm": true,
+  "stride1_zero_contacts": true,
+  "stride1_zero_below_0p025mm": true,
+  "summary_figure_exists": true
+ },
+ "metrics": {
+  "ei_parallel_rel_err": 0.001433400612625834,
+  "max_solve_residual": 3.273009870998471e-11,
+  "q3_to_q2p5_rel_change_1709": 0.02554968766398957,
+  "q3_to_q2p5_rel_change_1869": 0.02594364837266569,
+  "stride1_max_drop_mm": 9.651581355640815e-05
+ }
+}

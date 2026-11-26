@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#24-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#26-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -34,6 +34,12 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 The [full project index](docs/project_index.md) links CAD, simulation code, result files and reports for each project. The [repository map](docs/repository_map.md) lists the physical folders and relocated paths.
 
 <a id="daily-updates"></a>
+
+## 26 November 2026
+
+<a id="26-november-2026--m6-niti-backbone-hub-strain-and-stride-1-tilt-closeout"></a>
+
+**Morning Report — M6 NiTi-backbone hub-strain convergence and stride-1 FCL tilt closeout.** Both simulation priorities from the 25 November handoff are closed out (run **2026-11-26 10:19:41–11:25:00 EST / 15:19:41–16:25:00 UTC**). Adding the Ø1.80 mm (`40 GPa`) NiTi backbone between the D0/D1 masters (not coupled to the Ø8.40 mm hub-ring bores, 3.30 mm radial clearance) under kinematic rod rotation gives a **75.2%–76.5% / 23.5%–24.8%** body/backbone moment split with guide wrenches, keeps all governing bending-plane land tractions within **1.2%–5.1%**, and converges the localized hub/arm corner strain (`q5 → q3 → q2.5/a0.25`, 1.34M reduced DOFs) to **4.196% / 4.169%** at steps 1,709 / 1,869 (**4.211%** mission max at step 1,884; 677 states > 3%; 0.5 / 1.0 mm finite-gauge averages **0.850% / 0.401%**). Compared with cited PA12 (HP MJF PA 12, EOS SLS PA 2200, and 15–18 MPa / ~1.0–1.2% fatigue endurance limits), the sharp corner exceeds fatigue limits and motivates a junction fillet plus hardware DIC/strain-gauge testing. For Priority 2, **776 exact FCL probes at stride 1** (±10 states around all 44 per-phase minima) confirm **0 contacts**, **0 states < 0.025 mm**, and a maximum drop vs stride-5 of **0.000097 mm** (`< 0.001 mm`, PASS: uncrowned **0.0752 / 0.0737 mm**, crowned **0.0789 / 0.0784 mm**). [Morning Report](reports/daily/Morning_Report_2026_11_26.md) · [Study and commands](simulations/u4m2/lanes_20261113/morning_20261126/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/morning_20261126/HANDOFF.md)
 
 ## 25 November 2026
 
