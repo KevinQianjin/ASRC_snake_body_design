@@ -1,0 +1,323 @@
+{
+  "design": "ASRC U4+M2, 500 g head, six 96 mm modules, twelve \u00d82 mm ropes",
+  "generated_by": "design_limit_sweep.py",
+  "source_studies": [
+    "round2_20261119: component service demands and 3405-state duty spectrum",
+    "free_space_20261120: local M5 pin/web threshold sweeps and hypothetical rope capacities"
+  ],
+  "pin_reference": {
+    "trial_yield_MPa": 205.0,
+    "installed_pin_grade": null,
+    "peak_saved_elastic_demand_MPa": 382.1372968237427,
+    "peak_yaw_deg": -175.0,
+    "first_crossing_bracket": {
+      "last_below_yaw_deg": -109.6875,
+      "last_below_MPa": 203.30112821288688,
+      "first_above_yaw_deg": -110.625,
+      "first_above_MPa": 207.5735357259637
+    }
+  },
+  "free_space_path_limits": [
+    {
+      "path": "right",
+      "source_step": 913,
+      "seed_deg": 175.0,
+      "rod_last_deg": 385.0,
+      "rod_stop_deg": 386.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": 296.0,
+      "screened_stop_deg": 297.0,
+      "reason": "M6_distal_C_left_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 140.00769052272733,
+      "at_yaw_deg": 180.0,
+      "at_pitch_deg": 20.0,
+      "peak_tension_screened_path_N": 60.02852345020288
+    },
+    {
+      "path": "left",
+      "source_step": 1796,
+      "seed_deg": -175.0,
+      "rod_last_deg": -385.0,
+      "rod_stop_deg": -386.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": -296.0,
+      "screened_stop_deg": -297.0,
+      "reason": "M6_distal_C_right_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 140.00760004029297,
+      "at_yaw_deg": -180.0,
+      "at_pitch_deg": 20.0,
+      "peak_tension_screened_path_N": 60.074566932186336
+    },
+    {
+      "path": "up",
+      "source_step": 2390,
+      "seed_deg": 90.0,
+      "rod_last_deg": 244.0,
+      "rod_stop_deg": 245.0,
+      "rod_reason": "nonlocal body capsules",
+      "screened_last_deg": 215.0,
+      "screened_stop_deg": 216.0,
+      "reason": "M5_distal_C_up_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 179.99331309917324,
+      "at_yaw_deg": 0.0,
+      "at_pitch_deg": 200.0,
+      "peak_tension_screened_path_N": 55.08075090394538
+    },
+    {
+      "path": "down",
+      "source_step": 2819,
+      "seed_deg": -90.0,
+      "rod_last_deg": -211.0,
+      "rod_stop_deg": -212.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": -149.0,
+      "screened_stop_deg": -150.0,
+      "reason": "M5_proximal_C_down_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 168.99688614639555,
+      "at_yaw_deg": 0.0,
+      "at_pitch_deg": -149.0,
+      "peak_tension_screened_path_N": 33.24188472629748
+    },
+    {
+      "path": "right_up",
+      "source_step": 913,
+      "seed_deg": 20.0,
+      "rod_last_deg": 160.0,
+      "rod_stop_deg": 161.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": 113.0,
+      "screened_stop_deg": 114.0,
+      "reason": "M5_proximal_C_up_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 139.7001876681051,
+      "at_yaw_deg": 175.0,
+      "at_pitch_deg": 20.0,
+      "peak_tension_screened_path_N": 113.49273193523256
+    },
+    {
+      "path": "right_down",
+      "source_step": 913,
+      "seed_deg": 20.0,
+      "rod_last_deg": -59.0,
+      "rod_stop_deg": -60.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": -7.0,
+      "screened_stop_deg": -8.0,
+      "reason": "M5_proximal_C_left_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 166.12143258281827,
+      "at_yaw_deg": 175.0,
+      "at_pitch_deg": -7.0,
+      "peak_tension_screened_path_N": 36.19513138653521
+    },
+    {
+      "path": "left_up",
+      "source_step": 1796,
+      "seed_deg": 20.0,
+      "rod_last_deg": 161.0,
+      "rod_stop_deg": 162.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": 115.0,
+      "screened_stop_deg": 116.0,
+      "reason": "M5_proximal_C_up_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 139.78158570487798,
+      "at_yaw_deg": -175.0,
+      "at_pitch_deg": 20.0,
+      "peak_tension_screened_path_N": 110.18344538497877
+    },
+    {
+      "path": "left_down",
+      "source_step": 1796,
+      "seed_deg": 20.0,
+      "rod_last_deg": -59.0,
+      "rod_stop_deg": -60.0,
+      "rod_reason": "equilibrium trial exceeded the finite rope routing domain",
+      "screened_last_deg": -7.0,
+      "screened_stop_deg": -8.0,
+      "reason": "M5_proximal_C_right_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 166.12143119104138,
+      "at_yaw_deg": -175.0,
+      "at_pitch_deg": -7.0,
+      "peak_tension_screened_path_N": 36.372871734175874
+    },
+    {
+      "path": "antipode",
+      "source_step": 913,
+      "seed_deg": 20.0,
+      "rod_last_deg": -20.0,
+      "rod_stop_deg": null,
+      "rod_reason": "search cap",
+      "screened_last_deg": -19.0,
+      "screened_stop_deg": -20.0,
+      "reason": "M5_distal_C_up_wrap_margin_deg",
+      "prefix_return": true,
+      "largest_sampled_base_axis_separation_deg": 178.9965296170903,
+      "at_yaw_deg": 180.0,
+      "at_pitch_deg": -19.0,
+      "peak_tension_screened_path_N": 47.29206524066434
+    }
+  ],
+  "free_space_trial_web_limits": [
+    {
+      "hypothetical_principal_fracture_strain": 0.02,
+      "preceding_yaw_deg": 0.0,
+      "first_yaw_deg": -30.0,
+      "preceding_strain": 0.014078770361321264,
+      "first_strain": 0.020434444024183995,
+      "first_rib_deg": 157.5,
+      "status": "crossed"
+    },
+    {
+      "hypothetical_principal_fracture_strain": 0.04,
+      "preceding_yaw_deg": -60.0,
+      "first_yaw_deg": -90.0,
+      "preceding_strain": 0.03550296947108916,
+      "first_strain": 0.047945866474778165,
+      "first_rib_deg": 202.5,
+      "status": "crossed"
+    },
+    {
+      "hypothetical_principal_fracture_strain": 0.06,
+      "preceding_yaw_deg": -112.50000000000001,
+      "first_yaw_deg": -119.99999999999999,
+      "preceding_strain": 0.05786661789481964,
+      "first_strain": 0.06330809557913117,
+      "first_rib_deg": 247.5,
+      "status": "crossed"
+    },
+    {
+      "hypothetical_principal_fracture_strain": 0.08,
+      "preceding_yaw_deg": -119.99999999999999,
+      "first_yaw_deg": -150.0,
+      "preceding_strain": 0.06330809557913117,
+      "first_strain": 0.08182863056910089,
+      "first_rib_deg": 247.5,
+      "status": "crossed"
+    },
+    {
+      "hypothetical_principal_fracture_strain": 0.1,
+      "preceding_yaw_deg": null,
+      "first_yaw_deg": null,
+      "preceding_strain": null,
+      "first_strain": null,
+      "first_rib_deg": null,
+      "status": "not reached on sampled branch"
+    }
+  ],
+  "normal_duty_rope_resistance_targets": [
+    {
+      "component": "Rope plus termination",
+      "demand": 25.926870678647635,
+      "unit": "N",
+      "target_for_factor_1p5": 38.890306017971454,
+      "target_for_factor_2p0": 51.85374135729527
+    },
+    {
+      "component": "M6 adhesive land",
+      "demand": 3.0372131834346763,
+      "unit": "N",
+      "target_for_factor_1p5": 4.555819775152014,
+      "target_for_factor_2p0": 6.074426366869353
+    },
+    {
+      "component": "U blade tab",
+      "demand": 213.61626260758035,
+      "unit": "N",
+      "target_for_factor_1p5": 320.42439391137054,
+      "target_for_factor_2p0": 427.2325252151607
+    },
+    {
+      "component": "U NiTi blade",
+      "demand": 0.9811477749844236,
+      "unit": "percent",
+      "target_for_factor_1p5": 1.4717216624766354,
+      "target_for_factor_2p0": 1.9622955499688473
+    },
+    {
+      "component": "M5 supported pin and relieved PA12 coupon",
+      "demand": 0.004160155055463353,
+      "unit": "strain",
+      "target_for_factor_1p5": 0.00624023258319503,
+      "target_for_factor_2p0": 0.008320310110926706
+    },
+    {
+      "component": "M5 supported pin and relieved PA12 coupon",
+      "demand": 372.60915122014006,
+      "unit": "MPa",
+      "target_for_factor_1p5": 558.9137268302101,
+      "target_for_factor_2p0": 745.2183024402801
+    },
+    {
+      "component": "M5 remote PA12 web",
+      "demand": 8.551906215764095,
+      "unit": "percent",
+      "target_for_factor_1p5": 12.827859323646143,
+      "target_for_factor_2p0": 17.10381243152819
+    },
+    {
+      "component": "M6 adhesive pad",
+      "demand": 63.95869548325363,
+      "unit": "MPa",
+      "target_for_factor_1p5": 95.93804322488045,
+      "target_for_factor_2p0": 127.91739096650726
+    }
+  ],
+  "fatigue": {
+    "target_missions": 10000,
+    "reference_cycles": 1000000,
+    "measured_mission_duration_s": null,
+    "physical_life_missions": null,
+    "conditional_examples": [
+      {
+        "channel": "C_up rope and termination at winch end",
+        "assumed_test_amplitude_N_at_reference_cycles": 3.0,
+        "reference_cycles": 1000000,
+        "assumed_slope": 5,
+        "calculated_mission_blocks": 396.1814300356961,
+        "status": "conditional illustration only; assumed resistance is not measured",
+        "required_amplitude_for_10000_blocks_N": 5.721928566069302,
+        "formula": "10000 * (assumed endurance amplitude / required amplitude)^5, linear cumulative damage"
+      },
+      {
+        "channel": "C_up rope and termination at winch end",
+        "assumed_test_amplitude_N_at_reference_cycles": 5.0,
+        "reference_cycles": 1000000,
+        "assumed_slope": 5,
+        "calculated_mission_blocks": 5094.925797784161,
+        "status": "conditional illustration only; assumed resistance is not measured",
+        "required_amplitude_for_10000_blocks_N": 5.721928566069302,
+        "formula": "10000 * (assumed endurance amplitude / required amplitude)^5, linear cumulative damage"
+      },
+      {
+        "channel": "C_up rope and termination at winch end",
+        "assumed_test_amplitude_N_at_reference_cycles": 8.0,
+        "reference_cycles": 1000000,
+        "assumed_slope": 5,
+        "calculated_mission_blocks": 53424.1691333732,
+        "status": "conditional illustration only; assumed resistance is not measured",
+        "required_amplitude_for_10000_blocks_N": 5.721928566069302,
+        "formula": "10000 * (assumed endurance amplitude / required amplitude)^5, linear cumulative damage"
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "No measured lower-bound resistance was recorded for any component in the source strength table.",
+    "M6 caps, lockwire, U cage shell, M5 hub/fork retention, M-backbone end bonds, and head/base retention lack calibrated failure laws in these stress results.",
+    "No validated crack, plasticity, adhesive debond, fatigue, creep, or wear model establishes ultimate failure or calendar service hours.",
+    "First-order load scaling is not a substitute for rerunning contact or nonlinear equilibrium at the scaled load."
+  ],
+  "files": [
+    "component_stress_sweep.csv",
+    "pin_yield_sensitivity.csv",
+    "web_strain_sensitivity.csv",
+    "rope_capacity_sensitivity.csv",
+    "fatigue_demand.csv",
+    "conditional_life_sensitivity.csv"
+  ]
+}

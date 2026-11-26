@@ -5,6 +5,7 @@ The extreme studies use the [500 g yaw and pitch mission](../lanes_20261113/cycl
 | Round | Question | Start here |
 |---|---|---|
 | **Free space and repeated duty · 20 November 2026** | Where do steering, material demand and repeat-duty limits arise without a tank wall? | [Engineering report](../../../reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md) · [Methods and numerical evidence](free_space_20261120/README.md) |
+| **Component demand sweep · 25 November 2026** | What are the archived component demands, simple load-factor targets, threshold brackets and endurance requirements? | [Sensitivity appendix](../../../reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md#component-demand-and-threshold-sensitivity-sweep-25-november-2026) · [Sweep script and outputs](design_limit_sweep_20261122/) |
 | **1 · 19 November 2026** | Which poses, guide clearances, web loads, U blades and return tensions govern the next tests? | [Study and commands](round1_20261119/README.md) · [Five-step load table](round1_20261119/results/five_step_poses_and_ropes.csv) · [Verification](round1_20261119/results/validation.json) |
 | **2 · opened 19 November, reported 20 November 2026** | How do those sites behave over the full mission, on reversal, under overload and across combined motion? | [Engineering report](../../../reports/projects/extreme_tests/Extreme_Simulation_Round_2_2026_11_19.md) · [Methods and commands](round2_20261119/README.md) · [Verification](round2_20261119/results/verification/validation.json) |
 
