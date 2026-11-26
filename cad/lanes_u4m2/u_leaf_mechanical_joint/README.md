@@ -2,6 +2,8 @@
 
 This candidate captures the shaped ends of one original NiTi leaf with PA12 seats, a removable shoulder key and a proximal backing shoe. It replaces the two adhesive interfaces on the selected leaf. The deliverables are suitable for a fit trial and planning instrumented loads. Load capacity, installed stiffness, endurance and the full 500 g mission with these joints remain open.
 
+**Use the low-force bench comparison for this proximal layout.** The seated M1.6 head engages the shoe before the PA12 lip. A flush neighbouring face can also block shoe travel ahead of the lip. The follow-up compares a seated screw with a fixture-held pin and gives the measurement procedure. [Reversal bench check](bench_reversal/README.md)
+
 ## Parts for one near/far trial
 
 | Item | Quantity | Use |
@@ -22,9 +24,9 @@ All STLs and STEPs use mm. The mating face of each coupon is at depth **d = 0** 
 2. With both keys and the backstop out, feed the full blade axially from the proximal side until its distal heel seats against the original blind floor. At d = 2 mm the selected end lies at x = 5–10 mm, y = 23.405–29.405 mm. The single working shoulder faces the key; use the sections to check the blade handedness.
 3. Slide each key from +Y toward −Y behind the shoulder, rounded working edge toward the thin span. At the proximal end insert the backing shoe from the same side, bridge toward the mating face and wings beneath the disk lips. The shoe bears against outward motion of the heel. The blind floor performs this function at the far end.
 4. Slide each square nut from +X into its pedestal. Insert the screw from the outer disk face while the module is accessible. The preformed nut slot restrains rotation. The same screw blocks lateral withdrawal of the key and, at the near end, the shoe. Confirm that the head seats below the datum face, the bit engages and the nut has full usable thread engagement. Characterise preload and loss of retention on samples.
-5. Measure the force–displacement loop in both directions and axial end play before applying the service load. Backlash is material to control accuracy. The blade-to-key gap is 0.13 mm, the key has 0.12 mm travel to the rail, and the near heel-to-shoe and shoe-to-lip gaps are each 0.12 mm. A freely floating, unpreloaded proximal joint can have approximately **0.49 mm reversal travel** between the two bearing limits. The distal blind heel seats at nominal zero. Head preload, friction, tolerance and load sharing can change these values. Measure each joint and a complete U before accepting this boundary condition in the robot model.
+5. Measure the force–displacement loop in both directions and axial end play. The blade-to-key gap is 0.13 mm, the key has 0.12 mm travel to the rail, and the near heel-to-shoe and shoe-to-lip gaps are each 0.12 mm. Nominal proximal reversal travel is **0.37 mm** with a fixed seated screw head, or **0.49 mm** with the head constraint removed and the face cleared in the test fixture. The distal blind heel seats at nominal zero. Head preload, friction, tolerance and load sharing can change these values. [Reversal bench check](bench_reversal/README.md)
 
-Under pull, the intended bearing path is NiTi shoulder → key → PA12 rail → end disk. Under push, the proximal heel loads the bridge, wings and disk lips, while the distal heel loads the blind floor. Actual screw loading depends on fit and preload. All checks below use the straight, unloaded geometry.
+Under pull, the intended bearing path is NiTi shoulder → key → PA12 rail → end disk. Under push, the distal heel loads the blind floor. The intended proximal path puts the shoe against the PA12 lip. In the original layout the seated screw head and a flush mating face can engage earlier. The first-fit checks below use the straight, unloaded geometry.
 
 ## Geometry and U4 clearance
 

@@ -1,0 +1,234 @@
+{
+  "upstream_joint_revision": "93a008af6977d6ca052cd2fb8cf6697661509f94",
+  "source_sha256": {
+    "cad/lanes_u4m2/u_leaf_mechanical_joint/build.py": "1027cde6066d0af52095e681b781ded032eca53652c0842a3b5ff40ec90f2db1",
+    "simulations/u4m2/extreme_tests/round1_20261119/u_springs.py": "868e77efed5f8a5c8fb1a24e9f8dabaf2cece8fd816bede3d9117e4a6fe23684",
+    "cad/lanes_u4m2/guides_v2/U_lane_pass.stl": "242caef62da9a3b6167686b3e3abae8cbac2d4f8a476851546e796ebf2030330",
+    "cad/lanes_u4m2/guides_v2/U_leaf_springs.stl": "3dcfb079544e1fe05ddf76fefd76b4df5895e4c8c92ca4c868b4a83c16a0518b",
+    "cad/lanes_u4m2/guides_v2/base_interface.stl": "aa1a47375f8d52ab63fb02dbdc3bda8400f790c7a2d0059cca1f7fb0af3a82e4"
+  },
+  "versions": {
+    "manifold3d": "3.5.5",
+    "trimesh": "5.2.1",
+    "numpy": "2.5.4",
+    "scipy": "1.17.0",
+    "numba": "0.68.1",
+    "shapely": "2.2.0",
+    "clarabel": "0.11.1",
+    "matplotlib": "3.10.8"
+  },
+  "overlap_tolerance_mm3": 1e-05,
+  "contact_bracket_tolerance_mm": 0.0002,
+  "geometry": {
+    "proximal_contacts": {
+      "shoulder_to_key": {
+        "travel_mm": 0.13,
+        "last_clear_mm": 0.1299023,
+        "first_blocked_mm": 0.1300781
+      },
+      "key_to_rail": {
+        "travel_mm": 0.12,
+        "last_clear_mm": 0.1198828,
+        "first_blocked_mm": 0.1200586
+      },
+      "heel_to_shoe": {
+        "travel_mm": 0.12,
+        "last_clear_mm": 0.1198828,
+        "first_blocked_mm": 0.1200586
+      },
+      "shoe_to_lip": {
+        "travel_mm": 0.12,
+        "last_clear_mm": 0.1198828,
+        "first_blocked_mm": 0.1200586
+      },
+      "shoe_to_seated_screw": {
+        "travel_mm": 0.0,
+        "last_clear_mm": 0.0,
+        "first_blocked_mm": 0.0001758
+      }
+    },
+    "distal_contacts": {
+      "shoulder_to_key": {
+        "travel_mm": 0.13,
+        "last_clear_mm": 0.1299023,
+        "first_blocked_mm": 0.1300781
+      },
+      "key_to_rail": {
+        "travel_mm": 0.12,
+        "last_clear_mm": 0.1198828,
+        "first_blocked_mm": 0.1200586
+      },
+      "heel_to_blind_floor": {
+        "travel_mm": 0.0,
+        "last_clear_mm": 0.0,
+        "first_blocked_mm": 0.0001953
+      }
+    },
+    "distal_response": {
+      "compression_mm": 0.0,
+      "tension_mm": 0.25,
+      "reversal_mm": 0.25,
+      "sample_count": 13,
+      "max_overlap_mm3": 0.0
+    },
+    "nominal_seated_screw_shoe_interference_at_lip_mm3": 0.445732,
+    "shoe_protrusion_at_lip_mm": 0.04,
+    "mating_faces": {
+      "U1_base": {
+        "travel_mm": 0.08,
+        "last_clear_mm": 0.0799805,
+        "first_blocked_mm": 0.0801563,
+        "interference_at_lip_mm3": 1.91553
+      },
+      "preceding_U_distal_face": {
+        "travel_mm": 0.08,
+        "last_clear_mm": 0.0799805,
+        "first_blocked_mm": 0.0801563,
+        "interference_at_lip_mm3": 1.91553
+      }
+    },
+    "fixtures_open_near_face": {
+      "Seated screw": {
+        "near": {
+          "compression_mm": 0.12,
+          "tension_mm": 0.25,
+          "reversal_mm": 0.37,
+          "sample_count": 25,
+          "max_overlap_mm3": 0.0
+        },
+        "compression_limit_mm": 95.88,
+        "tension_limit_mm": 96.5,
+        "reversal_mm": 0.62
+      },
+      "Fixed pin": {
+        "near": {
+          "compression_mm": 0.24,
+          "tension_mm": 0.25,
+          "reversal_mm": 0.49,
+          "sample_count": 25,
+          "max_overlap_mm3": 0.0
+        },
+        "compression_limit_mm": 95.76,
+        "tension_limit_mm": 96.5,
+        "reversal_mm": 0.74
+      }
+    },
+    "fixed_control_pin": {
+      "diameter_mm": 1.6,
+      "tip_depth_mm": 5.8,
+      "insertion_overlap_mm3": {
+        "coupon": 0.0,
+        "blade": 0.0,
+        "shoulder_key": 0.0,
+        "backstop": 0.0
+      },
+      "lateral_capture_positive_y": {
+        "shoe_at_lip": {
+          "travel_mm": 0.158,
+          "last_clear_mm": 0.1580811,
+          "first_blocked_mm": 0.1582031
+        },
+        "key_at_rail": {
+          "travel_mm": 0.1,
+          "last_clear_mm": 0.0999756,
+          "first_blocked_mm": 0.1000977
+        }
+      }
+    },
+    "seated_screw_path_stiffness_at_lip_engagement_N_per_mm": {
+      "2.0": 16.6667,
+      "5.0": 41.6667
+    }
+  },
+  "elastic_blade": {
+    "elastic_modulus_MPa": 40000.0,
+    "poisson_ratio": 0.33,
+    "free_span_mm": 89.9998,
+    "boundary": "Fixed end rotations with pure axial displacement in a straight fixture",
+    "spacing_1_mm": [
+      {
+        "force_N": -5.0,
+        "blade_free_span_change_mm": -0.0333819,
+        "residual_mm": 1.632992904831767e-14
+      },
+      {
+        "force_N": -3.5,
+        "blade_free_span_change_mm": -0.0228425,
+        "residual_mm": 2.1663858869502605e-14
+      },
+      {
+        "force_N": -2.0,
+        "blade_free_span_change_mm": -0.0127655,
+        "residual_mm": 1.5917048016059673e-14
+      },
+      {
+        "force_N": -1.0,
+        "blade_free_span_change_mm": -0.0062903,
+        "residual_mm": 1.5948120554922028e-14
+      },
+      {
+        "force_N": 1.0,
+        "blade_free_span_change_mm": 0.0061128,
+        "residual_mm": 4.381465319951283e-15
+      },
+      {
+        "force_N": 2.0,
+        "blade_free_span_change_mm": 0.0120552,
+        "residual_mm": 2.0194857713440044e-14
+      },
+      {
+        "force_N": 3.5,
+        "blade_free_span_change_mm": 0.0206639,
+        "residual_mm": 2.165908351719525e-14
+      },
+      {
+        "force_N": 5.0,
+        "blade_free_span_change_mm": 0.0289257,
+        "residual_mm": 2.0130467887950313e-14
+      }
+    ],
+    "spacing_0p5_mm": [
+      {
+        "force_N": -5.0,
+        "blade_free_span_change_mm": -0.0333819,
+        "residual_mm": 4.606024303544966e-14
+      },
+      {
+        "force_N": -3.5,
+        "blade_free_span_change_mm": -0.0228425,
+        "residual_mm": 2.2599849097552324e-14
+      },
+      {
+        "force_N": -2.0,
+        "blade_free_span_change_mm": -0.0127655,
+        "residual_mm": 1.0204107875711892e-15
+      },
+      {
+        "force_N": -1.0,
+        "blade_free_span_change_mm": -0.0062903,
+        "residual_mm": 8.018946006477271e-15
+      },
+      {
+        "force_N": 1.0,
+        "blade_free_span_change_mm": 0.0061128,
+        "residual_mm": 2.1612117752075384e-14
+      },
+      {
+        "force_N": 2.0,
+        "blade_free_span_change_mm": 0.0120552,
+        "residual_mm": 7.178480409649375e-15
+      },
+      {
+        "force_N": 3.5,
+        "blade_free_span_change_mm": 0.0206639,
+        "residual_mm": 1.5928694652864317e-14
+      },
+      {
+        "force_N": 5.0,
+        "blade_free_span_change_mm": 0.0289257,
+        "residual_mm": 3.555857408635484e-14
+      }
+    ],
+    "max_spacing_difference_mm": 0.0
+  }
+}
