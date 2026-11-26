@@ -95,6 +95,8 @@ Quantities below are installed quantities for one front. Add stock separately fo
 
 ### 2. Install the U-module leaf springs
 
+For an adhesive-free single-leaf fit trial, use the [proximal and distal mechanical joint coupons](../cad/lanes_u4m2/u_leaf_mechanical_joint/README.md). They include section drawings and U4 anchor clearances. The bonded assembly below is the existing full-module baseline.
+
 The dark-purple, nearly straight members in the CRAFT U-module illustration are the **leaf springs**. Each illustrated spring is a pair of blades that draw closer together near the middle. In the 96 mm ASRC module one pair runs along +Y and the other along −Y. The four zigzag Octo-Flex ribs are integral to the PA12 body. The dark-purple blades are separate inserts. [Original labelled CRAFT figure](https://github.com/ContinuumRoboticsLab/CRAFT/blob/d90b56b1eef5c3dbd116e9e19423d34a606f3b29/media/craft_overview.png)
 
 ![Actual U body, four separate dark-purple spring strips and the assembled module in the same orientation](../cad/lanes_u4m2/guides_v2/U_spring_assembly.png)
