@@ -1,0 +1,23 @@
+{
+ "completed_at_et": "2026-11-27T09:08:02-05:00",
+ "completed_at_utc": "2026-11-27T14:08:02Z",
+ "all_passed": true,
+ "checks": {
+  "stage1_ring0_conv_lt_5pct_1709_1869": true,
+  "stage1_ring1_conv_lt_5pct_1709_1869": true,
+  "stage1_all_residuals_le_1e-10": true,
+  "stage2_all_cad_watertight_single_body": true,
+  "stage2_all_cad_bore_preserved_8p40mm": true,
+  "stage2_all_residuals_le_1e-10": true,
+  "summary_figure_exists": true
+ },
+ "metrics": {
+  "ring0_q3_to_q2p5_1869": 0.02572079522710272,
+  "ring1_q3_to_q2p5_1869": -0.01615965815614994,
+  "finest_mission_max_pct": 3.8941154315653077,
+  "finest_steps_above_3pct": 602,
+  "finest_steps_above_2pct": 1063,
+  "max_solve_residual_s1": 7.271207594791357e-13,
+  "max_solve_residual_s2": 1.4558158812167013e-12
+ }
+}
