@@ -1,0 +1,125 @@
+{
+ "checks": [
+  {
+   "name": "CAD sleeve bore \u00d81.85 mm spans |z| = 33..48 mm (15 mm support per end)",
+   "passed": true,
+   "value": {
+    "radius": 0.9206006427083347,
+    "extent": [
+     [
+      -47.95,
+      -33.05
+     ],
+     [
+      33.05,
+      47.95
+     ]
+    ]
+   }
+  },
+  {
+   "name": "Only the \u00d88.40 ring bores lie within r < 5.5 mm in the free span",
+   "passed": true,
+   "value": 4.191928863525391
+  },
+  {
+   "name": "Morning backbone model reproduced (offset 1,869 and moment shares)",
+   "passed": true,
+   "value": {
+    "L0": 4.247750847279447,
+    "morning": 4.246639268151918
+   }
+  },
+  {
+   "name": "PARDISO relative residuals < 1e-9",
+   "passed": true,
+   "value": [
+    2.77871851178207e-13,
+    1.3893550426850754e-13
+   ]
+  },
+  {
+   "name": "Elastica reproduces exact circular arcs at production settings (radius error < 0.15 mm)",
+   "passed": true,
+   "value": {
+    "20deg": {
+     "max_radius_error_mm": 0.04440013556691724,
+     "max_bending_strain": 0.004836662821683384,
+     "analytic_strain": 0.004759988869075444
+    },
+    "47deg": {
+     "max_radius_error_mm": 0.10387297011556029,
+     "max_bending_strain": 0.011432583691933973,
+     "analytic_strain": 0.011185973842327295
+    },
+    "60deg": {
+     "max_radius_error_mm": 0.13527969810640883,
+     "max_bending_strain": 0.014641671506852676,
+     "analytic_strain": 0.014279966607226332
+    }
+   }
+  },
+  {
+   "name": "Production h=1.0 mm min gap within 0.02 mm of (and not above) the converged h=0.25 mm value",
+   "passed": true,
+   "value": {
+    "1866": -0.007765178656911953,
+    "1869": -0.007268670983779479,
+    "1709": -0.004693129702869836
+   }
+  },
+  {
+   "name": "Rod discretisation converged: h=0.5 -> 0.25 mm changes every ring gap < 0.01 mm",
+   "passed": true,
+   "value": {
+    "1866": 0.003942179117489619,
+    "1869": 0.0038072644862565674,
+    "1709": 0.00131861509084219
+   }
+  },
+  {
+   "name": "L2 agrees with L1 below 15 deg end rotation (< 0.05 mm)",
+   "passed": true,
+   "value": 0.03529828145608638
+  },
+  {
+   "name": "L2 coverage spans all 11 mission phases",
+   "passed": true,
+   "value": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "Rotation lift reproduces D1 rotation (< 0.01 deg)",
+   "passed": true,
+   "value": 0.0010461389410778565
+  },
+  {
+   "name": "Summary figure written",
+   "passed": true,
+   "value": null
+  }
+ ],
+ "all_passed": true,
+ "headline": {
+  "L0_max_offset_mm": 4.247750847279447,
+  "L0_states_exceeding": 664,
+  "L1_max_offset_mm": 2.6501329642573577,
+  "L1_min_gap_mm": 0.6498670357426426,
+  "L2_min_gap_mm": 0.38717260118949826,
+  "L2_min_gap_step": 1866,
+  "L2_states_in_contact": 0,
+  "L2_states": 737,
+  "L2_max_bending_strain": 0.016203974565704462
+ }
+}

@@ -1,0 +1,29 @@
+morning {'per_ring_max_offset_mm': [4.247750847279447, 0.5721560445282209, 0.5059928838072345, 1.5713109612102216], 'per_ring_argmax_step': [1869, 2853, 2774, 809], 'max_offset_mm': 4.247750847279447, 'states_exceeding_clearance': 664, 'step_1869': [4.247750847279447, 0.13133618129558625, 0.2684945746930292, 1.4153162860932273], 'step_1709': [4.18952019895379, 0.04326012852253877, 0.09332405923363403, 1.5113282983670724], 'min_gap_mm': -0.9477508472794471}
+cad {'per_ring_max_offset_mm': [1.9826035302055407, 2.6501329642573577, 2.3019590285708036, 0.9146006605029029], 'per_ring_argmax_step': [992, 1866, 1866, 800], 'max_offset_mm': 2.6501329642573577, 'states_exceeding_clearance': 0, 'step_1869': [1.9818794760145693, 2.6332231498833196, 2.285989265895842, 0.8102244085963508], 'step_1709': [1.968391786765896, 2.441668323423314, 2.1121956866708027, 0.8727770594138359], 'min_gap_mm': 0.6498670357426426}
+arc check {'20deg': {'max_radius_error_mm': 0.00567670674575993, 'max_bending_strain': 0.004935496204525403, 'analytic_strain': 0.004759988869075444}, '47deg': {'max_radius_error_mm': 0.0198537549511002, 'max_bending_strain': 0.011707588799694246, 'analytic_strain': 0.011185973842327295}, '60deg': {'max_radius_error_mm': 0.04011237603245377, 'max_bending_strain': 0.015038930934419457, 'analytic_strain': 0.014279966607226332}}
+nonlinear states 737 in 706.3 s
+{
+ "states_evaluated": 737,
+ "stride": 5,
+ "coverage": "all 11 mission phases (stride + 40 largest L1 offsets + 20 largest rotations + per-phase L1 maxima + steps 1709/1869/1884)",
+ "min_gap_mm": 0.5086557276052042,
+ "min_gap_step": 1866,
+ "min_gap_phase": "left_return",
+ "per_ring_min_gap_mm": [
+  1.3924884296897877,
+  0.5086557276052042,
+  0.867956200720553,
+  2.4639264303000337
+ ],
+ "per_ring_min_gap_step": [
+  1874,
+  1866,
+  1866,
+  1035
+ ],
+ "states_in_contact": 0,
+ "max_contact_force_N": 0.0,
+ "max_backbone_bending_strain": 0.016528940702330054,
+ "max_strain_step": 1870,
+ "max_D1_rotation_lift_error_deg": 0.0010461389410778565
+}

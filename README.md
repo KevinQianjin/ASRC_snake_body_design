@@ -37,6 +37,28 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 ## 26 November 2026
 
+<a id="26-november-2026--evening-report-niti-backbone-vs-hub-ring-bore"></a>
+
+**Evening Report — M6 NiTi backbone vs hub-ring bore: CAD-consistent attachment withdraws the morning contact flag; new governing gap 0.39 mm at `ring_1`.** Run: **2026-11-26 20:01:44 EST (2026-11-27 01:01:44 UTC)**, 2-hour limit.
+
+The morning study predicted that the Ø1.80 mm rod would touch the Ø8.40 mm `ring_0` bore (4.25 mm offset > 3.30 mm clearance). That model clamped the rod at the FE cut faces with an 85.8 mm free span. Ray-casting the M6 CAD shows the rod is actually carried in **Ø1.85 mm sleeves over |z| = 33–48 mm**. This agrees with `lane_design.json` and the installation guide (15 mm bonded per end, **66 mm free**).
+
+With the sleeve attachment:
+- a linear check over **all 3,405 states** gives a minimum gap of **0.650 mm**;
+- a geometrically nonlinear elastica check (exact-rotation, arc-length-preserving body lift; penalty contact on the real bore bands; 737 states covering all 11 phases) gives a minimum gap of **0.387 mm** (converged 0.393 mm) at **`ring_1`, step 1,866 (left-yaw return, 46.7°)**;
+- **0 states make contact**;
+- the solid model's combined stiffness becomes 66,501 N·mm², within +2.7% of the rod model's 64,730 (the morning attachment gave −6.7%);
+- the backbone carries 18.7–20.7% of the end moment;
+- the q5 hub peak strain falls from 3.49% to **3.31%** and moves toward `ring_1`;
+- peak NiTi bending strain is **1.53–1.62%**, about twice the uniform-curvature estimate.
+
+Kept visible:
+- an under-converged first sweep (0.509 mm, unconservative by 0.12 mm) was rejected;
+- a fixed-chord bound puts `ring_0` in contact, but would need ≈ 2 kN of rod tension and is judged non-physical. Axial compatibility between body and rod still needs a coupled nonlinear model, which is next-run priority 1;
+- there is no tolerance stack, and the refined-mesh hub strain has not been recomputed for the corrected attachment.
+
+All 11 automated checks pass. No CAD, guide, rope, mass or 500 g payload change, and no backbone end ferrule. [Evening Report](reports/daily/Evening_Report_2026_11_26.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261126/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261126/HANDOFF.md) · [Summary figure](simulations/u4m2/lanes_20261113/evening_20261126/results/evening_20261126_summary.png)
+
 <a id="26-november-2026--m6-niti-backbone-hub-strain-and-stride-1-tilt-closeout"></a>
 
 **Morning Report — M6 NiTi-backbone hub-strain convergence and stride-1 FCL tilt closeout.** Both simulation priorities from the 25 November handoff are closed out (run **2026-11-26 10:19:41–11:25:00 EST / 15:19:41–16:25:00 UTC**). Adding the Ø1.80 mm (`40 GPa`) NiTi backbone between the D0/D1 masters (not coupled to the Ø8.40 mm hub-ring bores, 3.30 mm radial clearance) under kinematic rod rotation gives a **75.2%–76.5% / 23.5%–24.8%** body/backbone moment split with guide wrenches, keeps all governing bending-plane land tractions within **1.2%–5.1%**, and converges the localized hub/arm corner strain (`q5 → q3 → q2.5/a0.25`, 1.34M reduced DOFs) to **4.196% / 4.169%** at steps 1,709 / 1,869 (**4.211%** mission max at step 1,884; 677 states > 3%; 0.5 / 1.0 mm finite-gauge averages **0.850% / 0.401%**). Compared with cited PA12 (HP MJF PA 12, EOS SLS PA 2200, and 15–18 MPa / ~1.0–1.2% fatigue endurance limits), the sharp corner exceeds fatigue limits and motivates a junction fillet plus hardware DIC/strain-gauge testing. For Priority 2, **776 exact FCL probes at stride 1** (±10 states around all 44 per-phase minima) confirm **0 contacts**, **0 states < 0.025 mm**, and a maximum drop vs stride-5 of **0.000097 mm** (`< 0.001 mm`, PASS: uncrowned **0.0752 / 0.0737 mm**, crowned **0.0789 / 0.0784 mm**). [Morning Report](reports/daily/Morning_Report_2026_11_26.md) · [Study and commands](simulations/u4m2/lanes_20261113/morning_20261126/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/morning_20261126/HANDOFF.md)
@@ -45,18 +67,7 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 <a id="25-november-2026--evening-report-whole-mission-envelope"></a>
 
-**Evening Report — whole-mission envelope of the bonded solid M6 model: bond demand closed out, no sampled 0.2° tilt failure, hub strain confirmed mission-wide.** The 24 November whole-body solid model was linear but had been evaluated at only two steps. This run factorised it once per adhesive case, solved 15 unit load cases and superposed them over **all 3,405 states** of the archived 500 g yaw/pitch mission (straighten → entry → right yaw and return → left yaw and return → pitch up/down and return → exit). The superposed fields reproduce the archived direct solves to < 10⁻⁸. No CAD, guide position, rope bore, mass or solver input changed. [Evening Report](reports/daily/Evening_Report_2026_11_25.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261125/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261125/HANDOFF.md)
-
-| Check or result (G = 500 / 1,500 MPa assumed) | Mission envelope | Steps 1,709/1,885 (24 Nov) |
-|---|---:|---:|
-| **Area-mean axial bond shear** (q3, 1.08 M DOF) | **2.48 / 3.60 MPa** | 2.45 / 3.45 MPa |
-| Land-edge peak axial shear, uncrowned / crowned | 9.0 / 16.8 · 7.8 / 14.5 MPa | 8.7 / 16.8 · 7.4 / 14.3 MPa |
-| Peak normal traction, uncrowned | 21.2 / 36.4 MPa (at 1,709 / 1,885) | same |
-| Mesh change q5 → q3 of the mission maxima | −3.9% to +4.7% | |
-| **Worst gap at 26 rigid ±0.2° tilts, 689 sampled states**, uncrowned / crowned | **0.0737 / 0.0783 mm**; 0 states < 0.025 mm; 0 contacts | 0.0742 / 0.0785 mm |
-| **Peak body strain** (no backbone; small-strain check fails) | **3.81% at step 1,869**; > 3% on 615 states | 3.74% |
-
-Steps 1,709 / 1,885 were representative of the bond demand to within 5%. During right yaw the off-plane lands carry twice their step-1,709 load, but stay inside the envelope. Against the solid arm, the tilt clearance changes by only about 0.005 mm over the mission, so the 21 November uncrowned failure was a rod-map artefact across the sampled mission. The hub/arm strain above 3% is now a mission-wide finding and the top next-run item, with the NiTi backbone added. The adhesive, the bond strength, the as-printed land and the PA12 strain limit remain unmeasured, and the tilt sweep is sampled at every 5th state.
+**Evening Report — whole-mission envelope of the bonded solid M6 model.** The linear solid model was superposed over all 3,405 mission states. Area-mean axial bond shear is 2.48 / 3.60 MPa (G = 500 / 1,500 MPa). The worst gap under sampled 0.2° tilt is 0.0737 / 0.0783 mm (uncrowned / crowned), with 0 contacts. The hub/arm strain of 3.81% (bare body, step 1,869) is mission-wide. [Evening Report](reports/daily/Evening_Report_2026_11_25.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261125/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261125/HANDOFF.md)
 
 **Other repository updates (on `main`, 25 Nov):** a [NiTi manufacturing plan for PolyU IC](reports/niti_manufacturing_polyu_report.md); an [isolated U-leaf-spring geometry and wire-EDM CAM handoff](cad/manufacturing_setup/README.md) (STEP solids, audited profile DXF, Robofil job sheet; no machine code released); and a [U4+M2 component-demand and threshold sensitivity sweep](reports/projects/extreme_tests/Free_Space_and_Service_Life_2026_11_20.md#component-demand-and-threshold-sensitivity-sweep-25-november-2026). These are summarised in the Evening Report.
 
