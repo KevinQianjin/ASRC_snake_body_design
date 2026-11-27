@@ -1,6 +1,6 @@
 # Next-run handoff — from the 26 November 2026 Evening Report
 
-Prepared at **2026-11-26 21:05 EST (2026-11-27 02:05 UTC)**. The run started at **2026-11-26 20:01:44 EST / 2026-11-27 01:01:44 UTC**.
+Prepared at **2026-11-26 20:54 EST (2026-11-27 01:54 UTC)**. The run started at **2026-11-26 20:01:44 EST / 2026-11-27 01:01:44 UTC**.
 
 [Evening Report](../../../../reports/daily/Evening_Report_2026_11_26.md) · [Study and commands](README.md) · [Previous handoff (26 Nov morning)](../morning_20261126/HANDOFF.md)
 

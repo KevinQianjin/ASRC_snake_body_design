@@ -1,6 +1,6 @@
 # Evening Engineering Report — 2026-11-26
 
-**Run:** scheduled evening run (20:01 US Eastern). The actual run started at **2026-11-26 20:01:44 EST (2026-11-27 01:01:44 UTC)**, with a deadline 2 hours later of **22:01:44 EST (03:01:44 UTC)**. Execution-model verification: the configured model is Claude Opus 5.5. The `get_session` metadata tool was not available in this run, so the model actually serving the run could not be confirmed.
+**Run:** scheduled evening run (20:01 US Eastern). The actual run started at **2026-11-26 20:01:44 EST (2026-11-27 01:01:44 UTC)**, with a deadline 2 hours later of **22:01:44 EST (03:01:44 UTC)**. The first push completed at **20:55:19 EST (01:55:19 UTC)**, 53 min 35 s into the run. Execution-model verification: the configured model is Claude Opus 5.5. The `get_session` metadata tool was not available in this run, so the model actually serving the run could not be confirmed.
 **Reporting interval:** **2026-11-25 20:01:44 EST (2026-11-26 01:01:44 UTC)** to the cutoff at this run's start, **2026-11-26 20:01:44 EST (2026-11-27 01:01:44 UTC)**, plus this run's own results.
 **Branch:** `claude/great-goodall-1wf2yh`, fast-forwarded to `origin/main` at `dfd27da` (PR #48 merged) before work began.
 
