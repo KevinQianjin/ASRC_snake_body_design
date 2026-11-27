@@ -1,0 +1,26 @@
+{
+ "completed_at_et": "2026-11-27T08:06:56-05:00",
+ "completed_at_utc": "2026-11-27T13:06:56Z",
+ "all_passed": true,
+ "checks": {
+  "linear_small_angle_2p3deg_lt_2pct": true,
+  "linear_below_15deg_lifted_3d_lt_2pct": true,
+  "linear_below_15deg_rot_lt_2pct": true,
+  "all_newton_residuals_le_1e-6": true,
+  "min_gap_ge_0p25mm_all_variants": true,
+  "zero_bore_contact_all_states": true,
+  "rod_axial_force_physical_lt_20N": true,
+  "summary_figure_exists": true
+ },
+ "metrics": {
+  "small_angle_pos_rel_err": 0.013148737575036887,
+  "below_15deg_max_lifted_3d_rel_err": 0.01686859562069097,
+  "below_15deg_max_rot_rel_err": 0.0024149641793270215,
+  "max_newton_residual": 1.0572232422845218e-07,
+  "min_gap_sweep_mm": 0.9312341532116069,
+  "min_gap_all_variants_mm": 0.57010543944731,
+  "max_rod_axial_force_N": 3.5222623840473317,
+  "max_sleeve_bond_shear_MPa": 0.04040255634506498,
+  "max_niti_bending_strain_pct": 1.7075958096267985
+ }
+}
