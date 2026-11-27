@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#26-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#27-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -34,6 +34,14 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 The [full project index](docs/project_index.md) links CAD, simulation code, result files and reports for each project. The [repository map](docs/repository_map.md) lists the physical folders and relocated paths.
 
 <a id="daily-updates"></a>
+
+## 27 November 2026
+
+<a id="27-november-2026--morning-report-coupled-nonlinear-body-and-backbone"></a>
+
+**Morning Report — geometrically nonlinear coupled M6 lattice + NiTi backbone: axial compatibility settled (+3.52 N, 0.04 MPa sleeve shear), `ring_1` gap 0.57–0.98 mm with zero contact.** Run: **2026-11-27 07:24:01–08:06:56 EST (2026-11-27 12:24:01–13:06:56 UTC)**.
+
+A 7-segment corotational M6 lattice frame calibrated from `evening_20261126/results/unit_poses.npz` (reproducing all 3,405 linear ring poses to 0.0054 mm / 0.035°) was coupled to the geometrically nonlinear extensible elastica NiTi backbone (`L = 66 mm`, rigidly bonded at both CAD sleeve tips, no axial float) with unilateral contact on `ring_0..ring_3`. Below 15°, coupled ring poses match `q5` linear FE within **1.31–1.69%** position and **0.24%** rotation (< 2% acceptance). Because the flexible middle PA12 lattice (`~1.56 N/mm`) is ~1,000× softer axially than the backbone (`1,542 N/mm`), it absorbs geometric foreshortening with only **+3.52 N** peak rod tension (**0.0404 MPa** average sleeve-bond shear over `87.2 mm²`; ~0 N under follower wrenches), ruling out the 1,800–2,000 N fixed-chord bound. Across 183 mission states, **0 states contact any bore** and the governing `ring_1` gap at step 1,866 (46.7°) is **0.931 mm** (`h = 1.0 mm`), **0.978 mm** (`h = 0.5 mm`, converged), and **0.570 mm** (follower wrench) — all well above the 0.25 mm acceptance criterion. Peak NiTi bending strain is **1.71%**. [Morning Report](reports/daily/Morning_Report_2026_11_27.md) · [Study and commands](simulations/u4m2/lanes_20261113/morning_20261127/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/morning_20261127/HANDOFF.md)
 
 ## 26 November 2026
 
