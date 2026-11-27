@@ -1,0 +1,151 @@
+{
+ "task": "Evening 2026-11-26 stage 1 (bore_fe.py)",
+ "started_et": "2026-11-26 20:10:33 EST",
+ "started_utc": "2026-11-27 01:10:33 UTC",
+ "completed_et": "2026-11-26 20:13:10 EST",
+ "completed_utc": "2026-11-27 01:13:10 UTC",
+ "elapsed_s": 157.20067857000004,
+ "mesh": {
+  "tets": 130278,
+  "reduced_dofs": 762645,
+  "quality": 5.0,
+  "max_vol": 0.4
+ },
+ "parameters": {
+  "G_MPa": 500.0,
+  "crown_mm": 0.06,
+  "sleeve_tip_z_mm": 33.0,
+  "L_free_mm": 66.0,
+  "morning_L_mm": 85.8,
+  "d1_ref_z_mm": 40.9,
+  "backbone_EI_Nmm2": 20611.989400202634
+ },
+ "cad_bore": {
+  "sleeve_bore_radius_mm": 0.9206006427083347,
+  "sleeve_z_extent_mm": [
+   [
+    -47.95,
+    -33.05
+   ],
+   [
+    33.05,
+    47.95
+   ]
+  ],
+  "free_span_min_radius_mm": 4.191928863525391,
+  "free_span_min_radius_z_mm": -19.95,
+  "rays": 34560,
+  "n_directions": 36,
+  "dz_mm": 0.1
+ },
+ "solves": {
+  "morning_L85p8": {
+   "residual": 2.77871851178207e-13,
+   "steps": {
+    "1709": {
+     "phase": "left_out",
+     "end_rot_deg": 47.158753447754904,
+     "peak_abs_principal_strain": 0.03467134868968485,
+     "peak_location_mm": [
+      -4.789729614651293,
+      -11.004357943086754,
+      -5.180684886713563
+     ],
+     "backbone_moment_share": 0.24823167590205622,
+     "M_backbone_Nmm": 112.44911402720234,
+     "M_body_Nmm": 340.55156786293645
+    },
+    "1869": {
+     "phase": "left_return",
+     "end_rot_deg": 46.91072249271721,
+     "peak_abs_principal_strain": 0.03484802661735718,
+     "peak_location_mm": [
+      -4.818190609877828,
+      -6.971912242953753,
+      -17.924627196745323
+     ],
+     "backbone_moment_share": 0.23523756800906898,
+     "M_backbone_Nmm": 103.60379707262999,
+     "M_body_Nmm": 336.822159882574
+    },
+    "1884": {
+     "phase": "left_return",
+     "end_rot_deg": 47.145570999814446,
+     "peak_abs_principal_strain": 0.034621108804990725,
+     "peak_location_mm": [
+      -4.789729614651293,
+      -11.004357943086754,
+      -5.180684886713563
+     ],
+     "backbone_moment_share": 0.24500123808163052,
+     "M_backbone_Nmm": 110.31926201929966,
+     "M_body_Nmm": 339.9612024026653
+    }
+   }
+  },
+  "cad_sleeve_L66": {
+   "residual": 1.3893550426850754e-13,
+   "steps": {
+    "1709": {
+     "phase": "left_out",
+     "end_rot_deg": 47.158753447754904,
+     "peak_abs_principal_strain": 0.03375153981986733,
+     "peak_location_mm": [
+      -4.789729614651293,
+      -11.004357943086754,
+      -5.180684886713563
+     ],
+     "backbone_moment_share": 0.20658933506856123,
+     "M_backbone_Nmm": 106.65849385944256,
+     "M_body_Nmm": 409.62422242152263
+    },
+    "1869": {
+     "phase": "left_return",
+     "end_rot_deg": 46.91072249271721,
+     "peak_abs_principal_strain": 0.03306357638378343,
+     "peak_location_mm": [
+      -4.789729614651293,
+      -11.004357943086754,
+      -5.180684886713563
+     ],
+     "backbone_moment_share": 0.1866788275920966,
+     "M_backbone_Nmm": 94.04026509749994,
+     "M_body_Nmm": 409.723545634603
+    },
+    "1884": {
+     "phase": "left_return",
+     "end_rot_deg": 47.145570999814446,
+     "peak_abs_principal_strain": 0.03368757499150409,
+     "peak_location_mm": [
+      -4.789729614651293,
+      -11.004357943086754,
+      -5.180684886713563
+     ],
+     "backbone_moment_share": 0.20162364840649363,
+     "M_backbone_Nmm": 103.56244859588757,
+     "M_body_Nmm": 410.0800141475597
+    }
+   }
+  },
+  "equivalent_EI_over_85p8mm_Nmm2": {
+   "bare": [
+    39705.79336368267,
+    39696.93848620255
+   ],
+   "morning_L85p8": [
+    60404.19479529907,
+    60395.00724296311
+   ],
+   "cad_sleeve_L66": [
+    66501.38222319586,
+    66492.52544557038
+   ]
+  }
+ },
+ "versions": {
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "trimesh": "5.2.2",
+  "python": "3.11.18"
+ }
+}
