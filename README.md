@@ -37,6 +37,18 @@ The [full project index](docs/project_index.md) links CAD, simulation code, resu
 
 ## 27 November 2026
 
+<a id="27-november-2026--evening-report-hub-pocket-in-native-b-rep"></a>
+
+**Evening Report — M6 hub pocket in native B-Rep: the `ring_0` "corner" is a 0.30 mm slot root, fillets are capped at R = 0.14 mm, slot fill rejected, and the arch crown governs the finite-gauge strain.** Run: **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**, 2-hour limit.
+
+Taking Priority 1 of the 27 Nov hub-fillet handoff, the hub was modelled in OpenCASCADE from `cad/modules/Medium_Stiffness_96.step`. The FE body `M6_lane_anchorC.stl` equals that STEP rotated by −22.5°, within 0.00066 mm.
+
+- **The 3.85% `ring_0` peak is not a re-entrant fillet edge.** It is the ceiling corner of a **0.30 × 2.0 mm slot** between each rib end and its hub socket (16 pockets). Native fillets are valid only up to **R = 0.14 mm**: R = 0.25 is invalid and R ≥ 0.30 fails, so the requested R = 0.8–1.5 mm cannot be built there. **`ring_1` lies on a tangent-continuous surface**, so it has no edge to fillet.
+- **New governing site.** In the unchanged design, the concave **arch crown** just below the socket bottom (`r ≈ 9.5 mm, |z| ≈ 20.3 mm`) has the highest finite-gauge strain: **1.72% → 1.91%** at 0.5 mm gauge (q3 → q2.5) and ~1.0% at 1.0 mm. That exceeds `ring_1` (1.32–1.49%) and the ~0.98–1.18% PA12 endurance band. The earlier metric averaged only at the slot-root peak and missed it. The crown value is **not yet mesh-converged** (FAIL, kept visible).
+- **Slot fill rejected** (16 gaps closed in B-Rep, +0.089 g). It cuts the slot-root peak by 36%, but raises the crown's 0.5 mm gauge strain by 19% (q3). The crown becomes the 3.50% global peak at q2.5, and `EI` rises 4.7% bare / 2.8% with the backbone.
+
+The baseline reproduces the archived 27 Nov values within 3%. Twelve of 14 checks pass; the two convergence checks fail and stay visible. No adopted CAD, guide, rope, mass or 500 g payload change, and no backbone end ferrule. [Evening Report](reports/daily/Evening_Report_2026_11_27.md) · [Study and commands](simulations/u4m2/lanes_20261113/evening_20261127/README.md) · [Next-run handoff](simulations/u4m2/lanes_20261113/evening_20261127/HANDOFF.md) · [Summary figure](simulations/u4m2/lanes_20261113/evening_20261127/results/evening_20261127_summary.png)
+
 <a id="27-november-2026--morning-report-coupled-nonlinear-body-and-backbone"></a>
 
 **Morning Report — geometrically nonlinear coupled M6 lattice + NiTi backbone: axial compatibility settled (+3.52 N, 0.04 MPa sleeve shear), `ring_1` gap 0.57–0.98 mm with zero contact.** Run: **2026-11-27 07:24:01–08:06:56 EST (2026-11-27 12:24:01–13:06:56 UTC)**.

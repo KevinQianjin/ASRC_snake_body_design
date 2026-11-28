@@ -1,0 +1,22 @@
+=== baseline: {'variant': 'baseline', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10487.160367025253, 'added_volume_mm3': 0.0, 'added_mass_g': 0.0, 'bore_min_radius_mm': {'ring_0': 4.199999713377529, 'ring_1': 4.1999998026701375, 'ring_2': 4.1999998026701375, 'ring_3': 4.199999713377529}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 12998}
+parsing switches
+success
+  [baseline | q3_a040] step 1709: global=3.724% @ z=-18.01 | ring0=3.724% (g0.5=0.998%) | ring1=3.344% (g0.5=1.339%)
+  [baseline | q3_a040] step 1869: global=3.682% @ z=-18.01 | ring0=3.682% (g0.5=0.984%) | ring1=3.288% (g0.5=1.317%)
+  [baseline | q3_a040] step 1884: global=3.734% @ z=-18.01 | ring0=3.734% (g0.5=1.000%) | ring1=3.338% (g0.5=1.337%)
+saved fe_baseline_q3.json in 129s
+Traceback (most recent call last):
+  File "/home/user/ASRC_snake_body_design/simulations/u4m2/lanes_20261113/evening_20261127/hub_variant_fe.py", line 64, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "/home/user/ASRC_snake_body_design/simulations/u4m2/lanes_20261113/evening_20261127/hub_variant_fe.py", line 53, in main
+    tm, info = build(name)
+               ~~~~~^^^^^^
+  File "/home/user/ASRC_snake_body_design/simulations/u4m2/lanes_20261113/evening_20261127/hub_variant_fe.py", line 40, in build
+    assert info["is_watertight"] and info["body_count"] == 1 and info["bore_preserved_8p40mm"], info
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'variant': 'slot_fill', 'is_watertight': False, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10575.658392290146, 'added_volume_mm3': 88.49802526489293, 'added_mass_g': 0.08938300551754186, 'bore_min_radius_mm': {'ring_0': 4.199999713377529, 'ring_1': 4.1999998026701375, 'ring_2': 4.1999998026701375, 'ring_3': 4.199999713377529}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 14972}
+
+real	2m10.640s
+user	1m58.533s
+sys	0m13.912s

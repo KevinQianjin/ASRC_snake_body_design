@@ -1,0 +1,701 @@
+{
+ "name": "slot_fill",
+ "geometry": {
+  "variant": "slot_fill",
+  "is_watertight": true,
+  "body_count": 1,
+  "base_volume_mm3": 10487.160367025253,
+  "volume_mm3": 10572.4736143135,
+  "added_volume_mm3": 85.3132472882462,
+  "added_mass_g": 0.08616637976112868,
+  "bore_min_radius_mm": {
+   "ring_0": 4.199999375085341,
+   "ring_1": 4.199999462179381,
+   "ring_2": 4.199999462179381,
+   "ring_3": 4.199999375085341
+  },
+  "bore_preserved_8p40mm": true,
+  "clamped_surface_verts": 221,
+  "d1_surface_verts": 64,
+  "faces": 13982,
+  "splice_zone": {
+   "r_max_mm": 10.5,
+   "abs_z_mm": [
+    15.5,
+    21.5
+   ]
+  },
+  "min_edge_mm": 0.0033892329515693475
+ },
+ "levels": [
+  {
+   "label": "q2p5_a040",
+   "mesh": {
+    "quality": 2.5,
+    "max_tet_volume_mm3": 0.4,
+    "tets": 253367,
+    "p2_nodes": 466141,
+    "dofs": 1398423,
+    "reduced_dofs": 1373610,
+    "layer_points": 91448,
+    "layer_max_edge_mm": 0.08,
+    "min_bary": -1.6139013118679112e-06,
+    "land_area_mm2": [
+     7.999912594388527,
+     7.999912594388527,
+     7.999912594388527,
+     7.999912594388527,
+     7.99991262699769,
+     7.9999126269976895,
+     7.9999126269976895,
+     7.9999126269976895
+    ],
+    "socket_nodes": [
+     251,
+     275,
+     281,
+     312,
+     303,
+     276,
+     263,
+     273
+    ],
+    "build_s": 79.44512840100015
+   },
+   "solve_residual": 3.8853468678001717e-13,
+   "equivalent_EI_over_85p8mm_Nmm2": {},
+   "steps": {
+    "1709": {
+     "global_max": {
+      "peak_abs_principal_strain": 0.03530353071155865,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020188772555317137,
+        "scalar_avg_principal_strain": 0.02049095914026498
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011118323908994794,
+        "scalar_avg_principal_strain": 0.013096973705367707
+       }
+      }
+     },
+     "ring0_hotspot": {
+      "peak_abs_principal_strain": 0.03530353071155865,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020188772555317137,
+        "scalar_avg_principal_strain": 0.02049095914026498
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011118323908994794,
+        "scalar_avg_principal_strain": 0.013096973705367707
+       }
+      }
+     },
+     "ring1_hotspot": {
+      "peak_abs_principal_strain": 0.03449207602337437,
+      "peak_location_mm": [
+       -4.344037296202244,
+       -11.166732074019741,
+       -5.192641994162463
+      ],
+      "peak_r_mm": 11.98192660817689,
+      "peak_tet_mean_edge_mm": 0.14188794408811392,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 367,
+        "tensor_avg_principal_strain": 0.01518354998728863,
+        "scalar_avg_principal_strain": 0.016524730072322
+       },
+       "r_1.0mm": {
+        "n_tets": 1452,
+        "tensor_avg_principal_strain": 0.007385177973710758,
+        "scalar_avg_principal_strain": 0.010531388197183366
+       }
+      }
+     },
+     "ring2_hotspot": {
+      "peak_abs_principal_strain": 0.03224372033728108,
+      "peak_location_mm": [
+       -4.709020143774085,
+       -10.97014698381002,
+       5.219217659484858
+      ],
+      "peak_r_mm": 11.938131996290968,
+      "peak_tet_mean_edge_mm": 0.08108670938647948,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 457,
+        "tensor_avg_principal_strain": 0.01334288516719756,
+        "scalar_avg_principal_strain": 0.014927288550423459
+       },
+       "r_1.0mm": {
+        "n_tets": 1558,
+        "tensor_avg_principal_strain": 0.006670429782382482,
+        "scalar_avg_principal_strain": 0.009783669732333479
+       }
+      }
+     },
+     "ring3_hotspot": {
+      "peak_abs_principal_strain": 0.02752761183496627,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.01592249637971035,
+        "scalar_avg_principal_strain": 0.016202665026702902
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.00936771106554966,
+        "scalar_avg_principal_strain": 0.010682457742108104
+       }
+      }
+     },
+     "land_band_peak": 0.006331592383532345,
+     "moment_split": {
+      "M_body_norm_Nmm": 424.7644548168351,
+      "M_backbone_norm_Nmm": 109.82221295169812,
+      "M_total_norm_Nmm": 534.5866577937093,
+      "body_share": 0.7945661355819822,
+      "backbone_share": 0.20543388307696453
+     },
+     "slot_root_ring0": {
+      "peak_abs_principal_strain": 0.020315747224798272,
+      "peak_location_mm": [
+       -4.602477449603551,
+       -7.113531176599322,
+       -17.810286588074828
+      ],
+      "peak_r_mm": 8.472610251543484,
+      "peak_tet_mean_edge_mm": 0.27926050836223065,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 198,
+        "tensor_avg_principal_strain": 0.0066726953299457775,
+        "scalar_avg_principal_strain": 0.007688143784987843
+       },
+       "r_1.0mm": {
+        "n_tets": 294,
+        "tensor_avg_principal_strain": 0.004391025352982357,
+        "scalar_avg_principal_strain": 0.005137671972142766
+       }
+      }
+     },
+     "arch_crown_ring0": {
+      "peak_abs_principal_strain": 0.03530353071155865,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020188772555317137,
+        "scalar_avg_principal_strain": 0.02049095914026498
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011118323908994794,
+        "scalar_avg_principal_strain": 0.013096973705367707
+       }
+      }
+     },
+     "slot_root_ring3": {
+      "peak_abs_principal_strain": 0.016677669832802798,
+      "peak_location_mm": [
+       -4.598487,
+       -7.1165595,
+       17.870375
+      ],
+      "peak_r_mm": 8.47298659306205,
+      "peak_tet_mean_edge_mm": 0.26221012192965903,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 204,
+        "tensor_avg_principal_strain": 0.004858354280792794,
+        "scalar_avg_principal_strain": 0.005539774825650864
+       },
+       "r_1.0mm": {
+        "n_tets": 303,
+        "tensor_avg_principal_strain": 0.0032363170350886835,
+        "scalar_avg_principal_strain": 0.0037846988811449426
+       }
+      }
+     },
+     "arch_crown_ring3": {
+      "peak_abs_principal_strain": 0.02752761183496627,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.01592249637971035,
+        "scalar_avg_principal_strain": 0.016202665026702902
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.00936771106554966,
+        "scalar_avg_principal_strain": 0.010682457742108104
+       }
+      }
+     }
+    },
+    "1869": {
+     "global_max": {
+      "peak_abs_principal_strain": 0.03502771710354169,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020024289999488323,
+        "scalar_avg_principal_strain": 0.02032466222052694
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011012647219023872,
+        "scalar_avg_principal_strain": 0.012995105819574033
+       }
+      }
+     },
+     "ring0_hotspot": {
+      "peak_abs_principal_strain": 0.03502771710354169,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020024289999488323,
+        "scalar_avg_principal_strain": 0.02032466222052694
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011012647219023872,
+        "scalar_avg_principal_strain": 0.012995105819574033
+       }
+      }
+     },
+     "ring1_hotspot": {
+      "peak_abs_principal_strain": 0.03392827172089652,
+      "peak_location_mm": [
+       -4.344037296202244,
+       -11.166732074019741,
+       -5.192641994162463
+      ],
+      "peak_r_mm": 11.98192660817689,
+      "peak_tet_mean_edge_mm": 0.14188794408811392,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 367,
+        "tensor_avg_principal_strain": 0.01494092573368432,
+        "scalar_avg_principal_strain": 0.016261842574816027
+       },
+       "r_1.0mm": {
+        "n_tets": 1452,
+        "tensor_avg_principal_strain": 0.0072638094143858065,
+        "scalar_avg_principal_strain": 0.01036216215854961
+       }
+      }
+     },
+     "ring2_hotspot": {
+      "peak_abs_principal_strain": 0.03137238148016978,
+      "peak_location_mm": [
+       -4.709020143774085,
+       -10.97014698381002,
+       5.219217659484858
+      ],
+      "peak_r_mm": 11.938131996290968,
+      "peak_tet_mean_edge_mm": 0.08108670938647948,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 457,
+        "tensor_avg_principal_strain": 0.012983242892208936,
+        "scalar_avg_principal_strain": 0.014529152324074267
+       },
+       "r_1.0mm": {
+        "n_tets": 1558,
+        "tensor_avg_principal_strain": 0.006487778638710326,
+        "scalar_avg_principal_strain": 0.009529074294908346
+       }
+      }
+     },
+     "ring3_hotspot": {
+      "peak_abs_principal_strain": 0.02673075112509011,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.015460297185023985,
+        "scalar_avg_principal_strain": 0.015732656123243857
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.009099510450619519,
+        "scalar_avg_principal_strain": 0.010378095081239332
+       }
+      }
+     },
+     "land_band_peak": 0.0062597569297685495,
+     "moment_split": {
+      "M_body_norm_Nmm": 424.64525023808886,
+      "M_backbone_norm_Nmm": 97.41301013252502,
+      "M_total_norm_Nmm": 522.0501375775494,
+      "body_share": 0.8134185199309687,
+      "backbone_share": 0.18659703948081907
+     },
+     "slot_root_ring0": {
+      "peak_abs_principal_strain": 0.02043809315675222,
+      "peak_location_mm": [
+       -4.602477449603551,
+       -7.113531176599322,
+       -17.810286588074828
+      ],
+      "peak_r_mm": 8.472610251543484,
+      "peak_tet_mean_edge_mm": 0.27926050836223065,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 198,
+        "tensor_avg_principal_strain": 0.006680818502077237,
+        "scalar_avg_principal_strain": 0.007695853034103568
+       },
+       "r_1.0mm": {
+        "n_tets": 294,
+        "tensor_avg_principal_strain": 0.004408373632941678,
+        "scalar_avg_principal_strain": 0.005140445329499981
+       }
+      }
+     },
+     "arch_crown_ring0": {
+      "peak_abs_principal_strain": 0.03502771710354169,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.020024289999488323,
+        "scalar_avg_principal_strain": 0.02032466222052694
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011012647219023872,
+        "scalar_avg_principal_strain": 0.012995105819574033
+       }
+      }
+     },
+     "slot_root_ring3": {
+      "peak_abs_principal_strain": 0.01629327963072872,
+      "peak_location_mm": [
+       -4.598487,
+       -7.1165595,
+       17.870375
+      ],
+      "peak_r_mm": 8.47298659306205,
+      "peak_tet_mean_edge_mm": 0.26221012192965903,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 204,
+        "tensor_avg_principal_strain": 0.0047218364152402615,
+        "scalar_avg_principal_strain": 0.005380823536908425
+       },
+       "r_1.0mm": {
+        "n_tets": 303,
+        "tensor_avg_principal_strain": 0.0031537791235180745,
+        "scalar_avg_principal_strain": 0.0036795779982682036
+       }
+      }
+     },
+     "arch_crown_ring3": {
+      "peak_abs_principal_strain": 0.02673075112509011,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.015460297185023985,
+        "scalar_avg_principal_strain": 0.015732656123243857
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.009099510450619519,
+        "scalar_avg_principal_strain": 0.010378095081239332
+       }
+      }
+     }
+    },
+    "1884": {
+     "global_max": {
+      "peak_abs_principal_strain": 0.03534036493154219,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.02020838705300566,
+        "scalar_avg_principal_strain": 0.020510987476660036
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011126699612674876,
+        "scalar_avg_principal_strain": 0.013110031422180214
+       }
+      }
+     },
+     "ring0_hotspot": {
+      "peak_abs_principal_strain": 0.03534036493154219,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.02020838705300566,
+        "scalar_avg_principal_strain": 0.020510987476660036
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011126699612674876,
+        "scalar_avg_principal_strain": 0.013110031422180214
+       }
+      }
+     },
+     "ring1_hotspot": {
+      "peak_abs_principal_strain": 0.034433558552556524,
+      "peak_location_mm": [
+       -4.344037296202244,
+       -11.166732074019741,
+       -5.192641994162463
+      ],
+      "peak_r_mm": 11.98192660817689,
+      "peak_tet_mean_edge_mm": 0.14188794408811392,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 367,
+        "tensor_avg_principal_strain": 0.01515744277917929,
+        "scalar_avg_principal_strain": 0.01649670001749015
+       },
+       "r_1.0mm": {
+        "n_tets": 1452,
+        "tensor_avg_principal_strain": 0.0073714862808660344,
+        "scalar_avg_principal_strain": 0.010513872682201657
+       }
+      }
+     },
+     "ring2_hotspot": {
+      "peak_abs_principal_strain": 0.03212253319499626,
+      "peak_location_mm": [
+       -4.709020143774085,
+       -10.97014698381002,
+       5.219217659484858
+      ],
+      "peak_r_mm": 11.938131996290968,
+      "peak_tet_mean_edge_mm": 0.08108670938647948,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 457,
+        "tensor_avg_principal_strain": 0.013292499251675943,
+        "scalar_avg_principal_strain": 0.014872032836472386
+       },
+       "r_1.0mm": {
+        "n_tets": 1558,
+        "tensor_avg_principal_strain": 0.006643493769461543,
+        "scalar_avg_principal_strain": 0.009748884997142415
+       }
+      }
+     },
+     "ring3_hotspot": {
+      "peak_abs_principal_strain": 0.027403318894771905,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.01584995905400111,
+        "scalar_avg_principal_strain": 0.016128949561636467
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.009324277102824286,
+        "scalar_avg_principal_strain": 0.010633930006539444
+       }
+      }
+     },
+     "land_band_peak": 0.006316324667156499,
+     "moment_split": {
+      "M_body_norm_Nmm": 425.17980123459034,
+      "M_backbone_norm_Nmm": 106.78446322325878,
+      "M_total_norm_Nmm": 531.9642287915153,
+      "body_share": 0.7992638944924709,
+      "backbone_share": 0.2007361725540181
+     },
+     "slot_root_ring0": {
+      "peak_abs_principal_strain": 0.020357748620253052,
+      "peak_location_mm": [
+       -4.602477449603551,
+       -7.113531176599322,
+       -17.810286588074828
+      ],
+      "peak_r_mm": 8.472610251543484,
+      "peak_tet_mean_edge_mm": 0.27926050836223065,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 198,
+        "tensor_avg_principal_strain": 0.006684618681306879,
+        "scalar_avg_principal_strain": 0.007702174134206843
+       },
+       "r_1.0mm": {
+        "n_tets": 294,
+        "tensor_avg_principal_strain": 0.0043993051062403005,
+        "scalar_avg_principal_strain": 0.00514722024383875
+       }
+      }
+     },
+     "arch_crown_ring0": {
+      "peak_abs_principal_strain": 0.03534036493154219,
+      "peak_location_mm": [
+       3.8270960163784378,
+       8.934435213929317,
+       -20.370926612814166
+      ],
+      "peak_r_mm": 9.719608866126245,
+      "peak_tet_mean_edge_mm": 0.2924351047038167,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 49,
+        "tensor_avg_principal_strain": 0.02020838705300566,
+        "scalar_avg_principal_strain": 0.020510987476660036
+       },
+       "r_1.0mm": {
+        "n_tets": 160,
+        "tensor_avg_principal_strain": 0.011126699612674876,
+        "scalar_avg_principal_strain": 0.013110031422180214
+       }
+      }
+     },
+     "slot_root_ring3": {
+      "peak_abs_principal_strain": 0.016613944710367395,
+      "peak_location_mm": [
+       -4.598487,
+       -7.1165595,
+       17.870375
+      ],
+      "peak_r_mm": 8.47298659306205,
+      "peak_tet_mean_edge_mm": 0.26221012192965903,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 204,
+        "tensor_avg_principal_strain": 0.004838587161297728,
+        "scalar_avg_principal_strain": 0.005517289634088856
+       },
+       "r_1.0mm": {
+        "n_tets": 303,
+        "tensor_avg_principal_strain": 0.0032233395945496157,
+        "scalar_avg_principal_strain": 0.003769479848487737
+       }
+      }
+     },
+     "arch_crown_ring3": {
+      "peak_abs_principal_strain": 0.027403318894771905,
+      "peak_location_mm": [
+       -3.7522960966478096,
+       -8.85562787958211,
+       20.310141935003678
+      ],
+      "peak_r_mm": 9.617789306204951,
+      "peak_tet_mean_edge_mm": 0.2947360228005532,
+      "finite_gauge_at_peak": {
+       "r_0.5mm": {
+        "n_tets": 59,
+        "tensor_avg_principal_strain": 0.01584995905400111,
+        "scalar_avg_principal_strain": 0.016128949561636467
+       },
+       "r_1.0mm": {
+        "n_tets": 182,
+        "tensor_avg_principal_strain": 0.009324277102824286,
+        "scalar_avg_principal_strain": 0.010633930006539444
+       }
+      }
+     }
+    }
+   },
+   "elapsed_s": 146.66924026200013
+  }
+ ],
+ "started_et": "2026-11-27T20:50:33-05:00",
+ "started_utc": "2026-11-28T01:50:33Z",
+ "completed_et": "2026-11-27T20:53:07-05:00",
+ "completed_utc": "2026-11-28T01:53:07Z",
+ "elapsed_s": 154.67748367299964
+}
