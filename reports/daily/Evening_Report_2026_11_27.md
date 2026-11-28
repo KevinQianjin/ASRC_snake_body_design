@@ -1,6 +1,6 @@
 # Evening Engineering Report — 2026-11-27
 
-**Run:** scheduled evening run (20:01 US Eastern). The run actually started at **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**. Its 2-hour deadline was **22:02:05 EST (03:02:05 UTC)**. The publication time is recorded in the README entry and the completion message. The execution-model metadata could not be verified from inside the run (see § 7).
+**Run:** scheduled evening run (20:01 US Eastern). The run actually started at **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**. Its 2-hour deadline was **22:02:05 EST (03:02:05 UTC)**. The first push (`0bf1c98`) completed at **20:55:53 EST (01:55:53 UTC)**, 53 min 48 s into the run. The execution-model metadata could not be verified from inside the run (see § 7).
 
 **Reporting interval:** from the previous evening run's start, **2026-11-26 20:01:44 EST (2026-11-27 01:01:44 UTC)**, to this run's start cutoff, **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**, plus this run's own results.
 

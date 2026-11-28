@@ -1,6 +1,6 @@
 # Next-run handoff — from the 27 November 2026 Evening Report
 
-Prepared at **2026-11-27 21:00 EST (2026-11-28 02:00 UTC)**. The run started at **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**.
+Prepared at **2026-11-27 20:55 EST (2026-11-28 01:55 UTC)**. The run started at **2026-11-27 20:02:05 EST (2026-11-28 01:02:05 UTC)**.
 
 [Evening Report](../../../../reports/daily/Evening_Report_2026_11_27.md) · [Study and commands](README.md) · [Previous handoff (27 Nov hub fillet)](../hub_fillet_20261127/HANDOFF.md)
 
