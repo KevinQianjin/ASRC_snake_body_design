@@ -1,0 +1,237 @@
+{
+  "source_revision": "d9347e87ab3612342962125580187523a0b42fd5",
+  "input_hashes": {
+    "M6_lane_anchorC.stl": "b82d83ec00a775de9e0577c379d6b8dda5e530e89ddea76c05074e4b755dc7f5",
+    "rod_steps.npz": "3e23c9d37d2851bdd325b20c7646736c34fdb8c75650e6ca4f2ba9c7223682fa"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.17.0",
+    "tetgen": "0.8.4",
+    "cvxopt": "1.3.3",
+    "pymetis": "2025.2.2"
+  },
+  "mesh": {
+    "quality": 5.0,
+    "max_tet_volume_mm3": 0.4,
+    "tets": 201279,
+    "p2_nodes": 376046,
+    "dofs": 1128138,
+    "reduced_dofs": 1116471,
+    "layer_points": 91448,
+    "layer_max_edge_mm": 0.08,
+    "min_bary": -1.0244970968930497e-07,
+    "land_area_mm2": [
+      7.999912594388527,
+      7.999912594388527,
+      7.999912594388527,
+      7.999912594388527,
+      7.99991262699769,
+      7.9999126269976895,
+      7.9999126269976895,
+      7.9999126269976895
+    ],
+    "socket_nodes": [
+      265,
+      264,
+      303,
+      271,
+      272,
+      274,
+      273,
+      315
+    ],
+    "build_s": 72.39368392999995
+  },
+  "requested_local_edge_mm": 0.18,
+  "combined_EI_Nmm2": [
+    66491.95342556719,
+    66498.54446740446
+  ],
+  "lattice_volume_mm3": 10487.160367025253,
+  "selected_states": [
+    1709,
+    1869,
+    1884
+  ],
+  "projected_states": 3405,
+  "gauge_centers_mm": {
+    "ring0_arch": [
+      -3.16605727301383,
+      -9.230585107365345,
+      -20.375435618722324
+    ],
+    "ring0_opposed_arch": [
+      3.16605727301383,
+      9.230585107365345,
+      -20.375435618722324
+    ],
+    "ring3_arch": [
+      -3.88940086739078,
+      -8.958589394591264,
+      20.39745307702438
+    ],
+    "ring3_opposed_arch": [
+      3.88940086739078,
+      8.958589394591264,
+      20.39745307702438
+    ]
+  },
+  "gauges": {
+    "ring0_arch": {
+      "0.5": {
+        "material_fraction": 0.59912109375,
+        "local_tets": 12160,
+        "min_tet_volume_mm3": 1.0262860247635828e-07,
+        "median_tet_edge_equivalent_mm": 0.04981235509687814,
+        "three_states_abs_principal": [
+          0.020313828014946335,
+          0.02016027020729015,
+          0.02033485264576716
+        ],
+        "mission_max": 0.02033485264576716,
+        "mission_max_state": 1884,
+        "integration_relative_change": [
+          0.0029115770095639038,
+          0.002918832826426132,
+          0.002911972137367047
+        ]
+      },
+      "1.0": {
+        "material_fraction": 0.575927734375,
+        "local_tets": 12160,
+        "min_tet_volume_mm3": 1.0262860247635828e-07,
+        "median_tet_edge_equivalent_mm": 0.04981235509687814,
+        "three_states_abs_principal": [
+          0.011084114499008181,
+          0.01097681902394684,
+          0.011094366749543609
+        ],
+        "mission_max": 0.011094366749543609,
+        "mission_max_state": 1884,
+        "integration_relative_change": [
+          0.0011815404092182513,
+          0.0011476772109547673,
+          0.0011841675168123844
+        ]
+      }
+    },
+    "ring0_opposed_arch": {
+      "0.5": {
+        "material_fraction": 0.6005859375,
+        "local_tets": 12155,
+        "min_tet_volume_mm3": 6.290356007858671e-08,
+        "median_tet_edge_equivalent_mm": 0.05043316442118763,
+        "three_states_abs_principal": [
+          0.020482702067790525,
+          0.020434485023034202,
+          0.02050861128580108
+        ],
+        "mission_max": 0.02052079314373396,
+        "mission_max_state": 1875,
+        "integration_relative_change": [
+          0.0008762651976813585,
+          0.0008670089712748963,
+          0.0008765818294639294
+        ]
+      },
+      "1.0": {
+        "material_fraction": 0.572509765625,
+        "local_tets": 12155,
+        "min_tet_volume_mm3": 6.290356007858671e-08,
+        "median_tet_edge_equivalent_mm": 0.05043316442118763,
+        "three_states_abs_principal": [
+          0.011160084661025922,
+          0.011133597399272534,
+          0.011173738772699745
+        ],
+        "mission_max": 0.011180973838645017,
+        "mission_max_state": 1875,
+        "integration_relative_change": [
+          0.00026408023973234496,
+          0.00030841626683031365,
+          0.00026350769804395213
+        ]
+      }
+    },
+    "ring3_arch": {
+      "0.5": {
+        "material_fraction": 0.587158203125,
+        "local_tets": 12010,
+        "min_tet_volume_mm3": 6.165451391334682e-08,
+        "median_tet_edge_equivalent_mm": 0.049609839410033336,
+        "three_states_abs_principal": [
+          0.016102651067027005,
+          0.015636044897325486,
+          0.01602661779938145
+        ],
+        "mission_max": 0.01616579316515304,
+        "mission_max_state": 1701,
+        "integration_relative_change": [
+          0.002024791854000174,
+          0.0020268984746875107,
+          0.0020252770701173484
+        ]
+      },
+      "1.0": {
+        "material_fraction": 0.570068359375,
+        "local_tets": 12010,
+        "min_tet_volume_mm3": 6.165451391334682e-08,
+        "median_tet_edge_equivalent_mm": 0.049609839410033336,
+        "three_states_abs_principal": [
+          0.009086964572163823,
+          0.008827648801835349,
+          0.009043341253503857
+        ],
+        "mission_max": 0.00911969004335619,
+        "mission_max_state": 1701,
+        "integration_relative_change": [
+          0.001360341883398064,
+          0.0013753833907359514,
+          0.0013590098872919842
+        ]
+      }
+    },
+    "ring3_opposed_arch": {
+      "0.5": {
+        "material_fraction": 0.599853515625,
+        "local_tets": 11873,
+        "min_tet_volume_mm3": 8.926102566080126e-08,
+        "median_tet_edge_equivalent_mm": 0.04922424024206251,
+        "three_states_abs_principal": [
+          0.016237851797736264,
+          0.01576719589563431,
+          0.016163004054488228
+        ],
+        "mission_max": 0.01630496363423721,
+        "mission_max_state": 1701,
+        "integration_relative_change": [
+          0.002511700766111513,
+          0.002507137399920145,
+          0.0025117188389567335
+        ]
+      },
+      "1.0": {
+        "material_fraction": 0.573974609375,
+        "local_tets": 11873,
+        "min_tet_volume_mm3": 8.926102566080126e-08,
+        "median_tet_edge_equivalent_mm": 0.04922424024206251,
+        "three_states_abs_principal": [
+          0.009086664507116912,
+          0.008824284868898451,
+          0.009043940746507042
+        ],
+        "mission_max": 0.009123550209899214,
+        "mission_max_state": 1701,
+        "integration_relative_change": [
+          0.0024810924356435393,
+          0.0024854267656889695,
+          0.0024815618692275443
+        ]
+      }
+    }
+  },
+  "relative_residual": 8.67054387970053e-13,
+  "peak_RSS_MiB": 6654.99609375,
+  "elapsed_s": 156.2391435640002
+}

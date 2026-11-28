@@ -4,6 +4,8 @@ This candidate captures the shaped ends of one original NiTi leaf with PA12 seat
 
 **Use the low-force bench comparison for this proximal layout.** The seated M1.6 head engages the shoe before the PA12 lip. A flush neighbouring face can also block shoe travel ahead of the lip. The follow-up compares a seated screw with a fixture-held pin and gives the measurement procedure. [Reversal bench check](bench_reversal/README.md)
 
+The subsequent single-leaf fit trial moves the proximal retainer and recesses the shoe so that the PA12 lip engages first. Use its updated proximal files for the next coupon build. [Recessed backstop trial and fixture](recessed_backstop/README.md)
+
 ## Parts for one near/far trial
 
 | Item | Quantity | Use |

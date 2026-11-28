@@ -1,0 +1,233 @@
+{
+  "stop_order_outward_mm": {
+    "PA12_lip": 0.05,
+    "countersunk_head": 0.16,
+    "U1_base_face": 0.14,
+    "adjacent_U_face": 0.14
+  },
+  "blade_to_shoe_mm": 0.06,
+  "total_compression_travel_mm": 0.11,
+  "blade_to_key_mm": 0.13,
+  "key_to_rail_mm": 0.12,
+  "proximal_reversal_mm": 0.36,
+  "supported_shoe_area_mm2": 13.41730000000002,
+  "head_seat_axial_area_mm2": 1.2743191682332644,
+  "seated_shoe_recess_mm": 0.09000000000000001,
+  "clearance_at_compression_stop": {
+    "screw": {
+      "overlap_mm3": 0.0,
+      "gap_mm": 0.07776
+    },
+    "U1_base": {
+      "overlap_mm3": 0.0,
+      "gap_mm": 0.09
+    },
+    "adjacent_U_end": {
+      "overlap_mm3": 0.0,
+      "gap_mm": 0.09
+    }
+  },
+  "lateral_capture_mm": {
+    "key": 0.1001,
+    "shoe": 0.1103
+  },
+  "sampled_axial_states": 25,
+  "maximum_assembly_overlap_mm3": 8.348356728138384e-17,
+  "source_revision": "d9347e87ab3612342962125580187523a0b42fd5",
+  "geometry": "One +X,+Y blade in the lane-routed U body",
+  "models": {
+    "U1": {
+      "tool_sweeps": {
+        "shoulder_key_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.12
+        },
+        "shoulder_key_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.13
+        },
+        "backstop_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.05
+        },
+        "backstop_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.06
+        },
+        "nut_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.13
+        },
+        "nut_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.70523
+        },
+        "screw_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.0
+        },
+        "screw_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.87102
+        },
+        "driver_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.0
+        },
+        "driver_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.49048
+        },
+        "backstop_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.54781
+        },
+        "nut_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.75
+        },
+        "nut_vs_backstop": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 3.96646
+        },
+        "screw_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.09995
+        },
+        "screw_vs_backstop": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.11311
+        }
+      },
+      "rope_reserves": {
+        "bore_mouths": {
+          "modified_solids": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.21
+          },
+          "assembly_tools": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.33
+          }
+        },
+        "rope_2mm": {
+          "modified_solids": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.71
+          },
+          "assembly_tools": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.83
+          }
+        }
+      },
+      "continuous_leaf_feed": {
+        "overlap_mm3": 0.0,
+        "gap_mm": 0.0
+      },
+      "original_inboard_cut_mm3": 0.0
+    },
+    "U4": {
+      "tool_sweeps": {
+        "shoulder_key_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.12
+        },
+        "shoulder_key_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.13
+        },
+        "backstop_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.05
+        },
+        "backstop_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.06
+        },
+        "nut_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.13
+        },
+        "nut_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.70523
+        },
+        "screw_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.0
+        },
+        "screw_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.87102
+        },
+        "driver_vs_body": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.0
+        },
+        "driver_vs_NiTi": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.49048
+        },
+        "backstop_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.54781
+        },
+        "nut_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 1.75
+        },
+        "nut_vs_backstop": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 3.96646
+        },
+        "screw_vs_shoulder_key": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.09995
+        },
+        "screw_vs_backstop": {
+          "overlap_mm3": 0.0,
+          "gap_mm": 0.11311
+        }
+      },
+      "rope_reserves": {
+        "bore_mouths": {
+          "modified_solids": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.21
+          },
+          "assembly_tools": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.33
+          }
+        },
+        "rope_2mm": {
+          "modified_solids": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.71
+          },
+          "assembly_tools": {
+            "overlap_mm3": 0.0,
+            "gap_mm": 2.83
+          }
+        }
+      },
+      "continuous_leaf_feed": {
+        "overlap_mm3": 0.0,
+        "gap_mm": 0.0
+      },
+      "original_inboard_cut_mm3": 0.0
+    }
+  },
+  "hardware_mass_screen": {
+    "PA12_volume_change_mm3": 377.40943629576213,
+    "steel_envelope_volume_mm3": 235.06522472955643,
+    "PA12_density_g_per_mm3": 0.00101,
+    "steel_trial_density_g_per_mm3": 0.00785,
+    "nominal_added_g": 2.226445544785738
+  },
+  "STEP_mesh_delta_mm3": {
+    "shoulder_key": 0.0009263762806455134,
+    "backstop": 0.002423099405646667
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "convergence": {
+    "meshes": [
+      "global",
+      "local_0.28",
+      "local_0.18"
+    ],
+    "max_relative_changes": [
+      0.03216888459757716,
+      0.01619268456984735
+    ],
+    "threshold": 0.05,
+    "pass_gate": true,
+    "fixed_gauge_sites": 4,
+    "selected_steps": [
+      1709,
+      1869,
+      1884
+    ],
+    "finest_fixed_crown_max": 0.02050861128580108,
+    "finest_mission_projection": 0.02052079314373396
+  },
+  "native_control": {
+    "critical_gauge_max": 0.02208497279973619,
+    "critical_fixed_gauge_max": 0.020768807397390083,
+    "mission_max_gauge": 0.02208497279973619,
+    "EI_Nmm2": [
+      66675.35000589878,
+      66692.7325934365
+    ],
+    "linear_rod_gap_mm": 0.6635805457753321
+  },
+  "candidate_gauge_screen_limit": 0.012,
+  "candidates": {
+    "radius_2p0": {
+      "maximum_0p5mm_fixed_critical_strain": 0.0032537172949003877,
+      "maximum_0p5mm_critical_strain_including_displaced_hotspots": 0.02225163435272627,
+      "maximum_0p5mm_mission_projection": 0.02225163435272627,
+      "EI_change_percent": [
+        5.865471136894618,
+        5.848582978420458
+      ],
+      "added_PA12_g": 0.2135272370354222,
+      "linear_rod_gap_mm": 0.7411770788572416,
+      "numerical_triage_pass": false,
+      "requires_refined_candidate_and_motion_check": true
+    },
+    "depth_0p42": {
+      "maximum_0p5mm_fixed_critical_strain": 0.01902738310707312,
+      "maximum_0p5mm_critical_strain_including_displaced_hotspots": 0.01902738310707312,
+      "maximum_0p5mm_mission_projection": 0.01902738310707312,
+      "EI_change_percent": [
+        0.8682441728206758,
+        0.8311884796672553
+      ],
+      "added_PA12_g": 0.03576963233406412,
+      "linear_rod_gap_mm": 0.6694213331573873,
+      "numerical_triage_pass": false,
+      "requires_refined_candidate_and_motion_check": true
+    }
+  }
+}

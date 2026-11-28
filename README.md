@@ -17,7 +17,7 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 
 [Archived single-file HTML (89.4 MiB)](https://github.com/KevinQianjin/ASRC_snake_body_design/blob/a1a3518c0746d4959204807147f7fe5f7bee9c54/reports/ASRC-500g-Design-Handover.html)
 
-[Latest engineering results](#27-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
+[Latest engineering results](#28-november-2026) · [Prototype and assembly](#prototype) · [Bench tests to run next](nextstep/README.md) · [Reports and presentations](reports/README.md)
 
 ## Project index
 
@@ -34,6 +34,14 @@ ASRC is a tendon-driven robot for fuel-tank inspection. The front has four U mod
 The [full project index](docs/project_index.md) links CAD, simulation code, result files and reports for each project. The [repository map](docs/repository_map.md) lists the physical folders and relocated paths.
 
 <a id="daily-updates"></a>
+
+## 28 November 2026
+
+**M6 crown, U1 mechanical joint and 500 g mission.** The M6 fixed-location strain gauges change by at most **3.22%** and **1.62%** over the two local refinements, meeting the 5% convergence criterion for the three tested poses. In the matched native-CAD screen, the baseline reaches **2.21%**, the R2.0 arch shifts the hotspot (**2.23%**) and the 0.42 mm deeper section reduces it to **1.90%**. The 1.2% strain screen leaves both variants as research CAD. [M6 comparison and full study](simulations/u4m2/lanes_20261113/closeout_20261128/README.md)
+
+- **U1 recessed backstop.** The shoe engages its own PA12 lip first. In nominal straight CAD, it sits **0.090 mm** inside the mating plane and **0.078 mm** clear of the seated screw at the stop. Print the near and far coupons and use the machining STEP files for the single-leaf fit trial. [CAD, fixture and measurement sheets](cad/lanes_u4m2/u_leaf_mechanical_joint/recessed_backstop/README.md)
+- **500 g path.** All **3,405** archived commands were re-equilibrated with the nominal **+2.226 g** U1 fit hardware and baseline stiffness. The ±90° pitch targets give forward/up angles of **+89.946°** and **−90.072°**. The **12 rope forces** span **2.90–21.55 N**. Interpolated minima are **7.09 mm** for the body and **7.45 mm** for the adapter. These bounds describe the numerical path. [Full head pose and rope forces](simulations/u4m2/lanes_20261113/closeout_20261128/results/mission/per_step.csv.gz) · [Phase and event comparison](simulations/u4m2/lanes_20261113/closeout_20261128/results/mission/events.csv)
+- **Bench priorities.** Check U1 compression load transfer and backlash at ±2 N and ±5 N. Measure the baseline M6 crown strain in the three highest-priority load cases with the printed PA12 body, sleeve backbone and both guide station loads. [M6 fixture and measurements](simulations/u4m2/lanes_20261113/closeout_20261128/README.md#m6-bench-work) · [U1 low-force procedure](cad/lanes_u4m2/u_leaf_mechanical_joint/recessed_backstop/README.md#assembly-and-low-force-measurement)
 
 ## 27 November 2026
 

@@ -1,0 +1,35 @@
+{
+  "original_radius_mm": 1.5,
+  "center_radial_axial_mm": [
+    8.752317609,
+    21.57056677
+  ],
+  "variants": {
+    "radius_2p0": {
+      "valid": true,
+      "volume_added_mm3": 211.41310597566553,
+      "PA12_added_g": 0.2135272370354222,
+      "interpolated_mesh_delta_mm3": 211.53923593986292,
+      "maximum_far_vertex_change_mm": 0.008557870968446658,
+      "stage": "Native rib candidate with matched B-Rep tessellation and FE cut planes",
+      "parameters_mm": {
+        "radius": 2.0
+      }
+    },
+    "depth_0p42": {
+      "valid": true,
+      "volume_added_mm3": 35.415477558479324,
+      "PA12_added_g": 0.03576963233406412,
+      "interpolated_mesh_delta_mm3": 36.461495966326765,
+      "maximum_far_vertex_change_mm": 0.008557870968446658,
+      "stage": "Native rib candidate with matched B-Rep tessellation and FE cut planes",
+      "parameters_mm": {
+        "extra_depth": 0.42
+      }
+    }
+  },
+  "matched_control": {
+    "surface_offset_max_mm": 0.00855825110299535,
+    "volume_delta_mm3": 0.7332763053582312
+  }
+}
