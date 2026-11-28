@@ -1,0 +1,8 @@
+=== step_splice_control: {'variant': 'step_splice_control', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10487.985522701352, 'added_volume_mm3': 0.8251556760988024, 'added_mass_g': 0.0008334072328597905, 'bore_min_radius_mm': {'ring_0': 4.199999304987416, 'ring_1': 4.1999998026701375, 'ring_2': 4.1999998026701375, 'ring_3': 4.199999304987416}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 19938, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}}
+parsing switches
+success
+/bin/bash: line 2:  1341 Segmentation fault      timeout 2400 python3.13 hub_variant_fe.py step_splice_control slot_fill fillet_R0p14
+
+real	0m4.810s
+user	0m5.533s
+sys	0m0.278s

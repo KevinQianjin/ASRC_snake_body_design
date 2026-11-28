@@ -1,0 +1,8 @@
+=== slot_fill: {'variant': 'slot_fill', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10572.4736143135, 'added_volume_mm3': 85.3132472882462, 'added_mass_g': 0.08616637976112868, 'bore_min_radius_mm': {'ring_0': 4.199999375085341, 'ring_1': 4.199999462179381, 'ring_2': 4.199999462179381, 'ring_3': 4.199999375085341}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 13982, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}, 'min_edge_mm': 0.0033892329515693475}
+parsing switches
+success
+/bin/bash: line 1:  2268 Killed                  timeout 1500 python3.13 hub_variant_fe.py --q25 slot_fill
+
+real	2m17.944s
+user	2m2.962s
+sys	0m15.458s

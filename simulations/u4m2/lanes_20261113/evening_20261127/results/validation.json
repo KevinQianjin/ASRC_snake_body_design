@@ -1,0 +1,24 @@
+{
+ "checks": {
+  "frame_check_step_vs_fe_stl_max_dev_lt_0p005mm": true,
+  "brep_fillet_R0p14_valid_single_solid": true,
+  "brep_fillet_R_ge_0p25_rejected_visible": true,
+  "brep_slot_fill_valid_single_solid": true,
+  "fe_slot_fill_watertight_single_body_bore": true,
+  "fe_residuals_lt_1e-9": true,
+  "baseline_q3_reproduces_archive_within_3pct": true,
+  "baseline_q3_ring0_at_slot_root_corner": true,
+  "baseline_q3_to_q2p5_element_peaks_change_lt_5pct": true,
+  "baseline_arch_crown_ring0_g05_change_lt_5pct (FAIL kept visible: gauge not converged)": false,
+  "slot_fill_arch_crown_ring0_element_peak_change_lt_5pct (FAIL kept visible)": false,
+  "baseline_arch_crown_ring0_is_max_0p5mm_gauge_site": true,
+  "slot_fill_removes_slot_root_corner_peak_gt_25pct_q3": true,
+  "slot_fill_rejected_arch_crown_g05_increases_q3": true
+ },
+ "all_pass": false,
+ "required_pass": true,
+ "informational_convergence_checks": [
+  "baseline_arch_crown_ring0_g05_change_lt_5pct (FAIL kept visible: gauge not converged)",
+  "slot_fill_arch_crown_ring0_element_peak_change_lt_5pct (FAIL kept visible)"
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "source_step": "cad/modules/Medium_Stiffness_96.step",
+ "fe_stl": "cad/lanes_u4m2/end_bellmouth_v1/M6_lane_anchorC.stl",
+ "step_volume_mm3": 25736.166864300292,
+ "step_valid": true,
+ "variants": {
+  "fillet_R0p14": {
+   "kind": "brep_fillet",
+   "R_mm": 0.14,
+   "build": "ok",
+   "valid": true,
+   "n_solids": 1,
+   "volume_mm3": 25737.220290046687,
+   "added_volume_mm3": 1.053425746395078,
+   "added_mass_g": 0.0010639600038590288,
+   "delta_volume_mm3": 1.0545562340220394,
+   "delta_watertight": true,
+   "delta_faces": 91212
+  },
+  "fillet_R0p25": {
+   "kind": "brep_fillet",
+   "R_mm": 0.25,
+   "build": "ok",
+   "valid": false,
+   "n_solids": 1,
+   "volume_mm3": 26400.3715444037,
+   "added_volume_mm3": 664.2046801034085,
+   "added_mass_g": 0.6708467269044426
+  },
+  "fillet_R0p30": {
+   "kind": "brep_fillet",
+   "R_mm": 0.3,
+   "build": "not done (32 faulty contours)"
+  },
+  "fillet_R0p50": {
+   "kind": "brep_fillet",
+   "R_mm": 0.5,
+   "build": "not done (32 faulty contours)"
+  },
+  "fillet_R0p80": {
+   "kind": "brep_fillet",
+   "R_mm": 0.8,
+   "build": "not done (48 faulty contours)"
+  },
+  "slot_fill": {
+   "kind": "slot_fill",
+   "build": "ok",
+   "valid": true,
+   "n_solids": 1,
+   "volume_mm3": 25824.664956237,
+   "added_volume_mm3": 88.49809193670808,
+   "added_mass_g": 0.08938307285607516,
+   "delta_volume_mm3": 88.49826704035917,
+   "delta_watertight": true,
+   "delta_faces": 1024
+  }
+ },
+ "frame_check": {
+  "rotation_deg": -22.5,
+  "n_vertices": 3014,
+  "max_dev_mm": 0.0006605309350015675,
+  "p95_dev_mm": 0.00034443433924709067
+ },
+ "pocket_concave_edges": {
+  "n": 114,
+  "families": [
+   [
+    6.99,
+    17.97,
+    3.11
+   ],
+   [
+    7.09,
+    17.97,
+    2.87
+   ],
+   [
+    8.5,
+    17.57,
+    1.51
+   ],
+   [
+    8.5,
+    17.57,
+    3.02
+   ],
+   [
+    8.5,
+    17.77,
+    0.4
+   ]
+  ]
+ },
+ "elapsed_s": 60.251678743999946
+}

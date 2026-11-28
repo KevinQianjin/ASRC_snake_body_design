@@ -1,0 +1,32 @@
+=== baseline: {'variant': 'baseline', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10487.160367025253, 'added_volume_mm3': 0.0, 'added_mass_g': 0.0, 'bore_min_radius_mm': {'ring_0': 4.199999713377529, 'ring_1': 4.1999998026701375, 'ring_2': 4.1999998026701375, 'ring_3': 4.199999713377529}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 12998, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}, 'min_edge_mm': 0.0033974336621884803}
+parsing switches
+success
+  [baseline | q3_a040] step 1709: global=3.724% @ z=-18.01 | ring0=3.724% (g0.5=0.998%) | ring1=3.344% (g0.5=1.339%)
+  [baseline | q3_a040] step 1869: global=3.682% @ z=-18.01 | ring0=3.682% (g0.5=0.984%) | ring1=3.288% (g0.5=1.317%)
+  [baseline | q3_a040] step 1884: global=3.734% @ z=-18.01 | ring0=3.734% (g0.5=1.000%) | ring1=3.338% (g0.5=1.337%)
+saved fe_baseline_q3.json in 142s
+=== baseline: {'variant': 'baseline', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10487.160367025253, 'added_volume_mm3': 0.0, 'added_mass_g': 0.0, 'bore_min_radius_mm': {'ring_0': 4.199999713377529, 'ring_1': 4.1999998026701375, 'ring_2': 4.1999998026701375, 'ring_3': 4.199999713377529}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 12998, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}, 'min_edge_mm': 0.0033974336621884803}
+parsing switches
+success
+  [baseline | q2p5_a025] step 1709: global=3.887% @ z=-18.01 | ring0=3.887% (g0.5=0.860%) | ring1=3.311% (g0.5=1.375%)
+  [baseline | q2p5_a025] step 1869: global=3.846% @ z=-18.01 | ring0=3.846% (g0.5=0.850%) | ring1=3.249% (g0.5=1.490%)
+  [baseline | q2p5_a025] step 1884: global=3.897% @ z=-18.01 | ring0=3.897% (g0.5=0.862%) | ring1=3.305% (g0.5=1.373%)
+saved fe_baseline_q2p5.json in 144s
+=== slot_fill: {'variant': 'slot_fill', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10572.4736143135, 'added_volume_mm3': 85.3132472882462, 'added_mass_g': 0.08616637976112868, 'bore_min_radius_mm': {'ring_0': 4.199999375085341, 'ring_1': 4.199999462179381, 'ring_2': 4.199999462179381, 'ring_3': 4.199999375085341}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 13982, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}, 'min_edge_mm': 0.0033892329515693475}
+parsing switches
+success
+  [slot_fill | q3_a040] step 1709: global=3.533% @ z=-5.19 | ring0=3.244% (g0.5=2.063%) | ring1=3.529% (g0.5=1.418%)
+  [slot_fill | q3_a040] step 1869: global=3.470% @ z=-5.19 | ring0=3.223% (g0.5=2.048%) | ring1=3.464% (g0.5=1.392%)
+  [slot_fill | q3_a040] step 1884: global=3.526% @ z=-5.19 | ring0=3.247% (g0.5=2.065%) | ring1=3.522% (g0.5=1.415%)
+saved fe_slot_fill_q3.json in 173s
+=== slot_fill: {'variant': 'slot_fill', 'is_watertight': True, 'body_count': 1, 'base_volume_mm3': 10487.160367025253, 'volume_mm3': 10572.4736143135, 'added_volume_mm3': 85.3132472882462, 'added_mass_g': 0.08616637976112868, 'bore_min_radius_mm': {'ring_0': 4.199999375085341, 'ring_1': 4.199999462179381, 'ring_2': 4.199999462179381, 'ring_3': 4.199999375085341}, 'bore_preserved_8p40mm': True, 'clamped_surface_verts': 221, 'd1_surface_verts': 64, 'faces': 13982, 'splice_zone': {'r_max_mm': 10.5, 'abs_z_mm': [15.5, 21.5]}, 'min_edge_mm': 0.0033892329515693475}
+parsing switches
+success
+  [slot_fill | q2p5_a040] step 1709: global=3.530% @ z=-20.37 | ring0=3.530% (g0.5=2.019%) | ring1=3.449% (g0.5=1.518%)
+  [slot_fill | q2p5_a040] step 1869: global=3.503% @ z=-20.37 | ring0=3.503% (g0.5=2.002%) | ring1=3.393% (g0.5=1.494%)
+  [slot_fill | q2p5_a040] step 1884: global=3.534% @ z=-20.37 | ring0=3.534% (g0.5=2.021%) | ring1=3.443% (g0.5=1.516%)
+saved fe_slot_fill_q2p5_a040.json in 155s
+
+real	10m19.970s
+user	8m47.048s
+sys	1m41.484s
